@@ -3,8 +3,6 @@
 [![License](https://img.shields.io/badge/license-MPL--2.0-blue.svg)](LICENSE)
 
 Official Rootform Language dialects and their public verification evidence.
-This repository is private during migration and is prepared for a later manual
-visibility change.
 
 ## Contents
 

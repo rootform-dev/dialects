@@ -6,6 +6,3 @@ the repository owner privately.
 
 Never attach real Terraform state, plans, credentials, account identifiers, or
 customer infrastructure. Reproduce with synthetic fixtures.
-
-No supported public release exists yet. Security support starts only when the
-repository owner publishes an explicit release policy.
