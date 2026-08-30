@@ -1,0 +1,22 @@
+concept "security-events-provider" {
+  kind        = entity
+  description = "A Security Events Provider supplying shared security signals to Okta."
+}
+
+rule "security-events-provider" {
+  match {
+    kind = "resource"
+    type = "okta_security_events_provider"
+  }
+
+  as = concept.security-events-provider
+}
+
+rule "security-events-provider-lookup" {
+  match {
+    kind = "data"
+    type = "okta_security_events_provider"
+  }
+
+  as = concept.security-events-provider
+}

@@ -1,0 +1,13 @@
+concept "web-security-scan" {
+  kind        = entity
+  description = "A Web Security Scanner configuration assessing a deployed web application."
+}
+
+rule "web-security-scan" {
+  match {
+    kind = "resource"
+    type = "google_security_scanner_scan_config"
+  }
+
+  as = concept.web-security-scan
+}

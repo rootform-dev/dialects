@@ -1,0 +1,404 @@
+{
+  "format_version": "1",
+  "dialect": "auth0",
+  "verified_date": "2026-08-30",
+  "integrity_boundary": "presentation digest is separate from semantic source digest",
+  "presentation_sha256": "sha256:56e7fbe7120f0a598ce82e2ce27f18223d0f93f9a151fa7335761f477cc16067",
+  "asset": {
+    "decision": "generic-identities-only",
+    "reason": "official provider source references remote Auth0 logo assets without explicit redistribution terms for vendoring",
+    "cdn_or_remote_asset": false
+  },
+  "rules": [
+    {
+      "id": "auth0/action",
+      "label": "Auth0 Action"
+    },
+    {
+      "id": "auth0/action-lookup",
+      "label": "Auth0 Action lookup"
+    },
+    {
+      "id": "auth0/action-module",
+      "label": "Auth0 Action Module"
+    },
+    {
+      "id": "auth0/action-module-lookup",
+      "label": "Auth0 Action Module lookup"
+    },
+    {
+      "id": "auth0/attack-protection",
+      "label": "Auth0 attack protection"
+    },
+    {
+      "id": "auth0/attack-protection-lookup",
+      "label": "Auth0 attack protection lookup"
+    },
+    {
+      "id": "auth0/client",
+      "label": "Auth0 Application"
+    },
+    {
+      "id": "auth0/client-cimd",
+      "label": "Auth0 CIMD Application"
+    },
+    {
+      "id": "auth0/client-credentials",
+      "label": "Auth0 client credentials"
+    },
+    {
+      "id": "auth0/client-grant",
+      "label": "Auth0 client grant"
+    },
+    {
+      "id": "auth0/client-lookup",
+      "label": "Auth0 Application lookup"
+    },
+    {
+      "id": "auth0/connection",
+      "label": "Auth0 Connection"
+    },
+    {
+      "id": "auth0/connection-client",
+      "label": "Auth0 connection client"
+    },
+    {
+      "id": "auth0/connection-clients",
+      "label": "Auth0 connection clients"
+    },
+    {
+      "id": "auth0/connection-directory",
+      "label": "Auth0 Directory Sync"
+    },
+    {
+      "id": "auth0/connection-directory-lookup",
+      "label": "Auth0 Directory Sync lookup"
+    },
+    {
+      "id": "auth0/connection-directory-synchronized-groups",
+      "label": "Auth0 connection directory synchronized groups"
+    },
+    {
+      "id": "auth0/connection-directory-synchronized-groups-lookup",
+      "label": "Auth0 connection directory synchronized groups lookup"
+    },
+    {
+      "id": "auth0/connection-keys",
+      "label": "Auth0 connection keys"
+    },
+    {
+      "id": "auth0/connection-keys-lookup",
+      "label": "Auth0 connection keys lookup"
+    },
+    {
+      "id": "auth0/connection-lookup",
+      "label": "Auth0 Connection lookup"
+    },
+    {
+      "id": "auth0/connection-profile",
+      "label": "Auth0 Connection Profile"
+    },
+    {
+      "id": "auth0/connection-profile-lookup",
+      "label": "Auth0 Connection Profile lookup"
+    },
+    {
+      "id": "auth0/connection-scim-configuration",
+      "label": "Auth0 connection SCIM configuration"
+    },
+    {
+      "id": "auth0/connection-scim-configuration-lookup",
+      "label": "Auth0 connection SCIM configuration lookup"
+    },
+    {
+      "id": "auth0/custom-domain",
+      "label": "Auth0 custom domain"
+    },
+    {
+      "id": "auth0/custom-domain-default",
+      "label": "Auth0 default custom domain"
+    },
+    {
+      "id": "auth0/custom-domain-lookup",
+      "label": "Auth0 custom domain lookup"
+    },
+    {
+      "id": "auth0/custom-domain-verification",
+      "label": "Auth0 custom domain verification"
+    },
+    {
+      "id": "auth0/email-provider",
+      "label": "Auth0 email provider"
+    },
+    {
+      "id": "auth0/encryption-key-manager",
+      "label": "Auth0 encryption key manager"
+    },
+    {
+      "id": "auth0/event-stream",
+      "label": "Auth0 Event Stream"
+    },
+    {
+      "id": "auth0/event-stream-lookup",
+      "label": "Auth0 Event Stream lookup"
+    },
+    {
+      "id": "auth0/flow",
+      "label": "Auth0 Flow"
+    },
+    {
+      "id": "auth0/flow-lookup",
+      "label": "Auth0 Flow lookup"
+    },
+    {
+      "id": "auth0/flow-vault-connection",
+      "label": "Auth0 Flow Vault connection"
+    },
+    {
+      "id": "auth0/flow-vault-connection-lookup",
+      "label": "Auth0 Flow Vault connection lookup"
+    },
+    {
+      "id": "auth0/form",
+      "label": "Auth0 Form"
+    },
+    {
+      "id": "auth0/form-lookup",
+      "label": "Auth0 Form lookup"
+    },
+    {
+      "id": "auth0/guardian",
+      "label": "Auth0 guardian"
+    },
+    {
+      "id": "auth0/hook",
+      "label": "Auth0 Hook"
+    },
+    {
+      "id": "auth0/log-stream",
+      "label": "Auth0 Log Stream"
+    },
+    {
+      "id": "auth0/network-acl",
+      "label": "Auth0 Network ACL"
+    },
+    {
+      "id": "auth0/network-acl-lookup",
+      "label": "Auth0 Network ACL lookup"
+    },
+    {
+      "id": "auth0/organization",
+      "label": "Auth0 Organization"
+    },
+    {
+      "id": "auth0/organization-client",
+      "label": "Auth0 organization client"
+    },
+    {
+      "id": "auth0/organization-client-grant",
+      "label": "Auth0 organization client grant"
+    },
+    {
+      "id": "auth0/organization-client-lookup",
+      "label": "Auth0 organization client lookup"
+    },
+    {
+      "id": "auth0/organization-clients",
+      "label": "Auth0 organization clients"
+    },
+    {
+      "id": "auth0/organization-connection",
+      "label": "Auth0 organization connection"
+    },
+    {
+      "id": "auth0/organization-connections",
+      "label": "Auth0 organization connections"
+    },
+    {
+      "id": "auth0/organization-discovery-domain",
+      "label": "Auth0 organization discovery domain"
+    },
+    {
+      "id": "auth0/organization-discovery-domains",
+      "label": "Auth0 organization discovery domains"
+    },
+    {
+      "id": "auth0/organization-lookup",
+      "label": "Auth0 Organization lookup"
+    },
+    {
+      "id": "auth0/phone-provider",
+      "label": "Auth0 phone provider"
+    },
+    {
+      "id": "auth0/phone-provider-lookup",
+      "label": "Auth0 phone provider lookup"
+    },
+    {
+      "id": "auth0/rate-limit-policy",
+      "label": "Auth0 rate limit policy"
+    },
+    {
+      "id": "auth0/rate-limit-policy-lookup",
+      "label": "Auth0 rate limit policy lookup"
+    },
+    {
+      "id": "auth0/resource-server",
+      "label": "Auth0 API"
+    },
+    {
+      "id": "auth0/resource-server-lookup",
+      "label": "Auth0 API lookup"
+    },
+    {
+      "id": "auth0/resource-server-scope",
+      "label": "Auth0 resource server scope"
+    },
+    {
+      "id": "auth0/resource-server-scopes",
+      "label": "Auth0 resource server scopes"
+    },
+    {
+      "id": "auth0/risk-assessments",
+      "label": "Auth0 risk assessments"
+    },
+    {
+      "id": "auth0/risk-assessments-new-device",
+      "label": "Auth0 risk assessments new device"
+    },
+    {
+      "id": "auth0/rule",
+      "label": "Auth0 Rule"
+    },
+    {
+      "id": "auth0/self-service-profile",
+      "label": "Auth0 Self-Service SSO profile"
+    },
+    {
+      "id": "auth0/self-service-profile-lookup",
+      "label": "Auth0 Self-Service SSO profile lookup"
+    },
+    {
+      "id": "auth0/supplemental-signals",
+      "label": "Auth0 supplemental signals"
+    },
+    {
+      "id": "auth0/tenant",
+      "label": "Auth0 tenant"
+    },
+    {
+      "id": "auth0/tenant-lookup",
+      "label": "Auth0 tenant lookup"
+    },
+    {
+      "id": "auth0/token-exchange-profile",
+      "label": "Auth0 Custom Token Exchange profile"
+    },
+    {
+      "id": "auth0/token-exchange-profile-lookup",
+      "label": "Auth0 Custom Token Exchange profile lookup"
+    },
+    {
+      "id": "auth0/trigger-action",
+      "label": "Auth0 Action trigger binding"
+    },
+    {
+      "id": "auth0/trigger-actions",
+      "label": "Auth0 Action trigger bindings"
+    },
+    {
+      "id": "auth0/user-attribute-profile",
+      "label": "Auth0 User Attribute Profile"
+    },
+    {
+      "id": "auth0/user-attribute-profile-lookup",
+      "label": "Auth0 User Attribute Profile lookup"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "auth0/identity-tenant",
+      "label": "Auth0 tenant"
+    },
+    {
+      "id": "auth0/customer-organization",
+      "label": "Auth0 Organization"
+    },
+    {
+      "id": "auth0/api-resource-server",
+      "label": "Auth0 API"
+    },
+    {
+      "id": "auth0/application-configuration",
+      "label": "Auth0 Application configuration"
+    },
+    {
+      "id": "auth0/identity-connection",
+      "label": "Auth0 Connection"
+    },
+    {
+      "id": "auth0/directory-sync",
+      "label": "Auth0 Directory Sync"
+    },
+    {
+      "id": "auth0/connection-configuration",
+      "label": "Auth0 Connection configuration"
+    },
+    {
+      "id": "auth0/self-service-sso-profile",
+      "label": "Auth0 Self-Service SSO profile"
+    },
+    {
+      "id": "auth0/self-service-configuration",
+      "label": "Auth0 Self-Service SSO configuration"
+    },
+    {
+      "id": "auth0/identity-domain",
+      "label": "Auth0 custom domain"
+    },
+    {
+      "id": "auth0/domain-configuration",
+      "label": "Auth0 custom domain configuration"
+    },
+    {
+      "id": "auth0/identity-extension",
+      "label": "Auth0 identity extension"
+    },
+    {
+      "id": "auth0/extension-configuration",
+      "label": "Auth0 extension configuration"
+    },
+    {
+      "id": "auth0/token-exchange-profile",
+      "label": "Auth0 Custom Token Exchange profile"
+    },
+    {
+      "id": "auth0/identity-workflow",
+      "label": "Auth0 Form or Flow"
+    },
+    {
+      "id": "auth0/flow-vault-connection",
+      "label": "Auth0 Flow Vault connection"
+    },
+    {
+      "id": "auth0/identity-event-stream",
+      "label": "Auth0 Event Stream"
+    },
+    {
+      "id": "auth0/identity-log-stream",
+      "label": "Auth0 Log Stream"
+    },
+    {
+      "id": "auth0/authentication-boundary",
+      "label": "Auth0 Network ACL"
+    },
+    {
+      "id": "auth0/authentication-configuration",
+      "label": "Auth0 authentication configuration"
+    },
+    {
+      "id": "auth0/notification-provider",
+      "label": "Auth0 notification provider"
+    }
+  ]
+}

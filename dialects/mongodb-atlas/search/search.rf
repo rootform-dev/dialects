@@ -1,0 +1,57 @@
+concept "search-deployment" {
+  kind        = entity
+  description = "A dedicated MongoDB Search deployment providing isolated search compute for an Atlas database deployment."
+}
+
+concept "search-configuration" {
+  kind        = detail
+  description = "A search, vector-search, or AI model configuration supporting Atlas."
+}
+
+rule "search-deployment" {
+  match {
+    kind = "resource"
+    type = "mongodbatlas_search_deployment"
+  }
+
+  as = concept.search-deployment
+
+  context {
+    as  = context.core.ownership
+    to  = concept.project
+    via = source.project_id
+  }
+
+  relation "serves" {
+    to  = concept.core.managed-database
+    via = source.cluster_name
+  }
+}
+
+rule "search-index" {
+  match {
+    kind = "resource"
+    type = "mongodbatlas_search_index"
+  }
+
+  as = concept.search-configuration
+
+  contribution {
+    to  = concept.core.managed-database
+    via = source.cluster_name
+  }
+}
+
+rule "ai-model-rate-limit" {
+  match {
+    kind = "resource"
+    type = "mongodbatlas_ai_model_rate_limit"
+  }
+
+  as = concept.search-configuration
+
+  contribution {
+    to  = concept.project
+    via = source.project_id
+  }
+}

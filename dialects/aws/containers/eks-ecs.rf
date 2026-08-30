@@ -1,0 +1,70 @@
+rule "eks-cluster" {
+  match {
+    kind = "resource"
+    type = "aws_eks_cluster"
+  }
+
+  as = concept.core.kubernetes-cluster
+}
+
+rule "eks-node-group" {
+  match {
+    kind = "resource"
+    type = "aws_eks_node_group"
+  }
+
+  as = concept.core.kubernetes-node-pool
+
+  contribution {
+    to  = concept.core.kubernetes-cluster
+    via = source.cluster_name
+
+    match {
+      by       = target.name
+      strategy = "exact"
+    }
+  }
+}
+
+rule "eks-fargate-profile" {
+  match {
+    kind = "resource"
+    type = "aws_eks_fargate_profile"
+  }
+
+  as = concept.eks-compute-profile
+
+  contribution {
+    to  = concept.core.kubernetes-cluster
+    via = source.cluster_name
+
+    match {
+      by       = target.name
+      strategy = "exact"
+    }
+  }
+}
+
+rule "ecs-cluster" {
+  match {
+    kind = "resource"
+    type = "aws_ecs_cluster"
+  }
+
+  as = concept.ecs-cluster
+}
+
+rule "ecs-service" {
+  match {
+    kind = "resource"
+    type = "aws_ecs_service"
+  }
+
+  as = concept.ecs-service
+
+  context {
+    as  = context.core.runtime
+    to  = concept.ecs-cluster
+    via = source.cluster
+  }
+}

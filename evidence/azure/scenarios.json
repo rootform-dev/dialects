@@ -1,0 +1,138 @@
+{
+  "format_version": "1",
+  "scenarios": [
+    {
+      "id": "release-family-coverage",
+      "fixture": "testdata/architecture/azure-v5/release-coverage",
+      "required_rules": [
+        "azure/ai-foundry",
+        "azure/api-management",
+        "azure/arc-enabled-server",
+        "azure/azure-enclave",
+        "azure/communication-service",
+        "azure/container-app",
+        "azure/cosmos-account",
+        "azure/data-factory",
+        "azure/database-migration-service",
+        "azure/dev-center",
+        "azure/dns-zone",
+        "azure/entra-group",
+        "azure/front-door-profile",
+        "azure/horizondb-cluster",
+        "azure/iot-hub",
+        "azure/key-vault",
+        "azure/linux-function-app",
+        "azure/linux-virtual-machine",
+        "azure/management-group",
+        "azure/monitor-workspace",
+        "azure/nat-gateway",
+        "azure/service-bus-namespace",
+        "azure/sre-agent"
+      ],
+      "required_outcomes": {
+        "azapi_resource.enclave": "represented",
+        "azapi_resource.horizondb": "represented",
+        "azapi_resource.sre": "represented",
+        "azuread_group.identity": "represented"
+      },
+      "minimum": {
+        "entities": 15,
+        "scopes": 5
+      },
+      "expected_check_violations": [],
+      "limitations": [
+        "One representative direct identity per family; family internals remain covered by matrix and compiler tests."
+      ]
+    },
+    {
+      "id": "broad-private-platform",
+      "fixture": "testdata/architecture/azure-v5/scenarios",
+      "required_rules": [
+        "azure/aks-cluster",
+        "azure/application-gateway",
+        "azure/data-factory",
+        "azure/event-grid-topic",
+        "azure/event-hub",
+        "azure/expressroute-circuit",
+        "azure/front-door-profile",
+        "azure/key-vault",
+        "azure/linux-function-app",
+        "azure/linux-web-app",
+        "azure/mssql-database",
+        "azure/nat-gateway",
+        "azure/private-endpoint",
+        "azure/service-bus-queue",
+        "azure/storage-account",
+        "azure/synapse-workspace",
+        "azure/virtual-network-peering",
+        "azure/virtual-network-gateway"
+      ],
+      "required_outcomes": {
+        "azurerm_kubernetes_cluster.workloads": "represented",
+        "azurerm_mssql_database.orders": "represented",
+        "azurerm_private_endpoint.sql": "represented",
+        "azurerm_private_endpoint.storage": "represented"
+      },
+      "minimum": {
+        "contexts": 10,
+        "entities": 15,
+        "scopes": 5
+      },
+      "maximum_facts": {
+        "relations": 0
+      },
+      "expected_check_violations": [],
+      "limitations": [
+        "Producer, consumer, backend, secret-use, peering, VPN, and ExpressRoute relations remain absent because provider references alone do not prove those architecture facts."
+      ]
+    },
+    {
+      "id": "azapi-fail-closed",
+      "fixture": "testdata/architecture/azure-v5/azapi",
+      "required_rules": ["azure/azure-enclave", "azure/horizondb-cluster", "azure/sre-agent"],
+      "required_outcomes": {
+        "azapi_resource.dynamic": "unsupported",
+        "azapi_resource.wrong_version": "unsupported"
+      },
+      "maximum_facts": {
+        "contexts": 0,
+        "relations": 0
+      },
+      "expected_check_violations": [],
+      "limitations": [
+        "Only exact literal ARM type and API-version values match; generic body evidence emits no facts."
+      ]
+    },
+    {
+      "id": "provider-overlap",
+      "fixture": "testdata/architecture/azure-v5/provider-overlap",
+      "required_rules": ["azure/container-app"],
+      "required_outcomes": {
+        "azapi_resource.unapproved_overlap": "unsupported",
+        "azapi_update_resource.patch": "unsupported",
+        "azurerm_container_app.typed": "represented"
+      },
+      "expected_check_violations": [],
+      "limitations": [
+        "Unapproved generic AzAPI overlap and patch resources never duplicate the typed AzureRM owner."
+      ]
+    },
+    {
+      "id": "privacy",
+      "fixture": "testdata/architecture/azure-v5/privacy",
+      "required_rules": ["azure/sre-agent"],
+      "required_outcomes": {
+        "azapi_resource.sre": "represented"
+      },
+      "expected_check_violations": [],
+      "forbidden_output": [
+        "rootform-secret-sentinel",
+        "incidentManagementConfiguration",
+        "00000000-0000-0000-0000-000000000000"
+      ],
+      "limitations": [
+        "AzAPI body and literal parent resource ID remain outside Architecture IR and HTML."
+      ]
+    }
+  ]
+}

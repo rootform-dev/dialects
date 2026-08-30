@@ -1,0 +1,22 @@
+concept "identity-configuration" {
+  kind        = detail
+  description = "An SSO or SCIM configuration supporting access to Grafana."
+}
+
+rule "scim-config" {
+  match {
+    kind = "resource"
+    type = "grafana_scim_config"
+  }
+
+  as = concept.identity-configuration
+}
+
+rule "sso-settings" {
+  match {
+    kind = "resource"
+    type = "grafana_sso_settings"
+  }
+
+  as = concept.identity-configuration
+}

@@ -1,0 +1,61 @@
+concept "application" {
+  kind        = entity
+  description = "A Snowflake-hosted interactive data application or notebook."
+}
+
+rule "streamlit" {
+  match {
+    kind = "resource"
+    type = "snowflake_streamlit"
+  }
+
+  as = concept.application
+
+  context {
+    as  = context.core.ownership
+    to  = concept.schema
+    via = source.schema
+  }
+
+  context {
+    as  = context.core.runtime
+    to  = concept.virtual-warehouse
+    via = source.query_warehouse
+  }
+
+  relation "loads-code-from-stage" {
+    to  = concept.stage
+    via = source.stage
+  }
+
+  relation "uses-external-access" {
+    to  = concept.external-access-integration
+    via = source.external_access_integrations[0]
+  }
+}
+
+rule "notebook" {
+  match {
+    kind = "resource"
+    type = "snowflake_notebook"
+  }
+
+  as = concept.application
+
+  context {
+    as  = context.core.ownership
+    to  = concept.schema
+    via = source.schema
+  }
+
+  context {
+    as  = context.core.runtime
+    to  = concept.virtual-warehouse
+    via = source.query_warehouse
+  }
+
+  relation "loads-code-from-stage" {
+    to  = concept.stage
+    via = source.from[0].stage
+  }
+}

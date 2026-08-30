@@ -1,0 +1,113 @@
+concept "cx-agent-studio-app" {
+  kind        = scope
+  description = "A CX Agent Studio application containing conversational agents."
+}
+
+concept "cx-agent-studio-agent" {
+  kind        = entity
+  description = "A conversational agent defined in a CX Agent Studio application."
+}
+
+concept "cx-agent-studio-configuration" {
+  kind        = detail
+  description = "A version, deployment, tool, guardrail, or other configuration supporting a CX Agent Studio application."
+}
+
+rule "cx-agent-studio-app" {
+  match {
+    kind = "resource"
+    type = "google_ces_app"
+  }
+
+  as = concept.cx-agent-studio-app
+}
+
+rule "cx-agent-studio-agent" {
+  match {
+    kind = "resource"
+    type = "google_ces_agent"
+  }
+
+  as = concept.cx-agent-studio-agent
+}
+
+rule "cx-agent-studio-root-agent-association" {
+  match {
+    kind = "resource"
+    type = "google_ces_app_root_agent_association"
+  }
+
+  as = concept.cx-agent-studio-configuration
+}
+
+rule "cx-agent-studio-app-version" {
+  match {
+    kind = "resource"
+    type = "google_ces_app_version"
+  }
+
+  as = concept.cx-agent-studio-configuration
+}
+
+rule "cx-agent-studio-deployment" {
+  match {
+    kind = "resource"
+    type = "google_ces_deployment"
+  }
+
+  as = concept.cx-agent-studio-configuration
+}
+
+rule "cx-agent-studio-evaluation" {
+  match {
+    kind = "resource"
+    type = "google_ces_evaluation"
+  }
+
+  as = concept.cx-agent-studio-configuration
+}
+
+rule "cx-agent-studio-example" {
+  match {
+    kind = "resource"
+    type = "google_ces_example"
+  }
+
+  as = concept.cx-agent-studio-configuration
+}
+
+rule "cx-agent-studio-guardrail" {
+  match {
+    kind = "resource"
+    type = "google_ces_guardrail"
+  }
+
+  as = concept.cx-agent-studio-configuration
+}
+
+rule "cx-agent-studio-security-settings" {
+  match {
+    kind = "resource"
+    type = "google_ces_security_settings"
+  }
+
+  as = concept.cx-agent-studio-configuration
+}
+
+rule "cx-agent-studio-tool" {
+  match {
+    kind = "resource"
+    type = "google_ces_tool"
+  }
+
+  as = concept.cx-agent-studio-configuration
+}
+
+rule "cx-agent-studio-toolset" {
+  match {
+    kind = "resource"
+    type = "google_ces_toolset"
+  }
+
+  as = concept.cx-agent-studio-configuration
+}

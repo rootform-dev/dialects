@@ -1,0 +1,155 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-30",
+  "acquisition": {
+    "client": "Terraform 1.12.2 provider schema RPC",
+    "command": "terraform providers schema -json",
+    "credentials_used": false,
+    "provider_configuration_used": false,
+    "runtime_dependency": false,
+    "signature_verification": "Terraform reported signed by HashiCorp",
+    "signature_key_id": "34365D9472D7468F",
+    "provider_protocol": "5.0"
+  },
+  "provider": {
+    "source": "registry.terraform.io/hashicorp/consul",
+    "version": "2.23.0",
+    "tag": "v2.23.0",
+    "tag_kind": "lightweight",
+    "commit": "86cfc3a1c9dc23b0099b12c5c9988957ccc7f345",
+    "tree": "9bc54dddd061c37a39f66831172522698a1dc18b",
+    "commit_signature_verified": true,
+    "published_utc": "2026-01-29T12:48:42Z",
+    "release_url": "https://github.com/hashicorp/terraform-provider-consul/releases/tag/v2.23.0",
+    "license": {
+      "spdx": "MPL-2.0",
+      "source_url": "https://github.com/hashicorp/terraform-provider-consul/blob/v2.23.0/LICENSE"
+    },
+    "binary": {
+      "platform": "darwin_arm64",
+      "bytes": 9881228,
+      "sha256": "sha256:1782c35aa2b9fb4e0f2cfa2d087b63447f66b05541690072a2f0f3220bdb031f"
+    },
+    "checksums": {
+      "bytes": 1380,
+      "sha256": "sha256:4d2d5baa46300467dfea3f74f91e48a49dfbb50b33be9f9dc22f0a72de10f9bc",
+      "signature_bytes": 566,
+      "signature_sha256": "sha256:4c60c58910e9ae56f6a6b8e1c9420a6806c56ccbafb39393b58ea51d31e257f8"
+    },
+    "source_archive": {
+      "url": "https://github.com/hashicorp/terraform-provider-consul/archive/refs/tags/v2.23.0.tar.gz",
+      "bytes": 301316,
+      "sha256": "sha256:4b25857c151937580e7770d0fdac2fe4b3d7335773f12af6d804a623d8f02b68"
+    }
+  },
+  "schema_snapshot": {
+    "bytes": 122925,
+    "format_version": "1.0",
+    "sha256": "sha256:0d04a0b36d210ef7cb941ee2d1c5fb6d5b194bea2ff10aee5204353380972a5e"
+  },
+  "constructs": {
+    "counts": {
+      "managed_resources": 33,
+      "data_sources": 24,
+      "ephemeral_resources": 0,
+      "provider_functions": 0,
+      "resource_identities": 0
+    },
+    "managed_resources": [
+      "consul_acl_auth_method",
+      "consul_acl_binding_rule",
+      "consul_acl_policy",
+      "consul_acl_role",
+      "consul_acl_role_policy_attachment",
+      "consul_acl_token",
+      "consul_acl_token_policy_attachment",
+      "consul_acl_token_role_attachment",
+      "consul_admin_partition",
+      "consul_agent_service",
+      "consul_autopilot_config",
+      "consul_catalog_entry",
+      "consul_certificate_authority",
+      "consul_config_entry",
+      "consul_config_entry_service_defaults",
+      "consul_config_entry_service_intentions",
+      "consul_config_entry_service_resolver",
+      "consul_config_entry_service_router",
+      "consul_config_entry_service_splitter",
+      "consul_config_entry_v2_exported_services",
+      "consul_intention",
+      "consul_key_prefix",
+      "consul_keys",
+      "consul_license",
+      "consul_namespace",
+      "consul_namespace_policy_attachment",
+      "consul_namespace_role_attachment",
+      "consul_network_area",
+      "consul_node",
+      "consul_peering",
+      "consul_peering_token",
+      "consul_prepared_query",
+      "consul_service"
+    ],
+    "data_sources": [
+      "consul_acl_auth_method",
+      "consul_acl_policy",
+      "consul_acl_role",
+      "consul_acl_token",
+      "consul_acl_token_secret_id",
+      "consul_agent_config",
+      "consul_agent_self",
+      "consul_autopilot_health",
+      "consul_catalog_nodes",
+      "consul_catalog_service",
+      "consul_catalog_services",
+      "consul_config_entry",
+      "consul_config_entry_v2_exported_services",
+      "consul_datacenters",
+      "consul_key_prefix",
+      "consul_keys",
+      "consul_network_area_members",
+      "consul_network_segments",
+      "consul_nodes",
+      "consul_peering",
+      "consul_peerings",
+      "consul_service",
+      "consul_service_health",
+      "consul_services"
+    ],
+    "ephemeral_resources": [],
+    "provider_functions": [],
+    "resource_identities": []
+  },
+  "lifecycle_findings": {
+    "provider_deprecations": {
+      "state": "deprecated",
+      "constructs": ["consul_agent_service", "consul_catalog_entry"],
+      "since_provider": "2.0.0",
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/guides/upgrading"
+    },
+    "legacy_intention": {
+      "state": "legacy",
+      "construct": "consul_intention",
+      "replacement": "service-intentions configuration entry",
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/intention"
+    },
+    "ingress_gateway": {
+      "state": "deprecated",
+      "replacement": "Consul API gateway",
+      "source_url": "https://developer.hashicorp.com/consul/docs/architecture/data-plane/gateway"
+    },
+    "cluster_peering": {
+      "state": "current",
+      "minimum_consul": "1.14",
+      "source_url": "https://developer.hashicorp.com/consul/docs/east-west/cluster-peering/tech-specs",
+      "handling": "current Consul docs supersede stale provider technical-preview prose"
+    }
+  },
+  "limitations": [
+    "schema presence and shape do not prove architecture semantics",
+    "provider configuration cannot prove or create a Consul cluster",
+    "config_json, credentials, policy bodies, KV values, certificate material, and secret values are never semantic evidence",
+    "computed lists, names, addresses, literals, provider configuration, and depends_on cannot prove application flow",
+    "provider schema capture used no Consul credentials, configuration, agent, or product API calls"
+  ]
+}

@@ -1,0 +1,83 @@
+concept "pages-project" {
+  kind        = entity
+  description = "A Cloudflare Pages application project."
+}
+
+concept "pages-domain" {
+  kind        = detail
+  description = "A custom domain serving a Cloudflare Pages project."
+}
+
+concept "pipeline" {
+  kind        = entity
+  description = "A Cloudflare Pipelines transformation pipeline."
+}
+
+concept "pipeline-stream" {
+  kind        = entity
+  description = "A Cloudflare Pipelines input stream."
+}
+
+concept "pipeline-sink" {
+  kind        = entity
+  description = "A Cloudflare Pipelines destination sink."
+}
+
+rule "pages-project" {
+  match {
+    kind = "resource"
+    type = "cloudflare_pages_project"
+  }
+
+  as = concept.pages-project
+}
+
+rule "pages-domain" {
+  match {
+    kind = "resource"
+    type = "cloudflare_pages_domain"
+  }
+
+  as = concept.pages-domain
+
+  contribution {
+    to  = concept.pages-project
+    via = source.project_name
+  }
+}
+
+rule "workflow" {
+  match {
+    kind = "resource"
+    type = "cloudflare_workflow"
+  }
+
+  as = concept.core.workflow
+}
+
+rule "pipeline" {
+  match {
+    kind = "resource"
+    type = "cloudflare_pipeline"
+  }
+
+  as = concept.pipeline
+}
+
+rule "pipeline-stream" {
+  match {
+    kind = "resource"
+    type = "cloudflare_pipeline_stream"
+  }
+
+  as = concept.pipeline-stream
+}
+
+rule "pipeline-sink" {
+  match {
+    kind = "resource"
+    type = "cloudflare_pipeline_sink"
+  }
+
+  as = concept.pipeline-sink
+}

@@ -1,0 +1,41 @@
+concept "workstations-cluster" {
+  kind        = scope
+  description = "A Cloud Workstations cluster providing regional workstation infrastructure."
+}
+
+concept "workstation" {
+  kind        = entity
+  description = "A managed Cloud Workstations development environment."
+}
+
+concept "workstation-configuration" {
+  kind        = detail
+  description = "A reusable runtime configuration for Cloud Workstations."
+}
+
+rule "workstations-cluster" {
+  match {
+    kind = "resource"
+    type = "google_workstations_workstation_cluster"
+  }
+
+  as = concept.workstations-cluster
+}
+
+rule "workstation" {
+  match {
+    kind = "resource"
+    type = "google_workstations_workstation"
+  }
+
+  as = concept.workstation
+}
+
+rule "workstation-configuration" {
+  match {
+    kind = "resource"
+    type = "google_workstations_workstation_config"
+  }
+
+  as = concept.workstation-configuration
+}

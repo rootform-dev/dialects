@@ -1,0 +1,49 @@
+concept "ingress-gateway" {
+  kind        = entity
+  description = "A deprecated Consul gateway admitting traffic into the service mesh."
+}
+
+concept "terminating-gateway" {
+  kind        = entity
+  description = "A Consul gateway connecting mesh services to services outside the mesh."
+}
+
+rule "config-entry-ingress-gateway-json" {
+  match {
+    kind  = "resource"
+    type  = "consul_config_entry"
+    where = source.kind == "ingress-gateway"
+  }
+
+  as = concept.ingress-gateway
+}
+
+rule "config-entry-ingress-gateway-json-lookup" {
+  match {
+    kind  = "data"
+    type  = "consul_config_entry"
+    where = source.kind == "ingress-gateway"
+  }
+
+  as = concept.ingress-gateway
+}
+
+rule "config-entry-terminating-gateway-json" {
+  match {
+    kind  = "resource"
+    type  = "consul_config_entry"
+    where = source.kind == "terminating-gateway"
+  }
+
+  as = concept.terminating-gateway
+}
+
+rule "config-entry-terminating-gateway-json-lookup" {
+  match {
+    kind  = "data"
+    type  = "consul_config_entry"
+    where = source.kind == "terminating-gateway"
+  }
+
+  as = concept.terminating-gateway
+}

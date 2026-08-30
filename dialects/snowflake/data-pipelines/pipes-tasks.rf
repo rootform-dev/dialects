@@ -1,0 +1,195 @@
+concept "notification-integration" {
+  kind        = entity
+  description = "A Snowflake notification integration connecting cloud messaging or email delivery."
+}
+
+concept "data-pipe" {
+  kind        = entity
+  description = "A Snowpipe pipe continuously loading staged data into Snowflake."
+}
+
+concept "stream-configuration" {
+  kind        = detail
+  description = "A Snowflake stream tracking change data for a schema object."
+}
+
+rule "notification-integration" {
+  match {
+    kind = "resource"
+    type = "snowflake_notification_integration"
+  }
+
+  as = concept.notification-integration
+
+  relation "connects-message-topic" {
+    to  = concept.core.message-topic
+    via = source.aws_sns_topic_arn
+  }
+
+  relation "connects-message-topic" {
+    to  = concept.core.message-topic
+    via = source.gcp_pubsub_topic_name
+  }
+
+  relation "connects-message-queue" {
+    to  = concept.core.message-queue
+    via = source.aws_sqs_arn
+  }
+
+  relation "connects-message-queue" {
+    to  = concept.core.message-queue
+    via = source.azure_storage_queue_primary_uri
+  }
+
+  relation "connects-message-subscription" {
+    to  = concept.core.message-subscription
+    via = source.gcp_pubsub_subscription_name
+  }
+
+  relation "assumes-cloud-identity" {
+    to  = concept.core.service-identity
+    via = source.aws_sns_role_arn
+  }
+
+  relation "assumes-cloud-identity" {
+    to  = concept.core.service-identity
+    via = source.aws_sqs_role_arn
+  }
+}
+
+rule "email-notification-integration" {
+  match {
+    kind = "resource"
+    type = "snowflake_email_notification_integration"
+  }
+
+  as = concept.notification-integration
+}
+
+rule "pipe" {
+  match {
+    kind = "resource"
+    type = "snowflake_pipe"
+  }
+
+  as = concept.data-pipe
+
+  context {
+    as  = context.core.ownership
+    to  = concept.schema
+    via = source.schema
+  }
+
+  relation "uses-notification-integration" {
+    to  = concept.notification-integration
+    via = source.integration
+  }
+
+  relation "reports-to-notification-integration" {
+    to  = concept.notification-integration
+    via = source.error_integration
+  }
+
+  relation "receives-storage-events" {
+    to  = concept.core.message-topic
+    via = source.aws_sns_topic_arn
+  }
+}
+
+rule "task" {
+  match {
+    kind = "resource"
+    type = "snowflake_task"
+  }
+
+  as = concept.core.workflow
+
+  context {
+    as  = context.core.ownership
+    to  = concept.schema
+    via = source.schema
+  }
+
+  context {
+    as  = context.core.runtime
+    to  = concept.virtual-warehouse
+    via = source.warehouse
+  }
+
+  relation "runs-after-task" {
+    to  = concept.core.workflow
+    via = source.after[0]
+  }
+
+  relation "runs-after-task" {
+    to  = concept.core.workflow
+    via = source.after[1]
+  }
+
+  relation "finalizes-task" {
+    to  = concept.core.workflow
+    via = source.finalize
+  }
+
+  relation "reports-to-notification-integration" {
+    to  = concept.notification-integration
+    via = source.error_integration
+  }
+}
+
+rule "stream-on-table" {
+  match {
+    kind = "resource"
+    type = "snowflake_stream_on_table"
+  }
+
+  as = concept.stream-configuration
+
+  contribution {
+    to  = concept.schema
+    via = source.schema
+  }
+}
+
+rule "stream-on-view" {
+  match {
+    kind = "resource"
+    type = "snowflake_stream_on_view"
+  }
+
+  as = concept.stream-configuration
+
+  contribution {
+    to  = concept.schema
+    via = source.schema
+  }
+}
+
+rule "stream-on-external-table" {
+  match {
+    kind = "resource"
+    type = "snowflake_stream_on_external_table"
+  }
+
+  as = concept.stream-configuration
+
+  contribution {
+    to  = concept.schema
+    via = source.schema
+  }
+}
+
+rule "stream-on-directory-table" {
+  match {
+    kind = "resource"
+    type = "snowflake_stream_on_directory_table"
+  }
+
+  as = concept.stream-configuration
+
+  contribution {
+    to  = concept.schema
+    via = source.schema
+  }
+
+}

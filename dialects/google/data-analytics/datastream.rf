@@ -1,0 +1,13 @@
+concept "datastream-stream" {
+  kind        = entity
+  description = "A Datastream change-data-capture stream between source and destination systems."
+}
+
+rule "datastream-stream" {
+  match {
+    kind = "resource"
+    type = "google_datastream_stream"
+  }
+
+  as = concept.datastream-stream
+}

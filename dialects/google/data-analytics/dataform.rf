@@ -1,0 +1,27 @@
+concept "dataform-repository" {
+  kind        = scope
+  description = "A Dataform repository containing SQL workflow code and configuration."
+}
+
+concept "dataform-workflow" {
+  kind        = entity
+  description = "A Dataform workflow configuration for scheduled repository execution."
+}
+
+rule "dataform-repository" {
+  match {
+    kind = "resource"
+    type = "google_dataform_repository"
+  }
+
+  as = concept.dataform-repository
+}
+
+rule "dataform-workflow" {
+  match {
+    kind = "resource"
+    type = "google_dataform_repository_workflow_config"
+  }
+
+  as = concept.dataform-workflow
+}

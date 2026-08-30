@@ -1,0 +1,148 @@
+concept "telemetry-processing-configuration" {
+  kind        = detail
+  description = "A parsing, partitioning, pruning, obfuscation, conversion, or Pipeline Control rule."
+}
+
+rule "cardinality-management" {
+  match {
+    kind = "resource"
+    type = "newrelic_cardinality_management"
+  }
+
+  as = concept.telemetry-processing-configuration
+}
+
+rule "data-partition-rule" {
+  match {
+    kind = "resource"
+    type = "newrelic_data_partition_rule"
+  }
+
+  as = concept.telemetry-processing-configuration
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.account_id
+  }
+}
+
+rule "events-to-metrics-rule" {
+  match {
+    kind = "resource"
+    type = "newrelic_events_to_metrics_rule"
+  }
+
+  as = concept.telemetry-processing-configuration
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.account_id
+  }
+}
+
+rule "log-parsing-rule" {
+  match {
+    kind = "resource"
+    type = "newrelic_log_parsing_rule"
+  }
+
+  as = concept.telemetry-processing-configuration
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.account_id
+  }
+}
+
+rule "metric-pruning-rule" {
+  match {
+    kind = "resource"
+    type = "newrelic_metric_pruning_rule"
+  }
+
+  as = concept.telemetry-processing-configuration
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.account_id
+  }
+}
+
+rule "nrql-drop-rule" {
+  match {
+    kind = "resource"
+    type = "newrelic_nrql_drop_rule"
+  }
+
+  as = concept.telemetry-processing-configuration
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.account_id
+  }
+}
+
+rule "obfuscation-expression" {
+  match {
+    kind = "resource"
+    type = "newrelic_obfuscation_expression"
+  }
+
+  as = concept.telemetry-processing-configuration
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.account_id
+  }
+}
+
+rule "obfuscation-expression-lookup" {
+  match {
+    kind = "data"
+    type = "newrelic_obfuscation_expression"
+  }
+
+  as = concept.telemetry-processing-configuration
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.account_id
+  }
+}
+
+rule "obfuscation-rule" {
+  match {
+    kind = "resource"
+    type = "newrelic_obfuscation_rule"
+  }
+
+  as = concept.telemetry-processing-configuration
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.account_id
+  }
+}
+
+rule "pipeline-cloud-rule" {
+  match {
+    kind = "resource"
+    type = "newrelic_pipeline_cloud_rule"
+  }
+
+  as = concept.telemetry-processing-configuration
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.account_id
+  }
+}

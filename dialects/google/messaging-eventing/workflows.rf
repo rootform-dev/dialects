@@ -1,0 +1,8 @@
+rule "workflows-workflow" {
+  match {
+    kind = "resource"
+    type = "google_workflows_workflow"
+  }
+
+  as = concept.core.workflow
+}

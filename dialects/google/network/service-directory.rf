@@ -1,0 +1,41 @@
+concept "service-directory-namespace" {
+  kind        = scope
+  description = "A Service Directory namespace containing registered services."
+}
+
+concept "service-directory-service" {
+  kind        = entity
+  description = "A service registered in Service Directory."
+}
+
+concept "service-directory-endpoint" {
+  kind        = detail
+  description = "A network endpoint registered under a Service Directory service."
+}
+
+rule "service-directory-namespace" {
+  match {
+    kind = "resource"
+    type = "google_service_directory_namespace"
+  }
+
+  as = concept.service-directory-namespace
+}
+
+rule "service-directory-service" {
+  match {
+    kind = "resource"
+    type = "google_service_directory_service"
+  }
+
+  as = concept.service-directory-service
+}
+
+rule "service-directory-endpoint" {
+  match {
+    kind = "resource"
+    type = "google_service_directory_endpoint"
+  }
+
+  as = concept.service-directory-endpoint
+}

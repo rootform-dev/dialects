@@ -1,0 +1,75 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-30",
+  "accepted_adr": "docs/adr/094-auth0-provider-boundaries.md",
+  "reused_core_concepts": ["identity-application"],
+  "referenced_core_concepts": ["identity-application"],
+  "referenced_core_contexts": [],
+  "promoted_core_concepts": ["identity-application"],
+  "auth0_specific_concepts": [
+    "api-resource-server",
+    "application-configuration",
+    "authentication-boundary",
+    "authentication-configuration",
+    "connection-configuration",
+    "customer-organization",
+    "directory-sync",
+    "domain-configuration",
+    "extension-configuration",
+    "flow-vault-connection",
+    "identity-connection",
+    "identity-domain",
+    "identity-event-stream",
+    "identity-extension",
+    "identity-log-stream",
+    "identity-tenant",
+    "identity-workflow",
+    "notification-provider",
+    "self-service-configuration",
+    "self-service-sso-profile",
+    "token-exchange-profile"
+  ],
+  "reviewed_candidates": [
+    {
+      "candidate": "identity-application",
+      "compared": ["vault/oidc-client", "okta/app-integration", "auth0/client"],
+      "disposition": "promote-core",
+      "reason": "each is a registered relying-party application or client; protocol and provider settings remain dialect-specific"
+    },
+    {
+      "candidate": "identity-tenant",
+      "compared": [
+        "auth0/tenant",
+        "okta/org",
+        "google/identity-platform-tenant",
+        "azure/entra-directory"
+      ],
+      "disposition": "keep-provider-specific",
+      "reason": "existing authorization tenant, top-level org, subordinate user partition, and directory control plane have different ownership"
+    },
+    {
+      "candidate": "identity-connection",
+      "compared": ["auth0/connection", "okta/external-idp", "vault/auth-method"],
+      "disposition": "keep-auth0-specific",
+      "reason": "Auth0 Connections combine databases, passwordless methods, social providers, and enterprise identity providers"
+    },
+    {
+      "candidate": "authorization-server",
+      "compared": ["auth0/tenant", "okta/custom-authorization-server", "vault/oidc-provider"],
+      "disposition": "keep-provider-specific",
+      "reason": "Auth0 authorization is tenant-owned while Okta exposes custom server objects and Vault exposes an OIDC identity provider"
+    },
+    {
+      "candidate": "identity-event-extension",
+      "compared": ["auth0/action-rule-hook", "okta/event-inline-hook"],
+      "disposition": "keep-provider-specific",
+      "reason": "Auth0 runs hosted code while Okta hooks invoke external callbacks with different execution ownership"
+    },
+    {
+      "candidate": "certificate-authority",
+      "compared": ["vault/pki", "aws/acm-pca", "google/ca-service", "azure/key-vault-certificate"],
+      "disposition": "keep-provider-specific",
+      "reason": "Vault combines PKI with secrets-engine lifecycle and Azure baseline exposes certificates rather than an equivalent managed CA root"
+    }
+  ]
+}

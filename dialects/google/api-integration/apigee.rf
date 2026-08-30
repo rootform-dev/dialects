@@ -1,0 +1,69 @@
+concept "apigee-organization" {
+  kind        = scope
+  description = "An Apigee organization containing API management runtime resources."
+}
+
+concept "apigee-instance" {
+  kind        = entity
+  description = "An Apigee runtime instance."
+}
+
+concept "apigee-environment" {
+  kind        = scope
+  description = "An Apigee environment for deploying API proxies and shared flows."
+}
+
+concept "apigee-api-proxy" {
+  kind        = entity
+  description = "An API proxy managed by Apigee."
+}
+
+concept "apigee-api-product" {
+  kind        = entity
+  description = "An Apigee API product exposing selected API resources to consumers."
+}
+
+rule "apigee-organization" {
+  match {
+    kind = "resource"
+    type = "google_apigee_organization"
+  }
+
+  as = concept.apigee-organization
+}
+
+rule "apigee-instance" {
+  match {
+    kind = "resource"
+    type = "google_apigee_instance"
+  }
+
+  as = concept.apigee-instance
+}
+
+rule "apigee-environment" {
+  match {
+    kind = "resource"
+    type = "google_apigee_environment"
+  }
+
+  as = concept.apigee-environment
+}
+
+rule "apigee-api-proxy" {
+  match {
+    kind = "resource"
+    type = "google_apigee_api"
+  }
+
+  as = concept.apigee-api-proxy
+}
+
+rule "apigee-api-product" {
+  match {
+    kind = "resource"
+    type = "google_apigee_api_product"
+  }
+
+  as = concept.apigee-api-product
+}

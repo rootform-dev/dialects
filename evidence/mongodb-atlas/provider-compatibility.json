@@ -1,0 +1,664 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-29",
+  "dialect": {
+    "name": "mongodb-atlas",
+    "version": "0.1.0"
+  },
+  "provider": {
+    "source": "registry.terraform.io/mongodb/mongodbatlas",
+    "baseline_version": "2.16.0",
+    "compatibility": "= 2.16.0",
+    "bound": "temporary-exact-evidence",
+    "schema_sha256": "sha256:f7b56e5a6570d4dc8a6ac2a05b096269423aae21fb8b04052d3827b6b2229cea"
+  },
+  "semantic_sources_sha256": "sha256:7b01f62e0a33ea8931ba232ed8bc8915e12cf5ecf59c57f18a1b65957230f6c7",
+  "rules": [
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/databases/clusters.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_advanced_cluster",
+      "rule_id": "mongodb-atlas/advanced-cluster",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/advanced_cluster.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/search/search.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_ai_model_rate_limit",
+      "rule_id": "mongodb-atlas/ai-model-rate-limit",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/ai_model_rate_limit.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/observability/integrations.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_alert_configuration",
+      "rule_id": "mongodb-atlas/alert-configuration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/alert_configuration.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/identity-iam/identities.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_api_key_project_assignment",
+      "rule_id": "mongodb-atlas/api-key-project-assignment",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/api_key_project_assignment.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/security/encryption.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_auditing",
+      "rule_id": "mongodb-atlas/auditing",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/auditing.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/backup/backup.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_backup_compliance_policy",
+      "rule_id": "mongodb-atlas/backup-compliance-policy",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/backup_compliance_policy.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/backup/backup.rf",
+      "paths": ["bucket_name", "iam_role_id", "project_id", "role_id"],
+      "resource_type": "mongodbatlas_cloud_backup_snapshot_export_bucket",
+      "rule_id": "mongodb-atlas/cloud-backup-export-destination",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/cloud_backup_snapshot_export_bucket.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/backup/backup.rf",
+      "paths": ["cluster_name", "export[0].export_bucket_id", "project_id"],
+      "resource_type": "mongodbatlas_cloud_backup_schedule",
+      "rule_id": "mongodb-atlas/cloud-backup-schedule",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/cloud_backup_schedule.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/identity-iam/identities.rf",
+      "paths": [
+        "aws[0].iam_assumed_role_arn",
+        "azure[0].service_principal_id",
+        "project_id",
+        "role_id"
+      ],
+      "resource_type": "mongodbatlas_cloud_provider_access_authorization",
+      "rule_id": "mongodb-atlas/cloud-provider-access-authorization",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/cloud_provider_access_authorization.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/identity-iam/identities.rf",
+      "paths": ["azure_config[0].service_principal_id", "project_id"],
+      "resource_type": "mongodbatlas_cloud_provider_access_setup",
+      "rule_id": "mongodb-atlas/cloud-provider-access-setup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/cloud_provider_access_setup.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/identity-iam/identities.rf",
+      "paths": ["org_id"],
+      "resource_type": "mongodbatlas_cloud_user_org_assignment",
+      "rule_id": "mongodb-atlas/cloud-user-organization-assignment",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/cloud_user_org_assignment.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/identity-iam/identities.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_cloud_user_project_assignment",
+      "rule_id": "mongodb-atlas/cloud-user-project-assignment",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/cloud_user_project_assignment.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/identity-iam/identities.rf",
+      "paths": ["org_id", "team_id"],
+      "resource_type": "mongodbatlas_cloud_user_team_assignment",
+      "rule_id": "mongodb-atlas/cloud-user-team-assignment",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/cloud_user_team_assignment.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/databases/clusters.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_cluster",
+      "rule_id": "mongodb-atlas/cluster",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/cluster.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/identity-iam/identities.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_custom_db_role",
+      "rule_id": "mongodb-atlas/custom-database-role",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/custom_db_role.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/network/connectivity.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_custom_dns_configuration_cluster_aws",
+      "rule_id": "mongodb-atlas/custom-dns-configuration-aws",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/custom_dns_configuration_cluster_aws.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/network/connectivity.rf",
+      "paths": ["endpoint_id", "project_id"],
+      "resource_type": "mongodbatlas_privatelink_endpoint_service_data_federation_online_archive",
+      "rule_id": "mongodb-atlas/data-service-private-endpoint",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/privatelink_endpoint_service_data_federation_online_archive.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/identity-iam/identities.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_database_user",
+      "rule_id": "mongodb-atlas/database-user",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/database_user.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/security/encryption.rf",
+      "paths": [
+        "aws_kms_config[0].customer_master_key_id",
+        "aws_kms_config[0].role_id",
+        "azure_key_vault_config[0].key_identifier",
+        "azure_key_vault_config[0].role_id",
+        "google_cloud_kms_config[0].key_version_resource_id",
+        "google_cloud_kms_config[0].role_id",
+        "project_id"
+      ],
+      "resource_type": "mongodbatlas_encryption_at_rest",
+      "rule_id": "mongodb-atlas/encryption-at-rest",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/encryption_at_rest.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/security/encryption.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_encryption_at_rest_private_endpoint",
+      "rule_id": "mongodb-atlas/encryption-private-endpoint",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/encryption_at_rest_private_endpoint.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/applications/event-triggers.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_event_trigger",
+      "rule_id": "mongodb-atlas/event-trigger",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/event_trigger.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/data-federation/federation-archive.rf",
+      "paths": [
+        "cloud_provider_config[0].aws[0].role_id",
+        "cloud_provider_config[0].azure[0].role_id",
+        "project_id",
+        "storage_stores[0].bucket",
+        "storage_stores[0].cluster_name"
+      ],
+      "resource_type": "mongodbatlas_federated_database_instance",
+      "rule_id": "mongodb-atlas/federated-database-instance",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/federated_database_instance.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "mongodbatlas_federated_settings_identity_provider",
+      "rule_id": "mongodb-atlas/federated-identity-provider",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/federated_settings_identity_provider.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/identity-iam/identities.rf",
+      "paths": ["org_id"],
+      "resource_type": "mongodbatlas_federated_settings_org_config",
+      "rule_id": "mongodb-atlas/federated-organization-configuration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/federated_settings_org_config.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/identity-iam/identities.rf",
+      "paths": ["org_id"],
+      "resource_type": "mongodbatlas_federated_settings_org_role_mapping",
+      "rule_id": "mongodb-atlas/federated-organization-role-mapping",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/federated_settings_org_role_mapping.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/data-federation/federation-archive.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_federated_query_limit",
+      "rule_id": "mongodb-atlas/federated-query-limit",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/federated_query_limit.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/databases/clusters.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_flex_cluster",
+      "rule_id": "mongodb-atlas/flex-cluster",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/flex_cluster.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/databases/clusters.rf",
+      "paths": ["cluster_name", "project_id"],
+      "resource_type": "mongodbatlas_global_cluster_config",
+      "rule_id": "mongodb-atlas/global-cluster-configuration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/global_cluster_config.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/identity-iam/identities.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_ldap_configuration",
+      "rule_id": "mongodb-atlas/ldap-configuration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/ldap_configuration.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/observability/integrations.rf",
+      "paths": [
+        "bucket_name",
+        "iam_role_id",
+        "kms_key",
+        "project_id",
+        "role_id",
+        "storage_container_name"
+      ],
+      "resource_type": "mongodbatlas_log_integration",
+      "rule_id": "mongodb-atlas/log-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/log_integration.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/databases/clusters.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_maintenance_window",
+      "rule_id": "mongodb-atlas/maintenance-window",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/maintenance_window.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/observability/integrations.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_metric_integration",
+      "rule_id": "mongodb-atlas/metric-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/metric_integration.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/network/connectivity.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_network_container",
+      "rule_id": "mongodb-atlas/network-container",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/network_container.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/network/connectivity.rf",
+      "paths": ["container_id", "network_name", "project_id", "vnet_name", "vpc_id"],
+      "resource_type": "mongodbatlas_network_peering",
+      "rule_id": "mongodb-atlas/network-peering",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/network_peering.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/data-federation/federation-archive.rf",
+      "paths": ["cluster_name", "project_id"],
+      "resource_type": "mongodbatlas_online_archive",
+      "rule_id": "mongodb-atlas/online-archive",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/online_archive.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/governance/organizations-projects.rf",
+      "paths": [],
+      "resource_type": "mongodbatlas_organization",
+      "rule_id": "mongodb-atlas/organization",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/organization.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/identity-iam/identities.rf",
+      "paths": ["org_id"],
+      "resource_type": "mongodbatlas_service_account",
+      "rule_id": "mongodb-atlas/organization-service-account",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/service_account.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/identity-iam/identities.rf",
+      "paths": ["client_id", "org_id"],
+      "resource_type": "mongodbatlas_service_account_access_list_entry",
+      "rule_id": "mongodb-atlas/organization-service-account-access-list",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/service_account_access_list_entry.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/network/connectivity.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_private_endpoint_regional_mode",
+      "rule_id": "mongodb-atlas/private-endpoint-regional-mode",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/private_endpoint_regional_mode.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/network/connectivity.rf",
+      "paths": ["endpoint_service_id", "private_link_id", "project_id"],
+      "resource_type": "mongodbatlas_privatelink_endpoint_service",
+      "rule_id": "mongodb-atlas/private-endpoint-registration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/privatelink_endpoint_service.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/network/connectivity.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_privatelink_endpoint",
+      "rule_id": "mongodb-atlas/private-endpoint-service",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/privatelink_endpoint.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/governance/organizations-projects.rf",
+      "paths": ["org_id"],
+      "resource_type": "mongodbatlas_project",
+      "rule_id": "mongodb-atlas/project",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/project.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/network/connectivity.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_project_ip_access_list",
+      "rule_id": "mongodb-atlas/project-ip-access-list",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/project_ip_access_list.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/identity-iam/identities.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_project_service_account",
+      "rule_id": "mongodb-atlas/project-service-account",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/project_service_account.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/identity-iam/identities.rf",
+      "paths": ["client_id", "project_id"],
+      "resource_type": "mongodbatlas_project_service_account_access_list_entry",
+      "rule_id": "mongodb-atlas/project-service-account-access-list",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/project_service_account_access_list_entry.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/observability/integrations.rf",
+      "paths": ["bucket_name", "iam_role_id", "project_id"],
+      "resource_type": "mongodbatlas_push_based_log_export",
+      "rule_id": "mongodb-atlas/push-based-log-export",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/push_based_log_export.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/governance/organizations-projects.rf",
+      "paths": ["org_id"],
+      "resource_type": "mongodbatlas_resource_policy",
+      "rule_id": "mongodb-atlas/resource-policy",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/resource_policy.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/search/search.rf",
+      "paths": ["cluster_name", "project_id"],
+      "resource_type": "mongodbatlas_search_deployment",
+      "rule_id": "mongodb-atlas/search-deployment",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/search_deployment.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/search/search.rf",
+      "paths": ["cluster_name"],
+      "resource_type": "mongodbatlas_search_index",
+      "rule_id": "mongodb-atlas/search-index",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/search_index.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/databases/clusters.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_serverless_instance",
+      "rule_id": "mongodb-atlas/serverless-instance",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/serverless_instance.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/identity-iam/identities.rf",
+      "paths": ["client_id", "project_id"],
+      "resource_type": "mongodbatlas_service_account_project_assignment",
+      "rule_id": "mongodb-atlas/service-account-project-assignment",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/service_account_project_assignment.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/stream-processing/streams.rf",
+      "paths": [
+        "aws[0].role_arn",
+        "azure[0].service_principal_id",
+        "cluster_name",
+        "gcp[0].service_account_id",
+        "instance_name",
+        "networking[0].access[0].connection_id",
+        "project_id",
+        "workspace_name"
+      ],
+      "resource_type": "mongodbatlas_stream_connection",
+      "rule_id": "mongodb-atlas/stream-connection",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/stream_connection.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/stream-processing/streams.rf",
+      "paths": ["connection_name"],
+      "resource_type": "mongodbatlas_stream_connection_failover",
+      "rule_id": "mongodb-atlas/stream-connection-failover",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/stream_connection_failover.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/stream-processing/streams.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_stream_instance",
+      "rule_id": "mongodb-atlas/stream-instance",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/stream_instance.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/stream-processing/streams.rf",
+      "paths": ["project_id", "service_endpoint_id"],
+      "resource_type": "mongodbatlas_stream_privatelink_endpoint",
+      "rule_id": "mongodb-atlas/stream-private-endpoint",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/stream_privatelink_endpoint.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/stream-processing/streams.rf",
+      "paths": ["instance_name", "project_id", "workspace_name"],
+      "resource_type": "mongodbatlas_stream_processor",
+      "rule_id": "mongodb-atlas/stream-processor",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/stream_processor.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/stream-processing/streams.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_stream_workspace",
+      "rule_id": "mongodb-atlas/stream-workspace",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/stream_workspace.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/identity-iam/identities.rf",
+      "paths": ["org_id"],
+      "resource_type": "mongodbatlas_team",
+      "rule_id": "mongodb-atlas/team",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/team.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/identity-iam/identities.rf",
+      "paths": ["project_id", "team_id"],
+      "resource_type": "mongodbatlas_team_project_assignment",
+      "rule_id": "mongodb-atlas/team-project-assignment",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/team_project_assignment.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/observability/integrations.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_third_party_integration",
+      "rule_id": "mongodb-atlas/third-party-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/third_party_integration.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/mongodb-atlas/identity-iam/identities.rf",
+      "paths": ["project_id"],
+      "resource_type": "mongodbatlas_x509_authentication_database_user",
+      "rule_id": "mongodb-atlas/x509-database-user",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/x509_authentication_database_user.md"
+    }
+  ],
+  "review_policy": "later provider releases require schema-path and documented-meaning comparison; they do not require a dialect release automatically"
+}

@@ -1,0 +1,913 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-29",
+  "source_url": "https://developers.cloudflare.com/products/",
+  "derivation": "every provider construct maps to exactly one official product family",
+  "products": [
+    {
+      "id": "account-platform",
+      "family": "governance-management",
+      "major": false,
+      "official_name": "Cloudflare account platform",
+      "source_url": "https://developers.cloudflare.com/fundamentals/",
+      "coverage": "partial",
+      "coverage_reason": "tenancy, sharing, identity, DNS defaults, and edge code are modeled; user, token, subscription, and case administration are excluded",
+      "counts": {
+        "managed_resources": 32,
+        "data_sources": 73
+      },
+      "status_counts": {
+        "supported": 10,
+        "partial": 7,
+        "intentionally-unrepresented": 88,
+        "unsupported": 0
+      },
+      "rules": [
+        "cloudflare/account",
+        "cloudflare/account-dns-internal-view",
+        "cloudflare/account-dns-settings",
+        "cloudflare/certificate-transparency-alerting",
+        "cloudflare/custom-origin-trust-store",
+        "cloudflare/dex-rule",
+        "cloudflare/dex-test",
+        "cloudflare/oauth-client",
+        "cloudflare/organization",
+        "cloudflare/regional-hostname",
+        "cloudflare/resource-share",
+        "cloudflare/snippet",
+        "cloudflare/snippet-rules",
+        "cloudflare/snippets",
+        "cloudflare/sso-connector",
+        "cloudflare/user-group",
+        "cloudflare/web3-hostname"
+      ]
+    },
+    {
+      "id": "ai-gateway",
+      "family": "ai-ml",
+      "major": true,
+      "official_name": "Cloudflare AI Gateway",
+      "source_url": "https://developers.cloudflare.com/ai-gateway/",
+      "coverage": "supported",
+      "coverage_reason": "all provider-backed architecture resources are modeled",
+      "counts": {
+        "managed_resources": 2,
+        "data_sources": 3
+      },
+      "status_counts": {
+        "supported": 1,
+        "partial": 1,
+        "intentionally-unrepresented": 3,
+        "unsupported": 0
+      },
+      "rules": ["cloudflare/ai-gateway", "cloudflare/ai-gateway-dynamic-routing"]
+    },
+    {
+      "id": "ai-search",
+      "family": "ai-ml",
+      "major": true,
+      "official_name": "Cloudflare AI Search",
+      "source_url": "https://developers.cloudflare.com/ai-search/",
+      "coverage": "supported",
+      "coverage_reason": "instances and namespaces are modeled; credential tokens are intentionally excluded",
+      "counts": {
+        "managed_resources": 3,
+        "data_sources": 6
+      },
+      "status_counts": {
+        "supported": 2,
+        "partial": 0,
+        "intentionally-unrepresented": 7,
+        "unsupported": 0
+      },
+      "rules": ["cloudflare/ai-search-instance", "cloudflare/ai-search-namespace"]
+    },
+    {
+      "id": "application-security",
+      "family": "security",
+      "major": true,
+      "official_name": "Cloudflare Application Security",
+      "source_url": "https://developers.cloudflare.com/reference-architecture/architectures/security/",
+      "coverage": "partial",
+      "coverage_reason": "edge security services and schema/content controls are modeled; credential material and low-level filter helpers are excluded",
+      "counts": {
+        "managed_resources": 26,
+        "data_sources": 49
+      },
+      "status_counts": {
+        "supported": 1,
+        "partial": 18,
+        "intentionally-unrepresented": 56,
+        "unsupported": 0
+      },
+      "rules": [
+        "cloudflare/api-shield",
+        "cloudflare/api-shield-discovery-operation",
+        "cloudflare/api-shield-operation",
+        "cloudflare/api-shield-operation-schema-validation",
+        "cloudflare/api-shield-schema",
+        "cloudflare/api-shield-schema-validation",
+        "cloudflare/bot-management",
+        "cloudflare/content-scanning",
+        "cloudflare/content-scanning-expression",
+        "cloudflare/firewall-rule",
+        "cloudflare/page-shield-policy",
+        "cloudflare/rate-limit",
+        "cloudflare/ruleset",
+        "cloudflare/schema-validation-operation-settings",
+        "cloudflare/schema-validation-schemas",
+        "cloudflare/schema-validation-settings",
+        "cloudflare/token-validation-config",
+        "cloudflare/user-agent-blocking-rule",
+        "cloudflare/vulnerability-scanner-target"
+      ]
+    },
+    {
+      "id": "calls",
+      "family": "media",
+      "major": true,
+      "official_name": "Cloudflare Calls",
+      "source_url": "https://developers.cloudflare.com/calls/",
+      "coverage": "supported",
+      "coverage_reason": "SFU and TURN applications are modeled",
+      "counts": {
+        "managed_resources": 2,
+        "data_sources": 4
+      },
+      "status_counts": {
+        "supported": 2,
+        "partial": 0,
+        "intentionally-unrepresented": 4,
+        "unsupported": 0
+      },
+      "rules": ["cloudflare/calls-sfu-app", "cloudflare/calls-turn-app"]
+    },
+    {
+      "id": "cdn",
+      "family": "dns-cdn",
+      "major": true,
+      "official_name": "Cloudflare CDN",
+      "source_url": "https://developers.cloudflare.com/cache/",
+      "coverage": "supported",
+      "coverage_reason": "all provider-backed delivery configurations are modeled as zone details",
+      "counts": {
+        "managed_resources": 10,
+        "data_sources": 10
+      },
+      "status_counts": {
+        "supported": 0,
+        "partial": 10,
+        "intentionally-unrepresented": 10,
+        "unsupported": 0
+      },
+      "rules": [
+        "cloudflare/argo-smart-routing",
+        "cloudflare/argo-tiered-caching",
+        "cloudflare/google-tag-gateway",
+        "cloudflare/managed-transforms",
+        "cloudflare/page-rule",
+        "cloudflare/regional-tiered-cache",
+        "cloudflare/tiered-cache",
+        "cloudflare/url-normalization-settings",
+        "cloudflare/zone-cache-reserve",
+        "cloudflare/zone-cache-variants"
+      ]
+    },
+    {
+      "id": "cloudflare-for-saas",
+      "family": "dns-cdn",
+      "major": true,
+      "official_name": "Cloudflare for SaaS",
+      "source_url": "https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/",
+      "coverage": "supported",
+      "coverage_reason": "custom hostnames and fallback origins are modeled; custom page content is excluded",
+      "counts": {
+        "managed_resources": 4,
+        "data_sources": 7
+      },
+      "status_counts": {
+        "supported": 2,
+        "partial": 0,
+        "intentionally-unrepresented": 9,
+        "unsupported": 0
+      },
+      "rules": ["cloudflare/custom-hostname", "cloudflare/custom-hostname-fallback-origin"]
+    },
+    {
+      "id": "cloudflare-tunnel",
+      "family": "network",
+      "major": true,
+      "official_name": "Cloudflare Tunnel",
+      "source_url": "https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/",
+      "coverage": "partial",
+      "coverage_reason": "Tunnel, routes, configuration, virtual networks, WARP, and connectivity services are modeled; literal network endpoints remain unlinked",
+      "counts": {
+        "managed_resources": 8,
+        "data_sources": 16
+      },
+      "status_counts": {
+        "supported": 4,
+        "partial": 4,
+        "intentionally-unrepresented": 16,
+        "unsupported": 0
+      },
+      "rules": [
+        "cloudflare/cloudflare-tunnel",
+        "cloudflare/cloudflare-tunnel-config",
+        "cloudflare/cloudflare-tunnel-hostname-route",
+        "cloudflare/cloudflare-tunnel-route",
+        "cloudflare/cloudflare-tunnel-virtual-network",
+        "cloudflare/connectivity-directory-service",
+        "cloudflare/warp-connector",
+        "cloudflare/warp-connector-config"
+      ]
+    },
+    {
+      "id": "cloudflare-wan",
+      "family": "network",
+      "major": true,
+      "official_name": "Cloudflare WAN and Magic Transit",
+      "source_url": "https://developers.cloudflare.com/cloudflare-one/networks/connectivity-options/",
+      "coverage": "partial",
+      "coverage_reason": "sites, connectors, tunnels, routes, prefixes, and cloud connector rules are modeled; DLS prefix binding stays configuration-only",
+      "counts": {
+        "managed_resources": 13,
+        "data_sources": 21
+      },
+      "status_counts": {
+        "supported": 6,
+        "partial": 6,
+        "intentionally-unrepresented": 22,
+        "unsupported": 0
+      },
+      "rules": [
+        "cloudflare/cloud-connector-rules",
+        "cloudflare/magic-transit-cf1-site",
+        "cloudflare/magic-transit-connector",
+        "cloudflare/magic-transit-site",
+        "cloudflare/magic-transit-site-acl",
+        "cloudflare/magic-transit-site-lan",
+        "cloudflare/magic-transit-site-wan",
+        "cloudflare/magic-wan-gre-tunnel",
+        "cloudflare/magic-wan-ipsec-tunnel",
+        "cloudflare/magic-wan-static-route",
+        "cloudflare/network-monitoring",
+        "cloudflare/network-monitoring-rule"
+      ]
+    },
+    {
+      "id": "d1",
+      "family": "databases",
+      "major": true,
+      "official_name": "Cloudflare D1",
+      "source_url": "https://developers.cloudflare.com/d1/",
+      "coverage": "supported",
+      "coverage_reason": "all provider-backed architecture resources are modeled",
+      "counts": {
+        "managed_resources": 1,
+        "data_sources": 2
+      },
+      "status_counts": {
+        "supported": 1,
+        "partial": 0,
+        "intentionally-unrepresented": 2,
+        "unsupported": 0
+      },
+      "rules": ["cloudflare/d1-database"]
+    },
+    {
+      "id": "dns",
+      "family": "dns-cdn",
+      "major": true,
+      "official_name": "Cloudflare DNS",
+      "source_url": "https://developers.cloudflare.com/dns/",
+      "coverage": "supported",
+      "coverage_reason": "zones, records, views, regional hostnames, DNSSEC, and secondary DNS topology are modeled",
+      "counts": {
+        "managed_resources": 15,
+        "data_sources": 22
+      },
+      "status_counts": {
+        "supported": 3,
+        "partial": 11,
+        "intentionally-unrepresented": 23,
+        "unsupported": 0
+      },
+      "rules": [
+        "cloudflare/dns-firewall",
+        "cloudflare/dns-record",
+        "cloudflare/dns-transfer-acl",
+        "cloudflare/dns-transfer-incoming",
+        "cloudflare/dns-transfer-outgoing",
+        "cloudflare/dns-transfer-peer",
+        "cloudflare/dns-transfer-tsig",
+        "cloudflare/proxied-dns-record",
+        "cloudflare/zone",
+        "cloudflare/zone-auto-origin-tls-kex",
+        "cloudflare/zone-dns-settings",
+        "cloudflare/zone-dnssec",
+        "cloudflare/zone-hold",
+        "cloudflare/zone-lockdown",
+        "cloudflare/zone-setting"
+      ]
+    },
+    {
+      "id": "email",
+      "family": "edge-applications",
+      "major": true,
+      "official_name": "Cloudflare Email Routing and Email Security",
+      "source_url": "https://developers.cloudflare.com/email-routing/",
+      "coverage": "supported",
+      "coverage_reason": "routing and email-security configuration are modeled; addresses and generated DNS helpers are excluded",
+      "counts": {
+        "managed_resources": 8,
+        "data_sources": 13
+      },
+      "status_counts": {
+        "supported": 0,
+        "partial": 6,
+        "intentionally-unrepresented": 15,
+        "unsupported": 0
+      },
+      "rules": [
+        "cloudflare/email-routing-catch-all",
+        "cloudflare/email-routing-rule",
+        "cloudflare/email-routing-settings",
+        "cloudflare/email-security-block-sender",
+        "cloudflare/email-security-impersonation-registry",
+        "cloudflare/email-security-trusted-domains"
+      ]
+    },
+    {
+      "id": "feature-flags",
+      "family": "governance-management",
+      "major": true,
+      "official_name": "Cloudflare feature flags",
+      "source_url": "https://developers.cloudflare.com/",
+      "coverage": "supported",
+      "coverage_reason": "applications and flags are modeled as entity plus detail",
+      "counts": {
+        "managed_resources": 2,
+        "data_sources": 4
+      },
+      "status_counts": {
+        "supported": 1,
+        "partial": 1,
+        "intentionally-unrepresented": 4,
+        "unsupported": 0
+      },
+      "rules": ["cloudflare/flagship-app", "cloudflare/flagship-flag"]
+    },
+    {
+      "id": "hyperdrive",
+      "family": "databases",
+      "major": true,
+      "official_name": "Cloudflare Hyperdrive",
+      "source_url": "https://developers.cloudflare.com/hyperdrive/",
+      "coverage": "supported",
+      "coverage_reason": "all provider-backed architecture resources are modeled",
+      "counts": {
+        "managed_resources": 1,
+        "data_sources": 2
+      },
+      "status_counts": {
+        "supported": 1,
+        "partial": 0,
+        "intentionally-unrepresented": 2,
+        "unsupported": 0
+      },
+      "rules": ["cloudflare/hyperdrive-config"]
+    },
+    {
+      "id": "images",
+      "family": "media",
+      "major": false,
+      "official_name": "Cloudflare Images",
+      "source_url": "https://developers.cloudflare.com/images/",
+      "coverage": "intentionally-unrepresented",
+      "coverage_reason": "provider surface manages image content and variants, not independent architecture",
+      "counts": {
+        "managed_resources": 2,
+        "data_sources": 3
+      },
+      "status_counts": {
+        "supported": 0,
+        "partial": 0,
+        "intentionally-unrepresented": 5,
+        "unsupported": 0
+      },
+      "rules": []
+    },
+    {
+      "id": "load-balancing",
+      "family": "load-balancing",
+      "major": true,
+      "official_name": "Cloudflare Load Balancing",
+      "source_url": "https://developers.cloudflare.com/load-balancing/",
+      "coverage": "partial",
+      "coverage_reason": "load balancers, pools, monitors, and health checks are modeled; origin traversal is intentionally bounded to fixed indices",
+      "counts": {
+        "managed_resources": 5,
+        "data_sources": 10
+      },
+      "status_counts": {
+        "supported": 2,
+        "partial": 3,
+        "intentionally-unrepresented": 10,
+        "unsupported": 0
+      },
+      "rules": [
+        "cloudflare/healthcheck",
+        "cloudflare/load-balancer",
+        "cloudflare/load-balancer-monitor",
+        "cloudflare/load-balancer-monitor-group",
+        "cloudflare/load-balancer-pool"
+      ]
+    },
+    {
+      "id": "media",
+      "family": "media",
+      "major": true,
+      "official_name": "Cloudflare media services",
+      "source_url": "https://developers.cloudflare.com/reference-architecture/architectures/",
+      "coverage": "supported",
+      "coverage_reason": "provider-backed relay and edge security service roles are modeled",
+      "counts": {
+        "managed_resources": 2,
+        "data_sources": 3
+      },
+      "status_counts": {
+        "supported": 1,
+        "partial": 1,
+        "intentionally-unrepresented": 3,
+        "unsupported": 0
+      },
+      "rules": ["cloudflare/moq-relay", "cloudflare/precursor"]
+    },
+    {
+      "id": "network-services",
+      "family": "network",
+      "major": true,
+      "official_name": "Cloudflare Network Services",
+      "source_url": "https://developers.cloudflare.com/reference-architecture/architectures/security/",
+      "coverage": "supported",
+      "coverage_reason": "address maps, BYO IP prefixes, and origin cloud-region mappings are modeled",
+      "counts": {
+        "managed_resources": 3,
+        "data_sources": 6
+      },
+      "status_counts": {
+        "supported": 2,
+        "partial": 1,
+        "intentionally-unrepresented": 6,
+        "unsupported": 0
+      },
+      "rules": [
+        "cloudflare/address-map",
+        "cloudflare/byo-ip-prefix",
+        "cloudflare/origin-cloud-region"
+      ]
+    },
+    {
+      "id": "observability",
+      "family": "observability",
+      "major": true,
+      "official_name": "Cloudflare observability",
+      "source_url": "https://developers.cloudflare.com/logs/",
+      "coverage": "partial",
+      "coverage_reason": "Logpush, Web Analytics, network monitoring, DEX, notifications, and retention are modeled; imperative challenges and scheduled runs are excluded",
+      "counts": {
+        "managed_resources": 6,
+        "data_sources": 9
+      },
+      "status_counts": {
+        "supported": 1,
+        "partial": 3,
+        "intentionally-unrepresented": 11,
+        "unsupported": 0
+      },
+      "rules": [
+        "cloudflare/logpull-retention",
+        "cloudflare/logpush-job",
+        "cloudflare/notification-policy",
+        "cloudflare/notification-webhook"
+      ]
+    },
+    {
+      "id": "pages",
+      "family": "serverless",
+      "major": true,
+      "official_name": "Cloudflare Pages",
+      "source_url": "https://developers.cloudflare.com/pages/",
+      "coverage": "supported",
+      "coverage_reason": "projects and custom domains are modeled as application plus composition detail",
+      "counts": {
+        "managed_resources": 2,
+        "data_sources": 4
+      },
+      "status_counts": {
+        "supported": 1,
+        "partial": 1,
+        "intentionally-unrepresented": 4,
+        "unsupported": 0
+      },
+      "rules": ["cloudflare/pages-domain", "cloudflare/pages-project"]
+    },
+    {
+      "id": "pipelines",
+      "family": "serverless",
+      "major": true,
+      "official_name": "Cloudflare Pipelines",
+      "source_url": "https://developers.cloudflare.com/pipelines/",
+      "coverage": "supported",
+      "coverage_reason": "pipelines, streams, and sinks are modeled",
+      "counts": {
+        "managed_resources": 3,
+        "data_sources": 5
+      },
+      "status_counts": {
+        "supported": 3,
+        "partial": 0,
+        "intentionally-unrepresented": 5,
+        "unsupported": 0
+      },
+      "rules": ["cloudflare/pipeline", "cloudflare/pipeline-sink", "cloudflare/pipeline-stream"]
+    },
+    {
+      "id": "queues",
+      "family": "messaging-eventing",
+      "major": true,
+      "official_name": "Cloudflare Queues",
+      "source_url": "https://developers.cloudflare.com/queues/",
+      "coverage": "supported",
+      "coverage_reason": "queues and consumer composition are modeled",
+      "counts": {
+        "managed_resources": 2,
+        "data_sources": 4
+      },
+      "status_counts": {
+        "supported": 1,
+        "partial": 1,
+        "intentionally-unrepresented": 4,
+        "unsupported": 0
+      },
+      "rules": ["cloudflare/queue", "cloudflare/queue-consumer"]
+    },
+    {
+      "id": "r2",
+      "family": "storage",
+      "major": true,
+      "official_name": "Cloudflare R2",
+      "source_url": "https://developers.cloudflare.com/r2/",
+      "coverage": "supported",
+      "coverage_reason": "bucket and every provider-backed R2 configuration surface are modeled",
+      "counts": {
+        "managed_resources": 9,
+        "data_sources": 8
+      },
+      "status_counts": {
+        "supported": 2,
+        "partial": 7,
+        "intentionally-unrepresented": 8,
+        "unsupported": 0
+      },
+      "rules": [
+        "cloudflare/r2-bucket",
+        "cloudflare/r2-bucket-cors",
+        "cloudflare/r2-bucket-event-notification",
+        "cloudflare/r2-bucket-lifecycle",
+        "cloudflare/r2-bucket-lock",
+        "cloudflare/r2-bucket-sippy",
+        "cloudflare/r2-custom-domain",
+        "cloudflare/r2-data-catalog",
+        "cloudflare/r2-managed-domain"
+      ]
+    },
+    {
+      "id": "registrar",
+      "family": "dns-cdn",
+      "major": false,
+      "official_name": "Cloudflare Registrar",
+      "source_url": "https://developers.cloudflare.com/registrar/",
+      "coverage": "intentionally-unrepresented",
+      "coverage_reason": "domain registration is administrative and Cloudflare zones carry the architecture role",
+      "counts": {
+        "managed_resources": 1,
+        "data_sources": 2
+      },
+      "status_counts": {
+        "supported": 0,
+        "partial": 0,
+        "intentionally-unrepresented": 3,
+        "unsupported": 0
+      },
+      "rules": []
+    },
+    {
+      "id": "secrets-store",
+      "family": "identity-iam",
+      "major": true,
+      "official_name": "Cloudflare Secrets Store",
+      "source_url": "https://developers.cloudflare.com/secrets-store/",
+      "coverage": "supported",
+      "coverage_reason": "stores and managed secrets are modeled without secret values",
+      "counts": {
+        "managed_resources": 2,
+        "data_sources": 4
+      },
+      "status_counts": {
+        "supported": 2,
+        "partial": 0,
+        "intentionally-unrepresented": 4,
+        "unsupported": 0
+      },
+      "rules": ["cloudflare/secrets-store", "cloudflare/secrets-store-secret"]
+    },
+    {
+      "id": "spectrum",
+      "family": "edge-applications",
+      "major": true,
+      "official_name": "Cloudflare Spectrum",
+      "source_url": "https://developers.cloudflare.com/spectrum/",
+      "coverage": "supported",
+      "coverage_reason": "all provider-backed architecture resources are modeled",
+      "counts": {
+        "managed_resources": 1,
+        "data_sources": 2
+      },
+      "status_counts": {
+        "supported": 1,
+        "partial": 0,
+        "intentionally-unrepresented": 2,
+        "unsupported": 0
+      },
+      "rules": ["cloudflare/spectrum-application"]
+    },
+    {
+      "id": "ssl-tls",
+      "family": "security",
+      "major": false,
+      "official_name": "Cloudflare SSL/TLS",
+      "source_url": "https://developers.cloudflare.com/ssl/",
+      "coverage": "supported",
+      "coverage_reason": "certificate and TLS surfaces are modeled as zone composition details without key material",
+      "counts": {
+        "managed_resources": 16,
+        "data_sources": 27
+      },
+      "status_counts": {
+        "supported": 0,
+        "partial": 16,
+        "intentionally-unrepresented": 27,
+        "unsupported": 0
+      },
+      "rules": [
+        "cloudflare/authenticated-origin-pulls",
+        "cloudflare/authenticated-origin-pulls-certificate",
+        "cloudflare/authenticated-origin-pulls-hostname-certificate",
+        "cloudflare/authenticated-origin-pulls-settings",
+        "cloudflare/certificate-authority-hostname-associations",
+        "cloudflare/certificate-pack",
+        "cloudflare/client-certificate",
+        "cloudflare/custom-csr",
+        "cloudflare/custom-ssl",
+        "cloudflare/hostname-tls-setting",
+        "cloudflare/keyless-certificate",
+        "cloudflare/mtls-certificate",
+        "cloudflare/origin-ca-certificate",
+        "cloudflare/origin-tls-compliance-modes",
+        "cloudflare/total-tls",
+        "cloudflare/universal-ssl-setting"
+      ]
+    },
+    {
+      "id": "stream",
+      "family": "media",
+      "major": true,
+      "official_name": "Cloudflare Stream",
+      "source_url": "https://developers.cloudflare.com/stream/",
+      "coverage": "supported",
+      "coverage_reason": "live inputs and webhook configuration are modeled; video, track, caption, and watermark content is excluded",
+      "counts": {
+        "managed_resources": 8,
+        "data_sources": 10
+      },
+      "status_counts": {
+        "supported": 1,
+        "partial": 1,
+        "intentionally-unrepresented": 16,
+        "unsupported": 0
+      },
+      "rules": ["cloudflare/stream-live-input", "cloudflare/stream-webhook"]
+    },
+    {
+      "id": "turnstile",
+      "family": "security",
+      "major": true,
+      "official_name": "Cloudflare Turnstile",
+      "source_url": "https://developers.cloudflare.com/turnstile/",
+      "coverage": "supported",
+      "coverage_reason": "all provider-backed architecture resources are modeled",
+      "counts": {
+        "managed_resources": 1,
+        "data_sources": 2
+      },
+      "status_counts": {
+        "supported": 1,
+        "partial": 0,
+        "intentionally-unrepresented": 2,
+        "unsupported": 0
+      },
+      "rules": ["cloudflare/turnstile-widget"]
+    },
+    {
+      "id": "waiting-room",
+      "family": "edge-applications",
+      "major": true,
+      "official_name": "Cloudflare Waiting Room",
+      "source_url": "https://developers.cloudflare.com/waiting-room/",
+      "coverage": "supported",
+      "coverage_reason": "waiting rooms, events, bypass rules, and settings are modeled",
+      "counts": {
+        "managed_resources": 4,
+        "data_sources": 6
+      },
+      "status_counts": {
+        "supported": 1,
+        "partial": 3,
+        "intentionally-unrepresented": 6,
+        "unsupported": 0
+      },
+      "rules": [
+        "cloudflare/waiting-room",
+        "cloudflare/waiting-room-event",
+        "cloudflare/waiting-room-rules",
+        "cloudflare/waiting-room-settings"
+      ]
+    },
+    {
+      "id": "web-analytics",
+      "family": "observability",
+      "major": true,
+      "official_name": "Cloudflare Web Analytics",
+      "source_url": "https://developers.cloudflare.com/web-analytics/",
+      "coverage": "supported",
+      "coverage_reason": "sites and rules are modeled",
+      "counts": {
+        "managed_resources": 2,
+        "data_sources": 2
+      },
+      "status_counts": {
+        "supported": 1,
+        "partial": 1,
+        "intentionally-unrepresented": 2,
+        "unsupported": 0
+      },
+      "rules": ["cloudflare/web-analytics-rule", "cloudflare/web-analytics-site"]
+    },
+    {
+      "id": "workers",
+      "family": "serverless",
+      "major": true,
+      "official_name": "Cloudflare Workers",
+      "source_url": "https://developers.cloudflare.com/workers/",
+      "coverage": "partial",
+      "coverage_reason": "Workers, versions, deployments, routes, domains, schedules, KV, dispatch, and snippets are modeled; binding traversal is intentionally bounded",
+      "counts": {
+        "managed_resources": 11,
+        "data_sources": 18
+      },
+      "status_counts": {
+        "supported": 5,
+        "partial": 6,
+        "intentionally-unrepresented": 18,
+        "unsupported": 0
+      },
+      "rules": [
+        "cloudflare/worker",
+        "cloudflare/worker-version",
+        "cloudflare/workers-cron-trigger",
+        "cloudflare/workers-custom-domain",
+        "cloudflare/workers-deployment",
+        "cloudflare/workers-dispatch-namespace",
+        "cloudflare/workers-kv",
+        "cloudflare/workers-kv-namespace",
+        "cloudflare/workers-route",
+        "cloudflare/workers-script",
+        "cloudflare/workers-script-subdomain"
+      ]
+    },
+    {
+      "id": "workflows",
+      "family": "serverless",
+      "major": true,
+      "official_name": "Cloudflare Workflows",
+      "source_url": "https://developers.cloudflare.com/workflows/",
+      "coverage": "supported",
+      "coverage_reason": "all provider-backed architecture resources are modeled",
+      "counts": {
+        "managed_resources": 1,
+        "data_sources": 2
+      },
+      "status_counts": {
+        "supported": 1,
+        "partial": 0,
+        "intentionally-unrepresented": 2,
+        "unsupported": 0
+      },
+      "rules": ["cloudflare/workflow"]
+    },
+    {
+      "id": "zero-trust-access",
+      "family": "security",
+      "major": true,
+      "official_name": "Cloudflare Access",
+      "source_url": "https://developers.cloudflare.com/cloudflare-one/access-controls/",
+      "coverage": "partial",
+      "coverage_reason": "applications, policies, groups, identity, service tokens, and infrastructure targets are modeled; certificate and custom-page helpers are excluded",
+      "counts": {
+        "managed_resources": 14,
+        "data_sources": 26
+      },
+      "status_counts": {
+        "supported": 6,
+        "partial": 2,
+        "intentionally-unrepresented": 32,
+        "unsupported": 0
+      },
+      "rules": [
+        "cloudflare/access-ai-controls-mcp-portal",
+        "cloudflare/access-ai-controls-mcp-server",
+        "cloudflare/access-application",
+        "cloudflare/access-group",
+        "cloudflare/access-identity-provider",
+        "cloudflare/access-infrastructure-target",
+        "cloudflare/access-policy",
+        "cloudflare/access-service-token"
+      ]
+    },
+    {
+      "id": "zero-trust-dlp",
+      "family": "security",
+      "major": false,
+      "official_name": "Cloudflare Data Loss Prevention",
+      "source_url": "https://developers.cloudflare.com/cloudflare-one/data-loss-prevention/",
+      "coverage": "supported",
+      "coverage_reason": "profiles, datasets, integrations, and settings are modeled; entry and taxonomy content is excluded",
+      "counts": {
+        "managed_resources": 14,
+        "data_sources": 26
+      },
+      "status_counts": {
+        "supported": 0,
+        "partial": 5,
+        "intentionally-unrepresented": 35,
+        "unsupported": 0
+      },
+      "rules": [
+        "cloudflare/dlp-custom-profile",
+        "cloudflare/dlp-dataset",
+        "cloudflare/dlp-integration-entry",
+        "cloudflare/dlp-predefined-profile",
+        "cloudflare/dlp-settings"
+      ]
+    },
+    {
+      "id": "zero-trust-gateway",
+      "family": "security",
+      "major": true,
+      "official_name": "Cloudflare Gateway",
+      "source_url": "https://developers.cloudflare.com/cloudflare-one/policies/gateway/",
+      "coverage": "partial",
+      "coverage_reason": "Gateway endpoints, policies, DNS locations, device posture, settings, logging, and risk integration are modeled; PAC/list content and certificates are excluded",
+      "counts": {
+        "managed_resources": 23,
+        "data_sources": 38
+      },
+      "status_counts": {
+        "supported": 3,
+        "partial": 13,
+        "intentionally-unrepresented": 45,
+        "unsupported": 0
+      },
+      "rules": [
+        "cloudflare/device-custom-profile",
+        "cloudflare/device-default-profile",
+        "cloudflare/device-deployment-group",
+        "cloudflare/device-ip-profile",
+        "cloudflare/device-managed-network",
+        "cloudflare/device-posture-integration",
+        "cloudflare/device-posture-rule",
+        "cloudflare/device-settings",
+        "cloudflare/device-subnet",
+        "cloudflare/gateway-logging",
+        "cloudflare/gateway-policy",
+        "cloudflare/gateway-proxy-endpoint",
+        "cloudflare/gateway-settings",
+        "cloudflare/risk-scoring-integration",
+        "cloudflare/zero-trust-dns-location",
+        "cloudflare/zero-trust-organization"
+      ]
+    }
+  ]
+}

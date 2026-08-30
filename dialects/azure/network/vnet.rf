@@ -1,0 +1,45 @@
+rule "virtual-network" {
+  match {
+    kind = "resource"
+    type = "azurerm_virtual_network"
+  }
+
+  as = concept.core.virtual-network
+
+  context {
+    as  = context.core.ownership
+    to  = concept.resource-group
+    via = source.resource_group_name
+
+    match {
+      by       = target.name
+      strategy = "exact"
+    }
+  }
+}
+
+rule "subnet" {
+  match {
+    kind = "resource"
+    type = "azurerm_subnet"
+  }
+
+  as = concept.core.subnet
+
+  context {
+    as  = context.core.network
+    to  = concept.core.virtual-network
+    via = source.virtual_network_name
+  }
+
+  context {
+    as  = context.core.ownership
+    to  = concept.resource-group
+    via = source.resource_group_name
+
+    match {
+      by       = target.name
+      strategy = "exact"
+    }
+  }
+}

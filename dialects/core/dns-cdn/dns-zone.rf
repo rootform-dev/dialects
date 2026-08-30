@@ -1,0 +1,4 @@
+concept "dns-zone" {
+  kind        = scope
+  description = "A managed DNS namespace containing resource records."
+}

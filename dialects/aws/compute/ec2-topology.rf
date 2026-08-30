@@ -1,0 +1,14 @@
+rule "instance" {
+  match {
+    kind = "resource"
+    type = "aws_instance"
+  }
+
+  as = concept.core.compute-instance
+
+  context {
+    as  = context.core.network
+    to  = concept.core.subnet
+    via = source.subnet_id
+  }
+}

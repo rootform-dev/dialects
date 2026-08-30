@@ -1,0 +1,25 @@
+{
+  "format_version": "1",
+  "dialects": [
+    { "name": "auth0", "version": "0.1.0" },
+    { "name": "aws", "version": "0.1.0" },
+    { "name": "azure", "version": "0.1.0" },
+    { "name": "cloudflare", "version": "0.1.0" },
+    { "name": "confluent", "version": "0.1.0" },
+    { "name": "consul", "version": "0.1.0" },
+    { "name": "core", "version": "0.1.0" },
+    { "name": "databricks", "version": "0.1.0" },
+    { "name": "datadog", "version": "0.1.0" },
+    { "name": "google", "version": "0.1.0" },
+    { "name": "grafana", "version": "0.1.0" },
+    { "name": "hcp", "version": "0.1.0" },
+    { "name": "kestra", "version": "0.1.0" },
+    { "name": "kubernetes", "version": "0.1.0" },
+    { "name": "mongodb-atlas", "version": "0.1.0" },
+    { "name": "newrelic", "version": "0.1.0" },
+    { "name": "okta", "version": "0.1.0" },
+    { "name": "secrets", "version": "0.1.0" },
+    { "name": "snowflake", "version": "0.1.0" },
+    { "name": "vault", "version": "0.1.0" }
+  ]
+}

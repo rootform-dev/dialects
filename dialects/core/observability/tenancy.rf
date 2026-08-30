@@ -1,0 +1,4 @@
+concept "observability-tenant" {
+  kind        = scope
+  description = "A provider-neutral account, organization, or stack boundary isolating observability data and configuration."
+}

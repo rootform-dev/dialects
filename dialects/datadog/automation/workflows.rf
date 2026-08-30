@@ -1,0 +1,22 @@
+concept "automation-workflow" {
+  kind        = entity
+  description = "A Datadog workflow coordinating operational actions across integrations."
+}
+
+rule "workflow-automation" {
+  match {
+    kind = "resource"
+    type = "datadog_workflow_automation"
+  }
+
+  as = concept.automation-workflow
+}
+
+rule "workflow-automation-lookup" {
+  match {
+    kind = "data"
+    type = "datadog_workflow_automation"
+  }
+
+  as = concept.automation-workflow
+}

@@ -1,0 +1,32 @@
+concept "git-sync-connection" {
+  kind        = entity
+  description = "A reusable authorization connection between Grafana Git Sync and a Git provider."
+}
+
+concept "git-sync-repository" {
+  kind        = entity
+  description = "A repository boundary synchronized bidirectionally with a Grafana instance."
+}
+
+rule "apps-provisioning-connection-v0alpha1" {
+  match {
+    kind = "resource"
+    type = "grafana_apps_provisioning_connection_v0alpha1"
+  }
+
+  as = concept.git-sync-connection
+}
+
+rule "apps-provisioning-repository-v0alpha1" {
+  match {
+    kind = "resource"
+    type = "grafana_apps_provisioning_repository_v0alpha1"
+  }
+
+  as = concept.git-sync-repository
+
+  relation "authenticates-through" {
+    to  = concept.git-sync-connection
+    via = source.spec[0].connection[0].name
+  }
+}

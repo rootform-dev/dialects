@@ -1,0 +1,8 @@
+rule "firestore-database" {
+  match {
+    kind = "resource"
+    type = "google_firestore_database"
+  }
+
+  as = concept.core.managed-database
+}

@@ -1,0 +1,36 @@
+concept "database-migration-job" {
+  kind        = entity
+  description = "A Database Migration Service job moving a database to Google Cloud."
+}
+
+concept "database-migration-connection" {
+  kind        = detail
+  description = "A source, destination, or private connection used by Database Migration Service."
+}
+
+rule "database-migration-job" {
+  match {
+    kind = "resource"
+    type = "google_database_migration_service_migration_job"
+  }
+
+  as = concept.database-migration-job
+}
+
+rule "database-migration-connection-profile" {
+  match {
+    kind = "resource"
+    type = "google_database_migration_service_connection_profile"
+  }
+
+  as = concept.database-migration-connection
+}
+
+rule "database-migration-private-connection" {
+  match {
+    kind = "resource"
+    type = "google_database_migration_service_private_connection"
+  }
+
+  as = concept.database-migration-connection
+}

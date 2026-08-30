@@ -1,0 +1,68 @@
+concept "telemetry-configuration" {
+  kind        = detail
+  description = "A processing, indexing, routing, retention, or enrichment detail for telemetry."
+}
+
+concept "telemetry-destination" {
+  kind        = entity
+  description = "A durable archive or forwarding destination for Datadog logs."
+}
+
+rule "logs-archive" {
+  match {
+    kind = "resource"
+    type = "datadog_logs_archive"
+  }
+
+  as = concept.telemetry-destination
+}
+
+rule "logs-archive-order" {
+  match {
+    kind = "resource"
+    type = "datadog_logs_archive_order"
+  }
+
+  as = concept.telemetry-configuration
+
+  contribution {
+    to  = concept.telemetry-destination
+    via = source.archive_ids
+  }
+}
+
+rule "logs-custom-destination" {
+  match {
+    kind = "resource"
+    type = "datadog_logs_custom_destination"
+  }
+
+  as = concept.telemetry-destination
+}
+
+rule "logs-custom-pipeline" {
+  match {
+    kind = "resource"
+    type = "datadog_logs_custom_pipeline"
+  }
+
+  as = concept.telemetry-configuration
+}
+
+rule "logs-index" {
+  match {
+    kind = "resource"
+    type = "datadog_logs_index"
+  }
+
+  as = concept.telemetry-configuration
+}
+
+rule "logs-integration-pipeline" {
+  match {
+    kind = "resource"
+    type = "datadog_logs_integration_pipeline"
+  }
+
+  as = concept.telemetry-configuration
+}

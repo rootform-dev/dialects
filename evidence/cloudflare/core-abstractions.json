@@ -1,0 +1,218 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-29",
+  "core_source_sha256": "sha256:1a39c40bc7521a4367b5b1f450504cd61f5dd351045dca10c3c862d6e854187d",
+  "policy": {
+    "comparison_trigger": "proposed-core-promotion-only",
+    "required_providers": ["Google Cloud", "AWS", "Azure"],
+    "accepted_adr_required": true
+  },
+  "reused_core_concepts": [
+    {
+      "concept": "dns-zone",
+      "cloudflare_rules": ["cloudflare/zone"]
+    },
+    {
+      "concept": "identity-group",
+      "cloudflare_rules": ["cloudflare/user-group"]
+    },
+    {
+      "concept": "load-balancer",
+      "cloudflare_rules": ["cloudflare/load-balancer"]
+    },
+    {
+      "concept": "managed-database",
+      "cloudflare_rules": ["cloudflare/d1-database"]
+    },
+    {
+      "concept": "managed-secret",
+      "cloudflare_rules": ["cloudflare/secrets-store-secret"]
+    },
+    {
+      "concept": "message-queue",
+      "cloudflare_rules": ["cloudflare/queue"]
+    },
+    {
+      "concept": "object-storage-container",
+      "cloudflare_rules": ["cloudflare/r2-bucket"]
+    },
+    {
+      "concept": "serverless-function",
+      "cloudflare_rules": ["cloudflare/worker", "cloudflare/workers-script"]
+    },
+    {
+      "concept": "service-identity",
+      "cloudflare_rules": ["cloudflare/access-service-token", "cloudflare/oauth-client"]
+    },
+    {
+      "concept": "vpn-connection",
+      "cloudflare_rules": ["cloudflare/magic-wan-ipsec-tunnel"]
+    },
+    {
+      "concept": "workflow",
+      "cloudflare_rules": ["cloudflare/workflow"]
+    }
+  ],
+  "referenced_core_concepts": [
+    "dns-zone",
+    "identity-group",
+    "load-balancer",
+    "managed-database",
+    "managed-secret",
+    "message-queue",
+    "object-storage-container",
+    "serverless-function",
+    "service-identity",
+    "virtual-network",
+    "vpn-connection",
+    "vpn-gateway",
+    "workflow"
+  ],
+  "promotions": [],
+  "cloudflare_specific_concepts": [
+    "access-application",
+    "access-group",
+    "access-policy",
+    "account",
+    "account-configuration",
+    "address-map",
+    "ai-controls-endpoint",
+    "ai-gateway",
+    "ai-gateway-routing",
+    "ai-search-instance",
+    "ai-search-namespace",
+    "calls-sfu-application",
+    "calls-turn-application",
+    "cloudflare-tunnel",
+    "connectivity-service",
+    "custom-hostname",
+    "data-loss-prevention-configuration",
+    "device-posture-configuration",
+    "dispatch-namespace",
+    "dns-firewall",
+    "dns-location",
+    "dns-record-detail",
+    "dns-transfer-configuration",
+    "dns-transfer-peer",
+    "dns-view",
+    "edge-delivery-configuration",
+    "edge-route",
+    "edge-security-configuration",
+    "email-routing-configuration",
+    "email-security-configuration",
+    "feature-flag",
+    "feature-flag-application",
+    "gateway-configuration",
+    "gateway-policy",
+    "gateway-proxy-endpoint",
+    "gre-tunnel",
+    "hyperdrive-configuration",
+    "identity-provider",
+    "infrastructure-target",
+    "ip-prefix",
+    "load-balancer-monitoring",
+    "logpush-job",
+    "magic-transit-connector",
+    "magic-transit-site",
+    "moq-relay",
+    "network-monitor",
+    "network-route-configuration",
+    "observability-configuration",
+    "organization",
+    "origin-pool",
+    "pages-domain",
+    "pages-project",
+    "pipeline",
+    "pipeline-sink",
+    "pipeline-stream",
+    "queue-consumer-binding",
+    "r2-configuration",
+    "r2-data-catalog",
+    "resource-share",
+    "saas-fallback-origin",
+    "secrets-store",
+    "spectrum-application",
+    "stream-configuration",
+    "stream-live-input",
+    "tls-configuration",
+    "tunnel-configuration",
+    "tunnel-virtual-network",
+    "turnstile-widget",
+    "vulnerability-scanner-target",
+    "waiting-room",
+    "waiting-room-configuration",
+    "warp-connector",
+    "web-analytics-site",
+    "web3-hostname",
+    "worker-deployment",
+    "worker-route",
+    "worker-version",
+    "workers-kv-entry",
+    "workers-kv-namespace",
+    "zero-trust-organization",
+    "zone-configuration"
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": "access-application",
+      "disposition": "keep-cloudflare-specific",
+      "comparison": "Cloudflare Access, Google Cloud IAP, AWS Verified Access, and Microsoft Entra application proxy protect applications but differ in policy, connector, and resource ownership semantics.",
+      "sources": {
+        "cloudflare": "https://developers.cloudflare.com/cloudflare-one/access-controls/applications/",
+        "google": "https://cloud.google.com/iap/docs/concepts-overview",
+        "aws": "https://docs.aws.amazon.com/verified-access/latest/ug/what-is-verified-access.html",
+        "azure": "https://learn.microsoft.com/en-us/entra/identity/app-proxy/overview-what-is-app-proxy"
+      }
+    },
+    {
+      "candidate": "cloudflare-tunnel",
+      "disposition": "keep-cloudflare-specific",
+      "comparison": "Cloudflare Tunnel is an outbound connector into Cloudflare One; cloud VPN and private endpoint products do not share its control-plane or application-routing contract.",
+      "sources": {
+        "cloudflare": "https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/",
+        "google": "https://cloud.google.com/network-connectivity/docs/vpn/concepts/overview",
+        "aws": "https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways"
+      }
+    },
+    {
+      "candidate": "edge-route",
+      "disposition": "keep-cloudflare-specific",
+      "comparison": "A proxied Cloudflare DNS record combines authoritative DNS and edge proxy activation; CloudFront, Front Door, and Cloud CDN attach delivery through different resources.",
+      "sources": {
+        "cloudflare": "https://developers.cloudflare.com/dns/proxy-status/",
+        "google": "https://cloud.google.com/cdn/docs/overview",
+        "aws": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview"
+      }
+    },
+    {
+      "candidate": "origin-pool",
+      "disposition": "keep-cloudflare-specific",
+      "comparison": "Origin pools, target groups, backend pools, and backend services group traffic targets, but health, failover, membership, and load-balancer ownership differ.",
+      "sources": {
+        "cloudflare": "https://developers.cloudflare.com/load-balancing/pools/",
+        "google": "https://cloud.google.com/load-balancing/docs/backend-service",
+        "aws": "https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-target-groups.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/load-balancer/backend-pool-management"
+      }
+    },
+    {
+      "candidate": "pages-project",
+      "disposition": "keep-cloudflare-specific",
+      "comparison": "Cloudflare Pages, AWS Amplify Hosting, Azure Static Web Apps, and Firebase Hosting overlap as managed web platforms but expose different build, runtime, routing, and ownership boundaries.",
+      "sources": {
+        "cloudflare": "https://developers.cloudflare.com/pages/",
+        "google": "https://firebase.google.com/docs/hosting",
+        "aws": "https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/static-web-apps/overview"
+      }
+    }
+  ],
+  "accepted_adr": "docs/adr/082-cloudflare-provider-boundaries.md",
+  "limitations": [
+    "No core concept was added during Cloudflare implementation.",
+    "Kubernetes Service remains Kubernetes-specific because omitted provider defaults cannot be matched safely.",
+    "Cloudflare edge, Access, Tunnel, and origin topology remain provider-specific pending stronger cross-provider semantics."
+  ]
+}

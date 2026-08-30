@@ -1,0 +1,13 @@
+concept "vertex-ai-workbench-instance" {
+  kind        = entity
+  description = "A Vertex AI Workbench managed notebook instance."
+}
+
+rule "vertex-ai-workbench-instance" {
+  match {
+    kind = "resource"
+    type = "google_workbench_instance"
+  }
+
+  as = concept.vertex-ai-workbench-instance
+}

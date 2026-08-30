@@ -1,0 +1,38 @@
+rule "private-dns-zone" {
+  match {
+    kind = "resource"
+    type = "azurerm_private_dns_zone"
+  }
+
+  as = concept.core.dns-zone
+
+  context {
+    as  = context.core.ownership
+    to  = concept.resource-group
+    via = source.resource_group_name
+
+    match {
+      by       = target.name
+      strategy = "exact"
+    }
+  }
+}
+
+rule "private-dns-zone-vnet-link" {
+  match {
+    kind = "resource"
+    type = "azurerm_private_dns_zone_virtual_network_link"
+  }
+
+  as = concept.private-network-link
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.private_dns_zone_id
+  }
+
+  contribution {
+    to  = concept.core.virtual-network
+    via = source.virtual_network_id
+  }
+}

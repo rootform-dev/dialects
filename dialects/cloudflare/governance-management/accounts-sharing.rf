@@ -1,0 +1,93 @@
+concept "account" {
+  kind        = scope
+  description = "A Cloudflare account as a tenancy and ownership boundary."
+}
+
+concept "organization" {
+  kind        = scope
+  description = "A Cloudflare organization grouping accounts and resources."
+}
+
+concept "resource-share" {
+  kind        = entity
+  description = "A Cloudflare resource share across account boundaries."
+}
+
+concept "feature-flag-application" {
+  kind        = entity
+  description = "A Cloudflare feature-flag application."
+}
+
+concept "feature-flag" {
+  kind        = detail
+  description = "A feature flag owned by a feature-flag application."
+}
+
+concept "account-configuration" {
+  kind        = detail
+  description = "Configuration applied to a Cloudflare account boundary."
+}
+
+rule "account" {
+  match {
+    kind = "resource"
+    type = "cloudflare_account"
+  }
+
+  as = concept.account
+}
+
+rule "organization" {
+  match {
+    kind = "resource"
+    type = "cloudflare_organization"
+  }
+
+  as = concept.organization
+}
+
+rule "resource-share" {
+  match {
+    kind = "resource"
+    type = "cloudflare_share"
+  }
+
+  as = concept.resource-share
+}
+
+rule "flagship-app" {
+  match {
+    kind = "resource"
+    type = "cloudflare_flagship_app"
+  }
+
+  as = concept.feature-flag-application
+}
+
+rule "flagship-flag" {
+  match {
+    kind = "resource"
+    type = "cloudflare_flagship_flag"
+  }
+
+  as = concept.feature-flag
+
+  contribution {
+    to  = concept.feature-flag-application
+    via = source.app_id
+  }
+}
+
+rule "account-dns-settings" {
+  match {
+    kind = "resource"
+    type = "cloudflare_account_dns_settings"
+  }
+
+  as = concept.account-configuration
+
+  contribution {
+    to  = concept.account
+    via = source.account_id
+  }
+}

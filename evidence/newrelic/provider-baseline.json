@@ -1,0 +1,164 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-30",
+  "provider": {
+    "source": "registry.terraform.io/newrelic/newrelic",
+    "version": "3.96.4",
+    "tag": "v3.96.4",
+    "tag_kind": "lightweight",
+    "commit": "08bc62a09c64f80c4fa8124f653816c559604ed3",
+    "tree": "4977033b7a0af39fe9ef543dfc92e09148d4bb71",
+    "commit_signature_verified": false,
+    "published_utc": "2026-08-27T18:25:44Z",
+    "license": {
+      "spdx": "MPL-2.0"
+    },
+    "binary": {
+      "platform": "darwin_arm64",
+      "bytes": 24725698,
+      "sha256": "sha256:101cc1e38b0fee0ad695aa87136d6f5145dc4ada528b10693ebcd8cc0e4a5af0"
+    },
+    "package": {
+      "bytes": 8624020,
+      "sha256": "sha256:b8a48df3c1ca1a8ec7bbb643e00cb4108c380c813b6c0fa21dfc6e012a2a9a22"
+    },
+    "checksums": {
+      "bytes": 1997,
+      "sha256": "sha256:e8636851f9b017a117c9b41ce4072ff73393a1b2d431c09ecfcb9f88cf953367",
+      "signature_bytes": 566,
+      "signature_sha256": "sha256:2a897ae2240c6fca8a9a57c4b5de4d90dd1a71d17d47f458d42a42172ef4306f"
+    },
+    "source_archive": {
+      "bytes": 1400551,
+      "sha256": "sha256:596caf8e21f16f7138f0695b1a3328a77a10f9da48827124ca87271f933d53c1"
+    }
+  },
+  "acquisition": {
+    "command": "terraform providers schema -json",
+    "terraform_version": "1.12.2",
+    "signature_key_id": "4F9A9B5B96EC30B9",
+    "signature_verification": "self-signed by the provider and verified by Terraform, key ID 4F9A9B5B96EC30B9",
+    "provider_protocol": "5.0",
+    "credentials_used": false,
+    "provider_configuration_used": false,
+    "runtime_dependency": false
+  },
+  "schema_snapshot": {
+    "format_version": "1.0",
+    "bytes": 337262,
+    "sha256": "sha256:e2c5e2940ec7af80a9718c2003f0036a32bedc7739d21134a864f01419f87431"
+  },
+  "constructs": {
+    "counts": {
+      "managed_resources": 64,
+      "data_sources": 19,
+      "ephemeral_resources": 0,
+      "provider_functions": 0,
+      "resource_identities": 0
+    },
+    "managed_resources": [
+      "newrelic_account_management",
+      "newrelic_alert_channel",
+      "newrelic_alert_compound_condition",
+      "newrelic_alert_condition",
+      "newrelic_alert_muting_rule",
+      "newrelic_alert_policy",
+      "newrelic_alert_policy_channel",
+      "newrelic_api_access_key",
+      "newrelic_application_settings",
+      "newrelic_aws_connection",
+      "newrelic_browser_application",
+      "newrelic_cardinality_management",
+      "newrelic_cloud_aws_eu_sovereign_integrations",
+      "newrelic_cloud_aws_eu_sovereign_link_account",
+      "newrelic_cloud_aws_govcloud_integrations",
+      "newrelic_cloud_aws_govcloud_link_account",
+      "newrelic_cloud_aws_integrations",
+      "newrelic_cloud_aws_link_account",
+      "newrelic_cloud_azure_integrations",
+      "newrelic_cloud_azure_link_account",
+      "newrelic_cloud_gcp_dm_integrations",
+      "newrelic_cloud_gcp_integrations",
+      "newrelic_cloud_gcp_link_account",
+      "newrelic_cloud_oci_link_account",
+      "newrelic_data_partition_rule",
+      "newrelic_entity_tags",
+      "newrelic_events_to_metrics_rule",
+      "newrelic_federated_logs_partition",
+      "newrelic_federated_logs_setup",
+      "newrelic_fleet",
+      "newrelic_fleet_configuration",
+      "newrelic_fleet_deployment",
+      "newrelic_fleet_members",
+      "newrelic_group",
+      "newrelic_infra_alert_condition",
+      "newrelic_insights_event",
+      "newrelic_key_transaction",
+      "newrelic_log_parsing_rule",
+      "newrelic_metric_pruning_rule",
+      "newrelic_monitor_downtime",
+      "newrelic_notification_channel",
+      "newrelic_notification_destination",
+      "newrelic_nrql_alert_condition",
+      "newrelic_nrql_drop_rule",
+      "newrelic_obfuscation_expression",
+      "newrelic_obfuscation_rule",
+      "newrelic_one_dashboard",
+      "newrelic_one_dashboard_json",
+      "newrelic_one_dashboard_raw",
+      "newrelic_pipeline_cloud_rule",
+      "newrelic_service_level",
+      "newrelic_synthetics_alert_condition",
+      "newrelic_synthetics_broken_links_monitor",
+      "newrelic_synthetics_cert_check_monitor",
+      "newrelic_synthetics_monitor",
+      "newrelic_synthetics_multilocation_alert_condition",
+      "newrelic_synthetics_private_location",
+      "newrelic_synthetics_script_monitor",
+      "newrelic_synthetics_secure_credential",
+      "newrelic_synthetics_step_monitor",
+      "newrelic_user",
+      "newrelic_workflow",
+      "newrelic_workflow_automation",
+      "newrelic_workload"
+    ],
+    "data_sources": [
+      "newrelic_account",
+      "newrelic_alert_channel",
+      "newrelic_alert_policy",
+      "newrelic_api_access_key",
+      "newrelic_application",
+      "newrelic_authentication_domain",
+      "newrelic_cloud_account",
+      "newrelic_entity",
+      "newrelic_fleet_configuration",
+      "newrelic_fleet_members",
+      "newrelic_group",
+      "newrelic_key_transaction",
+      "newrelic_notification_destination",
+      "newrelic_obfuscation_expression",
+      "newrelic_service_level_alert_helper",
+      "newrelic_synthetics_private_location",
+      "newrelic_synthetics_secure_credential",
+      "newrelic_test_grok_pattern",
+      "newrelic_user"
+    ],
+    "ephemeral_resources": [],
+    "provider_functions": [],
+    "resource_identities": []
+  },
+  "lifecycle_findings": {
+    "nrql_drop_rule": {
+      "construct": "newrelic_nrql_drop_rule",
+      "state": "deprecated",
+      "replacement": "newrelic_pipeline_cloud_rule",
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/pipeline_cloud_rule"
+    }
+  },
+  "limitations": [
+    "provider configuration cannot prove a New Relic account or telemetry relation",
+    "the lightweight source tag points to an unsigned commit while Registry package checksums are provider-signed and Terraform-verified",
+    "scripts, YAML definitions, NRQL, credentials, event payloads, entity searches, and dashboard JSON are never inspected",
+    "literal identifiers, names, URLs, tags, and depends_on never create semantic facts"
+  ]
+}

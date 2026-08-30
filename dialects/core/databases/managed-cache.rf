@@ -1,0 +1,4 @@
+concept "managed-cache" {
+  kind        = entity
+  description = "A managed in-memory cache service."
+}

@@ -1,0 +1,13 @@
+concept "composer-environment" {
+  kind        = entity
+  description = "A Cloud Composer environment running managed Apache Airflow."
+}
+
+rule "composer-environment" {
+  match {
+    kind = "resource"
+    type = "google_composer_environment"
+  }
+
+  as = concept.composer-environment
+}

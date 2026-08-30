@@ -1,0 +1,185 @@
+{
+  "format_version": "1",
+  "scenarios": [
+    {
+      "id": "platform-topology",
+      "fixture": "testdata/architecture/databricks-v1/minimal",
+      "required_rules": [
+        "databricks/compute-cluster",
+        "databricks/lakeflow-job",
+        "databricks/lakeflow-pipeline",
+        "databricks/model-serving",
+        "databricks/unity-catalog-catalog"
+      ],
+      "required_outcomes": {
+        "databricks_catalog.analytics": "represented",
+        "databricks_cluster.engineering": "represented",
+        "databricks_job.daily": "represented",
+        "databricks_pipeline.orders": "represented"
+      },
+      "required_facts": [
+        {
+          "collection": "contexts",
+          "from": "scope:databricks_catalog.analytics",
+          "to": "scope:databricks_metastore.platform",
+          "dimension": "core/ownership",
+          "rule": "databricks/unity-catalog-catalog"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:databricks_cluster.engineering",
+          "to": "entity:databricks_instance_pool.shared",
+          "type": "uses-pool",
+          "rule": "databricks/compute-cluster"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:databricks_pipeline.orders",
+          "to": "scope:databricks_catalog.analytics",
+          "type": "publishes-to-catalog",
+          "rule": "databricks/lakeflow-pipeline"
+        }
+      ],
+      "minimum": {
+        "entities": 6,
+        "scopes": 3,
+        "details": 0,
+        "contexts": 2,
+        "contributions": 0,
+        "relations": 4
+      },
+      "maximum_facts": {
+        "contexts": 2,
+        "contributions": 0,
+        "relations": 4
+      },
+      "expected_diagnostic_codes": [],
+      "expected_check_violations": [],
+      "expected_html_labels": [
+        "Databricks compute cluster",
+        "Unity Catalog catalog",
+        "Mosaic AI Model Serving endpoint"
+      ],
+      "forbidden_output": ["ROOTFORM_DATABRICKS_TEST_SECRET"],
+      "limitations": [
+        "Offline fixture proves architecture compilation from configuration only; it does not call Databricks APIs or execute Terraform."
+      ]
+    },
+    {
+      "id": "cross-cloud-platform",
+      "fixture": "testdata/architecture/databricks-v1/scenarios",
+      "required_rules": [
+        "databricks/workspace",
+        "databricks/workspace-network-configuration",
+        "databricks/storage-credential",
+        "databricks/external-location",
+        "databricks/service-direct-endpoint",
+        "databricks/lakebase-project",
+        "databricks/network-connectivity-configuration"
+      ],
+      "required_outcomes": {
+        "databricks_mws_workspaces.aws": "represented",
+        "databricks_storage_credential.aws": "represented",
+        "databricks_storage_credential.azure": "represented",
+        "databricks_storage_credential.google": "represented",
+        "databricks_postgres_project.application": "represented"
+      },
+      "required_facts": [
+        {
+          "collection": "relations",
+          "from": "entity:databricks_mws_networks.aws",
+          "to": "scope:aws_vpc.platform",
+          "type": "uses-cloud-network",
+          "rule": "databricks/workspace-network-configuration"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:databricks_mws_networks.google",
+          "to": "scope:google_compute_network.platform",
+          "type": "uses-cloud-network",
+          "rule": "databricks/workspace-network-configuration"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:databricks_storage_credential.azure",
+          "to": "entity:azurerm_user_assigned_identity.databricks",
+          "type": "uses-cloud-identity",
+          "rule": "databricks/storage-credential"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:databricks_external_location.google",
+          "to": "entity:google_storage_bucket.data",
+          "type": "stores-in",
+          "rule": "databricks/external-location"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:databricks_endpoint.azure",
+          "to": "entity:azurerm_private_endpoint.databricks",
+          "type": "registers-endpoint",
+          "rule": "databricks/service-direct-endpoint"
+        },
+        {
+          "collection": "contexts",
+          "from": "scope:databricks_postgres_branch.production",
+          "to": "scope:databricks_postgres_project.application",
+          "dimension": "core/ownership",
+          "rule": "databricks/lakebase-branch"
+        },
+        {
+          "collection": "contributions",
+          "from": "detail:databricks_mws_ncc_binding.aws",
+          "to": "scope:databricks_mws_workspaces.aws",
+          "rule": "databricks/network-connectivity-binding"
+        }
+      ],
+      "minimum": {
+        "entities": 45,
+        "scopes": 15,
+        "details": 2,
+        "contexts": 26,
+        "contributions": 4,
+        "relations": 35
+      },
+      "maximum_facts": {
+        "contexts": 26,
+        "contributions": 4,
+        "relations": 35
+      },
+      "expected_diagnostic_codes": [],
+      "expected_check_violations": [],
+      "expected_html_labels": [
+        "Databricks workspace",
+        "Unity Catalog catalog",
+        "Lakebase project",
+        "Mosaic AI Model Serving endpoint"
+      ],
+      "forbidden_output": ["ROOTFORM_DATABRICKS_GCP_PRIVATE_KEY"],
+      "limitations": [
+        "Fixture proves AWS, Azure, and Google Cloud references only when explicit Terraform traversals resolve; provider aliases and authentication imply no cloud ownership."
+      ]
+    },
+    {
+      "id": "ambiguous-and-sensitive-boundary",
+      "fixture": "testdata/architecture/databricks-v1/boundary",
+      "expected_build_failure": true,
+      "expected_diagnostic_codes": [
+        "TRAVERSAL_AMBIGUOUS",
+        "TRAVERSAL_AMBIGUOUS",
+        "TRAVERSAL_AMBIGUOUS",
+        "TRAVERSAL_UNRESOLVED",
+        "TRAVERSAL_UNRESOLVED",
+        "TRAVERSAL_UNRESOLVED"
+      ],
+      "forbidden_output": [
+        "ROOTFORM_DATABRICKS_BOUNDARY_SECRET",
+        "ROOTFORM_DATABRICKS_BOUNDARY_NOTEBOOK",
+        "ROOTFORM_DATABRICKS_BOUNDARY_TOKEN"
+      ],
+      "limitations": [
+        "Intentional conditional traversals prove fail-closed behavior; literal identifiers remain unresolved and dependency-only evidence emits no architecture relation."
+      ]
+    }
+  ]
+}

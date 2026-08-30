@@ -1,0 +1,260 @@
+concept "tls-configuration" {
+  kind        = detail
+  description = "TLS, certificate, trust-store, or authenticated-origin configuration at the Cloudflare edge."
+}
+
+rule "authenticated-origin-pulls" {
+  match {
+    kind = "resource"
+    type = "cloudflare_authenticated_origin_pulls"
+  }
+
+  as = concept.tls-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "authenticated-origin-pulls-certificate" {
+  match {
+    kind = "resource"
+    type = "cloudflare_authenticated_origin_pulls_certificate"
+  }
+
+  as = concept.tls-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "authenticated-origin-pulls-hostname-certificate" {
+  match {
+    kind = "resource"
+    type = "cloudflare_authenticated_origin_pulls_hostname_certificate"
+  }
+
+  as = concept.tls-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "authenticated-origin-pulls-settings" {
+  match {
+    kind = "resource"
+    type = "cloudflare_authenticated_origin_pulls_settings"
+  }
+
+  as = concept.tls-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "certificate-authority-hostname-associations" {
+  match {
+    kind = "resource"
+    type = "cloudflare_certificate_authorities_hostname_associations"
+  }
+
+  as = concept.tls-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "certificate-pack" {
+  match {
+    kind = "resource"
+    type = "cloudflare_certificate_pack"
+  }
+
+  as = concept.tls-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "client-certificate" {
+  match {
+    kind = "resource"
+    type = "cloudflare_client_certificate"
+  }
+
+  as = concept.tls-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "certificate-transparency-alerting" {
+  match {
+    kind = "resource"
+    type = "cloudflare_ct_alerting"
+  }
+
+  as = concept.tls-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "custom-csr" {
+  match {
+    kind = "resource"
+    type = "cloudflare_custom_csr"
+  }
+
+  as = concept.tls-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "custom-origin-trust-store" {
+  match {
+    kind = "resource"
+    type = "cloudflare_custom_origin_trust_store"
+  }
+
+  as = concept.tls-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "custom-ssl" {
+  match {
+    kind = "resource"
+    type = "cloudflare_custom_ssl"
+  }
+
+  as = concept.tls-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "hostname-tls-setting" {
+  match {
+    kind = "resource"
+    type = "cloudflare_hostname_tls_setting"
+  }
+
+  as = concept.tls-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "keyless-certificate" {
+  match {
+    kind = "resource"
+    type = "cloudflare_keyless_certificate"
+  }
+
+  as = concept.tls-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "mtls-certificate" {
+  match {
+    kind = "resource"
+    type = "cloudflare_mtls_certificate"
+  }
+
+  as = concept.tls-configuration
+}
+
+rule "origin-ca-certificate" {
+  match {
+    kind = "resource"
+    type = "cloudflare_origin_ca_certificate"
+  }
+
+  as = concept.tls-configuration
+}
+
+rule "origin-tls-compliance-modes" {
+  match {
+    kind = "resource"
+    type = "cloudflare_origin_tls_compliance_modes"
+  }
+
+  as = concept.tls-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "total-tls" {
+  match {
+    kind = "resource"
+    type = "cloudflare_total_tls"
+  }
+
+  as = concept.tls-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "universal-ssl-setting" {
+  match {
+    kind = "resource"
+    type = "cloudflare_universal_ssl_setting"
+  }
+
+  as = concept.tls-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "zone-auto-origin-tls-kex" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zone_auto_origin_tls_kex"
+  }
+
+  as = concept.tls-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}

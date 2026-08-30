@@ -1,0 +1,31 @@
+concept "edge-network-interconnect-attachment" {
+  kind        = entity
+  description = "A Distributed Cloud Edge Network interconnect attachment."
+}
+
+rule "edge-network" {
+  match {
+    kind = "resource"
+    type = "google_edgenetwork_network"
+  }
+
+  as = concept.core.virtual-network
+}
+
+rule "edge-network-subnet" {
+  match {
+    kind = "resource"
+    type = "google_edgenetwork_subnet"
+  }
+
+  as = concept.core.subnet
+}
+
+rule "edge-network-interconnect-attachment" {
+  match {
+    kind = "resource"
+    type = "google_edgenetwork_interconnect_attachment"
+  }
+
+  as = concept.edge-network-interconnect-attachment
+}

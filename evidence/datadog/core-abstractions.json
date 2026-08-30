@@ -1,0 +1,69 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-30",
+  "accepted_adr": "docs/adr/090-datadog-provider-boundaries.md",
+  "reused_core_concepts": [
+    "browser-observability-application",
+    "cloud-observability-integration",
+    "observability-tenant",
+    "service-objective",
+    "synthetic-check",
+    "synthetic-execution-location"
+  ],
+  "referenced_core_concepts": [],
+  "promoted_core_concepts": [],
+  "datadog_specific_concepts": [
+    "application-datastore",
+    "automation-application",
+    "automation-workflow",
+    "catalog-definition",
+    "organization-connection",
+    "security-configuration",
+    "service-integration",
+    "service-integration-configuration",
+    "telemetry-configuration",
+    "telemetry-destination",
+    "telemetry-pipeline"
+  ],
+  "candidates": [
+    {
+      "candidate": "telemetry-destination",
+      "disposition": "keep-provider-specific",
+      "reason": "Datadog archives and custom forwarding destinations need Grafana, New Relic, HCP, and cloud-provider comparison before stable core scope",
+      "sources": {
+        "datadog": "https://docs.datadoghq.com/logs/log_configuration/archives/",
+        "hcp": "https://developer.hashicorp.com/hcp/docs/hcp/admin/audit-logs",
+        "grafana": "https://grafana.com/docs/loki/latest/",
+        "new_relic": "https://docs.newrelic.com/docs/logs/"
+      }
+    },
+    {
+      "candidate": "telemetry-pipeline",
+      "disposition": "keep-provider-specific",
+      "reason": "Datadog pipeline owns in-customer processing; cloud and vendor pipelines expose different deployment and routing boundaries",
+      "sources": {
+        "datadog": "https://docs.datadoghq.com/observability_pipelines/configuration/",
+        "grafana": "https://grafana.com/docs/alloy/latest/",
+        "new_relic": "https://docs.newrelic.com/docs/opentelemetry/"
+      }
+    },
+    {
+      "candidate": "observability-tenant",
+      "disposition": "promoted-minimal-common-role",
+      "reason": "Datadog child organizations, Grafana Cloud stacks, and New Relic accounts prove a shared tenant boundary without claiming a generic managed platform",
+      "sources": {
+        "datadog": "https://docs.datadoghq.com/account_management/multi_organization/",
+        "grafana": "https://grafana.com/docs/grafana-cloud/",
+        "new_relic": "https://docs.newrelic.com/docs/accounts/"
+      }
+    },
+    {
+      "candidate": "synthetic-endpoint",
+      "disposition": "reject-test-as-endpoint",
+      "reason": "a Synthetic test configures observation of an endpoint and does not own the endpoint runtime",
+      "sources": {
+        "datadog": "https://docs.datadoghq.com/synthetics/"
+      }
+    }
+  ]
+}

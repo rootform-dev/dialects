@@ -1,0 +1,95 @@
+concept "cloud-logging-sink" {
+  kind        = entity
+  description = "A Cloud Logging sink routing selected log entries to a destination."
+}
+
+concept "cloud-logging-bucket" {
+  kind        = entity
+  description = "A Cloud Logging bucket retaining log entries."
+}
+
+concept "cloud-logging-scope" {
+  kind        = scope
+  description = "A Cloud Logging scope aggregating log views."
+}
+
+rule "cloud-logging-project-sink" {
+  match {
+    kind = "resource"
+    type = "google_logging_project_sink"
+  }
+
+  as = concept.cloud-logging-sink
+}
+
+rule "cloud-logging-folder-sink" {
+  match {
+    kind = "resource"
+    type = "google_logging_folder_sink"
+  }
+
+  as = concept.cloud-logging-sink
+}
+
+rule "cloud-logging-organization-sink" {
+  match {
+    kind = "resource"
+    type = "google_logging_organization_sink"
+  }
+
+  as = concept.cloud-logging-sink
+}
+
+rule "cloud-logging-billing-account-sink" {
+  match {
+    kind = "resource"
+    type = "google_logging_billing_account_sink"
+  }
+
+  as = concept.cloud-logging-sink
+}
+
+rule "cloud-logging-project-bucket" {
+  match {
+    kind = "resource"
+    type = "google_logging_project_bucket_config"
+  }
+
+  as = concept.cloud-logging-bucket
+}
+
+rule "cloud-logging-folder-bucket" {
+  match {
+    kind = "resource"
+    type = "google_logging_folder_bucket_config"
+  }
+
+  as = concept.cloud-logging-bucket
+}
+
+rule "cloud-logging-organization-bucket" {
+  match {
+    kind = "resource"
+    type = "google_logging_organization_bucket_config"
+  }
+
+  as = concept.cloud-logging-bucket
+}
+
+rule "cloud-logging-billing-account-bucket" {
+  match {
+    kind = "resource"
+    type = "google_logging_billing_account_bucket_config"
+  }
+
+  as = concept.cloud-logging-bucket
+}
+
+rule "cloud-logging-scope" {
+  match {
+    kind = "resource"
+    type = "google_logging_log_scope"
+  }
+
+  as = concept.cloud-logging-scope
+}

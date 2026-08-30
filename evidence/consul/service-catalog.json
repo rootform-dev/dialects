@@ -1,0 +1,134 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-30",
+  "source_url": "https://developer.hashicorp.com/consul/docs",
+  "derivation": "every provider construct maps to exactly one researched Consul product family",
+  "products": [
+    {
+      "id": "platform-operations",
+      "family": "platform",
+      "official_name": "Consul agents and operations",
+      "source_url": "https://developer.hashicorp.com/consul/docs/architecture",
+      "major": false,
+      "constructs": 7,
+      "counts": {
+        "supported": 1,
+        "partial": 1,
+        "intentionally-unrepresented": 5,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "multi-tenancy",
+      "family": "multi-tenancy",
+      "official_name": "Consul multi-tenancy",
+      "source_url": "https://developer.hashicorp.com/consul/docs/multi-tenant",
+      "major": true,
+      "constructs": 3,
+      "counts": {
+        "supported": 2,
+        "partial": 0,
+        "intentionally-unrepresented": 1,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "service-catalog",
+      "family": "service-catalog",
+      "official_name": "Consul service catalog",
+      "source_url": "https://developer.hashicorp.com/consul/docs/architecture/data-plane/service",
+      "major": true,
+      "constructs": 11,
+      "counts": {
+        "supported": 5,
+        "partial": 2,
+        "intentionally-unrepresented": 4,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "configuration-entries",
+      "family": "service-networking",
+      "official_name": "Consul configuration entries",
+      "source_url": "https://developer.hashicorp.com/consul/docs/fundamentals/config-entry",
+      "major": true,
+      "constructs": 2,
+      "counts": {
+        "supported": 0,
+        "partial": 2,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "service-mesh",
+      "family": "service-mesh",
+      "official_name": "Consul service mesh",
+      "source_url": "https://developer.hashicorp.com/consul/docs/use-case/service-mesh",
+      "major": true,
+      "constructs": 4,
+      "counts": {
+        "supported": 1,
+        "partial": 3,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "traffic-management",
+      "family": "traffic-management",
+      "official_name": "Consul traffic management",
+      "source_url": "https://developer.hashicorp.com/consul/docs/manage-traffic",
+      "major": true,
+      "constructs": 3,
+      "counts": {
+        "supported": 0,
+        "partial": 3,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "connectivity",
+      "family": "connectivity",
+      "official_name": "Consul east-west connectivity",
+      "source_url": "https://developer.hashicorp.com/consul/docs/east-west",
+      "major": true,
+      "constructs": 8,
+      "counts": {
+        "supported": 3,
+        "partial": 2,
+        "intentionally-unrepresented": 3,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "identity-access",
+      "family": "identity-access",
+      "official_name": "Consul ACL and authentication",
+      "source_url": "https://developer.hashicorp.com/consul/docs/secure/acl",
+      "major": true,
+      "constructs": 15,
+      "counts": {
+        "supported": 2,
+        "partial": 3,
+        "intentionally-unrepresented": 10,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "key-value",
+      "family": "key-value",
+      "official_name": "Consul KV",
+      "source_url": "https://developer.hashicorp.com/consul/docs/dynamic-app-config/kv",
+      "major": false,
+      "constructs": 4,
+      "counts": {
+        "supported": 0,
+        "partial": 0,
+        "intentionally-unrepresented": 4,
+        "unsupported": 0
+      }
+    }
+  ]
+}

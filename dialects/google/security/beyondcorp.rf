@@ -1,0 +1,27 @@
+concept "beyondcorp-security-gateway" {
+  kind        = entity
+  description = "A BeyondCorp security gateway enforcing access to protected applications."
+}
+
+concept "beyondcorp-gateway-application" {
+  kind        = entity
+  description = "An application protected through a BeyondCorp security gateway."
+}
+
+rule "beyondcorp-security-gateway" {
+  match {
+    kind = "resource"
+    type = "google_beyondcorp_security_gateway"
+  }
+
+  as = concept.beyondcorp-security-gateway
+}
+
+rule "beyondcorp-gateway-application" {
+  match {
+    kind = "resource"
+    type = "google_beyondcorp_security_gateway_application"
+  }
+
+  as = concept.beyondcorp-gateway-application
+}

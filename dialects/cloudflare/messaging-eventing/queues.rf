@@ -1,0 +1,32 @@
+concept "queue-consumer-binding" {
+  kind        = detail
+  description = "A consumer binding connecting a Cloudflare Queue to a Worker."
+}
+
+rule "queue" {
+  match {
+    kind = "resource"
+    type = "cloudflare_queue"
+  }
+
+  as = concept.core.message-queue
+}
+
+rule "queue-consumer" {
+  match {
+    kind = "resource"
+    type = "cloudflare_queue_consumer"
+  }
+
+  as = concept.queue-consumer-binding
+
+  contribution {
+    to  = concept.core.message-queue
+    via = source.queue_id
+  }
+
+  contribution {
+    to  = concept.core.serverless-function
+    via = source.script_name
+  }
+}

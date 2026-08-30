@@ -1,0 +1,61 @@
+concept "netapp-storage-pool" {
+  kind        = scope
+  description = "A NetApp Volumes storage pool providing capacity to volumes."
+}
+
+rule "filestore-instance" {
+  match {
+    kind = "resource"
+    type = "google_filestore_instance"
+  }
+
+  as = concept.core.managed-file-storage
+}
+
+rule "netapp-storage-pool" {
+  match {
+    kind = "resource"
+    type = "google_netapp_storage_pool"
+  }
+
+  as = concept.netapp-storage-pool
+}
+
+rule "netapp-volume" {
+  match {
+    kind = "resource"
+    type = "google_netapp_volume"
+  }
+
+  as = concept.core.managed-file-storage
+
+  context {
+    as  = context.core.ownership
+    to  = concept.netapp-storage-pool
+    via = source.storage_pool
+  }
+}
+
+rule "parallelstore-instance" {
+  match {
+    kind = "resource"
+    type = "google_parallelstore_instance"
+  }
+
+  as = concept.core.managed-file-storage
+
+  context {
+    as  = context.core.network
+    to  = concept.core.virtual-network
+    via = source.network
+  }
+}
+
+rule "managed-lustre-instance" {
+  match {
+    kind = "resource"
+    type = "google_lustre_instance"
+  }
+
+  as = concept.core.managed-file-storage
+}

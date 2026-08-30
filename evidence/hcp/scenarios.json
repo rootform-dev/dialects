@@ -1,0 +1,205 @@
+{
+  "format_version": "1",
+  "scenarios": [
+    {
+      "id": "hcp-minimal",
+      "fixture": "testdata/architecture/hcp-v0/minimal",
+      "limitations": [
+        "synthetic Terraform proves project, HVN, Vault Dedicated, and Private Link architecture without contacting HCP"
+      ],
+      "minimum": {
+        "entities": 2,
+        "scopes": 2,
+        "relations": 1,
+        "contexts": 5
+      },
+      "maximum_facts": {
+        "relations": 1,
+        "contexts": 5,
+        "contributions": 0
+      },
+      "required_rules": ["hcp/hvn", "hcp/private-link", "hcp/project", "hcp/vault-cluster"],
+      "required_facts": [
+        {
+          "collection": "contexts",
+          "from": "scope:hcp_hvn.security",
+          "to": "scope:hcp_project.platform",
+          "dimension": "core/ownership",
+          "rule": "hcp/hvn"
+        },
+        {
+          "collection": "contexts",
+          "from": "entity:hcp_vault_cluster.security",
+          "to": "scope:hcp_hvn.security",
+          "dimension": "core/network",
+          "rule": "hcp/vault-cluster"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:hcp_private_link.vault",
+          "to": "entity:hcp_vault_cluster.security",
+          "type": "exposes-vault-cluster",
+          "rule": "hcp/private-link"
+        }
+      ],
+      "expected_html_labels": [
+        "HashiCorp Virtual Network (HVN)",
+        "HCP Vault Dedicated cluster",
+        "HCP Vault Private Link"
+      ]
+    },
+    {
+      "id": "hcp-cross-cloud-products",
+      "fixture": "testdata/architecture/hcp-v0/scenarios",
+      "limitations": [
+        "synthetic references prove AWS, Azure, Google Cloud, Confluent, networking, security, registry, platform, and operations facts; provider APIs and credentials are never used"
+      ],
+      "minimum": {
+        "entities": 41,
+        "scopes": 9,
+        "details": 14,
+        "relations": 24,
+        "contexts": 45,
+        "contributions": 12
+      },
+      "maximum_facts": {
+        "relations": 24,
+        "contexts": 45,
+        "contributions": 12
+      },
+      "required_rules": [
+        "hcp/aws-network-peering",
+        "hcp/azure-peering-connection",
+        "hcp/boundary-cluster",
+        "hcp/consul-cluster",
+        "hcp/hvn",
+        "hcp/iam-workload-identity-provider",
+        "hcp/log-streaming-destination",
+        "hcp/packer-artifact-lookup",
+        "hcp/private-link",
+        "hcp/vault-cluster",
+        "hcp/vault-radar-source-github-cloud",
+        "hcp/vault-secrets-app",
+        "hcp/vault-secrets-integration",
+        "hcp/waypoint-application"
+      ],
+      "required_facts": [
+        {
+          "collection": "relations",
+          "from": "entity:hcp_aws_network_peering.applications",
+          "to": "scope:aws_vpc.applications",
+          "type": "peers-with",
+          "rule": "hcp/aws-network-peering"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:hcp_azure_peering_connection.applications",
+          "to": "scope:azurerm_virtual_network.applications",
+          "type": "peers-with",
+          "rule": "hcp/azure-peering-connection"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:hcp_iam_workload_identity_provider.aws",
+          "to": "entity:hcp_service_principal.automation",
+          "type": "federates-to",
+          "rule": "hcp/iam-workload-identity-provider"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:hcp_vault_secrets_integration.azure",
+          "to": "entity:azurerm_user_assigned_identity.vault",
+          "type": "uses-cloud-identity",
+          "rule": "hcp/vault-secrets-integration"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:hcp_vault_secrets_rotating_secret.confluent",
+          "to": "entity:confluent_service_account.vault",
+          "type": "uses-cloud-identity",
+          "rule": "hcp/vault-secrets-rotating-secret"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:hcp_vault_radar_secret_manager_vault_dedicated.security",
+          "to": "entity:hcp_vault_cluster.security",
+          "type": "connects-vault-cluster",
+          "rule": "hcp/vault-radar-secret-manager-vault-dedicated"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:hcp_waypoint_application.api",
+          "to": "entity:hcp_waypoint_template.service",
+          "type": "uses-template",
+          "rule": "hcp/waypoint-application"
+        },
+        {
+          "collection": "contributions",
+          "from": "detail:hcp_consul_snapshot.legacy",
+          "to": "entity:hcp_consul_cluster.legacy",
+          "rule": "hcp/consul-snapshot"
+        }
+      ],
+      "required_outcomes": {
+        "hcp_boundary_cluster.access": "represented",
+        "hcp_consul_cluster.legacy": "represented",
+        "hcp_vault_cluster.security": "represented",
+        "hcp_vault_secrets_secret.api": "represented",
+        "hcp_waypoint_tfc_config.platform": "represented"
+      },
+      "expected_html_labels": [
+        "HashiCorp Virtual Network (HVN)",
+        "HCP Vault Dedicated cluster",
+        "HCP Consul Dedicated cluster (legacy)",
+        "HCP Vault Secrets secret",
+        "HCP Vault Radar GitHub Cloud source (private beta)",
+        "HCP Waypoint application"
+      ],
+      "forbidden_output": [
+        "ROOTFORM_HCP_BOUNDARY_PASSWORD_SENTINEL",
+        "ROOTFORM_HCP_TFC_TOKEN_SENTINEL",
+        "ROOTFORM_HCP_VAULT_SECRET_SENTINEL",
+        "ROOTFORM_HCP_CONFLUENT_SECRET_SENTINEL",
+        "ROOTFORM_HCP_RADAR_GITHUB_TOKEN_SENTINEL",
+        "ROOTFORM_HCP_RADAR_GHE_TOKEN_SENTINEL",
+        "ROOTFORM_HCP_RADAR_JIRA_TOKEN_SENTINEL",
+        "ROOTFORM_HCP_RADAR_SLACK_TOKEN_SENTINEL",
+        "ROOTFORM_HCP_LOG_EXTERNAL_ID_SENTINEL",
+        "ROOTFORM_HCP_WEBHOOK_HMAC_SENTINEL"
+      ]
+    },
+    {
+      "id": "hcp-fail-closed",
+      "fixture": "testdata/architecture/hcp-v0/boundary",
+      "limitations": [
+        "negative fixture deliberately fails build to prove literal, depends_on, ambiguous, dangling, and concept-mismatched evidence creates no partial IR"
+      ],
+      "expected_build_failure": true,
+      "expected_diagnostic_codes": [
+        "DEPENDENCY_DANGLING",
+        "DEPENDENCY_DANGLING",
+        "FACT_CONCEPT_MISMATCH",
+        "FACT_CONCEPT_MISMATCH",
+        "FACT_CONCEPT_MISMATCH",
+        "TRAVERSAL_AMBIGUOUS",
+        "TRAVERSAL_AMBIGUOUS",
+        "TRAVERSAL_AMBIGUOUS",
+        "TRAVERSAL_DANGLING",
+        "TRAVERSAL_DANGLING",
+        "TRAVERSAL_UNRESOLVED",
+        "TRAVERSAL_UNRESOLVED",
+        "TRAVERSAL_UNRESOLVED",
+        "TRAVERSAL_UNRESOLVED"
+      ],
+      "forbidden_output": [
+        "ROOTFORM_HCP_BOUNDARY_PRIVATE_SENTINEL",
+        "ROOTFORM_HCP_SECRET_PRIVATE_SENTINEL",
+        "ROOTFORM_HCP_RADAR_PRIVATE_SENTINEL",
+        "ROOTFORM_HCP_DATADOG_API_SENTINEL",
+        "ROOTFORM_HCP_DATADOG_APP_SENTINEL",
+        "ROOTFORM_HCP_WEBHOOK_PRIVATE_SENTINEL",
+        "ROOTFORM_HCP_TFC_PRIVATE_SENTINEL"
+      ]
+    }
+  ]
+}

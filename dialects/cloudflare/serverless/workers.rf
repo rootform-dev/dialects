@@ -1,0 +1,235 @@
+concept "worker-version" {
+  kind        = detail
+  description = "An immutable version and resource bindings of a Cloudflare Worker."
+}
+
+concept "worker-deployment" {
+  kind        = detail
+  description = "The active version rollout of a Cloudflare Worker."
+}
+
+concept "worker-route" {
+  kind        = detail
+  description = "A route, custom domain, trigger, or subdomain exposing a Cloudflare Worker."
+}
+
+concept "workers-kv-namespace" {
+  kind        = entity
+  description = "A Cloudflare Workers KV namespace."
+}
+
+concept "workers-kv-entry" {
+  kind        = detail
+  description = "A Workers KV entry contributing to its namespace."
+}
+
+concept "dispatch-namespace" {
+  kind        = scope
+  description = "A Workers for Platforms dispatch namespace."
+}
+
+rule "workers-script" {
+  match {
+    kind = "resource"
+    type = "cloudflare_workers_script"
+  }
+
+  as = concept.core.serverless-function
+
+  relation "uses" {
+    to  = concept.core.object-storage-container
+    via = source.bindings[0].bucket_name
+  }
+
+  relation "uses" {
+    to  = concept.core.managed-database
+    via = source.bindings[1].database_id
+  }
+
+  relation "publishes-to" {
+    to  = concept.core.message-queue
+    via = source.bindings[2].queue_name
+  }
+
+  relation "uses" {
+    to  = concept.workers-kv-namespace
+    via = source.bindings[3].namespace_id
+  }
+
+  relation "uses" {
+    to  = concept.core.object-storage-container
+    via = source.bindings[4].bucket_name
+  }
+
+  relation "uses" {
+    to  = concept.core.managed-database
+    via = source.bindings[5].database_id
+  }
+
+  relation "publishes-to" {
+    to  = concept.core.message-queue
+    via = source.bindings[6].queue_name
+  }
+
+  relation "uses" {
+    to  = concept.workers-kv-namespace
+    via = source.bindings[7].namespace_id
+  }
+}
+
+rule "worker" {
+  match {
+    kind = "resource"
+    type = "cloudflare_worker"
+  }
+
+  as = concept.core.serverless-function
+}
+
+rule "worker-version" {
+  match {
+    kind = "resource"
+    type = "cloudflare_worker_version"
+  }
+
+  as = concept.worker-version
+
+  contribution {
+    to  = concept.core.serverless-function
+    via = source.worker_id
+  }
+
+  contribution {
+    to  = concept.core.object-storage-container
+    via = source.bindings[0].bucket_name
+  }
+
+  contribution {
+    to  = concept.core.managed-database
+    via = source.bindings[1].database_id
+  }
+
+  contribution {
+    to  = concept.core.message-queue
+    via = source.bindings[2].queue_name
+  }
+
+  contribution {
+    to  = concept.workers-kv-namespace
+    via = source.bindings[3].namespace_id
+  }
+}
+
+rule "workers-deployment" {
+  match {
+    kind = "resource"
+    type = "cloudflare_workers_deployment"
+  }
+
+  as = concept.worker-deployment
+
+  contribution {
+    to  = concept.core.serverless-function
+    via = source.script_name
+  }
+}
+
+rule "workers-route" {
+  match {
+    kind = "resource"
+    type = "cloudflare_workers_route"
+  }
+
+  as = concept.worker-route
+
+  contribution {
+    to  = concept.core.serverless-function
+    via = source.script
+  }
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "workers-custom-domain" {
+  match {
+    kind = "resource"
+    type = "cloudflare_workers_custom_domain"
+  }
+
+  as = concept.edge-route
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+
+  relation "routes-to" {
+    to  = concept.core.serverless-function
+    via = source.service
+  }
+}
+
+rule "workers-script-subdomain" {
+  match {
+    kind = "resource"
+    type = "cloudflare_workers_script_subdomain"
+  }
+
+  as = concept.worker-route
+
+  contribution {
+    to  = concept.core.serverless-function
+    via = source.script_name
+  }
+}
+
+rule "workers-cron-trigger" {
+  match {
+    kind = "resource"
+    type = "cloudflare_workers_cron_trigger"
+  }
+
+  as = concept.worker-route
+
+  contribution {
+    to  = concept.core.serverless-function
+    via = source.script_name
+  }
+}
+
+rule "workers-dispatch-namespace" {
+  match {
+    kind = "resource"
+    type = "cloudflare_workers_for_platforms_dispatch_namespace"
+  }
+
+  as = concept.dispatch-namespace
+}
+
+rule "workers-kv-namespace" {
+  match {
+    kind = "resource"
+    type = "cloudflare_workers_kv_namespace"
+  }
+
+  as = concept.workers-kv-namespace
+}
+
+rule "workers-kv" {
+  match {
+    kind = "resource"
+    type = "cloudflare_workers_kv"
+  }
+
+  as = concept.workers-kv-entry
+
+  contribution {
+    to  = concept.workers-kv-namespace
+    via = source.namespace_id
+  }
+}

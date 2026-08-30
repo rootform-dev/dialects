@@ -1,0 +1,27 @@
+concept "identity-platform" {
+  kind        = entity
+  description = "A Google Cloud Identity Platform configuration for application authentication."
+}
+
+concept "identity-platform-tenant" {
+  kind        = scope
+  description = "An isolated tenant within Identity Platform."
+}
+
+rule "identity-platform" {
+  match {
+    kind = "resource"
+    type = "google_identity_platform_config"
+  }
+
+  as = concept.identity-platform
+}
+
+rule "identity-platform-tenant" {
+  match {
+    kind = "resource"
+    type = "google_identity_platform_tenant"
+  }
+
+  as = concept.identity-platform-tenant
+}

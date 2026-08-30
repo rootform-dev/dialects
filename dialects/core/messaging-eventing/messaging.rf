@@ -1,0 +1,14 @@
+concept "message-topic" {
+  kind        = entity
+  description = "A messaging topic receiving messages from publishers."
+}
+
+concept "message-subscription" {
+  kind        = entity
+  description = "A durable subscription consuming messages from a topic."
+}
+
+concept "message-queue" {
+  kind        = entity
+  description = "A managed queue buffering work or messages for asynchronous consumers."
+}

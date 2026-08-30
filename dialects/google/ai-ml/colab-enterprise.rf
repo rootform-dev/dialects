@@ -1,0 +1,36 @@
+concept "colab-enterprise-runtime" {
+  kind        = entity
+  description = "A managed Colab Enterprise runtime executing notebook code."
+}
+
+concept "colab-enterprise-configuration" {
+  kind        = detail
+  description = "A runtime template or schedule configuring Colab Enterprise execution."
+}
+
+rule "colab-enterprise-runtime" {
+  match {
+    kind = "resource"
+    type = "google_colab_runtime"
+  }
+
+  as = concept.colab-enterprise-runtime
+}
+
+rule "colab-enterprise-runtime-template" {
+  match {
+    kind = "resource"
+    type = "google_colab_runtime_template"
+  }
+
+  as = concept.colab-enterprise-configuration
+}
+
+rule "colab-enterprise-schedule" {
+  match {
+    kind = "resource"
+    type = "google_colab_schedule"
+  }
+
+  as = concept.colab-enterprise-configuration
+}

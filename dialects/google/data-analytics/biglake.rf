@@ -1,0 +1,95 @@
+concept "biglake-catalog" {
+  kind        = scope
+  description = "A BigLake catalog organizing lakehouse metadata."
+}
+
+concept "biglake-database" {
+  kind        = scope
+  description = "A database namespace in a BigLake catalog."
+}
+
+concept "biglake-table" {
+  kind        = entity
+  description = "A table registered in BigLake."
+}
+
+rule "biglake-catalog" {
+  match {
+    kind = "resource"
+    type = "google_biglake_catalog"
+  }
+
+  as = concept.biglake-catalog
+}
+
+rule "biglake-database" {
+  match {
+    kind = "resource"
+    type = "google_biglake_database"
+  }
+
+  as = concept.biglake-database
+}
+
+rule "biglake-table" {
+  match {
+    kind = "resource"
+    type = "google_biglake_table"
+  }
+
+  as = concept.biglake-table
+}
+
+rule "biglake-hive-catalog" {
+  match {
+    kind = "resource"
+    type = "google_biglake_hive_catalog"
+  }
+
+  as = concept.biglake-catalog
+}
+
+rule "biglake-hive-database" {
+  match {
+    kind = "resource"
+    type = "google_biglake_hive_database"
+  }
+
+  as = concept.biglake-database
+}
+
+rule "biglake-hive-table" {
+  match {
+    kind = "resource"
+    type = "google_biglake_hive_table"
+  }
+
+  as = concept.biglake-table
+}
+
+rule "biglake-iceberg-catalog" {
+  match {
+    kind = "resource"
+    type = "google_biglake_iceberg_catalog"
+  }
+
+  as = concept.biglake-catalog
+}
+
+rule "biglake-iceberg-namespace" {
+  match {
+    kind = "resource"
+    type = "google_biglake_iceberg_namespace"
+  }
+
+  as = concept.biglake-database
+}
+
+rule "biglake-iceberg-table" {
+  match {
+    kind = "resource"
+    type = "google_biglake_iceberg_table"
+  }
+
+  as = concept.biglake-table
+}

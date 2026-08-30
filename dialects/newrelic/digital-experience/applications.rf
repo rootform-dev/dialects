@@ -1,0 +1,60 @@
+concept "apm-application" {
+  kind        = entity
+  description = "An application boundary observed through New Relic APM."
+}
+
+concept "application-configuration" {
+  kind        = detail
+  description = "Application settings or key transactions supporting New Relic application observability."
+}
+
+rule "application-lookup" {
+  match {
+    kind = "data"
+    type = "newrelic_application"
+  }
+
+  as = concept.apm-application
+}
+
+rule "application-settings" {
+  match {
+    kind = "resource"
+    type = "newrelic_application_settings"
+  }
+
+  as = concept.application-configuration
+}
+
+rule "browser-application" {
+  match {
+    kind = "resource"
+    type = "newrelic_browser_application"
+  }
+
+  as = concept.core.browser-observability-application
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.account_id
+  }
+}
+
+rule "key-transaction" {
+  match {
+    kind = "resource"
+    type = "newrelic_key_transaction"
+  }
+
+  as = concept.application-configuration
+}
+
+rule "key-transaction-lookup" {
+  match {
+    kind = "data"
+    type = "newrelic_key_transaction"
+  }
+
+  as = concept.application-configuration
+}

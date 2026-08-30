@@ -1,0 +1,35 @@
+rule "integration-aws-account" {
+  match {
+    kind = "resource"
+    type = "datadog_integration_aws_account"
+  }
+
+  as = concept.core.cloud-observability-integration
+}
+
+rule "integration-azure" {
+  match {
+    kind = "resource"
+    type = "datadog_integration_azure"
+  }
+
+  as = concept.core.cloud-observability-integration
+}
+
+rule "integration-gcp" {
+  match {
+    kind = "resource"
+    type = "datadog_integration_gcp"
+  }
+
+  as = concept.core.cloud-observability-integration
+}
+
+rule "integration-gcp-sts" {
+  match {
+    kind = "resource"
+    type = "datadog_integration_gcp_sts"
+  }
+
+  as = concept.core.cloud-observability-integration
+}

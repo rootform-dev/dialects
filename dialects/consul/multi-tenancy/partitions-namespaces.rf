@@ -1,0 +1,61 @@
+concept "admin-partition" {
+  kind        = scope
+  description = "A Consul Enterprise administrative and communication boundary."
+}
+
+concept "namespace" {
+  kind        = scope
+  description = "A Consul Enterprise tenant boundary within an admin partition."
+}
+
+rule "admin-partition" {
+  match {
+    kind = "resource"
+    type = "consul_admin_partition"
+  }
+
+  as = concept.admin-partition
+}
+
+rule "namespace" {
+  match {
+    kind = "resource"
+    type = "consul_namespace"
+  }
+
+  as = concept.namespace
+
+  context {
+    as  = context.core.ownership
+    to  = concept.admin-partition
+    via = source.partition
+  }
+}
+
+rule "namespace-policy-attachment" {
+  match {
+    kind = "resource"
+    type = "consul_namespace_policy_attachment"
+  }
+
+  as = concept.access-control-configuration
+
+  contribution {
+    to  = concept.namespace
+    via = source.namespace
+  }
+}
+
+rule "namespace-role-attachment" {
+  match {
+    kind = "resource"
+    type = "consul_namespace_role_attachment"
+  }
+
+  as = concept.access-control-configuration
+
+  contribution {
+    to  = concept.namespace
+    via = source.namespace
+  }
+}

@@ -1,0 +1,19 @@
+concept "serverless-vpc-access-connector" {
+  kind        = entity
+  description = "A Serverless VPC Access connector bridging serverless workloads to a VPC network."
+}
+
+rule "serverless-vpc-access-connector" {
+  match {
+    kind = "resource"
+    type = "google_vpc_access_connector"
+  }
+
+  as = concept.serverless-vpc-access-connector
+
+  context {
+    as  = context.core.network
+    to  = concept.core.virtual-network
+    via = source.network
+  }
+}

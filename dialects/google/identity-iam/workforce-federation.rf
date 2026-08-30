@@ -1,0 +1,27 @@
+concept "workforce-identity-pool" {
+  kind        = scope
+  description = "A workforce identity pool federating human identities."
+}
+
+concept "workload-identity-pool" {
+  kind        = scope
+  description = "A workload identity pool federating workload identities."
+}
+
+rule "workforce-identity-pool" {
+  match {
+    kind = "resource"
+    type = "google_iam_workforce_pool"
+  }
+
+  as = concept.workforce-identity-pool
+}
+
+rule "workload-identity-pool" {
+  match {
+    kind = "resource"
+    type = "google_iam_workload_identity_pool"
+  }
+
+  as = concept.workload-identity-pool
+}

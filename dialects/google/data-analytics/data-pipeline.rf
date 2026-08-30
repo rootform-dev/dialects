@@ -1,0 +1,13 @@
+concept "data-pipeline" {
+  kind        = entity
+  description = "A managed Data Pipelines pipeline scheduling recurring data processing work."
+}
+
+rule "data-pipeline" {
+  match {
+    kind = "resource"
+    type = "google_data_pipeline_pipeline"
+  }
+
+  as = concept.data-pipeline
+}

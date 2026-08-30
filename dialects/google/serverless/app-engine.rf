@@ -1,0 +1,36 @@
+concept "app-engine-application" {
+  kind        = scope
+  description = "An App Engine application containing deployed services and versions."
+}
+
+concept "app-engine-service-version" {
+  kind        = entity
+  description = "A deployed App Engine standard or flexible service version."
+}
+
+rule "app-engine-application" {
+  match {
+    kind = "resource"
+    type = "google_app_engine_application"
+  }
+
+  as = concept.app-engine-application
+}
+
+rule "app-engine-standard-service-version" {
+  match {
+    kind = "resource"
+    type = "google_app_engine_standard_app_version"
+  }
+
+  as = concept.app-engine-service-version
+}
+
+rule "app-engine-flexible-service-version" {
+  match {
+    kind = "resource"
+    type = "google_app_engine_flexible_app_version"
+  }
+
+  as = concept.app-engine-service-version
+}

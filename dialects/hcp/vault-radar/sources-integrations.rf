@@ -1,0 +1,145 @@
+concept "vault-radar-configuration" {
+  kind        = detail
+  description = "A subscription or access setting supporting HCP Vault Radar."
+}
+
+concept "vault-radar-integration" {
+  kind        = entity
+  description = "An external workflow destination integrated with HCP Vault Radar."
+}
+
+concept "vault-radar-secret-manager" {
+  kind        = entity
+  description = "A Vault Dedicated secret manager correlated with HCP Vault Radar findings."
+}
+
+concept "vault-radar-source" {
+  kind        = entity
+  description = "A source repository scanned by HCP Vault Radar for secret exposure."
+}
+
+rule "vault-radar-integration-jira-connection" {
+  match {
+    kind = "resource"
+    type = "hcp_vault_radar_integration_jira_connection"
+  }
+
+  as = concept.vault-radar-integration
+
+  context {
+    as  = context.core.ownership
+    to  = concept.project
+    via = source.project_id
+  }
+}
+
+rule "vault-radar-integration-jira-subscription" {
+  match {
+    kind = "resource"
+    type = "hcp_vault_radar_integration_jira_subscription"
+  }
+
+  as = concept.vault-radar-configuration
+
+  contribution {
+    to  = concept.vault-radar-integration
+    via = source.connection_id
+  }
+}
+
+rule "vault-radar-integration-slack-connection" {
+  match {
+    kind = "resource"
+    type = "hcp_vault_radar_integration_slack_connection"
+  }
+
+  as = concept.vault-radar-integration
+
+  context {
+    as  = context.core.ownership
+    to  = concept.project
+    via = source.project_id
+  }
+}
+
+rule "vault-radar-integration-slack-subscription" {
+  match {
+    kind = "resource"
+    type = "hcp_vault_radar_integration_slack_subscription"
+  }
+
+  as = concept.vault-radar-configuration
+
+  contribution {
+    to  = concept.vault-radar-integration
+    via = source.connection_id
+  }
+}
+
+rule "vault-radar-resource-iam-binding" {
+  match {
+    kind = "resource"
+    type = "hcp_vault_radar_resource_iam_binding"
+  }
+
+  as = concept.vault-radar-configuration
+}
+
+rule "vault-radar-resource-iam-policy" {
+  match {
+    kind = "resource"
+    type = "hcp_vault_radar_resource_iam_policy"
+  }
+
+  as = concept.vault-radar-configuration
+}
+
+rule "vault-radar-secret-manager-vault-dedicated" {
+  match {
+    kind = "resource"
+    type = "hcp_vault_radar_secret_manager_vault_dedicated"
+  }
+
+  as = concept.vault-radar-secret-manager
+
+  context {
+    as  = context.core.ownership
+    to  = concept.project
+    via = source.project_id
+  }
+
+  relation "connects-vault-cluster" {
+    to  = concept.vault-dedicated-cluster
+    via = source.vault_url
+  }
+}
+
+rule "vault-radar-source-github-cloud" {
+  match {
+    kind = "resource"
+    type = "hcp_vault_radar_source_github_cloud"
+  }
+
+  as = concept.vault-radar-source
+
+  context {
+    as  = context.core.ownership
+    to  = concept.project
+    via = source.project_id
+  }
+}
+
+rule "vault-radar-source-github-enterprise" {
+  match {
+    kind = "resource"
+    type = "hcp_vault_radar_source_github_enterprise"
+  }
+
+  as = concept.vault-radar-source
+
+  context {
+    as  = context.core.ownership
+    to  = concept.project
+    via = source.project_id
+  }
+}

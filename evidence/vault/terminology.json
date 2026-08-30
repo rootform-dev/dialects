@@ -1,0 +1,1214 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-30",
+  "dialect": "vault",
+  "product_name": "HashiCorp Vault",
+  "presentation_sha256": "sha256:80492649453d0b2d7dc2b9053631349362958d484b07db58204fdc4ddbbb04cd",
+  "integrity_boundary": "presentation integrity is separate from semantic_sources_sha256; label or identity drift changes this digest only",
+  "rules": [
+    {
+      "id": "vault/ad-secret-backend",
+      "terraform_type": "vault_ad_secret_backend",
+      "label": "Vault Active Directory secrets engine",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/ad_secret_backend"
+    },
+    {
+      "id": "vault/ad-secret-library",
+      "terraform_type": "vault_ad_secret_library",
+      "label": "Vault Active Directory secret library",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/ad_secret_library"
+    },
+    {
+      "id": "vault/ad-secret-role",
+      "terraform_type": "vault_ad_secret_role",
+      "label": "Vault Active Directory secret role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/ad_secret_role"
+    },
+    {
+      "id": "vault/agent-registration",
+      "terraform_type": "vault_agent_registration",
+      "label": "Vault agent registration",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/agent_registration"
+    },
+    {
+      "id": "vault/alicloud-auth-backend-role",
+      "terraform_type": "vault_alicloud_auth_backend_role",
+      "label": "Vault Alibaba Cloud auth method role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/alicloud_auth_backend_role"
+    },
+    {
+      "id": "vault/alicloud-secret-backend",
+      "terraform_type": "vault_alicloud_secret_backend",
+      "label": "Vault Alibaba Cloud secrets engine",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/alicloud_secret_backend"
+    },
+    {
+      "id": "vault/alicloud-secret-backend-role",
+      "terraform_type": "vault_alicloud_secret_backend_role",
+      "label": "Vault Alibaba Cloud secrets engine role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/alicloud_secret_backend_role"
+    },
+    {
+      "id": "vault/approle-auth-backend-role",
+      "terraform_type": "vault_approle_auth_backend_role",
+      "label": "Vault AppRole auth method role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/approle_auth_backend_role"
+    },
+    {
+      "id": "vault/audit",
+      "terraform_type": "vault_audit",
+      "label": "Vault audit",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/audit"
+    },
+    {
+      "id": "vault/audit-request-header",
+      "terraform_type": "vault_audit_request_header",
+      "label": "Vault audit request header",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/audit_request_header"
+    },
+    {
+      "id": "vault/auth-backend",
+      "terraform_type": "vault_auth_backend",
+      "label": "Vault auth method",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/auth_backend"
+    },
+    {
+      "id": "vault/aws-auth-backend-cert",
+      "terraform_type": "vault_aws_auth_backend_cert",
+      "label": "Vault AWS auth method certificate",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/aws_auth_backend_cert"
+    },
+    {
+      "id": "vault/aws-auth-backend-client",
+      "terraform_type": "vault_aws_auth_backend_client",
+      "label": "Vault AWS auth method client",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/aws_auth_backend_client"
+    },
+    {
+      "id": "vault/aws-auth-backend-config-identity",
+      "terraform_type": "vault_aws_auth_backend_config_identity",
+      "label": "Vault AWS auth method configuration identity",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/aws_auth_backend_config_identity"
+    },
+    {
+      "id": "vault/aws-auth-backend-identity-whitelist",
+      "terraform_type": "vault_aws_auth_backend_identity_whitelist",
+      "label": "Vault AWS auth method identity whitelist",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/aws_auth_backend_identity_whitelist"
+    },
+    {
+      "id": "vault/aws-auth-backend-role",
+      "terraform_type": "vault_aws_auth_backend_role",
+      "label": "Vault AWS auth method role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/aws_auth_backend_role"
+    },
+    {
+      "id": "vault/aws-auth-backend-role-tag",
+      "terraform_type": "vault_aws_auth_backend_role_tag",
+      "label": "Vault AWS auth method role tag",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/aws_auth_backend_role_tag"
+    },
+    {
+      "id": "vault/aws-auth-backend-roletag-blacklist",
+      "terraform_type": "vault_aws_auth_backend_roletag_blacklist",
+      "label": "Vault AWS auth method roletag blacklist",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/aws_auth_backend_roletag_blacklist"
+    },
+    {
+      "id": "vault/aws-auth-backend-sts-role",
+      "terraform_type": "vault_aws_auth_backend_sts_role",
+      "label": "Vault AWS auth method STS role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/aws_auth_backend_sts_role"
+    },
+    {
+      "id": "vault/aws-secret-backend",
+      "terraform_type": "vault_aws_secret_backend",
+      "label": "Vault AWS secrets engine",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/aws_secret_backend"
+    },
+    {
+      "id": "vault/aws-secret-backend-role",
+      "terraform_type": "vault_aws_secret_backend_role",
+      "label": "Vault AWS secrets engine role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/aws_secret_backend_role"
+    },
+    {
+      "id": "vault/aws-secret-backend-static-role",
+      "terraform_type": "vault_aws_secret_backend_static_role",
+      "label": "Vault AWS secrets engine static role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/aws_secret_backend_static_role"
+    },
+    {
+      "id": "vault/azure-auth-backend-config",
+      "terraform_type": "vault_azure_auth_backend_config",
+      "label": "Vault Azure auth method configuration",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/azure_auth_backend_config"
+    },
+    {
+      "id": "vault/azure-auth-backend-role",
+      "terraform_type": "vault_azure_auth_backend_role",
+      "label": "Vault Azure auth method role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/azure_auth_backend_role"
+    },
+    {
+      "id": "vault/azure-secret-backend",
+      "terraform_type": "vault_azure_secret_backend",
+      "label": "Vault Azure secrets engine",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/azure_secret_backend"
+    },
+    {
+      "id": "vault/azure-secret-backend-role",
+      "terraform_type": "vault_azure_secret_backend_role",
+      "label": "Vault Azure secrets engine role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/azure_secret_backend_role"
+    },
+    {
+      "id": "vault/azure-secret-backend-static-role",
+      "terraform_type": "vault_azure_secret_backend_static_role",
+      "label": "Vault Azure secrets engine static role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/azure_secret_backend_static_role"
+    },
+    {
+      "id": "vault/cert-auth-backend-role",
+      "terraform_type": "vault_cert_auth_backend_role",
+      "label": "Vault certificate auth method role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/cert_auth_backend_role"
+    },
+    {
+      "id": "vault/cf-auth-backend-config",
+      "terraform_type": "vault_cf_auth_backend_config",
+      "label": "Vault Cloud Foundry auth method configuration",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/cf_auth_backend_config"
+    },
+    {
+      "id": "vault/cf-auth-backend-role",
+      "terraform_type": "vault_cf_auth_backend_role",
+      "label": "Vault Cloud Foundry auth method role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/cf_auth_backend_role"
+    },
+    {
+      "id": "vault/config-control-group",
+      "terraform_type": "vault_config_control_group",
+      "label": "Vault configuration control group",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/config_control_group"
+    },
+    {
+      "id": "vault/config-group-policy-application",
+      "terraform_type": "vault_config_group_policy_application",
+      "label": "Vault configuration group policy application",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/config_group_policy_application"
+    },
+    {
+      "id": "vault/consul-secret-backend",
+      "terraform_type": "vault_consul_secret_backend",
+      "label": "Vault Consul secrets engine",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/consul_secret_backend"
+    },
+    {
+      "id": "vault/consul-secret-backend-role",
+      "terraform_type": "vault_consul_secret_backend_role",
+      "label": "Vault Consul secrets engine role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/consul_secret_backend_role"
+    },
+    {
+      "id": "vault/database-secret-backend-connection",
+      "terraform_type": "vault_database_secret_backend_connection",
+      "label": "Vault database secrets engine connection",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/database_secret_backend_connection"
+    },
+    {
+      "id": "vault/database-secret-backend-role",
+      "terraform_type": "vault_database_secret_backend_role",
+      "label": "Vault database secrets engine role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/database_secret_backend_role"
+    },
+    {
+      "id": "vault/database-secret-backend-static-role",
+      "terraform_type": "vault_database_secret_backend_static_role",
+      "label": "Vault database secrets engine static role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/database_secret_backend_static_role"
+    },
+    {
+      "id": "vault/database-secrets-mount",
+      "terraform_type": "vault_database_secrets_mount",
+      "label": "Vault database secrets mount",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/database_secrets_mount"
+    },
+    {
+      "id": "vault/egp-policy",
+      "terraform_type": "vault_egp_policy",
+      "label": "Vault EGP policy",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/egp_policy"
+    },
+    {
+      "id": "vault/gcp-auth-backend",
+      "terraform_type": "vault_gcp_auth_backend",
+      "label": "Vault Google Cloud auth method",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/gcp_auth_backend"
+    },
+    {
+      "id": "vault/gcp-auth-backend-role",
+      "terraform_type": "vault_gcp_auth_backend_role",
+      "label": "Vault Google Cloud auth method role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/gcp_auth_backend_role"
+    },
+    {
+      "id": "vault/gcp-secret-backend",
+      "terraform_type": "vault_gcp_secret_backend",
+      "label": "Vault Google Cloud secrets engine",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/gcp_secret_backend"
+    },
+    {
+      "id": "vault/gcp-secret-impersonated-account",
+      "terraform_type": "vault_gcp_secret_impersonated_account",
+      "label": "Vault Google Cloud secret impersonated account",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/gcp_secret_impersonated_account"
+    },
+    {
+      "id": "vault/gcp-secret-roleset",
+      "terraform_type": "vault_gcp_secret_roleset",
+      "label": "Vault Google Cloud secret roleset",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/gcp_secret_roleset"
+    },
+    {
+      "id": "vault/gcp-secret-static-account",
+      "terraform_type": "vault_gcp_secret_static_account",
+      "label": "Vault Google Cloud secret static account",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/gcp_secret_static_account"
+    },
+    {
+      "id": "vault/gcpkms-secret-backend",
+      "terraform_type": "vault_gcpkms_secret_backend",
+      "label": "Vault Google Cloud KMS secrets engine",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/gcpkms_secret_backend"
+    },
+    {
+      "id": "vault/gcpkms-secret-backend-key",
+      "terraform_type": "vault_gcpkms_secret_backend_key",
+      "label": "Vault Google Cloud KMS secrets engine key",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/gcpkms_secret_backend_key"
+    },
+    {
+      "id": "vault/generic-secret",
+      "terraform_type": "vault_generic_secret",
+      "label": "Vault generic secret",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/generic_secret"
+    },
+    {
+      "id": "vault/generic-secret-read",
+      "terraform_type": "vault_generic_secret",
+      "label": "Vault generic secret lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/data-sources/generic_secret"
+    },
+    {
+      "id": "vault/github-auth-backend",
+      "terraform_type": "vault_github_auth_backend",
+      "label": "Vault GitHub auth method",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/github_auth_backend"
+    },
+    {
+      "id": "vault/github-team",
+      "terraform_type": "vault_github_team",
+      "label": "Vault GitHub team",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/github_team"
+    },
+    {
+      "id": "vault/identity-entity",
+      "terraform_type": "vault_identity_entity",
+      "label": "Vault identity entity",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_entity"
+    },
+    {
+      "id": "vault/identity-entity-alias",
+      "terraform_type": "vault_identity_entity_alias",
+      "label": "Vault identity entity alias",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_entity_alias"
+    },
+    {
+      "id": "vault/identity-entity-policies",
+      "terraform_type": "vault_identity_entity_policies",
+      "label": "Vault identity entity policies",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_entity_policies"
+    },
+    {
+      "id": "vault/identity-group",
+      "terraform_type": "vault_identity_group",
+      "label": "Vault identity group",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_group"
+    },
+    {
+      "id": "vault/identity-group-alias",
+      "terraform_type": "vault_identity_group_alias",
+      "label": "Vault identity group alias",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_group_alias"
+    },
+    {
+      "id": "vault/identity-group-member-entity-ids",
+      "terraform_type": "vault_identity_group_member_entity_ids",
+      "label": "Vault identity group member entity IDs",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_group_member_entity_ids"
+    },
+    {
+      "id": "vault/identity-group-member-group-ids",
+      "terraform_type": "vault_identity_group_member_group_ids",
+      "label": "Vault identity group member group IDs",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_group_member_group_ids"
+    },
+    {
+      "id": "vault/identity-group-policies",
+      "terraform_type": "vault_identity_group_policies",
+      "label": "Vault identity group policies",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_group_policies"
+    },
+    {
+      "id": "vault/identity-mfa-duo",
+      "terraform_type": "vault_identity_mfa_duo",
+      "label": "Vault identity MFA Duo",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_mfa_duo"
+    },
+    {
+      "id": "vault/identity-mfa-login-enforcement",
+      "terraform_type": "vault_identity_mfa_login_enforcement",
+      "label": "Vault identity MFA login enforcement",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_mfa_login_enforcement"
+    },
+    {
+      "id": "vault/identity-mfa-okta",
+      "terraform_type": "vault_identity_mfa_okta",
+      "label": "Vault identity MFA Okta",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_mfa_okta"
+    },
+    {
+      "id": "vault/identity-mfa-pingid",
+      "terraform_type": "vault_identity_mfa_pingid",
+      "label": "Vault identity MFA PingID",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_mfa_pingid"
+    },
+    {
+      "id": "vault/identity-mfa-totp",
+      "terraform_type": "vault_identity_mfa_totp",
+      "label": "Vault identity MFA TOTP",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_mfa_totp"
+    },
+    {
+      "id": "vault/identity-oidc",
+      "terraform_type": "vault_identity_oidc",
+      "label": "Vault Identity Tokens configuration",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_oidc"
+    },
+    {
+      "id": "vault/identity-oidc-assignment",
+      "terraform_type": "vault_identity_oidc_assignment",
+      "label": "Vault identity OIDC assignment",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_oidc_assignment"
+    },
+    {
+      "id": "vault/identity-oidc-client",
+      "terraform_type": "vault_identity_oidc_client",
+      "label": "Vault identity OIDC client",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_oidc_client"
+    },
+    {
+      "id": "vault/identity-oidc-key",
+      "terraform_type": "vault_identity_oidc_key",
+      "label": "Vault identity OIDC key",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_oidc_key"
+    },
+    {
+      "id": "vault/identity-oidc-key-allowed-client-id",
+      "terraform_type": "vault_identity_oidc_key_allowed_client_id",
+      "label": "Vault identity OIDC key allowed client ID",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_oidc_key_allowed_client_id"
+    },
+    {
+      "id": "vault/identity-oidc-provider",
+      "terraform_type": "vault_identity_oidc_provider",
+      "label": "Vault identity OIDC provider",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_oidc_provider"
+    },
+    {
+      "id": "vault/identity-oidc-role",
+      "terraform_type": "vault_identity_oidc_role",
+      "label": "Vault identity OIDC role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_oidc_role"
+    },
+    {
+      "id": "vault/identity-oidc-scope",
+      "terraform_type": "vault_identity_oidc_scope",
+      "label": "Vault identity OIDC scope",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_oidc_scope"
+    },
+    {
+      "id": "vault/jwt-auth-backend",
+      "terraform_type": "vault_jwt_auth_backend",
+      "label": "Vault JWT auth method",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/jwt_auth_backend"
+    },
+    {
+      "id": "vault/jwt-auth-backend-role",
+      "terraform_type": "vault_jwt_auth_backend_role",
+      "label": "Vault JWT auth method role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/jwt_auth_backend_role"
+    },
+    {
+      "id": "vault/kerberos-auth-backend-config",
+      "terraform_type": "vault_kerberos_auth_backend_config",
+      "label": "Vault kerberos auth method configuration",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kerberos_auth_backend_config"
+    },
+    {
+      "id": "vault/kerberos-auth-backend-group",
+      "terraform_type": "vault_kerberos_auth_backend_group",
+      "label": "Vault kerberos auth method group",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kerberos_auth_backend_group"
+    },
+    {
+      "id": "vault/kerberos-auth-backend-ldap-config",
+      "terraform_type": "vault_kerberos_auth_backend_ldap_config",
+      "label": "Vault kerberos auth method LDAP configuration",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kerberos_auth_backend_ldap_config"
+    },
+    {
+      "id": "vault/keymgmt-aws-kms",
+      "terraform_type": "vault_keymgmt_aws_kms",
+      "label": "Vault key management AWS KMS",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/keymgmt_aws_kms"
+    },
+    {
+      "id": "vault/keymgmt-azure-kms",
+      "terraform_type": "vault_keymgmt_azure_kms",
+      "label": "Vault key management Azure KMS",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/keymgmt_azure_kms"
+    },
+    {
+      "id": "vault/keymgmt-distribute-key",
+      "terraform_type": "vault_keymgmt_distribute_key",
+      "label": "Vault key management distribute key",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/keymgmt_distribute_key"
+    },
+    {
+      "id": "vault/keymgmt-gcp-kms",
+      "terraform_type": "vault_keymgmt_gcp_kms",
+      "label": "Vault key management Google Cloud KMS",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/keymgmt_gcp_kms"
+    },
+    {
+      "id": "vault/keymgmt-key",
+      "terraform_type": "vault_keymgmt_key",
+      "label": "Vault key management key",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/keymgmt_key"
+    },
+    {
+      "id": "vault/keymgmt-replicate-key",
+      "terraform_type": "vault_keymgmt_replicate_key",
+      "label": "Vault key management replicate key",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/keymgmt_replicate_key"
+    },
+    {
+      "id": "vault/kmip-secret-backend",
+      "terraform_type": "vault_kmip_secret_backend",
+      "label": "Vault KMIP secrets engine",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kmip_secret_backend"
+    },
+    {
+      "id": "vault/kmip-secret-ca-generated",
+      "terraform_type": "vault_kmip_secret_ca_generated",
+      "label": "Vault KMIP secret CA generated",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kmip_secret_ca_generated"
+    },
+    {
+      "id": "vault/kmip-secret-ca-imported",
+      "terraform_type": "vault_kmip_secret_ca_imported",
+      "label": "Vault KMIP secret CA imported",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kmip_secret_ca_imported"
+    },
+    {
+      "id": "vault/kmip-secret-listener",
+      "terraform_type": "vault_kmip_secret_listener",
+      "label": "Vault KMIP secret listener",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kmip_secret_listener"
+    },
+    {
+      "id": "vault/kmip-secret-role",
+      "terraform_type": "vault_kmip_secret_role",
+      "label": "Vault KMIP secret role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kmip_secret_role"
+    },
+    {
+      "id": "vault/kmip-secret-scope",
+      "terraform_type": "vault_kmip_secret_scope",
+      "label": "Vault KMIP secret scope",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kmip_secret_scope"
+    },
+    {
+      "id": "vault/kubernetes-auth-backend-config",
+      "terraform_type": "vault_kubernetes_auth_backend_config",
+      "label": "Vault Kubernetes auth integration",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kubernetes_auth_backend_config"
+    },
+    {
+      "id": "vault/kubernetes-auth-backend-role",
+      "terraform_type": "vault_kubernetes_auth_backend_role",
+      "label": "Vault Kubernetes auth method role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kubernetes_auth_backend_role"
+    },
+    {
+      "id": "vault/kubernetes-secret-backend",
+      "terraform_type": "vault_kubernetes_secret_backend",
+      "label": "Vault Kubernetes secrets engine",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kubernetes_secret_backend"
+    },
+    {
+      "id": "vault/kubernetes-secret-backend-role",
+      "terraform_type": "vault_kubernetes_secret_backend_role",
+      "label": "Vault Kubernetes secrets engine role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kubernetes_secret_backend_role"
+    },
+    {
+      "id": "vault/kv-secret",
+      "terraform_type": "vault_kv_secret",
+      "label": "Vault KV secret",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kv_secret"
+    },
+    {
+      "id": "vault/kv-secret-backend-v2",
+      "terraform_type": "vault_kv_secret_backend_v2",
+      "label": "Vault KV v2 secrets engine configuration",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kv_secret_backend_v2"
+    },
+    {
+      "id": "vault/kv-secret-read",
+      "terraform_type": "vault_kv_secret",
+      "label": "Vault KV secret lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/data-sources/kv_secret"
+    },
+    {
+      "id": "vault/kv-secret-v2",
+      "terraform_type": "vault_kv_secret_v2",
+      "label": "Vault KV secret v2",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kv_secret_v2"
+    },
+    {
+      "id": "vault/kv-secret-v2-read",
+      "terraform_type": "vault_kv_secret_v2",
+      "label": "Vault KV secret v2 lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/data-sources/kv_secret_v2"
+    },
+    {
+      "id": "vault/ldap-auth-backend",
+      "terraform_type": "vault_ldap_auth_backend",
+      "label": "Vault LDAP auth method",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/ldap_auth_backend"
+    },
+    {
+      "id": "vault/ldap-auth-backend-group",
+      "terraform_type": "vault_ldap_auth_backend_group",
+      "label": "Vault LDAP auth method group",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/ldap_auth_backend_group"
+    },
+    {
+      "id": "vault/ldap-secret-backend",
+      "terraform_type": "vault_ldap_secret_backend",
+      "label": "Vault LDAP secrets engine",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/ldap_secret_backend"
+    },
+    {
+      "id": "vault/ldap-secret-backend-dynamic-role",
+      "terraform_type": "vault_ldap_secret_backend_dynamic_role",
+      "label": "Vault LDAP secrets engine dynamic role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/ldap_secret_backend_dynamic_role"
+    },
+    {
+      "id": "vault/ldap-secret-backend-library-set",
+      "terraform_type": "vault_ldap_secret_backend_library_set",
+      "label": "Vault LDAP secrets engine library set",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/ldap_secret_backend_library_set"
+    },
+    {
+      "id": "vault/ldap-secret-backend-static-role",
+      "terraform_type": "vault_ldap_secret_backend_static_role",
+      "label": "Vault LDAP secrets engine static role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/ldap_secret_backend_static_role"
+    },
+    {
+      "id": "vault/managed-keys",
+      "terraform_type": "vault_managed_keys",
+      "label": "Vault managed keys",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/managed_keys"
+    },
+    {
+      "id": "vault/mfa-duo",
+      "terraform_type": "vault_mfa_duo",
+      "label": "Vault MFA Duo",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/mfa_duo"
+    },
+    {
+      "id": "vault/mfa-okta",
+      "terraform_type": "vault_mfa_okta",
+      "label": "Vault MFA Okta",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/mfa_okta"
+    },
+    {
+      "id": "vault/mfa-pingid",
+      "terraform_type": "vault_mfa_pingid",
+      "label": "Vault MFA PingID",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/mfa_pingid"
+    },
+    {
+      "id": "vault/mfa-totp",
+      "terraform_type": "vault_mfa_totp",
+      "label": "Vault MFA TOTP",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/mfa_totp"
+    },
+    {
+      "id": "vault/mongodbatlas-secret-backend",
+      "terraform_type": "vault_mongodbatlas_secret_backend",
+      "label": "Vault MongoDB Atlas secrets engine",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/mongodbatlas_secret_backend"
+    },
+    {
+      "id": "vault/mongodbatlas-secret-role",
+      "terraform_type": "vault_mongodbatlas_secret_role",
+      "label": "Vault MongoDB Atlas secret role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/mongodbatlas_secret_role"
+    },
+    {
+      "id": "vault/mount",
+      "terraform_type": "vault_mount",
+      "label": "Vault mount",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/mount"
+    },
+    {
+      "id": "vault/namespace",
+      "terraform_type": "vault_namespace",
+      "label": "Vault namespace",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/namespace"
+    },
+    {
+      "id": "vault/nomad-secret-backend",
+      "terraform_type": "vault_nomad_secret_backend",
+      "label": "Vault Nomad secrets engine",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/nomad_secret_backend"
+    },
+    {
+      "id": "vault/nomad-secret-role",
+      "terraform_type": "vault_nomad_secret_role",
+      "label": "Vault Nomad secret role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/nomad_secret_role"
+    },
+    {
+      "id": "vault/oauth-resource-server-config-profile",
+      "terraform_type": "vault_oauth_resource_server_config_profile",
+      "label": "Vault OAuth resource server configuration profile",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/oauth_resource_server_config_profile"
+    },
+    {
+      "id": "vault/oci-auth-backend",
+      "terraform_type": "vault_oci_auth_backend",
+      "label": "Vault OCI auth method",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/oci_auth_backend"
+    },
+    {
+      "id": "vault/oci-auth-backend-role",
+      "terraform_type": "vault_oci_auth_backend_role",
+      "label": "Vault OCI auth method role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/oci_auth_backend_role"
+    },
+    {
+      "id": "vault/okta-auth-backend",
+      "terraform_type": "vault_okta_auth_backend",
+      "label": "Vault Okta auth method",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/okta_auth_backend"
+    },
+    {
+      "id": "vault/okta-auth-backend-group",
+      "terraform_type": "vault_okta_auth_backend_group",
+      "label": "Vault Okta auth method group",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/okta_auth_backend_group"
+    },
+    {
+      "id": "vault/os-secret-backend",
+      "terraform_type": "vault_os_secret_backend",
+      "label": "Vault OS secrets engine",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/os_secret_backend"
+    },
+    {
+      "id": "vault/os-secret-backend-account",
+      "terraform_type": "vault_os_secret_backend_account",
+      "label": "Vault OS secrets engine account",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/os_secret_backend_account"
+    },
+    {
+      "id": "vault/os-secret-backend-host",
+      "terraform_type": "vault_os_secret_backend_host",
+      "label": "Vault OS secrets engine host",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/os_secret_backend_host"
+    },
+    {
+      "id": "vault/password-policy",
+      "terraform_type": "vault_password_policy",
+      "label": "Vault password policy",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/password_policy"
+    },
+    {
+      "id": "vault/pki-external-ca-secret-backend-role",
+      "terraform_type": "vault_pki_external_ca_secret_backend_role",
+      "label": "Vault PKI external CA secrets engine role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_external_ca_secret_backend_role"
+    },
+    {
+      "id": "vault/pki-secret-backend-config-acme",
+      "terraform_type": "vault_pki_secret_backend_config_acme",
+      "label": "Vault PKI secrets engine configuration ACME",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_config_acme"
+    },
+    {
+      "id": "vault/pki-secret-backend-config-auto-tidy",
+      "terraform_type": "vault_pki_secret_backend_config_auto_tidy",
+      "label": "Vault PKI secrets engine configuration auto tidy",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_config_auto_tidy"
+    },
+    {
+      "id": "vault/pki-secret-backend-config-cluster",
+      "terraform_type": "vault_pki_secret_backend_config_cluster",
+      "label": "Vault PKI secrets engine configuration cluster",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_config_cluster"
+    },
+    {
+      "id": "vault/pki-secret-backend-config-cmpv2",
+      "terraform_type": "vault_pki_secret_backend_config_cmpv2",
+      "label": "Vault PKI secrets engine configuration CMPv2",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_config_cmpv2"
+    },
+    {
+      "id": "vault/pki-secret-backend-config-est",
+      "terraform_type": "vault_pki_secret_backend_config_est",
+      "label": "Vault PKI secrets engine configuration EST",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_config_est"
+    },
+    {
+      "id": "vault/pki-secret-backend-config-issuers",
+      "terraform_type": "vault_pki_secret_backend_config_issuers",
+      "label": "Vault PKI secrets engine configuration issuers",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_config_issuers"
+    },
+    {
+      "id": "vault/pki-secret-backend-config-scep",
+      "terraform_type": "vault_pki_secret_backend_config_scep",
+      "label": "Vault PKI secrets engine configuration SCEP",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_config_scep"
+    },
+    {
+      "id": "vault/pki-secret-backend-config-urls",
+      "terraform_type": "vault_pki_secret_backend_config_urls",
+      "label": "Vault PKI secrets engine configuration URLs",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_config_urls"
+    },
+    {
+      "id": "vault/pki-secret-backend-crl-config",
+      "terraform_type": "vault_pki_secret_backend_crl_config",
+      "label": "Vault PKI secrets engine CRL configuration",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_crl_config"
+    },
+    {
+      "id": "vault/pki-secret-backend-intermediate-set-signed",
+      "terraform_type": "vault_pki_secret_backend_intermediate_set_signed",
+      "label": "Vault PKI secrets engine intermediate set signed",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_intermediate_set_signed"
+    },
+    {
+      "id": "vault/pki-secret-backend-issuer",
+      "terraform_type": "vault_pki_secret_backend_issuer",
+      "label": "Vault PKI secrets engine issuer",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_issuer"
+    },
+    {
+      "id": "vault/pki-secret-backend-key",
+      "terraform_type": "vault_pki_secret_backend_key",
+      "label": "Vault PKI secrets engine key",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_key"
+    },
+    {
+      "id": "vault/pki-secret-backend-role",
+      "terraform_type": "vault_pki_secret_backend_role",
+      "label": "Vault PKI secrets engine role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_role"
+    },
+    {
+      "id": "vault/pki-secret-backend-root-cert",
+      "terraform_type": "vault_pki_secret_backend_root_cert",
+      "label": "Vault PKI secrets engine root certificate",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_root_cert"
+    },
+    {
+      "id": "vault/plugin",
+      "terraform_type": "vault_plugin",
+      "label": "Vault plugin",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/plugin"
+    },
+    {
+      "id": "vault/plugin-pinned-version",
+      "terraform_type": "vault_plugin_pinned_version",
+      "label": "Vault plugin pinned version",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/plugin_pinned_version"
+    },
+    {
+      "id": "vault/plugin-runtime",
+      "terraform_type": "vault_plugin_runtime",
+      "label": "Vault plugin runtime",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/plugin_runtime"
+    },
+    {
+      "id": "vault/policy",
+      "terraform_type": "vault_policy",
+      "label": "Vault policy",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/policy"
+    },
+    {
+      "id": "vault/rabbitmq-secret-backend",
+      "terraform_type": "vault_rabbitmq_secret_backend",
+      "label": "Vault RabbitMQ secrets engine",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/rabbitmq_secret_backend"
+    },
+    {
+      "id": "vault/rabbitmq-secret-backend-role",
+      "terraform_type": "vault_rabbitmq_secret_backend_role",
+      "label": "Vault RabbitMQ secrets engine role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/rabbitmq_secret_backend_role"
+    },
+    {
+      "id": "vault/radius-auth-backend",
+      "terraform_type": "vault_radius_auth_backend",
+      "label": "Vault radius auth method",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/radius_auth_backend"
+    },
+    {
+      "id": "vault/raft-autopilot",
+      "terraform_type": "vault_raft_autopilot",
+      "label": "Vault Raft autopilot",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/raft_autopilot"
+    },
+    {
+      "id": "vault/raft-snapshot-agent-config",
+      "terraform_type": "vault_raft_snapshot_agent_config",
+      "label": "Vault Raft snapshot agent configuration",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/raft_snapshot_agent_config"
+    },
+    {
+      "id": "vault/rgp-policy",
+      "terraform_type": "vault_rgp_policy",
+      "label": "Vault RGP policy",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/rgp_policy"
+    },
+    {
+      "id": "vault/rotation-policy",
+      "terraform_type": "vault_rotation_policy",
+      "label": "Vault rotation policy",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/rotation_policy"
+    },
+    {
+      "id": "vault/saml-auth-backend",
+      "terraform_type": "vault_saml_auth_backend",
+      "label": "Vault SAML auth method",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/saml_auth_backend"
+    },
+    {
+      "id": "vault/saml-auth-backend-role",
+      "terraform_type": "vault_saml_auth_backend_role",
+      "label": "Vault SAML auth method role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/saml_auth_backend_role"
+    },
+    {
+      "id": "vault/scep-auth-backend-role",
+      "terraform_type": "vault_scep_auth_backend_role",
+      "label": "Vault SCEP auth method role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/scep_auth_backend_role"
+    },
+    {
+      "id": "vault/secrets-sync-association",
+      "terraform_type": "vault_secrets_sync_association",
+      "label": "Vault Secrets Sync association",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/secrets_sync_association"
+    },
+    {
+      "id": "vault/secrets-sync-aws-destination",
+      "terraform_type": "vault_secrets_sync_aws_destination",
+      "label": "Vault Secrets Sync AWS destination",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/secrets_sync_aws_destination"
+    },
+    {
+      "id": "vault/secrets-sync-azure-destination",
+      "terraform_type": "vault_secrets_sync_azure_destination",
+      "label": "Vault Secrets Sync Azure destination",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/secrets_sync_azure_destination"
+    },
+    {
+      "id": "vault/secrets-sync-config",
+      "terraform_type": "vault_secrets_sync_config",
+      "label": "Vault Secrets Sync configuration",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/secrets_sync_config"
+    },
+    {
+      "id": "vault/secrets-sync-gcp-destination",
+      "terraform_type": "vault_secrets_sync_gcp_destination",
+      "label": "Vault Secrets Sync Google Cloud destination",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/secrets_sync_gcp_destination"
+    },
+    {
+      "id": "vault/secrets-sync-gh-destination",
+      "terraform_type": "vault_secrets_sync_gh_destination",
+      "label": "Vault Secrets Sync GitHub destination",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/secrets_sync_gh_destination"
+    },
+    {
+      "id": "vault/secrets-sync-github-apps",
+      "terraform_type": "vault_secrets_sync_github_apps",
+      "label": "Vault Secrets Sync GitHub apps",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/secrets_sync_github_apps"
+    },
+    {
+      "id": "vault/secrets-sync-vercel-destination",
+      "terraform_type": "vault_secrets_sync_vercel_destination",
+      "label": "Vault Secrets Sync Vercel destination",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/secrets_sync_vercel_destination"
+    },
+    {
+      "id": "vault/spiffe-auth-backend-config",
+      "terraform_type": "vault_spiffe_auth_backend_config",
+      "label": "Vault SPIFFE auth method configuration",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/spiffe_auth_backend_config"
+    },
+    {
+      "id": "vault/spiffe-auth-backend-role",
+      "terraform_type": "vault_spiffe_auth_backend_role",
+      "label": "Vault SPIFFE auth method role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/spiffe_auth_backend_role"
+    },
+    {
+      "id": "vault/spiffe-secret-backend-config",
+      "terraform_type": "vault_spiffe_secret_backend_config",
+      "label": "Vault SPIFFE secrets engine configuration",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/spiffe_secret_backend_config"
+    },
+    {
+      "id": "vault/spiffe-secret-backend-role",
+      "terraform_type": "vault_spiffe_secret_backend_role",
+      "label": "Vault SPIFFE secrets engine role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/spiffe_secret_backend_role"
+    },
+    {
+      "id": "vault/ssh-secret-backend-ca",
+      "terraform_type": "vault_ssh_secret_backend_ca",
+      "label": "Vault SSH secrets engine CA",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/ssh_secret_backend_ca"
+    },
+    {
+      "id": "vault/ssh-secret-backend-role",
+      "terraform_type": "vault_ssh_secret_backend_role",
+      "label": "Vault SSH secrets engine role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/ssh_secret_backend_role"
+    },
+    {
+      "id": "vault/terraform-cloud-secret-backend",
+      "terraform_type": "vault_terraform_cloud_secret_backend",
+      "label": "Vault Terraform cloud secrets engine",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/terraform_cloud_secret_backend"
+    },
+    {
+      "id": "vault/terraform-cloud-secret-role",
+      "terraform_type": "vault_terraform_cloud_secret_role",
+      "label": "Vault Terraform cloud secret role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/terraform_cloud_secret_role"
+    },
+    {
+      "id": "vault/token-auth-backend-role",
+      "terraform_type": "vault_token_auth_backend_role",
+      "label": "Vault token auth method role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/token_auth_backend_role"
+    },
+    {
+      "id": "vault/transform-alphabet",
+      "terraform_type": "vault_transform_alphabet",
+      "label": "Vault Transform alphabet",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/transform_alphabet"
+    },
+    {
+      "id": "vault/transform-key-configuration",
+      "terraform_type": "vault_transform_key_configuration",
+      "label": "Vault Transform key configuration",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/transform_key_configuration"
+    },
+    {
+      "id": "vault/transform-role",
+      "terraform_type": "vault_transform_role",
+      "label": "Vault Transform role",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/transform_role"
+    },
+    {
+      "id": "vault/transform-template",
+      "terraform_type": "vault_transform_template",
+      "label": "Vault Transform template",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/transform_template"
+    },
+    {
+      "id": "vault/transform-transformation",
+      "terraform_type": "vault_transform_transformation",
+      "label": "Vault Transform transformation",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/transform_transformation"
+    },
+    {
+      "id": "vault/transit-secret-backend-key",
+      "terraform_type": "vault_transit_secret_backend_key",
+      "label": "Vault Transit secrets engine key",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/transit_secret_backend_key"
+    },
+    {
+      "id": "vault/transit-secret-cache-config",
+      "terraform_type": "vault_transit_secret_cache_config",
+      "label": "Vault Transit secret cache configuration",
+      "source": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/transit_secret_cache_config"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "vault/audit-device",
+      "label": "Vault audit device",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/auth-configuration",
+      "label": "Vault auth configuration",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/auth-method",
+      "label": "Vault auth method",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/certificate-authority",
+      "label": "Vault certificate authority",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/data-transformation",
+      "label": "Vault Transform transformation",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/encryption-configuration",
+      "label": "Vault encryption configuration",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/external-ca-integration",
+      "label": "Vault external CA integration",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/governance-configuration",
+      "label": "Vault governance configuration",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/identity-configuration",
+      "label": "Vault identity configuration",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/identity-entity",
+      "label": "Vault identity entity",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/key-management-integration",
+      "label": "Vault key management integration",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/kmip-listener",
+      "label": "Vault KMIP listener",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/kmip-scope",
+      "label": "Vault KMIP scope",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/kubernetes-auth-integration",
+      "label": "Vault Kubernetes auth integration",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/namespace",
+      "label": "Vault namespace",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/oidc-provider",
+      "label": "Vault OIDC provider",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/operations-configuration",
+      "label": "Vault operations configuration",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/pki-configuration",
+      "label": "Vault PKI configuration",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/plugin-configuration",
+      "label": "Vault plugin configuration",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/plugin-runtime",
+      "label": "Vault plugin runtime",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/secret-definition",
+      "label": "Vault secret definition",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/secret-read",
+      "label": "Vault secret read",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/secret-sync-configuration",
+      "label": "Vault Secrets Sync configuration",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/secret-sync-destination",
+      "label": "Vault Secrets Sync destination",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/secrets-engine",
+      "label": "Vault secrets engine",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/secrets-engine-configuration",
+      "label": "Vault secrets engine configuration",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    },
+    {
+      "id": "vault/vault-agent",
+      "label": "Vault Agent registration",
+      "source": "https://developer.hashicorp.com/vault/docs"
+    }
+  ],
+  "asset": {
+    "decision": "generic-identities-only",
+    "reason": "faithful Vault architecture does not require a trademark asset",
+    "official_source": "https://www.hashicorp.com/trademark-policy"
+  }
+}

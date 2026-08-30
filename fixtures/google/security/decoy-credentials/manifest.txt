@@ -1,0 +1,4 @@
+# Forbidden payload sentinels for the decoy-credentials fixture. Every line
+# must be absent from the canonical Architecture IR of a Google compile.
+SECRET_PROVIDER_CREDENTIALS_30a
+SECRET_PROJECT_ID_30b

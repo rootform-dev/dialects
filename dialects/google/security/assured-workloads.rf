@@ -1,0 +1,13 @@
+concept "assured-workloads-boundary" {
+  kind        = scope
+  description = "An Assured Workloads compliance boundary for regulated resources."
+}
+
+rule "assured-workloads-boundary" {
+  match {
+    kind = "resource"
+    type = "google_assured_workloads_workload"
+  }
+
+  as = concept.assured-workloads-boundary
+}

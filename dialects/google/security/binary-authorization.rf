@@ -1,0 +1,27 @@
+concept "binary-authorization-policy" {
+  kind        = entity
+  description = "A Binary Authorization policy controlling container deployment."
+}
+
+concept "binary-authorization-attestor" {
+  kind        = entity
+  description = "A Binary Authorization attestor trusted to verify container images."
+}
+
+rule "binary-authorization-policy" {
+  match {
+    kind = "resource"
+    type = "google_binary_authorization_policy"
+  }
+
+  as = concept.binary-authorization-policy
+}
+
+rule "binary-authorization-attestor" {
+  match {
+    kind = "resource"
+    type = "google_binary_authorization_attestor"
+  }
+
+  as = concept.binary-authorization-attestor
+}

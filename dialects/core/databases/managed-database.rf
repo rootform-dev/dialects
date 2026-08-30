@@ -1,0 +1,4 @@
+concept "managed-database" {
+  kind        = entity
+  description = "A managed database service."
+}

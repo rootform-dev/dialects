@@ -1,0 +1,55 @@
+concept "dataproc-cluster" {
+  kind        = entity
+  description = "A Dataproc cluster running managed Spark and Hadoop workloads."
+}
+
+concept "dataproc-batch" {
+  kind        = entity
+  description = "A serverless Dataproc batch workload."
+}
+
+concept "dataproc-metastore" {
+  kind        = entity
+  description = "A Dataproc Metastore service."
+}
+
+concept "dataproc-workflow-template" {
+  kind        = entity
+  description = "A reusable Dataproc workflow template."
+}
+
+rule "dataproc-cluster" {
+  match {
+    kind = "resource"
+    type = "google_dataproc_cluster"
+  }
+
+  as = concept.dataproc-cluster
+}
+
+rule "dataproc-batch" {
+  match {
+    kind = "resource"
+    type = "google_dataproc_batch"
+  }
+
+  as = concept.dataproc-batch
+}
+
+rule "dataproc-metastore" {
+  match {
+    kind = "resource"
+    type = "google_dataproc_metastore_service"
+  }
+
+  as = concept.dataproc-metastore
+}
+
+rule "dataproc-workflow-template" {
+  match {
+    kind = "resource"
+    type = "google_dataproc_workflow_template"
+  }
+
+  as = concept.dataproc-workflow-template
+}

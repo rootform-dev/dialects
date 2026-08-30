@@ -1,0 +1,11 @@
+dialect "kestra" {
+  version = "0.1.0"
+
+  requires {
+    core = "0.1.0"
+  }
+
+  provider "kestra-io/kestra" {
+    version = ">= 0.15.0, < 1.0.0"
+  }
+}

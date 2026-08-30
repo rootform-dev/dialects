@@ -1,0 +1,32 @@
+concept "token-exchange-profile" {
+  kind        = entity
+  description = "An Auth0 Custom Token Exchange profile delegating validation to an Action."
+}
+
+rule "token-exchange-profile" {
+  match {
+    kind = "resource"
+    type = "auth0_token_exchange_profile"
+  }
+
+  as = concept.token-exchange-profile
+
+  relation "executes-action" {
+    to  = concept.identity-extension
+    via = source.action_id
+  }
+}
+
+rule "token-exchange-profile-lookup" {
+  match {
+    kind = "data"
+    type = "auth0_token_exchange_profile"
+  }
+
+  as = concept.token-exchange-profile
+
+  relation "executes-action" {
+    to  = concept.identity-extension
+    via = source.action_id
+  }
+}

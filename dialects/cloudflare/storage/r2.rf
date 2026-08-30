@@ -1,0 +1,140 @@
+concept "r2-data-catalog" {
+  kind        = entity
+  description = "A Cloudflare R2 Data Catalog for tabular data."
+}
+
+concept "r2-configuration" {
+  kind        = detail
+  description = "Lifecycle, access, event, migration, or domain configuration contributing to an R2 bucket."
+}
+
+rule "r2-bucket" {
+  match {
+    kind = "resource"
+    type = "cloudflare_r2_bucket"
+  }
+
+  as = concept.core.object-storage-container
+}
+
+rule "r2-bucket-cors" {
+  match {
+    kind = "resource"
+    type = "cloudflare_r2_bucket_cors"
+  }
+
+  as = concept.r2-configuration
+
+  contribution {
+    to  = concept.core.object-storage-container
+    via = source.bucket_name
+  }
+}
+rule "r2-bucket-lifecycle" {
+  match {
+    kind = "resource"
+    type = "cloudflare_r2_bucket_lifecycle"
+  }
+
+  as = concept.r2-configuration
+
+  contribution {
+    to  = concept.core.object-storage-container
+    via = source.bucket_name
+  }
+}
+
+rule "r2-bucket-lock" {
+  match {
+    kind = "resource"
+    type = "cloudflare_r2_bucket_lock"
+  }
+
+  as = concept.r2-configuration
+
+  contribution {
+    to  = concept.core.object-storage-container
+    via = source.bucket_name
+  }
+}
+
+rule "r2-bucket-sippy" {
+  match {
+    kind = "resource"
+    type = "cloudflare_r2_bucket_sippy"
+  }
+
+  as = concept.r2-configuration
+
+  contribution {
+    to  = concept.core.object-storage-container
+    via = source.bucket_name
+  }
+}
+
+rule "r2-bucket-event-notification" {
+  match {
+    kind = "resource"
+    type = "cloudflare_r2_bucket_event_notification"
+  }
+
+  as = concept.r2-configuration
+
+  contribution {
+    to  = concept.core.object-storage-container
+    via = source.bucket_name
+  }
+
+  contribution {
+    to  = concept.core.message-queue
+    via = source.queue_id
+  }
+}
+
+rule "r2-custom-domain" {
+  match {
+    kind = "resource"
+    type = "cloudflare_r2_custom_domain"
+  }
+
+  as = concept.r2-configuration
+
+  contribution {
+    to  = concept.core.object-storage-container
+    via = source.bucket_name
+  }
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "r2-managed-domain" {
+  match {
+    kind = "resource"
+    type = "cloudflare_r2_managed_domain"
+  }
+
+  as = concept.r2-configuration
+
+  contribution {
+    to  = concept.core.object-storage-container
+    via = source.bucket_name
+  }
+}
+
+rule "r2-data-catalog" {
+  match {
+    kind = "resource"
+    type = "cloudflare_r2_data_catalog"
+  }
+
+  as = concept.r2-data-catalog
+
+  relation "catalogs" {
+    to  = concept.core.object-storage-container
+    via = source.bucket_name
+  }
+}

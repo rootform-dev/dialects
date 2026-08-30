@@ -1,0 +1,129 @@
+rule "synthetics-broken-links-monitor" {
+  match {
+    kind = "resource"
+    type = "newrelic_synthetics_broken_links_monitor"
+  }
+
+  as = concept.core.synthetic-check
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.account_id
+  }
+
+  contribution {
+    to  = concept.core.synthetic-execution-location
+    via = source.locations_private
+  }
+}
+
+rule "synthetics-cert-check-monitor" {
+  match {
+    kind = "resource"
+    type = "newrelic_synthetics_cert_check_monitor"
+  }
+
+  as = concept.core.synthetic-check
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.account_id
+  }
+
+  contribution {
+    to  = concept.core.synthetic-execution-location
+    via = source.locations_private
+  }
+}
+
+rule "synthetics-monitor" {
+  match {
+    kind = "resource"
+    type = "newrelic_synthetics_monitor"
+  }
+
+  as = concept.core.synthetic-check
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.account_id
+  }
+
+  contribution {
+    to  = concept.core.synthetic-execution-location
+    via = source.locations_private
+  }
+}
+
+rule "synthetics-private-location" {
+  match {
+    kind = "resource"
+    type = "newrelic_synthetics_private_location"
+  }
+
+  as = concept.core.synthetic-execution-location
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.account_id
+  }
+}
+
+rule "synthetics-private-location-lookup" {
+  match {
+    kind = "data"
+    type = "newrelic_synthetics_private_location"
+  }
+
+  as = concept.core.synthetic-execution-location
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.account_id
+  }
+}
+
+rule "synthetics-script-monitor" {
+  match {
+    kind = "resource"
+    type = "newrelic_synthetics_script_monitor"
+  }
+
+  as = concept.core.synthetic-check
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.account_id
+  }
+
+  contribution {
+    to  = concept.core.synthetic-execution-location
+    via = source.location_private[0].guid
+  }
+}
+
+rule "synthetics-step-monitor" {
+  match {
+    kind = "resource"
+    type = "newrelic_synthetics_step_monitor"
+  }
+
+  as = concept.core.synthetic-check
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.account_id
+  }
+
+  contribution {
+    to  = concept.core.synthetic-execution-location
+    via = source.location_private[0].guid
+  }
+}

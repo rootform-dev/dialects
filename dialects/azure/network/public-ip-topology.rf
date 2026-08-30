@@ -1,0 +1,19 @@
+rule "public-address" {
+  match {
+    kind = "resource"
+    type = "azurerm_public_ip"
+  }
+
+  as = concept.public-address
+
+  context {
+    as  = context.core.ownership
+    to  = concept.resource-group
+    via = source.resource_group_name
+
+    match {
+      by       = target.name
+      strategy = "exact"
+    }
+  }
+}

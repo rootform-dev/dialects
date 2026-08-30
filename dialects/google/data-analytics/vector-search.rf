@@ -1,0 +1,22 @@
+concept "vector-search-collection" {
+  kind        = scope
+  description = "A Vector Search collection organizing vector indexes."
+}
+
+rule "vector-search-collection" {
+  match {
+    kind = "resource"
+    type = "google_vector_search_collection"
+  }
+
+  as = concept.vector-search-collection
+}
+
+rule "vector-search-index" {
+  match {
+    kind = "resource"
+    type = "google_vector_search_index"
+  }
+
+  as = concept.vertex-ai-vector-index
+}

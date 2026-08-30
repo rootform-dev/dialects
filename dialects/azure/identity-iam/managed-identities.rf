@@ -1,0 +1,19 @@
+rule "user-assigned-managed-identity" {
+  match {
+    kind = "resource"
+    type = "azurerm_user_assigned_identity"
+  }
+
+  as = concept.core.service-identity
+
+  context {
+    as  = context.core.ownership
+    to  = concept.resource-group
+    via = source.resource_group_name
+
+    match {
+      by       = target.name
+      strategy = "exact"
+    }
+  }
+}

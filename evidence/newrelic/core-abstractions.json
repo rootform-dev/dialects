@@ -1,0 +1,92 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-30",
+  "accepted_adr": "docs/adr/092-new-relic-provider-boundaries.md",
+  "reused_core_concepts": [
+    "browser-observability-application",
+    "cloud-observability-integration",
+    "observability-tenant",
+    "service-objective",
+    "synthetic-check",
+    "synthetic-execution-location",
+    "workflow"
+  ],
+  "referenced_core_concepts": ["service-identity"],
+  "referenced_core_contexts": ["ownership"],
+  "promoted_core_concepts": [
+    "browser-observability-application",
+    "cloud-observability-integration",
+    "observability-tenant",
+    "service-objective",
+    "synthetic-check",
+    "synthetic-execution-location"
+  ],
+  "newrelic_specific_concepts": [
+    "apm-application",
+    "application-configuration",
+    "aws-connection",
+    "cloud-integration-configuration",
+    "federated-logs-partition",
+    "federated-logs-setup",
+    "fleet",
+    "fleet-configuration",
+    "fleet-deployment",
+    "fleet-membership",
+    "observability-workload",
+    "telemetry-processing-configuration"
+  ],
+  "comparisons": [
+    {
+      "concept": "browser-observability-application",
+      "providers": ["datadog", "grafana", "newrelic"],
+      "disposition": "promote-minimal-common-role"
+    },
+    {
+      "concept": "cloud-observability-integration",
+      "providers": ["datadog", "grafana", "newrelic"],
+      "disposition": "promote-minimal-common-role"
+    },
+    {
+      "concept": "observability-tenant",
+      "providers": ["datadog", "grafana", "newrelic"],
+      "disposition": "promote-minimal-common-role"
+    },
+    {
+      "concept": "service-objective",
+      "providers": ["datadog", "grafana", "newrelic"],
+      "disposition": "promote-minimal-common-role"
+    },
+    {
+      "concept": "synthetic-check",
+      "providers": ["datadog", "grafana", "newrelic"],
+      "disposition": "promote-minimal-common-role"
+    },
+    {
+      "concept": "synthetic-execution-location",
+      "providers": ["datadog", "grafana", "newrelic"],
+      "disposition": "promote-minimal-common-role"
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": "telemetry-pipeline",
+      "disposition": "keep-provider-specific",
+      "reason": "Datadog processes telemetry in customer environments, Grafana distributes collector configuration, and New Relic Pipeline Cloud Rules filter data"
+    },
+    {
+      "candidate": "telemetry-collector-or-fleet",
+      "disposition": "keep-provider-specific",
+      "reason": "Grafana models individual collectors while New Relic Fleet Control manages homogeneous infrastructure groups and Datadog exposes no equivalent provider root"
+    },
+    {
+      "candidate": "observability-workload",
+      "disposition": "keep-newrelic-specific",
+      "reason": "New Relic workload membership and Transaction 360 discovery have no equivalent stable root"
+    },
+    {
+      "candidate": "federated-log-store",
+      "disposition": "keep-newrelic-specific",
+      "reason": "New Relic Federated Logs queries external storage rather than owning a generic telemetry destination"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+concept "application-configuration" {
+  kind        = detail
+  description = "Credentials, grants, or associations supporting an Auth0 Application."
+}
+
+rule "client-credentials" {
+  match {
+    kind = "resource"
+    type = "auth0_client_credentials"
+  }
+
+  as = concept.application-configuration
+
+  contribution {
+    to  = concept.core.identity-application
+    via = source.client_id
+  }
+}
+
+rule "client-grant" {
+  match {
+    kind = "resource"
+    type = "auth0_client_grant"
+  }
+
+  as = concept.application-configuration
+
+  contribution {
+    to  = concept.core.identity-application
+    via = source.client_id
+  }
+}
+
+rule "resource-server-scope" {
+  match {
+    kind = "resource"
+    type = "auth0_resource_server_scope"
+  }
+
+  as = concept.application-configuration
+
+  contribution {
+    to  = concept.api-resource-server
+    via = source.resource_server_identifier
+  }
+}
+
+rule "resource-server-scopes" {
+  match {
+    kind = "resource"
+    type = "auth0_resource_server_scopes"
+  }
+
+  as = concept.application-configuration
+
+  contribution {
+    to  = concept.api-resource-server
+    via = source.resource_server_identifier
+  }
+}

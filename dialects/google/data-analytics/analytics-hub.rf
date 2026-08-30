@@ -1,0 +1,50 @@
+concept "analytics-hub-data-exchange" {
+  kind        = scope
+  description = "An Analytics Hub data exchange containing shared data listings."
+}
+
+concept "analytics-hub-listing" {
+  kind        = entity
+  description = "An Analytics Hub listing published through a data exchange."
+}
+
+concept "analytics-hub-subscription" {
+  kind        = entity
+  description = "An Analytics Hub subscription to a data exchange or listing."
+}
+
+rule "analytics-hub-data-exchange" {
+  match {
+    kind = "resource"
+    type = "google_bigquery_analytics_hub_data_exchange"
+  }
+
+  as = concept.analytics-hub-data-exchange
+}
+
+rule "analytics-hub-listing" {
+  match {
+    kind = "resource"
+    type = "google_bigquery_analytics_hub_listing"
+  }
+
+  as = concept.analytics-hub-listing
+}
+
+rule "analytics-hub-data-exchange-subscription" {
+  match {
+    kind = "resource"
+    type = "google_bigquery_analytics_hub_data_exchange_subscription"
+  }
+
+  as = concept.analytics-hub-subscription
+}
+
+rule "analytics-hub-listing-subscription" {
+  match {
+    kind = "resource"
+    type = "google_bigquery_analytics_hub_listing_subscription"
+  }
+
+  as = concept.analytics-hub-subscription
+}

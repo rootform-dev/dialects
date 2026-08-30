@@ -1,0 +1,46 @@
+concept "cloud-monitoring-alerting-policy" {
+  kind        = entity
+  description = "A Cloud Monitoring alerting policy defining conditions and notification behavior."
+}
+
+concept "cloud-monitoring-service" {
+  kind        = entity
+  description = "A Cloud Monitoring service used as the target of service-level objectives."
+}
+
+concept "cloud-monitoring-slo" {
+  kind        = detail
+  description = "A service-level objective contributing reliability intent to a monitored service."
+}
+
+rule "cloud-monitoring-alerting-policy" {
+  match {
+    kind = "resource"
+    type = "google_monitoring_alert_policy"
+  }
+
+  as = concept.cloud-monitoring-alerting-policy
+}
+
+rule "cloud-monitoring-service" {
+  match {
+    kind = "resource"
+    type = "google_monitoring_service"
+  }
+
+  as = concept.cloud-monitoring-service
+}
+
+rule "cloud-monitoring-slo" {
+  match {
+    kind = "resource"
+    type = "google_monitoring_slo"
+  }
+
+  as = concept.cloud-monitoring-slo
+
+  contribution {
+    to  = concept.cloud-monitoring-service
+    via = source.service
+  }
+}

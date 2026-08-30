@@ -1,0 +1,41 @@
+concept "cloud-deploy-pipeline" {
+  kind        = entity
+  description = "A Cloud Deploy delivery pipeline promoting releases through targets."
+}
+
+concept "cloud-deploy-target" {
+  kind        = entity
+  description = "A Cloud Deploy runtime target."
+}
+
+concept "cloud-deploy-automation" {
+  kind        = detail
+  description = "Automation attached to a Cloud Deploy delivery pipeline."
+}
+
+rule "cloud-deploy-pipeline" {
+  match {
+    kind = "resource"
+    type = "google_clouddeploy_delivery_pipeline"
+  }
+
+  as = concept.cloud-deploy-pipeline
+}
+
+rule "cloud-deploy-target" {
+  match {
+    kind = "resource"
+    type = "google_clouddeploy_target"
+  }
+
+  as = concept.cloud-deploy-target
+}
+
+rule "cloud-deploy-automation" {
+  match {
+    kind = "resource"
+    type = "google_clouddeploy_automation"
+  }
+
+  as = concept.cloud-deploy-automation
+}

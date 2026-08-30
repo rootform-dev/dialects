@@ -1,0 +1,13 @@
+concept "service-enablement" {
+  kind        = detail
+  description = "A project service enablement required by managed infrastructure."
+}
+
+rule "project-service-enablement" {
+  match {
+    kind = "resource"
+    type = "google_project_service"
+  }
+
+  as = concept.service-enablement
+}

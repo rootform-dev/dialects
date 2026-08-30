@@ -1,0 +1,181 @@
+{
+  "format_version": "1",
+  "scenarios": [
+    {
+      "id": "consul-minimal",
+      "fixture": "testdata/architecture/consul-v2/minimal",
+      "limitations": [
+        "synthetic Terraform proves partition, namespace, catalog node, service, and mesh root without contacting Consul"
+      ],
+      "minimum": {
+        "entities": 3,
+        "scopes": 2,
+        "contexts": 3
+      },
+      "maximum_facts": {
+        "contexts": 3,
+        "contributions": 0,
+        "relations": 0
+      },
+      "required_rules": [
+        "consul/admin-partition",
+        "consul/config-entry-mesh-json",
+        "consul/namespace",
+        "consul/node",
+        "consul/service"
+      ],
+      "required_facts": [
+        {
+          "collection": "contexts",
+          "from": "scope:consul_namespace.applications",
+          "to": "scope:consul_admin_partition.platform",
+          "dimension": "core/ownership",
+          "rule": "consul/namespace"
+        },
+        {
+          "collection": "contexts",
+          "from": "entity:consul_service.api",
+          "to": "entity:consul_node.api",
+          "dimension": "core/runtime",
+          "rule": "consul/service"
+        },
+        {
+          "collection": "contexts",
+          "from": "entity:consul_service.api",
+          "to": "scope:consul_namespace.applications",
+          "dimension": "core/ownership",
+          "rule": "consul/service"
+        }
+      ],
+      "expected_html_labels": [
+        "Consul admin partition",
+        "Consul namespace",
+        "Consul service",
+        "Consul service mesh"
+      ]
+    },
+    {
+      "id": "consul-service-networking",
+      "fixture": "testdata/architecture/consul-v2/scenarios",
+      "limitations": [
+        "synthetic references prove service catalog, tenancy, mesh, gateways, traffic management, peering, exports, and identity without provider APIs; nested repeated-block targets stay unclaimed"
+      ],
+      "minimum": {
+        "entities": 23,
+        "scopes": 3,
+        "details": 17,
+        "contexts": 9,
+        "contributions": 16,
+        "relations": 0
+      },
+      "maximum_facts": {
+        "contexts": 9,
+        "contributions": 16,
+        "relations": 0
+      },
+      "required_rules": [
+        "consul/acl-auth-method",
+        "consul/certificate-authority",
+        "consul/config-entry-api-gateway-json",
+        "consul/config-entry-ingress-gateway-json",
+        "consul/config-entry-mesh-json",
+        "consul/config-entry-service-intentions",
+        "consul/config-entry-service-resolver",
+        "consul/config-entry-service-router",
+        "consul/config-entry-service-splitter",
+        "consul/config-entry-terminating-gateway-json",
+        "consul/config-entry-v2-exported-services",
+        "consul/intention",
+        "consul/network-area",
+        "consul/peering",
+        "consul/service"
+      ],
+      "required_facts": [
+        {
+          "collection": "contexts",
+          "from": "entity:consul_acl_auth_method.workloads",
+          "to": "scope:consul_namespace.applications",
+          "dimension": "core/ownership",
+          "rule": "consul/acl-auth-method"
+        },
+        {
+          "collection": "contributions",
+          "from": "detail:consul_config_entry_service_intentions.api",
+          "to": "entity:consul_service.api",
+          "rule": "consul/config-entry-service-intentions"
+        },
+        {
+          "collection": "contributions",
+          "from": "detail:consul_config_entry_v2_exported_services.applications",
+          "to": "entity:consul_peering.edge",
+          "rule": "consul/config-entry-v2-exported-services"
+        },
+        {
+          "collection": "contributions",
+          "from": "detail:consul_intention.legacy",
+          "to": "entity:consul_service.payments",
+          "rule": "consul/intention"
+        }
+      ],
+      "required_outcomes": {
+        "consul_acl_policy.private": "unsupported",
+        "consul_acl_token.private": "unsupported",
+        "consul_config_entry.api_gateway": "represented",
+        "consul_config_entry.ingress_legacy": "represented",
+        "consul_config_entry.mesh": "represented",
+        "consul_keys.private": "unsupported",
+        "consul_license.private": "unsupported",
+        "consul_peering.edge": "represented",
+        "consul_service.api": "represented"
+      },
+      "expected_html_labels": [
+        "Consul API gateway",
+        "Consul ingress gateway (deprecated)",
+        "Consul service mesh",
+        "Consul cluster peering",
+        "Consul service intentions",
+        "Consul intention (legacy)"
+      ],
+      "forbidden_output": [
+        "ROOTFORM_CONSUL_CA_TOKEN_SENTINEL",
+        "ROOTFORM_CONSUL_PEERING_TOKEN_SENTINEL",
+        "ROOTFORM_CONSUL_CERTIFICATE_SENTINEL",
+        "ROOTFORM_CONSUL_PRIVATE_KEY_SENTINEL",
+        "ROOTFORM_CONSUL_NETWORK_AREA_TOKEN_SENTINEL",
+        "ROOTFORM_CONSUL_POLICY_SENTINEL",
+        "ROOTFORM_CONSUL_TOKEN_SENTINEL",
+        "ROOTFORM_CONSUL_KV_SENTINEL",
+        "ROOTFORM_CONSUL_LICENSE_SENTINEL",
+        "ROOTFORM_CONSUL_CONFIG_JSON_SENTINEL"
+      ]
+    },
+    {
+      "id": "consul-fail-closed",
+      "fixture": "testdata/architecture/consul-v2/boundary",
+      "limitations": [
+        "negative fixture deliberately fails build to prove literals, depends_on, ambiguity, dangling references, and concept mismatches create no partial output"
+      ],
+      "expected_build_failure": true,
+      "expected_diagnostic_codes": [
+        "DEPENDENCY_DANGLING",
+        "DEPENDENCY_DANGLING",
+        "DEPENDENCY_DANGLING",
+        "FACT_CONCEPT_MISMATCH",
+        "FACT_CONCEPT_MISMATCH",
+        "TRAVERSAL_AMBIGUOUS",
+        "TRAVERSAL_AMBIGUOUS",
+        "TRAVERSAL_DANGLING",
+        "TRAVERSAL_DANGLING",
+        "TRAVERSAL_UNRESOLVED",
+        "TRAVERSAL_UNRESOLVED"
+      ],
+      "forbidden_output": [
+        "ROOTFORM_CONSUL_BOUNDARY_CA_SENTINEL",
+        "ROOTFORM_CONSUL_BOUNDARY_POLICY_SENTINEL",
+        "ROOTFORM_CONSUL_BOUNDARY_TOKEN_SENTINEL",
+        "ROOTFORM_CONSUL_BOUNDARY_KV_SENTINEL",
+        "ROOTFORM_CONSUL_BOUNDARY_LICENSE_SENTINEL"
+      ]
+    }
+  ]
+}

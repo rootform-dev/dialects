@@ -1,0 +1,58 @@
+concept "vm-manager-policy" {
+  kind        = entity
+  description = "A VM Manager policy orchestrating guest configuration or operating system maintenance."
+}
+
+rule "vm-manager-guest-policy" {
+  match {
+    kind = "resource"
+    type = "google_os_config_guest_policies"
+  }
+
+  as = concept.vm-manager-policy
+}
+
+rule "vm-manager-os-policy-assignment" {
+  match {
+    kind = "resource"
+    type = "google_os_config_os_policy_assignment"
+  }
+
+  as = concept.vm-manager-policy
+}
+
+rule "vm-manager-patch-deployment" {
+  match {
+    kind = "resource"
+    type = "google_os_config_patch_deployment"
+  }
+
+  as = concept.vm-manager-policy
+}
+
+rule "vm-manager-policy-orchestrator" {
+  match {
+    kind = "resource"
+    type = "google_os_config_v2_policy_orchestrator"
+  }
+
+  as = concept.vm-manager-policy
+}
+
+rule "vm-manager-folder-policy-orchestrator" {
+  match {
+    kind = "resource"
+    type = "google_os_config_v2_policy_orchestrator_for_folder"
+  }
+
+  as = concept.vm-manager-policy
+}
+
+rule "vm-manager-organization-policy-orchestrator" {
+  match {
+    kind = "resource"
+    type = "google_os_config_v2_policy_orchestrator_for_organization"
+  }
+
+  as = concept.vm-manager-policy
+}

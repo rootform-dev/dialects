@@ -1,0 +1,27 @@
+concept "managed-microsoft-ad-domain" {
+  kind        = entity
+  description = "A Managed Service for Microsoft Active Directory domain."
+}
+
+concept "managed-microsoft-ad-peering" {
+  kind        = detail
+  description = "A VPC peering configuration providing access to a managed Microsoft AD domain."
+}
+
+rule "managed-microsoft-ad-domain" {
+  match {
+    kind = "resource"
+    type = "google_active_directory_domain"
+  }
+
+  as = concept.managed-microsoft-ad-domain
+}
+
+rule "managed-microsoft-ad-peering" {
+  match {
+    kind = "resource"
+    type = "google_active_directory_peering"
+  }
+
+  as = concept.managed-microsoft-ad-peering
+}

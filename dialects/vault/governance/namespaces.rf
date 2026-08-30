@@ -1,0 +1,87 @@
+concept "governance-configuration" {
+  kind        = detail
+  description = "A policy, quota, or administrative object supporting Vault governance."
+}
+
+concept "namespace" {
+  kind        = scope
+  description = "An isolated Vault tenancy boundary for secrets, auth methods, identities, and policies."
+}
+
+rule "config-control-group" {
+  match {
+    kind = "resource"
+    type = "vault_config_control_group"
+  }
+
+  as = concept.governance-configuration
+}
+
+rule "config-group-policy-application" {
+  match {
+    kind = "resource"
+    type = "vault_config_group_policy_application"
+  }
+
+  as = concept.governance-configuration
+}
+
+rule "egp-policy" {
+  match {
+    kind = "resource"
+    type = "vault_egp_policy"
+  }
+
+  as = concept.governance-configuration
+}
+
+rule "namespace" {
+  match {
+    kind = "resource"
+    type = "vault_namespace"
+  }
+
+  as = concept.namespace
+
+  context {
+    as  = context.core.ownership
+    to  = concept.namespace
+    via = source.namespace
+  }
+}
+
+rule "password-policy" {
+  match {
+    kind = "resource"
+    type = "vault_password_policy"
+  }
+
+  as = concept.governance-configuration
+}
+
+rule "policy" {
+  match {
+    kind = "resource"
+    type = "vault_policy"
+  }
+
+  as = concept.governance-configuration
+}
+
+rule "rgp-policy" {
+  match {
+    kind = "resource"
+    type = "vault_rgp_policy"
+  }
+
+  as = concept.governance-configuration
+}
+
+rule "rotation-policy" {
+  match {
+    kind = "resource"
+    type = "vault_rotation_policy"
+  }
+
+  as = concept.governance-configuration
+}

@@ -1,0 +1,27 @@
+concept "google-cloud-project" {
+  kind        = scope
+  description = "A Google Cloud project serving as a resource and billing boundary."
+}
+
+concept "google-cloud-folder" {
+  kind        = scope
+  description = "A Google Cloud resource hierarchy folder containing projects or folders."
+}
+
+rule "google-cloud-project" {
+  match {
+    kind = "resource"
+    type = "google_project"
+  }
+
+  as = concept.google-cloud-project
+}
+
+rule "google-cloud-folder" {
+  match {
+    kind = "resource"
+    type = "google_folder"
+  }
+
+  as = concept.google-cloud-folder
+}

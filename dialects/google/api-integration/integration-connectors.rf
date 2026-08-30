@@ -1,0 +1,27 @@
+concept "integration-connector" {
+  kind        = entity
+  description = "An Integration Connectors connection to an application or data source."
+}
+
+concept "integration-connector-endpoint" {
+  kind        = detail
+  description = "A private endpoint attachment supporting an Integration Connectors connection."
+}
+
+rule "integration-connector" {
+  match {
+    kind = "resource"
+    type = "google_integration_connectors_connection"
+  }
+
+  as = concept.integration-connector
+}
+
+rule "integration-connector-endpoint" {
+  match {
+    kind = "resource"
+    type = "google_integration_connectors_endpoint_attachment"
+  }
+
+  as = concept.integration-connector-endpoint
+}

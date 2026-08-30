@@ -1,0 +1,13 @@
+concept "api-hub" {
+  kind        = scope
+  description = "An API Hub instance providing a central API catalog."
+}
+
+rule "api-hub" {
+  match {
+    kind = "resource"
+    type = "google_apihub_api_hub_instance"
+  }
+
+  as = concept.api-hub
+}

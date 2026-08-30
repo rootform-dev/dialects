@@ -1,0 +1,63 @@
+concept "self-service-configuration" {
+  kind        = detail
+  description = "A connection or user-attribute profile supporting Self-Service SSO."
+}
+
+concept "self-service-sso-profile" {
+  kind        = entity
+  description = "An Auth0 profile governing customer self-service enterprise SSO onboarding."
+}
+
+rule "connection-profile" {
+  match {
+    kind = "resource"
+    type = "auth0_connection_profile"
+  }
+
+  as = concept.self-service-configuration
+}
+
+rule "connection-profile-lookup" {
+  match {
+    kind = "data"
+    type = "auth0_connection_profile"
+  }
+
+  as = concept.self-service-configuration
+}
+
+rule "self-service-profile" {
+  match {
+    kind = "resource"
+    type = "auth0_self_service_profile"
+  }
+
+  as = concept.self-service-sso-profile
+}
+
+rule "self-service-profile-lookup" {
+  match {
+    kind = "data"
+    type = "auth0_self_service_profile"
+  }
+
+  as = concept.self-service-sso-profile
+}
+
+rule "user-attribute-profile" {
+  match {
+    kind = "resource"
+    type = "auth0_user_attribute_profile"
+  }
+
+  as = concept.self-service-configuration
+}
+
+rule "user-attribute-profile-lookup" {
+  match {
+    kind = "data"
+    type = "auth0_user_attribute_profile"
+  }
+
+  as = concept.self-service-configuration
+}

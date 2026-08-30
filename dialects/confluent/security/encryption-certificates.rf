@@ -1,0 +1,120 @@
+concept "byok-key" {
+  kind        = entity
+  description = "A customer-managed cloud encryption key registered for Confluent Cloud BYOK."
+}
+
+concept "certificate-authority" {
+  kind        = entity
+  description = "A certificate authority trusted by Confluent Cloud for mutual TLS authentication."
+}
+
+concept "certificate-pool" {
+  kind        = entity
+  description = "A Confluent Cloud certificate pool selecting trusted client certificates."
+}
+
+concept "provider-integration" {
+  kind        = entity
+  description = "A Confluent Cloud integration authorized to access a cloud provider account."
+}
+
+concept "security-configuration" {
+  kind        = detail
+  description = "Authorization or setup configuration supporting a Confluent Cloud security integration."
+}
+
+rule "byok-key" {
+  match {
+    kind = "resource"
+    type = "confluent_byok_key"
+  }
+
+  as = concept.byok-key
+
+  relation "registers-key" {
+    to  = concept.core.encryption-key
+    via = source.aws[0].key_arn
+  }
+
+  relation "registers-key" {
+    to  = concept.core.encryption-key
+    via = source.azure[0].key_identifier
+  }
+
+  relation "registers-key" {
+    to  = concept.core.encryption-key
+    via = source.gcp[0].key_id
+  }
+}
+
+rule "certificate-authority" {
+  match {
+    kind = "resource"
+    type = "confluent_certificate_authority"
+  }
+
+  as = concept.certificate-authority
+}
+
+rule "certificate-pool" {
+  match {
+    kind = "resource"
+    type = "confluent_certificate_pool"
+  }
+
+  as = concept.certificate-pool
+
+  relation "trusts" {
+    to  = concept.certificate-authority
+    via = source.certificate_authority[0].id
+  }
+}
+
+rule "provider-integration" {
+  match {
+    kind = "resource"
+    type = "confluent_provider_integration"
+  }
+
+  as = concept.provider-integration
+
+  context {
+    as  = context.core.ownership
+    to  = concept.environment
+    via = source.environment[0].id
+  }
+
+  relation "uses-cloud-identity" {
+    to  = concept.core.service-identity
+    via = source.aws[0].customer_role_arn
+  }
+}
+
+rule "provider-integration-authorization" {
+  match {
+    kind = "resource"
+    type = "confluent_provider_integration_authorization"
+  }
+
+  as = concept.security-configuration
+
+  contribution {
+    to  = concept.provider-integration
+    via = source.provider_integration_id
+  }
+}
+
+rule "provider-integration-setup" {
+  match {
+    kind = "resource"
+    type = "confluent_provider_integration_setup"
+  }
+
+  as = concept.security-configuration
+
+  context {
+    as  = context.core.ownership
+    to  = concept.environment
+    via = source.environment[0].id
+  }
+}

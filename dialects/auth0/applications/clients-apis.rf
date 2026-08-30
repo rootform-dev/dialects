@@ -1,0 +1,74 @@
+concept "api-resource-server" {
+  kind        = entity
+  description = "An API registered as an Auth0 resource server for authorized applications."
+}
+
+rule "client" {
+  match {
+    kind = "resource"
+    type = "auth0_client"
+  }
+
+  as = concept.core.identity-application
+
+  relation "defaults-to-organization" {
+    to  = concept.customer-organization
+    via = source.default_organization[0].organization_id
+  }
+
+  relation "uses-api" {
+    to  = concept.api-resource-server
+    via = source.resource_server_identifier
+  }
+}
+
+rule "client-cimd" {
+  match {
+    kind = "resource"
+    type = "auth0_client_cimd"
+  }
+
+  as = concept.core.identity-application
+
+  relation "defaults-to-organization" {
+    to  = concept.customer-organization
+    via = source.default_organization[0].organization_id
+  }
+}
+
+rule "client-lookup" {
+  match {
+    kind = "data"
+    type = "auth0_client"
+  }
+
+  as = concept.core.identity-application
+
+  relation "defaults-to-organization" {
+    to  = concept.customer-organization
+    via = source.default_organization[0].organization_id
+  }
+
+  relation "uses-api" {
+    to  = concept.api-resource-server
+    via = source.resource_server_identifier
+  }
+}
+
+rule "resource-server" {
+  match {
+    kind = "resource"
+    type = "auth0_resource_server"
+  }
+
+  as = concept.api-resource-server
+}
+
+rule "resource-server-lookup" {
+  match {
+    kind = "data"
+    type = "auth0_resource_server"
+  }
+
+  as = concept.api-resource-server
+}

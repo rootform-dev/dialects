@@ -1,0 +1,166 @@
+concept "lakebase-project" {
+  kind        = scope
+  description = "A Lakebase Autoscaling project containing branches, Postgres compute endpoints, and databases."
+}
+
+concept "lakebase-branch" {
+  kind        = scope
+  description = "An isolated Lakebase database environment sharing project storage through copy-on-write."
+}
+
+concept "lakebase-endpoint" {
+  kind        = entity
+  description = "A Lakebase Postgres compute endpoint providing read-write or read-only database access."
+}
+
+concept "lakebase-data-api" {
+  kind        = entity
+  description = "A Lakebase Data API exposing governed database access."
+}
+
+concept "database-configuration" {
+  kind        = detail
+  description = "A database, role, synchronization, catalog, or change-data configuration supporting Lakebase."
+}
+
+rule "lakebase-project" {
+  match {
+    kind = "resource"
+    type = "databricks_postgres_project"
+  }
+
+  as = concept.lakebase-project
+}
+
+rule "lakebase-branch" {
+  match {
+    kind = "resource"
+    type = "databricks_postgres_branch"
+  }
+
+  as = concept.lakebase-branch
+
+  context {
+    as  = context.core.ownership
+    to  = concept.lakebase-project
+    via = source.parent
+  }
+
+  relation "branched-from" {
+    to  = concept.lakebase-branch
+    via = source.spec.source_branch
+  }
+}
+
+rule "lakebase-endpoint" {
+  match {
+    kind = "resource"
+    type = "databricks_postgres_endpoint"
+  }
+
+  as = concept.lakebase-endpoint
+
+  context {
+    as  = context.core.runtime
+    to  = concept.lakebase-branch
+    via = source.parent
+  }
+}
+
+rule "lakebase-database" {
+  match {
+    kind = "resource"
+    type = "databricks_postgres_database"
+  }
+
+  as = concept.core.managed-database
+
+  context {
+    as  = context.core.ownership
+    to  = concept.lakebase-branch
+    via = source.parent
+  }
+}
+
+rule "lakebase-data-api" {
+  match {
+    kind = "resource"
+    type = "databricks_postgres_data_api"
+  }
+
+  as = concept.lakebase-data-api
+
+  context {
+    as  = context.core.runtime
+    to  = concept.lakebase-project
+    via = source.parent
+  }
+}
+
+rule "lakebase-provisioned-instance" {
+  match {
+    kind = "resource"
+    type = "databricks_database_instance"
+  }
+
+  as = concept.core.managed-database
+
+  relation "branched-from" {
+    to  = concept.core.managed-database
+    via = source.parent_instance_ref[0].name
+  }
+}
+
+rule "lakebase-provisioned-catalog" {
+  match {
+    kind = "resource"
+    type = "databricks_database_database_catalog"
+  }
+
+  as = concept.database-configuration
+}
+
+rule "lakebase-provisioned-synced-table" {
+  match {
+    kind = "resource"
+    type = "databricks_database_synced_database_table"
+  }
+
+  as = concept.database-configuration
+}
+
+rule "lakebase-postgres-catalog" {
+  match {
+    kind = "resource"
+    type = "databricks_postgres_catalog"
+  }
+
+  as = concept.database-configuration
+}
+
+rule "lakebase-postgres-role" {
+  match {
+    kind = "resource"
+    type = "databricks_postgres_role"
+  }
+
+  as = concept.database-configuration
+}
+
+rule "lakebase-postgres-synced-table" {
+  match {
+    kind = "resource"
+    type = "databricks_postgres_synced_table"
+  }
+
+  as = concept.database-configuration
+}
+
+rule "lakebase-postgres-cdf-config" {
+  match {
+    kind = "resource"
+    type = "databricks_postgres_cdf_config"
+  }
+
+  as = concept.database-configuration
+}

@@ -1,0 +1,115 @@
+concept "vector-search-endpoint" {
+  kind        = entity
+  description = "A Mosaic AI Vector Search endpoint providing compute for vector indexes."
+}
+
+concept "vector-search-index" {
+  kind        = entity
+  description = "A governed vector index served through Mosaic AI Vector Search."
+}
+
+concept "ai-search-endpoint" {
+  kind        = entity
+  description = "A Mosaic AI Search endpoint providing managed search capacity."
+}
+
+concept "ai-search-index" {
+  kind        = entity
+  description = "A governed Mosaic AI Search index."
+}
+
+concept "ai-gateway-service" {
+  kind        = entity
+  description = "A governed Mosaic AI Gateway service for models, model providers, or MCP tools."
+}
+
+rule "model-serving" {
+  match {
+    kind = "resource"
+    type = "databricks_model_serving"
+  }
+
+  as = concept.core.ai-inference-endpoint
+}
+
+rule "model-serving-provisioned-throughput" {
+  match {
+    kind = "resource"
+    type = "databricks_model_serving_provisioned_throughput"
+  }
+
+  as = concept.core.ai-inference-endpoint
+}
+
+rule "vector-search-endpoint" {
+  match {
+    kind = "resource"
+    type = "databricks_vector_search_endpoint"
+  }
+
+  as = concept.vector-search-endpoint
+}
+
+rule "vector-search-index" {
+  match {
+    kind = "resource"
+    type = "databricks_vector_search_index"
+  }
+
+  as = concept.vector-search-index
+
+  relation "served-by" {
+    to  = concept.vector-search-endpoint
+    via = source.endpoint_name
+  }
+}
+
+rule "ai-search-endpoint" {
+  match {
+    kind = "resource"
+    type = "databricks_ai_search_endpoint"
+  }
+
+  as = concept.ai-search-endpoint
+}
+
+rule "ai-search-index" {
+  match {
+    kind = "resource"
+    type = "databricks_ai_search_index"
+  }
+
+  as = concept.ai-search-index
+
+  relation "served-by" {
+    to  = concept.ai-search-endpoint
+    via = source.endpoint
+  }
+}
+
+rule "ai-gateway-mcp-service" {
+  match {
+    kind = "resource"
+    type = "databricks_ai_gateway_mcp_service"
+  }
+
+  as = concept.ai-gateway-service
+}
+
+rule "ai-gateway-model-provider-service" {
+  match {
+    kind = "resource"
+    type = "databricks_ai_gateway_model_provider_service"
+  }
+
+  as = concept.ai-gateway-service
+}
+
+rule "ai-gateway-model-service" {
+  match {
+    kind = "resource"
+    type = "databricks_ai_gateway_model_service"
+  }
+
+  as = concept.ai-gateway-service
+}

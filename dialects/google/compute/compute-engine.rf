@@ -1,0 +1,8 @@
+rule "compute-engine-instance" {
+  match {
+    kind = "resource"
+    type = "google_compute_instance"
+  }
+
+  as = concept.core.compute-instance
+}

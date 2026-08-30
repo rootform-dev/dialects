@@ -1,0 +1,3123 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-29",
+  "policy": {
+    "visible_label_source": "authored official AWS product and resource terminology",
+    "technical_provenance": "exact hashicorp/aws Terraform type",
+    "forbidden_generation": "no humanization of Terraform type, rule id, or concept id"
+  },
+  "required_terms": {
+    "vpc": "Amazon VPC",
+    "eks-cluster": "Amazon EKS cluster",
+    "s3-bucket": "Amazon S3 bucket",
+    "lambda-function": "AWS Lambda function",
+    "db-instance": "Amazon RDS DB instance",
+    "dynamodb-table": "Amazon DynamoDB table",
+    "api-gateway-rest-api": "Amazon API Gateway REST API",
+    "ec2-transit-gateway": "AWS Transit Gateway",
+    "vpc-endpoint": "AWS PrivateLink VPC endpoint"
+  },
+  "entries": [
+    {
+      "rule_id": "aws/acm-certificate",
+      "label": "AWS Certificate Manager (ACM)",
+      "family": "security",
+      "terraform_type": "aws_acm_certificate",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-security-services-overview/introduction.html"
+    },
+    {
+      "rule_id": "aws/acmpca-certificate",
+      "label": "AWS Private CA certificate",
+      "family": "security",
+      "terraform_type": "aws_acmpca_certificate",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-security-services-overview/introduction.html"
+    },
+    {
+      "rule_id": "aws/acmpca-certificate-authority",
+      "label": "AWS Private CA certificate authority",
+      "family": "security",
+      "terraform_type": "aws_acmpca_certificate_authority",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-security-services-overview/introduction.html"
+    },
+    {
+      "rule_id": "aws/alb",
+      "label": "Elastic Load Balancing load balancer",
+      "family": "load-balancing",
+      "terraform_type": "aws_alb",
+      "official_source": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html"
+    },
+    {
+      "rule_id": "aws/alb-target-group",
+      "label": "Elastic Load Balancing target group",
+      "family": "load-balancing",
+      "terraform_type": "aws_alb_target_group",
+      "official_source": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html"
+    },
+    {
+      "rule_id": "aws/ami-from-instance",
+      "label": "Amazon EC2 AMI",
+      "family": "compute",
+      "terraform_type": "aws_ami_from_instance",
+      "official_source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"
+    },
+    {
+      "rule_id": "aws/amplify-backend-environment",
+      "label": "AWS Amplify backend environment",
+      "family": "developer-ci-cd",
+      "terraform_type": "aws_amplify_backend_environment",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/welcome.html"
+    },
+    {
+      "rule_id": "aws/api-gateway-integration",
+      "label": "Amazon API Gateway integration",
+      "family": "api-integration",
+      "terraform_type": "aws_api_gateway_integration",
+      "official_source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html"
+    },
+    {
+      "rule_id": "aws/api-gateway-model",
+      "label": "Amazon API Gateway model",
+      "family": "api-integration",
+      "terraform_type": "aws_api_gateway_model",
+      "official_source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html"
+    },
+    {
+      "rule_id": "aws/api-gateway-resource",
+      "label": "Amazon API Gateway resource",
+      "family": "api-integration",
+      "terraform_type": "aws_api_gateway_resource",
+      "official_source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html"
+    },
+    {
+      "rule_id": "aws/api-gateway-rest-api",
+      "label": "Amazon API Gateway REST API",
+      "family": "api-integration",
+      "terraform_type": "aws_api_gateway_rest_api",
+      "official_source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html"
+    },
+    {
+      "rule_id": "aws/api-gateway-stage",
+      "label": "Amazon API Gateway stage",
+      "family": "api-integration",
+      "terraform_type": "aws_api_gateway_stage",
+      "official_source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html"
+    },
+    {
+      "rule_id": "aws/apigatewayv2-api",
+      "label": "Amazon API Gateway HTTP or WebSocket API",
+      "family": "api-integration",
+      "terraform_type": "aws_apigatewayv2_api",
+      "official_source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html"
+    },
+    {
+      "rule_id": "aws/apigatewayv2-model",
+      "label": "Amazon API Gateway model",
+      "family": "api-integration",
+      "terraform_type": "aws_apigatewayv2_model",
+      "official_source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html"
+    },
+    {
+      "rule_id": "aws/appconfig-application",
+      "label": "AWS AppConfig application",
+      "family": "operations",
+      "terraform_type": "aws_appconfig_application",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/appconfig-environment",
+      "label": "AWS AppConfig environment",
+      "family": "operations",
+      "terraform_type": "aws_appconfig_environment",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/appfabric-app-authorization-connection",
+      "label": "AWS AppFabric app authorization connection",
+      "family": "media-communication",
+      "terraform_type": "aws_appfabric_app_authorization_connection",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/appflow-flow",
+      "label": "Amazon AppFlow",
+      "family": "messaging-eventing",
+      "terraform_type": "aws_appflow_flow",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/application-integration.html"
+    },
+    {
+      "rule_id": "aws/applicationinsights-application",
+      "label": "AWS CloudWatch Application Insights",
+      "family": "operations",
+      "terraform_type": "aws_applicationinsights_application",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/appmesh-virtual-gateway",
+      "label": "AWS App Mesh virtual gateway",
+      "family": "containers",
+      "terraform_type": "aws_appmesh_virtual_gateway",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html"
+    },
+    {
+      "rule_id": "aws/appmesh-virtual-service",
+      "label": "AWS App Mesh virtual service",
+      "family": "containers",
+      "terraform_type": "aws_appmesh_virtual_service",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html"
+    },
+    {
+      "rule_id": "aws/apprunner-connection",
+      "label": "AWS App Runner connection",
+      "family": "serverless",
+      "terraform_type": "aws_apprunner_connection",
+      "official_source": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html"
+    },
+    {
+      "rule_id": "aws/apprunner-service",
+      "label": "AWS App Runner service",
+      "family": "serverless",
+      "terraform_type": "aws_apprunner_service",
+      "official_source": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html"
+    },
+    {
+      "rule_id": "aws/apprunner-vpc-ingress-connection",
+      "label": "AWS App Runner VPC ingress connection",
+      "family": "serverless",
+      "terraform_type": "aws_apprunner_vpc_ingress_connection",
+      "official_source": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html"
+    },
+    {
+      "rule_id": "aws/appstream-fleet",
+      "label": "Amazon AppStream 2.0 fleet",
+      "family": "end-user-computing",
+      "terraform_type": "aws_appstream_fleet",
+      "official_source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces.html"
+    },
+    {
+      "rule_id": "aws/appsync-datasource",
+      "label": "AWS AppSync data source",
+      "family": "api-integration",
+      "terraform_type": "aws_appsync_datasource",
+      "official_source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html"
+    },
+    {
+      "rule_id": "aws/appsync-function",
+      "label": "AWS AppSync function",
+      "family": "api-integration",
+      "terraform_type": "aws_appsync_function",
+      "official_source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html"
+    },
+    {
+      "rule_id": "aws/appsync-graphql-api",
+      "label": "AWS AppSync GraphQL API",
+      "family": "api-integration",
+      "terraform_type": "aws_appsync_graphql_api",
+      "official_source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html"
+    },
+    {
+      "rule_id": "aws/appsync-resolver",
+      "label": "AWS AppSync resolver",
+      "family": "api-integration",
+      "terraform_type": "aws_appsync_resolver",
+      "official_source": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html"
+    },
+    {
+      "rule_id": "aws/athena-data-catalog",
+      "label": "Amazon Athena data catalog",
+      "family": "data-analytics",
+      "terraform_type": "aws_athena_data_catalog",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/athena-database",
+      "label": "Amazon Athena database",
+      "family": "data-analytics",
+      "terraform_type": "aws_athena_database",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/athena-workgroup",
+      "label": "Amazon Athena workgroup",
+      "family": "data-analytics",
+      "terraform_type": "aws_athena_workgroup",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/autoscaling-group",
+      "label": "Amazon EC2 Auto Scaling group",
+      "family": "compute",
+      "terraform_type": "aws_autoscaling_group",
+      "official_source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"
+    },
+    {
+      "rule_id": "aws/backup-logically-air-gapped-vault",
+      "label": "AWS Backup logically air gapped vault",
+      "family": "storage",
+      "terraform_type": "aws_backup_logically_air_gapped_vault",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/backup-plan",
+      "label": "AWS Backup plan",
+      "family": "storage",
+      "terraform_type": "aws_backup_plan",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/backup-vault",
+      "label": "AWS Backup vault",
+      "family": "storage",
+      "terraform_type": "aws_backup_vault",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/batch-compute-environment",
+      "label": "AWS Batch compute environment",
+      "family": "compute",
+      "terraform_type": "aws_batch_compute_environment",
+      "official_source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"
+    },
+    {
+      "rule_id": "aws/batch-job-queue",
+      "label": "AWS Batch job queue",
+      "family": "compute",
+      "terraform_type": "aws_batch_job_queue",
+      "official_source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"
+    },
+    {
+      "rule_id": "aws/bedrock-custom-model",
+      "label": "Amazon Bedrock custom model",
+      "family": "ai-ml",
+      "terraform_type": "aws_bedrock_custom_model",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/bedrock-guardrail",
+      "label": "Amazon Bedrock guardrail",
+      "family": "ai-ml",
+      "terraform_type": "aws_bedrock_guardrail",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/bedrock-inference-profile",
+      "label": "Amazon Bedrock inference profile",
+      "family": "ai-ml",
+      "terraform_type": "aws_bedrock_inference_profile",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/bedrockagent-agent",
+      "label": "Amazon Bedrock agent",
+      "family": "ai-ml",
+      "terraform_type": "aws_bedrockagent_agent",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/bedrockagent-agent-action-group",
+      "label": "Amazon Bedrock agent action group",
+      "family": "ai-ml",
+      "terraform_type": "aws_bedrockagent_agent_action_group",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/bedrockagent-flow",
+      "label": "Amazon Bedrock flow",
+      "family": "ai-ml",
+      "terraform_type": "aws_bedrockagent_flow",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/bedrockagent-knowledge-base",
+      "label": "Amazon Bedrock knowledge base",
+      "family": "ai-ml",
+      "terraform_type": "aws_bedrockagent_knowledge_base",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/bedrockagentcore-agent-runtime-endpoint",
+      "label": "Amazon Bedrock AgentCore agent runtime endpoint",
+      "family": "ai-ml",
+      "terraform_type": "aws_bedrockagentcore_agent_runtime_endpoint",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/bedrockagentcore-gateway",
+      "label": "Amazon Bedrock AgentCore gateway",
+      "family": "ai-ml",
+      "terraform_type": "aws_bedrockagentcore_gateway",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/ce-anomaly-monitor",
+      "label": "AWS Cost Explorer anomaly monitor",
+      "family": "governance-management",
+      "terraform_type": "aws_ce_anomaly_monitor",
+      "official_source": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html"
+    },
+    {
+      "rule_id": "aws/chime-voice-connector",
+      "label": "AWS Chime voice connector",
+      "family": "media-communication",
+      "terraform_type": "aws_chime_voice_connector",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/chime-voice-connector-group",
+      "label": "AWS Chime voice connector group",
+      "family": "media-communication",
+      "terraform_type": "aws_chime_voice_connector_group",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/chimesdkvoice-sip-media-application",
+      "label": "AWS Chime SDK Voice sip media application",
+      "family": "media-communication",
+      "terraform_type": "aws_chimesdkvoice_sip_media_application",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/chimesdkvoice-voice-profile-domain",
+      "label": "AWS Chime SDK Voice voice profile domain",
+      "family": "media-communication",
+      "terraform_type": "aws_chimesdkvoice_voice_profile_domain",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/cleanrooms-configured-table",
+      "label": "AWS Clean Rooms configured table",
+      "family": "data-analytics",
+      "terraform_type": "aws_cleanrooms_configured_table",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/cloud9-environment-ec2",
+      "label": "AWS Cloud9 EC2 environment",
+      "family": "compute",
+      "terraform_type": "aws_cloud9_environment_ec2",
+      "official_source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"
+    },
+    {
+      "rule_id": "aws/cloudformation-stack-set-instance",
+      "label": "AWS CloudFormation stack set instance",
+      "family": "governance-management",
+      "terraform_type": "aws_cloudformation_stack_set_instance",
+      "official_source": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html"
+    },
+    {
+      "rule_id": "aws/cloudfront-connection-function",
+      "label": "Amazon CloudFront connection function",
+      "family": "dns-cdn",
+      "terraform_type": "aws_cloudfront_connection_function",
+      "official_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html"
+    },
+    {
+      "rule_id": "aws/cloudfront-connection-group",
+      "label": "Amazon CloudFront connection group",
+      "family": "dns-cdn",
+      "terraform_type": "aws_cloudfront_connection_group",
+      "official_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html"
+    },
+    {
+      "rule_id": "aws/cloudfront-distribution",
+      "label": "Amazon CloudFront distribution",
+      "family": "dns-cdn",
+      "terraform_type": "aws_cloudfront_distribution",
+      "official_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html"
+    },
+    {
+      "rule_id": "aws/cloudfront-function",
+      "label": "Amazon CloudFront function",
+      "family": "dns-cdn",
+      "terraform_type": "aws_cloudfront_function",
+      "official_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html"
+    },
+    {
+      "rule_id": "aws/cloudfront-key-value-store",
+      "label": "Amazon CloudFront key value store",
+      "family": "dns-cdn",
+      "terraform_type": "aws_cloudfront_key_value_store",
+      "official_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html"
+    },
+    {
+      "rule_id": "aws/cloudfront-multitenant-distribution",
+      "label": "Amazon CloudFront multi-tenant distribution",
+      "family": "dns-cdn",
+      "terraform_type": "aws_cloudfront_multitenant_distribution",
+      "official_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html"
+    },
+    {
+      "rule_id": "aws/cloudhsm-v2-cluster",
+      "label": "AWS CloudHSM cluster",
+      "family": "security",
+      "terraform_type": "aws_cloudhsm_v2_cluster",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-security-services-overview/introduction.html"
+    },
+    {
+      "rule_id": "aws/cloudsearch-domain",
+      "label": "Amazon CloudSearch domain",
+      "family": "governance-management",
+      "terraform_type": "aws_cloudsearch_domain",
+      "official_source": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html"
+    },
+    {
+      "rule_id": "aws/cloudtrail-event-data-store",
+      "label": "AWS CloudTrail event data store",
+      "family": "operations",
+      "terraform_type": "aws_cloudtrail_event_data_store",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/cloudwatch-composite-alarm",
+      "label": "Amazon CloudWatch composite alarm",
+      "family": "operations",
+      "terraform_type": "aws_cloudwatch_composite_alarm",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/cloudwatch-dashboard",
+      "label": "Amazon CloudWatch dashboard",
+      "family": "operations",
+      "terraform_type": "aws_cloudwatch_dashboard",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/cloudwatch-event-bus",
+      "label": "Amazon EventBridge event bus",
+      "family": "messaging-eventing",
+      "terraform_type": "aws_cloudwatch_event_bus",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/application-integration.html"
+    },
+    {
+      "rule_id": "aws/cloudwatch-event-connection",
+      "label": "Amazon EventBridge connection",
+      "family": "messaging-eventing",
+      "terraform_type": "aws_cloudwatch_event_connection",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/application-integration.html"
+    },
+    {
+      "rule_id": "aws/cloudwatch-event-endpoint",
+      "label": "Amazon EventBridge global endpoint",
+      "family": "messaging-eventing",
+      "terraform_type": "aws_cloudwatch_event_endpoint",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/application-integration.html"
+    },
+    {
+      "rule_id": "aws/cloudwatch-event-rule",
+      "label": "Amazon EventBridge rule",
+      "family": "messaging-eventing",
+      "terraform_type": "aws_cloudwatch_event_rule",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/application-integration.html"
+    },
+    {
+      "rule_id": "aws/cloudwatch-event-target",
+      "label": "Amazon EventBridge target",
+      "family": "messaging-eventing",
+      "terraform_type": "aws_cloudwatch_event_target",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/application-integration.html"
+    },
+    {
+      "rule_id": "aws/cloudwatch-log-anomaly-detector",
+      "label": "Amazon CloudWatch Logs anomaly detector",
+      "family": "operations",
+      "terraform_type": "aws_cloudwatch_log_anomaly_detector",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/cloudwatch-log-group",
+      "label": "Amazon CloudWatch Logs log group",
+      "family": "operations",
+      "terraform_type": "aws_cloudwatch_log_group",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/cloudwatch-metric-alarm",
+      "label": "Amazon CloudWatch metric alarm",
+      "family": "operations",
+      "terraform_type": "aws_cloudwatch_metric_alarm",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/cloudwatch-metric-stream",
+      "label": "Amazon CloudWatch metric stream",
+      "family": "operations",
+      "terraform_type": "aws_cloudwatch_metric_stream",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/codeartifact-domain",
+      "label": "AWS CodeArtifact domain",
+      "family": "developer-ci-cd",
+      "terraform_type": "aws_codeartifact_domain",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/welcome.html"
+    },
+    {
+      "rule_id": "aws/codeartifact-repository",
+      "label": "AWS CodeArtifact repository",
+      "family": "developer-ci-cd",
+      "terraform_type": "aws_codeartifact_repository",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/welcome.html"
+    },
+    {
+      "rule_id": "aws/codebuild-fleet",
+      "label": "AWS CodeBuild fleet",
+      "family": "developer-ci-cd",
+      "terraform_type": "aws_codebuild_fleet",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/welcome.html"
+    },
+    {
+      "rule_id": "aws/codebuild-project",
+      "label": "AWS CodeBuild project",
+      "family": "developer-ci-cd",
+      "terraform_type": "aws_codebuild_project",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/welcome.html"
+    },
+    {
+      "rule_id": "aws/codecatalyst-dev-environment",
+      "label": "Amazon CodeCatalyst dev environment",
+      "family": "developer-ci-cd",
+      "terraform_type": "aws_codecatalyst_dev_environment",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/welcome.html"
+    },
+    {
+      "rule_id": "aws/codecatalyst-project",
+      "label": "Amazon CodeCatalyst project",
+      "family": "developer-ci-cd",
+      "terraform_type": "aws_codecatalyst_project",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/welcome.html"
+    },
+    {
+      "rule_id": "aws/codecatalyst-source-repository",
+      "label": "Amazon CodeCatalyst source repository",
+      "family": "developer-ci-cd",
+      "terraform_type": "aws_codecatalyst_source_repository",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/welcome.html"
+    },
+    {
+      "rule_id": "aws/codecommit-repository",
+      "label": "AWS CodeCommit repository",
+      "family": "developer-ci-cd",
+      "terraform_type": "aws_codecommit_repository",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/welcome.html"
+    },
+    {
+      "rule_id": "aws/codeconnections-connection",
+      "label": "AWS CodeConnections",
+      "family": "developer-ci-cd",
+      "terraform_type": "aws_codeconnections_connection",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/welcome.html"
+    },
+    {
+      "rule_id": "aws/codedeploy-deployment-group",
+      "label": "AWS CodeDeploy deployment group",
+      "family": "developer-ci-cd",
+      "terraform_type": "aws_codedeploy_deployment_group",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/welcome.html"
+    },
+    {
+      "rule_id": "aws/codeguruprofiler-profiling-group",
+      "label": "Amazon CodeGuru Profiler profiling group",
+      "family": "governance-management",
+      "terraform_type": "aws_codeguruprofiler_profiling_group",
+      "official_source": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html"
+    },
+    {
+      "rule_id": "aws/codepipeline",
+      "label": "AWS CodePipeline",
+      "family": "developer-ci-cd",
+      "terraform_type": "aws_codepipeline",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/welcome.html"
+    },
+    {
+      "rule_id": "aws/codestarconnections-connection",
+      "label": "AWS CodeStar Connections",
+      "family": "developer-ci-cd",
+      "terraform_type": "aws_codestarconnections_connection",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/welcome.html"
+    },
+    {
+      "rule_id": "aws/cognito-identity-pool",
+      "label": "Amazon Cognito identity pools",
+      "family": "identity-iam",
+      "terraform_type": "aws_cognito_identity_pool",
+      "official_source": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"
+    },
+    {
+      "rule_id": "aws/cognito-user-group",
+      "label": "Amazon Cognito user group",
+      "family": "identity-iam",
+      "terraform_type": "aws_cognito_user_group",
+      "official_source": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"
+    },
+    {
+      "rule_id": "aws/cognito-user-pool",
+      "label": "Amazon Cognito user pool",
+      "family": "identity-iam",
+      "terraform_type": "aws_cognito_user_pool",
+      "official_source": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"
+    },
+    {
+      "rule_id": "aws/cognito-user-pool-domain",
+      "label": "Amazon Cognito user pool domain",
+      "family": "identity-iam",
+      "terraform_type": "aws_cognito_user_pool_domain",
+      "official_source": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"
+    },
+    {
+      "rule_id": "aws/comprehend-document-classifier",
+      "label": "Amazon Comprehend document classifier",
+      "family": "ai-ml",
+      "terraform_type": "aws_comprehend_document_classifier",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/comprehend-entity-recognizer",
+      "label": "Amazon Comprehend entity recognizer",
+      "family": "ai-ml",
+      "terraform_type": "aws_comprehend_entity_recognizer",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/config-delivery-channel",
+      "label": "AWS Config delivery channel",
+      "family": "operations",
+      "terraform_type": "aws_config_delivery_channel",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/connect-contact-flow",
+      "label": "Amazon Connect contact flow",
+      "family": "media-communication",
+      "terraform_type": "aws_connect_contact_flow",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/connect-instance",
+      "label": "Amazon Connect instance",
+      "family": "media-communication",
+      "terraform_type": "aws_connect_instance",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/connect-queue",
+      "label": "Amazon Connect queue",
+      "family": "media-communication",
+      "terraform_type": "aws_connect_queue",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/connect-routing-profile",
+      "label": "Amazon Connect routing profile",
+      "family": "media-communication",
+      "terraform_type": "aws_connect_routing_profile",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/connect-security-profile",
+      "label": "Amazon Connect security profile",
+      "family": "media-communication",
+      "terraform_type": "aws_connect_security_profile",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/connect-user-hierarchy-group",
+      "label": "Amazon Connect user hierarchy group",
+      "family": "media-communication",
+      "terraform_type": "aws_connect_user_hierarchy_group",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/controltower-landing-zone",
+      "label": "AWS Control Tower landing zone",
+      "family": "governance-management",
+      "terraform_type": "aws_controltower_landing_zone",
+      "official_source": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html"
+    },
+    {
+      "rule_id": "aws/customer-gateway",
+      "label": "AWS VPN (Site-to-Site) customer gateway",
+      "family": "network",
+      "terraform_type": "aws_customer_gateway",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/customerprofiles-domain",
+      "label": "Amazon Connect Customer Profiles domain",
+      "family": "media-communication",
+      "terraform_type": "aws_customerprofiles_domain",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/dataexchange-data-set",
+      "label": "AWS Data Exchange data set",
+      "family": "data-analytics",
+      "terraform_type": "aws_dataexchange_data_set",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/datapipeline-pipeline",
+      "label": "AWS Data Pipeline",
+      "family": "data-analytics",
+      "terraform_type": "aws_datapipeline_pipeline",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/datasync-agent",
+      "label": "AWS DataSync agent",
+      "family": "storage",
+      "terraform_type": "aws_datasync_agent",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/datasync-location-fsx-lustre-file-system",
+      "label": "AWS DataSync location fsx for lustre file system",
+      "family": "storage",
+      "terraform_type": "aws_datasync_location_fsx_lustre_file_system",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/datasync-location-fsx-ontap-file-system",
+      "label": "AWS DataSync location fsx for net app ontap file system",
+      "family": "storage",
+      "terraform_type": "aws_datasync_location_fsx_ontap_file_system",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/datasync-location-fsx-openzfs-file-system",
+      "label": "AWS DataSync location fsx for open zfs file system",
+      "family": "storage",
+      "terraform_type": "aws_datasync_location_fsx_openzfs_file_system",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/datasync-location-fsx-windows-file-system",
+      "label": "AWS DataSync location fsx for windows file server file system",
+      "family": "storage",
+      "terraform_type": "aws_datasync_location_fsx_windows_file_system",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/datasync-task",
+      "label": "AWS DataSync task",
+      "family": "storage",
+      "terraform_type": "aws_datasync_task",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/datazone-domain",
+      "label": "Amazon DataZone domain",
+      "family": "data-analytics",
+      "terraform_type": "aws_datazone_domain",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/datazone-environment",
+      "label": "Amazon DataZone environment",
+      "family": "data-analytics",
+      "terraform_type": "aws_datazone_environment",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/datazone-project",
+      "label": "Amazon DataZone project",
+      "family": "data-analytics",
+      "terraform_type": "aws_datazone_project",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/dax-cluster",
+      "label": "Amazon DynamoDB Accelerator (DAX) cluster",
+      "family": "databases",
+      "terraform_type": "aws_dax_cluster",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/db-instance",
+      "label": "Amazon RDS DB instance",
+      "family": "databases",
+      "terraform_type": "aws_db_instance",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/db-proxy",
+      "label": "Amazon RDS DB proxy",
+      "family": "databases",
+      "terraform_type": "aws_db_proxy",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/db-proxy-default-target-group",
+      "label": "Amazon RDS DB proxy default target group",
+      "family": "databases",
+      "terraform_type": "aws_db_proxy_default_target_group",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/db-proxy-endpoint",
+      "label": "Amazon RDS DB proxy endpoint",
+      "family": "databases",
+      "terraform_type": "aws_db_proxy_endpoint",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/detective-graph",
+      "label": "Amazon Detective behavior graph",
+      "family": "security",
+      "terraform_type": "aws_detective_graph",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-security-services-overview/introduction.html"
+    },
+    {
+      "rule_id": "aws/devicefarm-device-pool",
+      "label": "AWS Device Farm device pool",
+      "family": "developer-ci-cd",
+      "terraform_type": "aws_devicefarm_device_pool",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/welcome.html"
+    },
+    {
+      "rule_id": "aws/devicefarm-project",
+      "label": "AWS Device Farm project",
+      "family": "developer-ci-cd",
+      "terraform_type": "aws_devicefarm_project",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/welcome.html"
+    },
+    {
+      "rule_id": "aws/devicefarm-test-grid-project",
+      "label": "AWS Device Farm test grid project",
+      "family": "developer-ci-cd",
+      "terraform_type": "aws_devicefarm_test_grid_project",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/practicing-continuous-integration-continuous-delivery/welcome.html"
+    },
+    {
+      "rule_id": "aws/devopsguru-notification-channel",
+      "label": "Amazon DevOps Guru notification channel",
+      "family": "operations",
+      "terraform_type": "aws_devopsguru_notification_channel",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/devopsguru-resource-collection",
+      "label": "Amazon DevOps Guru resource collection",
+      "family": "operations",
+      "terraform_type": "aws_devopsguru_resource_collection",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/directory-service-directory",
+      "label": "AWS Directory Service directory",
+      "family": "identity-iam",
+      "terraform_type": "aws_directory_service_directory",
+      "official_source": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"
+    },
+    {
+      "rule_id": "aws/dms-endpoint",
+      "label": "AWS Database Migration Service (AWS DMS) endpoint",
+      "family": "migration",
+      "terraform_type": "aws_dms_endpoint",
+      "official_source": "https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-aws-environment/welcome.html"
+    },
+    {
+      "rule_id": "aws/dms-replication-instance",
+      "label": "AWS Database Migration Service (AWS DMS) replication instance",
+      "family": "migration",
+      "terraform_type": "aws_dms_replication_instance",
+      "official_source": "https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-aws-environment/welcome.html"
+    },
+    {
+      "rule_id": "aws/dms-replication-task",
+      "label": "AWS Database Migration Service (AWS DMS) replication task",
+      "family": "migration",
+      "terraform_type": "aws_dms_replication_task",
+      "official_source": "https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-aws-environment/welcome.html"
+    },
+    {
+      "rule_id": "aws/dms-s3-endpoint",
+      "label": "AWS Database Migration Service (AWS DMS) S3 endpoint",
+      "family": "migration",
+      "terraform_type": "aws_dms_s3_endpoint",
+      "official_source": "https://docs.aws.amazon.com/prescriptive-guidance/latest/migration-aws-environment/welcome.html"
+    },
+    {
+      "rule_id": "aws/docdb-cluster",
+      "label": "Amazon DocumentDB cluster",
+      "family": "databases",
+      "terraform_type": "aws_docdb_cluster",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/docdb-cluster-instance",
+      "label": "Amazon DocumentDB cluster instance",
+      "family": "databases",
+      "terraform_type": "aws_docdb_cluster_instance",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/docdb-global-cluster",
+      "label": "Amazon DocumentDB global cluster",
+      "family": "databases",
+      "terraform_type": "aws_docdb_global_cluster",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/docdbelastic-cluster",
+      "label": "Amazon DocumentDB Elastic Clusters",
+      "family": "databases",
+      "terraform_type": "aws_docdbelastic_cluster",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/dsql-cluster",
+      "label": "Amazon Aurora DSQL cluster",
+      "family": "databases",
+      "terraform_type": "aws_dsql_cluster",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/dx-connection",
+      "label": "AWS Direct Connect connection",
+      "family": "network",
+      "terraform_type": "aws_dx_connection",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/dx-gateway",
+      "label": "AWS Direct Connect gateway",
+      "family": "network",
+      "terraform_type": "aws_dx_gateway",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/dx-hosted-connection",
+      "label": "AWS Direct Connect hosted connection",
+      "family": "network",
+      "terraform_type": "aws_dx_hosted_connection",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/dynamodb-global-secondary-index",
+      "label": "Amazon DynamoDB global secondary index",
+      "family": "databases",
+      "terraform_type": "aws_dynamodb_global_secondary_index",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/dynamodb-global-table",
+      "label": "Amazon DynamoDB global table",
+      "family": "databases",
+      "terraform_type": "aws_dynamodb_global_table",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/dynamodb-table",
+      "label": "Amazon DynamoDB table",
+      "family": "databases",
+      "terraform_type": "aws_dynamodb_table",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/ebs-volume",
+      "label": "Amazon EBS ebs volume",
+      "family": "storage",
+      "terraform_type": "aws_ebs_volume",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/ec2-carrier-gateway",
+      "label": "AWS Wavelength carrier gateway",
+      "family": "compute",
+      "terraform_type": "aws_ec2_carrier_gateway",
+      "official_source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"
+    },
+    {
+      "rule_id": "aws/ec2-client-vpn-endpoint",
+      "label": "AWS VPN (Client) client VPN endpoint",
+      "family": "network",
+      "terraform_type": "aws_ec2_client_vpn_endpoint",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/ec2-fleet",
+      "label": "Amazon EC2 fleet",
+      "family": "compute",
+      "terraform_type": "aws_ec2_fleet",
+      "official_source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"
+    },
+    {
+      "rule_id": "aws/ec2-instance-connect-endpoint",
+      "label": "Amazon EC2 instance connect endpoint",
+      "family": "compute",
+      "terraform_type": "aws_ec2_instance_connect_endpoint",
+      "official_source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"
+    },
+    {
+      "rule_id": "aws/ec2-local-gateway-route-table",
+      "label": "AWS Outposts (EC2) local gateway route table",
+      "family": "compute",
+      "terraform_type": "aws_ec2_local_gateway_route_table",
+      "official_source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"
+    },
+    {
+      "rule_id": "aws/ec2-secondary-network",
+      "label": "Amazon EC2 secondary network",
+      "family": "compute",
+      "terraform_type": "aws_ec2_secondary_network",
+      "official_source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"
+    },
+    {
+      "rule_id": "aws/ec2-secondary-subnet",
+      "label": "Amazon EC2 secondary subnet",
+      "family": "compute",
+      "terraform_type": "aws_ec2_secondary_subnet",
+      "official_source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"
+    },
+    {
+      "rule_id": "aws/ec2-transit-gateway",
+      "label": "AWS Transit Gateway",
+      "family": "network",
+      "terraform_type": "aws_ec2_transit_gateway",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/ec2-transit-gateway-multicast-domain",
+      "label": "AWS Transit Gateway transit gateway multicast domain",
+      "family": "network",
+      "terraform_type": "aws_ec2_transit_gateway_multicast_domain",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/ec2-transit-gateway-policy-table",
+      "label": "AWS Transit Gateway transit gateway policy table",
+      "family": "network",
+      "terraform_type": "aws_ec2_transit_gateway_policy_table",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/ec2-transit-gateway-route-table",
+      "label": "AWS Transit Gateway transit gateway route table",
+      "family": "network",
+      "terraform_type": "aws_ec2_transit_gateway_route_table",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/ec2-transit-gateway-vpc-attachment",
+      "label": "AWS Transit Gateway VPC attachment",
+      "family": "network",
+      "terraform_type": "aws_ec2_transit_gateway_vpc_attachment",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/ecr-lifecycle-policy",
+      "label": "Amazon ECR lifecycle policy",
+      "family": "containers",
+      "terraform_type": "aws_ecr_lifecycle_policy",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html"
+    },
+    {
+      "rule_id": "aws/ecr-repository",
+      "label": "Amazon ECR repository",
+      "family": "containers",
+      "terraform_type": "aws_ecr_repository",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html"
+    },
+    {
+      "rule_id": "aws/ecrpublic-repository",
+      "label": "AWS ECR Public repository",
+      "family": "containers",
+      "terraform_type": "aws_ecrpublic_repository",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html"
+    },
+    {
+      "rule_id": "aws/ecs-cluster",
+      "label": "Amazon ECS cluster",
+      "family": "containers",
+      "terraform_type": "aws_ecs_cluster",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html"
+    },
+    {
+      "rule_id": "aws/ecs-express-gateway-service",
+      "label": "Amazon ECS express gateway service",
+      "family": "containers",
+      "terraform_type": "aws_ecs_express_gateway_service",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html"
+    },
+    {
+      "rule_id": "aws/ecs-service",
+      "label": "Amazon ECS service",
+      "family": "containers",
+      "terraform_type": "aws_ecs_service",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html"
+    },
+    {
+      "rule_id": "aws/efs-access-point",
+      "label": "Amazon EFS access point",
+      "family": "storage",
+      "terraform_type": "aws_efs_access_point",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/efs-file-system",
+      "label": "Amazon EFS file system",
+      "family": "storage",
+      "terraform_type": "aws_efs_file_system",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/egress-only-internet-gateway",
+      "label": "Amazon VPC egress-only internet gateway",
+      "family": "network",
+      "terraform_type": "aws_egress_only_internet_gateway",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/eks-cluster",
+      "label": "Amazon EKS cluster",
+      "family": "containers",
+      "terraform_type": "aws_eks_cluster",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html"
+    },
+    {
+      "rule_id": "aws/eks-fargate-profile",
+      "label": "Amazon EKS Fargate profile",
+      "family": "containers",
+      "terraform_type": "aws_eks_fargate_profile",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html"
+    },
+    {
+      "rule_id": "aws/eks-node-group",
+      "label": "Amazon EKS managed node group",
+      "family": "containers",
+      "terraform_type": "aws_eks_node_group",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html"
+    },
+    {
+      "rule_id": "aws/elastic-beanstalk-application",
+      "label": "AWS Elastic Beanstalk application",
+      "family": "serverless",
+      "terraform_type": "aws_elastic_beanstalk_application",
+      "official_source": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html"
+    },
+    {
+      "rule_id": "aws/elastic-beanstalk-environment",
+      "label": "AWS Elastic Beanstalk environment",
+      "family": "serverless",
+      "terraform_type": "aws_elastic_beanstalk_environment",
+      "official_source": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html"
+    },
+    {
+      "rule_id": "aws/elasticache-cluster",
+      "label": "Amazon ElastiCache cluster",
+      "family": "databases",
+      "terraform_type": "aws_elasticache_cluster",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/elasticache-global-replication-group",
+      "label": "Amazon ElastiCache global replication group",
+      "family": "databases",
+      "terraform_type": "aws_elasticache_global_replication_group",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/elasticache-replication-group",
+      "label": "Amazon ElastiCache replication group",
+      "family": "databases",
+      "terraform_type": "aws_elasticache_replication_group",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/elasticsearch-domain",
+      "label": "AWS Elasticsearch domain",
+      "family": "governance-management",
+      "terraform_type": "aws_elasticsearch_domain",
+      "official_source": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html"
+    },
+    {
+      "rule_id": "aws/elasticsearch-vpc-endpoint",
+      "label": "AWS Elasticsearch VPC endpoint",
+      "family": "network",
+      "terraform_type": "aws_elasticsearch_vpc_endpoint",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/elastictranscoder-pipeline",
+      "label": "AWS Elastic Transcoder pipeline",
+      "family": "governance-management",
+      "terraform_type": "aws_elastictranscoder_pipeline",
+      "official_source": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html"
+    },
+    {
+      "rule_id": "aws/elb",
+      "label": "Elastic Load Balancing classic load balancer",
+      "family": "load-balancing",
+      "terraform_type": "aws_elb",
+      "official_source": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html"
+    },
+    {
+      "rule_id": "aws/emr-cluster",
+      "label": "AWS EMR cluster",
+      "family": "data-analytics",
+      "terraform_type": "aws_emr_cluster",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/emr-instance-fleet",
+      "label": "AWS EMR instance fleet",
+      "family": "data-analytics",
+      "terraform_type": "aws_emr_instance_fleet",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/emr-instance-group",
+      "label": "AWS EMR instance group",
+      "family": "data-analytics",
+      "terraform_type": "aws_emr_instance_group",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/emrcontainers-virtual-cluster",
+      "label": "AWS EMR Containers virtual cluster",
+      "family": "containers",
+      "terraform_type": "aws_emrcontainers_virtual_cluster",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html"
+    },
+    {
+      "rule_id": "aws/emrserverless-application",
+      "label": "AWS EMR Serverless application",
+      "family": "data-analytics",
+      "terraform_type": "aws_emrserverless_application",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/evidently-project",
+      "label": "AWS CloudWatch Evidently project",
+      "family": "operations",
+      "terraform_type": "aws_evidently_project",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/finspace-kx-cluster",
+      "label": "Amazon FinSpace kx cluster",
+      "family": "data-analytics",
+      "terraform_type": "aws_finspace_kx_cluster",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/finspace-kx-database",
+      "label": "Amazon FinSpace kx database",
+      "family": "data-analytics",
+      "terraform_type": "aws_finspace_kx_database",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/finspace-kx-environment",
+      "label": "Amazon FinSpace kx environment",
+      "family": "data-analytics",
+      "terraform_type": "aws_finspace_kx_environment",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/finspace-kx-volume",
+      "label": "Amazon FinSpace kx volume",
+      "family": "data-analytics",
+      "terraform_type": "aws_finspace_kx_volume",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/fsx-lustre-file-system",
+      "label": "Amazon FSx lustre file system",
+      "family": "storage",
+      "terraform_type": "aws_fsx_lustre_file_system",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/fsx-ontap-file-system",
+      "label": "Amazon FSx ontap file system",
+      "family": "storage",
+      "terraform_type": "aws_fsx_ontap_file_system",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/fsx-ontap-volume",
+      "label": "Amazon FSx ontap volume",
+      "family": "storage",
+      "terraform_type": "aws_fsx_ontap_volume",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/fsx-openzfs-file-system",
+      "label": "Amazon FSx open zfs file system",
+      "family": "storage",
+      "terraform_type": "aws_fsx_openzfs_file_system",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/fsx-openzfs-volume",
+      "label": "Amazon FSx open zfs volume",
+      "family": "storage",
+      "terraform_type": "aws_fsx_openzfs_volume",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/fsx-windows-file-system",
+      "label": "Amazon FSx windows file system",
+      "family": "storage",
+      "terraform_type": "aws_fsx_windows_file_system",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/gamelift-fleet",
+      "label": "Amazon GameLift Servers fleet",
+      "family": "compute",
+      "terraform_type": "aws_gamelift_fleet",
+      "official_source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"
+    },
+    {
+      "rule_id": "aws/gamelift-game-server-group",
+      "label": "Amazon GameLift Servers game server group",
+      "family": "compute",
+      "terraform_type": "aws_gamelift_game_server_group",
+      "official_source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"
+    },
+    {
+      "rule_id": "aws/gamelift-game-session-queue",
+      "label": "Amazon GameLift Servers game session queue",
+      "family": "compute",
+      "terraform_type": "aws_gamelift_game_session_queue",
+      "official_source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"
+    },
+    {
+      "rule_id": "aws/glacier-vault",
+      "label": "Amazon S3 Glacier vault",
+      "family": "storage",
+      "terraform_type": "aws_glacier_vault",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/globalaccelerator-accelerator",
+      "label": "AWS Global Accelerator standard accelerator",
+      "family": "load-balancing",
+      "terraform_type": "aws_globalaccelerator_accelerator",
+      "official_source": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html"
+    },
+    {
+      "rule_id": "aws/globalaccelerator-custom-routing-accelerator",
+      "label": "AWS Global Accelerator custom routing accelerator",
+      "family": "load-balancing",
+      "terraform_type": "aws_globalaccelerator_custom_routing_accelerator",
+      "official_source": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html"
+    },
+    {
+      "rule_id": "aws/globalaccelerator-custom-routing-endpoint-group",
+      "label": "AWS Global Accelerator custom routing endpoint group",
+      "family": "load-balancing",
+      "terraform_type": "aws_globalaccelerator_custom_routing_endpoint_group",
+      "official_source": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html"
+    },
+    {
+      "rule_id": "aws/globalaccelerator-custom-routing-listener",
+      "label": "AWS Global Accelerator custom routing listener",
+      "family": "load-balancing",
+      "terraform_type": "aws_globalaccelerator_custom_routing_listener",
+      "official_source": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html"
+    },
+    {
+      "rule_id": "aws/globalaccelerator-endpoint-group",
+      "label": "AWS Global Accelerator endpoint group",
+      "family": "load-balancing",
+      "terraform_type": "aws_globalaccelerator_endpoint_group",
+      "official_source": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html"
+    },
+    {
+      "rule_id": "aws/globalaccelerator-listener",
+      "label": "AWS Global Accelerator listener",
+      "family": "load-balancing",
+      "terraform_type": "aws_globalaccelerator_listener",
+      "official_source": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html"
+    },
+    {
+      "rule_id": "aws/glue-catalog",
+      "label": "AWS Glue catalog",
+      "family": "data-analytics",
+      "terraform_type": "aws_glue_catalog",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/glue-catalog-database",
+      "label": "AWS Glue database",
+      "family": "data-analytics",
+      "terraform_type": "aws_glue_catalog_database",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/glue-catalog-table",
+      "label": "AWS Glue catalog table",
+      "family": "data-analytics",
+      "terraform_type": "aws_glue_catalog_table",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/glue-connection",
+      "label": "AWS Glue connection",
+      "family": "data-analytics",
+      "terraform_type": "aws_glue_connection",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/glue-dev-endpoint",
+      "label": "AWS Glue dev endpoint",
+      "family": "data-analytics",
+      "terraform_type": "aws_glue_dev_endpoint",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/glue-job",
+      "label": "AWS Glue job",
+      "family": "data-analytics",
+      "terraform_type": "aws_glue_job",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/glue-workflow",
+      "label": "AWS Glue workflow",
+      "family": "data-analytics",
+      "terraform_type": "aws_glue_workflow",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/grafana-workspace",
+      "label": "Amazon Managed Grafana workspace",
+      "family": "operations",
+      "terraform_type": "aws_grafana_workspace",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/guardduty-detector",
+      "label": "Amazon GuardDuty detector",
+      "family": "security",
+      "terraform_type": "aws_guardduty_detector",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-security-services-overview/introduction.html"
+    },
+    {
+      "rule_id": "aws/iam-group",
+      "label": "IAM group",
+      "family": "identity-iam",
+      "terraform_type": "aws_iam_group",
+      "official_source": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"
+    },
+    {
+      "rule_id": "aws/iam-instance-profile",
+      "label": "AWS Identity and Access Management (IAM) instance profile",
+      "family": "identity-iam",
+      "terraform_type": "aws_iam_instance_profile",
+      "official_source": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"
+    },
+    {
+      "rule_id": "aws/iam-role",
+      "label": "IAM role",
+      "family": "identity-iam",
+      "terraform_type": "aws_iam_role",
+      "official_source": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"
+    },
+    {
+      "rule_id": "aws/iam-role-policy-attachment",
+      "label": "AWS Identity and Access Management (IAM) role policy attachment",
+      "family": "identity-iam",
+      "terraform_type": "aws_iam_role_policy_attachment",
+      "official_source": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"
+    },
+    {
+      "rule_id": "aws/identitystore-group",
+      "label": "AWS SSO Identity Store group",
+      "family": "identity-iam",
+      "terraform_type": "aws_identitystore_group",
+      "official_source": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"
+    },
+    {
+      "rule_id": "aws/imagebuilder-image-pipeline",
+      "label": "AWS EC2 Image Builder image pipeline",
+      "family": "compute",
+      "terraform_type": "aws_imagebuilder_image_pipeline",
+      "official_source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"
+    },
+    {
+      "rule_id": "aws/imagebuilder-workflow",
+      "label": "AWS EC2 Image Builder workflow",
+      "family": "compute",
+      "terraform_type": "aws_imagebuilder_workflow",
+      "official_source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"
+    },
+    {
+      "rule_id": "aws/instance",
+      "label": "Amazon EC2 instance",
+      "family": "compute",
+      "terraform_type": "aws_instance",
+      "official_source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"
+    },
+    {
+      "rule_id": "aws/internet-gateway",
+      "label": "Amazon VPC internet gateway",
+      "family": "network",
+      "terraform_type": "aws_internet_gateway",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/internetmonitor-monitor",
+      "label": "AWS CloudWatch Internet Monitor",
+      "family": "operations",
+      "terraform_type": "aws_internetmonitor_monitor",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/iot-thing",
+      "label": "AWS IoT Core thing",
+      "family": "iot",
+      "terraform_type": "aws_iot_thing",
+      "official_source": "https://docs.aws.amazon.com/iot/latest/developerguide/what-is-aws-iot.html"
+    },
+    {
+      "rule_id": "aws/iot-thing-group",
+      "label": "AWS IoT Core thing group",
+      "family": "iot",
+      "terraform_type": "aws_iot_thing_group",
+      "official_source": "https://docs.aws.amazon.com/iot/latest/developerguide/what-is-aws-iot.html"
+    },
+    {
+      "rule_id": "aws/ivs-channel",
+      "label": "AWS IVS (Interactive Video) channel",
+      "family": "media-communication",
+      "terraform_type": "aws_ivs_channel",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/kendra-index",
+      "label": "Amazon Kendra index",
+      "family": "ai-ml",
+      "terraform_type": "aws_kendra_index",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/keyspaces-table",
+      "label": "Amazon Keyspaces (for Apache Cassandra) table",
+      "family": "databases",
+      "terraform_type": "aws_keyspaces_table",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/kinesis-analytics-application",
+      "label": "Amazon Kinesis Data Analytics application",
+      "family": "data-analytics",
+      "terraform_type": "aws_kinesis_analytics_application",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/kinesis-firehose-delivery-stream",
+      "label": "Amazon Data Firehose delivery stream",
+      "family": "data-analytics",
+      "terraform_type": "aws_kinesis_firehose_delivery_stream",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/kinesis-stream",
+      "label": "Amazon Kinesis stream",
+      "family": "data-analytics",
+      "terraform_type": "aws_kinesis_stream",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/kinesis-video-stream",
+      "label": "Amazon Kinesis Video Streams",
+      "family": "data-analytics",
+      "terraform_type": "aws_kinesis_video_stream",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/kinesisanalyticsv2-application",
+      "label": "Amazon Kinesis Data Analytics application",
+      "family": "data-analytics",
+      "terraform_type": "aws_kinesisanalyticsv2_application",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/kms-alias",
+      "label": "AWS Key Management Service (AWS KMS) alias",
+      "family": "security",
+      "terraform_type": "aws_kms_alias",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-security-services-overview/introduction.html"
+    },
+    {
+      "rule_id": "aws/kms-custom-key-store",
+      "label": "AWS Key Management Service (AWS KMS) custom key store",
+      "family": "security",
+      "terraform_type": "aws_kms_custom_key_store",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-security-services-overview/introduction.html"
+    },
+    {
+      "rule_id": "aws/kms-external-key",
+      "label": "AWS Key Management Service (AWS KMS) external key",
+      "family": "security",
+      "terraform_type": "aws_kms_external_key",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-security-services-overview/introduction.html"
+    },
+    {
+      "rule_id": "aws/kms-key",
+      "label": "AWS KMS key",
+      "family": "security",
+      "terraform_type": "aws_kms_key",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-security-services-overview/introduction.html"
+    },
+    {
+      "rule_id": "aws/kms-replica-external-key",
+      "label": "AWS Key Management Service (AWS KMS) replica external key",
+      "family": "security",
+      "terraform_type": "aws_kms_replica_external_key",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-security-services-overview/introduction.html"
+    },
+    {
+      "rule_id": "aws/kms-replica-key",
+      "label": "AWS Key Management Service (AWS KMS) replica key",
+      "family": "security",
+      "terraform_type": "aws_kms_replica_key",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-security-services-overview/introduction.html"
+    },
+    {
+      "rule_id": "aws/lakeformation-resource",
+      "label": "AWS Lake Formation resource",
+      "family": "data-analytics",
+      "terraform_type": "aws_lakeformation_resource",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/lambda-function",
+      "label": "AWS Lambda function",
+      "family": "serverless",
+      "terraform_type": "aws_lambda_function",
+      "official_source": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html"
+    },
+    {
+      "rule_id": "aws/lb",
+      "label": "Elastic Load Balancing load balancer",
+      "family": "load-balancing",
+      "terraform_type": "aws_lb",
+      "official_source": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html"
+    },
+    {
+      "rule_id": "aws/lb-listener",
+      "label": "Elastic Load Balancing listener",
+      "family": "load-balancing",
+      "terraform_type": "aws_lb_listener",
+      "official_source": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html"
+    },
+    {
+      "rule_id": "aws/lb-target-group",
+      "label": "Elastic Load Balancing target group",
+      "family": "load-balancing",
+      "terraform_type": "aws_lb_target_group",
+      "official_source": "https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html"
+    },
+    {
+      "rule_id": "aws/lex-bot",
+      "label": "Amazon Lex bot",
+      "family": "ai-ml",
+      "terraform_type": "aws_lex_bot",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/lexv2models-bot",
+      "label": "Amazon Lex V2 bot",
+      "family": "ai-ml",
+      "terraform_type": "aws_lexv2models_bot",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/lightsail-bucket",
+      "label": "Amazon Lightsail bucket",
+      "family": "compute",
+      "terraform_type": "aws_lightsail_bucket",
+      "official_source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"
+    },
+    {
+      "rule_id": "aws/lightsail-certificate",
+      "label": "Amazon Lightsail certificate",
+      "family": "compute",
+      "terraform_type": "aws_lightsail_certificate",
+      "official_source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"
+    },
+    {
+      "rule_id": "aws/lightsail-container-service",
+      "label": "Amazon Lightsail container service",
+      "family": "containers",
+      "terraform_type": "aws_lightsail_container_service",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html"
+    },
+    {
+      "rule_id": "aws/lightsail-database",
+      "label": "Amazon Lightsail database",
+      "family": "compute",
+      "terraform_type": "aws_lightsail_database",
+      "official_source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"
+    },
+    {
+      "rule_id": "aws/lightsail-distribution",
+      "label": "Amazon Lightsail distribution",
+      "family": "compute",
+      "terraform_type": "aws_lightsail_distribution",
+      "official_source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"
+    },
+    {
+      "rule_id": "aws/lightsail-domain",
+      "label": "Amazon Lightsail domain",
+      "family": "compute",
+      "terraform_type": "aws_lightsail_domain",
+      "official_source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"
+    },
+    {
+      "rule_id": "aws/lightsail-instance",
+      "label": "Amazon Lightsail instance",
+      "family": "compute",
+      "terraform_type": "aws_lightsail_instance",
+      "official_source": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html"
+    },
+    {
+      "rule_id": "aws/location-geofence-collection",
+      "label": "Amazon Location Service geofence collection",
+      "family": "data-analytics",
+      "terraform_type": "aws_location_geofence_collection",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/location-place-index",
+      "label": "Amazon Location Service map",
+      "family": "data-analytics",
+      "terraform_type": "aws_location_place_index",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/m2-application",
+      "label": "AWS Mainframe Modernization application",
+      "family": "hybrid",
+      "terraform_type": "aws_m2_application",
+      "official_source": "https://docs.aws.amazon.com/outposts/latest/userguide/what-is-outposts.html"
+    },
+    {
+      "rule_id": "aws/m2-environment",
+      "label": "AWS Mainframe Modernization environment",
+      "family": "hybrid",
+      "terraform_type": "aws_m2_environment",
+      "official_source": "https://docs.aws.amazon.com/outposts/latest/userguide/what-is-outposts.html"
+    },
+    {
+      "rule_id": "aws/media-convert-queue",
+      "label": "AWS Elemental MediaConvert queue",
+      "family": "media-communication",
+      "terraform_type": "aws_media_convert_queue",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/media-package-channel",
+      "label": "AWS Elemental MediaPackage channel",
+      "family": "media-communication",
+      "terraform_type": "aws_media_package_channel",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/media-packagev2-channel-group",
+      "label": "AWS Elemental MediaPackage Version 2 channel group",
+      "family": "media-communication",
+      "terraform_type": "aws_media_packagev2_channel_group",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/media-store-container",
+      "label": "AWS Elemental MediaStore container",
+      "family": "containers",
+      "terraform_type": "aws_media_store_container",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/aws-container-services.html"
+    },
+    {
+      "rule_id": "aws/medialive-channel",
+      "label": "AWS Elemental MediaLive channel",
+      "family": "media-communication",
+      "terraform_type": "aws_medialive_channel",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/medialive-input-security-group",
+      "label": "AWS Elemental MediaLive input security group",
+      "family": "media-communication",
+      "terraform_type": "aws_medialive_input_security_group",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/memorydb-cluster",
+      "label": "Amazon MemoryDB cluster",
+      "family": "databases",
+      "terraform_type": "aws_memorydb_cluster",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/memorydb-multi-region-cluster",
+      "label": "Amazon MemoryDB multi region cluster",
+      "family": "databases",
+      "terraform_type": "aws_memorydb_multi_region_cluster",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/mq-broker",
+      "label": "Amazon MQ broker",
+      "family": "messaging-eventing",
+      "terraform_type": "aws_mq_broker",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/application-integration.html"
+    },
+    {
+      "rule_id": "aws/msk-cluster",
+      "label": "Amazon Managed Streaming for Apache Kafka (Amazon MSK) cluster",
+      "family": "data-analytics",
+      "terraform_type": "aws_msk_cluster",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/msk-serverless-cluster",
+      "label": "Amazon Managed Streaming for Apache Kafka (Amazon MSK) serverless cluster",
+      "family": "data-analytics",
+      "terraform_type": "aws_msk_serverless_cluster",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/msk-topic",
+      "label": "Amazon Managed Streaming for Apache Kafka (Amazon MSK) topic",
+      "family": "data-analytics",
+      "terraform_type": "aws_msk_topic",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/msk-vpc-connection",
+      "label": "Amazon Managed Streaming for Apache Kafka (Amazon MSK) VPC connection",
+      "family": "network",
+      "terraform_type": "aws_msk_vpc_connection",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/mwaa-environment",
+      "label": "Amazon Managed Workflows for Apache Airflow (MWAA) environment",
+      "family": "data-analytics",
+      "terraform_type": "aws_mwaa_environment",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/nat-gateway",
+      "label": "NAT gateway",
+      "family": "network",
+      "terraform_type": "aws_nat_gateway",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/neptune-cluster",
+      "label": "Amazon Neptune cluster",
+      "family": "databases",
+      "terraform_type": "aws_neptune_cluster",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/neptune-cluster-endpoint",
+      "label": "Amazon Neptune cluster endpoint",
+      "family": "databases",
+      "terraform_type": "aws_neptune_cluster_endpoint",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/neptune-cluster-instance",
+      "label": "Amazon Neptune cluster instance",
+      "family": "databases",
+      "terraform_type": "aws_neptune_cluster_instance",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/neptune-global-cluster",
+      "label": "Amazon Neptune global cluster",
+      "family": "databases",
+      "terraform_type": "aws_neptune_global_cluster",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/neptunegraph-private-graph-endpoint",
+      "label": "Amazon Neptune Analytics private graph endpoint",
+      "family": "databases",
+      "terraform_type": "aws_neptunegraph_private_graph_endpoint",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/network-acl",
+      "label": "Amazon VPC network ACL",
+      "family": "network",
+      "terraform_type": "aws_network_acl",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/networkfirewall-firewall",
+      "label": "AWS Network Firewall",
+      "family": "network",
+      "terraform_type": "aws_networkfirewall_firewall",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/networkfirewall-rule-group",
+      "label": "AWS Network Firewall rule group",
+      "family": "network",
+      "terraform_type": "aws_networkfirewall_rule_group",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/networkflowmonitor-monitor",
+      "label": "AWS CloudWatch NetworkFlow Monitor",
+      "family": "operations",
+      "terraform_type": "aws_networkflowmonitor_monitor",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/networkmanager-connection",
+      "label": "AWS Network Manager connection",
+      "family": "network",
+      "terraform_type": "aws_networkmanager_connection",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/networkmanager-core-network",
+      "label": "AWS Network Manager core network",
+      "family": "network",
+      "terraform_type": "aws_networkmanager_core_network",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/networkmanager-global-network",
+      "label": "AWS Network Manager global network",
+      "family": "network",
+      "terraform_type": "aws_networkmanager_global_network",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/networkmanager-site",
+      "label": "AWS Network Manager site",
+      "family": "network",
+      "terraform_type": "aws_networkmanager_site",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/networkmonitor-monitor",
+      "label": "AWS CloudWatch Network Monitor",
+      "family": "operations",
+      "terraform_type": "aws_networkmonitor_monitor",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/notifications-notification-hub",
+      "label": "AWS User Notifications notification hub",
+      "family": "operations",
+      "terraform_type": "aws_notifications_notification_hub",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/observabilityadmin-centralization-rule-for-organization",
+      "label": "AWS CloudWatch Observability Admin centralization rule for organization",
+      "family": "operations",
+      "terraform_type": "aws_observabilityadmin_centralization_rule_for_organization",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/observabilityadmin-telemetry-evaluation-for-organization",
+      "label": "AWS CloudWatch Observability Admin telemetry evaluation for organization",
+      "family": "operations",
+      "terraform_type": "aws_observabilityadmin_telemetry_evaluation_for_organization",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/observabilityadmin-telemetry-pipeline",
+      "label": "AWS CloudWatch Observability Admin telemetry pipeline",
+      "family": "operations",
+      "terraform_type": "aws_observabilityadmin_telemetry_pipeline",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/observabilityadmin-telemetry-rule-for-organization",
+      "label": "AWS CloudWatch Observability Admin telemetry rule for organization",
+      "family": "operations",
+      "terraform_type": "aws_observabilityadmin_telemetry_rule_for_organization",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/odb-cloud-autonomous-vm-cluster",
+      "label": "AWS Oracle Database@AWS cloud autonomous vm cluster",
+      "family": "governance-management",
+      "terraform_type": "aws_odb_cloud_autonomous_vm_cluster",
+      "official_source": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html"
+    },
+    {
+      "rule_id": "aws/odb-cloud-vm-cluster",
+      "label": "AWS Oracle Database@AWS cloud vm cluster",
+      "family": "governance-management",
+      "terraform_type": "aws_odb_cloud_vm_cluster",
+      "official_source": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html"
+    },
+    {
+      "rule_id": "aws/odb-network",
+      "label": "AWS Oracle Database@AWS network",
+      "family": "governance-management",
+      "terraform_type": "aws_odb_network",
+      "official_source": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html"
+    },
+    {
+      "rule_id": "aws/odb-network-peering-connection",
+      "label": "AWS Oracle Database@AWS network peering connection",
+      "family": "media-communication",
+      "terraform_type": "aws_odb_network_peering_connection",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/opensearch-application",
+      "label": "Amazon OpenSearch Service application",
+      "family": "databases",
+      "terraform_type": "aws_opensearch_application",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/opensearch-domain",
+      "label": "Amazon OpenSearch Service domain",
+      "family": "databases",
+      "terraform_type": "aws_opensearch_domain",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/opensearch-outbound-connection",
+      "label": "Amazon OpenSearch Service outbound connection",
+      "family": "databases",
+      "terraform_type": "aws_opensearch_outbound_connection",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/opensearch-vpc-endpoint",
+      "label": "Amazon OpenSearch Service VPC endpoint",
+      "family": "network",
+      "terraform_type": "aws_opensearch_vpc_endpoint",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/opensearchserverless-collection",
+      "label": "AWS OpenSearch Serverless collection",
+      "family": "databases",
+      "terraform_type": "aws_opensearchserverless_collection",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/opensearchserverless-collection-group",
+      "label": "AWS OpenSearch Serverless collection group",
+      "family": "databases",
+      "terraform_type": "aws_opensearchserverless_collection_group",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/opensearchserverless-vpc-endpoint",
+      "label": "AWS OpenSearch Serverless VPC endpoint",
+      "family": "network",
+      "terraform_type": "aws_opensearchserverless_vpc_endpoint",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/organizations-account",
+      "label": "AWS Organizations account",
+      "family": "governance-management",
+      "terraform_type": "aws_organizations_account",
+      "official_source": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html"
+    },
+    {
+      "rule_id": "aws/organizations-organization",
+      "label": "AWS Organizations",
+      "family": "governance-management",
+      "terraform_type": "aws_organizations_organization",
+      "official_source": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html"
+    },
+    {
+      "rule_id": "aws/organizations-organizational-unit",
+      "label": "AWS Organizations organizational unit",
+      "family": "governance-management",
+      "terraform_type": "aws_organizations_organizational_unit",
+      "official_source": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html"
+    },
+    {
+      "rule_id": "aws/osis-pipeline",
+      "label": "AWS OpenSearch Ingestion (OSIS) pipeline",
+      "family": "databases",
+      "terraform_type": "aws_osis_pipeline",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/osis-pipeline-endpoint",
+      "label": "AWS OpenSearch Ingestion (OSIS) pipeline endpoint",
+      "family": "databases",
+      "terraform_type": "aws_osis_pipeline_endpoint",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/paymentcryptography-key",
+      "label": "AWS Payment Cryptography key",
+      "family": "security",
+      "terraform_type": "aws_paymentcryptography_key",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-security-services-overview/introduction.html"
+    },
+    {
+      "rule_id": "aws/pinpoint-adm-channel",
+      "label": "AWS End User Messaging adm channel",
+      "family": "media-communication",
+      "terraform_type": "aws_pinpoint_adm_channel",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/pinpoint-apns-channel",
+      "label": "AWS End User Messaging apns channel",
+      "family": "media-communication",
+      "terraform_type": "aws_pinpoint_apns_channel",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/pinpoint-apns-sandbox-channel",
+      "label": "AWS End User Messaging apns sandbox channel",
+      "family": "media-communication",
+      "terraform_type": "aws_pinpoint_apns_sandbox_channel",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/pinpoint-apns-voip-channel",
+      "label": "AWS End User Messaging apns vo IP channel",
+      "family": "media-communication",
+      "terraform_type": "aws_pinpoint_apns_voip_channel",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/pinpoint-apns-voip-sandbox-channel",
+      "label": "AWS End User Messaging apns vo IP sandbox channel",
+      "family": "media-communication",
+      "terraform_type": "aws_pinpoint_apns_voip_sandbox_channel",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/pinpoint-app",
+      "label": "AWS End User Messaging app",
+      "family": "media-communication",
+      "terraform_type": "aws_pinpoint_app",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/pinpoint-baidu-channel",
+      "label": "AWS End User Messaging baidu channel",
+      "family": "media-communication",
+      "terraform_type": "aws_pinpoint_baidu_channel",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/pinpoint-email-channel",
+      "label": "AWS End User Messaging email channel",
+      "family": "media-communication",
+      "terraform_type": "aws_pinpoint_email_channel",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/pinpoint-event-stream",
+      "label": "AWS End User Messaging event stream",
+      "family": "media-communication",
+      "terraform_type": "aws_pinpoint_event_stream",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/pinpoint-gcm-channel",
+      "label": "AWS End User Messaging gcm channel",
+      "family": "media-communication",
+      "terraform_type": "aws_pinpoint_gcm_channel",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/pinpoint-sms-channel",
+      "label": "AWS End User Messaging SMS channel",
+      "family": "media-communication",
+      "terraform_type": "aws_pinpoint_sms_channel",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/pinpointsmsvoicev2-pool",
+      "label": "AWS End User Messaging SMS pool",
+      "family": "media-communication",
+      "terraform_type": "aws_pinpointsmsvoicev2_pool",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/prometheus-anomaly-detector",
+      "label": "Amazon Managed Service for Prometheus anomaly detector",
+      "family": "operations",
+      "terraform_type": "aws_prometheus_anomaly_detector",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/prometheus-workspace",
+      "label": "Amazon Managed Service for Prometheus workspace",
+      "family": "operations",
+      "terraform_type": "aws_prometheus_workspace",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/qbusiness-application",
+      "label": "Amazon Q Business application",
+      "family": "ai-ml",
+      "terraform_type": "aws_qbusiness_application",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/qldb-stream",
+      "label": "Amazon QLDB stream",
+      "family": "databases",
+      "terraform_type": "aws_qldb_stream",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/quicksight-dashboard",
+      "label": "Amazon QuickSight dashboard",
+      "family": "data-analytics",
+      "terraform_type": "aws_quicksight_dashboard",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/quicksight-vpc-connection",
+      "label": "Amazon QuickSight VPC connection",
+      "family": "network",
+      "terraform_type": "aws_quicksight_vpc_connection",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/ram-sharing-with-organization",
+      "label": "AWS Resource Access Manager (AWS RAM) sharing with organization",
+      "family": "governance-management",
+      "terraform_type": "aws_ram_sharing_with_organization",
+      "official_source": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html"
+    },
+    {
+      "rule_id": "aws/rds-cluster",
+      "label": "Amazon Aurora or Amazon RDS cluster",
+      "family": "databases",
+      "terraform_type": "aws_rds_cluster",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/rds-cluster-activity-stream",
+      "label": "Amazon RDS cluster activity stream",
+      "family": "databases",
+      "terraform_type": "aws_rds_cluster_activity_stream",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/rds-cluster-endpoint",
+      "label": "Amazon RDS cluster endpoint",
+      "family": "databases",
+      "terraform_type": "aws_rds_cluster_endpoint",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/rds-cluster-instance",
+      "label": "Amazon RDS cluster instance",
+      "family": "databases",
+      "terraform_type": "aws_rds_cluster_instance",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/rds-global-cluster",
+      "label": "Amazon RDS global cluster",
+      "family": "databases",
+      "terraform_type": "aws_rds_global_cluster",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/redshift-cluster",
+      "label": "Amazon Redshift cluster",
+      "family": "data-analytics",
+      "terraform_type": "aws_redshift_cluster",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/redshift-idc-application",
+      "label": "Amazon Redshift idc application",
+      "family": "data-analytics",
+      "terraform_type": "aws_redshift_idc_application",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/analytics.html"
+    },
+    {
+      "rule_id": "aws/rekognition-collection",
+      "label": "Amazon Rekognition collection",
+      "family": "ai-ml",
+      "terraform_type": "aws_rekognition_collection",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/rekognition-project",
+      "label": "Amazon Rekognition project",
+      "family": "ai-ml",
+      "terraform_type": "aws_rekognition_project",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/resiliencehubv2-service",
+      "label": "AWS Resilience Hub V2 service",
+      "family": "operations",
+      "terraform_type": "aws_resiliencehubv2_service",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/resiliencehubv2-service-function",
+      "label": "AWS Resilience Hub V2 service function",
+      "family": "operations",
+      "terraform_type": "aws_resiliencehubv2_service_function",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/resourceexplorer2-index",
+      "label": "AWS Resource Explorer index",
+      "family": "operations",
+      "terraform_type": "aws_resourceexplorer2_index",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/resourcegroups-group",
+      "label": "AWS Resource Groups",
+      "family": "governance-management",
+      "terraform_type": "aws_resourcegroups_group",
+      "official_source": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html"
+    },
+    {
+      "rule_id": "aws/rolesanywhere-profile",
+      "label": "AWS IAM Roles Anywhere profile",
+      "family": "identity-iam",
+      "terraform_type": "aws_rolesanywhere_profile",
+      "official_source": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"
+    },
+    {
+      "rule_id": "aws/route-table",
+      "label": "Amazon VPC route table",
+      "family": "network",
+      "terraform_type": "aws_route_table",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/route53-cidr-collection",
+      "label": "Amazon Route 53 CIDR collection",
+      "family": "dns-cdn",
+      "terraform_type": "aws_route53_cidr_collection",
+      "official_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html"
+    },
+    {
+      "rule_id": "aws/route53-key-signing-key",
+      "label": "Amazon Route 53 key signing key",
+      "family": "dns-cdn",
+      "terraform_type": "aws_route53_key_signing_key",
+      "official_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html"
+    },
+    {
+      "rule_id": "aws/route53-resolver-endpoint",
+      "label": "Amazon Route 53 Resolver endpoint",
+      "family": "dns-cdn",
+      "terraform_type": "aws_route53_resolver_endpoint",
+      "official_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html"
+    },
+    {
+      "rule_id": "aws/route53-resolver-firewall-rule-group",
+      "label": "Amazon Route 53 Resolver firewall rule group",
+      "family": "dns-cdn",
+      "terraform_type": "aws_route53_resolver_firewall_rule_group",
+      "official_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html"
+    },
+    {
+      "rule_id": "aws/route53-traffic-policy-instance",
+      "label": "Amazon Route 53 traffic policy instance",
+      "family": "dns-cdn",
+      "terraform_type": "aws_route53_traffic_policy_instance",
+      "official_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html"
+    },
+    {
+      "rule_id": "aws/route53-zone",
+      "label": "Amazon Route 53 hosted zone",
+      "family": "dns-cdn",
+      "terraform_type": "aws_route53_zone",
+      "official_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html"
+    },
+    {
+      "rule_id": "aws/route53domains-domain",
+      "label": "AWS Route 53 Domains",
+      "family": "dns-cdn",
+      "terraform_type": "aws_route53domains_domain",
+      "official_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html"
+    },
+    {
+      "rule_id": "aws/route53domains-registered-domain",
+      "label": "AWS Route 53 Domains registered domain",
+      "family": "dns-cdn",
+      "terraform_type": "aws_route53domains_registered_domain",
+      "official_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html"
+    },
+    {
+      "rule_id": "aws/route53profiles-profile",
+      "label": "AWS Route 53 Profiles",
+      "family": "dns-cdn",
+      "terraform_type": "aws_route53profiles_profile",
+      "official_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html"
+    },
+    {
+      "rule_id": "aws/route53recoverycontrolconfig-cluster",
+      "label": "AWS Route 53 Recovery Control Config cluster",
+      "family": "dns-cdn",
+      "terraform_type": "aws_route53recoverycontrolconfig_cluster",
+      "official_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html"
+    },
+    {
+      "rule_id": "aws/route53recoveryreadiness-recovery-group",
+      "label": "AWS Route 53 Recovery Readiness recovery group",
+      "family": "dns-cdn",
+      "terraform_type": "aws_route53recoveryreadiness_recovery_group",
+      "official_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html"
+    },
+    {
+      "rule_id": "aws/rum-app-monitor",
+      "label": "AWS CloudWatch RUM app monitor",
+      "family": "operations",
+      "terraform_type": "aws_rum_app_monitor",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/s3-access-point",
+      "label": "Amazon S3 Control access point",
+      "family": "storage",
+      "terraform_type": "aws_s3_access_point",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/s3-bucket",
+      "label": "Amazon S3 bucket",
+      "family": "storage",
+      "terraform_type": "aws_s3_bucket",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/s3-bucket-server-side-encryption-configuration",
+      "label": "Amazon S3 bucket server side encryption configuration",
+      "family": "storage",
+      "terraform_type": "aws_s3_bucket_server_side_encryption_configuration",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/s3-bucket-versioning",
+      "label": "Amazon S3 bucket versioning",
+      "family": "storage",
+      "terraform_type": "aws_s3_bucket_versioning",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/s3-directory-bucket",
+      "label": "Amazon S3 directory bucket",
+      "family": "storage",
+      "terraform_type": "aws_s3_directory_bucket",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/s3control-access-grants-instance",
+      "label": "Amazon S3 Control access grants instance",
+      "family": "storage",
+      "terraform_type": "aws_s3control_access_grants_instance",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/s3control-bucket",
+      "label": "Amazon S3 Control bucket",
+      "family": "storage",
+      "terraform_type": "aws_s3control_bucket",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/s3control-multi-region-access-point",
+      "label": "Amazon S3 Control multi-region access point",
+      "family": "storage",
+      "terraform_type": "aws_s3control_multi_region_access_point",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/s3control-object-lambda-access-point",
+      "label": "Amazon S3 Control object lambda access point",
+      "family": "serverless",
+      "terraform_type": "aws_s3control_object_lambda_access_point",
+      "official_source": "https://docs.aws.amazon.com/lambda/latest/dg/welcome.html"
+    },
+    {
+      "rule_id": "aws/s3files-access-point",
+      "label": "Amazon S3 file buckets access point",
+      "family": "storage",
+      "terraform_type": "aws_s3files_access_point",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/s3files-file-system",
+      "label": "Amazon S3 file buckets file system",
+      "family": "storage",
+      "terraform_type": "aws_s3files_file_system",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/s3outposts-endpoint",
+      "label": "Amazon S3 on Outposts endpoint",
+      "family": "storage",
+      "terraform_type": "aws_s3outposts_endpoint",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/s3tables-table",
+      "label": "Amazon S3 Tables",
+      "family": "storage",
+      "terraform_type": "aws_s3tables_table",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/s3tables-table-bucket",
+      "label": "Amazon S3 Tables table bucket",
+      "family": "storage",
+      "terraform_type": "aws_s3tables_table_bucket",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/s3vectors-index",
+      "label": "Amazon S3 Vectors index",
+      "family": "storage",
+      "terraform_type": "aws_s3vectors_index",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/s3vectors-vector-bucket",
+      "label": "Amazon S3 Vectors vector bucket",
+      "family": "storage",
+      "terraform_type": "aws_s3vectors_vector_bucket",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/sagemaker-code-repository",
+      "label": "AWS SageMaker AI code repository",
+      "family": "ai-ml",
+      "terraform_type": "aws_sagemaker_code_repository",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/sagemaker-device-fleet",
+      "label": "AWS SageMaker AI device fleet",
+      "family": "ai-ml",
+      "terraform_type": "aws_sagemaker_device_fleet",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/sagemaker-domain",
+      "label": "AWS SageMaker AI domain",
+      "family": "ai-ml",
+      "terraform_type": "aws_sagemaker_domain",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/sagemaker-endpoint",
+      "label": "Amazon SageMaker AI endpoint",
+      "family": "ai-ml",
+      "terraform_type": "aws_sagemaker_endpoint",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/sagemaker-feature-group",
+      "label": "AWS SageMaker AI feature group",
+      "family": "ai-ml",
+      "terraform_type": "aws_sagemaker_feature_group",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/sagemaker-hub",
+      "label": "AWS SageMaker AI hub",
+      "family": "ai-ml",
+      "terraform_type": "aws_sagemaker_hub",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/sagemaker-model",
+      "label": "AWS SageMaker AI model",
+      "family": "ai-ml",
+      "terraform_type": "aws_sagemaker_model",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/sagemaker-model-package-group",
+      "label": "AWS SageMaker AI model package group",
+      "family": "ai-ml",
+      "terraform_type": "aws_sagemaker_model_package_group",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/sagemaker-notebook-instance",
+      "label": "AWS SageMaker AI notebook instance",
+      "family": "ai-ml",
+      "terraform_type": "aws_sagemaker_notebook_instance",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/sagemaker-pipeline",
+      "label": "AWS SageMaker AI pipeline",
+      "family": "ai-ml",
+      "terraform_type": "aws_sagemaker_pipeline",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/sagemaker-project",
+      "label": "AWS SageMaker AI project",
+      "family": "ai-ml",
+      "terraform_type": "aws_sagemaker_project",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/scheduler-schedule-group",
+      "label": "Amazon EventBridge Scheduler schedule group",
+      "family": "messaging-eventing",
+      "terraform_type": "aws_scheduler_schedule_group",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/application-integration.html"
+    },
+    {
+      "rule_id": "aws/secretsmanager-secret",
+      "label": "AWS Secrets Manager secret",
+      "family": "security",
+      "terraform_type": "aws_secretsmanager_secret",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-security-services-overview/introduction.html"
+    },
+    {
+      "rule_id": "aws/security-group",
+      "label": "Amazon VPC security group",
+      "family": "network",
+      "terraform_type": "aws_security_group",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/securitylake-data-lake",
+      "label": "Amazon Security Lake data lake",
+      "family": "security",
+      "terraform_type": "aws_securitylake_data_lake",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-security-services-overview/introduction.html"
+    },
+    {
+      "rule_id": "aws/service-discovery-instance",
+      "label": "AWS Cloud Map instance",
+      "family": "dns-cdn",
+      "terraform_type": "aws_service_discovery_instance",
+      "official_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html"
+    },
+    {
+      "rule_id": "aws/service-discovery-service",
+      "label": "AWS Cloud Map service",
+      "family": "dns-cdn",
+      "terraform_type": "aws_service_discovery_service",
+      "official_source": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/Welcome.html"
+    },
+    {
+      "rule_id": "aws/servicecatalog-portfolio",
+      "label": "AWS Service Catalog portfolio",
+      "family": "governance-management",
+      "terraform_type": "aws_servicecatalog_portfolio",
+      "official_source": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html"
+    },
+    {
+      "rule_id": "aws/servicecatalog-product",
+      "label": "AWS Service Catalog product",
+      "family": "governance-management",
+      "terraform_type": "aws_servicecatalog_product",
+      "official_source": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html"
+    },
+    {
+      "rule_id": "aws/servicecatalog-provisioned-product",
+      "label": "AWS Service Catalog provisioned product",
+      "family": "governance-management",
+      "terraform_type": "aws_servicecatalog_provisioned_product",
+      "official_source": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html"
+    },
+    {
+      "rule_id": "aws/servicecatalogappregistry-application",
+      "label": "AWS Service Catalog AppRegistry application",
+      "family": "governance-management",
+      "terraform_type": "aws_servicecatalogappregistry_application",
+      "official_source": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html"
+    },
+    {
+      "rule_id": "aws/ses-identity-notification-topic",
+      "label": "Amazon Simple Email Service (Amazon SES) identity notification topic",
+      "family": "identity-iam",
+      "terraform_type": "aws_ses_identity_notification_topic",
+      "official_source": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"
+    },
+    {
+      "rule_id": "aws/sesv2-dedicated-ip-pool",
+      "label": "Amazon Simple Email Service (Amazon SES) dedicated IP pool",
+      "family": "media-communication",
+      "terraform_type": "aws_sesv2_dedicated_ip_pool",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/sesv2-multi-region-endpoint",
+      "label": "Amazon Simple Email Service (Amazon SES) multi region endpoint",
+      "family": "media-communication",
+      "terraform_type": "aws_sesv2_multi_region_endpoint",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/sfn-state-machine",
+      "label": "AWS Step Functions state machine",
+      "family": "messaging-eventing",
+      "terraform_type": "aws_sfn_state_machine",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/application-integration.html"
+    },
+    {
+      "rule_id": "aws/shield-protection-group",
+      "label": "AWS Shield protection group",
+      "family": "security",
+      "terraform_type": "aws_shield_protection_group",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-security-services-overview/introduction.html"
+    },
+    {
+      "rule_id": "aws/signer-signing-profile",
+      "label": "AWS Signer signing profile",
+      "family": "security",
+      "terraform_type": "aws_signer_signing_profile",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-security-services-overview/introduction.html"
+    },
+    {
+      "rule_id": "aws/sns-platform-application",
+      "label": "Amazon Simple Notification Service (Amazon SNS) platform application",
+      "family": "messaging-eventing",
+      "terraform_type": "aws_sns_platform_application",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/application-integration.html"
+    },
+    {
+      "rule_id": "aws/sns-topic",
+      "label": "Amazon SNS topic",
+      "family": "messaging-eventing",
+      "terraform_type": "aws_sns_topic",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/application-integration.html"
+    },
+    {
+      "rule_id": "aws/sns-topic-subscription",
+      "label": "Amazon Simple Notification Service (Amazon SNS) topic subscription",
+      "family": "messaging-eventing",
+      "terraform_type": "aws_sns_topic_subscription",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/application-integration.html"
+    },
+    {
+      "rule_id": "aws/sqs-queue",
+      "label": "Amazon SQS queue",
+      "family": "messaging-eventing",
+      "terraform_type": "aws_sqs_queue",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/application-integration.html"
+    },
+    {
+      "rule_id": "aws/ssm-parameter",
+      "label": "AWS SSM (Systems Manager) parameter",
+      "family": "operations",
+      "terraform_type": "aws_ssm_parameter",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/ssmcontacts-contact-channel",
+      "label": "AWS SSM Contacts contact channel",
+      "family": "operations",
+      "terraform_type": "aws_ssmcontacts_contact_channel",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/ssoadmin-application",
+      "label": "AWS SSO Admin application",
+      "family": "identity-iam",
+      "terraform_type": "aws_ssoadmin_application",
+      "official_source": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"
+    },
+    {
+      "rule_id": "aws/storagegateway-cached-iscsi-volume",
+      "label": "AWS Storage Gateway cached i scsi volume",
+      "family": "storage",
+      "terraform_type": "aws_storagegateway_cached_iscsi_volume",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/storagegateway-gateway",
+      "label": "AWS Storage Gateway",
+      "family": "storage",
+      "terraform_type": "aws_storagegateway_gateway",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/storagegateway-stored-iscsi-volume",
+      "label": "AWS Storage Gateway stored i scsi volume",
+      "family": "storage",
+      "terraform_type": "aws_storagegateway_stored_iscsi_volume",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/storagegateway-tape-pool",
+      "label": "AWS Storage Gateway tape pool",
+      "family": "storage",
+      "terraform_type": "aws_storagegateway_tape_pool",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/subnet",
+      "label": "Amazon VPC subnet",
+      "family": "network",
+      "terraform_type": "aws_subnet",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/swf-domain",
+      "label": "AWS SWF (Simple Workflow) domain",
+      "family": "governance-management",
+      "terraform_type": "aws_swf_domain",
+      "official_source": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html"
+    },
+    {
+      "rule_id": "aws/synthetics-canary",
+      "label": "Amazon CloudWatch Synthetics canary",
+      "family": "operations",
+      "terraform_type": "aws_synthetics_canary",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    },
+    {
+      "rule_id": "aws/timestreaminfluxdb-db-cluster",
+      "label": "Amazon Timestream for InfluxDB DB cluster",
+      "family": "databases",
+      "terraform_type": "aws_timestreaminfluxdb_db_cluster",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/timestreaminfluxdb-db-instance",
+      "label": "Amazon Timestream for InfluxDB DB instance",
+      "family": "databases",
+      "terraform_type": "aws_timestreaminfluxdb_db_instance",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/timestreamwrite-database",
+      "label": "Amazon Timestream for LiveAnalytics database",
+      "family": "databases",
+      "terraform_type": "aws_timestreamwrite_database",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/timestreamwrite-table",
+      "label": "Amazon Timestream for LiveAnalytics table",
+      "family": "databases",
+      "terraform_type": "aws_timestreamwrite_table",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/database.html"
+    },
+    {
+      "rule_id": "aws/transcribe-language-model",
+      "label": "Amazon Transcribe language model",
+      "family": "ai-ml",
+      "terraform_type": "aws_transcribe_language_model",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/machine-learning.html"
+    },
+    {
+      "rule_id": "aws/transfer-connector",
+      "label": "AWS Transfer Family connector",
+      "family": "storage",
+      "terraform_type": "aws_transfer_connector",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/transfer-server",
+      "label": "AWS Transfer Family server",
+      "family": "storage",
+      "terraform_type": "aws_transfer_server",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/transfer-workflow",
+      "label": "AWS Transfer Family workflow",
+      "family": "storage",
+      "terraform_type": "aws_transfer_workflow",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/storage-services.html"
+    },
+    {
+      "rule_id": "aws/verifiedaccess-endpoint",
+      "label": "AWS Verified Access verified access endpoint",
+      "family": "network",
+      "terraform_type": "aws_verifiedaccess_endpoint",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/verifiedaccess-group",
+      "label": "AWS Verified Access verified access group",
+      "family": "network",
+      "terraform_type": "aws_verifiedaccess_group",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/verifiedaccess-instance",
+      "label": "AWS Verified Access verified access instance",
+      "family": "network",
+      "terraform_type": "aws_verifiedaccess_instance",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/verifiedpermissions-policy-store",
+      "label": "Amazon Verified Permissions policy store",
+      "family": "identity-iam",
+      "terraform_type": "aws_verifiedpermissions_policy_store",
+      "official_source": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html"
+    },
+    {
+      "rule_id": "aws/vpc",
+      "label": "Amazon VPC",
+      "family": "network",
+      "terraform_type": "aws_vpc",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/vpc-endpoint",
+      "label": "AWS PrivateLink VPC endpoint",
+      "family": "network",
+      "terraform_type": "aws_vpc_endpoint",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/vpc-endpoint-service",
+      "label": "Amazon VPC VPC endpoint service",
+      "family": "network",
+      "terraform_type": "aws_vpc_endpoint_service",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/vpc-ipam-pool",
+      "label": "AWS VPC IPAM (IP Address Manager) ipam pool",
+      "family": "network",
+      "terraform_type": "aws_vpc_ipam_pool",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/vpc-peering-connection",
+      "label": "Amazon VPC peering connection",
+      "family": "network",
+      "terraform_type": "aws_vpc_peering_connection",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/vpc-route-server-endpoint",
+      "label": "Amazon VPC VPC route server endpoint",
+      "family": "network",
+      "terraform_type": "aws_vpc_route_server_endpoint",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/vpclattice-resource-gateway",
+      "label": "AWS VPC Lattice resource gateway",
+      "family": "network",
+      "terraform_type": "aws_vpclattice_resource_gateway",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/vpclattice-service",
+      "label": "AWS VPC Lattice service",
+      "family": "network",
+      "terraform_type": "aws_vpclattice_service",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/vpclattice-service-network",
+      "label": "AWS VPC Lattice service network",
+      "family": "network",
+      "terraform_type": "aws_vpclattice_service_network",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/vpclattice-target-group",
+      "label": "AWS VPC Lattice target group",
+      "family": "network",
+      "terraform_type": "aws_vpclattice_target_group",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/vpn-connection",
+      "label": "AWS Site-to-Site VPN connection",
+      "family": "network",
+      "terraform_type": "aws_vpn_connection",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/vpn-gateway",
+      "label": "virtual private gateway",
+      "family": "network",
+      "terraform_type": "aws_vpn_gateway",
+      "official_source": "https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html"
+    },
+    {
+      "rule_id": "aws/waf-rule-group",
+      "label": "AWS WAF Classic rule group",
+      "family": "security",
+      "terraform_type": "aws_waf_rule_group",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-security-services-overview/introduction.html"
+    },
+    {
+      "rule_id": "aws/wafregional-rule-group",
+      "label": "AWS WAF Classic Regional rule group",
+      "family": "security",
+      "terraform_type": "aws_wafregional_rule_group",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-security-services-overview/introduction.html"
+    },
+    {
+      "rule_id": "aws/wafv2-rule-group",
+      "label": "AWS WAF rule group",
+      "family": "security",
+      "terraform_type": "aws_wafv2_rule_group",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-security-services-overview/introduction.html"
+    },
+    {
+      "rule_id": "aws/workmail-default-domain",
+      "label": "Amazon WorkMail default domain",
+      "family": "media-communication",
+      "terraform_type": "aws_workmail_default_domain",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/workmail-domain",
+      "label": "Amazon WorkMail domain",
+      "family": "media-communication",
+      "terraform_type": "aws_workmail_domain",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/workmail-organization",
+      "label": "Amazon WorkMail organization",
+      "family": "media-communication",
+      "terraform_type": "aws_workmail_organization",
+      "official_source": "https://docs.aws.amazon.com/connect/latest/adminguide/what-is-amazon-connect.html"
+    },
+    {
+      "rule_id": "aws/workspaces-pool",
+      "label": "Amazon WorkSpaces pool",
+      "family": "end-user-computing",
+      "terraform_type": "aws_workspaces_pool",
+      "official_source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces.html"
+    },
+    {
+      "rule_id": "aws/workspaces-workspace",
+      "label": "Amazon WorkSpaces",
+      "family": "end-user-computing",
+      "terraform_type": "aws_workspaces_workspace",
+      "official_source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces.html"
+    },
+    {
+      "rule_id": "aws/workspacesweb-trust-store",
+      "label": "Amazon WorkSpaces Web trust store",
+      "family": "end-user-computing",
+      "terraform_type": "aws_workspacesweb_trust_store",
+      "official_source": "https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces.html"
+    },
+    {
+      "rule_id": "aws/xray-group",
+      "label": "AWS X-Ray group",
+      "family": "operations",
+      "terraform_type": "aws_xray_group",
+      "official_source": "https://docs.aws.amazon.com/whitepapers/latest/aws-overview/management-and-governance.html"
+    }
+  ]
+}

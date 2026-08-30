@@ -1,0 +1,122 @@
+concept "jwt-provider" {
+  kind        = entity
+  description = "A JWT validation boundary used by Consul service mesh intentions."
+}
+
+concept "mesh-certificate-authority" {
+  kind        = entity
+  description = "The certificate authority issuing Consul service mesh workload identities."
+}
+
+concept "service-mesh" {
+  kind        = entity
+  description = "A Consul service mesh traffic-control and identity boundary."
+}
+
+concept "service-networking-configuration" {
+  kind        = detail
+  description = "A mesh-wide or service-specific proxy configuration."
+}
+
+rule "certificate-authority" {
+  match {
+    kind = "resource"
+    type = "consul_certificate_authority"
+  }
+
+  as = concept.mesh-certificate-authority
+}
+
+rule "config-entry-jwt-provider-json" {
+  match {
+    kind  = "resource"
+    type  = "consul_config_entry"
+    where = source.kind == "jwt-provider"
+  }
+
+  as = concept.jwt-provider
+}
+
+rule "config-entry-jwt-provider-json-lookup" {
+  match {
+    kind  = "data"
+    type  = "consul_config_entry"
+    where = source.kind == "jwt-provider"
+  }
+
+  as = concept.jwt-provider
+}
+
+rule "config-entry-mesh-json" {
+  match {
+    kind  = "resource"
+    type  = "consul_config_entry"
+    where = source.kind == "mesh"
+  }
+
+  as = concept.service-mesh
+}
+
+rule "config-entry-mesh-json-lookup" {
+  match {
+    kind  = "data"
+    type  = "consul_config_entry"
+    where = source.kind == "mesh"
+  }
+
+  as = concept.service-mesh
+}
+
+rule "config-entry-proxy-defaults-json" {
+  match {
+    kind  = "resource"
+    type  = "consul_config_entry"
+    where = source.kind == "proxy-defaults"
+  }
+
+  as = concept.service-networking-configuration
+}
+
+rule "config-entry-proxy-defaults-json-lookup" {
+  match {
+    kind  = "data"
+    type  = "consul_config_entry"
+    where = source.kind == "proxy-defaults"
+  }
+
+  as = concept.service-networking-configuration
+}
+
+rule "config-entry-service-defaults" {
+  match {
+    kind = "resource"
+    type = "consul_config_entry_service_defaults"
+  }
+
+  as = concept.service-networking-configuration
+
+  contribution {
+    to  = concept.consul-service
+    via = source.name
+  }
+}
+
+rule "config-entry-service-defaults-json" {
+  match {
+    kind  = "resource"
+    type  = "consul_config_entry"
+    where = source.kind == "service-defaults"
+  }
+
+  as = concept.service-networking-configuration
+}
+
+rule "config-entry-service-defaults-json-lookup" {
+  match {
+    kind  = "data"
+    type  = "consul_config_entry"
+    where = source.kind == "service-defaults"
+  }
+
+  as = concept.service-networking-configuration
+}

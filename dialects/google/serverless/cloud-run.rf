@@ -1,0 +1,57 @@
+concept "cloud-run-service" {
+  kind        = entity
+  description = "A Cloud Run service that handles requests or events on managed container instances."
+}
+
+concept "cloud-run-job" {
+  kind        = entity
+  description = "A Cloud Run job that runs tasks to completion."
+}
+
+rule "cloud-run-service" {
+  match {
+    kind = "resource"
+    type = "google_cloud_run_v2_service"
+  }
+
+  as = concept.cloud-run-service
+
+  context {
+    as  = context.core.network
+    to  = concept.core.virtual-network
+    via = source.template[0].vpc_access[0].network_interfaces[0].network
+  }
+
+  context {
+    as  = context.core.network
+    to  = concept.core.subnet
+    via = source.template[0].vpc_access[0].network_interfaces[0].subnetwork
+  }
+}
+
+rule "cloud-run-job" {
+  match {
+    kind = "resource"
+    type = "google_cloud_run_v2_job"
+  }
+
+  as = concept.cloud-run-job
+}
+
+rule "cloud-run-service-v1" {
+  match {
+    kind = "resource"
+    type = "google_cloud_run_service"
+  }
+
+  as = concept.cloud-run-service
+}
+
+rule "cloud-run-worker-pool" {
+  match {
+    kind = "resource"
+    type = "google_cloud_run_v2_worker_pool"
+  }
+
+  as = concept.cloud-run-service
+}

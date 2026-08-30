@@ -1,0 +1,4 @@
+concept "workflow" {
+  kind        = entity
+  description = "A managed workflow coordinating steps and service calls."
+}

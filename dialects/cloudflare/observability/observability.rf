@@ -1,0 +1,109 @@
+concept "logpush-job" {
+  kind        = entity
+  description = "A Cloudflare Logpush delivery pipeline."
+}
+
+concept "web-analytics-site" {
+  kind        = entity
+  description = "A site observed by Cloudflare Web Analytics."
+}
+
+concept "observability-configuration" {
+  kind        = detail
+  description = "A rule or test supporting Cloudflare observability."
+}
+
+concept "network-monitor" {
+  kind        = entity
+  description = "A Cloudflare Network Monitoring configuration."
+}
+
+rule "logpush-job" {
+  match {
+    kind = "resource"
+    type = "cloudflare_logpush_job"
+  }
+
+  as = concept.logpush-job
+}
+
+rule "web-analytics-site" {
+  match {
+    kind = "resource"
+    type = "cloudflare_web_analytics_site"
+  }
+
+  as = concept.web-analytics-site
+}
+
+rule "web-analytics-rule" {
+  match {
+    kind = "resource"
+    type = "cloudflare_web_analytics_rule"
+  }
+
+  as = concept.observability-configuration
+}
+
+rule "network-monitoring" {
+  match {
+    kind = "resource"
+    type = "cloudflare_magic_network_monitoring_configuration"
+  }
+
+  as = concept.network-monitor
+}
+
+rule "network-monitoring-rule" {
+  match {
+    kind = "resource"
+    type = "cloudflare_magic_network_monitoring_rule"
+  }
+
+  as = concept.observability-configuration
+}
+
+rule "notification-policy" {
+  match {
+    kind = "resource"
+    type = "cloudflare_notification_policy"
+  }
+
+  as = concept.observability-configuration
+}
+
+rule "notification-webhook" {
+  match {
+    kind = "resource"
+    type = "cloudflare_notification_policy_webhooks"
+  }
+
+  as = concept.observability-configuration
+}
+
+rule "dex-test" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zero_trust_dex_test"
+  }
+
+  as = concept.network-monitor
+}
+
+rule "dex-rule" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zero_trust_dex_rule"
+  }
+
+  as = concept.observability-configuration
+}
+
+rule "logpull-retention" {
+  match {
+    kind = "resource"
+    type = "cloudflare_logpull_retention"
+  }
+
+  as = concept.observability-configuration
+}

@@ -1,0 +1,27 @@
+concept "cloud-build-worker-pool" {
+  kind        = entity
+  description = "A Cloud Build private worker pool running builds on dedicated workers."
+}
+
+concept "cloud-build-trigger" {
+  kind        = detail
+  description = "A source or event trigger configuring Cloud Build execution."
+}
+
+rule "cloud-build-worker-pool" {
+  match {
+    kind = "resource"
+    type = "google_cloudbuild_worker_pool"
+  }
+
+  as = concept.cloud-build-worker-pool
+}
+
+rule "cloud-build-trigger" {
+  match {
+    kind = "resource"
+    type = "google_cloudbuild_trigger"
+  }
+
+  as = concept.cloud-build-trigger
+}

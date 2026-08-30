@@ -1,0 +1,19 @@
+dialect "azure" {
+  version = "0.1.0"
+
+  requires {
+    core = "0.1.0"
+  }
+
+  provider "hashicorp/azurerm" {
+    version = "= 5.3.0"
+  }
+
+  provider "hashicorp/azuread" {
+    version = "= 3.9.0"
+  }
+
+  provider "azure/azapi" {
+    version = "= 2.12.0"
+  }
+}

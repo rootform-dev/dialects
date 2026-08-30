@@ -1,0 +1,40 @@
+{
+  "format_version": "1",
+  "matrix_sha256": "sha256:f982f78b94fd6bc4de0276e8c2bd2f1943d6b554df9371447903975d6543b439",
+  "total_rows": 3380,
+  "by_inventory": {
+    "provider_constructs": 3127,
+    "catalog_products": 253
+  },
+  "provider_constructs": {
+    "managed_resources": 1711,
+    "data_sources": 679,
+    "ephemeral_resources": 10,
+    "actions": 12,
+    "list_resources": 210,
+    "provider_functions": 4,
+    "resource_identities": 501
+  },
+  "represented_rules": 443,
+  "by_decision": {
+    "supported": 407,
+    "partial": 192,
+    "intentionally-unrepresented": 2779,
+    "unsupported": 2
+  },
+  "by_declaration_outcome": {
+    "represented": 443,
+    "supporting": 0,
+    "filtered": 0,
+    "unsupported": 1969,
+    "failed": 0,
+    "not-applicable": 715
+  },
+  "catalog": {
+    "supported": 16,
+    "partial": 140,
+    "intentionally-unrepresented": 96,
+    "unsupported": 1,
+    "no-provider-surface": 82
+  }
+}

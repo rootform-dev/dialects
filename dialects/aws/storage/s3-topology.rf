@@ -1,0 +1,36 @@
+rule "s3-bucket" {
+  match {
+    kind = "resource"
+    type = "aws_s3_bucket"
+  }
+
+  as = concept.core.object-storage-container
+}
+
+rule "s3-bucket-versioning" {
+  match {
+    kind = "resource"
+    type = "aws_s3_bucket_versioning"
+  }
+
+  as = concept.storage-configuration
+
+  contribution {
+    to  = concept.core.object-storage-container
+    via = source.bucket
+  }
+}
+
+rule "s3-bucket-server-side-encryption-configuration" {
+  match {
+    kind = "resource"
+    type = "aws_s3_bucket_server_side_encryption_configuration"
+  }
+
+  as = concept.storage-configuration
+
+  contribution {
+    to  = concept.core.object-storage-container
+    via = source.bucket
+  }
+}

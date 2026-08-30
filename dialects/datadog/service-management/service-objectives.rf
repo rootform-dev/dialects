@@ -1,0 +1,17 @@
+rule "service-level-objective" {
+  match {
+    kind = "resource"
+    type = "datadog_service_level_objective"
+  }
+
+  as = concept.core.service-objective
+}
+
+rule "service-level-objective-lookup" {
+  match {
+    kind = "data"
+    type = "datadog_service_level_objective"
+  }
+
+  as = concept.core.service-objective
+}

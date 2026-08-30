@@ -1,0 +1,4 @@
+concept "dedicated-interconnect" {
+  kind        = entity
+  description = "A dedicated private connection between an external network and a cloud provider."
+}

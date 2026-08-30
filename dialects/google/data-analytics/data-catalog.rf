@@ -1,0 +1,27 @@
+concept "data-catalog-entry-group" {
+  kind        = scope
+  description = "A Data Catalog entry group organizing metadata entries."
+}
+
+concept "data-catalog-taxonomy" {
+  kind        = scope
+  description = "A Data Catalog taxonomy organizing policy tags."
+}
+
+rule "data-catalog-entry-group" {
+  match {
+    kind = "resource"
+    type = "google_data_catalog_entry_group"
+  }
+
+  as = concept.data-catalog-entry-group
+}
+
+rule "data-catalog-taxonomy" {
+  match {
+    kind = "resource"
+    type = "google_data_catalog_taxonomy"
+  }
+
+  as = concept.data-catalog-taxonomy
+}

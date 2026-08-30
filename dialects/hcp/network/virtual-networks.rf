@@ -1,0 +1,29 @@
+rule "hvn" {
+  match {
+    kind = "resource"
+    type = "hcp_hvn"
+  }
+
+  as = concept.core.virtual-network
+
+  context {
+    as  = context.core.ownership
+    to  = concept.project
+    via = source.project_id
+  }
+}
+
+rule "hvn-lookup" {
+  match {
+    kind = "data"
+    type = "hcp_hvn"
+  }
+
+  as = concept.core.virtual-network
+
+  context {
+    as  = context.core.ownership
+    to  = concept.project
+    via = source.project_id
+  }
+}

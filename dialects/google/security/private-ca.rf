@@ -1,0 +1,47 @@
+concept "private-ca-pool" {
+  kind        = scope
+  description = "A Certificate Authority Service pool containing certificate authorities."
+}
+
+concept "private-certificate-authority" {
+  kind        = entity
+  description = "A managed private certificate authority."
+}
+
+concept "private-certificate" {
+  kind        = detail
+  description = "A certificate issued by Certificate Authority Service without private key material."
+}
+
+rule "private-ca-pool" {
+  match {
+    kind = "resource"
+    type = "google_privateca_ca_pool"
+  }
+
+  as = concept.private-ca-pool
+}
+
+rule "private-certificate-authority" {
+  match {
+    kind = "resource"
+    type = "google_privateca_certificate_authority"
+  }
+
+  as = concept.private-certificate-authority
+
+  context {
+    as  = context.core.ownership
+    to  = concept.private-ca-pool
+    via = source.pool
+  }
+}
+
+rule "private-certificate" {
+  match {
+    kind = "resource"
+    type = "google_privateca_certificate"
+  }
+
+  as = concept.private-certificate
+}

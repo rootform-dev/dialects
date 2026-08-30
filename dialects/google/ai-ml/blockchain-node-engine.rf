@@ -1,0 +1,13 @@
+concept "blockchain-node" {
+  kind        = entity
+  description = "A managed Blockchain Node Engine node exposing blockchain network access."
+}
+
+rule "blockchain-node" {
+  match {
+    kind = "resource"
+    type = "google_blockchain_node_engine_blockchain_nodes"
+  }
+
+  as = concept.blockchain-node
+}

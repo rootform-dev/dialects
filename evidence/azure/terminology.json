@@ -1,0 +1,3359 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-29",
+  "policy": {
+    "visible_label_source": "authored Microsoft product and resource terminology",
+    "technical_provenance": "exact Terraform provider type and admitted ARM type/API version",
+    "forbidden_generation": "no humanization of Terraform type, rule id, or concept id"
+  },
+  "required_terms": {
+    "aks-cluster": "Azure Kubernetes Service (AKS) cluster",
+    "virtual-network": "Azure Virtual Network",
+    "blob-container": "Azure Blob Storage container",
+    "mssql-database": "Azure SQL Database",
+    "cosmos-account": "Azure Cosmos DB account",
+    "linux-function-app": "Azure Functions Linux function app",
+    "key-vault": "Azure Key Vault"
+  },
+  "entries": [
+    {
+      "rule_id": "azure/advanced-threat-protection",
+      "label": "Microsoft Defender for Cloud advanced threat protection",
+      "family": "security",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_advanced_threat_protection",
+      "official_source": "https://learn.microsoft.com/en-us/azure/key-vault/"
+    },
+    {
+      "rule_id": "azure/ai-foundry",
+      "label": "Microsoft Foundry resource",
+      "family": "ai-ml",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_ai_foundry",
+      "official_source": "https://learn.microsoft.com/en-us/azure/ai-foundry/"
+    },
+    {
+      "rule_id": "azure/ai-foundry-project",
+      "label": "Microsoft Foundry project",
+      "family": "ai-ml",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_ai_foundry_project",
+      "official_source": "https://learn.microsoft.com/en-us/azure/ai-foundry/"
+    },
+    {
+      "rule_id": "azure/ai-model-deployment",
+      "label": "Azure AI model deployment",
+      "family": "ai-ml",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_cognitive_deployment",
+      "official_source": "https://learn.microsoft.com/en-us/azure/ai-foundry/"
+    },
+    {
+      "rule_id": "azure/ai-search-service",
+      "label": "Azure AI Search service",
+      "family": "ai-ml",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_search_service",
+      "official_source": "https://learn.microsoft.com/en-us/azure/ai-foundry/"
+    },
+    {
+      "rule_id": "azure/ai-services-account",
+      "label": "Azure AI services account",
+      "family": "ai-ml",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_cognitive_account",
+      "official_source": "https://learn.microsoft.com/en-us/azure/ai-foundry/"
+    },
+    {
+      "rule_id": "azure/ai-services-project",
+      "label": "Azure AI services project",
+      "family": "ai-ml",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_cognitive_account_project",
+      "official_source": "https://learn.microsoft.com/en-us/azure/ai-foundry/"
+    },
+    {
+      "rule_id": "azure/aks-cluster",
+      "label": "Azure Kubernetes Service (AKS) cluster",
+      "family": "containers",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_kubernetes_cluster",
+      "official_source": "https://learn.microsoft.com/en-us/azure/aks/"
+    },
+    {
+      "rule_id": "azure/aks-node-pool",
+      "label": "AKS node pool",
+      "family": "containers",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_kubernetes_cluster_node_pool",
+      "official_source": "https://learn.microsoft.com/en-us/azure/aks/"
+    },
+    {
+      "rule_id": "azure/analysis-services-server",
+      "label": "Azure Analysis Services server",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_analysis_services_server",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/api-connection",
+      "label": "Azure API connection",
+      "family": "api-integration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_api_connection",
+      "official_source": "https://learn.microsoft.com/en-us/azure/api-management/"
+    },
+    {
+      "rule_id": "azure/api-management",
+      "label": "Azure API Management service",
+      "family": "api-integration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_api_management",
+      "official_source": "https://learn.microsoft.com/en-us/azure/api-management/"
+    },
+    {
+      "rule_id": "azure/api-management-api",
+      "label": "Azure API Management API",
+      "family": "api-integration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_api_management_api",
+      "official_source": "https://learn.microsoft.com/en-us/azure/api-management/"
+    },
+    {
+      "rule_id": "azure/api-management-backend",
+      "label": "Azure API Management backend",
+      "family": "api-integration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_api_management_backend",
+      "official_source": "https://learn.microsoft.com/en-us/azure/api-management/"
+    },
+    {
+      "rule_id": "azure/api-management-gateway",
+      "label": "Azure API Management self-hosted gateway",
+      "family": "api-integration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_api_management_gateway",
+      "official_source": "https://learn.microsoft.com/en-us/azure/api-management/"
+    },
+    {
+      "rule_id": "azure/api-management-policy",
+      "label": "Azure API Management policy",
+      "family": "api-integration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_api_management_policy",
+      "official_source": "https://learn.microsoft.com/en-us/azure/api-management/"
+    },
+    {
+      "rule_id": "azure/api-management-product",
+      "label": "Azure API Management product",
+      "family": "api-integration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_api_management_product",
+      "official_source": "https://learn.microsoft.com/en-us/azure/api-management/"
+    },
+    {
+      "rule_id": "azure/api-management-standalone-gateway",
+      "label": "Azure API Management standalone gateway",
+      "family": "api-integration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_api_management_standalone_gateway",
+      "official_source": "https://learn.microsoft.com/en-us/azure/api-management/"
+    },
+    {
+      "rule_id": "azure/api-management-workspace",
+      "label": "Azure API Management workspace",
+      "family": "api-integration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_api_management_workspace",
+      "official_source": "https://learn.microsoft.com/en-us/azure/api-management/"
+    },
+    {
+      "rule_id": "azure/app-configuration",
+      "label": "Azure App Configuration store",
+      "family": "api-integration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_app_configuration",
+      "official_source": "https://learn.microsoft.com/en-us/azure/api-management/"
+    },
+    {
+      "rule_id": "azure/app-service-connection",
+      "label": "Azure App Service connection",
+      "family": "api-integration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_app_service_connection",
+      "official_source": "https://learn.microsoft.com/en-us/azure/api-management/"
+    },
+    {
+      "rule_id": "azure/app-service-environment",
+      "label": "Azure App Service Environment v3",
+      "family": "serverless",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_app_service_environment_v3",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-functions/"
+    },
+    {
+      "rule_id": "azure/app-service-plan",
+      "label": "Azure App Service plan",
+      "family": "serverless",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_service_plan",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-functions/"
+    },
+    {
+      "rule_id": "azure/application-gateway",
+      "label": "Azure Application Gateway",
+      "family": "load-balancing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_application_gateway",
+      "official_source": "https://learn.microsoft.com/en-us/azure/load-balancer/"
+    },
+    {
+      "rule_id": "azure/application-insights",
+      "label": "Azure Monitor Application Insights",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_application_insights",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/application-insights-web-test",
+      "label": "Application Insights standard availability test",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_application_insights_standard_web_test",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/application-load-balancer",
+      "label": "Azure Application Load Balancer",
+      "family": "load-balancing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_application_load_balancer",
+      "official_source": "https://learn.microsoft.com/en-us/azure/load-balancer/"
+    },
+    {
+      "rule_id": "azure/application-load-balancer-frontend",
+      "label": "Azure Application Load Balancer frontend",
+      "family": "load-balancing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_application_load_balancer_frontend",
+      "official_source": "https://learn.microsoft.com/en-us/azure/load-balancer/"
+    },
+    {
+      "rule_id": "azure/application-security-group",
+      "label": "Azure Application Security Group",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_application_security_group",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/arc-custom-location",
+      "label": "Azure Arc custom location",
+      "family": "hybrid",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_extended_location_custom_location",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-arc/"
+    },
+    {
+      "rule_id": "azure/arc-enabled-server",
+      "label": "Azure Arc-enabled server",
+      "family": "hybrid",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_arc_machine",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-arc/"
+    },
+    {
+      "rule_id": "azure/arc-kubernetes-cluster",
+      "label": "Azure Arc-enabled Kubernetes cluster",
+      "family": "containers",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_arc_kubernetes_cluster",
+      "official_source": "https://learn.microsoft.com/en-us/azure/aks/"
+    },
+    {
+      "rule_id": "azure/arc-private-link-scope",
+      "label": "Azure Arc Private Link Scope",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_arc_private_link_scope",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/arc-provisioned-kubernetes-cluster",
+      "label": "Azure Arc-enabled provisioned Kubernetes cluster",
+      "family": "containers",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_arc_kubernetes_provisioned_cluster",
+      "official_source": "https://learn.microsoft.com/en-us/azure/aks/"
+    },
+    {
+      "rule_id": "azure/arc-resource-bridge",
+      "label": "Azure Arc resource bridge",
+      "family": "hybrid",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_arc_resource_bridge_appliance",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-arc/"
+    },
+    {
+      "rule_id": "azure/attestation-provider",
+      "label": "Microsoft Azure Attestation provider",
+      "family": "security",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_attestation_provider",
+      "official_source": "https://learn.microsoft.com/en-us/azure/key-vault/"
+    },
+    {
+      "rule_id": "azure/automatic-kubernetes-cluster",
+      "label": "Azure Kubernetes Service automatic cluster",
+      "family": "containers",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_kubernetes_automatic_cluster",
+      "official_source": "https://learn.microsoft.com/en-us/azure/aks/"
+    },
+    {
+      "rule_id": "azure/automation-account",
+      "label": "Azure Automation account",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_automation_account",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/automation-runbook",
+      "label": "Azure Automation runbook",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_automation_runbook",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/automation-schedule",
+      "label": "Azure Automation schedule",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_automation_schedule",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/availability-set",
+      "label": "Azure availability set",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_availability_set",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/azure-bot",
+      "label": "Azure Bot Service bot",
+      "family": "ai-ml",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_bot_service_azure_bot",
+      "official_source": "https://learn.microsoft.com/en-us/azure/ai-foundry/"
+    },
+    {
+      "rule_id": "azure/azure-cache-for-redis",
+      "label": "Azure Cache for Redis",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_redis_cache",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/azure-enclave",
+      "label": "Azure Enclave",
+      "family": "hybrid",
+      "provider": "azapi",
+      "terraform_type": "azapi_resource",
+      "arm_type": "Microsoft.Mission/virtualEnclaves@2026-03-01-preview",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-arc/"
+    },
+    {
+      "rule_id": "azure/azure-files-share",
+      "label": "Azure Files share",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_storage_share",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/azure-firewall",
+      "label": "Azure Firewall",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_firewall",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/azure-firewall-policy",
+      "label": "Azure Firewall Policy",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_firewall_policy",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/azure-firewall-policy-rule-collection-group",
+      "label": "Azure Firewall Policy rule collection group",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_firewall_policy_rule_collection_group",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/azure-local-cluster",
+      "label": "Azure Local cluster",
+      "family": "hybrid",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_stack_hci_cluster",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-arc/"
+    },
+    {
+      "rule_id": "azure/azure-managed-redis",
+      "label": "Azure Managed Redis",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_managed_redis",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/backup-protected-vm",
+      "label": "Azure Backup protected virtual machine",
+      "family": "migration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_backup_protected_vm",
+      "official_source": "https://learn.microsoft.com/en-us/azure/migrate/"
+    },
+    {
+      "rule_id": "azure/bastion-host",
+      "label": "Azure Bastion",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_bastion_host",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/batch-account",
+      "label": "Azure Batch account",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_batch_account",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/batch-application",
+      "label": "Azure Batch application",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_batch_application",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/batch-job",
+      "label": "Azure Batch job",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_batch_job",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/batch-pool",
+      "label": "Azure Batch pool",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_batch_pool",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/blob-container",
+      "label": "Azure Blob Storage container",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_storage_container",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/bot-channels-registration",
+      "label": "Azure Bot Channels Registration",
+      "family": "ai-ml",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_bot_channels_registration",
+      "official_source": "https://learn.microsoft.com/en-us/azure/ai-foundry/"
+    },
+    {
+      "rule_id": "azure/bot-web-app",
+      "label": "Azure Bot Service Web App Bot",
+      "family": "ai-ml",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_bot_web_app",
+      "official_source": "https://learn.microsoft.com/en-us/azure/ai-foundry/"
+    },
+    {
+      "rule_id": "azure/capacity-reservation",
+      "label": "Azure capacity reservation",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_capacity_reservation",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/capacity-reservation-group",
+      "label": "Azure capacity reservation group",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_capacity_reservation_group",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/cdn-endpoint",
+      "label": "Azure Content Delivery Network endpoint",
+      "family": "dns-cdn",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_cdn_endpoint",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dns/"
+    },
+    {
+      "rule_id": "azure/cdn-profile",
+      "label": "Azure Content Delivery Network profile",
+      "family": "dns-cdn",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_cdn_profile",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dns/"
+    },
+    {
+      "rule_id": "azure/chaos-studio-experiment",
+      "label": "Azure Chaos Studio experiment",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_chaos_studio_experiment",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/classic-front-door",
+      "label": "Azure Front Door (classic)",
+      "family": "load-balancing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_frontdoor",
+      "official_source": "https://learn.microsoft.com/en-us/azure/load-balancer/"
+    },
+    {
+      "rule_id": "azure/communication-service",
+      "label": "Azure Communication Services resource",
+      "family": "communication",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_communication_service",
+      "official_source": "https://learn.microsoft.com/en-us/azure/communication-services/"
+    },
+    {
+      "rule_id": "azure/compute-gallery",
+      "label": "Azure Compute Gallery",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_shared_image_gallery",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/compute-image",
+      "label": "Azure compute image",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_image",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/confidential-ledger",
+      "label": "Azure confidential ledger",
+      "family": "security",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_confidential_ledger",
+      "official_source": "https://learn.microsoft.com/en-us/azure/key-vault/"
+    },
+    {
+      "rule_id": "azure/connected-container-registry",
+      "label": "connected Azure Container Registry",
+      "family": "containers",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_container_connected_registry",
+      "official_source": "https://learn.microsoft.com/en-us/azure/aks/"
+    },
+    {
+      "rule_id": "azure/container-app",
+      "label": "Azure Container Apps app",
+      "family": "containers",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_container_app",
+      "official_source": "https://learn.microsoft.com/en-us/azure/aks/"
+    },
+    {
+      "rule_id": "azure/container-app-environment",
+      "label": "Azure Container Apps environment",
+      "family": "containers",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_container_app_environment",
+      "official_source": "https://learn.microsoft.com/en-us/azure/aks/"
+    },
+    {
+      "rule_id": "azure/container-app-job",
+      "label": "Azure Container Apps job",
+      "family": "containers",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_container_app_job",
+      "official_source": "https://learn.microsoft.com/en-us/azure/aks/"
+    },
+    {
+      "rule_id": "azure/container-instance-group",
+      "label": "Azure Container Instances container group",
+      "family": "containers",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_container_group",
+      "official_source": "https://learn.microsoft.com/en-us/azure/aks/"
+    },
+    {
+      "rule_id": "azure/container-registry",
+      "label": "Azure Container Registry",
+      "family": "containers",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_container_registry",
+      "official_source": "https://learn.microsoft.com/en-us/azure/aks/"
+    },
+    {
+      "rule_id": "azure/cosmos-account",
+      "label": "Azure Cosmos DB account",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_cosmosdb_account",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/cosmos-cassandra-cluster",
+      "label": "Azure Managed Instance for Apache Cassandra cluster",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_cosmosdb_cassandra_cluster",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/cosmos-cassandra-keyspace",
+      "label": "Azure Cosmos DB for Apache Cassandra keyspace",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_cosmosdb_cassandra_keyspace",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/cosmos-cassandra-table",
+      "label": "Azure Cosmos DB for Apache Cassandra table",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_cosmosdb_cassandra_table",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/cosmos-dedicated-gateway",
+      "label": "Azure Cosmos DB dedicated gateway",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_cosmosdb_sql_dedicated_gateway",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/cosmos-gremlin-database",
+      "label": "Azure Cosmos DB for Apache Gremlin database",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_cosmosdb_gremlin_database",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/cosmos-gremlin-graph",
+      "label": "Azure Cosmos DB for Apache Gremlin graph",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_cosmosdb_gremlin_graph",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/cosmos-mongo-collection",
+      "label": "Azure Cosmos DB for MongoDB collection",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_cosmosdb_mongo_collection",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/cosmos-mongo-database",
+      "label": "Azure Cosmos DB for MongoDB database",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_cosmosdb_mongo_database",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/cosmos-postgresql-cluster",
+      "label": "Azure Cosmos DB for PostgreSQL cluster",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_cosmosdb_postgresql_cluster",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/cosmos-sql-container",
+      "label": "Azure Cosmos DB for NoSQL container",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_cosmosdb_sql_container",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/cosmos-sql-database",
+      "label": "Azure Cosmos DB for NoSQL database",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_cosmosdb_sql_database",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/custom-ip-prefix",
+      "label": "Azure custom IP prefix",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_custom_ip_prefix",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/data-box-edge-device",
+      "label": "Azure Data Box Edge device",
+      "family": "migration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_databox_edge_device",
+      "official_source": "https://learn.microsoft.com/en-us/azure/migrate/"
+    },
+    {
+      "rule_id": "azure/data-explorer-cluster",
+      "label": "Azure Data Explorer cluster",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_kusto_cluster",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/data-explorer-database",
+      "label": "Azure Data Explorer database",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_kusto_database",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/data-explorer-event-grid-connection",
+      "label": "Azure Data Explorer Event Grid data connection",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_kusto_eventgrid_data_connection",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/data-explorer-event-hubs-connection",
+      "label": "Azure Data Explorer Event Hubs data connection",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_kusto_eventhub_data_connection",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/data-factory",
+      "label": "Azure Data Factory",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_data_factory",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/data-factory-azure-integration-runtime",
+      "label": "Azure Data Factory Azure integration runtime",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_data_factory_integration_runtime_azure",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/data-factory-blob-dataset",
+      "label": "Azure Data Factory Azure Blob dataset",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_data_factory_dataset_azure_blob",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/data-factory-blob-linked-service",
+      "label": "Azure Data Factory Azure Blob Storage linked service",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_data_factory_linked_service_azure_blob_storage",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/data-factory-data-flow",
+      "label": "Azure Data Factory mapping data flow",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_data_factory_data_flow",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/data-factory-managed-private-endpoint",
+      "label": "Azure Data Factory managed private endpoint",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_data_factory_managed_private_endpoint",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/data-factory-pipeline",
+      "label": "Azure Data Factory pipeline",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_data_factory_pipeline",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/data-factory-schedule-trigger",
+      "label": "Azure Data Factory schedule trigger",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_data_factory_trigger_schedule",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/data-factory-self-hosted-integration-runtime",
+      "label": "Azure Data Factory self-hosted integration runtime",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_data_factory_integration_runtime_self_hosted",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/data-factory-sql-dataset",
+      "label": "Azure Data Factory Azure SQL table dataset",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_data_factory_dataset_azure_sql_table",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/data-factory-sql-linked-service",
+      "label": "Azure Data Factory Azure SQL Database linked service",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_data_factory_linked_service_azure_sql_database",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/data-lake-filesystem",
+      "label": "Azure Data Lake Storage Gen2 filesystem",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_storage_data_lake_gen2_filesystem",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/data-lake-path",
+      "label": "Azure Data Lake Storage Gen2 path",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_storage_data_lake_gen2_path",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/data-protection-backup-vault",
+      "label": "Azure Backup vault",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_data_protection_backup_vault",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/data-protection-blob-backup-policy",
+      "label": "Azure Blob Storage backup policy",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_data_protection_backup_policy_blob_storage",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/data-protection-disk-backup-policy",
+      "label": "Azure Disk Backup policy",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_data_protection_backup_policy_disk",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/data-share",
+      "label": "Azure Data Share",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_data_share",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/data-share-account",
+      "label": "Azure Data Share account",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_data_share_account",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/database-migration-project",
+      "label": "Azure Database Migration project",
+      "family": "migration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_database_migration_project",
+      "official_source": "https://learn.microsoft.com/en-us/azure/migrate/"
+    },
+    {
+      "rule_id": "azure/database-migration-service",
+      "label": "Azure Database Migration Service",
+      "family": "migration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_database_migration_service",
+      "official_source": "https://learn.microsoft.com/en-us/azure/migrate/"
+    },
+    {
+      "rule_id": "azure/databricks-virtual-network-peering",
+      "label": "Azure Databricks virtual network peering",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_databricks_virtual_network_peering",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/databricks-workspace",
+      "label": "Azure Databricks workspace",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_databricks_workspace",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/datadog-monitor",
+      "label": "Datadog on Azure monitor",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_datadog_monitor",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/ddos-protection-plan",
+      "label": "Azure DDoS Protection plan",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_network_ddos_protection_plan",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/dedicated-hardware-security-module",
+      "label": "Azure Dedicated HSM",
+      "family": "security",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_dedicated_hardware_security_module",
+      "official_source": "https://learn.microsoft.com/en-us/azure/key-vault/"
+    },
+    {
+      "rule_id": "azure/dedicated-host",
+      "label": "Azure Dedicated Host",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_dedicated_host",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/dedicated-host-group",
+      "label": "Azure Dedicated Host group",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_dedicated_host_group",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/defender-subscription-plan",
+      "label": "Microsoft Defender for Cloud plan",
+      "family": "security",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_security_center_subscription_pricing",
+      "official_source": "https://learn.microsoft.com/en-us/azure/key-vault/"
+    },
+    {
+      "rule_id": "azure/defender-workspace",
+      "label": "Microsoft Defender for Cloud workspace integration",
+      "family": "security",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_security_center_workspace",
+      "official_source": "https://learn.microsoft.com/en-us/azure/key-vault/"
+    },
+    {
+      "rule_id": "azure/dev-box-definition",
+      "label": "Microsoft Dev Box definition",
+      "family": "developer-ci-cd",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_dev_center_dev_box_definition",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dev-box/"
+    },
+    {
+      "rule_id": "azure/dev-center",
+      "label": "Microsoft Dev Box Dev Center",
+      "family": "developer-ci-cd",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_dev_center",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dev-box/"
+    },
+    {
+      "rule_id": "azure/dev-center-project",
+      "label": "Dev Center project",
+      "family": "developer-ci-cd",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_dev_center_project",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dev-box/"
+    },
+    {
+      "rule_id": "azure/dev-test-lab",
+      "label": "Azure DevTest Labs lab",
+      "family": "developer-ci-cd",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_dev_test_lab",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dev-box/"
+    },
+    {
+      "rule_id": "azure/dev-test-linux-virtual-machine",
+      "label": "Azure DevTest Labs Linux virtual machine",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_dev_test_linux_virtual_machine",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/dev-test-windows-virtual-machine",
+      "label": "Azure DevTest Labs Windows virtual machine",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_dev_test_windows_virtual_machine",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/digital-twins-event-grid-endpoint",
+      "label": "Azure Digital Twins Event Grid endpoint",
+      "family": "iot",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_digital_twins_endpoint_eventgrid",
+      "official_source": "https://learn.microsoft.com/en-us/azure/iot-hub/"
+    },
+    {
+      "rule_id": "azure/digital-twins-instance",
+      "label": "Azure Digital Twins instance",
+      "family": "iot",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_digital_twins_instance",
+      "official_source": "https://learn.microsoft.com/en-us/azure/iot-hub/"
+    },
+    {
+      "rule_id": "azure/disk-snapshot",
+      "label": "Azure managed disk snapshot",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_snapshot",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/dns-a-record",
+      "label": "Azure DNS A record",
+      "family": "dns-cdn",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_dns_a_record",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dns/"
+    },
+    {
+      "rule_id": "azure/dns-aaaa-record",
+      "label": "Azure DNS AAAA record",
+      "family": "dns-cdn",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_dns_aaaa_record",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dns/"
+    },
+    {
+      "rule_id": "azure/dns-cname-record",
+      "label": "Azure DNS CNAME record",
+      "family": "dns-cdn",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_dns_cname_record",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dns/"
+    },
+    {
+      "rule_id": "azure/dns-mx-record",
+      "label": "Azure DNS MX record",
+      "family": "dns-cdn",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_dns_mx_record",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dns/"
+    },
+    {
+      "rule_id": "azure/dns-ns-record",
+      "label": "Azure DNS NS record",
+      "family": "dns-cdn",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_dns_ns_record",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dns/"
+    },
+    {
+      "rule_id": "azure/dns-ptr-record",
+      "label": "Azure DNS PTR record",
+      "family": "dns-cdn",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_dns_ptr_record",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dns/"
+    },
+    {
+      "rule_id": "azure/dns-srv-record",
+      "label": "Azure DNS SRV record",
+      "family": "dns-cdn",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_dns_srv_record",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dns/"
+    },
+    {
+      "rule_id": "azure/dns-txt-record",
+      "label": "Azure DNS TXT record",
+      "family": "dns-cdn",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_dns_txt_record",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dns/"
+    },
+    {
+      "rule_id": "azure/dns-zone",
+      "label": "Azure DNS zone",
+      "family": "dns-cdn",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_dns_zone",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dns/"
+    },
+    {
+      "rule_id": "azure/dynatrace-monitor",
+      "label": "Dynatrace on Azure monitor",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_dynatrace_monitor",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/elastic-cloud",
+      "label": "Elastic Cloud on Azure",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_elastic_cloud_elasticsearch",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/elastic-san",
+      "label": "Azure Elastic SAN",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_elastic_san",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/elastic-san-volume",
+      "label": "Azure Elastic SAN volume",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_elastic_san_volume",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/elastic-san-volume-group",
+      "label": "Azure Elastic SAN volume group",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_elastic_san_volume_group",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/email-communication-service",
+      "label": "Azure Communication Services Email resource",
+      "family": "communication",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_email_communication_service",
+      "official_source": "https://learn.microsoft.com/en-us/azure/communication-services/"
+    },
+    {
+      "rule_id": "azure/entra-access-package",
+      "label": "Microsoft Entra access package",
+      "family": "identity-iam",
+      "provider": "azuread",
+      "terraform_type": "azuread_access_package",
+      "official_source": "https://learn.microsoft.com/en-us/entra/identity/"
+    },
+    {
+      "rule_id": "azure/entra-access-package-assignment-policy",
+      "label": "Microsoft Entra access package assignment policy",
+      "family": "identity-iam",
+      "provider": "azuread",
+      "terraform_type": "azuread_access_package_assignment_policy",
+      "official_source": "https://learn.microsoft.com/en-us/entra/identity/"
+    },
+    {
+      "rule_id": "azure/entra-access-package-catalog",
+      "label": "Microsoft Entra access package catalog",
+      "family": "identity-iam",
+      "provider": "azuread",
+      "terraform_type": "azuread_access_package_catalog",
+      "official_source": "https://learn.microsoft.com/en-us/entra/identity/"
+    },
+    {
+      "rule_id": "azure/entra-administrative-unit",
+      "label": "Microsoft Entra administrative unit",
+      "family": "identity-iam",
+      "provider": "azuread",
+      "terraform_type": "azuread_administrative_unit",
+      "official_source": "https://learn.microsoft.com/en-us/entra/identity/"
+    },
+    {
+      "rule_id": "azure/entra-app-role-assignment",
+      "label": "Microsoft Entra app role assignment",
+      "family": "identity-iam",
+      "provider": "azuread",
+      "terraform_type": "azuread_app_role_assignment",
+      "official_source": "https://learn.microsoft.com/en-us/entra/identity/"
+    },
+    {
+      "rule_id": "azure/entra-application",
+      "label": "Microsoft Entra application",
+      "family": "identity-iam",
+      "provider": "azuread",
+      "terraform_type": "azuread_application",
+      "official_source": "https://learn.microsoft.com/en-us/entra/identity/"
+    },
+    {
+      "rule_id": "azure/entra-application-federated-identity",
+      "label": "Microsoft Entra application federated identity credential",
+      "family": "identity-iam",
+      "provider": "azuread",
+      "terraform_type": "azuread_application_federated_identity_credential",
+      "official_source": "https://learn.microsoft.com/en-us/entra/identity/"
+    },
+    {
+      "rule_id": "azure/entra-application-registration",
+      "label": "Microsoft Entra application registration",
+      "family": "identity-iam",
+      "provider": "azuread",
+      "terraform_type": "azuread_application_registration",
+      "official_source": "https://learn.microsoft.com/en-us/entra/identity/"
+    },
+    {
+      "rule_id": "azure/entra-authentication-strength-policy",
+      "label": "Microsoft Entra authentication strength policy",
+      "family": "identity-iam",
+      "provider": "azuread",
+      "terraform_type": "azuread_authentication_strength_policy",
+      "official_source": "https://learn.microsoft.com/en-us/entra/identity/"
+    },
+    {
+      "rule_id": "azure/entra-conditional-access-policy",
+      "label": "Microsoft Entra Conditional Access policy",
+      "family": "identity-iam",
+      "provider": "azuread",
+      "terraform_type": "azuread_conditional_access_policy",
+      "official_source": "https://learn.microsoft.com/en-us/entra/identity/"
+    },
+    {
+      "rule_id": "azure/entra-domain-services",
+      "label": "Microsoft Entra Domain Services managed domain",
+      "family": "identity-iam",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_active_directory_domain_service",
+      "official_source": "https://learn.microsoft.com/en-us/entra/identity/"
+    },
+    {
+      "rule_id": "azure/entra-domain-services-replica-set",
+      "label": "Microsoft Entra Domain Services replica set",
+      "family": "identity-iam",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_active_directory_domain_service_replica_set",
+      "official_source": "https://learn.microsoft.com/en-us/entra/identity/"
+    },
+    {
+      "rule_id": "azure/entra-domain-services-trust",
+      "label": "Microsoft Entra Domain Services trust",
+      "family": "identity-iam",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_active_directory_domain_service_trust",
+      "official_source": "https://learn.microsoft.com/en-us/entra/identity/"
+    },
+    {
+      "rule_id": "azure/entra-external-id-directory",
+      "label": "Microsoft Entra External ID directory",
+      "family": "identity-iam",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_aadb2c_directory",
+      "official_source": "https://learn.microsoft.com/en-us/entra/identity/"
+    },
+    {
+      "rule_id": "azure/entra-group",
+      "label": "Microsoft Entra group",
+      "family": "identity-iam",
+      "provider": "azuread",
+      "terraform_type": "azuread_group",
+      "official_source": "https://learn.microsoft.com/en-us/entra/identity/"
+    },
+    {
+      "rule_id": "azure/entra-group-without-members",
+      "label": "Microsoft Entra group",
+      "family": "identity-iam",
+      "provider": "azuread",
+      "terraform_type": "azuread_group_without_members",
+      "official_source": "https://learn.microsoft.com/en-us/entra/identity/"
+    },
+    {
+      "rule_id": "azure/entra-named-location",
+      "label": "Microsoft Entra named location",
+      "family": "identity-iam",
+      "provider": "azuread",
+      "terraform_type": "azuread_named_location",
+      "official_source": "https://learn.microsoft.com/en-us/entra/identity/"
+    },
+    {
+      "rule_id": "azure/entra-service-principal",
+      "label": "Microsoft Entra service principal",
+      "family": "identity-iam",
+      "provider": "azuread",
+      "terraform_type": "azuread_service_principal",
+      "official_source": "https://learn.microsoft.com/en-us/entra/identity/"
+    },
+    {
+      "rule_id": "azure/entra-synchronization-job",
+      "label": "Microsoft Entra provisioning synchronization job",
+      "family": "identity-iam",
+      "provider": "azuread",
+      "terraform_type": "azuread_synchronization_job",
+      "official_source": "https://learn.microsoft.com/en-us/entra/identity/"
+    },
+    {
+      "rule_id": "azure/event-grid-domain",
+      "label": "Azure Event Grid domain",
+      "family": "messaging-eventing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_eventgrid_domain",
+      "official_source": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/"
+    },
+    {
+      "rule_id": "azure/event-grid-event-subscription",
+      "label": "Azure Event Grid event subscription",
+      "family": "messaging-eventing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_eventgrid_event_subscription",
+      "official_source": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/"
+    },
+    {
+      "rule_id": "azure/event-grid-namespace",
+      "label": "Azure Event Grid namespace",
+      "family": "messaging-eventing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_eventgrid_namespace",
+      "official_source": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/"
+    },
+    {
+      "rule_id": "azure/event-grid-namespace-topic",
+      "label": "Azure Event Grid namespace topic",
+      "family": "messaging-eventing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_eventgrid_namespace_topic",
+      "official_source": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/"
+    },
+    {
+      "rule_id": "azure/event-grid-partner-namespace",
+      "label": "Azure Event Grid partner namespace",
+      "family": "messaging-eventing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_eventgrid_partner_namespace",
+      "official_source": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/"
+    },
+    {
+      "rule_id": "azure/event-grid-system-topic",
+      "label": "Azure Event Grid system topic",
+      "family": "messaging-eventing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_eventgrid_system_topic",
+      "official_source": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/"
+    },
+    {
+      "rule_id": "azure/event-grid-system-topic-subscription",
+      "label": "Azure Event Grid system topic event subscription",
+      "family": "messaging-eventing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_eventgrid_system_topic_event_subscription",
+      "official_source": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/"
+    },
+    {
+      "rule_id": "azure/event-grid-topic",
+      "label": "Azure Event Grid custom topic",
+      "family": "messaging-eventing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_eventgrid_topic",
+      "official_source": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/"
+    },
+    {
+      "rule_id": "azure/event-hub",
+      "label": "Azure Event Hubs event hub",
+      "family": "messaging-eventing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_eventhub",
+      "official_source": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/"
+    },
+    {
+      "rule_id": "azure/event-hubs-cluster",
+      "label": "Azure Event Hubs Dedicated cluster",
+      "family": "messaging-eventing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_eventhub_cluster",
+      "official_source": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/"
+    },
+    {
+      "rule_id": "azure/event-hubs-consumer-group",
+      "label": "Azure Event Hubs consumer group",
+      "family": "messaging-eventing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_eventhub_consumer_group",
+      "official_source": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/"
+    },
+    {
+      "rule_id": "azure/event-hubs-namespace",
+      "label": "Azure Event Hubs namespace",
+      "family": "messaging-eventing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_eventhub_namespace",
+      "official_source": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/"
+    },
+    {
+      "rule_id": "azure/event-hubs-schema-group",
+      "label": "Azure Event Hubs schema group",
+      "family": "messaging-eventing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_eventhub_namespace_schema_group",
+      "official_source": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/"
+    },
+    {
+      "rule_id": "azure/expressroute-circuit",
+      "label": "Azure ExpressRoute circuit",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_express_route_circuit",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/expressroute-gateway",
+      "label": "Azure ExpressRoute gateway",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_express_route_gateway",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/expressroute-port",
+      "label": "Azure ExpressRoute Direct port",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_express_route_port",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/fabric-capacity",
+      "label": "Microsoft Fabric capacity",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_fabric_capacity",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/federated-identity-credential",
+      "label": "federated identity credential",
+      "family": "identity-iam",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_federated_identity_credential",
+      "official_source": "https://learn.microsoft.com/en-us/entra/identity/"
+    },
+    {
+      "rule_id": "azure/file-share-backup-policy",
+      "label": "Azure Files backup policy",
+      "family": "migration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_backup_policy_file_share",
+      "official_source": "https://learn.microsoft.com/en-us/azure/migrate/"
+    },
+    {
+      "rule_id": "azure/flex-consumption-function-app",
+      "label": "Azure Functions Flex Consumption app",
+      "family": "serverless",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_function_app_flex_consumption",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-functions/"
+    },
+    {
+      "rule_id": "azure/fluid-relay",
+      "label": "Azure Fluid Relay service",
+      "family": "communication",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_fluid_relay_server",
+      "official_source": "https://learn.microsoft.com/en-us/azure/communication-services/"
+    },
+    {
+      "rule_id": "azure/front-door-endpoint",
+      "label": "Azure Front Door endpoint",
+      "family": "load-balancing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_cdn_frontdoor_endpoint",
+      "official_source": "https://learn.microsoft.com/en-us/azure/load-balancer/"
+    },
+    {
+      "rule_id": "azure/front-door-origin",
+      "label": "Azure Front Door origin",
+      "family": "load-balancing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_cdn_frontdoor_origin",
+      "official_source": "https://learn.microsoft.com/en-us/azure/load-balancer/"
+    },
+    {
+      "rule_id": "azure/front-door-origin-group",
+      "label": "Azure Front Door origin group",
+      "family": "load-balancing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_cdn_frontdoor_origin_group",
+      "official_source": "https://learn.microsoft.com/en-us/azure/load-balancer/"
+    },
+    {
+      "rule_id": "azure/front-door-profile",
+      "label": "Azure Front Door profile",
+      "family": "load-balancing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_cdn_frontdoor_profile",
+      "official_source": "https://learn.microsoft.com/en-us/azure/load-balancer/"
+    },
+    {
+      "rule_id": "azure/front-door-route",
+      "label": "Azure Front Door route",
+      "family": "load-balancing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_cdn_frontdoor_route",
+      "official_source": "https://learn.microsoft.com/en-us/azure/load-balancer/"
+    },
+    {
+      "rule_id": "azure/function-app-function",
+      "label": "Azure Functions function",
+      "family": "serverless",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_function_app_function",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-functions/"
+    },
+    {
+      "rule_id": "azure/graph-data-connect-account",
+      "label": "Microsoft Graph Data Connect account",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_graph_services_account",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/hdinsight-hadoop-cluster",
+      "label": "Azure HDInsight Hadoop cluster",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_hdinsight_hadoop_cluster",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/hdinsight-hbase-cluster",
+      "label": "Azure HDInsight Apache HBase cluster",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_hdinsight_hbase_cluster",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/hdinsight-interactive-query-cluster",
+      "label": "Azure HDInsight Interactive Query cluster",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_hdinsight_interactive_query_cluster",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/hdinsight-kafka-cluster",
+      "label": "Azure HDInsight Apache Kafka cluster",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_hdinsight_kafka_cluster",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/hdinsight-spark-cluster",
+      "label": "Azure HDInsight Apache Spark cluster",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_hdinsight_spark_cluster",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/health-bot",
+      "label": "Azure Health Bot",
+      "family": "ai-ml",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_healthbot",
+      "official_source": "https://learn.microsoft.com/en-us/azure/ai-foundry/"
+    },
+    {
+      "rule_id": "azure/health-data-dicom-service",
+      "label": "Azure Health Data Services DICOM service",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_healthcare_dicom_service",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/health-data-fhir-service",
+      "label": "Azure Health Data Services FHIR service",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_healthcare_fhir_service",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/health-data-medtech-service",
+      "label": "Azure Health Data Services MedTech service",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_healthcare_medtech_service",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/health-data-services-workspace",
+      "label": "Azure Health Data Services workspace",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_healthcare_workspace",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/healthcare-service",
+      "label": "Azure API for FHIR service",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_healthcare_service",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/horizondb-cluster",
+      "label": "Azure HorizonDB cluster",
+      "family": "databases",
+      "provider": "azapi",
+      "terraform_type": "azapi_resource",
+      "arm_type": "Microsoft.HorizonDb/clusters@2026-01-20-preview",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/iot-central-application",
+      "label": "Azure IoT Central application",
+      "family": "iot",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_iotcentral_application",
+      "official_source": "https://learn.microsoft.com/en-us/azure/iot-hub/"
+    },
+    {
+      "rule_id": "azure/iot-hub",
+      "label": "Azure IoT Hub",
+      "family": "iot",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_iothub",
+      "official_source": "https://learn.microsoft.com/en-us/azure/iot-hub/"
+    },
+    {
+      "rule_id": "azure/iot-hub-device-provisioning-service",
+      "label": "Azure IoT Hub Device Provisioning Service",
+      "family": "iot",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_iothub_dps",
+      "official_source": "https://learn.microsoft.com/en-us/azure/iot-hub/"
+    },
+    {
+      "rule_id": "azure/iot-hub-device-update-account",
+      "label": "Device Update for IoT Hub account",
+      "family": "iot",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_iothub_device_update_account",
+      "official_source": "https://learn.microsoft.com/en-us/azure/iot-hub/"
+    },
+    {
+      "rule_id": "azure/iot-hub-device-update-instance",
+      "label": "Device Update for IoT Hub instance",
+      "family": "iot",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_iothub_device_update_instance",
+      "official_source": "https://learn.microsoft.com/en-us/azure/iot-hub/"
+    },
+    {
+      "rule_id": "azure/iot-hub-event-hubs-endpoint",
+      "label": "Azure IoT Hub Event Hubs endpoint",
+      "family": "iot",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_iothub_endpoint_eventhub",
+      "official_source": "https://learn.microsoft.com/en-us/azure/iot-hub/"
+    },
+    {
+      "rule_id": "azure/iot-hub-service-bus-queue-endpoint",
+      "label": "Azure IoT Hub Service Bus queue endpoint",
+      "family": "iot",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_iothub_endpoint_servicebus_queue",
+      "official_source": "https://learn.microsoft.com/en-us/azure/iot-hub/"
+    },
+    {
+      "rule_id": "azure/iot-hub-storage-endpoint",
+      "label": "Azure IoT Hub Storage container endpoint",
+      "family": "iot",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_iothub_endpoint_storage_container",
+      "official_source": "https://learn.microsoft.com/en-us/azure/iot-hub/"
+    },
+    {
+      "rule_id": "azure/ip-group",
+      "label": "Azure IP Group",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_ip_group",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/key-vault",
+      "label": "Azure Key Vault",
+      "family": "security",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_key_vault",
+      "official_source": "https://learn.microsoft.com/en-us/azure/key-vault/"
+    },
+    {
+      "rule_id": "azure/key-vault-access-policy",
+      "label": "Azure Key Vault access policy",
+      "family": "security",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_key_vault_access_policy",
+      "official_source": "https://learn.microsoft.com/en-us/azure/key-vault/"
+    },
+    {
+      "rule_id": "azure/key-vault-certificate",
+      "label": "Azure Key Vault certificate",
+      "family": "security",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_key_vault_certificate",
+      "official_source": "https://learn.microsoft.com/en-us/azure/key-vault/"
+    },
+    {
+      "rule_id": "azure/key-vault-key",
+      "label": "Azure Key Vault key",
+      "family": "security",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_key_vault_key",
+      "official_source": "https://learn.microsoft.com/en-us/azure/key-vault/"
+    },
+    {
+      "rule_id": "azure/key-vault-secret",
+      "label": "Azure Key Vault secret",
+      "family": "security",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_key_vault_secret",
+      "official_source": "https://learn.microsoft.com/en-us/azure/key-vault/"
+    },
+    {
+      "rule_id": "azure/kubernetes-fleet",
+      "label": "Azure Kubernetes Fleet Manager fleet",
+      "family": "containers",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_kubernetes_fleet_manager",
+      "official_source": "https://learn.microsoft.com/en-us/azure/aks/"
+    },
+    {
+      "rule_id": "azure/lighthouse-definition",
+      "label": "Azure Lighthouse registration definition",
+      "family": "governance-management",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_lighthouse_definition",
+      "official_source": "https://learn.microsoft.com/en-us/azure/governance/"
+    },
+    {
+      "rule_id": "azure/linux-function-app",
+      "label": "Azure Functions Linux function app",
+      "family": "serverless",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_linux_function_app",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-functions/"
+    },
+    {
+      "rule_id": "azure/linux-virtual-machine",
+      "label": "Linux virtual machine",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_linux_virtual_machine",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/linux-virtual-machine-scale-set",
+      "label": "Linux Virtual Machine Scale Set",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_linux_virtual_machine_scale_set",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/linux-web-app",
+      "label": "Azure App Service Linux web app",
+      "family": "serverless",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_linux_web_app",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-functions/"
+    },
+    {
+      "rule_id": "azure/load-balancer",
+      "label": "Azure Load Balancer",
+      "family": "load-balancing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_lb",
+      "official_source": "https://learn.microsoft.com/en-us/azure/load-balancer/"
+    },
+    {
+      "rule_id": "azure/load-balancer-backend-pool",
+      "label": "Azure Load Balancer backend pool",
+      "family": "load-balancing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_lb_backend_address_pool",
+      "official_source": "https://learn.microsoft.com/en-us/azure/load-balancer/"
+    },
+    {
+      "rule_id": "azure/load-balancer-nat-rule",
+      "label": "Azure Load Balancer inbound NAT rule",
+      "family": "load-balancing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_lb_nat_rule",
+      "official_source": "https://learn.microsoft.com/en-us/azure/load-balancer/"
+    },
+    {
+      "rule_id": "azure/load-balancer-outbound-rule",
+      "label": "Azure Load Balancer outbound rule",
+      "family": "load-balancing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_lb_outbound_rule",
+      "official_source": "https://learn.microsoft.com/en-us/azure/load-balancer/"
+    },
+    {
+      "rule_id": "azure/load-balancer-probe",
+      "label": "Azure Load Balancer health probe",
+      "family": "load-balancing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_lb_probe",
+      "official_source": "https://learn.microsoft.com/en-us/azure/load-balancer/"
+    },
+    {
+      "rule_id": "azure/load-balancer-rule",
+      "label": "Azure Load Balancer rule",
+      "family": "load-balancing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_lb_rule",
+      "official_source": "https://learn.microsoft.com/en-us/azure/load-balancer/"
+    },
+    {
+      "rule_id": "azure/load-test",
+      "label": "Azure Load Testing resource",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_load_test",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/local-network-gateway",
+      "label": "Azure local network gateway",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_local_network_gateway",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/log-analytics-cluster",
+      "label": "Azure Log Analytics dedicated cluster",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_log_analytics_cluster",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/log-analytics-workspace",
+      "label": "Azure Log Analytics workspace",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_log_analytics_workspace",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/logic-app-http-action",
+      "label": "Azure Logic Apps HTTP action",
+      "family": "api-integration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_logic_app_action_http",
+      "official_source": "https://learn.microsoft.com/en-us/azure/api-management/"
+    },
+    {
+      "rule_id": "azure/logic-app-integration-account",
+      "label": "Azure Logic Apps integration account",
+      "family": "api-integration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_logic_app_integration_account",
+      "official_source": "https://learn.microsoft.com/en-us/azure/api-management/"
+    },
+    {
+      "rule_id": "azure/logic-app-recurrence-trigger",
+      "label": "Azure Logic Apps recurrence trigger",
+      "family": "api-integration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_logic_app_trigger_recurrence",
+      "official_source": "https://learn.microsoft.com/en-us/azure/api-management/"
+    },
+    {
+      "rule_id": "azure/logic-app-standard",
+      "label": "Azure Logic Apps Standard workflow app",
+      "family": "api-integration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_logic_app_standard",
+      "official_source": "https://learn.microsoft.com/en-us/azure/api-management/"
+    },
+    {
+      "rule_id": "azure/logic-app-workflow",
+      "label": "Azure Logic Apps Consumption workflow",
+      "family": "api-integration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_logic_app_workflow",
+      "official_source": "https://learn.microsoft.com/en-us/azure/api-management/"
+    },
+    {
+      "rule_id": "azure/machine-learning-compute-cluster",
+      "label": "Azure Machine Learning compute cluster",
+      "family": "ai-ml",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_machine_learning_compute_cluster",
+      "official_source": "https://learn.microsoft.com/en-us/azure/ai-foundry/"
+    },
+    {
+      "rule_id": "azure/machine-learning-compute-instance",
+      "label": "Azure Machine Learning compute instance",
+      "family": "ai-ml",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_machine_learning_compute_instance",
+      "official_source": "https://learn.microsoft.com/en-us/azure/ai-foundry/"
+    },
+    {
+      "rule_id": "azure/machine-learning-inference-cluster",
+      "label": "Azure Machine Learning inference cluster",
+      "family": "ai-ml",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_machine_learning_inference_cluster",
+      "official_source": "https://learn.microsoft.com/en-us/azure/ai-foundry/"
+    },
+    {
+      "rule_id": "azure/machine-learning-workspace",
+      "label": "Azure Machine Learning workspace",
+      "family": "ai-ml",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_machine_learning_workspace",
+      "official_source": "https://learn.microsoft.com/en-us/azure/ai-foundry/"
+    },
+    {
+      "rule_id": "azure/maintenance-configuration",
+      "label": "Azure maintenance configuration",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_maintenance_configuration",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/managed-application",
+      "label": "Azure Managed Application",
+      "family": "governance-management",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_managed_application",
+      "official_source": "https://learn.microsoft.com/en-us/azure/governance/"
+    },
+    {
+      "rule_id": "azure/managed-devops-pool",
+      "label": "Managed DevOps Pool",
+      "family": "developer-ci-cd",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_managed_devops_pool",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dev-box/"
+    },
+    {
+      "rule_id": "azure/managed-disk",
+      "label": "Azure managed disk",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_managed_disk",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/managed-grafana",
+      "label": "Azure Managed Grafana workspace",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_dashboard_grafana",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/managed-hsm",
+      "label": "Azure Key Vault Managed HSM",
+      "family": "security",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_key_vault_managed_hardware_security_module",
+      "official_source": "https://learn.microsoft.com/en-us/azure/key-vault/"
+    },
+    {
+      "rule_id": "azure/managed-hsm-key",
+      "label": "Azure Managed HSM key",
+      "family": "security",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_key_vault_managed_hardware_security_module_key",
+      "official_source": "https://learn.microsoft.com/en-us/azure/key-vault/"
+    },
+    {
+      "rule_id": "azure/managed-lustre-file-system",
+      "label": "Azure Managed Lustre file system",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_managed_lustre_file_system",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/managed-redis-geo-replication",
+      "label": "Azure Managed Redis geo-replication",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_managed_redis_geo_replication",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/managed-service-fabric-cluster",
+      "label": "Azure Service Fabric managed cluster",
+      "family": "containers",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_service_fabric_managed_cluster",
+      "official_source": "https://learn.microsoft.com/en-us/azure/aks/"
+    },
+    {
+      "rule_id": "azure/management-group",
+      "label": "Azure management group",
+      "family": "governance-management",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_management_group",
+      "official_source": "https://learn.microsoft.com/en-us/azure/governance/"
+    },
+    {
+      "rule_id": "azure/maps-account",
+      "label": "Azure Maps account",
+      "family": "api-integration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_maps_account",
+      "official_source": "https://learn.microsoft.com/en-us/azure/api-management/"
+    },
+    {
+      "rule_id": "azure/mongo-cluster",
+      "label": "Azure DocumentDB cluster",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_mongo_cluster",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/monitor-action-group",
+      "label": "Azure Monitor action group",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_monitor_action_group",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/monitor-data-collection-endpoint",
+      "label": "Azure Monitor data collection endpoint",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_monitor_data_collection_endpoint",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/monitor-diagnostic-setting",
+      "label": "Azure Monitor diagnostic setting",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_monitor_diagnostic_setting",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/monitor-metric-alert",
+      "label": "Azure Monitor metric alert",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_monitor_metric_alert",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/monitor-private-link-scope",
+      "label": "Azure Monitor Private Link Scope",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_monitor_private_link_scope",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/monitor-scheduled-query-alert",
+      "label": "Azure Monitor log search alert rule",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_monitor_scheduled_query_rules_alert_v2",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/monitor-workspace",
+      "label": "Azure Monitor workspace",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_monitor_workspace",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/mssql-database",
+      "label": "Azure SQL Database",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_mssql_database",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/mssql-server",
+      "label": "Azure SQL logical server",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_mssql_server",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/mysql-database",
+      "label": "Azure Database for MySQL database",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_mysql_flexible_database",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/mysql-flexible-server",
+      "label": "Azure Database for MySQL flexible server",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_mysql_flexible_server",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/nat-gateway",
+      "label": "Azure NAT Gateway",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_nat_gateway",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/netapp-account",
+      "label": "Azure NetApp Files account",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_netapp_account",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/netapp-backup-policy",
+      "label": "Azure NetApp Files backup policy",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_netapp_backup_policy",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/netapp-backup-vault",
+      "label": "Azure NetApp Files backup vault",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_netapp_backup_vault",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/netapp-capacity-pool",
+      "label": "Azure NetApp Files capacity pool",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_netapp_pool",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/netapp-volume",
+      "label": "Azure NetApp Files volume",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_netapp_volume",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/network-function-traffic-collector",
+      "label": "Azure Traffic Collector",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_network_function_azure_traffic_collector",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/network-interface",
+      "label": "Azure network interface",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_network_interface",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/network-manager-ipam-pool",
+      "label": "Azure Virtual Network Manager IP address management pool",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_network_manager_ipam_pool",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/network-security-group",
+      "label": "Azure Network Security Group",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_network_security_group",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/network-security-perimeter",
+      "label": "Azure Network Security Perimeter",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_network_security_perimeter",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/network-security-rule",
+      "label": "Azure Network Security Group rule",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_network_security_rule",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/network-watcher",
+      "label": "Azure Network Watcher",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_network_watcher",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/network-watcher-flow-log",
+      "label": "Azure Network Watcher flow log",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_network_watcher_flow_log",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/new-relic-monitor",
+      "label": "New Relic on Azure monitor",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_new_relic_monitor",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/nginx-deployment",
+      "label": "NGINXaaS for Azure deployment",
+      "family": "hybrid",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_nginx_deployment",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-arc/"
+    },
+    {
+      "rule_id": "azure/notification-hub",
+      "label": "Azure Notification Hub",
+      "family": "messaging-eventing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_notification_hub",
+      "official_source": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/"
+    },
+    {
+      "rule_id": "azure/notification-hubs-namespace",
+      "label": "Azure Notification Hubs namespace",
+      "family": "messaging-eventing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_notification_hub_namespace",
+      "official_source": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/"
+    },
+    {
+      "rule_id": "azure/oracle-autonomous-database",
+      "label": "Oracle Autonomous Database on Azure",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_oracle_autonomous_database",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/oracle-cloud-vm-cluster",
+      "label": "Oracle Database@Azure cloud VM cluster",
+      "family": "hybrid",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_oracle_cloud_vm_cluster",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-arc/"
+    },
+    {
+      "rule_id": "azure/oracle-exadata-infrastructure",
+      "label": "Oracle Exadata Database Service infrastructure on Azure",
+      "family": "hybrid",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_oracle_exadata_infrastructure",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-arc/"
+    },
+    {
+      "rule_id": "azure/oracle-resource-anchor",
+      "label": "Oracle Database@Azure resource anchor",
+      "family": "hybrid",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_oracle_resource_anchor",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-arc/"
+    },
+    {
+      "rule_id": "azure/orchestrated-virtual-machine-scale-set",
+      "label": "orchestrated Virtual Machine Scale Set",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_orchestrated_virtual_machine_scale_set",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/palo-alto-firewall",
+      "label": "Palo Alto Networks Cloud NGFW for Azure",
+      "family": "hybrid",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_palo_alto_next_generation_firewall_virtual_network_local_rulestack",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-arc/"
+    },
+    {
+      "rule_id": "azure/playwright-workspace",
+      "label": "Microsoft Playwright Testing workspace",
+      "family": "developer-ci-cd",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_playwright_workspace",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dev-box/"
+    },
+    {
+      "rule_id": "azure/point-to-site-vpn-gateway",
+      "label": "Azure point-to-site VPN gateway",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_point_to_site_vpn_gateway",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/policy-definition",
+      "label": "Azure Policy definition",
+      "family": "governance-management",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_policy_definition",
+      "official_source": "https://learn.microsoft.com/en-us/azure/governance/"
+    },
+    {
+      "rule_id": "azure/policy-set-definition",
+      "label": "Azure Policy initiative definition",
+      "family": "governance-management",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_policy_set_definition",
+      "official_source": "https://learn.microsoft.com/en-us/azure/governance/"
+    },
+    {
+      "rule_id": "azure/portal-dashboard",
+      "label": "Azure portal dashboard",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_portal_dashboard",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/postgresql-backup",
+      "label": "Azure Database for PostgreSQL backup",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_postgresql_flexible_server_backup",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/postgresql-database",
+      "label": "Azure Database for PostgreSQL database",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_postgresql_flexible_server_database",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/postgresql-flexible-server",
+      "label": "Azure Database for PostgreSQL flexible server",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_postgresql_flexible_server",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/power-bi-embedded-capacity",
+      "label": "Power BI Embedded capacity",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_powerbi_embedded",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/private-dns-a-record",
+      "label": "Azure Private DNS A record",
+      "family": "dns-cdn",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_private_dns_a_record",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dns/"
+    },
+    {
+      "rule_id": "azure/private-dns-cname-record",
+      "label": "Azure Private DNS CNAME record",
+      "family": "dns-cdn",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_private_dns_cname_record",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dns/"
+    },
+    {
+      "rule_id": "azure/private-dns-forwarding-ruleset",
+      "label": "Azure DNS forwarding ruleset",
+      "family": "dns-cdn",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_private_dns_resolver_dns_forwarding_ruleset",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dns/"
+    },
+    {
+      "rule_id": "azure/private-dns-inbound-endpoint",
+      "label": "Azure DNS Private Resolver inbound endpoint",
+      "family": "dns-cdn",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_private_dns_resolver_inbound_endpoint",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dns/"
+    },
+    {
+      "rule_id": "azure/private-dns-outbound-endpoint",
+      "label": "Azure DNS Private Resolver outbound endpoint",
+      "family": "dns-cdn",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_private_dns_resolver_outbound_endpoint",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dns/"
+    },
+    {
+      "rule_id": "azure/private-dns-resolver",
+      "label": "Azure DNS Private Resolver",
+      "family": "dns-cdn",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_private_dns_resolver",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dns/"
+    },
+    {
+      "rule_id": "azure/private-dns-zone",
+      "label": "Azure Private DNS zone",
+      "family": "dns-cdn",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_private_dns_zone",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dns/"
+    },
+    {
+      "rule_id": "azure/private-dns-zone-vnet-link",
+      "label": "Azure Private DNS virtual network link",
+      "family": "dns-cdn",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_private_dns_zone_virtual_network_link",
+      "official_source": "https://learn.microsoft.com/en-us/azure/dns/"
+    },
+    {
+      "rule_id": "azure/private-endpoint",
+      "label": "Azure Private Endpoint",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_private_endpoint",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/private-link-service",
+      "label": "Azure Private Link service",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_private_link_service",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/proximity-placement-group",
+      "label": "Azure proximity placement group",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_proximity_placement_group",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/public-address",
+      "label": "Azure Public IP address",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_public_ip",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/public-ip-prefix",
+      "label": "Azure Public IP prefix",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_public_ip_prefix",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/purview-account",
+      "label": "Microsoft Purview account",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_purview_account",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/queue-storage-queue",
+      "label": "Azure Queue Storage queue",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_storage_queue",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/qumulo-file-system",
+      "label": "Qumulo file system on Azure",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_qumulo_file_system",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/recovery-services-vault",
+      "label": "Azure Recovery Services vault",
+      "family": "migration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_recovery_services_vault",
+      "official_source": "https://learn.microsoft.com/en-us/azure/migrate/"
+    },
+    {
+      "rule_id": "azure/red-hat-openshift-cluster",
+      "label": "Azure Red Hat OpenShift cluster",
+      "family": "containers",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_redhat_openshift_cluster",
+      "official_source": "https://learn.microsoft.com/en-us/azure/aks/"
+    },
+    {
+      "rule_id": "azure/relay-hybrid-connection",
+      "label": "Azure Relay Hybrid Connection",
+      "family": "messaging-eventing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_relay_hybrid_connection",
+      "official_source": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/"
+    },
+    {
+      "rule_id": "azure/relay-namespace",
+      "label": "Azure Relay namespace",
+      "family": "messaging-eventing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_relay_namespace",
+      "official_source": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/"
+    },
+    {
+      "rule_id": "azure/resource-group",
+      "label": "Azure Resource Group",
+      "family": "governance-management",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_resource_group",
+      "official_source": "https://learn.microsoft.com/en-us/azure/governance/"
+    },
+    {
+      "rule_id": "azure/resource-policy-assignment",
+      "label": "Azure Policy assignment",
+      "family": "governance-management",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_resource_policy_assignment",
+      "official_source": "https://learn.microsoft.com/en-us/azure/governance/"
+    },
+    {
+      "rule_id": "azure/role-assignment",
+      "label": "Azure role assignment",
+      "family": "governance-management",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_role_assignment",
+      "official_source": "https://learn.microsoft.com/en-us/azure/governance/"
+    },
+    {
+      "rule_id": "azure/role-definition",
+      "label": "Azure custom role definition",
+      "family": "governance-management",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_role_definition",
+      "official_source": "https://learn.microsoft.com/en-us/azure/governance/"
+    },
+    {
+      "rule_id": "azure/route",
+      "label": "Azure user-defined route",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_route",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/route-server",
+      "label": "Azure Route Server",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_route_server",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/route-table",
+      "label": "Azure route table",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_route_table",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/sap-discovery-virtual-instance",
+      "label": "Azure Center for SAP solutions discovered virtual instance",
+      "family": "hybrid",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_workloads_sap_discovery_virtual_instance",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-arc/"
+    },
+    {
+      "rule_id": "azure/sap-single-node-virtual-instance",
+      "label": "Azure Center for SAP solutions single-node virtual instance",
+      "family": "hybrid",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_workloads_sap_single_node_virtual_instance",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-arc/"
+    },
+    {
+      "rule_id": "azure/sap-three-tier-virtual-instance",
+      "label": "Azure Center for SAP solutions three-tier virtual instance",
+      "family": "hybrid",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_workloads_sap_three_tier_virtual_instance",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-arc/"
+    },
+    {
+      "rule_id": "azure/sentinel-automation-rule",
+      "label": "Microsoft Sentinel automation rule",
+      "family": "security",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_sentinel_automation_rule",
+      "official_source": "https://learn.microsoft.com/en-us/azure/key-vault/"
+    },
+    {
+      "rule_id": "azure/sentinel-aws-cloudtrail-connector",
+      "label": "Microsoft Sentinel Amazon Web Services CloudTrail connector",
+      "family": "security",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_sentinel_data_connector_aws_cloud_trail",
+      "official_source": "https://learn.microsoft.com/en-us/azure/key-vault/"
+    },
+    {
+      "rule_id": "azure/sentinel-entra-connector",
+      "label": "Microsoft Sentinel Microsoft Entra ID connector",
+      "family": "security",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_sentinel_data_connector_azure_active_directory",
+      "official_source": "https://learn.microsoft.com/en-us/azure/key-vault/"
+    },
+    {
+      "rule_id": "azure/sentinel-nrt-alert-rule",
+      "label": "Microsoft Sentinel near-real-time analytics rule",
+      "family": "security",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_sentinel_alert_rule_nrt",
+      "official_source": "https://learn.microsoft.com/en-us/azure/key-vault/"
+    },
+    {
+      "rule_id": "azure/sentinel-onboarding",
+      "label": "Microsoft Sentinel",
+      "family": "security",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_sentinel_log_analytics_workspace_onboarding",
+      "official_source": "https://learn.microsoft.com/en-us/azure/key-vault/"
+    },
+    {
+      "rule_id": "azure/sentinel-scheduled-alert-rule",
+      "label": "Microsoft Sentinel scheduled analytics rule",
+      "family": "security",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_sentinel_alert_rule_scheduled",
+      "official_source": "https://learn.microsoft.com/en-us/azure/key-vault/"
+    },
+    {
+      "rule_id": "azure/service-bus-namespace",
+      "label": "Azure Service Bus namespace",
+      "family": "messaging-eventing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_servicebus_namespace",
+      "official_source": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/"
+    },
+    {
+      "rule_id": "azure/service-bus-queue",
+      "label": "Azure Service Bus queue",
+      "family": "messaging-eventing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_servicebus_queue",
+      "official_source": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/"
+    },
+    {
+      "rule_id": "azure/service-bus-subscription",
+      "label": "Azure Service Bus topic subscription",
+      "family": "messaging-eventing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_servicebus_subscription",
+      "official_source": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/"
+    },
+    {
+      "rule_id": "azure/service-bus-subscription-rule",
+      "label": "Azure Service Bus subscription rule",
+      "family": "messaging-eventing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_servicebus_subscription_rule",
+      "official_source": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/"
+    },
+    {
+      "rule_id": "azure/service-bus-topic",
+      "label": "Azure Service Bus topic",
+      "family": "messaging-eventing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_servicebus_topic",
+      "official_source": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/"
+    },
+    {
+      "rule_id": "azure/service-fabric-cluster",
+      "label": "Azure Service Fabric cluster",
+      "family": "containers",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_service_fabric_cluster",
+      "official_source": "https://learn.microsoft.com/en-us/azure/aks/"
+    },
+    {
+      "rule_id": "azure/shared-image",
+      "label": "Azure Compute Gallery image definition",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_shared_image",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/signalr-service",
+      "label": "Azure SignalR Service",
+      "family": "communication",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_signalr_service",
+      "official_source": "https://learn.microsoft.com/en-us/azure/communication-services/"
+    },
+    {
+      "rule_id": "azure/site-recovery-fabric",
+      "label": "Azure Site Recovery fabric",
+      "family": "migration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_site_recovery_fabric",
+      "official_source": "https://learn.microsoft.com/en-us/azure/migrate/"
+    },
+    {
+      "rule_id": "azure/site-recovery-plan",
+      "label": "Azure Site Recovery recovery plan",
+      "family": "migration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_site_recovery_replication_recovery_plan",
+      "official_source": "https://learn.microsoft.com/en-us/azure/migrate/"
+    },
+    {
+      "rule_id": "azure/site-recovery-protection-container",
+      "label": "Azure Site Recovery protection container",
+      "family": "migration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_site_recovery_protection_container",
+      "official_source": "https://learn.microsoft.com/en-us/azure/migrate/"
+    },
+    {
+      "rule_id": "azure/site-recovery-replicated-vm",
+      "label": "Azure Site Recovery replicated virtual machine",
+      "family": "migration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_site_recovery_replicated_vm",
+      "official_source": "https://learn.microsoft.com/en-us/azure/migrate/"
+    },
+    {
+      "rule_id": "azure/spring-app",
+      "label": "Azure Spring Apps app",
+      "family": "serverless",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_spring_cloud_app",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-functions/"
+    },
+    {
+      "rule_id": "azure/spring-apps-gateway",
+      "label": "Azure Spring Apps Enterprise gateway",
+      "family": "serverless",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_spring_cloud_gateway",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-functions/"
+    },
+    {
+      "rule_id": "azure/spring-apps-service",
+      "label": "Azure Spring Apps service",
+      "family": "serverless",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_spring_cloud_service",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-functions/"
+    },
+    {
+      "rule_id": "azure/sql-elastic-pool",
+      "label": "Azure SQL elastic pool",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_mssql_elasticpool",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/sql-failover-group",
+      "label": "Azure SQL failover group",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_mssql_failover_group",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/sql-managed-database",
+      "label": "Azure SQL Managed Instance database",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_mssql_managed_database",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/sql-managed-instance",
+      "label": "Azure SQL Managed Instance",
+      "family": "databases",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_mssql_managed_instance",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-sql/"
+    },
+    {
+      "rule_id": "azure/sre-agent",
+      "label": "Azure SRE Agent",
+      "family": "ai-ml",
+      "provider": "azapi",
+      "terraform_type": "azapi_resource",
+      "arm_type": "Microsoft.App/agents@2026-01-01",
+      "official_source": "https://learn.microsoft.com/en-us/azure/ai-foundry/"
+    },
+    {
+      "rule_id": "azure/stack-hci-virtual-hard-disk",
+      "label": "Azure Local virtual hard disk",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_stack_hci_virtual_hard_disk",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/static-web-app",
+      "label": "Azure Static Web Apps site",
+      "family": "serverless",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_static_web_app",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-functions/"
+    },
+    {
+      "rule_id": "azure/storage-account",
+      "label": "Azure Storage account",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_storage_account",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/storage-blob",
+      "label": "Azure Blob Storage blob",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_storage_blob",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/storage-encryption-scope",
+      "label": "Azure Storage encryption scope",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_storage_encryption_scope",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/storage-management-policy",
+      "label": "Azure Storage lifecycle management policy",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_storage_management_policy",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/storage-mover",
+      "label": "Azure Storage Mover",
+      "family": "migration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_storage_mover",
+      "official_source": "https://learn.microsoft.com/en-us/azure/migrate/"
+    },
+    {
+      "rule_id": "azure/storage-share-directory",
+      "label": "Azure Files directory",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_storage_share_directory",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/storage-share-file",
+      "label": "Azure Files file",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_storage_share_file",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/storage-sync-service",
+      "label": "Azure File Sync service",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_storage_sync",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/storage-table-entity",
+      "label": "Azure Table Storage entity",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_storage_table_entity",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/stream-analytics-blob-output",
+      "label": "Azure Stream Analytics Blob Storage output",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_stream_analytics_output_blob",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/stream-analytics-cluster",
+      "label": "Azure Stream Analytics cluster",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_stream_analytics_cluster",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/stream-analytics-event-hubs-input",
+      "label": "Azure Stream Analytics Event Hubs input",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_stream_analytics_stream_input_eventhub_v2",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/stream-analytics-job",
+      "label": "Azure Stream Analytics job",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_stream_analytics_job",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/subnet",
+      "label": "subnet",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_subnet",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/subnet-nat-gateway-association",
+      "label": "subnet NAT Gateway association",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_subnet_nat_gateway_association",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/subnet-network-security-group-association",
+      "label": "subnet Network Security Group association",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_subnet_network_security_group_association",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/subnet-route-table-association",
+      "label": "subnet route table association",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_subnet_route_table_association",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/subscription",
+      "label": "Azure subscription",
+      "family": "governance-management",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_subscription",
+      "official_source": "https://learn.microsoft.com/en-us/azure/governance/"
+    },
+    {
+      "rule_id": "azure/synapse-private-link-hub",
+      "label": "Azure Synapse Analytics managed private endpoint hub",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_synapse_private_link_hub",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/synapse-spark-pool",
+      "label": "Azure Synapse Apache Spark pool",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_synapse_spark_pool",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/synapse-sql-pool",
+      "label": "Azure Synapse dedicated SQL pool",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_synapse_sql_pool",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/synapse-workspace",
+      "label": "Azure Synapse Analytics workspace",
+      "family": "data-analytics",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_synapse_workspace",
+      "official_source": "https://learn.microsoft.com/en-us/azure/data-factory/"
+    },
+    {
+      "rule_id": "azure/system-center-virtual-machine",
+      "label": "System Center Virtual Machine Manager virtual machine",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_system_center_virtual_machine_manager_virtual_machine_instance",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/system-center-vmm-server",
+      "label": "System Center Virtual Machine Manager server connected to Azure Arc",
+      "family": "hybrid",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_system_center_virtual_machine_manager_server",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-arc/"
+    },
+    {
+      "rule_id": "azure/table-storage-table",
+      "label": "Azure Table Storage table",
+      "family": "storage",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_storage_table",
+      "official_source": "https://learn.microsoft.com/en-us/azure/storage/"
+    },
+    {
+      "rule_id": "azure/traffic-manager-azure-endpoint",
+      "label": "Azure Traffic Manager Azure endpoint",
+      "family": "load-balancing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_traffic_manager_azure_endpoint",
+      "official_source": "https://learn.microsoft.com/en-us/azure/load-balancer/"
+    },
+    {
+      "rule_id": "azure/traffic-manager-profile",
+      "label": "Azure Traffic Manager profile",
+      "family": "load-balancing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_traffic_manager_profile",
+      "official_source": "https://learn.microsoft.com/en-us/azure/load-balancer/"
+    },
+    {
+      "rule_id": "azure/trusted-signing-account",
+      "label": "Azure Artifact Signing account",
+      "family": "security",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_trusted_signing_account",
+      "official_source": "https://learn.microsoft.com/en-us/azure/key-vault/"
+    },
+    {
+      "rule_id": "azure/user-assigned-managed-identity",
+      "label": "user-assigned managed identity",
+      "family": "identity-iam",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_user_assigned_identity",
+      "official_source": "https://learn.microsoft.com/en-us/entra/identity/"
+    },
+    {
+      "rule_id": "azure/video-indexer-account",
+      "label": "Azure AI Video Indexer account",
+      "family": "ai-ml",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_video_indexer_account",
+      "official_source": "https://learn.microsoft.com/en-us/azure/ai-foundry/"
+    },
+    {
+      "rule_id": "azure/virtual-desktop-application",
+      "label": "Azure Virtual Desktop application",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_virtual_desktop_application",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/virtual-desktop-application-group",
+      "label": "Azure Virtual Desktop application group",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_virtual_desktop_application_group",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/virtual-desktop-host-pool",
+      "label": "Azure Virtual Desktop host pool",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_virtual_desktop_host_pool",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/virtual-desktop-scaling-plan",
+      "label": "Azure Virtual Desktop scaling plan",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_virtual_desktop_scaling_plan",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/virtual-desktop-workspace",
+      "label": "Azure Virtual Desktop workspace",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_virtual_desktop_workspace",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/virtual-hub",
+      "label": "Azure Virtual WAN hub",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_virtual_hub",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/virtual-hub-routing-intent",
+      "label": "Azure Virtual WAN hub routing intent",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_virtual_hub_routing_intent",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/virtual-machine",
+      "label": "Azure virtual machine",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_virtual_machine",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/virtual-machine-backup-policy",
+      "label": "Azure virtual machine backup policy",
+      "family": "migration",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_backup_policy_vm",
+      "official_source": "https://learn.microsoft.com/en-us/azure/migrate/"
+    },
+    {
+      "rule_id": "azure/virtual-machine-restore-point",
+      "label": "Azure virtual machine restore point",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_virtual_machine_restore_point",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/virtual-machine-scale-set",
+      "label": "Virtual Machine Scale Set",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_virtual_machine_scale_set",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/virtual-network",
+      "label": "Azure Virtual Network",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_virtual_network",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/virtual-network-gateway",
+      "label": "Azure VPN Gateway",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_virtual_network_gateway",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/virtual-network-gateway-connection",
+      "label": "Azure VPN Gateway connection",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_virtual_network_gateway_connection",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/virtual-network-manager",
+      "label": "Azure Virtual Network Manager",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_network_manager",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/virtual-network-peering",
+      "label": "Azure Virtual Network peering",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_virtual_network_peering",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/virtual-wan",
+      "label": "Azure Virtual WAN",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_virtual_wan",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/vmware-cluster",
+      "label": "Azure VMware Solution cluster",
+      "family": "hybrid",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_vmware_cluster",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-arc/"
+    },
+    {
+      "rule_id": "azure/vmware-private-cloud",
+      "label": "Azure VMware Solution private cloud",
+      "family": "hybrid",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_vmware_private_cloud",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-arc/"
+    },
+    {
+      "rule_id": "azure/vpn-gateway",
+      "label": "Azure Virtual WAN VPN gateway",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_vpn_gateway",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/vpn-gateway-connection",
+      "label": "Azure Virtual WAN VPN connection",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_vpn_gateway_connection",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/vpn-site",
+      "label": "Azure Virtual WAN VPN site",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_vpn_site",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/web-application-firewall-policy",
+      "label": "Azure Web Application Firewall policy",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_web_application_firewall_policy",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/web-pubsub",
+      "label": "Azure Web PubSub service",
+      "family": "communication",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_web_pubsub",
+      "official_source": "https://learn.microsoft.com/en-us/azure/communication-services/"
+    },
+    {
+      "rule_id": "azure/windows-function-app",
+      "label": "Azure Functions Windows function app",
+      "family": "serverless",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_windows_function_app",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-functions/"
+    },
+    {
+      "rule_id": "azure/windows-virtual-machine",
+      "label": "Windows virtual machine",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_windows_virtual_machine",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/windows-virtual-machine-scale-set",
+      "label": "Windows Virtual Machine Scale Set",
+      "family": "compute",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_windows_virtual_machine_scale_set",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-machines/"
+    },
+    {
+      "rule_id": "azure/windows-web-app",
+      "label": "Azure App Service Windows web app",
+      "family": "serverless",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_windows_web_app",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-functions/"
+    }
+  ]
+}

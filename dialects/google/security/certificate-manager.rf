@@ -1,0 +1,27 @@
+concept "certificate-map" {
+  kind        = scope
+  description = "A Certificate Manager map selecting certificates for application endpoints."
+}
+
+concept "managed-certificate" {
+  kind        = detail
+  description = "A certificate managed by Certificate Manager without private key material in Architecture IR."
+}
+
+rule "certificate-map" {
+  match {
+    kind = "resource"
+    type = "google_certificate_manager_certificate_map"
+  }
+
+  as = concept.certificate-map
+}
+
+rule "certificate-manager-certificate" {
+  match {
+    kind = "resource"
+    type = "google_certificate_manager_certificate"
+  }
+
+  as = concept.managed-certificate
+}

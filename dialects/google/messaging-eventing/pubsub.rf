@@ -1,0 +1,40 @@
+rule "pubsub-topic" {
+  match {
+    kind = "resource"
+    type = "google_pubsub_topic"
+  }
+
+  as = concept.core.message-topic
+}
+
+rule "pubsub-subscription" {
+  match {
+    kind = "resource"
+    type = "google_pubsub_subscription"
+  }
+
+  as = concept.core.message-subscription
+
+  relation "subscribes-to" {
+    to  = concept.core.message-topic
+    via = source.topic
+  }
+}
+
+rule "pubsub-lite-topic" {
+  match {
+    kind = "resource"
+    type = "google_pubsub_lite_topic"
+  }
+
+  as = concept.core.message-topic
+}
+
+rule "pubsub-lite-subscription" {
+  match {
+    kind = "resource"
+    type = "google_pubsub_lite_subscription"
+  }
+
+  as = concept.core.message-subscription
+}

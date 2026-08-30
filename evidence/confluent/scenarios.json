@@ -1,0 +1,257 @@
+{
+  "format_version": "1",
+  "scenarios": [
+    {
+      "id": "minimal-private-kafka-platform",
+      "fixture": "testdata/architecture/confluent-v2/minimal",
+      "required_rules": [
+        "confluent/connector",
+        "confluent/environment",
+        "confluent/kafka-cluster",
+        "confluent/kafka-topic",
+        "confluent/network",
+        "confluent/schema-registry"
+      ],
+      "required_outcomes": {
+        "confluent_connector.warehouse": "represented",
+        "confluent_environment.production": "represented",
+        "confluent_kafka_cluster.events": "represented",
+        "confluent_kafka_topic.orders": "represented",
+        "confluent_network.private": "represented",
+        "data.confluent_schema_registry_cluster.production": "represented"
+      },
+      "required_facts": [
+        {
+          "collection": "contexts",
+          "from": "entity:confluent_kafka_cluster.events",
+          "to": "scope:confluent_network.private",
+          "dimension": "core/network",
+          "rule": "confluent/kafka-cluster"
+        },
+        {
+          "collection": "contexts",
+          "from": "entity:confluent_connector.warehouse",
+          "to": "entity:confluent_kafka_cluster.events",
+          "dimension": "core/runtime",
+          "rule": "confluent/connector"
+        }
+      ],
+      "minimum": {
+        "contexts": 7,
+        "details": 0,
+        "entities": 4,
+        "relations": 0,
+        "scopes": 2
+      },
+      "maximum_facts": {
+        "contexts": 7,
+        "contributions": 0,
+        "relations": 0
+      },
+      "expected_check_violations": [],
+      "expected_html_labels": [
+        "Confluent Cloud connector",
+        "Confluent Cloud environment",
+        "Confluent Cloud Kafka cluster",
+        "Confluent Cloud Kafka topic",
+        "Confluent Cloud network",
+        "Confluent Cloud Schema Registry"
+      ],
+      "forbidden_output": ["ROOTFORM_CONFLUENT_MINIMAL_SECRET"],
+      "limitations": [
+        "Minimal fixture proves fixed ownership, runtime, and network evidence; connector map direction remains deliberately unmodeled."
+      ]
+    },
+    {
+      "id": "broad-cross-cloud-streaming-platform",
+      "fixture": "testdata/architecture/confluent-v2/scenarios",
+      "required_rules": [
+        "confluent/access-point",
+        "confluent/byok-key",
+        "confluent/catalog-integration",
+        "confluent/certificate-authority",
+        "confluent/certificate-pool",
+        "confluent/cluster-link",
+        "confluent/connector",
+        "confluent/dns-forwarder",
+        "confluent/environment",
+        "confluent/flink-compute-pool",
+        "confluent/flink-connection",
+        "confluent/flink-materialized-table",
+        "confluent/gateway",
+        "confluent/identity-pool",
+        "confluent/identity-provider",
+        "confluent/kafka-cluster",
+        "confluent/kafka-mirror-topic",
+        "confluent/kafka-topic",
+        "confluent/ksqldb-cluster",
+        "confluent/network",
+        "confluent/network-link-endpoint",
+        "confluent/network-link-service",
+        "confluent/network-peering",
+        "confluent/private-link-attachment",
+        "confluent/private-link-attachment-connection",
+        "confluent/provider-integration",
+        "confluent/rtce-topic",
+        "confluent/schema-exporter",
+        "confluent/schema-registry",
+        "confluent/service-account",
+        "confluent/tableflow-topic",
+        "confluent/transit-gateway-attachment"
+      ],
+      "required_outcomes": {
+        "confluent_access_point.aws": "represented",
+        "confluent_byok_key.google": "represented",
+        "confluent_cluster_link.replication": "represented",
+        "confluent_connector.warehouse": "represented",
+        "confluent_flink_compute_pool.analytics": "represented",
+        "confluent_kafka_mirror_topic.orders": "represented",
+        "confluent_network_link_service.shared": "represented",
+        "confluent_schema_exporter.replication": "represented",
+        "confluent_tableflow_topic.aws": "represented",
+        "data.confluent_schema_registry_cluster.source": "represented"
+      },
+      "required_facts": [
+        {
+          "collection": "relations",
+          "from": "entity:confluent_access_point.aws",
+          "to": "entity:aws_vpc_endpoint.confluent",
+          "type": "connects-to",
+          "rule": "confluent/access-point"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:confluent_access_point.azure",
+          "to": "entity:azurerm_private_endpoint.confluent",
+          "type": "connects-to",
+          "rule": "confluent/access-point"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:confluent_access_point.google",
+          "to": "entity:google_compute_forwarding_rule.confluent",
+          "type": "connects-to",
+          "rule": "confluent/access-point"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:confluent_peering.aws",
+          "to": "scope:aws_vpc.platform",
+          "type": "peers-with",
+          "rule": "confluent/network-peering"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:confluent_byok_key.google",
+          "to": "entity:google_kms_crypto_key.streaming",
+          "type": "registers-key",
+          "rule": "confluent/byok-key"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:confluent_provider_integration.aws",
+          "to": "entity:aws_iam_role.confluent",
+          "type": "uses-cloud-identity",
+          "rule": "confluent/provider-integration"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:confluent_cluster_link.replication",
+          "to": "entity:confluent_kafka_cluster.source",
+          "type": "source-cluster",
+          "rule": "confluent/cluster-link"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:confluent_kafka_mirror_topic.orders",
+          "to": "entity:confluent_kafka_topic.orders",
+          "type": "mirrors",
+          "rule": "confluent/kafka-mirror-topic"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:confluent_schema_exporter.replication",
+          "to": "entity:data.confluent_schema_registry_cluster.destination",
+          "type": "exports-to",
+          "rule": "confluent/schema-exporter"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:confluent_tableflow_topic.aws",
+          "to": "entity:aws_s3_bucket.tableflow",
+          "type": "stores-in",
+          "rule": "confluent/tableflow-topic"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:confluent_tableflow_topic.azure",
+          "to": "entity:azurerm_storage_container.tableflow",
+          "type": "stores-in",
+          "rule": "confluent/tableflow-topic"
+        },
+        {
+          "collection": "contributions",
+          "from": "detail:confluent_flink_statement.orders",
+          "to": "entity:confluent_flink_compute_pool.analytics",
+          "rule": "confluent/flink-statement"
+        }
+      ],
+      "minimum": {
+        "contexts": 47,
+        "contributions": 13,
+        "details": 30,
+        "entities": 51,
+        "relations": 35,
+        "scopes": 10
+      },
+      "maximum_facts": {
+        "contexts": 47,
+        "contributions": 13,
+        "relations": 35
+      },
+      "expected_check_violations": [],
+      "expected_html_labels": [
+        "Confluent Cloud Access Point",
+        "Confluent Cloud Cluster Link",
+        "Confluent Cloud Kafka cluster",
+        "Confluent Cloud Schema Registry",
+        "Confluent Cloud Tableflow topic",
+        "Confluent Cloud for Apache Flink compute pool"
+      ],
+      "forbidden_output": [
+        "ROOTFORM_CONFLUENT_CERTIFICATE_SENTINEL",
+        "ROOTFORM_CONFLUENT_CONNECTOR_SECRET",
+        "ROOTFORM_CONFLUENT_DEK_SENTINEL",
+        "ROOTFORM_CONFLUENT_FLINK_PASSWORD",
+        "ROOTFORM_CONFLUENT_FLINK_PROPERTY_SECRET",
+        "ROOTFORM_CONFLUENT_FLINK_SQL_SENTINEL",
+        "ROOTFORM_CONFLUENT_MATERIALIZED_TABLE_QUERY",
+        "ROOTFORM_CONFLUENT_SCHEMA_SENTINEL"
+      ],
+      "limitations": [
+        "Cross-cloud facts require exact references to represented networks, endpoints, keys, identities, and storage; opaque connector maps and transit-gateway literals create no topology."
+      ]
+    },
+    {
+      "id": "fail-closed-boundaries",
+      "fixture": "testdata/architecture/confluent-v2/boundary",
+      "expected_build_failure": true,
+      "expected_diagnostic_codes": [
+        "TRAVERSAL_AMBIGUOUS",
+        "TRAVERSAL_AMBIGUOUS",
+        "TRAVERSAL_UNRESOLVED",
+        "TRAVERSAL_UNRESOLVED",
+        "TRAVERSAL_UNRESOLVED"
+      ],
+      "forbidden_output": [
+        "ROOTFORM_CONFLUENT_BOUNDARY_CERTIFICATE",
+        "ROOTFORM_CONFLUENT_BOUNDARY_FLINK_SECRET",
+        "ROOTFORM_CONFLUENT_BOUNDARY_SECRET",
+        "ROOTFORM_CONFLUENT_BOUNDARY_SQL"
+      ],
+      "limitations": [
+        "Ambiguous and literal cloud identifiers fail closed; credentials, invitations, importer helpers, read-only lookups, opaque maps, and depends_on remain explicit unsupported or source evidence only."
+      ]
+    }
+  ]
+}

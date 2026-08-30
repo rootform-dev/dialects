@@ -1,0 +1,8 @@
+rule "lambda-function" {
+  match {
+    kind = "resource"
+    type = "aws_lambda_function"
+  }
+
+  as = concept.core.serverless-function
+}

@@ -1,0 +1,87 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-30",
+  "accepted_adr": "docs/adr/089-consul-provider-boundaries.md",
+  "reused_core_concepts": ["api-gateway"],
+  "referenced_core_concepts": ["api-gateway"],
+  "promoted_core_concepts": [],
+  "consul_specific_concepts": [
+    "access-control-configuration",
+    "acl-auth-method",
+    "admin-partition",
+    "catalog-registration",
+    "cluster-peering",
+    "consul-node",
+    "consul-service",
+    "discovery-chain-configuration",
+    "gateway-configuration",
+    "ingress-gateway",
+    "jwt-provider",
+    "mesh-certificate-authority",
+    "mesh-security-configuration",
+    "namespace",
+    "network-area",
+    "operations-configuration",
+    "sameness-group",
+    "service-export",
+    "service-mesh",
+    "service-networking-configuration",
+    "terminating-gateway"
+  ],
+  "candidates": [
+    {
+      "candidate": "service-mesh",
+      "disposition": "defer-root-parity",
+      "reason": "Consul and Google expose mesh roots, but AWS root is currently unrepresented and Azure has no equivalent independent provider surface",
+      "sources": {
+        "consul": "https://developer.hashicorp.com/consul/docs/use-case/service-mesh",
+        "google": "https://cloud.google.com/service-mesh/docs/overview",
+        "aws": "https://docs.aws.amazon.com/app-mesh/latest/userguide/what-is-app-mesh.html",
+        "azure": "https://learn.microsoft.com/azure/aks/istio-about"
+      }
+    },
+    {
+      "candidate": "cluster-peering",
+      "disposition": "reject-virtual-network-peering",
+      "reason": "Consul peering exchanges service discovery and mesh traffic between control planes, not routes between virtual networks",
+      "sources": {
+        "consul": "https://developer.hashicorp.com/consul/docs/east-west/cluster-peering",
+        "aws": "https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html",
+        "azure": "https://learn.microsoft.com/azure/virtual-network/virtual-network-peering-overview",
+        "google": "https://cloud.google.com/vpc/docs/vpc-peering"
+      }
+    },
+    {
+      "candidate": "identity-provider",
+      "disposition": "defer-identity-wave",
+      "reason": "Consul auth and JWT providers need Okta/Auth0 evidence before a stable core identity boundary",
+      "sources": {
+        "consul": "https://developer.hashicorp.com/consul/docs/secure/acl/auth-methods",
+        "okta": "https://developer.okta.com/docs/concepts/identity-providers/",
+        "auth0": "https://auth0.com/docs/authenticate/identity-providers"
+      }
+    },
+    {
+      "candidate": "service",
+      "disposition": "reject-overgeneric-service",
+      "reason": "Consul catalog services, Kubernetes Services, ECS services, and Cloud Run services own different runtime and networking boundaries",
+      "sources": {
+        "consul": "https://developer.hashicorp.com/consul/docs/architecture/data-plane/service",
+        "kubernetes": "https://kubernetes.io/docs/concepts/services-networking/service/",
+        "aws": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html",
+        "google": "https://cloud.google.com/run/docs/overview/what-is-cloud-run"
+      }
+    },
+    {
+      "candidate": "certificate-authority",
+      "disposition": "reject-encryption-key",
+      "reason": "A mesh CA issues workload identities; it is not equivalent to a managed encryption key",
+      "sources": {
+        "consul": "https://developer.hashicorp.com/consul/docs/secure-mesh/certificate-authority",
+        "aws": "https://docs.aws.amazon.com/privateca/latest/userguide/PcaWelcome.html",
+        "azure": "https://learn.microsoft.com/azure/key-vault/certificates/about-certificates",
+        "google": "https://cloud.google.com/certificate-authority-service/docs/ca-service-overview"
+      }
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+concept "database-configuration" {
+  kind        = detail
+  description = "A configuration supporting MongoDB Atlas database deployments within a project."
+}
+
+rule "advanced-cluster" {
+  match {
+    kind = "resource"
+    type = "mongodbatlas_advanced_cluster"
+  }
+
+  as = concept.core.managed-database
+
+  context {
+    as  = context.core.ownership
+    to  = concept.project
+    via = source.project_id
+  }
+}
+
+rule "cluster" {
+  match {
+    kind = "resource"
+    type = "mongodbatlas_cluster"
+  }
+
+  as = concept.core.managed-database
+
+  context {
+    as  = context.core.ownership
+    to  = concept.project
+    via = source.project_id
+  }
+}
+
+rule "flex-cluster" {
+  match {
+    kind = "resource"
+    type = "mongodbatlas_flex_cluster"
+  }
+
+  as = concept.core.managed-database
+
+  context {
+    as  = context.core.ownership
+    to  = concept.project
+    via = source.project_id
+  }
+}
+
+rule "serverless-instance" {
+  match {
+    kind = "resource"
+    type = "mongodbatlas_serverless_instance"
+  }
+
+  as = concept.core.managed-database
+
+  context {
+    as  = context.core.ownership
+    to  = concept.project
+    via = source.project_id
+  }
+}
+
+rule "global-cluster-configuration" {
+  match {
+    kind = "resource"
+    type = "mongodbatlas_global_cluster_config"
+  }
+
+  as = concept.database-configuration
+
+  contribution {
+    to  = concept.core.managed-database
+    via = source.cluster_name
+  }
+
+  contribution {
+    to  = concept.project
+    via = source.project_id
+  }
+}
+
+rule "maintenance-window" {
+  match {
+    kind = "resource"
+    type = "mongodbatlas_maintenance_window"
+  }
+
+  as = concept.database-configuration
+
+  contribution {
+    to  = concept.project
+    via = source.project_id
+  }
+}

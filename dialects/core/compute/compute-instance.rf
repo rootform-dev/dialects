@@ -1,0 +1,9 @@
+concept "compute-instance" {
+  kind        = entity
+  description = "A provisioned compute instance running a workload."
+}
+
+concept "block-storage-volume" {
+  kind        = entity
+  description = "A durable block-storage volume attachable to compute workloads."
+}

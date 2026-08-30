@@ -1,0 +1,27 @@
+concept "firebase-hosting-site" {
+  kind        = entity
+  description = "A Firebase Hosting site serving web content."
+}
+
+concept "firebase-app-hosting-backend" {
+  kind        = entity
+  description = "A Firebase App Hosting backend running a web application."
+}
+
+rule "firebase-hosting-site" {
+  match {
+    kind = "resource"
+    type = "google_firebase_hosting_site"
+  }
+
+  as = concept.firebase-hosting-site
+}
+
+rule "firebase-app-hosting-backend" {
+  match {
+    kind = "resource"
+    type = "google_firebase_app_hosting_backend"
+  }
+
+  as = concept.firebase-app-hosting-backend
+}

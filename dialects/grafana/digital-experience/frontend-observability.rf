@@ -1,0 +1,29 @@
+rule "frontend-o11y-app" {
+  match {
+    kind = "resource"
+    type = "grafana_frontend_o11y_app"
+  }
+
+  as = concept.core.browser-observability-application
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.stack_id
+  }
+}
+
+rule "frontend-o11y-app-lookup" {
+  match {
+    kind = "data"
+    type = "grafana_frontend_o11y_app"
+  }
+
+  as = concept.core.browser-observability-application
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.stack_id
+  }
+}

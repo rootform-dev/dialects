@@ -1,0 +1,32 @@
+concept "cloud-dns-record-set" {
+  kind        = detail
+  description = "A DNS record set managed inside a Cloud DNS managed zone."
+}
+
+rule "cloud-dns-managed-zone" {
+  match {
+    kind = "resource"
+    type = "google_dns_managed_zone"
+  }
+
+  as = concept.core.dns-zone
+}
+
+rule "cloud-dns-record-set" {
+  match {
+    kind = "resource"
+    type = "google_dns_record_set"
+  }
+
+  as = concept.cloud-dns-record-set
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.managed_zone
+
+    match {
+      by       = target.name
+      strategy = "exact"
+    }
+  }
+}

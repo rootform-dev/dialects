@@ -1,0 +1,77 @@
+concept "access-role" {
+  kind        = entity
+  description = "A Kestra role defining an access permission set."
+}
+
+concept "access-binding" {
+  kind        = detail
+  description = "A Kestra role binding for an external principal."
+}
+
+rule "group" {
+  match {
+    kind = "resource"
+    type = "kestra_group"
+  }
+
+  as = concept.core.identity-group
+
+  context {
+    as  = context.core.ownership
+    to  = concept.namespace
+    via = source.namespace
+
+    match {
+      by       = target.namespace_id
+      strategy = "dot-ancestor"
+    }
+  }
+}
+
+rule "role" {
+  match {
+    kind = "resource"
+    type = "kestra_role"
+  }
+
+  as = concept.access-role
+
+  context {
+    as  = context.core.ownership
+    to  = concept.namespace
+    via = source.namespace
+
+    match {
+      by       = target.namespace_id
+      strategy = "dot-ancestor"
+    }
+  }
+}
+
+rule "existing-role" {
+  match {
+    kind = "data"
+    type = "kestra_role"
+  }
+
+  as = concept.access-role
+}
+
+rule "binding" {
+  match {
+    kind = "resource"
+    type = "kestra_binding"
+  }
+
+  as = concept.access-binding
+
+  contribution {
+    to  = concept.access-role
+    via = source.role_id
+
+    match {
+      by       = target.role_id
+      strategy = "exact"
+    }
+  }
+}

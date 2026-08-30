@@ -1,0 +1,1007 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-30",
+  "dialect": {
+    "name": "consul",
+    "version": "0.1.0"
+  },
+  "provider": {
+    "source": "registry.terraform.io/hashicorp/consul",
+    "baseline_version": "2.23.0",
+    "compatibility": "= 2.23.0",
+    "bound": "temporary-exact-evidence",
+    "schema_sha256": "sha256:0d04a0b36d210ef7cb941ee2d1c5fb6d5b194bea2ff10aee5204353380972a5e"
+  },
+  "semantic_sources_sha256": "sha256:5641edd29b5d942fffe981bcd0908ebe412a9d9083e050ed01c60614b223b649",
+  "rules": [
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/identity-access/auth-methods.rf",
+      "paths": [
+        {
+          "path": "namespace",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_acl_auth_method",
+      "rule_id": "consul/acl-auth-method",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/acl_auth_method"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/consul/identity-access/auth-methods.rf",
+      "paths": [
+        {
+          "path": "namespace",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_acl_auth_method",
+      "rule_id": "consul/acl-auth-method-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/acl_auth_method"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/identity-access/auth-methods.rf",
+      "paths": [
+        {
+          "path": "auth_method",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_acl_binding_rule",
+      "rule_id": "consul/acl-binding-rule",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/acl_binding_rule"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/multi-tenancy/partitions-namespaces.rf",
+      "paths": [],
+      "resource_type": "consul_admin_partition",
+      "rule_id": "consul/admin-partition",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/admin_partition"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/service-catalog/nodes-services.rf",
+      "paths": [],
+      "resource_type": "consul_agent_service",
+      "rule_id": "consul/agent-service",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/agent_service"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/platform/operations.rf",
+      "paths": [],
+      "resource_type": "consul_autopilot_config",
+      "rule_id": "consul/autopilot-config",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/autopilot_config"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/service-catalog/nodes-services.rf",
+      "paths": [],
+      "resource_type": "consul_catalog_entry",
+      "rule_id": "consul/catalog-entry",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/catalog_entry"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/consul/service-catalog/nodes-services.rf",
+      "paths": [],
+      "resource_type": "consul_catalog_service",
+      "rule_id": "consul/catalog-service-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/catalog_service"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/service-mesh/mesh-security.rf",
+      "paths": [],
+      "resource_type": "consul_certificate_authority",
+      "rule_id": "consul/certificate-authority",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/certificate_authority"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/gateways/api-gateway.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-api-gateway-json",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/consul/gateways/api-gateway.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-api-gateway-json-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/platform/operations.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-control-plane-request-limit-json",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/consul/platform/operations.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-control-plane-request-limit-json-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/connectivity/peering-federation.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-exported-services-json",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/consul/connectivity/peering-federation.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-exported-services-json-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/gateways/api-gateway.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-file-system-certificate-json",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/consul/gateways/api-gateway.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-file-system-certificate-json-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/gateways/api-gateway.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-http-route-json",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/consul/gateways/api-gateway.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-http-route-json-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/gateways/mesh-gateways.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-ingress-gateway-json",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/consul/gateways/mesh-gateways.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-ingress-gateway-json-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/gateways/api-gateway.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-inline-certificate-json",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/consul/gateways/api-gateway.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-inline-certificate-json-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/service-mesh/mesh-security.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-jwt-provider-json",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/consul/service-mesh/mesh-security.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-jwt-provider-json-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/service-mesh/mesh-security.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-mesh-json",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/consul/service-mesh/mesh-security.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-mesh-json-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/service-mesh/mesh-security.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-proxy-defaults-json",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/consul/service-mesh/mesh-security.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-proxy-defaults-json-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/connectivity/peering-federation.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-sameness-group-json",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/consul/connectivity/peering-federation.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-sameness-group-json-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/service-mesh/mesh-security.rf",
+      "paths": [
+        {
+          "path": "name",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry_service_defaults",
+      "rule_id": "consul/config-entry-service-defaults",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry_service_defaults"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/service-mesh/mesh-security.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-service-defaults-json",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/consul/service-mesh/mesh-security.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-service-defaults-json-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/service-mesh/intentions.rf",
+      "paths": [
+        {
+          "path": "name",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry_service_intentions",
+      "rule_id": "consul/config-entry-service-intentions",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry_service_intentions"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/service-mesh/intentions.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-service-intentions-json",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/consul/service-mesh/intentions.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-service-intentions-json-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/traffic-management/discovery-chain.rf",
+      "paths": [
+        {
+          "path": "name",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry_service_resolver",
+      "rule_id": "consul/config-entry-service-resolver",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry_service_resolver"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/traffic-management/discovery-chain.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-service-resolver-json",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/consul/traffic-management/discovery-chain.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-service-resolver-json-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/traffic-management/discovery-chain.rf",
+      "paths": [
+        {
+          "path": "name",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry_service_router",
+      "rule_id": "consul/config-entry-service-router",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry_service_router"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/traffic-management/discovery-chain.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-service-router-json",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/consul/traffic-management/discovery-chain.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-service-router-json-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/traffic-management/discovery-chain.rf",
+      "paths": [
+        {
+          "path": "name",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry_service_splitter",
+      "rule_id": "consul/config-entry-service-splitter",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry_service_splitter"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/traffic-management/discovery-chain.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-service-splitter-json",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/consul/traffic-management/discovery-chain.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-service-splitter-json-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/gateways/api-gateway.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-tcp-route-json",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/consul/gateways/api-gateway.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-tcp-route-json-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/gateways/mesh-gateways.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-terminating-gateway-json",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/consul/gateways/mesh-gateways.rf",
+      "paths": [
+        {
+          "path": "kind",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry",
+      "rule_id": "consul/config-entry-terminating-gateway-json-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/connectivity/peering-federation.rf",
+      "paths": [
+        {
+          "path": "peer_consumers",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "sameness_group_consumers",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "services",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry_v2_exported_services",
+      "rule_id": "consul/config-entry-v2-exported-services",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry_v2_exported_services"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/consul/connectivity/peering-federation.rf",
+      "paths": [
+        {
+          "path": "peer_consumers",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "sameness_group_consumers",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "services",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_config_entry_v2_exported_services",
+      "rule_id": "consul/config-entry-v2-exported-services-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry_v2_exported_services"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/service-mesh/intentions.rf",
+      "paths": [
+        {
+          "path": "destination_name",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "source_name",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_intention",
+      "rule_id": "consul/intention",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/intention"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/multi-tenancy/partitions-namespaces.rf",
+      "paths": [
+        {
+          "path": "partition",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_namespace",
+      "rule_id": "consul/namespace",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/namespace"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/multi-tenancy/partitions-namespaces.rf",
+      "paths": [
+        {
+          "path": "namespace",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_namespace_policy_attachment",
+      "rule_id": "consul/namespace-policy-attachment",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/namespace_policy_attachment"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/multi-tenancy/partitions-namespaces.rf",
+      "paths": [
+        {
+          "path": "namespace",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_namespace_role_attachment",
+      "rule_id": "consul/namespace-role-attachment",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/namespace_role_attachment"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/connectivity/peering-federation.rf",
+      "paths": [],
+      "resource_type": "consul_network_area",
+      "rule_id": "consul/network-area",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/network_area"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/service-catalog/nodes-services.rf",
+      "paths": [],
+      "resource_type": "consul_node",
+      "rule_id": "consul/node",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/node"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/connectivity/peering-federation.rf",
+      "paths": [],
+      "resource_type": "consul_peering",
+      "rule_id": "consul/peering",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/peering"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/consul/connectivity/peering-federation.rf",
+      "paths": [],
+      "resource_type": "consul_peering",
+      "rule_id": "consul/peering-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/peering"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/service-catalog/discovery-queries.rf",
+      "paths": [
+        {
+          "path": "service",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_prepared_query",
+      "rule_id": "consul/prepared-query",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/prepared_query"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/consul/service-catalog/nodes-services.rf",
+      "paths": [
+        {
+          "path": "namespace",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "node",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_service",
+      "rule_id": "consul/service",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/service"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/consul/service-catalog/discovery-queries.rf",
+      "paths": [
+        {
+          "path": "name",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "consul_service_health",
+      "rule_id": "consul/service-health-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/service_health"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/consul/service-catalog/nodes-services.rf",
+      "paths": [],
+      "resource_type": "consul_service",
+      "rule_id": "consul/service-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/service"
+    }
+  ],
+  "review_policy": "later provider releases require schema-path and documented-meaning comparison; they do not require a dialect release automatically"
+}

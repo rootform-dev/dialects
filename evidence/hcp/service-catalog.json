@@ -1,0 +1,173 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-30",
+  "source_url": "https://developer.hashicorp.com/hcp/docs",
+  "derivation": "every provider construct maps to exactly one researched HCP product family",
+  "products": [
+    {
+      "id": "platform-ownership",
+      "family": "platform",
+      "official_name": "HCP organizations and projects",
+      "source_url": "https://developer.hashicorp.com/hcp/docs/hcp/admin/organizations",
+      "lifecycle": "current",
+      "major": true,
+      "constructs": 4,
+      "counts": {
+        "supported": 3,
+        "partial": 1,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "identity-access",
+      "family": "identity-access",
+      "official_name": "HCP access management",
+      "source_url": "https://developer.hashicorp.com/hcp/docs/hcp/admin/access-control",
+      "lifecycle": "current",
+      "major": true,
+      "constructs": 15,
+      "counts": {
+        "supported": 5,
+        "partial": 7,
+        "intentionally-unrepresented": 3,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "hvn-networking",
+      "family": "network",
+      "official_name": "HashiCorp Virtual Networks",
+      "source_url": "https://developer.hashicorp.com/hcp/docs/hcp/network",
+      "lifecycle": "current",
+      "major": true,
+      "constructs": 18,
+      "counts": {
+        "supported": 14,
+        "partial": 4,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "vault-dedicated",
+      "family": "services",
+      "official_name": "HCP Vault Dedicated",
+      "source_url": "https://developer.hashicorp.com/hcp/docs/vault",
+      "lifecycle": "current",
+      "major": true,
+      "constructs": 5,
+      "counts": {
+        "supported": 4,
+        "partial": 0,
+        "intentionally-unrepresented": 1,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "boundary",
+      "family": "services",
+      "official_name": "HCP Boundary",
+      "source_url": "https://developer.hashicorp.com/boundary/docs/hcp",
+      "lifecycle": "current",
+      "major": true,
+      "constructs": 2,
+      "counts": {
+        "supported": 2,
+        "partial": 0,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "consul-dedicated-legacy",
+      "family": "services",
+      "official_name": "HCP Consul Dedicated (end of life)",
+      "source_url": "https://developer.hashicorp.com/consul/docs/hcp",
+      "lifecycle": "legacy-eol",
+      "major": false,
+      "constructs": 7,
+      "counts": {
+        "supported": 2,
+        "partial": 1,
+        "intentionally-unrepresented": 4,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "packer",
+      "family": "packer",
+      "official_name": "HCP Packer",
+      "source_url": "https://developer.hashicorp.com/hcp/docs/packer",
+      "lifecycle": "current",
+      "major": true,
+      "constructs": 10,
+      "counts": {
+        "supported": 4,
+        "partial": 3,
+        "intentionally-unrepresented": 3,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "waypoint",
+      "family": "waypoint",
+      "official_name": "HCP Waypoint",
+      "source_url": "https://developer.hashicorp.com/hcp/docs/waypoint",
+      "lifecycle": "current",
+      "major": true,
+      "constructs": 13,
+      "counts": {
+        "supported": 10,
+        "partial": 3,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "vault-secrets",
+      "family": "vault-secrets",
+      "official_name": "HCP Vault Secrets",
+      "source_url": "https://developer.hashicorp.com/hcp/docs/vault-secrets",
+      "lifecycle": "current",
+      "major": true,
+      "constructs": 18,
+      "counts": {
+        "supported": 13,
+        "partial": 5,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "vault-radar",
+      "family": "vault-radar",
+      "official_name": "HCP Vault Radar",
+      "source_url": "https://developer.hashicorp.com/hcp/docs/vault-radar",
+      "lifecycle": "current",
+      "major": true,
+      "constructs": 10,
+      "counts": {
+        "supported": 5,
+        "partial": 4,
+        "intentionally-unrepresented": 1,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "operations-integrations",
+      "family": "operations",
+      "official_name": "HCP audit log streaming and notifications",
+      "source_url": "https://developer.hashicorp.com/hcp/docs/hcp/admin/audit-logs",
+      "lifecycle": "current",
+      "major": true,
+      "constructs": 2,
+      "counts": {
+        "supported": 2,
+        "partial": 0,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    }
+  ]
+}

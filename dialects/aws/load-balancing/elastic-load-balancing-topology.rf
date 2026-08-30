@@ -1,0 +1,40 @@
+rule "lb" {
+  match {
+    kind = "resource"
+    type = "aws_lb"
+  }
+
+  as = concept.core.load-balancer
+}
+
+rule "lb-listener" {
+  match {
+    kind = "resource"
+    type = "aws_lb_listener"
+  }
+
+  as = concept.load-balancer-component
+
+  contribution {
+    to  = concept.core.load-balancer
+    via = source.load_balancer_arn
+  }
+}
+
+rule "lb-target-group" {
+  match {
+    kind = "resource"
+    type = "aws_lb_target_group"
+  }
+
+  as = concept.load-balancer-component
+}
+
+rule "alb-target-group" {
+  match {
+    kind = "resource"
+    type = "aws_alb_target_group"
+  }
+
+  as = concept.load-balancer-component
+}

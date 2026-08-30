@@ -1,0 +1,9 @@
+concept "backup-vault" {
+  kind        = entity
+  description = "A managed vault storing protected recovery data."
+}
+
+concept "backup-plan" {
+  kind        = entity
+  description = "A managed policy scheduling and retaining backups."
+}

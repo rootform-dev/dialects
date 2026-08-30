@@ -1,0 +1,27 @@
+concept "privileged-access-entitlement" {
+  kind        = entity
+  description = "A Privileged Access Manager entitlement defining eligible temporary access."
+}
+
+concept "privileged-access-settings" {
+  kind        = detail
+  description = "Hierarchy settings configuring Privileged Access Manager."
+}
+
+rule "privileged-access-entitlement" {
+  match {
+    kind = "resource"
+    type = "google_privileged_access_manager_entitlement"
+  }
+
+  as = concept.privileged-access-entitlement
+}
+
+rule "privileged-access-settings" {
+  match {
+    kind = "resource"
+    type = "google_privileged_access_manager_settings"
+  }
+
+  as = concept.privileged-access-settings
+}

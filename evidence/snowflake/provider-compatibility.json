@@ -1,0 +1,935 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-30",
+  "dialect": {
+    "name": "snowflake",
+    "version": "0.1.0"
+  },
+  "provider": {
+    "source": "registry.terraform.io/snowflakedb/snowflake",
+    "baseline_version": "2.20.0",
+    "compatibility": "= 2.20.0",
+    "bound": "temporary-exact-evidence",
+    "schema_sha256": "sha256:3dd1f63e376aab7216afc60aa4414d884023fd2eabe0a5a791fda3d0f85490a9"
+  },
+  "semantic_sources_sha256": "sha256:76df01e36574d372c4e362af89b774be0b3058e4fccedc83fbde484c39bca801",
+  "rules": [
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/governance/accounts.rf",
+      "paths": [],
+      "resource_type": "snowflake_account",
+      "rule_id": "snowflake/account",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/account.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/security/identity-network.rf",
+      "paths": [],
+      "resource_type": "snowflake_account_role",
+      "rule_id": "snowflake/account-role",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/account_role.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/compute/virtual-warehouses.rf",
+      "paths": [],
+      "resource_type": "snowflake_warehouse_adaptive",
+      "rule_id": "snowflake/adaptive-warehouse",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/warehouse_adaptive.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/observability/monitoring.rf",
+      "paths": ["schema", "warehouse"],
+      "resource_type": "snowflake_alert",
+      "rule_id": "snowflake/alert",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/alert.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/api-integration/integrations.rf",
+      "paths": ["api_allowed_prefixes[0]", "api_aws_role_arn"],
+      "resource_type": "snowflake_api_integration_amazon_api_gateway",
+      "rule_id": "snowflake/amazon-api-gateway-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_amazon_api_gateway.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/api-integration/integrations.rf",
+      "paths": ["api_allowed_prefixes[0]", "api_aws_role_arn"],
+      "resource_type": "snowflake_api_integration",
+      "rule_id": "snowflake/api-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/security/identity-network.rf",
+      "paths": [],
+      "resource_type": "snowflake_api_authentication_integration_with_authorization_code_grant",
+      "rule_id": "snowflake/authorization-code-api-authentication",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_authentication_integration_with_authorization_code_grant.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/storage/integrations.rf",
+      "paths": ["glue_aws_role_arn"],
+      "resource_type": "snowflake_catalog_integration_aws_glue",
+      "rule_id": "snowflake/aws-glue-catalog-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/catalog_integration_aws_glue.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/storage/integrations.rf",
+      "paths": [
+        "storage_allowed_locations[0]",
+        "storage_allowed_locations[1]",
+        "storage_aws_role_arn"
+      ],
+      "resource_type": "snowflake_storage_integration_aws",
+      "rule_id": "snowflake/aws-storage-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/storage_integration_aws.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/api-integration/integrations.rf",
+      "paths": ["api_allowed_prefixes[0]"],
+      "resource_type": "snowflake_api_integration_azure_api_management",
+      "rule_id": "snowflake/azure-api-management-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_azure_api_management.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/storage/integrations.rf",
+      "paths": ["storage_allowed_locations[0]", "storage_allowed_locations[1]"],
+      "resource_type": "snowflake_storage_integration_azure",
+      "rule_id": "snowflake/azure-storage-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/storage_integration_azure.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/security/identity-network.rf",
+      "paths": [],
+      "resource_type": "snowflake_api_authentication_integration_with_client_credentials",
+      "rule_id": "snowflake/client-credentials-api-authentication",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_authentication_integration_with_client_credentials.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/snowpark/container-services.rf",
+      "paths": [],
+      "resource_type": "snowflake_compute_pool",
+      "rule_id": "snowflake/compute-pool",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/compute_pool.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/ai-ml/cortex.rf",
+      "paths": ["schema"],
+      "resource_type": "snowflake_cortex_agent",
+      "rule_id": "snowflake/cortex-agent",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/cortex_agent.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/ai-ml/cortex.rf",
+      "paths": ["schema", "warehouse"],
+      "resource_type": "snowflake_cortex_search_service",
+      "rule_id": "snowflake/cortex-search-service",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/cortex_search_service.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/governance/accounts.rf",
+      "paths": [],
+      "resource_type": "snowflake_current_account",
+      "rule_id": "snowflake/current-account",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/current_account.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/governance/accounts.rf",
+      "paths": [],
+      "resource_type": "snowflake_current_organization_account",
+      "rule_id": "snowflake/current-organization-account",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/current_organization_account.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/security/identity-network.rf",
+      "paths": ["network_policy"],
+      "resource_type": "snowflake_oauth_integration_for_custom_clients",
+      "rule_id": "snowflake/custom-client-oauth-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/oauth_integration_for_custom_clients.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/data-platform/databases.rf",
+      "paths": ["external_volume"],
+      "resource_type": "snowflake_database",
+      "rule_id": "snowflake/database",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/database.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/security/identity-network.rf",
+      "paths": ["database"],
+      "resource_type": "snowflake_database_role",
+      "rule_id": "snowflake/database-role",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/database_role.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/data-platform/data-objects.rf",
+      "paths": ["schema", "warehouse"],
+      "resource_type": "snowflake_dynamic_table",
+      "rule_id": "snowflake/dynamic-table",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/dynamic_table.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/data-pipelines/pipes-tasks.rf",
+      "paths": [],
+      "resource_type": "snowflake_email_notification_integration",
+      "rule_id": "snowflake/email-notification-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/email_notification_integration.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/api-integration/integrations.rf",
+      "paths": ["allowed_api_authentication_integrations[0].integrations[0]"],
+      "resource_type": "snowflake_external_access_integration",
+      "rule_id": "snowflake/external-access-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/external_access_integration.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/storage/stages.rf",
+      "paths": ["directory[0].notification_integration", "schema", "storage_integration", "url"],
+      "resource_type": "snowflake_stage_external_azure",
+      "rule_id": "snowflake/external-azure-stage",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stage_external_azure.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/api-integration/integrations.rf",
+      "paths": ["api_integration", "schema"],
+      "resource_type": "snowflake_external_function",
+      "rule_id": "snowflake/external-function",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/external_function.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/storage/stages.rf",
+      "paths": [
+        "directory[0].notification_integration",
+        "encryption[0].gcs_sse_kms[0].kms_key_id",
+        "schema",
+        "storage_integration",
+        "url"
+      ],
+      "resource_type": "snowflake_stage_external_gcs",
+      "rule_id": "snowflake/external-gcs-stage",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stage_external_gcs.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/api-integration/integrations.rf",
+      "paths": [],
+      "resource_type": "snowflake_api_integration_external_mcp_dynamic_client",
+      "rule_id": "snowflake/external-mcp-dynamic-client-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_external_mcp_dynamic_client.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/api-integration/integrations.rf",
+      "paths": [],
+      "resource_type": "snowflake_api_integration_external_mcp_oauth2",
+      "rule_id": "snowflake/external-mcp-oauth2-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_external_mcp_oauth2.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/security/identity-network.rf",
+      "paths": [],
+      "resource_type": "snowflake_external_oauth_integration",
+      "rule_id": "snowflake/external-oauth-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/external_oauth_integration.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/storage/stages.rf",
+      "paths": ["schema", "url"],
+      "resource_type": "snowflake_stage_external_s3_compatible",
+      "rule_id": "snowflake/external-s3-compatible-stage",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stage_external_s3_compatible.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/storage/stages.rf",
+      "paths": [
+        "credentials[0].aws_role",
+        "directory[0].aws_sns_topic",
+        "encryption[0].aws_sse_kms[0].kms_key_id",
+        "schema",
+        "storage_integration",
+        "url"
+      ],
+      "resource_type": "snowflake_stage_external_s3",
+      "rule_id": "snowflake/external-s3-stage",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stage_external_s3.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/data-platform/data-objects.rf",
+      "paths": ["schema"],
+      "resource_type": "snowflake_external_table",
+      "rule_id": "snowflake/external-table",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/external_table.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/storage/integrations.rf",
+      "paths": [
+        "storage_location[0].encryption_kms_key_id",
+        "storage_location[0].storage_aws_role_arn",
+        "storage_location[0].storage_base_url",
+        "storage_location[1].storage_base_url"
+      ],
+      "resource_type": "snowflake_external_volume",
+      "rule_id": "snowflake/external-volume",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/external_volume.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/sharing-continuity/sharing.rf",
+      "paths": ["allowed_accounts[0]", "allowed_databases[0]", "allowed_shares[0]"],
+      "resource_type": "snowflake_failover_group",
+      "rule_id": "snowflake/failover-group",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/failover_group.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/storage/integrations.rf",
+      "paths": ["storage_allowed_locations[0]", "storage_allowed_locations[1]"],
+      "resource_type": "snowflake_storage_integration_gcs",
+      "rule_id": "snowflake/gcs-storage-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/storage_integration_gcs.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/api-integration/integrations.rf",
+      "paths": ["api_integration", "schema"],
+      "resource_type": "snowflake_git_repository",
+      "rule_id": "snowflake/git-repository",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/git_repository.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/api-integration/integrations.rf",
+      "paths": [],
+      "resource_type": "snowflake_api_integration_git_repository_github_app",
+      "rule_id": "snowflake/github-app-repository-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_git_repository_github_app.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/api-integration/integrations.rf",
+      "paths": ["api_allowed_prefixes[0]"],
+      "resource_type": "snowflake_api_integration_google_cloud_api_gateway",
+      "rule_id": "snowflake/google-cloud-api-gateway-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_google_cloud_api_gateway.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/data-platform/data-objects.rf",
+      "paths": ["schema"],
+      "resource_type": "snowflake_hybrid_table",
+      "rule_id": "snowflake/hybrid-table",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/hybrid_table.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/storage/integrations.rf",
+      "paths": ["sigv4_rest_authentication[0].sigv4_iam_role"],
+      "resource_type": "snowflake_catalog_integration_iceberg_rest",
+      "rule_id": "snowflake/iceberg-rest-catalog-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/catalog_integration_iceberg_rest.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/data-platform/data-objects.rf",
+      "paths": ["schema"],
+      "resource_type": "snowflake_iceberg_table",
+      "rule_id": "snowflake/iceberg-table",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/iceberg_table.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/data-platform/data-objects.rf",
+      "paths": ["schema"],
+      "resource_type": "snowflake_iceberg_table_from_aws_glue",
+      "rule_id": "snowflake/iceberg-table-from-aws-glue",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/iceberg_table_from_aws_glue.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/data-platform/data-objects.rf",
+      "paths": ["schema"],
+      "resource_type": "snowflake_iceberg_table_from_delta_files",
+      "rule_id": "snowflake/iceberg-table-from-delta-files",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/iceberg_table_from_delta_files.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/data-platform/data-objects.rf",
+      "paths": ["schema"],
+      "resource_type": "snowflake_iceberg_table_from_files",
+      "rule_id": "snowflake/iceberg-table-from-files",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/iceberg_table_from_files.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/data-platform/data-objects.rf",
+      "paths": ["schema"],
+      "resource_type": "snowflake_iceberg_table_from_rest",
+      "rule_id": "snowflake/iceberg-table-from-rest",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/iceberg_table_from_rest.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/snowpark/container-services.rf",
+      "paths": ["schema"],
+      "resource_type": "snowflake_image_repository",
+      "rule_id": "snowflake/image-repository",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/image_repository.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/compute/virtual-warehouses.rf",
+      "paths": ["fallback_warehouse"],
+      "resource_type": "snowflake_warehouse_interactive",
+      "rule_id": "snowflake/interactive-warehouse",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/warehouse_interactive.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/storage/stages.rf",
+      "paths": ["schema"],
+      "resource_type": "snowflake_stage_internal",
+      "rule_id": "snowflake/internal-stage",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stage_internal.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/snowpark/container-services.rf",
+      "paths": [
+        "compute_pool",
+        "external_access_integrations[0]",
+        "from_specification[0].stage",
+        "query_warehouse",
+        "schema"
+      ],
+      "resource_type": "snowflake_job_service",
+      "rule_id": "snowflake/job-service",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/job_service.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/security/identity-network.rf",
+      "paths": [],
+      "resource_type": "snowflake_api_authentication_integration_with_jwt_bearer",
+      "rule_id": "snowflake/jwt-bearer-api-authentication",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_authentication_integration_with_jwt_bearer.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/security/identity-network.rf",
+      "paths": ["default_warehouse", "network_policy"],
+      "resource_type": "snowflake_legacy_service_user",
+      "rule_id": "snowflake/legacy-service-user",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/legacy_service_user.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/sharing-continuity/sharing.rf",
+      "paths": ["share"],
+      "resource_type": "snowflake_listing",
+      "rule_id": "snowflake/listing",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/listing.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/governance/accounts.rf",
+      "paths": [],
+      "resource_type": "snowflake_managed_account",
+      "rule_id": "snowflake/managed-account",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/managed_account.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/ai-ml/cortex.rf",
+      "paths": ["schema"],
+      "resource_type": "snowflake_mcp_server",
+      "rule_id": "snowflake/mcp-server",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/mcp_server.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/security/identity-network.rf",
+      "paths": [],
+      "resource_type": "snowflake_network_policy",
+      "rule_id": "snowflake/network-policy",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/network_policy.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/security/identity-network.rf",
+      "paths": ["schema"],
+      "resource_type": "snowflake_network_rule",
+      "rule_id": "snowflake/network-rule",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/network_rule.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/applications/applications.rf",
+      "paths": ["from[0].stage", "query_warehouse", "schema"],
+      "resource_type": "snowflake_notebook",
+      "rule_id": "snowflake/notebook",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/notebook.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/data-pipelines/pipes-tasks.rf",
+      "paths": [
+        "aws_sns_role_arn",
+        "aws_sns_topic_arn",
+        "aws_sqs_arn",
+        "aws_sqs_role_arn",
+        "azure_storage_queue_primary_uri",
+        "gcp_pubsub_subscription_name",
+        "gcp_pubsub_topic_name"
+      ],
+      "resource_type": "snowflake_notification_integration",
+      "rule_id": "snowflake/notification-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/notification_integration.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/api-integration/integrations.rf",
+      "paths": [],
+      "resource_type": "snowflake_api_integration_git_repository_oauth2",
+      "rule_id": "snowflake/oauth2-repository-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_git_repository_oauth2.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/storage/integrations.rf",
+      "paths": [],
+      "resource_type": "snowflake_catalog_integration_object_storage",
+      "rule_id": "snowflake/object-storage-catalog-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/catalog_integration_object_storage.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/storage/integrations.rf",
+      "paths": [],
+      "resource_type": "snowflake_catalog_integration_open_catalog",
+      "rule_id": "snowflake/open-catalog-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/catalog_integration_open_catalog.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/security/identity-network.rf",
+      "paths": [],
+      "resource_type": "snowflake_oauth_integration_for_partner_applications",
+      "rule_id": "snowflake/partner-application-oauth-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/oauth_integration_for_partner_applications.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/data-pipelines/pipes-tasks.rf",
+      "paths": ["aws_sns_topic_arn", "error_integration", "integration", "schema"],
+      "resource_type": "snowflake_pipe",
+      "rule_id": "snowflake/pipe",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/pipe.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/data-platform/databases.rf",
+      "paths": ["network_policy", "storage_integration"],
+      "resource_type": "snowflake_postgres_instance",
+      "rule_id": "snowflake/postgres-instance",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/postgres_instance.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/sharing-continuity/sharing.rf",
+      "paths": ["enable_failover_to_accounts[0]"],
+      "resource_type": "snowflake_primary_connection",
+      "rule_id": "snowflake/primary-connection",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/primary_connection.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/api-integration/integrations.rf",
+      "paths": [],
+      "resource_type": "snowflake_api_integration_git_repository_private_link",
+      "rule_id": "snowflake/private-link-repository-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_git_repository_private_link.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/observability/monitoring.rf",
+      "paths": [],
+      "resource_type": "snowflake_resource_monitor",
+      "rule_id": "snowflake/resource-monitor",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/resource_monitor.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/security/identity-network.rf",
+      "paths": [],
+      "resource_type": "snowflake_saml2_integration",
+      "rule_id": "snowflake/saml2-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/saml2_integration.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/data-platform/databases.rf",
+      "paths": ["database", "external_volume"],
+      "resource_type": "snowflake_schema",
+      "rule_id": "snowflake/schema",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/schema.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/security/identity-network.rf",
+      "paths": ["network_policy"],
+      "resource_type": "snowflake_scim_integration",
+      "rule_id": "snowflake/scim-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/scim_integration.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/sharing-continuity/sharing.rf",
+      "paths": ["as_replica_of"],
+      "resource_type": "snowflake_secondary_connection",
+      "rule_id": "snowflake/secondary-connection",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/secondary_connection.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/data-platform/databases.rf",
+      "paths": ["as_replica_of", "external_volume"],
+      "resource_type": "snowflake_secondary_database",
+      "rule_id": "snowflake/secondary-database",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/secondary_database.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/data-platform/data-objects.rf",
+      "paths": ["schema"],
+      "resource_type": "snowflake_semantic_view",
+      "rule_id": "snowflake/semantic-view",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/semantic_view.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/snowpark/container-services.rf",
+      "paths": [
+        "compute_pool",
+        "external_access_integrations[0]",
+        "from_specification[0].stage",
+        "query_warehouse",
+        "schema"
+      ],
+      "resource_type": "snowflake_service",
+      "rule_id": "snowflake/service",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/service.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/security/identity-network.rf",
+      "paths": ["default_warehouse", "network_policy"],
+      "resource_type": "snowflake_service_user",
+      "rule_id": "snowflake/service-user",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/service_user.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/sharing-continuity/sharing.rf",
+      "paths": ["accounts[0]"],
+      "resource_type": "snowflake_share",
+      "rule_id": "snowflake/share",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/share.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/data-platform/databases.rf",
+      "paths": ["external_volume", "from_share"],
+      "resource_type": "snowflake_shared_database",
+      "rule_id": "snowflake/shared-database",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/shared_database.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/storage/stages.rf",
+      "paths": ["schema", "storage_integration", "url"],
+      "resource_type": "snowflake_stage",
+      "rule_id": "snowflake/stage",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stage.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/storage/integrations.rf",
+      "paths": [
+        "storage_allowed_locations[0]",
+        "storage_allowed_locations[1]",
+        "storage_aws_role_arn"
+      ],
+      "resource_type": "snowflake_storage_integration",
+      "rule_id": "snowflake/storage-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/storage_integration.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/data-pipelines/pipes-tasks.rf",
+      "paths": ["schema"],
+      "resource_type": "snowflake_stream_on_directory_table",
+      "rule_id": "snowflake/stream-on-directory-table",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stream_on_directory_table.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/data-pipelines/pipes-tasks.rf",
+      "paths": ["schema"],
+      "resource_type": "snowflake_stream_on_external_table",
+      "rule_id": "snowflake/stream-on-external-table",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stream_on_external_table.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/data-pipelines/pipes-tasks.rf",
+      "paths": ["schema"],
+      "resource_type": "snowflake_stream_on_table",
+      "rule_id": "snowflake/stream-on-table",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stream_on_table.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/data-pipelines/pipes-tasks.rf",
+      "paths": ["schema"],
+      "resource_type": "snowflake_stream_on_view",
+      "rule_id": "snowflake/stream-on-view",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stream_on_view.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/applications/applications.rf",
+      "paths": ["external_access_integrations[0]", "query_warehouse", "schema", "stage"],
+      "resource_type": "snowflake_streamlit",
+      "rule_id": "snowflake/streamlit",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/streamlit.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/data-pipelines/pipes-tasks.rf",
+      "paths": ["after[0]", "after[1]", "error_integration", "finalize", "schema", "warehouse"],
+      "resource_type": "snowflake_task",
+      "rule_id": "snowflake/task",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/task.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/api-integration/integrations.rf",
+      "paths": [],
+      "resource_type": "snowflake_api_integration_git_repository_token",
+      "rule_id": "snowflake/token-repository-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_git_repository_token.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/snowflake/compute/virtual-warehouses.rf",
+      "paths": [],
+      "resource_type": "snowflake_warehouse",
+      "rule_id": "snowflake/warehouse",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/warehouse.md"
+    }
+  ],
+  "review_policy": "later provider releases require schema-path and documented-meaning comparison; they do not require a dialect release automatically"
+}

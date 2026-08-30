@@ -1,0 +1,14 @@
+concept "browser-observability-application" {
+  kind        = entity
+  description = "An application boundary instrumented for browser or frontend observability."
+}
+
+concept "synthetic-execution-location" {
+  kind        = entity
+  description = "A public or private execution location running synthetic checks."
+}
+
+concept "synthetic-check" {
+  kind        = detail
+  description = "A synthetic check supporting an observed target without owning target runtime."
+}

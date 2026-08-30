@@ -1,0 +1,27 @@
+concept "spanner-database" {
+  kind        = detail
+  description = "A database belonging to a Spanner instance."
+}
+
+rule "spanner-instance" {
+  match {
+    kind = "resource"
+    type = "google_spanner_instance"
+  }
+
+  as = concept.core.managed-database
+}
+
+rule "spanner-database" {
+  match {
+    kind = "resource"
+    type = "google_spanner_database"
+  }
+
+  as = concept.spanner-database
+
+  contribution {
+    to  = concept.core.managed-database
+    via = source.instance
+  }
+}

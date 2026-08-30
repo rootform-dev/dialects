@@ -1,0 +1,19 @@
+concept "namespace" {
+  kind        = scope
+  description = "A namespace partitioning one cluster's workloads, services, and storage."
+}
+
+rule "kubernetes-namespace" {
+  match {
+    kind = "resource"
+    type = "kubernetes_namespace_v1"
+  }
+
+  as = concept.namespace
+
+  context {
+    as  = context.core.runtime
+    to  = concept.core.kubernetes-cluster
+    via = provider.host
+  }
+}

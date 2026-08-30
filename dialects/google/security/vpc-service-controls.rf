@@ -1,0 +1,27 @@
+concept "access-context-policy" {
+  kind        = scope
+  description = "An Access Context Manager policy containing access levels and service perimeters."
+}
+
+concept "service-perimeter" {
+  kind        = scope
+  description = "A VPC Service Controls perimeter protecting Google Cloud resources."
+}
+
+rule "access-context-policy" {
+  match {
+    kind = "resource"
+    type = "google_access_context_manager_access_policy"
+  }
+
+  as = concept.access-context-policy
+}
+
+rule "service-perimeter" {
+  match {
+    kind = "resource"
+    type = "google_access_context_manager_service_perimeter"
+  }
+
+  as = concept.service-perimeter
+}

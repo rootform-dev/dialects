@@ -1,0 +1,22 @@
+concept "interconnect-vlan-attachment" {
+  kind        = entity
+  description = "A VLAN attachment connecting Cloud Interconnect to a Cloud Router."
+}
+
+rule "cloud-interconnect" {
+  match {
+    kind = "resource"
+    type = "google_compute_interconnect"
+  }
+
+  as = concept.core.dedicated-interconnect
+}
+
+rule "interconnect-vlan-attachment" {
+  match {
+    kind = "resource"
+    type = "google_compute_interconnect_attachment"
+  }
+
+  as = concept.interconnect-vlan-attachment
+}

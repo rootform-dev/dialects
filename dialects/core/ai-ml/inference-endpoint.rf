@@ -1,0 +1,4 @@
+concept "ai-inference-endpoint" {
+  kind        = entity
+  description = "A managed endpoint that serves model inference requests."
+}

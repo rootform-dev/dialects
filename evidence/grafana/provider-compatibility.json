@@ -1,0 +1,859 @@
+{
+  "format_version": "1",
+  "dialect": {
+    "name": "grafana",
+    "version": "0.1.0"
+  },
+  "provider": {
+    "source": "registry.terraform.io/grafana/grafana",
+    "baseline_version": "4.45.2",
+    "compatibility": "= 4.45.2",
+    "bound": "temporary-exact-evidence",
+    "schema_sha256": "sha256:6d72a2c54bdcf9b5f31f654bbf57a8abfcb3c720e4ba482ada24066ff58c701a"
+  },
+  "review_policy": "compare schema paths and official meaning before widening; compatible provider releases do not require a dialect release automatically",
+  "semantic_sources_sha256": "sha256:e17853ccb7cf73150889cb2f58c56ce3fab154f65c6b611ccf48dfe825341a5a",
+  "rules": [
+    {
+      "rule_id": "grafana/agento11y-collection",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_agento11y_collection",
+      "file": "dialects/grafana/ai-ml/agent-observability.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/agento11y_collection",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/agento11y-evaluation-rule",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_agento11y_evaluation_rule",
+      "file": "dialects/grafana/ai-ml/agent-observability.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/agento11y_evaluation_rule",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/agento11y-evaluator",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_agento11y_evaluator",
+      "file": "dialects/grafana/ai-ml/agent-observability.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/agento11y_evaluator",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/agento11y-hook-rule",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_agento11y_hook_rule",
+      "file": "dialects/grafana/ai-ml/agent-observability.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/agento11y_hook_rule",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/agento11y-rule-action",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_agento11y_rule_action",
+      "file": "dialects/grafana/ai-ml/agent-observability.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/agento11y_rule_action",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/apps-productactivation-appo11yconfig-v1alpha1",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_apps_productactivation_appo11yconfig_v1alpha1",
+      "file": "dialects/grafana/platform/installations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/apps_productactivation_appo11yconfig_v1alpha1",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/apps-productactivation-dbo11yconfig-v1alpha1",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_apps_productactivation_dbo11yconfig_v1alpha1",
+      "file": "dialects/grafana/platform/installations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/apps_productactivation_dbo11yconfig_v1alpha1",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/apps-productactivation-k8so11yconfig-v1alpha1",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_apps_productactivation_k8so11yconfig_v1alpha1",
+      "file": "dialects/grafana/platform/installations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/apps_productactivation_k8so11yconfig_v1alpha1",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/apps-provisioning-connection-v0alpha1",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_apps_provisioning_connection_v0alpha1",
+      "file": "dialects/grafana/platform-automation/git-sync.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/apps_provisioning_connection_v0alpha1",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/apps-provisioning-repository-v0alpha1",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_apps_provisioning_repository_v0alpha1",
+      "file": "dialects/grafana/platform-automation/git-sync.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/apps_provisioning_repository_v0alpha1",
+      "paths": [
+        {
+          "path": "spec[0].connection[0].name",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/apps-secret-keeper-activation-v1beta1",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_apps_secret_keeper_activation_v1beta1",
+      "file": "dialects/grafana/platform/installations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/apps_secret_keeper_activation_v1beta1",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/apps-secret-keeper-v1beta1",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_apps_secret_keeper_v1beta1",
+      "file": "dialects/grafana/security/secrets-management.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/apps_secret_keeper_v1beta1",
+      "paths": [
+        {
+          "path": "spec[0].aws[0].assume_role[0].assume_role_arn",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/apps-secret-securevalue-v1beta1",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_apps_secret_securevalue_v1beta1",
+      "file": "dialects/grafana/security/secrets-management.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/apps_secret_securevalue_v1beta1",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/asserts-custom-model-rules",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_asserts_custom_model_rules",
+      "file": "dialects/grafana/service-management/knowledge-graph.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/asserts_custom_model_rules",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/asserts-log-config",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_asserts_log_config",
+      "file": "dialects/grafana/service-management/knowledge-graph.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/asserts_log_config",
+      "paths": [
+        {
+          "path": "data_source_uid",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/asserts-notification-alerts-config",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_asserts_notification_alerts_config",
+      "file": "dialects/grafana/service-management/knowledge-graph.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/asserts_notification_alerts_config",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/asserts-profile-config",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_asserts_profile_config",
+      "file": "dialects/grafana/service-management/knowledge-graph.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/asserts_profile_config",
+      "paths": [
+        {
+          "path": "data_source_uid",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/asserts-prom-rule-file",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_asserts_prom_rule_file",
+      "file": "dialects/grafana/service-management/knowledge-graph.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/asserts_prom_rule_file",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/asserts-stack",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_asserts_stack",
+      "file": "dialects/grafana/service-management/knowledge-graph.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/asserts_stack",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/asserts-suppressed-assertions-config",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_asserts_suppressed_assertions_config",
+      "file": "dialects/grafana/service-management/knowledge-graph.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/asserts_suppressed_assertions_config",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/asserts-thresholds",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_asserts_thresholds",
+      "file": "dialects/grafana/service-management/knowledge-graph.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/asserts_thresholds",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/asserts-trace-config",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_asserts_trace_config",
+      "file": "dialects/grafana/service-management/knowledge-graph.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/asserts_trace_config",
+      "paths": [
+        {
+          "path": "data_source_uid",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/assistant-mcp-server",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_assistant_mcp_server",
+      "file": "dialects/grafana/ai-ml/assistant.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/assistant_mcp_server",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/cloud-integration",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_cloud_integration",
+      "file": "dialects/grafana/integrations/cloud-provider-observability.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/cloud_integration",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/cloud-plugin-installation",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_cloud_plugin_installation",
+      "file": "dialects/grafana/platform/installations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/cloud_plugin_installation",
+      "paths": [
+        {
+          "path": "stack_slug",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/cloud-private-data-source-connect-network",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_cloud_private_data_source_connect_network",
+      "file": "dialects/grafana/network/private-data-source-connect.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/cloud_private_data_source_connect_network",
+      "paths": [
+        {
+          "path": "stack_identifier",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/cloud-provider-aws-account",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_cloud_provider_aws_account",
+      "file": "dialects/grafana/integrations/cloud-provider-observability.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/cloud_provider_aws_account",
+      "paths": [
+        {
+          "path": "role_arn",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "stack_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/cloud-provider-aws-account-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "grafana_cloud_provider_aws_account",
+      "file": "dialects/grafana/integrations/cloud-provider-observability.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/cloud_provider_aws_account",
+      "paths": [
+        {
+          "path": "role_arn",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "stack_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/cloud-provider-aws-cloudwatch-scrape-job",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_cloud_provider_aws_cloudwatch_scrape_job",
+      "file": "dialects/grafana/integrations/cloud-provider-observability.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/cloud_provider_aws_cloudwatch_scrape_job",
+      "paths": [
+        {
+          "path": "aws_account_resource_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "stack_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/cloud-provider-aws-cloudwatch-scrape-job-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "grafana_cloud_provider_aws_cloudwatch_scrape_job",
+      "file": "dialects/grafana/integrations/cloud-provider-observability.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/cloud_provider_aws_cloudwatch_scrape_job",
+      "paths": [
+        {
+          "path": "aws_account_resource_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "stack_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/cloud-provider-aws-resource-metadata-scrape-job",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_cloud_provider_aws_resource_metadata_scrape_job",
+      "file": "dialects/grafana/integrations/cloud-provider-observability.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/cloud_provider_aws_resource_metadata_scrape_job",
+      "paths": [
+        {
+          "path": "aws_account_resource_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "stack_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/cloud-provider-azure-credential",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_cloud_provider_azure_credential",
+      "file": "dialects/grafana/integrations/cloud-provider-observability.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/cloud_provider_azure_credential",
+      "paths": [
+        {
+          "path": "client_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "stack_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/cloud-provider-azure-credential-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "grafana_cloud_provider_azure_credential",
+      "file": "dialects/grafana/integrations/cloud-provider-observability.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/cloud_provider_azure_credential",
+      "paths": [
+        {
+          "path": "client_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "stack_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/cloud-stack",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_cloud_stack",
+      "file": "dialects/grafana/platform/cloud-stacks.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/cloud_stack",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/cloud-stack-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "grafana_cloud_stack",
+      "file": "dialects/grafana/platform/cloud-stacks.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/cloud_stack",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/connections-metrics-endpoint-scrape-job",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_connections_metrics_endpoint_scrape_job",
+      "file": "dialects/grafana/telemetry/metrics-endpoints.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/connections_metrics_endpoint_scrape_job",
+      "paths": [
+        {
+          "path": "stack_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/connections-metrics-endpoint-scrape-job-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "grafana_connections_metrics_endpoint_scrape_job",
+      "file": "dialects/grafana/telemetry/metrics-endpoints.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/connections_metrics_endpoint_scrape_job",
+      "paths": [
+        {
+          "path": "stack_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/data-source",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_data_source",
+      "file": "dialects/grafana/telemetry/data-sources.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/data_source",
+      "paths": [
+        {
+          "path": "org_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "private_data_source_connect_network_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/data-source-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "grafana_data_source",
+      "file": "dialects/grafana/telemetry/data-sources.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/data_source",
+      "paths": [
+        {
+          "path": "org_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "private_data_source_connect_network_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/fleet-management-collector",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_fleet_management_collector",
+      "file": "dialects/grafana/telemetry/fleet-management.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/fleet_management_collector",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/fleet-management-collector-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "grafana_fleet_management_collector",
+      "file": "dialects/grafana/telemetry/fleet-management.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/fleet_management_collector",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/fleet-management-pipeline",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_fleet_management_pipeline",
+      "file": "dialects/grafana/telemetry/fleet-management.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/fleet_management_pipeline",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/frontend-o11y-app",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_frontend_o11y_app",
+      "file": "dialects/grafana/digital-experience/frontend-observability.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/frontend_o11y_app",
+      "paths": [
+        {
+          "path": "stack_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/frontend-o11y-app-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "grafana_frontend_o11y_app",
+      "file": "dialects/grafana/digital-experience/frontend-observability.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/frontend_o11y_app",
+      "paths": [
+        {
+          "path": "stack_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/k6-installation",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_k6_installation",
+      "file": "dialects/grafana/platform/installations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/k6_installation",
+      "paths": [
+        {
+          "path": "stack_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/k6-load-test",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_k6_load_test",
+      "file": "dialects/grafana/performance-testing/k6.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/k6_load_test",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/k6-load-test-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "grafana_k6_load_test",
+      "file": "dialects/grafana/performance-testing/k6.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/k6_load_test",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/k6-project",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_k6_project",
+      "file": "dialects/grafana/performance-testing/k6.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/k6_project",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/k6-project-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "grafana_k6_project",
+      "file": "dialects/grafana/performance-testing/k6.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/k6_project",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/machine-learning-alert",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_machine_learning_alert",
+      "file": "dialects/grafana/ai-ml/machine-learning.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/machine_learning_alert",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/machine-learning-job",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_machine_learning_job",
+      "file": "dialects/grafana/ai-ml/machine-learning.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/machine_learning_job",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/machine-learning-outlier-detector",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_machine_learning_outlier_detector",
+      "file": "dialects/grafana/ai-ml/machine-learning.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/machine_learning_outlier_detector",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/oncall-integration",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_oncall_integration",
+      "file": "dialects/grafana/incident-response/oncall.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/oncall_integration",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/oncall-integration-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "grafana_oncall_integration",
+      "file": "dialects/grafana/incident-response/oncall.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/oncall_integration",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/oncall-route",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_oncall_route",
+      "file": "dialects/grafana/incident-response/oncall.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/oncall_route",
+      "paths": [
+        {
+          "path": "integration_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/organization",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_organization",
+      "file": "dialects/grafana/platform/organizations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/organization",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/organization-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "grafana_organization",
+      "file": "dialects/grafana/platform/organizations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/organization",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/scim-config",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_scim_config",
+      "file": "dialects/grafana/identity-access/federation.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/scim_config",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/slo",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_slo",
+      "file": "dialects/grafana/service-management/service-objectives.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/slo",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/sso-settings",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_sso_settings",
+      "file": "dialects/grafana/identity-access/federation.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/sso_settings",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/synthetic-monitoring-check",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_synthetic_monitoring_check",
+      "file": "dialects/grafana/digital-experience/synthetic-monitoring.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/synthetic_monitoring_check",
+      "paths": [
+        {
+          "path": "probes",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/synthetic-monitoring-installation",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_synthetic_monitoring_installation",
+      "file": "dialects/grafana/platform/installations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/synthetic_monitoring_installation",
+      "paths": [
+        {
+          "path": "stack_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "grafana/synthetic-monitoring-probe",
+      "construct_kind": "managed_resource",
+      "resource_type": "grafana_synthetic_monitoring_probe",
+      "file": "dialects/grafana/digital-experience/synthetic-monitoring.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/synthetic_monitoring_probe",
+      "paths": []
+    },
+    {
+      "rule_id": "grafana/synthetic-monitoring-probe-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "grafana_synthetic_monitoring_probe",
+      "file": "dialects/grafana/digital-experience/synthetic-monitoring.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/synthetic_monitoring_probe",
+      "paths": []
+    }
+  ]
+}

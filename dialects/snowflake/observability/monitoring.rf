@@ -1,0 +1,39 @@
+concept "monitoring-configuration" {
+  kind        = detail
+  description = "A Snowflake alert or resource monitor supporting platform operations."
+}
+
+concept "alert" {
+  kind        = entity
+  description = "A Snowflake alert evaluating a condition and running an action."
+}
+
+rule "alert" {
+  match {
+    kind = "resource"
+    type = "snowflake_alert"
+  }
+
+  as = concept.alert
+
+  context {
+    as  = context.core.ownership
+    to  = concept.schema
+    via = source.schema
+  }
+
+  context {
+    as  = context.core.runtime
+    to  = concept.virtual-warehouse
+    via = source.warehouse
+  }
+}
+
+rule "resource-monitor" {
+  match {
+    kind = "resource"
+    type = "snowflake_resource_monitor"
+  }
+
+  as = concept.monitoring-configuration
+}

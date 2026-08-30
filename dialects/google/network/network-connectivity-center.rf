@@ -1,0 +1,32 @@
+concept "network-connectivity-center-hub" {
+  kind        = scope
+  description = "A Network Connectivity Center hub coordinating connectivity through spokes."
+}
+
+concept "network-connectivity-center-spoke" {
+  kind        = detail
+  description = "A spoke attaching a network resource to a Network Connectivity Center hub."
+}
+
+rule "network-connectivity-center-hub" {
+  match {
+    kind = "resource"
+    type = "google_network_connectivity_hub"
+  }
+
+  as = concept.network-connectivity-center-hub
+}
+
+rule "network-connectivity-center-spoke" {
+  match {
+    kind = "resource"
+    type = "google_network_connectivity_spoke"
+  }
+
+  as = concept.network-connectivity-center-spoke
+
+  contribution {
+    to  = concept.network-connectivity-center-hub
+    via = source.hub
+  }
+}

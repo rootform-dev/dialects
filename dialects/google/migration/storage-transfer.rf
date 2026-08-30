@@ -1,0 +1,27 @@
+concept "storage-transfer-job" {
+  kind        = entity
+  description = "A Storage Transfer Service job moving data between storage systems."
+}
+
+concept "storage-transfer-agent-pool" {
+  kind        = detail
+  description = "An agent pool contributing workers to Storage Transfer Service."
+}
+
+rule "storage-transfer-job" {
+  match {
+    kind = "resource"
+    type = "google_storage_transfer_job"
+  }
+
+  as = concept.storage-transfer-job
+}
+
+rule "storage-transfer-agent-pool" {
+  match {
+    kind = "resource"
+    type = "google_storage_transfer_agent_pool"
+  }
+
+  as = concept.storage-transfer-agent-pool
+}

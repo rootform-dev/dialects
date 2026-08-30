@@ -1,0 +1,13 @@
+concept "managed-prometheus-project-link" {
+  kind        = detail
+  description = "A project attached to a Managed Service for Prometheus metrics scope."
+}
+
+rule "managed-prometheus-project-link" {
+  match {
+    kind = "resource"
+    type = "google_monitoring_monitored_project"
+  }
+
+  as = concept.managed-prometheus-project-link
+}

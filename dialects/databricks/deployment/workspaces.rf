@@ -1,0 +1,283 @@
+concept "workspace" {
+  kind        = scope
+  description = "A Databricks workspace providing an isolated environment for data, analytics, and AI workloads."
+}
+
+concept "workspace-root-storage" {
+  kind        = entity
+  description = "A cloud storage registration used as root storage by Databricks workspaces."
+}
+
+concept "workspace-deployment-credential" {
+  kind        = entity
+  description = "A cloud identity registration used to deploy Databricks workspace resources."
+}
+
+concept "workspace-key-configuration" {
+  kind        = entity
+  description = "A customer-managed key registration protecting Databricks workspace data or services."
+}
+
+concept "log-delivery" {
+  kind        = entity
+  description = "A Databricks account or workspace log-delivery configuration."
+}
+
+concept "disaster-recovery-failover-group" {
+  kind        = entity
+  description = "A Databricks disaster-recovery group coordinating workspace failover."
+}
+
+concept "workspace-configuration" {
+  kind        = detail
+  description = "Configuration, assignment, or setting supporting a Databricks workspace."
+}
+
+rule "workspace" {
+  match {
+    kind = "resource"
+    type = "databricks_mws_workspaces"
+  }
+
+  as = concept.workspace
+
+  relation "uses-network" {
+    to  = concept.workspace-network-configuration
+    via = source.network_id
+  }
+
+  relation "uses-root-storage" {
+    to  = concept.workspace-root-storage
+    via = source.storage_configuration_id
+  }
+
+  relation "uses-deployment-credential" {
+    to  = concept.workspace-deployment-credential
+    via = source.credentials_id
+  }
+
+  relation "uses-private-access" {
+    to  = concept.private-access-settings
+    via = source.private_access_settings_id
+  }
+
+  relation "uses-serverless-network" {
+    to  = concept.network-connectivity-configuration
+    via = source.network_connectivity_config_id
+  }
+}
+
+rule "workspace-deployment-credential" {
+  match {
+    kind = "resource"
+    type = "databricks_mws_credentials"
+  }
+
+  as = concept.workspace-deployment-credential
+
+  relation "uses-cloud-identity" {
+    to  = concept.core.service-identity
+    via = source.role_arn
+  }
+}
+
+rule "workspace-root-storage" {
+  match {
+    kind = "resource"
+    type = "databricks_mws_storage_configurations"
+  }
+
+  as = concept.workspace-root-storage
+
+  relation "stores-in" {
+    to  = concept.core.object-storage-container
+    via = source.bucket_name
+  }
+
+  relation "uses-cloud-identity" {
+    to  = concept.core.service-identity
+    via = source.role_arn
+  }
+}
+
+rule "workspace-customer-managed-key" {
+  match {
+    kind = "resource"
+    type = "databricks_mws_customer_managed_keys"
+  }
+
+  as = concept.workspace-key-configuration
+
+  relation "uses-key" {
+    to  = concept.core.encryption-key
+    via = source.aws_key_info[0].key_arn
+  }
+
+  relation "uses-key" {
+    to  = concept.core.encryption-key
+    via = source.gcp_key_info[0].kms_key_id
+  }
+}
+
+rule "log-delivery" {
+  match {
+    kind = "resource"
+    type = "databricks_mws_log_delivery"
+  }
+
+  as = concept.log-delivery
+
+  relation "delivers-to" {
+    to  = concept.workspace-root-storage
+    via = source.storage_configuration_id
+  }
+
+  relation "uses-deployment-credential" {
+    to  = concept.workspace-deployment-credential
+    via = source.credentials_id
+  }
+}
+
+rule "disaster-recovery-failover-group" {
+  match {
+    kind = "resource"
+    type = "databricks_disaster_recovery_failover_group"
+  }
+
+  as = concept.disaster-recovery-failover-group
+}
+
+rule "disaster-recovery-stable-url" {
+  match {
+    kind = "resource"
+    type = "databricks_disaster_recovery_stable_url"
+  }
+
+  as = concept.workspace-configuration
+}
+
+rule "workspace-configuration" {
+  match {
+    kind = "resource"
+    type = "databricks_workspace_conf"
+  }
+
+  as = concept.workspace-configuration
+}
+
+rule "workspace-setting" {
+  match {
+    kind = "resource"
+    type = "databricks_workspace_setting_v2"
+  }
+
+  as = concept.workspace-configuration
+}
+
+rule "account-setting" {
+  match {
+    kind = "resource"
+    type = "databricks_account_setting_v2"
+  }
+
+  as = concept.workspace-configuration
+}
+
+rule "workspace-network-option" {
+  match {
+    kind = "resource"
+    type = "databricks_workspace_network_option"
+  }
+
+  as = concept.workspace-configuration
+}
+
+rule "default-namespace-setting" {
+  match {
+    kind = "resource"
+    type = "databricks_default_namespace_setting"
+  }
+
+  as = concept.workspace-configuration
+}
+
+rule "disable-legacy-access-setting" {
+  match {
+    kind = "resource"
+    type = "databricks_disable_legacy_access_setting"
+  }
+
+  as = concept.workspace-configuration
+}
+
+rule "disable-legacy-dbfs-setting" {
+  match {
+    kind = "resource"
+    type = "databricks_disable_legacy_dbfs_setting"
+  }
+
+  as = concept.workspace-configuration
+}
+
+rule "disable-legacy-features-setting" {
+  match {
+    kind = "resource"
+    type = "databricks_disable_legacy_features_setting"
+  }
+
+  as = concept.workspace-configuration
+}
+
+rule "automatic-cluster-update-setting" {
+  match {
+    kind = "resource"
+    type = "databricks_automatic_cluster_update_workspace_setting"
+  }
+
+  as = concept.workspace-configuration
+}
+
+rule "compliance-security-profile-setting" {
+  match {
+    kind = "resource"
+    type = "databricks_compliance_security_profile_workspace_setting"
+  }
+
+  as = concept.workspace-configuration
+}
+
+rule "enhanced-security-monitoring-setting" {
+  match {
+    kind = "resource"
+    type = "databricks_enhanced_security_monitoring_workspace_setting"
+  }
+
+  as = concept.workspace-configuration
+}
+
+rule "restrict-workspace-admins-setting" {
+  match {
+    kind = "resource"
+    type = "databricks_restrict_workspace_admins_setting"
+  }
+
+  as = concept.workspace-configuration
+}
+
+rule "workspace-binding" {
+  match {
+    kind = "resource"
+    type = "databricks_workspace_binding"
+  }
+
+  as = concept.workspace-configuration
+}
+
+rule "warehouses-default-warehouse-override" {
+  match {
+    kind = "resource"
+    type = "databricks_warehouses_default_warehouse_override"
+  }
+
+  as = concept.workspace-configuration
+}

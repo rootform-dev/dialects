@@ -1,0 +1,9 @@
+concept "kubernetes-cluster" {
+  kind        = entity
+  description = "A Kubernetes cluster providing a workload runtime."
+}
+
+concept "kubernetes-node-pool" {
+  kind        = detail
+  description = "A node pool contributing compute capacity to a Kubernetes cluster."
+}

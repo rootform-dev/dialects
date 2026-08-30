@@ -1,0 +1,257 @@
+{
+  "format_version": "1",
+  "products": [
+    {
+      "id": "platform",
+      "family": "platform",
+      "official_name": "Grafana and Grafana Cloud",
+      "source_url": "https://grafana.com/docs/grafana-cloud/",
+      "major": true,
+      "constructs": 8,
+      "counts": {
+        "supported": 4,
+        "partial": 0,
+        "intentionally-unrepresented": 4,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "data-connectivity",
+      "family": "telemetry",
+      "official_name": "Grafana data sources and Private Data Source Connect",
+      "source_url": "https://grafana.com/docs/grafana-cloud/observe-and-act/connect-externally-hosted/private-data-source-connect/configure-pdc/",
+      "major": true,
+      "constructs": 11,
+      "counts": {
+        "supported": 3,
+        "partial": 0,
+        "intentionally-unrepresented": 8,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "cloud-provider-observability",
+      "family": "integrations",
+      "official_name": "Grafana Cloud Provider Observability",
+      "source_url": "https://grafana.com/docs/grafana/latest/as-code/infrastructure-as-code/terraform/terraform-cloud-provider-o11y/",
+      "major": true,
+      "constructs": 12,
+      "counts": {
+        "supported": 6,
+        "partial": 5,
+        "intentionally-unrepresented": 1,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "fleet-management",
+      "family": "telemetry",
+      "official_name": "Grafana Fleet Management",
+      "source_url": "https://grafana.com/docs/grafana-cloud/observe-and-act/send-data/fleet-management/",
+      "major": true,
+      "constructs": 4,
+      "counts": {
+        "supported": 3,
+        "partial": 0,
+        "intentionally-unrepresented": 1,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "frontend-observability",
+      "family": "digital-experience",
+      "official_name": "Grafana Cloud Frontend Observability",
+      "source_url": "https://grafana.com/docs/grafana-cloud/monitor-applications/frontend-observability/",
+      "major": true,
+      "constructs": 2,
+      "counts": {
+        "supported": 2,
+        "partial": 0,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "synthetic-monitoring",
+      "family": "digital-experience",
+      "official_name": "Grafana Cloud Synthetic Monitoring",
+      "source_url": "https://grafana.com/docs/grafana-cloud/observe-and-act/testing/synthetic-monitoring/introduction/",
+      "major": true,
+      "constructs": 6,
+      "counts": {
+        "supported": 2,
+        "partial": 2,
+        "intentionally-unrepresented": 2,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "k6",
+      "family": "performance-testing",
+      "official_name": "Grafana Cloud k6",
+      "source_url": "https://grafana.com/docs/grafana-cloud/testing/k6/",
+      "major": true,
+      "constructs": 15,
+      "counts": {
+        "supported": 2,
+        "partial": 3,
+        "intentionally-unrepresented": 10,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "knowledge-graph",
+      "family": "service-management",
+      "official_name": "Grafana Cloud Knowledge Graph",
+      "source_url": "https://grafana.com/docs/grafana-cloud/learn-and-build/as-code/infrastructure-as-code/terraform/terraform-knowledge-graph/getting-started/",
+      "major": true,
+      "constructs": 9,
+      "counts": {
+        "supported": 1,
+        "partial": 8,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "incident-response",
+      "family": "incident-response",
+      "official_name": "Grafana IRM and OnCall",
+      "source_url": "https://grafana.com/docs/grafana-cloud/alerting-and-irm/irm/",
+      "major": true,
+      "constructs": 18,
+      "counts": {
+        "supported": 2,
+        "partial": 1,
+        "intentionally-unrepresented": 15,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "git-sync",
+      "family": "platform-automation",
+      "official_name": "Grafana Git Sync",
+      "source_url": "https://grafana.com/docs/grafana/latest/as-code/observability-as-code/git-sync/key-concepts/",
+      "major": true,
+      "constructs": 2,
+      "counts": {
+        "supported": 2,
+        "partial": 0,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "secrets-management",
+      "family": "security",
+      "official_name": "Grafana Secrets Management",
+      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/apps_secret_keeper_v1beta1",
+      "major": true,
+      "constructs": 3,
+      "counts": {
+        "supported": 2,
+        "partial": 1,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "assistant",
+      "family": "ai-ml",
+      "official_name": "Grafana Assistant",
+      "source_url": "https://grafana.com/docs/grafana/latest/developer-resources/mcp/introduction/",
+      "major": true,
+      "constructs": 5,
+      "counts": {
+        "supported": 1,
+        "partial": 0,
+        "intentionally-unrepresented": 4,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "agent-observability",
+      "family": "ai-ml",
+      "official_name": "Grafana Cloud Agent Observability",
+      "source_url": "https://grafana.com/docs/grafana-cloud/observe-and-act/agent-observability/",
+      "major": false,
+      "constructs": 5,
+      "counts": {
+        "supported": 0,
+        "partial": 5,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "guided-observability",
+      "family": "service-management",
+      "official_name": "Grafana Cloud application, database, and Kubernetes observability",
+      "source_url": "https://grafana.com/docs/grafana-cloud/",
+      "major": false,
+      "constructs": 3,
+      "counts": {
+        "supported": 0,
+        "partial": 3,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "machine-learning",
+      "family": "ai-ml",
+      "official_name": "Grafana Machine Learning",
+      "source_url": "https://grafana.com/docs/grafana-cloud/alerting-and-irm/machine-learning/",
+      "major": false,
+      "constructs": 4,
+      "counts": {
+        "supported": 0,
+        "partial": 3,
+        "intentionally-unrepresented": 1,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "visualization-alerting",
+      "family": "observability-configuration",
+      "official_name": "Grafana dashboards and alerting",
+      "source_url": "https://grafana.com/docs/grafana/latest/alerting/",
+      "major": false,
+      "constructs": 33,
+      "counts": {
+        "supported": 0,
+        "partial": 0,
+        "intentionally-unrepresented": 33,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "access-management",
+      "family": "identity-access",
+      "official_name": "Grafana identity and access management",
+      "source_url": "https://grafana.com/docs/grafana/latest/administration/roles-and-permissions/",
+      "major": false,
+      "constructs": 26,
+      "counts": {
+        "supported": 0,
+        "partial": 2,
+        "intentionally-unrepresented": 24,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "service-management",
+      "family": "service-management",
+      "official_name": "Grafana service management configuration",
+      "source_url": "https://grafana.com/docs/grafana-cloud/alerting-and-irm/slo/",
+      "major": false,
+      "constructs": 6,
+      "counts": {
+        "supported": 0,
+        "partial": 1,
+        "intentionally-unrepresented": 5,
+        "unsupported": 0
+      }
+    }
+  ]
+}

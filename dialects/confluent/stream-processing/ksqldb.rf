@@ -1,0 +1,30 @@
+concept "ksqldb-cluster" {
+  kind        = entity
+  description = "A managed ksqlDB cluster in Confluent Cloud."
+}
+
+rule "ksqldb-cluster" {
+  match {
+    kind = "resource"
+    type = "confluent_ksql_cluster"
+  }
+
+  as = concept.ksqldb-cluster
+
+  context {
+    as  = context.core.ownership
+    to  = concept.environment
+    via = source.environment[0].id
+  }
+
+  context {
+    as  = context.core.runtime
+    to  = concept.kafka-cluster
+    via = source.kafka_cluster[0].id
+  }
+
+  relation "uses-principal" {
+    to  = concept.core.service-identity
+    via = source.credential_identity[0].id
+  }
+}

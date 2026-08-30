@@ -1,0 +1,23 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-30",
+  "total_constructs": 271,
+  "managed_resources": 162,
+  "data_sources": 109,
+  "provider_functions": 0,
+  "rules": 85,
+  "status": {
+    "supported": 40,
+    "partial": 45,
+    "intentionally-unrepresented": 186,
+    "unsupported": 0
+  },
+  "treatment": {
+    "entity": 34,
+    "scope": 6,
+    "detail": 45,
+    "mixed": 0,
+    "intentionally-unrepresented": 186,
+    "unsupported": 0
+  }
+}

@@ -1,0 +1,165 @@
+concept "magic-transit-site" {
+  kind        = scope
+  description = "A Cloudflare Magic Transit or Cloudflare WAN network site."
+}
+
+concept "magic-transit-connector" {
+  kind        = entity
+  description = "A Cloudflare Magic Transit connector appliance."
+}
+
+concept "gre-tunnel" {
+  kind        = entity
+  description = "A GRE tunnel joining customer infrastructure to Cloudflare WAN."
+}
+
+concept "network-route-configuration" {
+  kind        = detail
+  description = "A LAN, WAN, ACL, route, or prefix configuration supporting Cloudflare WAN."
+}
+
+concept "ip-prefix" {
+  kind        = entity
+  description = "An IP prefix announced or managed through Cloudflare."
+}
+
+concept "address-map" {
+  kind        = entity
+  description = "A Cloudflare address map for customer IP prefixes."
+}
+
+rule "magic-transit-site" {
+  match {
+    kind = "resource"
+    type = "cloudflare_magic_transit_site"
+  }
+
+  as = concept.magic-transit-site
+}
+
+rule "magic-transit-cf1-site" {
+  match {
+    kind = "resource"
+    type = "cloudflare_magic_transit_cf1_site"
+  }
+
+  as = concept.magic-transit-site
+}
+
+rule "magic-transit-connector" {
+  match {
+    kind = "resource"
+    type = "cloudflare_magic_transit_connector"
+  }
+
+  as = concept.magic-transit-connector
+}
+
+rule "magic-transit-site-lan" {
+  match {
+    kind = "resource"
+    type = "cloudflare_magic_transit_site_lan"
+  }
+
+  as = concept.network-route-configuration
+
+  context {
+    as  = context.core.network
+    to  = concept.magic-transit-site
+    via = source.site_id
+  }
+}
+
+rule "magic-transit-site-wan" {
+  match {
+    kind = "resource"
+    type = "cloudflare_magic_transit_site_wan"
+  }
+
+  as = concept.network-route-configuration
+
+  context {
+    as  = context.core.network
+    to  = concept.magic-transit-site
+    via = source.site_id
+  }
+}
+
+rule "magic-transit-site-acl" {
+  match {
+    kind = "resource"
+    type = "cloudflare_magic_transit_site_acl"
+  }
+
+  as = concept.network-route-configuration
+
+  context {
+    as  = context.core.network
+    to  = concept.magic-transit-site
+    via = source.site_id
+  }
+}
+
+rule "magic-wan-gre-tunnel" {
+  match {
+    kind = "resource"
+    type = "cloudflare_magic_wan_gre_tunnel"
+  }
+
+  as = concept.gre-tunnel
+}
+
+rule "magic-wan-ipsec-tunnel" {
+  match {
+    kind = "resource"
+    type = "cloudflare_magic_wan_ipsec_tunnel"
+  }
+
+  as = concept.core.vpn-connection
+
+  relation "connects-to" {
+    to  = concept.core.vpn-gateway
+    via = source.customer_endpoint
+  }
+}
+
+rule "magic-wan-static-route" {
+  match {
+    kind = "resource"
+    type = "cloudflare_magic_wan_static_route"
+  }
+
+  as = concept.network-route-configuration
+}
+
+rule "byo-ip-prefix" {
+  match {
+    kind = "resource"
+    type = "cloudflare_byo_ip_prefix"
+  }
+
+  as = concept.ip-prefix
+}
+
+rule "address-map" {
+  match {
+    kind = "resource"
+    type = "cloudflare_address_map"
+  }
+
+  as = concept.address-map
+}
+
+rule "cloud-connector-rules" {
+  match {
+    kind = "resource"
+    type = "cloudflare_cloud_connector_rules"
+  }
+
+  as = concept.network-route-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "format_version": "1",
+  "scenarios": [
+    {
+      "id": "minimal-worker-storage",
+      "fixture": "testdata/architecture/cloudflare-v5/minimal",
+      "required_rules": ["cloudflare/r2-bucket", "cloudflare/workers-script", "cloudflare/zone"],
+      "required_outcomes": {
+        "cloudflare_r2_bucket.assets": "represented",
+        "cloudflare_workers_script.application": "represented",
+        "cloudflare_zone.application": "represented"
+      },
+      "required_facts": [
+        {
+          "collection": "relations",
+          "from": "entity:cloudflare_workers_script.application",
+          "to": "entity:cloudflare_r2_bucket.assets",
+          "type": "uses",
+          "rule": "cloudflare/workers-script"
+        }
+      ],
+      "minimum": {
+        "entities": 2,
+        "relations": 1,
+        "scopes": 1
+      },
+      "maximum_facts": {
+        "relations": 1
+      },
+      "expected_check_violations": [],
+      "expected_html_labels": [
+        "Cloudflare R2 bucket",
+        "Cloudflare Workers script",
+        "Cloudflare zone"
+      ],
+      "limitations": [
+        "Minimal fixture proves one exact Worker binding; broad product coverage remains in exhaustive matrix."
+      ]
+    },
+    {
+      "id": "broad-cross-cloud-edge-platform",
+      "fixture": "testdata/architecture/cloudflare-v5/scenarios",
+      "required_rules": [
+        "cloudflare/access-application",
+        "cloudflare/account",
+        "cloudflare/account-dns-internal-view",
+        "cloudflare/ai-gateway",
+        "cloudflare/ai-search-instance",
+        "cloudflare/calls-turn-app",
+        "cloudflare/certificate-pack",
+        "cloudflare/cloudflare-tunnel",
+        "cloudflare/cloudflare-tunnel-route",
+        "cloudflare/connectivity-directory-service",
+        "cloudflare/custom-ssl",
+        "cloudflare/d1-database",
+        "cloudflare/dex-test",
+        "cloudflare/device-managed-network",
+        "cloudflare/dlp-custom-profile",
+        "cloudflare/dns-transfer-incoming",
+        "cloudflare/dns-transfer-peer",
+        "cloudflare/email-security-trusted-domains",
+        "cloudflare/gateway-settings",
+        "cloudflare/google-tag-gateway",
+        "cloudflare/load-balancer",
+        "cloudflare/load-balancer-pool",
+        "cloudflare/logpush-job",
+        "cloudflare/magic-transit-cf1-site",
+        "cloudflare/magic-wan-ipsec-tunnel",
+        "cloudflare/notification-policy",
+        "cloudflare/notification-webhook",
+        "cloudflare/pages-project",
+        "cloudflare/pipeline",
+        "cloudflare/precursor",
+        "cloudflare/proxied-dns-record",
+        "cloudflare/queue",
+        "cloudflare/r2-bucket",
+        "cloudflare/r2-bucket-event-notification",
+        "cloudflare/ruleset",
+        "cloudflare/spectrum-application",
+        "cloudflare/stream-live-input",
+        "cloudflare/stream-webhook",
+        "cloudflare/turnstile-widget",
+        "cloudflare/waiting-room",
+        "cloudflare/waiting-room-event",
+        "cloudflare/worker",
+        "cloudflare/worker-version",
+        "cloudflare/workers-script",
+        "cloudflare/workflow",
+        "cloudflare/zone",
+        "kubernetes/kubernetes-service"
+      ],
+      "required_outcomes": {
+        "azure_virtual_network.ignored": "unsupported",
+        "cloudflare_account_dns_settings_internal_view.private": "represented",
+        "cloudflare_calls_turn_app.relay": "represented",
+        "cloudflare_custom_ssl.edge": "represented",
+        "cloudflare_dns_zone_transfers_incoming.secondary": "represented",
+        "cloudflare_dns_zone_transfers_peer.primary": "represented",
+        "cloudflare_load_balancer.edge": "represented",
+        "cloudflare_load_balancer_pool.aws": "represented",
+        "cloudflare_magic_wan_ipsec_tunnel.google": "represented",
+        "cloudflare_r2_bucket_event_notification.assets": "represented",
+        "cloudflare_zero_trust_dex_test.private_application": "represented",
+        "cloudflare_zero_trust_dlp_custom_profile.customer_data": "represented",
+        "cloudflare_workers_script.api": "represented",
+        "cloudflare_zero_trust_access_application.worker": "represented",
+        "cloudflare_zero_trust_tunnel_cloudflared_route.aws": "represented",
+        "kubernetes_service_v1.application": "represented"
+      },
+      "required_facts": [
+        {
+          "collection": "relations",
+          "from": "entity:cloudflare_load_balancer_pool.aws",
+          "to": "entity:aws_lb.application",
+          "type": "routes-to",
+          "rule": "cloudflare/load-balancer-pool"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:cloudflare_load_balancer_pool.azure",
+          "to": "entity:azurerm_lb.application",
+          "type": "routes-to",
+          "rule": "cloudflare/load-balancer-pool"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:cloudflare_load_balancer_pool.google",
+          "to": "entity:google_compute_forwarding_rule.application",
+          "type": "routes-to",
+          "rule": "cloudflare/load-balancer-pool"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:cloudflare_workers_script.api",
+          "to": "entity:cloudflare_r2_bucket.assets",
+          "type": "uses",
+          "rule": "cloudflare/workers-script"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:cloudflare_workers_script.api",
+          "to": "entity:cloudflare_d1_database.application",
+          "type": "uses",
+          "rule": "cloudflare/workers-script"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:cloudflare_workers_script.api",
+          "to": "entity:cloudflare_queue.events",
+          "type": "publishes-to",
+          "rule": "cloudflare/workers-script"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:cloudflare_zero_trust_access_application.worker",
+          "to": "entity:cloudflare_worker.jobs",
+          "type": "protects",
+          "rule": "cloudflare/access-application"
+        },
+        {
+          "collection": "contexts",
+          "from": "detail:cloudflare_zero_trust_tunnel_cloudflared_route.aws",
+          "to": "scope:aws_vpc.application",
+          "dimension": "core/network",
+          "rule": "cloudflare/cloudflare-tunnel-route"
+        },
+        {
+          "collection": "contexts",
+          "from": "detail:cloudflare_zero_trust_tunnel_cloudflared_route.azure",
+          "to": "scope:azurerm_virtual_network.application",
+          "dimension": "core/network",
+          "rule": "cloudflare/cloudflare-tunnel-route"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:cloudflare_magic_wan_ipsec_tunnel.google",
+          "to": "entity:google_compute_ha_vpn_gateway.application",
+          "type": "connects-to",
+          "rule": "cloudflare/magic-wan-ipsec-tunnel"
+        },
+        {
+          "collection": "contributions",
+          "from": "detail:cloudflare_r2_bucket_event_notification.assets",
+          "to": "entity:cloudflare_queue.events",
+          "rule": "cloudflare/r2-bucket-event-notification"
+        },
+        {
+          "collection": "relations",
+          "from": "scope:cloudflare_account_dns_settings_internal_view.private",
+          "to": "scope:cloudflare_zone.edge",
+          "type": "includes-zone",
+          "rule": "cloudflare/account-dns-internal-view"
+        },
+        {
+          "collection": "contributions",
+          "from": "detail:cloudflare_dns_zone_transfers_incoming.secondary",
+          "to": "entity:cloudflare_dns_zone_transfers_peer.primary",
+          "rule": "cloudflare/dns-transfer-incoming"
+        },
+        {
+          "collection": "contributions",
+          "from": "detail:cloudflare_custom_ssl.edge",
+          "to": "scope:cloudflare_zone.edge",
+          "rule": "cloudflare/custom-ssl"
+        },
+        {
+          "collection": "contributions",
+          "from": "detail:cloudflare_google_tag_gateway.analytics",
+          "to": "scope:cloudflare_zone.edge",
+          "rule": "cloudflare/google-tag-gateway"
+        },
+        {
+          "collection": "contributions",
+          "from": "detail:cloudflare_waiting_room_event.launch",
+          "to": "entity:cloudflare_waiting_room.launch",
+          "rule": "cloudflare/waiting-room-event"
+        }
+      ],
+      "minimum": {
+        "contexts": 9,
+        "contributions": 23,
+        "details": 22,
+        "entities": 40,
+        "relations": 21,
+        "scopes": 8
+      },
+      "maximum_facts": {
+        "contexts": 9,
+        "contributions": 23,
+        "relations": 21
+      },
+      "expected_diagnostic_codes": ["TRAVERSAL_UNRESOLVED"],
+      "expected_check_violations": [],
+      "expected_html_labels": [
+        "Cloudflare Access application",
+        "Cloudflare Calls TURN application",
+        "Cloudflare DEX test",
+        "Cloudflare Load Balancer",
+        "Cloudflare R2 bucket",
+        "Cloudflare Tunnel",
+        "Cloudflare Worker",
+        "Cloudflare internal DNS view"
+      ],
+      "forbidden_output": [
+        "ROOTFORM_CLOUDFLARE_CERTIFICATE_SENTINEL",
+        "ROOTFORM_CLOUDFLARE_PRIVATE_KEY_SENTINEL",
+        "ROOTFORM_CLOUDFLARE_WEBHOOK_SECRET_SENTINEL"
+      ],
+      "limitations": [
+        "Cloudflare-to-Kubernetes dependency remains source evidence only: Kubernetes Service roles cannot be conditionally promoted without breaking omitted provider defaults, so no relation is invented."
+      ]
+    },
+    {
+      "id": "fail-closed-boundaries",
+      "fixture": "testdata/architecture/cloudflare-v5/boundary",
+      "expected_build_failure": true,
+      "expected_diagnostic_codes": [
+        "TRAVERSAL_AMBIGUOUS",
+        "TRAVERSAL_UNRESOLVED",
+        "TRAVERSAL_UNRESOLVED",
+        "TRAVERSAL_UNRESOLVED",
+        "TRAVERSAL_UNRESOLVED",
+        "TRAVERSAL_UNRESOLVED",
+        "TRAVERSAL_UNRESOLVED"
+      ],
+      "forbidden_output": ["ROOTFORM_CLOUDFLARE_SECRET_SENTINEL"],
+      "limitations": [
+        "Ambiguous, dynamic, literal-only, dependency-only, credential, and read-only evidence fails closed; incomplete builds publish no IR or HTML."
+      ]
+    }
+  ]
+}

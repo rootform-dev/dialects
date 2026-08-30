@@ -1,0 +1,79 @@
+rule "gke-cluster" {
+  match {
+    kind = "resource"
+    type = "google_container_cluster"
+  }
+
+  as = concept.core.kubernetes-cluster
+
+  context {
+    as  = context.core.network
+    to  = concept.core.virtual-network
+    via = source.network
+  }
+
+  context {
+    as  = context.core.network
+    to  = concept.core.subnet
+    via = source.subnetwork
+  }
+}
+
+rule "gke-node-pool" {
+  match {
+    kind = "resource"
+    type = "google_container_node_pool"
+  }
+
+  as = concept.core.kubernetes-node-pool
+
+  contribution {
+    to  = concept.core.kubernetes-cluster
+    via = source.cluster
+  }
+}
+
+rule "gke-attached-cluster" {
+  match {
+    kind = "resource"
+    type = "google_container_attached_cluster"
+  }
+
+  as = concept.core.kubernetes-cluster
+}
+
+rule "gke-aws-cluster" {
+  match {
+    kind = "resource"
+    type = "google_container_aws_cluster"
+  }
+
+  as = concept.core.kubernetes-cluster
+}
+
+rule "gke-aws-node-pool" {
+  match {
+    kind = "resource"
+    type = "google_container_aws_node_pool"
+  }
+
+  as = concept.core.kubernetes-node-pool
+}
+
+rule "gke-azure-cluster" {
+  match {
+    kind = "resource"
+    type = "google_container_azure_cluster"
+  }
+
+  as = concept.core.kubernetes-cluster
+}
+
+rule "gke-azure-node-pool" {
+  match {
+    kind = "resource"
+    type = "google_container_azure_node_pool"
+  }
+
+  as = concept.core.kubernetes-node-pool
+}

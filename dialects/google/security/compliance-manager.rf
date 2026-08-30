@@ -1,0 +1,36 @@
+concept "compliance-manager-framework" {
+  kind        = entity
+  description = "A Compliance Manager framework defining security and regulatory controls."
+}
+
+concept "compliance-manager-configuration" {
+  kind        = detail
+  description = "A cloud control or deployment configuring a Compliance Manager framework."
+}
+
+rule "compliance-manager-framework" {
+  match {
+    kind = "resource"
+    type = "google_cloud_security_compliance_framework"
+  }
+
+  as = concept.compliance-manager-framework
+}
+
+rule "compliance-manager-cloud-control" {
+  match {
+    kind = "resource"
+    type = "google_cloud_security_compliance_cloud_control"
+  }
+
+  as = concept.compliance-manager-configuration
+}
+
+rule "compliance-manager-framework-deployment" {
+  match {
+    kind = "resource"
+    type = "google_cloud_security_compliance_framework_deployment"
+  }
+
+  as = concept.compliance-manager-configuration
+}

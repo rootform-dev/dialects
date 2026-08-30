@@ -1,0 +1,1692 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-30",
+  "dialect": {
+    "name": "hcp",
+    "version": "0.1.0"
+  },
+  "provider": {
+    "source": "registry.terraform.io/hashicorp/hcp",
+    "baseline_version": "0.114.0",
+    "compatibility": "= 0.114.0",
+    "bound": "temporary-exact-evidence",
+    "schema_sha256": "sha256:7002be2492885d4c4227b46b8afa0371178b514d16cbc020a263c1e6fed8c193"
+  },
+  "semantic_sources_sha256": "sha256:1f01d941600af5e04adb7dd3dd037407e2d3b1f34501ceb42c5951db969ed493",
+  "rules": [
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/network/connectivity.rf",
+      "paths": [
+        {
+          "path": "hvn_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "peer_vpc_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_aws_network_peering",
+      "rule_id": "hcp/aws-network-peering",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/aws_network_peering"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/network/connectivity.rf",
+      "paths": [
+        {
+          "path": "hvn_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "peer_vpc_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_aws_network_peering",
+      "rule_id": "hcp/aws-network-peering-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/aws_network_peering"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/network/connectivity.rf",
+      "paths": [
+        {
+          "path": "hvn_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_aws_transit_gateway_attachment",
+      "rule_id": "hcp/aws-transit-gateway-attachment",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/aws_transit_gateway_attachment"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/network/connectivity.rf",
+      "paths": [
+        {
+          "path": "hvn_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_aws_transit_gateway_attachment",
+      "rule_id": "hcp/aws-transit-gateway-attachment-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/aws_transit_gateway_attachment"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/network/connectivity.rf",
+      "paths": [
+        {
+          "path": "hvn_link",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "peer_vnet_name",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_azure_peering_connection",
+      "rule_id": "hcp/azure-peering-connection",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/azure_peering_connection"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/network/connectivity.rf",
+      "paths": [
+        {
+          "path": "hvn_link",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "peer_vnet_name",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_azure_peering_connection",
+      "rule_id": "hcp/azure-peering-connection-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/azure_peering_connection"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/services/boundary.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_boundary_cluster",
+      "rule_id": "hcp/boundary-cluster",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/boundary_cluster"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/services/boundary.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_boundary_cluster",
+      "rule_id": "hcp/boundary-cluster-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/boundary_cluster"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/services/consul-dedicated.rf",
+      "paths": [
+        {
+          "path": "hvn_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "primary_link",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_consul_cluster",
+      "rule_id": "hcp/consul-cluster",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/consul_cluster"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/services/consul-dedicated.rf",
+      "paths": [
+        {
+          "path": "hvn_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "primary_link",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_consul_cluster",
+      "rule_id": "hcp/consul-cluster-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/consul_cluster"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/services/consul-dedicated.rf",
+      "paths": [
+        {
+          "path": "cluster_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_consul_snapshot",
+      "rule_id": "hcp/consul-snapshot",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/consul_snapshot"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/network/dns-forwarding.rf",
+      "paths": [
+        {
+          "path": "hvn_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_dns_forwarding",
+      "rule_id": "hcp/dns-forwarding",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/dns_forwarding"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/network/dns-forwarding.rf",
+      "paths": [
+        {
+          "path": "hvn_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_dns_forwarding",
+      "rule_id": "hcp/dns-forwarding-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/dns_forwarding"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/network/dns-forwarding.rf",
+      "paths": [
+        {
+          "path": "dns_forwarding_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_dns_forwarding_rule",
+      "rule_id": "hcp/dns-forwarding-rule",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/dns_forwarding_rule"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/network/dns-forwarding.rf",
+      "paths": [
+        {
+          "path": "dns_forwarding_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_dns_forwarding_rule",
+      "rule_id": "hcp/dns-forwarding-rule-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/dns_forwarding_rule"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/platform/identity-access.rf",
+      "paths": [],
+      "resource_type": "hcp_group",
+      "rule_id": "hcp/group",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/group"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/platform/identity-access.rf",
+      "paths": [
+        {
+          "path": "name",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_group_iam_binding",
+      "rule_id": "hcp/group-iam-binding",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/group_iam_binding"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/platform/identity-access.rf",
+      "paths": [
+        {
+          "path": "name",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_group_iam_policy",
+      "rule_id": "hcp/group-iam-policy",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/group_iam_policy"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/platform/identity-access.rf",
+      "paths": [],
+      "resource_type": "hcp_group",
+      "rule_id": "hcp/group-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/group"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/platform/identity-access.rf",
+      "paths": [
+        {
+          "path": "group",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_group_members",
+      "rule_id": "hcp/group-members",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/group_members"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/network/virtual-networks.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_hvn",
+      "rule_id": "hcp/hvn",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/hvn"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/network/virtual-networks.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_hvn",
+      "rule_id": "hcp/hvn-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/hvn"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/network/connectivity.rf",
+      "paths": [
+        {
+          "path": "hvn_1",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "hvn_2",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_hvn_peering_connection",
+      "rule_id": "hcp/hvn-peering-connection",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/hvn_peering_connection"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/network/connectivity.rf",
+      "paths": [
+        {
+          "path": "hvn_1",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "hvn_2",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_hvn_peering_connection",
+      "rule_id": "hcp/hvn-peering-connection-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/hvn_peering_connection"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/network/connectivity.rf",
+      "paths": [
+        {
+          "path": "hvn_link",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_hvn_route",
+      "rule_id": "hcp/hvn-route",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/hvn_route"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/network/connectivity.rf",
+      "paths": [
+        {
+          "path": "hvn_link",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_hvn_route",
+      "rule_id": "hcp/hvn-route-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/hvn_route"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/platform/identity-access.rf",
+      "paths": [
+        {
+          "path": "service_principal",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_iam_workload_identity_provider",
+      "rule_id": "hcp/iam-workload-identity-provider",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/iam_workload_identity_provider"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/operations/audit-notifications.rf",
+      "paths": [
+        {
+          "path": "cloudwatch.role_arn",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_log_streaming_destination",
+      "rule_id": "hcp/log-streaming-destination",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/log_streaming_destination"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/operations/audit-notifications.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_notifications_webhook",
+      "rule_id": "hcp/notifications-webhook",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/notifications_webhook"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/platform/identity-access.rf",
+      "paths": [],
+      "resource_type": "hcp_organization_iam_binding",
+      "rule_id": "hcp/organization-iam-binding",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/organization_iam_binding"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/platform/identity-access.rf",
+      "paths": [],
+      "resource_type": "hcp_organization_iam_policy",
+      "rule_id": "hcp/organization-iam-policy",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/organization_iam_policy"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/platform/projects-organizations.rf",
+      "paths": [],
+      "resource_type": "hcp_organization",
+      "rule_id": "hcp/organization-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/organization"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/packer/registry.rf",
+      "paths": [
+        {
+          "path": "bucket_name",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "version_fingerprint",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_packer_artifact",
+      "rule_id": "hcp/packer-artifact-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/packer_artifact"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/packer/registry.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_packer_bucket",
+      "rule_id": "hcp/packer-bucket",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/packer_bucket"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/packer/registry.rf",
+      "paths": [
+        {
+          "path": "resource_name",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_packer_bucket_iam_binding",
+      "rule_id": "hcp/packer-bucket-iam-binding",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/packer_bucket_iam_binding"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/packer/registry.rf",
+      "paths": [
+        {
+          "path": "resource_name",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_packer_bucket_iam_policy",
+      "rule_id": "hcp/packer-bucket-iam-policy",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/packer_bucket_iam_policy"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/packer/registry.rf",
+      "paths": [
+        {
+          "path": "bucket_name",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_packer_channel",
+      "rule_id": "hcp/packer-channel",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/packer_channel"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/packer/registry.rf",
+      "paths": [
+        {
+          "path": "channel_name",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "version_fingerprint",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_packer_channel_assignment",
+      "rule_id": "hcp/packer-channel-assignment",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/packer_channel_assignment"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/packer/registry.rf",
+      "paths": [
+        {
+          "path": "bucket_name",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "channel_name",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_packer_version",
+      "rule_id": "hcp/packer-version-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/packer_version"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/network/connectivity.rf",
+      "paths": [
+        {
+          "path": "hvn_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "vault_cluster_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_private_link",
+      "rule_id": "hcp/private-link",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/private_link"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/network/connectivity.rf",
+      "paths": [
+        {
+          "path": "hvn_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "vault_cluster_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_private_link",
+      "rule_id": "hcp/private-link-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/private_link"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/platform/projects-organizations.rf",
+      "paths": [],
+      "resource_type": "hcp_project",
+      "rule_id": "hcp/project",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/project"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/platform/identity-access.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_project_iam_binding",
+      "rule_id": "hcp/project-iam-binding",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/project_iam_binding"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/platform/identity-access.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_project_iam_policy",
+      "rule_id": "hcp/project-iam-policy",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/project_iam_policy"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/platform/projects-organizations.rf",
+      "paths": [],
+      "resource_type": "hcp_project",
+      "rule_id": "hcp/project-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/project"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/platform/identity-access.rf",
+      "paths": [
+        {
+          "path": "organization_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_resource_control_policy",
+      "rule_id": "hcp/resource-control-policy",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/resource_control_policy"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/platform/identity-access.rf",
+      "paths": [],
+      "resource_type": "hcp_service_principal",
+      "rule_id": "hcp/service-principal",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/service_principal"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/platform/identity-access.rf",
+      "paths": [],
+      "resource_type": "hcp_service_principal",
+      "rule_id": "hcp/service-principal-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/service_principal"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/services/vault-dedicated.rf",
+      "paths": [
+        {
+          "path": "hvn_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "primary_link",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_cluster",
+      "rule_id": "hcp/vault-cluster",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_cluster"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/services/vault-dedicated.rf",
+      "paths": [
+        {
+          "path": "hvn_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "primary_link",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_cluster",
+      "rule_id": "hcp/vault-cluster-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/vault_cluster"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/services/vault-dedicated.rf",
+      "paths": [
+        {
+          "path": "cluster_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_plugin",
+      "rule_id": "hcp/vault-plugin",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_plugin"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/services/vault-dedicated.rf",
+      "paths": [
+        {
+          "path": "cluster_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_plugin",
+      "rule_id": "hcp/vault-plugin-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/vault_plugin"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/vault-radar/sources-integrations.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_radar_integration_jira_connection",
+      "rule_id": "hcp/vault-radar-integration-jira-connection",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_radar_integration_jira_connection"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/vault-radar/sources-integrations.rf",
+      "paths": [
+        {
+          "path": "connection_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_radar_integration_jira_subscription",
+      "rule_id": "hcp/vault-radar-integration-jira-subscription",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_radar_integration_jira_subscription"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/vault-radar/sources-integrations.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_radar_integration_slack_connection",
+      "rule_id": "hcp/vault-radar-integration-slack-connection",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_radar_integration_slack_connection"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/vault-radar/sources-integrations.rf",
+      "paths": [
+        {
+          "path": "connection_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_radar_integration_slack_subscription",
+      "rule_id": "hcp/vault-radar-integration-slack-subscription",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_radar_integration_slack_subscription"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/vault-radar/sources-integrations.rf",
+      "paths": [],
+      "resource_type": "hcp_vault_radar_resource_iam_binding",
+      "rule_id": "hcp/vault-radar-resource-iam-binding",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_radar_resource_iam_binding"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/vault-radar/sources-integrations.rf",
+      "paths": [],
+      "resource_type": "hcp_vault_radar_resource_iam_policy",
+      "rule_id": "hcp/vault-radar-resource-iam-policy",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_radar_resource_iam_policy"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/vault-radar/sources-integrations.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "vault_url",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_radar_secret_manager_vault_dedicated",
+      "rule_id": "hcp/vault-radar-secret-manager-vault-dedicated",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_radar_secret_manager_vault_dedicated"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/vault-radar/sources-integrations.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_radar_source_github_cloud",
+      "rule_id": "hcp/vault-radar-source-github-cloud",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_radar_source_github_cloud"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/vault-radar/sources-integrations.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_radar_source_github_enterprise",
+      "rule_id": "hcp/vault-radar-source-github-enterprise",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_radar_source_github_enterprise"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/vault-secrets/applications-integrations.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "sync_names",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_secrets_app",
+      "rule_id": "hcp/vault-secrets-app",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_app"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/vault-secrets/applications-integrations.rf",
+      "paths": [
+        {
+          "path": "resource_name",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_secrets_app_iam_binding",
+      "rule_id": "hcp/vault-secrets-app-iam-binding",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_app_iam_binding"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/vault-secrets/applications-integrations.rf",
+      "paths": [
+        {
+          "path": "resource_name",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_secrets_app_iam_policy",
+      "rule_id": "hcp/vault-secrets-app-iam-policy",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_app_iam_policy"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/vault-secrets/applications-integrations.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_secrets_app",
+      "rule_id": "hcp/vault-secrets-app-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/vault_secrets_app"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/vault-secrets/applications-integrations.rf",
+      "paths": [
+        {
+          "path": "app_name",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "aws_assume_role.iam_role_arn",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "gcp_impersonate_service_account.service_account_email",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "integration_name",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_secrets_dynamic_secret",
+      "rule_id": "hcp/vault-secrets-dynamic-secret",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_dynamic_secret"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/vault-secrets/applications-integrations.rf",
+      "paths": [
+        {
+          "path": "app_name",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_secrets_dynamic_secret",
+      "rule_id": "hcp/vault-secrets-dynamic-secret-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/vault_secrets_dynamic_secret"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/vault-secrets/applications-integrations.rf",
+      "paths": [
+        {
+          "path": "aws_federated_workload_identity.role_arn",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "azure_federated_workload_identity.client_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "gcp_federated_workload_identity.service_account_email",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "gcp_service_account_key.client_email",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_secrets_integration",
+      "rule_id": "hcp/vault-secrets-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_integration"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/vault-secrets/applications-integrations.rf",
+      "paths": [
+        {
+          "path": "federated_workload_identity.role_arn",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_secrets_integration_aws",
+      "rule_id": "hcp/vault-secrets-integration-aws",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_integration_aws"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/vault-secrets/applications-integrations.rf",
+      "paths": [
+        {
+          "path": "federated_workload_identity.client_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_secrets_integration_azure",
+      "rule_id": "hcp/vault-secrets-integration-azure",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_integration_azure"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/vault-secrets/applications-integrations.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_secrets_integration_confluent",
+      "rule_id": "hcp/vault-secrets-integration-confluent",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_integration_confluent"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/vault-secrets/applications-integrations.rf",
+      "paths": [
+        {
+          "path": "federated_workload_identity.service_account_email",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "service_account_key.client_email",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_secrets_integration_gcp",
+      "rule_id": "hcp/vault-secrets-integration-gcp",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_integration_gcp"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/vault-secrets/applications-integrations.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_secrets_integration_mongodbatlas",
+      "rule_id": "hcp/vault-secrets-integration-mongodbatlas",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_integration_mongodbatlas"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/vault-secrets/applications-integrations.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_secrets_integration_twilio",
+      "rule_id": "hcp/vault-secrets-integration-twilio",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_integration_twilio"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/vault-secrets/applications-integrations.rf",
+      "paths": [
+        {
+          "path": "app_name",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "azure_application_password.app_client_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "confluent_service_account.service_account_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "gcp_service_account_key.service_account_email",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "integration_name",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_secrets_rotating_secret",
+      "rule_id": "hcp/vault-secrets-rotating-secret",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_rotating_secret"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/vault-secrets/applications-integrations.rf",
+      "paths": [
+        {
+          "path": "app_name",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_secrets_rotating_secret",
+      "rule_id": "hcp/vault-secrets-rotating-secret-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/vault_secrets_rotating_secret"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/vault-secrets/applications-integrations.rf",
+      "paths": [
+        {
+          "path": "app_name",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_secrets_secret",
+      "rule_id": "hcp/vault-secrets-secret",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_secret"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/vault-secrets/applications-integrations.rf",
+      "paths": [
+        {
+          "path": "app_name",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_secrets_secret",
+      "rule_id": "hcp/vault-secrets-secret-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/vault_secrets_secret"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/vault-secrets/applications-integrations.rf",
+      "paths": [
+        {
+          "path": "integration_name",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_vault_secrets_sync",
+      "rule_id": "hcp/vault-secrets-sync",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_sync"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/waypoint/applications.rf",
+      "paths": [],
+      "resource_type": "hcp_waypoint_action",
+      "rule_id": "hcp/waypoint-action",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/waypoint_action"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/waypoint/applications.rf",
+      "paths": [],
+      "resource_type": "hcp_waypoint_action",
+      "rule_id": "hcp/waypoint-action-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/waypoint_action"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/waypoint/applications.rf",
+      "paths": [
+        {
+          "path": "application_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "definition_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_waypoint_add_on",
+      "rule_id": "hcp/waypoint-add-on",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/waypoint_add_on"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/waypoint/applications.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_waypoint_add_on_definition",
+      "rule_id": "hcp/waypoint-add-on-definition",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/waypoint_add_on_definition"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/waypoint/applications.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_waypoint_add_on_definition",
+      "rule_id": "hcp/waypoint-add-on-definition-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/waypoint_add_on_definition"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/waypoint/applications.rf",
+      "paths": [
+        {
+          "path": "application_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "definition_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_waypoint_add_on",
+      "rule_id": "hcp/waypoint-add-on-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/waypoint_add_on"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/waypoint/applications.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_waypoint_agent_group",
+      "rule_id": "hcp/waypoint-agent-group",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/waypoint_agent_group"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/waypoint/applications.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_waypoint_agent_group",
+      "rule_id": "hcp/waypoint-agent-group-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/waypoint_agent_group"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/waypoint/applications.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "template_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_waypoint_application",
+      "rule_id": "hcp/waypoint-application",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/waypoint_application"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/waypoint/applications.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "template_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_waypoint_application",
+      "rule_id": "hcp/waypoint-application-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/waypoint_application"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/waypoint/applications.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_waypoint_template",
+      "rule_id": "hcp/waypoint-template",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/waypoint_template"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/hcp/waypoint/applications.rf",
+      "paths": [
+        {
+          "path": "project_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ],
+      "resource_type": "hcp_waypoint_template",
+      "rule_id": "hcp/waypoint-template-lookup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/waypoint_template"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/hcp/waypoint/applications.rf",
+      "paths": [],
+      "resource_type": "hcp_waypoint_tfc_config",
+      "rule_id": "hcp/waypoint-tfc-config",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/waypoint_tfc_config"
+    }
+  ],
+  "review_policy": "later provider releases require schema-path and documented-meaning comparison; they do not require a dialect release automatically"
+}

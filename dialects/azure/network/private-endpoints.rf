@@ -1,0 +1,25 @@
+rule "private-endpoint" {
+  match {
+    kind = "resource"
+    type = "azurerm_private_endpoint"
+  }
+
+  as = concept.core.private-endpoint
+
+  context {
+    as  = context.core.network
+    to  = concept.core.subnet
+    via = source.subnet_id
+  }
+
+  context {
+    as  = context.core.ownership
+    to  = concept.resource-group
+    via = source.resource_group_name
+
+    match {
+      by       = target.name
+      strategy = "exact"
+    }
+  }
+}

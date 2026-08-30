@@ -1,0 +1,214 @@
+concept "access-application" {
+  kind        = entity
+  description = "An application or infrastructure destination protected by Cloudflare Access."
+}
+
+concept "access-policy" {
+  kind        = detail
+  description = "An authorization policy evaluated by Cloudflare Access."
+}
+
+concept "access-group" {
+  kind        = detail
+  description = "A reusable Cloudflare Access selector group."
+}
+
+concept "identity-provider" {
+  kind        = entity
+  description = "An identity provider integrated with Cloudflare Zero Trust."
+}
+
+concept "infrastructure-target" {
+  kind        = entity
+  description = "An infrastructure server target protected by Cloudflare Access."
+}
+
+concept "zero-trust-organization" {
+  kind        = scope
+  description = "A Cloudflare Zero Trust organization boundary."
+}
+
+concept "gateway-proxy-endpoint" {
+  kind        = entity
+  description = "A Cloudflare Gateway proxy endpoint."
+}
+
+concept "gateway-policy" {
+  kind        = detail
+  description = "A Cloudflare Gateway traffic policy."
+}
+
+concept "dns-location" {
+  kind        = scope
+  description = "A Cloudflare Gateway DNS location."
+}
+
+concept "ai-controls-endpoint" {
+  kind        = entity
+  description = "An MCP server or portal governed through Cloudflare AI Controls."
+}
+
+concept "gateway-configuration" {
+  kind        = detail
+  description = "Logging, inspection, or risk-integration configuration for Cloudflare Gateway."
+}
+
+rule "access-application" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zero_trust_access_application"
+  }
+
+  as = concept.access-application
+
+  relation "protects" {
+    to  = concept.core.load-balancer
+    via = source.domain
+  }
+
+  relation "protects" {
+    to  = concept.core.serverless-function
+    via = source.destinations[0].worker_id
+  }
+
+  relation "protects" {
+    to  = concept.core.serverless-function
+    via = source.destinations[1].worker_id
+  }
+
+  relation "protects" {
+    to  = concept.core.serverless-function
+    via = source.destinations[2].worker_id
+  }
+
+  relation "protects" {
+    to  = concept.core.serverless-function
+    via = source.destinations[3].worker_id
+  }
+}
+
+rule "access-policy" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zero_trust_access_policy"
+  }
+
+  as = concept.access-policy
+}
+
+rule "access-group" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zero_trust_access_group"
+  }
+
+  as = concept.access-group
+}
+
+rule "access-identity-provider" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zero_trust_access_identity_provider"
+  }
+
+  as = concept.identity-provider
+}
+
+rule "access-service-token" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zero_trust_access_service_token"
+  }
+
+  as = concept.core.service-identity
+}
+
+rule "access-infrastructure-target" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zero_trust_access_infrastructure_target"
+  }
+
+  as = concept.infrastructure-target
+}
+
+rule "zero-trust-organization" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zero_trust_organization"
+  }
+
+  as = concept.zero-trust-organization
+}
+
+rule "gateway-proxy-endpoint" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zero_trust_gateway_proxy_endpoint"
+  }
+
+  as = concept.gateway-proxy-endpoint
+}
+
+rule "gateway-policy" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zero_trust_gateway_policy"
+  }
+
+  as = concept.gateway-policy
+}
+
+rule "zero-trust-dns-location" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zero_trust_dns_location"
+  }
+
+  as = concept.dns-location
+}
+
+rule "access-ai-controls-mcp-server" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zero_trust_access_ai_controls_mcp_server"
+  }
+
+  as = concept.ai-controls-endpoint
+}
+
+rule "access-ai-controls-mcp-portal" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zero_trust_access_ai_controls_mcp_portal"
+  }
+
+  as = concept.ai-controls-endpoint
+}
+
+rule "gateway-settings" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zero_trust_gateway_settings"
+  }
+
+  as = concept.gateway-configuration
+}
+
+rule "gateway-logging" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zero_trust_gateway_logging"
+  }
+
+  as = concept.gateway-configuration
+}
+
+rule "risk-scoring-integration" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zero_trust_risk_scoring_integration"
+  }
+
+  as = concept.gateway-configuration
+}

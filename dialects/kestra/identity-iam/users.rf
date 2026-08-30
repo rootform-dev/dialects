@@ -1,0 +1,32 @@
+concept "user-account" {
+  kind        = entity
+  description = "A Kestra user account."
+}
+
+concept "user-credential" {
+  kind        = detail
+  description = "A basic-auth credential attached to a Kestra user."
+}
+
+rule "user" {
+  match {
+    kind = "resource"
+    type = "kestra_user"
+  }
+
+  as = concept.user-account
+}
+
+rule "user-password" {
+  match {
+    kind = "resource"
+    type = "kestra_user_password"
+  }
+
+  as = concept.user-credential
+
+  contribution {
+    to  = concept.user-account
+    via = source.user_id
+  }
+}

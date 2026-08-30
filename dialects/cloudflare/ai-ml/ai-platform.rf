@@ -1,0 +1,60 @@
+concept "ai-gateway" {
+  kind        = entity
+  description = "A Cloudflare AI Gateway controlling and observing AI inference traffic."
+}
+
+concept "ai-gateway-routing" {
+  kind        = detail
+  description = "Dynamic routing configuration contributing to a Cloudflare AI Gateway."
+}
+
+concept "ai-search-namespace" {
+  kind        = scope
+  description = "A Cloudflare AI Search namespace."
+}
+
+concept "ai-search-instance" {
+  kind        = entity
+  description = "A Cloudflare AI Search instance indexing and retrieving content."
+}
+
+rule "ai-gateway" {
+  match {
+    kind = "resource"
+    type = "cloudflare_ai_gateway"
+  }
+
+  as = concept.ai-gateway
+}
+
+rule "ai-gateway-dynamic-routing" {
+  match {
+    kind = "resource"
+    type = "cloudflare_ai_gateway_dynamic_routing"
+  }
+
+  as = concept.ai-gateway-routing
+
+  contribution {
+    to  = concept.ai-gateway
+    via = source.gateway_id
+  }
+}
+
+rule "ai-search-namespace" {
+  match {
+    kind = "resource"
+    type = "cloudflare_ai_search_namespace"
+  }
+
+  as = concept.ai-search-namespace
+}
+
+rule "ai-search-instance" {
+  match {
+    kind = "resource"
+    type = "cloudflare_ai_search_instance"
+  }
+
+  as = concept.ai-search-instance
+}

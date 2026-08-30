@@ -1,0 +1,27 @@
+rule "prepared-query" {
+  match {
+    kind = "resource"
+    type = "consul_prepared_query"
+  }
+
+  as = concept.discovery-chain-configuration
+
+  contribution {
+    to  = concept.consul-service
+    via = source.service
+  }
+}
+
+rule "service-health-lookup" {
+  match {
+    kind = "data"
+    type = "consul_service_health"
+  }
+
+  as = concept.operations-configuration
+
+  contribution {
+    to  = concept.consul-service
+    via = source.name
+  }
+}

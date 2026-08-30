@@ -1,0 +1,46 @@
+rule "iam-role" {
+  match {
+    kind = "resource"
+    type = "aws_iam_role"
+  }
+
+  as = concept.core.service-identity
+}
+
+rule "iam-role-policy-attachment" {
+  match {
+    kind = "resource"
+    type = "aws_iam_role_policy_attachment"
+  }
+
+  as = concept.core.service-identity-binding
+
+  contribution {
+    to  = concept.core.service-identity
+    via = source.role
+
+    match {
+      by       = target.name
+      strategy = "exact"
+    }
+  }
+}
+
+rule "iam-instance-profile" {
+  match {
+    kind = "resource"
+    type = "aws_iam_instance_profile"
+  }
+
+  as = concept.instance-profile
+
+  contribution {
+    to  = concept.core.service-identity
+    via = source.role
+
+    match {
+      by       = target.name
+      strategy = "exact"
+    }
+  }
+}

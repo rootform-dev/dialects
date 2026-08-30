@@ -1,0 +1,61 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-30",
+  "accepted_adr": "docs/adr/091-grafana-provider-boundaries.md",
+  "reused_core_concepts": [
+    "browser-observability-application",
+    "cloud-observability-integration",
+    "managed-secret",
+    "observability-tenant",
+    "service-objective",
+    "synthetic-check",
+    "synthetic-execution-location"
+  ],
+  "referenced_core_concepts": ["service-identity"],
+  "referenced_core_contexts": ["ownership"],
+  "promoted_core_concepts": [],
+  "grafana_specific_concepts": [
+    "agent-observability-configuration",
+    "assistant-integration",
+    "cloud-integration-configuration",
+    "data-source",
+    "git-sync-connection",
+    "git-sync-repository",
+    "identity-configuration",
+    "knowledge-graph",
+    "knowledge-graph-configuration",
+    "machine-learning-configuration",
+    "metrics-scrape-job",
+    "oncall-integration",
+    "oncall-routing",
+    "performance-test",
+    "performance-testing-project",
+    "platform-installation",
+    "private-data-source-connect-network",
+    "secret-keeper",
+    "telemetry-collector",
+    "telemetry-pipeline"
+  ],
+  "candidates": [
+    {
+      "candidate": "telemetry-collector-and-pipeline",
+      "disposition": "keep-provider-specific",
+      "reason": "Grafana Fleet Management manages Alloy and OpenTelemetry collectors while Datadog Observability Pipelines own a different in-customer processing boundary"
+    },
+    {
+      "candidate": "observability-tenant",
+      "disposition": "promoted-minimal-common-role",
+      "reason": "Grafana Cloud stacks, Datadog child organizations, and New Relic accounts prove a shared tenant boundary without claiming a generic managed platform"
+    },
+    {
+      "candidate": "private-endpoint",
+      "disposition": "reject-core-reuse",
+      "reason": "Private Data Source Connect is an agent-backed reverse SSH network, not a provider-neutral private endpoint"
+    },
+    {
+      "candidate": "synthetic-endpoint",
+      "disposition": "reject-test-as-endpoint",
+      "reason": "a check observes a target and does not prove ownership of the target runtime"
+    }
+  ]
+}

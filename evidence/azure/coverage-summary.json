@@ -1,0 +1,37 @@
+{
+  "format_version": "1",
+  "matrix_sha256": "sha256:831f73d982a020a8b6b746ac98689c5b8cb5fce42f4de1b77722e87571eb85ce",
+  "total_rows": 1970,
+  "by_inventory": {
+    "provider_constructs": 1773,
+    "catalog_products": 194,
+    "azapi_arm_types": 3
+  },
+  "provider_constructs": {
+    "azapi": 20,
+    "azuread": 74,
+    "azurerm": 1679
+  },
+  "represented_rules": 417,
+  "by_decision": {
+    "supported": 324,
+    "partial": 230,
+    "intentionally-unrepresented": 1415,
+    "unsupported": 1
+  },
+  "by_declaration_outcome": {
+    "represented": 418,
+    "supporting": 0,
+    "filtered": 0,
+    "unsupported": 1170,
+    "failed": 0,
+    "not-applicable": 382
+  },
+  "catalog": {
+    "supported": 31,
+    "partial": 105,
+    "intentionally-unrepresented": 58,
+    "unsupported": 0,
+    "no-provider-surface": 51
+  }
+}

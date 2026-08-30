@@ -1,0 +1,13 @@
+concept "identity-log-stream" {
+  kind        = entity
+  description = "An Auth0 Log Stream exporting tenant logs to an external analysis destination."
+}
+
+rule "log-stream" {
+  match {
+    kind = "resource"
+    type = "auth0_log_stream"
+  }
+
+  as = concept.identity-log-stream
+}

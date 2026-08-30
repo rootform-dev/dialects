@@ -1,0 +1,36 @@
+concept "telemetry-collector" {
+  kind        = entity
+  description = "A Grafana Alloy or OpenTelemetry Collector managed through Grafana Fleet Management."
+}
+
+concept "telemetry-pipeline" {
+  kind        = entity
+  description = "A remote Grafana Alloy or OpenTelemetry Collector configuration pipeline."
+}
+
+rule "fleet-management-collector" {
+  match {
+    kind = "resource"
+    type = "grafana_fleet_management_collector"
+  }
+
+  as = concept.telemetry-collector
+}
+
+rule "fleet-management-collector-lookup" {
+  match {
+    kind = "data"
+    type = "grafana_fleet_management_collector"
+  }
+
+  as = concept.telemetry-collector
+}
+
+rule "fleet-management-pipeline" {
+  match {
+    kind = "resource"
+    type = "grafana_fleet_management_pipeline"
+  }
+
+  as = concept.telemetry-pipeline
+}

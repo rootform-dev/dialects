@@ -1,0 +1,4 @@
+concept "serverless-function" {
+  kind        = entity
+  description = "A managed event-driven function runtime."
+}

@@ -1,0 +1,1452 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-29",
+  "dialect": "databricks",
+  "product_name": "Databricks",
+  "rules": [
+    {
+      "id": "databricks/access-control-rule-set",
+      "terraform_type": "databricks_access_control_rule_set",
+      "label": "Databricks access control rule set",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/access_control_rule_set.md"
+    },
+    {
+      "id": "databricks/account-federation-policy",
+      "terraform_type": "databricks_account_federation_policy",
+      "label": "Databricks account federation policy",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/account_federation_policy.md"
+    },
+    {
+      "id": "databricks/account-group-member",
+      "terraform_type": "databricks_account_iam_direct_group_member_v2",
+      "label": "Databricks account group member",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/account_iam_direct_group_member_v2.md"
+    },
+    {
+      "id": "databricks/account-identity-group",
+      "terraform_type": "databricks_account_iam_group_v2",
+      "label": "Databricks account identity group",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/account_iam_group_v2.md"
+    },
+    {
+      "id": "databricks/account-network-policy",
+      "terraform_type": "databricks_account_network_policy",
+      "label": "Databricks account network policy",
+      "product": "Databricks workspace platform",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/account_network_policy.md"
+    },
+    {
+      "id": "databricks/account-service-principal",
+      "terraform_type": "databricks_account_iam_service_principal_v2",
+      "label": "Databricks account service principal",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/account_iam_service_principal_v2.md"
+    },
+    {
+      "id": "databricks/account-setting",
+      "terraform_type": "databricks_account_setting_v2",
+      "label": "Databricks account setting",
+      "product": "Databricks workspace platform",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/account_setting_v2.md"
+    },
+    {
+      "id": "databricks/account-workspace-assignment",
+      "terraform_type": "databricks_account_iam_workspace_assignment_v2",
+      "label": "Databricks account workspace assignment",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/account_iam_workspace_assignment_v2.md"
+    },
+    {
+      "id": "databricks/ai-gateway-mcp-service",
+      "terraform_type": "databricks_ai_gateway_mcp_service",
+      "label": "Mosaic AI Gateway MCP service",
+      "product": "Mosaic AI serving, search, gateway, and agents",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/ai_gateway_mcp_service.md"
+    },
+    {
+      "id": "databricks/ai-gateway-model-provider-service",
+      "terraform_type": "databricks_ai_gateway_model_provider_service",
+      "label": "Mosaic AI Gateway model provider service",
+      "product": "Mosaic AI serving, search, gateway, and agents",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/ai_gateway_model_provider_service.md"
+    },
+    {
+      "id": "databricks/ai-gateway-model-service",
+      "terraform_type": "databricks_ai_gateway_model_service",
+      "label": "Mosaic AI Gateway model service",
+      "product": "Mosaic AI serving, search, gateway, and agents",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/ai_gateway_model_service.md"
+    },
+    {
+      "id": "databricks/ai-search-endpoint",
+      "terraform_type": "databricks_ai_search_endpoint",
+      "label": "Mosaic AI Search endpoint",
+      "product": "Mosaic AI serving, search, gateway, and agents",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/ai_search_endpoint.md"
+    },
+    {
+      "id": "databricks/ai-search-index",
+      "terraform_type": "databricks_ai_search_index",
+      "label": "Mosaic AI Search index",
+      "product": "Mosaic AI serving, search, gateway, and agents",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/ai_search_index.md"
+    },
+    {
+      "id": "databricks/alert",
+      "terraform_type": "databricks_alert",
+      "label": "Databricks alert",
+      "product": "Databricks Apps and AI/BI",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/alert.md"
+    },
+    {
+      "id": "databricks/alert-v2",
+      "terraform_type": "databricks_alert_v2",
+      "label": "Databricks alert v2",
+      "product": "Databricks Apps and AI/BI",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/alert_v2.md"
+    },
+    {
+      "id": "databricks/app-space",
+      "terraform_type": "databricks_app_space",
+      "label": "Databricks App space",
+      "product": "Databricks Apps and AI/BI",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/app_space.md"
+    },
+    {
+      "id": "databricks/apps-custom-template",
+      "terraform_type": "databricks_apps_settings_custom_template",
+      "label": "Databricks apps custom template",
+      "product": "Databricks Apps and AI/BI",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/apps_settings_custom_template.md"
+    },
+    {
+      "id": "databricks/artifact-allowlist",
+      "terraform_type": "databricks_artifact_allowlist",
+      "label": "Databricks artifact allowlist",
+      "product": "Databricks compute",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/artifact_allowlist.md"
+    },
+    {
+      "id": "databricks/automatic-cluster-update-setting",
+      "terraform_type": "databricks_automatic_cluster_update_workspace_setting",
+      "label": "Databricks automatic cluster update setting",
+      "product": "Databricks workspace platform",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/automatic_cluster_update_setting.md"
+    },
+    {
+      "id": "databricks/aws-s3-mount",
+      "terraform_type": "databricks_aws_s3_mount",
+      "label": "Databricks AWS S3 mount",
+      "product": "DBFS and legacy cloud storage mounts",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/aws_s3_mount.md"
+    },
+    {
+      "id": "databricks/azure-adls-gen1-mount",
+      "terraform_type": "databricks_azure_adls_gen1_mount",
+      "label": "Databricks azure ADLS gen1 mount",
+      "product": "DBFS and legacy cloud storage mounts",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/azure_adls_gen1_mount.md"
+    },
+    {
+      "id": "databricks/azure-adls-gen2-mount",
+      "terraform_type": "databricks_azure_adls_gen2_mount",
+      "label": "Databricks azure ADLS gen2 mount",
+      "product": "DBFS and legacy cloud storage mounts",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/azure_adls_gen2_mount.md"
+    },
+    {
+      "id": "databricks/azure-blob-mount",
+      "terraform_type": "databricks_azure_blob_mount",
+      "label": "Databricks azure blob mount",
+      "product": "DBFS and legacy cloud storage mounts",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/azure_blob_mount.md"
+    },
+    {
+      "id": "databricks/catalog-workspace-binding",
+      "terraform_type": "databricks_catalog_workspace_binding",
+      "label": "Databricks catalog workspace binding",
+      "product": "Unity Catalog",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/catalog_workspace_binding.md"
+    },
+    {
+      "id": "databricks/cluster-library",
+      "terraform_type": "databricks_library",
+      "label": "Databricks cluster library",
+      "product": "Databricks compute",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/library.md"
+    },
+    {
+      "id": "databricks/cluster-policy",
+      "terraform_type": "databricks_cluster_policy",
+      "label": "Databricks cluster policy",
+      "product": "Databricks compute",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/cluster_policy.md"
+    },
+    {
+      "id": "databricks/compliance-security-profile-setting",
+      "terraform_type": "databricks_compliance_security_profile_workspace_setting",
+      "label": "Databricks compliance security profile setting",
+      "product": "Databricks workspace platform",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/compliance_security_profile_setting.md"
+    },
+    {
+      "id": "databricks/compute-cluster",
+      "terraform_type": "databricks_cluster",
+      "label": "Databricks compute cluster",
+      "product": "Databricks compute",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/cluster.md"
+    },
+    {
+      "id": "databricks/custom-app-integration",
+      "terraform_type": "databricks_custom_app_integration",
+      "label": "Databricks custom app integration",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/custom_app_integration.md"
+    },
+    {
+      "id": "databricks/dashboard",
+      "terraform_type": "databricks_dashboard",
+      "label": "Databricks dashboard",
+      "product": "Databricks Apps and AI/BI",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/dashboard.md"
+    },
+    {
+      "id": "databricks/dashboard-embedding-access-policy",
+      "terraform_type": "databricks_aibi_dashboard_embedding_access_policy_setting",
+      "label": "Databricks dashboard embedding access policy",
+      "product": "Databricks Apps and AI/BI",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/aibi_dashboard_embedding_access_policy_setting.md"
+    },
+    {
+      "id": "databricks/dashboard-embedding-approved-domains",
+      "terraform_type": "databricks_aibi_dashboard_embedding_approved_domains_setting",
+      "label": "Databricks dashboard embedding approved domains",
+      "product": "Databricks Apps and AI/BI",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/aibi_dashboard_embedding_approved_domains_setting.md"
+    },
+    {
+      "id": "databricks/data-classification-catalog-config",
+      "terraform_type": "databricks_data_classification_catalog_config",
+      "label": "Databricks data classification catalog config",
+      "product": "Unity Catalog",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/data_classification_catalog_config.md"
+    },
+    {
+      "id": "databricks/data-quality-monitor",
+      "terraform_type": "databricks_data_quality_monitor",
+      "label": "Databricks data quality monitor",
+      "product": "Databricks data quality and Lakehouse Monitoring",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/data_quality_monitor.md"
+    },
+    {
+      "id": "databricks/data-quality-refresh",
+      "terraform_type": "databricks_data_quality_refresh",
+      "label": "Databricks data quality refresh",
+      "product": "Databricks data quality and Lakehouse Monitoring",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/data_quality_refresh.md"
+    },
+    {
+      "id": "databricks/databricks-app",
+      "terraform_type": "databricks_app",
+      "label": "Databricks App",
+      "product": "Databricks Apps and AI/BI",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/app.md"
+    },
+    {
+      "id": "databricks/default-namespace-setting",
+      "terraform_type": "databricks_default_namespace_setting",
+      "label": "Databricks default namespace setting",
+      "product": "Databricks workspace platform",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/default_namespace_setting.md"
+    },
+    {
+      "id": "databricks/default-workspace-base-environment",
+      "terraform_type": "databricks_environments_default_workspace_base_environment",
+      "label": "Databricks default workspace base environment",
+      "product": "Databricks compute",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/environments_default_workspace_base_environment.md"
+    },
+    {
+      "id": "databricks/delta-share",
+      "terraform_type": "databricks_share",
+      "label": "Delta Sharing share",
+      "product": "Lakehouse Federation and Delta Sharing",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/share.md"
+    },
+    {
+      "id": "databricks/delta-sharing-provider",
+      "terraform_type": "databricks_provider",
+      "label": "Delta Sharing provider",
+      "product": "Lakehouse Federation and Delta Sharing",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/provider.md"
+    },
+    {
+      "id": "databricks/delta-sharing-recipient",
+      "terraform_type": "databricks_recipient",
+      "label": "Delta Sharing recipient",
+      "product": "Lakehouse Federation and Delta Sharing",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/recipient.md"
+    },
+    {
+      "id": "databricks/disable-legacy-access-setting",
+      "terraform_type": "databricks_disable_legacy_access_setting",
+      "label": "Databricks disable legacy access setting",
+      "product": "Databricks workspace platform",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/disable_legacy_access_setting.md"
+    },
+    {
+      "id": "databricks/disable-legacy-dbfs-setting",
+      "terraform_type": "databricks_disable_legacy_dbfs_setting",
+      "label": "Databricks disable legacy DBFS setting",
+      "product": "Databricks workspace platform",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/disable_legacy_dbfs_setting.md"
+    },
+    {
+      "id": "databricks/disable-legacy-features-setting",
+      "terraform_type": "databricks_disable_legacy_features_setting",
+      "label": "Databricks disable legacy features setting",
+      "product": "Databricks workspace platform",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/disable_legacy_features_setting.md"
+    },
+    {
+      "id": "databricks/disaster-recovery-failover-group",
+      "terraform_type": "databricks_disaster_recovery_failover_group",
+      "label": "Databricks disaster recovery failover group",
+      "product": "Databricks account and workspace deployment",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/disaster_recovery_failover_group.md"
+    },
+    {
+      "id": "databricks/disaster-recovery-stable-url",
+      "terraform_type": "databricks_disaster_recovery_stable_url",
+      "label": "Databricks disaster recovery stable URL",
+      "product": "Databricks account and workspace deployment",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/disaster_recovery_stable_url.md"
+    },
+    {
+      "id": "databricks/enhanced-security-monitoring-setting",
+      "terraform_type": "databricks_enhanced_security_monitoring_workspace_setting",
+      "label": "Databricks enhanced security monitoring setting",
+      "product": "Databricks workspace platform",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/enhanced_security_monitoring_setting.md"
+    },
+    {
+      "id": "databricks/entitlements",
+      "terraform_type": "databricks_entitlements",
+      "label": "Databricks entitlements",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/entitlements.md"
+    },
+    {
+      "id": "databricks/entity-tag-assignment",
+      "terraform_type": "databricks_entity_tag_assignment",
+      "label": "Databricks entity tag assignment",
+      "product": "Unity Catalog",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/entity_tag_assignment.md"
+    },
+    {
+      "id": "databricks/external-location",
+      "terraform_type": "databricks_external_location",
+      "label": "Unity Catalog external location",
+      "product": "Unity Catalog",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/external_location.md"
+    },
+    {
+      "id": "databricks/external-metadata",
+      "terraform_type": "databricks_external_metadata",
+      "label": "Databricks external metadata",
+      "product": "Unity Catalog",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/external_metadata.md"
+    },
+    {
+      "id": "databricks/feature-engineering-feature",
+      "terraform_type": "databricks_feature_engineering_feature",
+      "label": "Databricks feature engineering feature",
+      "product": "Databricks machine learning and MLflow",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/feature_engineering_feature.md"
+    },
+    {
+      "id": "databricks/feature-engineering-kafka-config",
+      "terraform_type": "databricks_feature_engineering_kafka_config",
+      "label": "Databricks feature engineering kafka config",
+      "product": "Databricks machine learning and MLflow",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/feature_engineering_kafka_config.md"
+    },
+    {
+      "id": "databricks/feature-engineering-materialized-feature",
+      "terraform_type": "databricks_feature_engineering_materialized_feature",
+      "label": "Databricks feature engineering materialized feature",
+      "product": "Databricks machine learning and MLflow",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/feature_engineering_materialized_feature.md"
+    },
+    {
+      "id": "databricks/global-init-script",
+      "terraform_type": "databricks_global_init_script",
+      "label": "Databricks global init script",
+      "product": "Databricks compute",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/global_init_script.md"
+    },
+    {
+      "id": "databricks/grant",
+      "terraform_type": "databricks_grant",
+      "label": "Databricks grant",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/grant.md"
+    },
+    {
+      "id": "databricks/grants",
+      "terraform_type": "databricks_grants",
+      "label": "Databricks grants",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/grants.md"
+    },
+    {
+      "id": "databricks/group-instance-profile",
+      "terraform_type": "databricks_group_instance_profile",
+      "label": "Databricks group instance profile",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/group_instance_profile.md"
+    },
+    {
+      "id": "databricks/group-member",
+      "terraform_type": "databricks_group_member",
+      "label": "Databricks group member",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/group_member.md"
+    },
+    {
+      "id": "databricks/group-role",
+      "terraform_type": "databricks_group_role",
+      "label": "Databricks group role",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/group_role.md"
+    },
+    {
+      "id": "databricks/identity-group",
+      "terraform_type": "databricks_group",
+      "label": "Databricks group",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/group.md"
+    },
+    {
+      "id": "databricks/instance-pool",
+      "terraform_type": "databricks_instance_pool",
+      "label": "Databricks instance pool",
+      "product": "Databricks compute",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/instance_pool.md"
+    },
+    {
+      "id": "databricks/instance-profile",
+      "terraform_type": "databricks_instance_profile",
+      "label": "Databricks instance profile",
+      "product": "Databricks compute",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/instance_profile.md"
+    },
+    {
+      "id": "databricks/ip-access-list",
+      "terraform_type": "databricks_ip_access_list",
+      "label": "Databricks IP access list",
+      "product": "Databricks workspace platform",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/ip_access_list.md"
+    },
+    {
+      "id": "databricks/knowledge-assistant",
+      "terraform_type": "databricks_knowledge_assistant",
+      "label": "Databricks Knowledge Assistant",
+      "product": "Mosaic AI serving, search, gateway, and agents",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/knowledge_assistant.md"
+    },
+    {
+      "id": "databricks/knowledge-assistant-source",
+      "terraform_type": "databricks_knowledge_assistant_knowledge_source",
+      "label": "Databricks knowledge assistant source",
+      "product": "Mosaic AI serving, search, gateway, and agents",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/knowledge_assistant_knowledge_source.md"
+    },
+    {
+      "id": "databricks/lakebase-branch",
+      "terraform_type": "databricks_postgres_branch",
+      "label": "Lakebase branch",
+      "product": "Lakebase",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/postgres_branch.md"
+    },
+    {
+      "id": "databricks/lakebase-data-api",
+      "terraform_type": "databricks_postgres_data_api",
+      "label": "Lakebase Data API",
+      "product": "Lakebase",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/postgres_data_api.md"
+    },
+    {
+      "id": "databricks/lakebase-database",
+      "terraform_type": "databricks_postgres_database",
+      "label": "Lakebase Postgres database",
+      "product": "Lakebase",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/postgres_database.md"
+    },
+    {
+      "id": "databricks/lakebase-endpoint",
+      "terraform_type": "databricks_postgres_endpoint",
+      "label": "Lakebase Postgres endpoint",
+      "product": "Lakebase",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/postgres_endpoint.md"
+    },
+    {
+      "id": "databricks/lakebase-postgres-catalog",
+      "terraform_type": "databricks_postgres_catalog",
+      "label": "Databricks lakebase postgres catalog",
+      "product": "Lakebase",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/postgres_catalog.md"
+    },
+    {
+      "id": "databricks/lakebase-postgres-cdf-config",
+      "terraform_type": "databricks_postgres_cdf_config",
+      "label": "Databricks lakebase postgres CDF config",
+      "product": "Lakebase",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/postgres_cdf_config.md"
+    },
+    {
+      "id": "databricks/lakebase-postgres-role",
+      "terraform_type": "databricks_postgres_role",
+      "label": "Databricks lakebase postgres role",
+      "product": "Lakebase",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/postgres_role.md"
+    },
+    {
+      "id": "databricks/lakebase-postgres-synced-table",
+      "terraform_type": "databricks_postgres_synced_table",
+      "label": "Databricks lakebase postgres synced table",
+      "product": "Lakebase",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/postgres_synced_table.md"
+    },
+    {
+      "id": "databricks/lakebase-project",
+      "terraform_type": "databricks_postgres_project",
+      "label": "Lakebase project",
+      "product": "Lakebase",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/postgres_project.md"
+    },
+    {
+      "id": "databricks/lakebase-provisioned-catalog",
+      "terraform_type": "databricks_database_database_catalog",
+      "label": "Databricks lakebase provisioned catalog",
+      "product": "Lakebase",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/database_database_catalog.md"
+    },
+    {
+      "id": "databricks/lakebase-provisioned-instance",
+      "terraform_type": "databricks_database_instance",
+      "label": "Lakebase Provisioned database instance",
+      "product": "Lakebase",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/database_instance.md"
+    },
+    {
+      "id": "databricks/lakebase-provisioned-synced-table",
+      "terraform_type": "databricks_database_synced_database_table",
+      "label": "Databricks lakebase provisioned synced table",
+      "product": "Lakebase",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/database_synced_database_table.md"
+    },
+    {
+      "id": "databricks/lakeflow-job",
+      "terraform_type": "databricks_job",
+      "label": "Lakeflow Job",
+      "product": "Lakeflow Jobs and Lakeflow pipelines",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/job.md"
+    },
+    {
+      "id": "databricks/lakeflow-pipeline",
+      "terraform_type": "databricks_pipeline",
+      "label": "Lakeflow pipeline",
+      "product": "Lakeflow Jobs and Lakeflow pipelines",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/pipeline.md"
+    },
+    {
+      "id": "databricks/lakehouse-federation-connection",
+      "terraform_type": "databricks_connection",
+      "label": "Lakehouse Federation connection",
+      "product": "Lakehouse Federation and Delta Sharing",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/connection.md"
+    },
+    {
+      "id": "databricks/lakehouse-monitor",
+      "terraform_type": "databricks_lakehouse_monitor",
+      "label": "Databricks lakehouse monitor",
+      "product": "Databricks data quality and Lakehouse Monitoring",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/lakehouse_monitor.md"
+    },
+    {
+      "id": "databricks/log-delivery",
+      "terraform_type": "databricks_mws_log_delivery",
+      "label": "Databricks log delivery",
+      "product": "Databricks account and workspace deployment",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mws_log_delivery.md"
+    },
+    {
+      "id": "databricks/materialized-feature-tag",
+      "terraform_type": "databricks_materialized_features_feature_tag",
+      "label": "Databricks materialized feature tag",
+      "product": "Databricks machine learning and MLflow",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/materialized_features_feature_tag.md"
+    },
+    {
+      "id": "databricks/metastore-assignment",
+      "terraform_type": "databricks_metastore_assignment",
+      "label": "Databricks metastore assignment",
+      "product": "Unity Catalog",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/metastore_assignment.md"
+    },
+    {
+      "id": "databricks/metastore-data-access",
+      "terraform_type": "databricks_metastore_data_access",
+      "label": "Databricks metastore data access",
+      "product": "Unity Catalog",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/metastore_data_access.md"
+    },
+    {
+      "id": "databricks/mlflow-experiment",
+      "terraform_type": "databricks_mlflow_experiment",
+      "label": "Databricks MLflow experiment",
+      "product": "Databricks machine learning and MLflow",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mlflow_experiment.md"
+    },
+    {
+      "id": "databricks/mlflow-model",
+      "terraform_type": "databricks_mlflow_model",
+      "label": "Databricks MLflow model",
+      "product": "Databricks machine learning and MLflow",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mlflow_model.md"
+    },
+    {
+      "id": "databricks/mlflow-webhook",
+      "terraform_type": "databricks_mlflow_webhook",
+      "label": "Databricks MLflow webhook",
+      "product": "Databricks machine learning and MLflow",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mlflow_webhook.md"
+    },
+    {
+      "id": "databricks/model-serving",
+      "terraform_type": "databricks_model_serving",
+      "label": "Mosaic AI Model Serving endpoint",
+      "product": "Mosaic AI serving, search, gateway, and agents",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/model_serving.md"
+    },
+    {
+      "id": "databricks/model-serving-provisioned-throughput",
+      "terraform_type": "databricks_model_serving_provisioned_throughput",
+      "label": "Mosaic AI Model Serving provisioned-throughput endpoint",
+      "product": "Mosaic AI serving, search, gateway, and agents",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/model_serving_provisioned_throughput.md"
+    },
+    {
+      "id": "databricks/mount",
+      "terraform_type": "databricks_mount",
+      "label": "Databricks mount",
+      "product": "DBFS and legacy cloud storage mounts",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mount.md"
+    },
+    {
+      "id": "databricks/mws-permission-assignment",
+      "terraform_type": "databricks_mws_permission_assignment",
+      "label": "Databricks account permission assignment",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mws_permission_assignment.md"
+    },
+    {
+      "id": "databricks/network-connectivity-binding",
+      "terraform_type": "databricks_mws_ncc_binding",
+      "label": "Databricks network connectivity binding",
+      "product": "Databricks networking and private connectivity",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mws_ncc_binding.md"
+    },
+    {
+      "id": "databricks/network-connectivity-configuration",
+      "terraform_type": "databricks_mws_network_connectivity_config",
+      "label": "Databricks network connectivity configuration",
+      "product": "Databricks networking and private connectivity",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mws_network_connectivity_config.md"
+    },
+    {
+      "id": "databricks/notification-destination",
+      "terraform_type": "databricks_notification_destination",
+      "label": "Databricks notification destination",
+      "product": "Databricks Apps and AI/BI",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/notification_destination.md"
+    },
+    {
+      "id": "databricks/online-store",
+      "terraform_type": "databricks_online_store",
+      "label": "Databricks online store",
+      "product": "Databricks Feature Engineering and online serving",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/online_store.md"
+    },
+    {
+      "id": "databricks/online-table",
+      "terraform_type": "databricks_online_table",
+      "label": "Databricks online table",
+      "product": "Databricks Feature Engineering and online serving",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/online_table.md"
+    },
+    {
+      "id": "databricks/permission-assignment",
+      "terraform_type": "databricks_permission_assignment",
+      "label": "Databricks permission assignment",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/permission_assignment.md"
+    },
+    {
+      "id": "databricks/permissions",
+      "terraform_type": "databricks_permissions",
+      "label": "Databricks permissions",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/permissions.md"
+    },
+    {
+      "id": "databricks/policy-info",
+      "terraform_type": "databricks_policy_info",
+      "label": "Databricks policy info",
+      "product": "Databricks workspace platform",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/policy_info.md"
+    },
+    {
+      "id": "databricks/private-access-settings",
+      "terraform_type": "databricks_mws_private_access_settings",
+      "label": "Databricks private access settings",
+      "product": "Databricks networking and private connectivity",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mws_private_access_settings.md"
+    },
+    {
+      "id": "databricks/private-endpoint-rule",
+      "terraform_type": "databricks_mws_ncc_private_endpoint_rule",
+      "label": "Databricks private endpoint rule",
+      "product": "Databricks networking and private connectivity",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mws_ncc_private_endpoint_rule.md"
+    },
+    {
+      "id": "databricks/quality-monitor",
+      "terraform_type": "databricks_quality_monitor",
+      "label": "Databricks quality monitor",
+      "product": "Databricks data quality and Lakehouse Monitoring",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/quality_monitor.md"
+    },
+    {
+      "id": "databricks/quality-monitor-v2",
+      "terraform_type": "databricks_quality_monitor_v2",
+      "label": "Databricks quality monitor v2",
+      "product": "Databricks data quality and Lakehouse Monitoring",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/quality_monitor_v2.md"
+    },
+    {
+      "id": "databricks/query",
+      "terraform_type": "databricks_query",
+      "label": "Databricks query",
+      "product": "Databricks Apps and AI/BI",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/query.md"
+    },
+    {
+      "id": "databricks/registered-model",
+      "terraform_type": "databricks_registered_model",
+      "label": "Unity Catalog registered model",
+      "product": "Databricks machine learning and MLflow",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/registered_model.md"
+    },
+    {
+      "id": "databricks/restrict-workspace-admins-setting",
+      "terraform_type": "databricks_restrict_workspace_admins_setting",
+      "label": "Databricks restrict workspace admins setting",
+      "product": "Databricks workspace platform",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/restrict_workspace_admins_setting.md"
+    },
+    {
+      "id": "databricks/rfa-access-request-destinations",
+      "terraform_type": "databricks_rfa_access_request_destinations",
+      "label": "Databricks RFA access request destinations",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/rfa_access_request_destinations.md"
+    },
+    {
+      "id": "databricks/secret",
+      "terraform_type": "databricks_secret",
+      "label": "Databricks secret",
+      "product": "Databricks secrets and security configuration",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/secret.md"
+    },
+    {
+      "id": "databricks/secret-acl",
+      "terraform_type": "databricks_secret_acl",
+      "label": "Databricks secret ACL",
+      "product": "Databricks secrets and security configuration",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/secret_acl.md"
+    },
+    {
+      "id": "databricks/secret-scope",
+      "terraform_type": "databricks_secret_scope",
+      "label": "Databricks secret scope",
+      "product": "Databricks secrets and security configuration",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/secret_scope.md"
+    },
+    {
+      "id": "databricks/service-credential",
+      "terraform_type": "databricks_credential",
+      "label": "Unity Catalog service credential",
+      "product": "Unity Catalog",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/credential.md"
+    },
+    {
+      "id": "databricks/service-direct-endpoint",
+      "terraform_type": "databricks_endpoint",
+      "label": "Databricks Service Direct endpoint",
+      "product": "Databricks networking and private connectivity",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/endpoint.md"
+    },
+    {
+      "id": "databricks/service-principal",
+      "terraform_type": "databricks_service_principal",
+      "label": "Databricks service principal",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/service_principal.md"
+    },
+    {
+      "id": "databricks/service-principal-federation-policy",
+      "terraform_type": "databricks_service_principal_federation_policy",
+      "label": "Databricks service principal federation policy",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/service_principal_federation_policy.md"
+    },
+    {
+      "id": "databricks/service-principal-role",
+      "terraform_type": "databricks_service_principal_role",
+      "label": "Databricks service principal role",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/service_principal_role.md"
+    },
+    {
+      "id": "databricks/service-principal-secret",
+      "terraform_type": "databricks_service_principal_secret",
+      "label": "Databricks service principal secret",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/service_principal_secret.md"
+    },
+    {
+      "id": "databricks/sql-alert",
+      "terraform_type": "databricks_sql_alert",
+      "label": "Databricks SQL alert",
+      "product": "Databricks Apps and AI/BI",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/sql_alert.md"
+    },
+    {
+      "id": "databricks/sql-dashboard",
+      "terraform_type": "databricks_sql_dashboard",
+      "label": "Databricks SQL dashboard",
+      "product": "Databricks Apps and AI/BI",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/sql_dashboard.md"
+    },
+    {
+      "id": "databricks/sql-global-config",
+      "terraform_type": "databricks_sql_global_config",
+      "label": "Databricks SQL global config",
+      "product": "Databricks SQL",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/sql_global_config.md"
+    },
+    {
+      "id": "databricks/sql-permissions",
+      "terraform_type": "databricks_sql_permissions",
+      "label": "Databricks SQL permissions",
+      "product": "Databricks SQL",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/sql_permissions.md"
+    },
+    {
+      "id": "databricks/sql-query",
+      "terraform_type": "databricks_sql_query",
+      "label": "Databricks SQL query",
+      "product": "Databricks Apps and AI/BI",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/sql_query.md"
+    },
+    {
+      "id": "databricks/sql-table",
+      "terraform_type": "databricks_sql_table",
+      "label": "Databricks SQL table",
+      "product": "Databricks workspace platform",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/sql_table.md"
+    },
+    {
+      "id": "databricks/sql-visualization",
+      "terraform_type": "databricks_sql_visualization",
+      "label": "Databricks SQL visualization",
+      "product": "Databricks Apps and AI/BI",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/sql_visualization.md"
+    },
+    {
+      "id": "databricks/sql-warehouse",
+      "terraform_type": "databricks_sql_endpoint",
+      "label": "Databricks SQL warehouse",
+      "product": "Databricks SQL",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/sql_endpoint.md"
+    },
+    {
+      "id": "databricks/sql-widget",
+      "terraform_type": "databricks_sql_widget",
+      "label": "Databricks SQL widget",
+      "product": "Databricks Apps and AI/BI",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/sql_widget.md"
+    },
+    {
+      "id": "databricks/storage-credential",
+      "terraform_type": "databricks_storage_credential",
+      "label": "Unity Catalog storage credential",
+      "product": "Unity Catalog",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/storage_credential.md"
+    },
+    {
+      "id": "databricks/supervisor-agent",
+      "terraform_type": "databricks_supervisor_agent",
+      "label": "Databricks supervisor agent",
+      "product": "Mosaic AI serving, search, gateway, and agents",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/supervisor_agent.md"
+    },
+    {
+      "id": "databricks/supervisor-agent-tool",
+      "terraform_type": "databricks_supervisor_agent_tool",
+      "label": "Databricks supervisor agent tool",
+      "product": "Mosaic AI serving, search, gateway, and agents",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/supervisor_agent_tool.md"
+    },
+    {
+      "id": "databricks/system-schema",
+      "terraform_type": "databricks_system_schema",
+      "label": "Databricks system schema",
+      "product": "Unity Catalog",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/system_schema.md"
+    },
+    {
+      "id": "databricks/tag-policy",
+      "terraform_type": "databricks_tag_policy",
+      "label": "Databricks tag policy",
+      "product": "Unity Catalog",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/tag_policy.md"
+    },
+    {
+      "id": "databricks/unity-catalog-catalog",
+      "terraform_type": "databricks_catalog",
+      "label": "Unity Catalog catalog",
+      "product": "Unity Catalog",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/catalog.md"
+    },
+    {
+      "id": "databricks/unity-catalog-metastore",
+      "terraform_type": "databricks_metastore",
+      "label": "Unity Catalog metastore",
+      "product": "Unity Catalog",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/metastore.md"
+    },
+    {
+      "id": "databricks/unity-catalog-schema",
+      "terraform_type": "databricks_schema",
+      "label": "Unity Catalog schema",
+      "product": "Unity Catalog",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/schema.md"
+    },
+    {
+      "id": "databricks/unity-catalog-secret",
+      "terraform_type": "databricks_secret_uc",
+      "label": "Databricks unity catalog secret",
+      "product": "Databricks secrets and security configuration",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/secret_uc.md"
+    },
+    {
+      "id": "databricks/unity-catalog-table",
+      "terraform_type": "databricks_table",
+      "label": "Databricks unity catalog table",
+      "product": "Unity Catalog",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/table.md"
+    },
+    {
+      "id": "databricks/unity-catalog-volume",
+      "terraform_type": "databricks_volume",
+      "label": "Unity Catalog volume",
+      "product": "Unity Catalog",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/volume.md"
+    },
+    {
+      "id": "databricks/user-instance-profile",
+      "terraform_type": "databricks_user_instance_profile",
+      "label": "Databricks user instance profile",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/user_instance_profile.md"
+    },
+    {
+      "id": "databricks/user-role",
+      "terraform_type": "databricks_user_role",
+      "label": "Databricks user role",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/user_role.md"
+    },
+    {
+      "id": "databricks/vector-search-endpoint",
+      "terraform_type": "databricks_vector_search_endpoint",
+      "label": "Mosaic AI Vector Search endpoint",
+      "product": "Mosaic AI serving, search, gateway, and agents",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/vector_search_endpoint.md"
+    },
+    {
+      "id": "databricks/vector-search-index",
+      "terraform_type": "databricks_vector_search_index",
+      "label": "Mosaic AI Vector Search index",
+      "product": "Mosaic AI serving, search, gateway, and agents",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/vector_search_index.md"
+    },
+    {
+      "id": "databricks/vpc-endpoint-registration",
+      "terraform_type": "databricks_mws_vpc_endpoint",
+      "label": "Databricks VPC endpoint registration",
+      "product": "Databricks networking and private connectivity",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mws_vpc_endpoint.md"
+    },
+    {
+      "id": "databricks/warehouses-default-warehouse-override",
+      "terraform_type": "databricks_warehouses_default_warehouse_override",
+      "label": "Databricks warehouses default warehouse override",
+      "product": "Databricks SQL",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/warehouses_default_warehouse_override.md"
+    },
+    {
+      "id": "databricks/workspace",
+      "terraform_type": "databricks_mws_workspaces",
+      "label": "Databricks workspace",
+      "product": "Databricks account and workspace deployment",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mws_workspaces.md"
+    },
+    {
+      "id": "databricks/workspace-base-environment",
+      "terraform_type": "databricks_environments_workspace_base_environment",
+      "label": "Databricks workspace base environment",
+      "product": "Databricks compute",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/environments_workspace_base_environment.md"
+    },
+    {
+      "id": "databricks/workspace-binding",
+      "terraform_type": "databricks_workspace_binding",
+      "label": "Databricks workspace binding",
+      "product": "Databricks workspace platform",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/workspace_binding.md"
+    },
+    {
+      "id": "databricks/workspace-configuration",
+      "terraform_type": "databricks_workspace_conf",
+      "label": "Databricks workspace configuration",
+      "product": "Databricks workspace platform",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/workspace_conf.md"
+    },
+    {
+      "id": "databricks/workspace-customer-managed-key",
+      "terraform_type": "databricks_mws_customer_managed_keys",
+      "label": "Databricks workspace customer-managed key",
+      "product": "Databricks account and workspace deployment",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mws_customer_managed_keys.md"
+    },
+    {
+      "id": "databricks/workspace-deployment-credential",
+      "terraform_type": "databricks_mws_credentials",
+      "label": "Databricks workspace deployment credential",
+      "product": "Databricks account and workspace deployment",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mws_credentials.md"
+    },
+    {
+      "id": "databricks/workspace-entity-tag-assignment",
+      "terraform_type": "databricks_workspace_entity_tag_assignment",
+      "label": "Databricks workspace entity tag assignment",
+      "product": "Unity Catalog",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/workspace_entity_tag_assignment.md"
+    },
+    {
+      "id": "databricks/workspace-group-member",
+      "terraform_type": "databricks_workspace_iam_direct_group_member_v2",
+      "label": "Databricks workspace group member",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/workspace_iam_direct_group_member_v2.md"
+    },
+    {
+      "id": "databricks/workspace-identity-assignment",
+      "terraform_type": "databricks_workspace_iam_workspace_assignment_v2",
+      "label": "Databricks workspace identity assignment",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/workspace_iam_workspace_assignment_v2.md"
+    },
+    {
+      "id": "databricks/workspace-identity-detail",
+      "terraform_type": "databricks_workspace_iam_workspace_identity_detail_v2",
+      "label": "Databricks workspace identity detail",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/workspace_iam_workspace_identity_detail_v2.md"
+    },
+    {
+      "id": "databricks/workspace-identity-group",
+      "terraform_type": "databricks_workspace_iam_group_v2",
+      "label": "Databricks workspace identity group",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/workspace_iam_group_v2.md"
+    },
+    {
+      "id": "databricks/workspace-network-configuration",
+      "terraform_type": "databricks_mws_networks",
+      "label": "Databricks workspace network configuration",
+      "product": "Databricks networking and private connectivity",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mws_networks.md"
+    },
+    {
+      "id": "databricks/workspace-network-option",
+      "terraform_type": "databricks_workspace_network_option",
+      "label": "Databricks workspace network option",
+      "product": "Databricks networking and private connectivity",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/workspace_network_option.md"
+    },
+    {
+      "id": "databricks/workspace-root-storage",
+      "terraform_type": "databricks_mws_storage_configurations",
+      "label": "Databricks workspace root storage",
+      "product": "Databricks account and workspace deployment",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mws_storage_configurations.md"
+    },
+    {
+      "id": "databricks/workspace-service-principal",
+      "terraform_type": "databricks_workspace_iam_service_principal_v2",
+      "label": "Databricks workspace service principal",
+      "product": "Databricks identity and access management",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/workspace_iam_service_principal_v2.md"
+    },
+    {
+      "id": "databricks/workspace-setting",
+      "terraform_type": "databricks_workspace_setting_v2",
+      "label": "Databricks workspace setting",
+      "product": "Databricks workspace platform",
+      "source": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/workspace_setting_v2.md"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "databricks/ai-gateway-service",
+      "label": "Mosaic AI Gateway service",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/ai-search-endpoint",
+      "label": "Mosaic AI Search endpoint",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/ai-search-index",
+      "label": "Mosaic AI Search index",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/analytics-artifact",
+      "label": "Databricks analytics artifact",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/app-space",
+      "label": "Databricks App space",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/application-configuration",
+      "label": "Databricks application configuration",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/compute-cluster",
+      "label": "Databricks compute cluster",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/compute-configuration",
+      "label": "Databricks compute configuration",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/database-configuration",
+      "label": "Databricks database configuration",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/databricks-app",
+      "label": "Databricks App",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/delta-share",
+      "label": "Delta Sharing share",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/delta-sharing-provider",
+      "label": "Delta Sharing provider",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/delta-sharing-recipient",
+      "label": "Delta Sharing recipient",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/disaster-recovery-failover-group",
+      "label": "Databricks disaster recovery failover group",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/external-location",
+      "label": "Unity Catalog external location",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/identity-access-configuration",
+      "label": "Databricks identity access configuration",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/instance-pool",
+      "label": "Databricks instance pool",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/knowledge-assistant",
+      "label": "Databricks Knowledge Assistant",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/lakebase-branch",
+      "label": "Lakebase branch",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/lakebase-data-api",
+      "label": "Lakebase Data API",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/lakebase-endpoint",
+      "label": "Lakebase Postgres endpoint",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/lakebase-project",
+      "label": "Lakebase project",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/lakeflow-pipeline",
+      "label": "Lakeflow pipeline",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/lakehouse-federation-connection",
+      "label": "Lakehouse Federation connection",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/legacy-storage-mount",
+      "label": "Databricks legacy storage mount",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/log-delivery",
+      "label": "Databricks log delivery",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/ml-platform-detail",
+      "label": "Databricks ml platform detail",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/monitoring-configuration",
+      "label": "Databricks monitoring configuration",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/network-binding",
+      "label": "Databricks network binding",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/network-connectivity-configuration",
+      "label": "Databricks network connectivity configuration",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/network-security-configuration",
+      "label": "Databricks network security configuration",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/notification-destination",
+      "label": "Databricks notification destination",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/oauth-application-integration",
+      "label": "Databricks OAuth application integration",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/online-serving-configuration",
+      "label": "Databricks online serving configuration",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/online-store",
+      "label": "Databricks online store",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/orchestration-configuration",
+      "label": "Databricks orchestration configuration",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/private-access-settings",
+      "label": "Databricks private access settings",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/private-endpoint-registration",
+      "label": "Databricks private endpoint registration",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/private-endpoint-rule",
+      "label": "Databricks private endpoint rule",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/quality-monitor",
+      "label": "Databricks quality monitor",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/registered-model",
+      "label": "Unity Catalog registered model",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/secret-configuration",
+      "label": "Databricks secret configuration",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/secret-scope",
+      "label": "Databricks secret scope",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/service-credential",
+      "label": "Unity Catalog service credential",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/sharing-configuration",
+      "label": "Databricks sharing configuration",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/sql-configuration",
+      "label": "Databricks SQL configuration",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/sql-warehouse",
+      "label": "Databricks SQL warehouse",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/storage-credential",
+      "label": "Unity Catalog storage credential",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/supervisor-agent",
+      "label": "Databricks supervisor agent",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/unity-catalog-access-detail",
+      "label": "Databricks unity catalog access detail",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/unity-catalog-catalog",
+      "label": "Unity Catalog catalog",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/unity-catalog-data-detail",
+      "label": "Databricks unity catalog data detail",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/unity-catalog-metastore",
+      "label": "Unity Catalog metastore",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/unity-catalog-schema",
+      "label": "Unity Catalog schema",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/unity-catalog-volume",
+      "label": "Unity Catalog volume",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/vector-search-endpoint",
+      "label": "Mosaic AI Vector Search endpoint",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/vector-search-index",
+      "label": "Mosaic AI Vector Search index",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/workspace",
+      "label": "Databricks workspace",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/workspace-configuration",
+      "label": "Databricks workspace configuration",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/workspace-deployment-credential",
+      "label": "Databricks workspace deployment credential",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/workspace-key-configuration",
+      "label": "Databricks workspace key configuration",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/workspace-network-configuration",
+      "label": "Databricks workspace network configuration",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    },
+    {
+      "id": "databricks/workspace-root-storage",
+      "label": "Databricks workspace root storage",
+      "source": "https://docs.databricks.com/aws/en/lakehouse-architecture/reference"
+    }
+  ],
+  "asset": {
+    "decision": "neutral-generic-identities",
+    "official_redistribution_permission_proven": false,
+    "official_source": "https://brand.databricks.com/terms-and-conditions",
+    "redistributed_files": [],
+    "reason": "Databricks logo use requires permission; no redistribution grant for the Rootform binary was proven."
+  }
+}

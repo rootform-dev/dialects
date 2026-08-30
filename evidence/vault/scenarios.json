@@ -1,0 +1,144 @@
+{
+  "format_version": "1",
+  "scenarios": [
+    {
+      "id": "vault-minimal",
+      "fixture": "testdata/architecture/vault-v5/minimal",
+      "limitations": [
+        "synthetic Terraform proves namespace ownership and supporting database configuration without contacting Vault"
+      ],
+      "minimum": {
+        "entities": 3,
+        "scopes": 2,
+        "details": 1,
+        "contexts": 2,
+        "contributions": 1
+      },
+      "required_rules": [
+        "vault/database-secret-backend-connection",
+        "vault/identity-entity",
+        "vault/identity-group",
+        "vault/mount",
+        "vault/namespace"
+      ],
+      "required_facts": [
+        {
+          "collection": "contexts",
+          "from": "scope:vault_namespace.security",
+          "to": "scope:vault_namespace.platform",
+          "dimension": "core/ownership",
+          "rule": "vault/namespace"
+        },
+        {
+          "collection": "contributions",
+          "from": "detail:vault_database_secret_backend_connection.postgres",
+          "to": "entity:vault_mount.database",
+          "rule": "vault/database-secret-backend-connection"
+        }
+      ],
+      "expected_html_labels": ["Vault namespace", "Vault mount"],
+      "forbidden_output": ["ROOTFORM_VAULT_SECRET_SENTINEL"]
+    },
+    {
+      "id": "vault-cross-cloud",
+      "fixture": "testdata/architecture/vault-v5/scenarios",
+      "limitations": [
+        "synthetic references prove GCP, AWS, Azure, and Kubernetes facts; provider APIs and credentials are never used"
+      ],
+      "minimum": {
+        "entities": 32,
+        "scopes": 5,
+        "details": 6,
+        "relations": 15,
+        "contexts": 27,
+        "contributions": 3
+      },
+      "maximum_facts": {
+        "relations": 15,
+        "contexts": 27,
+        "contributions": 3
+      },
+      "required_rules": [
+        "vault/aws-secret-backend",
+        "vault/gcp-secret-backend",
+        "vault/auth-backend",
+        "vault/identity-oidc-client",
+        "vault/identity-oidc-provider",
+        "vault/kubernetes-auth-backend-config",
+        "vault/pki-secret-backend-root-cert",
+        "vault/raft-snapshot-agent-config",
+        "vault/secrets-sync-aws-destination",
+        "vault/transit-secret-backend-key"
+      ],
+      "required_facts": [
+        {
+          "collection": "relations",
+          "from": "entity:vault_aws_secret_backend.aws",
+          "to": "entity:aws_iam_role.vault",
+          "type": "uses-cloud-identity",
+          "rule": "vault/aws-secret-backend"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:vault_kubernetes_auth_backend_config.kubernetes",
+          "to": "entity:google_container_cluster.security",
+          "type": "authenticates-kubernetes-cluster",
+          "rule": "vault/kubernetes-auth-backend-config"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:vault_secrets_sync_azure_destination.azure",
+          "to": "entity:azurerm_user_assigned_identity.vault",
+          "type": "uses-cloud-identity",
+          "rule": "vault/secrets-sync-azure-destination"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:vault_raft_snapshot_agent_config.continuity",
+          "to": "entity:google_storage_bucket.snapshots",
+          "type": "stores-snapshots-in",
+          "rule": "vault/raft-snapshot-agent-config"
+        },
+        {
+          "collection": "contributions",
+          "from": "detail:vault_secrets_sync_association.aws",
+          "to": "entity:vault_secrets_sync_aws_destination.aws",
+          "rule": "vault/secrets-sync-association"
+        }
+      ],
+      "required_outcomes": {
+        "vault_generic_secret.application": "represented",
+        "data.vault_generic_secret.application": "represented"
+      },
+      "expected_html_labels": [
+        "Vault namespace",
+        "Vault PKI secrets engine root certificate",
+        "Vault Transit secrets engine key",
+        "Vault Secrets Sync AWS destination"
+      ],
+      "forbidden_output": ["ROOTFORM_VAULT_SECRET_SENTINEL"]
+    },
+    {
+      "id": "vault-fail-closed",
+      "fixture": "testdata/architecture/vault-v5/boundary",
+      "limitations": [
+        "negative fixture deliberately fails build to prove literal, depends_on, ambiguous, dangling, and concept-mismatched evidence creates no partial IR"
+      ],
+      "expected_build_failure": true,
+      "expected_diagnostic_codes": [
+        "DEPENDENCY_DANGLING",
+        "FACT_CONCEPT_MISMATCH",
+        "TRAVERSAL_AMBIGUOUS",
+        "TRAVERSAL_DANGLING",
+        "TRAVERSAL_UNRESOLVED",
+        "TRAVERSAL_UNRESOLVED"
+      ],
+      "forbidden_output": [
+        "ROOTFORM_VAULT_BOUNDARY_SECRET_SENTINEL",
+        "ROOTFORM_VAULT_BOUNDARY_TOKEN_SENTINEL",
+        "ROOTFORM_VAULT_GENERIC_ENDPOINT_SENTINEL",
+        "ROOTFORM_VAULT_EPHEMERAL_SENTINEL"
+      ]
+    }
+  ]
+}

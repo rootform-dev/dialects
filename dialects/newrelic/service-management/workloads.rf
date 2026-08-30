@@ -1,0 +1,19 @@
+concept "observability-workload" {
+  kind        = scope
+  description = "A New Relic operational view grouping related observed entities for health and incident triage."
+}
+
+rule "workload" {
+  match {
+    kind = "resource"
+    type = "newrelic_workload"
+  }
+
+  as = concept.observability-workload
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.account_id
+  }
+}

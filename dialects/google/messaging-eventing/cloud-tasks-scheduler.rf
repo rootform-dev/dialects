@@ -1,0 +1,22 @@
+concept "cloud-scheduler-job" {
+  kind        = entity
+  description = "A Cloud Scheduler job invoking a target on a schedule."
+}
+
+rule "cloud-tasks-queue" {
+  match {
+    kind = "resource"
+    type = "google_cloud_tasks_queue"
+  }
+
+  as = concept.core.message-queue
+}
+
+rule "cloud-scheduler-job" {
+  match {
+    kind = "resource"
+    type = "google_cloud_scheduler_job"
+  }
+
+  as = concept.cloud-scheduler-job
+}

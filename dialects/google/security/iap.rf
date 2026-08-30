@@ -1,0 +1,13 @@
+concept "iap-tunnel-destination-group" {
+  kind        = entity
+  description = "An Identity-Aware Proxy TCP forwarding destination group."
+}
+
+rule "iap-tunnel-destination-group" {
+  match {
+    kind = "resource"
+    type = "google_iap_tunnel_dest_group"
+  }
+
+  as = concept.iap-tunnel-destination-group
+}

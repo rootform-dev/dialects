@@ -1,0 +1,1006 @@
+{
+  "format_version": "1",
+  "dialect": {
+    "name": "okta",
+    "version": "0.1.0"
+  },
+  "provider": {
+    "source": "registry.terraform.io/okta/okta",
+    "baseline_version": "7.0.0",
+    "compatibility": "= 7.0.0",
+    "bound": "temporary-exact-evidence",
+    "schema_sha256": "sha256:d825af1544cc923e6376289e01fbd8b1a96cbe648db0eb0cee66ffaa7fe413e1"
+  },
+  "review_policy": "compare schema paths and official meaning before widening; compatible provider releases do not require a dialect release automatically",
+  "semantic_sources_sha256": "sha256:5c9912f80519dece3ec499ba204c9444b88a5058923cbfff25c970c8a043428e",
+  "rules": [
+    {
+      "rule_id": "okta/api-service-integration",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_api_service_integration",
+      "file": "dialects/okta/applications/app-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/api_service_integration",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/api-service-integration-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_api_service_integration",
+      "file": "dialects/okta/applications/app-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/api_service_integration",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/app-access-policy-assignment",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_app_access_policy_assignment",
+      "file": "dialects/okta/applications/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_access_policy_assignment",
+      "paths": [
+        {
+          "path": "app_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "okta/app-auto-login",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_app_auto_login",
+      "file": "dialects/okta/applications/app-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_auto_login",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/app-basic-auth",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_app_basic_auth",
+      "file": "dialects/okta/applications/app-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_basic_auth",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/app-bookmark",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_app_bookmark",
+      "file": "dialects/okta/applications/app-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_bookmark",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/app-connection",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_app_connection",
+      "file": "dialects/okta/applications/provisioning-connections.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_connection",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/app-connection-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_app_connection",
+      "file": "dialects/okta/applications/provisioning-connections.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/app_connection",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/app-features",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_app_features",
+      "file": "dialects/okta/applications/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_features",
+      "paths": [
+        {
+          "path": "app_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "okta/app-features-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_app_features",
+      "file": "dialects/okta/applications/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/app_features",
+      "paths": [
+        {
+          "path": "app_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "okta/app-federated-claim",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_app_federated_claim",
+      "file": "dialects/okta/applications/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_federated_claim",
+      "paths": [
+        {
+          "path": "app_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "okta/app-federated-claim-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_app_federated_claim",
+      "file": "dialects/okta/applications/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/app_federated_claim",
+      "paths": [
+        {
+          "path": "app_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "okta/app-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_app",
+      "file": "dialects/okta/applications/app-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/app",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/app-oauth",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_app_oauth",
+      "file": "dialects/okta/applications/app-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_oauth",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/app-oauth-api-scope",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_app_oauth_api_scope",
+      "file": "dialects/okta/applications/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_oauth_api_scope",
+      "paths": [
+        {
+          "path": "app_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "okta/app-oauth-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_app_oauth",
+      "file": "dialects/okta/applications/app-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/app_oauth",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/app-oauth-post-logout-redirect-uri",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_app_oauth_post_logout_redirect_uri",
+      "file": "dialects/okta/applications/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_oauth_post_logout_redirect_uri",
+      "paths": [
+        {
+          "path": "app_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "okta/app-oauth-redirect-uri",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_app_oauth_redirect_uri",
+      "file": "dialects/okta/applications/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_oauth_redirect_uri",
+      "paths": [
+        {
+          "path": "app_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "okta/app-saml",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_app_saml",
+      "file": "dialects/okta/applications/app-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_saml",
+      "paths": [
+        {
+          "path": "inline_hook_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "okta/app-saml-app-settings",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_app_saml_app_settings",
+      "file": "dialects/okta/applications/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_saml_app_settings",
+      "paths": [
+        {
+          "path": "app_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "okta/app-saml-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_app_saml",
+      "file": "dialects/okta/applications/app-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/app_saml",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/app-secure-password-store",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_app_secure_password_store",
+      "file": "dialects/okta/applications/app-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_secure_password_store",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/app-shared-credentials",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_app_shared_credentials",
+      "file": "dialects/okta/applications/app-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_shared_credentials",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/app-sign-on-policy-rule-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_app_sign_on_policy_rule",
+      "file": "dialects/okta/applications/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/app_sign_on_policy_rule",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/app-signon-policy",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_app_signon_policy",
+      "file": "dialects/okta/applications/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_signon_policy",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/app-signon-policy-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_app_signon_policy",
+      "file": "dialects/okta/applications/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/app_signon_policy",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/app-signon-policy-rule",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_app_signon_policy_rule",
+      "file": "dialects/okta/applications/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_signon_policy_rule",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/app-swa",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_app_swa",
+      "file": "dialects/okta/applications/app-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_swa",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/app-three-field",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_app_three_field",
+      "file": "dialects/okta/applications/app-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_three_field",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/auth-server",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_auth_server",
+      "file": "dialects/okta/authorization/authorization-servers.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/auth_server",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/auth-server-claim",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_auth_server_claim",
+      "file": "dialects/okta/authorization/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/auth_server_claim",
+      "paths": [
+        {
+          "path": "auth_server_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "okta/auth-server-claim-default",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_auth_server_claim_default",
+      "file": "dialects/okta/authorization/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/auth_server_claim_default",
+      "paths": [
+        {
+          "path": "auth_server_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "okta/auth-server-claim-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_auth_server_claim",
+      "file": "dialects/okta/authorization/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/auth_server_claim",
+      "paths": [
+        {
+          "path": "auth_server_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "okta/auth-server-default",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_auth_server_default",
+      "file": "dialects/okta/authorization/authorization-servers.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/auth_server_default",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/auth-server-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_auth_server",
+      "file": "dialects/okta/authorization/authorization-servers.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/auth_server",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/auth-server-policy",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_auth_server_policy",
+      "file": "dialects/okta/authorization/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/auth_server_policy",
+      "paths": [
+        {
+          "path": "auth_server_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "okta/auth-server-policy-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_auth_server_policy",
+      "file": "dialects/okta/authorization/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/auth_server_policy",
+      "paths": [
+        {
+          "path": "auth_server_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "okta/auth-server-policy-rule",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_auth_server_policy_rule",
+      "file": "dialects/okta/authorization/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/auth_server_policy_rule",
+      "paths": [
+        {
+          "path": "auth_server_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "okta/auth-server-scope",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_auth_server_scope",
+      "file": "dialects/okta/authorization/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/auth_server_scope",
+      "paths": [
+        {
+          "path": "auth_server_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "okta/authenticator",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_authenticator",
+      "file": "dialects/okta/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/authenticator",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/authenticator-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_authenticator",
+      "file": "dialects/okta/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/authenticator",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/authenticator-method-webauthn",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_authenticator_method_webauthn",
+      "file": "dialects/okta/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/authenticator_method_webauthn",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/authenticator-method-webauthn-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_authenticator_method_webauthn",
+      "file": "dialects/okta/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/authenticator_method_webauthn",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/authenticator-webauthn-custom-aaguid",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_authenticator_webauthn_custom_aaguid",
+      "file": "dialects/okta/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/authenticator_webauthn_custom_aaguid",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/authenticator-webauthn-custom-aaguids-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_authenticator_webauthn_custom_aaguids",
+      "file": "dialects/okta/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/authenticator_webauthn_custom_aaguids",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/behavior",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_behavior",
+      "file": "dialects/okta/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/behavior",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/behavior-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_behavior",
+      "file": "dialects/okta/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/behavior",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/captcha",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_captcha",
+      "file": "dialects/okta/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/captcha",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/captcha-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_captcha",
+      "file": "dialects/okta/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/captcha",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/domain",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_domain",
+      "file": "dialects/okta/domains/custom-domains.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/domain",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/domain-certificate",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_domain_certificate",
+      "file": "dialects/okta/domains/custom-domains.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/domain_certificate",
+      "paths": [
+        {
+          "path": "domain_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "okta/domain-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_domain",
+      "file": "dialects/okta/domains/custom-domains.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/domain",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/domain-verification",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_domain_verification",
+      "file": "dialects/okta/domains/custom-domains.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/domain_verification",
+      "paths": [
+        {
+          "path": "domain_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "okta/event-hook",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_event_hook",
+      "file": "dialects/okta/extensibility/hooks.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/event_hook",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/event-hook-verification",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_event_hook_verification",
+      "file": "dialects/okta/extensibility/hooks.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/event_hook_verification",
+      "paths": [
+        {
+          "path": "event_hook_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "okta/hook-key",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_hook_key",
+      "file": "dialects/okta/extensibility/hooks.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/hook_key",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/hook-key-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_hook_key",
+      "file": "dialects/okta/extensibility/hooks.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/hook_key",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/idp-oidc",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_idp_oidc",
+      "file": "dialects/okta/federation/identity-providers.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/idp_oidc",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/idp-oidc-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_idp_oidc",
+      "file": "dialects/okta/federation/identity-providers.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/idp_oidc",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/idp-saml",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_idp_saml",
+      "file": "dialects/okta/federation/identity-providers.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/idp_saml",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/idp-saml-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_idp_saml",
+      "file": "dialects/okta/federation/identity-providers.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/idp_saml",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/idp-social",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_idp_social",
+      "file": "dialects/okta/federation/identity-providers.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/idp_social",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/idp-social-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_idp_social",
+      "file": "dialects/okta/federation/identity-providers.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/idp_social",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/inline-hook",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_inline_hook",
+      "file": "dialects/okta/extensibility/hooks.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/inline_hook",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/log-stream",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_log_stream",
+      "file": "dialects/okta/security-observability/log-streams.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/log_stream",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/log-stream-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_log_stream",
+      "file": "dialects/okta/security-observability/log-streams.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/log_stream",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/network-zone",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_network_zone",
+      "file": "dialects/okta/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/network_zone",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/network-zone-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_network_zone",
+      "file": "dialects/okta/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/network_zone",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/oauth-authorization-server-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_oauth_authorization_server",
+      "file": "dialects/okta/authorization/authorization-servers.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/oauth_authorization_server",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/org-captcha",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_org_captcha",
+      "file": "dialects/okta/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/org_captcha",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/org-captcha-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_org_captcha",
+      "file": "dialects/okta/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/org_captcha",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/org-configuration",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_org_configuration",
+      "file": "dialects/okta/tenancy/orgs-realms.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/org_configuration",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/org-metadata-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_org_metadata",
+      "file": "dialects/okta/tenancy/orgs-realms.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/org_metadata",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/policy-rule-idp-discovery",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_policy_rule_idp_discovery",
+      "file": "dialects/okta/federation/routing.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/policy_rule_idp_discovery",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/realm",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_realm",
+      "file": "dialects/okta/tenancy/orgs-realms.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/realm",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/realm-assignment",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_realm_assignment",
+      "file": "dialects/okta/tenancy/orgs-realms.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/realm_assignment",
+      "paths": [
+        {
+          "path": "realm_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "okta/realm-assignment-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_realm_assignment",
+      "file": "dialects/okta/tenancy/orgs-realms.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/realm_assignment",
+      "paths": [
+        {
+          "path": "realm_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "okta/realm-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_realm",
+      "file": "dialects/okta/tenancy/orgs-realms.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/realm",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/security-events-provider",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_security_events_provider",
+      "file": "dialects/okta/security-observability/security-events.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/security_events_provider",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/security-events-provider-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_security_events_provider",
+      "file": "dialects/okta/security-observability/security-events.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/security_events_provider",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/threat-insight-settings",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_threat_insight_settings",
+      "file": "dialects/okta/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/threat_insight_settings",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/threat-insight-settings-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_threat_insight_settings",
+      "file": "dialects/okta/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/threat_insight_settings",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/trusted-origin",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_trusted_origin",
+      "file": "dialects/okta/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/trusted_origin",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/trusted-origin-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "okta_trusted_origin",
+      "file": "dialects/okta/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/trusted_origin",
+      "paths": []
+    },
+    {
+      "rule_id": "okta/trusted-server",
+      "construct_kind": "managed_resource",
+      "resource_type": "okta_trusted_server",
+      "file": "dialects/okta/authorization/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/trusted_server",
+      "paths": [
+        {
+          "path": "auth_server_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    }
+  ]
+}

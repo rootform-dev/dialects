@@ -1,0 +1,123 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-30",
+  "accepted_adr": "docs/adr/086-snowflake-provider-boundaries.md",
+  "reused_core_concepts": ["managed-database", "service-identity", "workflow"],
+  "referenced_core_concepts": [
+    "api-gateway",
+    "encryption-key",
+    "managed-database",
+    "message-queue",
+    "message-subscription",
+    "message-topic",
+    "object-storage-container",
+    "service-identity",
+    "workflow"
+  ],
+  "promoted_core_concepts": [],
+  "snowflake_specific_concepts": [
+    "account",
+    "account-configuration",
+    "account-connection",
+    "account-role",
+    "alert",
+    "api-integration",
+    "application",
+    "catalog-integration",
+    "compute-pool",
+    "container-service",
+    "cortex-agent",
+    "cortex-search-service",
+    "data-object-configuration",
+    "data-pipe",
+    "data-share",
+    "database",
+    "dynamic-table",
+    "external-access-integration",
+    "external-function",
+    "external-volume",
+    "failover-group",
+    "git-repository",
+    "identity-integration",
+    "image-repository",
+    "listing",
+    "mcp-server",
+    "monitoring-configuration",
+    "network-policy",
+    "notification-integration",
+    "schema",
+    "security-configuration",
+    "stage",
+    "storage-integration",
+    "stream-configuration",
+    "virtual-warehouse"
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": "data-warehouse",
+      "disposition": "keep-snowflake-specific",
+      "reason": "Snowflake virtual warehouse is an independent compute cluster, unlike product and storage boundaries in BigQuery, Redshift, and Synapse",
+      "sources": {
+        "snowflake": "https://docs.snowflake.com/en/user-guide/warehouses-overview",
+        "aws": "https://docs.aws.amazon.com/redshift/latest/mgmt/welcome.html",
+        "azure": "https://learn.microsoft.com/azure/synapse-analytics/overview-what-is",
+        "google": "https://cloud.google.com/bigquery/docs/introduction"
+      }
+    },
+    {
+      "candidate": "data-platform-scope",
+      "disposition": "keep-snowflake-specific",
+      "reason": "account, database, and schema ownership differ across provider governance models",
+      "sources": {
+        "snowflake": "https://docs.snowflake.com/en/user-guide/intro-key-concepts",
+        "aws": "https://docs.aws.amazon.com/redshift/latest/dg/r_Databases.html",
+        "azure": "https://learn.microsoft.com/azure/synapse-analytics/sql/overview-architecture",
+        "google": "https://cloud.google.com/bigquery/docs/datasets-intro"
+      }
+    },
+    {
+      "candidate": "stage",
+      "disposition": "keep-snowflake-specific",
+      "reason": "named Snowflake stage is a database object bridging internal or external files, not the object store itself",
+      "sources": {
+        "snowflake": "https://docs.snowflake.com/en/user-guide/data-load-overview",
+        "aws": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html",
+        "azure": "https://learn.microsoft.com/azure/storage/blobs/storage-blobs-introduction",
+        "google": "https://cloud.google.com/storage/docs/introduction"
+      }
+    },
+    {
+      "candidate": "storage-integration",
+      "disposition": "keep-snowflake-specific",
+      "reason": "Snowflake integration delegates platform access; core storage and service identity already express portable endpoints",
+      "sources": {
+        "snowflake": "https://docs.snowflake.com/en/user-guide/data-load-s3-config-storage-integration",
+        "aws": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html",
+        "azure": "https://learn.microsoft.com/entra/identity/managed-identities-azure-resources/overview",
+        "google": "https://cloud.google.com/iam/docs/service-account-overview"
+      }
+    },
+    {
+      "candidate": "container-compute-pool",
+      "disposition": "keep-snowflake-specific",
+      "reason": "Snowpark compute pool is a managed Snowflake object and not a provider-neutral container cluster",
+      "sources": {
+        "snowflake": "https://docs.snowflake.com/en/developer-guide/snowpark-container-services/overview",
+        "aws": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/clusters.html",
+        "azure": "https://learn.microsoft.com/azure/container-apps/overview",
+        "google": "https://cloud.google.com/kubernetes-engine/docs/concepts/kubernetes-engine-overview"
+      }
+    },
+    {
+      "candidate": "notification-integration",
+      "disposition": "keep-snowflake-specific",
+      "reason": "integration is Snowflake-side adapter; portable messaging targets already use core concepts",
+      "sources": {
+        "snowflake": "https://docs.snowflake.com/en/user-guide/notifications/about-notifications",
+        "aws": "https://docs.aws.amazon.com/sns/latest/dg/welcome.html",
+        "azure": "https://learn.microsoft.com/azure/event-grid/overview",
+        "google": "https://cloud.google.com/pubsub/docs/overview"
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-30",
+  "accepted_adr": "docs/adr/093-okta-provider-boundaries.md",
+  "reused_core_concepts": ["identity-application"],
+  "referenced_core_concepts": ["identity-application"],
+  "referenced_core_contexts": [],
+  "promoted_core_concepts": ["identity-application"],
+  "okta_specific_concepts": [
+    "application-configuration",
+    "authentication-configuration",
+    "authorization-server",
+    "authorization-server-configuration",
+    "domain-configuration",
+    "external-identity-provider",
+    "federation-configuration",
+    "hook-configuration",
+    "identity-domain",
+    "identity-event-extension",
+    "identity-log-stream",
+    "identity-realm",
+    "identity-tenant",
+    "network-zone",
+    "provisioning-connection",
+    "security-events-provider"
+  ],
+  "reviewed_candidates": [
+    {
+      "candidate": "identity-application",
+      "compared": ["vault/oidc-client", "okta/app-integration", "auth0/client"],
+      "disposition": "promote-core",
+      "reason": "all three are registered relying-party applications or clients while provider-specific settings stay outside the minimal concept"
+    },
+    {
+      "candidate": "identity-tenant",
+      "compared": [
+        "azure/entra-directory",
+        "google/identity-platform-tenant",
+        "okta/org-and-realm",
+        "auth0/tenant-and-organization"
+      ],
+      "disposition": "keep-provider-specific",
+      "reason": "directory, provider tenant, customer organization, and user-partition ownership are not yet one stable role"
+    },
+    {
+      "candidate": "external-identity-provider-or-connection",
+      "compared": ["okta/external-idp", "auth0/connection"],
+      "disposition": "keep-provider-specific",
+      "reason": "Okta owns explicit IdP objects while Auth0 connections may combine provider and connection semantics"
+    },
+    {
+      "candidate": "authorization-server",
+      "compared": ["okta/custom-authorization-server", "auth0/tenant-owned-server"],
+      "disposition": "keep-okta-specific",
+      "reason": "Okta exposes custom servers as objects; other providers often make authorization tenancy implicit"
+    },
+    {
+      "candidate": "identity-event-extension",
+      "compared": ["okta/event-and-inline-hooks", "auth0/actions-rules-hooks"],
+      "disposition": "keep-provider-specific",
+      "reason": "callback hooks and hosted extensibility code have different execution and ownership semantics"
+    }
+  ]
+}

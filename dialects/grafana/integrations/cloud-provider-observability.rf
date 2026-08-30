@@ -1,0 +1,153 @@
+concept "cloud-integration-configuration" {
+  kind        = detail
+  description = "A scrape job, integration package, or plugin supporting a Grafana Cloud integration."
+}
+
+rule "cloud-integration" {
+  match {
+    kind = "resource"
+    type = "grafana_cloud_integration"
+  }
+
+  as = concept.cloud-integration-configuration
+}
+
+rule "cloud-provider-aws-account" {
+  match {
+    kind = "resource"
+    type = "grafana_cloud_provider_aws_account"
+  }
+
+  as = concept.core.cloud-observability-integration
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.stack_id
+  }
+
+  relation "authorized-by" {
+    to  = concept.core.service-identity
+    via = source.role_arn
+  }
+}
+
+rule "cloud-provider-aws-account-lookup" {
+  match {
+    kind = "data"
+    type = "grafana_cloud_provider_aws_account"
+  }
+
+  as = concept.core.cloud-observability-integration
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.stack_id
+  }
+
+  relation "authorized-by" {
+    to  = concept.core.service-identity
+    via = source.role_arn
+  }
+}
+
+rule "cloud-provider-aws-cloudwatch-scrape-job" {
+  match {
+    kind = "resource"
+    type = "grafana_cloud_provider_aws_cloudwatch_scrape_job"
+  }
+
+  as = concept.cloud-integration-configuration
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.stack_id
+  }
+
+  contribution {
+    to  = concept.core.cloud-observability-integration
+    via = source.aws_account_resource_id
+  }
+}
+
+rule "cloud-provider-aws-cloudwatch-scrape-job-lookup" {
+  match {
+    kind = "data"
+    type = "grafana_cloud_provider_aws_cloudwatch_scrape_job"
+  }
+
+  as = concept.cloud-integration-configuration
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.stack_id
+  }
+
+  contribution {
+    to  = concept.core.cloud-observability-integration
+    via = source.aws_account_resource_id
+  }
+}
+
+rule "cloud-provider-aws-resource-metadata-scrape-job" {
+  match {
+    kind = "resource"
+    type = "grafana_cloud_provider_aws_resource_metadata_scrape_job"
+  }
+
+  as = concept.cloud-integration-configuration
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.stack_id
+  }
+
+  contribution {
+    to  = concept.core.cloud-observability-integration
+    via = source.aws_account_resource_id
+  }
+}
+
+rule "cloud-provider-azure-credential" {
+  match {
+    kind = "resource"
+    type = "grafana_cloud_provider_azure_credential"
+  }
+
+  as = concept.core.cloud-observability-integration
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.stack_id
+  }
+
+  relation "authorized-by" {
+    to  = concept.core.service-identity
+    via = source.client_id
+  }
+}
+
+rule "cloud-provider-azure-credential-lookup" {
+  match {
+    kind = "data"
+    type = "grafana_cloud_provider_azure_credential"
+  }
+
+  as = concept.core.cloud-observability-integration
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.observability-tenant
+    via = source.stack_id
+  }
+
+  relation "authorized-by" {
+    to  = concept.core.service-identity
+    via = source.client_id
+  }
+}

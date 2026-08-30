@@ -1,0 +1,41 @@
+concept "app-hub-application" {
+  kind        = scope
+  description = "An App Hub application grouping services and workloads."
+}
+
+concept "app-hub-service" {
+  kind        = entity
+  description = "A service registered as part of an App Hub application."
+}
+
+concept "app-hub-workload" {
+  kind        = entity
+  description = "A workload registered as part of an App Hub application."
+}
+
+rule "app-hub-application" {
+  match {
+    kind = "resource"
+    type = "google_apphub_application"
+  }
+
+  as = concept.app-hub-application
+}
+
+rule "app-hub-service" {
+  match {
+    kind = "resource"
+    type = "google_apphub_service"
+  }
+
+  as = concept.app-hub-service
+}
+
+rule "app-hub-workload" {
+  match {
+    kind = "resource"
+    type = "google_apphub_workload"
+  }
+
+  as = concept.app-hub-workload
+}

@@ -1,0 +1,27 @@
+concept "saas-runtime-service" {
+  kind        = scope
+  description = "A SaaS Runtime service managing tenant units and rollouts."
+}
+
+concept "saas-runtime-tenant" {
+  kind        = entity
+  description = "A tenant managed through SaaS Runtime."
+}
+
+rule "saas-runtime-service" {
+  match {
+    kind = "resource"
+    type = "google_saas_runtime_saas"
+  }
+
+  as = concept.saas-runtime-service
+}
+
+rule "saas-runtime-tenant" {
+  match {
+    kind = "resource"
+    type = "google_saas_runtime_tenant"
+  }
+
+  as = concept.saas-runtime-tenant
+}

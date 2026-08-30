@@ -1,0 +1,4 @@
+concept "identity-group" {
+  kind        = entity
+  description = "A managed group principal used to assign access collectively."
+}

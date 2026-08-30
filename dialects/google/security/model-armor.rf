@@ -1,0 +1,27 @@
+concept "model-armor-template" {
+  kind        = entity
+  description = "A Model Armor template screening AI prompts and responses."
+}
+
+concept "model-armor-floor-setting" {
+  kind        = detail
+  description = "A Model Armor floor setting enforcing minimum protection across a hierarchy."
+}
+
+rule "model-armor-template" {
+  match {
+    kind = "resource"
+    type = "google_model_armor_template"
+  }
+
+  as = concept.model-armor-template
+}
+
+rule "model-armor-floor-setting" {
+  match {
+    kind = "resource"
+    type = "google_model_armor_floorsetting"
+  }
+
+  as = concept.model-armor-floor-setting
+}

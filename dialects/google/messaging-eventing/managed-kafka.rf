@@ -1,0 +1,50 @@
+concept "managed-kafka-cluster" {
+  kind        = entity
+  description = "A Managed Service for Apache Kafka cluster."
+}
+
+concept "managed-kafka-connect-cluster" {
+  kind        = entity
+  description = "A managed Kafka Connect cluster running data integration connectors."
+}
+
+concept "managed-kafka-connector" {
+  kind        = entity
+  description = "A connector running in a managed Kafka Connect cluster."
+}
+
+rule "managed-kafka-cluster" {
+  match {
+    kind = "resource"
+    type = "google_managed_kafka_cluster"
+  }
+
+  as = concept.managed-kafka-cluster
+}
+
+rule "managed-kafka-topic" {
+  match {
+    kind = "resource"
+    type = "google_managed_kafka_topic"
+  }
+
+  as = concept.core.message-topic
+}
+
+rule "managed-kafka-connect-cluster" {
+  match {
+    kind = "resource"
+    type = "google_managed_kafka_connect_cluster"
+  }
+
+  as = concept.managed-kafka-connect-cluster
+}
+
+rule "managed-kafka-connector" {
+  match {
+    kind = "resource"
+    type = "google_managed_kafka_connector"
+  }
+
+  as = concept.managed-kafka-connector
+}

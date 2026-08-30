@@ -1,0 +1,1000 @@
+{
+  "format_version": "1",
+  "dialect": {
+    "name": "auth0",
+    "version": "0.1.0"
+  },
+  "provider": {
+    "source": "registry.terraform.io/auth0/auth0",
+    "baseline_version": "1.56.0",
+    "compatibility": "= 1.56.0",
+    "bound": "temporary-exact-evidence",
+    "schema_sha256": "sha256:af02c49ad5b8d144106027e2e0756c28bbf633e911bfb72b6d723be6aaa45bc2"
+  },
+  "review_policy": "compare schema paths and official meaning before widening; compatible provider releases do not require a dialect release automatically",
+  "semantic_sources_sha256": "sha256:e7c75890e6d9e92c89b7207700753e5a23188f5c79a8249697eecb7934022ec8",
+  "rules": [
+    {
+      "rule_id": "auth0/action",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_action",
+      "file": "dialects/auth0/extensibility/actions-hooks.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/action",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/action-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_action",
+      "file": "dialects/auth0/extensibility/actions-hooks.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/action",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/action-module",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_action_module",
+      "file": "dialects/auth0/extensibility/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/action_module",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/action-module-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_action_module",
+      "file": "dialects/auth0/extensibility/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/action_module",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/attack-protection",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_attack_protection",
+      "file": "dialects/auth0/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/attack_protection",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/attack-protection-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_attack_protection",
+      "file": "dialects/auth0/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/attack_protection",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/client",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_client",
+      "file": "dialects/auth0/applications/clients-apis.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/client",
+      "paths": [
+        {
+          "path": "default_organization[0].organization_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "resource_server_identifier",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/client-cimd",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_client_cimd",
+      "file": "dialects/auth0/applications/clients-apis.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/client_cimd",
+      "paths": [
+        {
+          "path": "default_organization[0].organization_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/client-credentials",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_client_credentials",
+      "file": "dialects/auth0/applications/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/client_credentials",
+      "paths": [
+        {
+          "path": "client_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/client-grant",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_client_grant",
+      "file": "dialects/auth0/applications/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/client_grant",
+      "paths": [
+        {
+          "path": "client_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/client-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_client",
+      "file": "dialects/auth0/applications/clients-apis.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/client",
+      "paths": [
+        {
+          "path": "default_organization[0].organization_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "resource_server_identifier",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/connection",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_connection",
+      "file": "dialects/auth0/connections/identity-connections.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/connection",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/connection-client",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_connection_client",
+      "file": "dialects/auth0/connections/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/connection_client",
+      "paths": [
+        {
+          "path": "client_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "connection_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/connection-clients",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_connection_clients",
+      "file": "dialects/auth0/connections/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/connection_clients",
+      "paths": [
+        {
+          "path": "connection_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/connection-directory",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_connection_directory",
+      "file": "dialects/auth0/connections/directory-sync.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/connection_directory",
+      "paths": [
+        {
+          "path": "connection_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/connection-directory-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_connection_directory",
+      "file": "dialects/auth0/connections/directory-sync.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/connection_directory",
+      "paths": [
+        {
+          "path": "connection_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/connection-directory-synchronized-groups",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_connection_directory_synchronized_groups",
+      "file": "dialects/auth0/connections/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/connection_directory_synchronized_groups",
+      "paths": [
+        {
+          "path": "connection_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/connection-directory-synchronized-groups-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_connection_directory_synchronized_groups",
+      "file": "dialects/auth0/connections/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/connection_directory_synchronized_groups",
+      "paths": [
+        {
+          "path": "connection_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/connection-keys",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_connection_keys",
+      "file": "dialects/auth0/connections/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/connection_keys",
+      "paths": [
+        {
+          "path": "connection_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/connection-keys-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_connection_keys",
+      "file": "dialects/auth0/connections/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/connection_keys",
+      "paths": [
+        {
+          "path": "connection_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/connection-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_connection",
+      "file": "dialects/auth0/connections/identity-connections.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/connection",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/connection-profile",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_connection_profile",
+      "file": "dialects/auth0/connections/self-service-sso.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/connection_profile",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/connection-profile-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_connection_profile",
+      "file": "dialects/auth0/connections/self-service-sso.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/connection_profile",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/connection-scim-configuration",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_connection_scim_configuration",
+      "file": "dialects/auth0/connections/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/connection_scim_configuration",
+      "paths": [
+        {
+          "path": "connection_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/connection-scim-configuration-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_connection_scim_configuration",
+      "file": "dialects/auth0/connections/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/connection_scim_configuration",
+      "paths": [
+        {
+          "path": "connection_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/custom-domain",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_custom_domain",
+      "file": "dialects/auth0/domains/custom-domains.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/custom_domain",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/custom-domain-default",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_custom_domain_default",
+      "file": "dialects/auth0/domains/custom-domains.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/custom_domain_default",
+      "paths": [
+        {
+          "path": "domain",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/custom-domain-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_custom_domain",
+      "file": "dialects/auth0/domains/custom-domains.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/custom_domain",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/custom-domain-verification",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_custom_domain_verification",
+      "file": "dialects/auth0/domains/custom-domains.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/custom_domain_verification",
+      "paths": [
+        {
+          "path": "custom_domain_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/email-provider",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_email_provider",
+      "file": "dialects/auth0/communications/notification-providers.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/email_provider",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/encryption-key-manager",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_encryption_key_manager",
+      "file": "dialects/auth0/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/encryption_key_manager",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/event-stream",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_event_stream",
+      "file": "dialects/auth0/eventing-observability/event-streams.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/event_stream",
+      "paths": [
+        {
+          "path": "action_configuration[0].action_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/event-stream-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_event_stream",
+      "file": "dialects/auth0/eventing-observability/event-streams.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/event_stream",
+      "paths": [
+        {
+          "path": "action_configuration[0].action_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/flow",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_flow",
+      "file": "dialects/auth0/workflows/forms-flows.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/flow",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/flow-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_flow",
+      "file": "dialects/auth0/workflows/forms-flows.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/flow",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/flow-vault-connection",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_flow_vault_connection",
+      "file": "dialects/auth0/workflows/integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/flow_vault_connection",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/flow-vault-connection-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_flow_vault_connection",
+      "file": "dialects/auth0/workflows/integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/flow_vault_connection",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/form",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_form",
+      "file": "dialects/auth0/workflows/forms-flows.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/form",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/form-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_form",
+      "file": "dialects/auth0/workflows/forms-flows.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/form",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/guardian",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_guardian",
+      "file": "dialects/auth0/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/guardian",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/hook",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_hook",
+      "file": "dialects/auth0/extensibility/actions-hooks.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/hook",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/log-stream",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_log_stream",
+      "file": "dialects/auth0/eventing-observability/log-streams.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/log_stream",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/network-acl",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_network_acl",
+      "file": "dialects/auth0/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/network_acl",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/network-acl-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_network_acl",
+      "file": "dialects/auth0/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/network_acl",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/organization",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_organization",
+      "file": "dialects/auth0/tenancy/tenants-organizations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/organization",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/organization-client",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_organization_client",
+      "file": "dialects/auth0/tenancy/organization-configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/organization_client",
+      "paths": [
+        {
+          "path": "client_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "organization_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/organization-client-grant",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_organization_client_grant",
+      "file": "dialects/auth0/tenancy/organization-configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/organization_client_grant",
+      "paths": [
+        {
+          "path": "organization_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/organization-client-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_organization_client",
+      "file": "dialects/auth0/tenancy/organization-configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/organization_client",
+      "paths": [
+        {
+          "path": "client_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "organization_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/organization-clients",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_organization_clients",
+      "file": "dialects/auth0/tenancy/organization-configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/organization_clients",
+      "paths": [
+        {
+          "path": "organization_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/organization-connection",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_organization_connection",
+      "file": "dialects/auth0/tenancy/organization-configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/organization_connection",
+      "paths": [
+        {
+          "path": "connection_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "organization_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/organization-connections",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_organization_connections",
+      "file": "dialects/auth0/tenancy/organization-configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/organization_connections",
+      "paths": [
+        {
+          "path": "organization_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/organization-discovery-domain",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_organization_discovery_domain",
+      "file": "dialects/auth0/tenancy/organization-configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/organization_discovery_domain",
+      "paths": [
+        {
+          "path": "organization_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/organization-discovery-domains",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_organization_discovery_domains",
+      "file": "dialects/auth0/tenancy/organization-configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/organization_discovery_domains",
+      "paths": [
+        {
+          "path": "organization_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/organization-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_organization",
+      "file": "dialects/auth0/tenancy/tenants-organizations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/organization",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/phone-provider",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_phone_provider",
+      "file": "dialects/auth0/communications/notification-providers.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/phone_provider",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/phone-provider-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_phone_provider",
+      "file": "dialects/auth0/communications/notification-providers.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/phone_provider",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/rate-limit-policy",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_rate_limit_policy",
+      "file": "dialects/auth0/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/rate_limit_policy",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/rate-limit-policy-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_rate_limit_policy",
+      "file": "dialects/auth0/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/rate_limit_policy",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/resource-server",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_resource_server",
+      "file": "dialects/auth0/applications/clients-apis.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/resource_server",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/resource-server-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_resource_server",
+      "file": "dialects/auth0/applications/clients-apis.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/resource_server",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/resource-server-scope",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_resource_server_scope",
+      "file": "dialects/auth0/applications/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/resource_server_scope",
+      "paths": [
+        {
+          "path": "resource_server_identifier",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/resource-server-scopes",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_resource_server_scopes",
+      "file": "dialects/auth0/applications/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/resource_server_scopes",
+      "paths": [
+        {
+          "path": "resource_server_identifier",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/risk-assessments",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_risk_assessments",
+      "file": "dialects/auth0/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/risk_assessments",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/risk-assessments-new-device",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_risk_assessments_new_device",
+      "file": "dialects/auth0/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/risk_assessments_new_device",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/rule",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_rule",
+      "file": "dialects/auth0/extensibility/actions-hooks.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/rule",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/self-service-profile",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_self_service_profile",
+      "file": "dialects/auth0/connections/self-service-sso.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/self_service_profile",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/self-service-profile-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_self_service_profile",
+      "file": "dialects/auth0/connections/self-service-sso.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/self_service_profile",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/supplemental-signals",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_supplemental_signals",
+      "file": "dialects/auth0/security/authentication-boundaries.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/supplemental_signals",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/tenant",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_tenant",
+      "file": "dialects/auth0/tenancy/tenants-organizations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/tenant",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/tenant-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_tenant",
+      "file": "dialects/auth0/tenancy/tenants-organizations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/tenant",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/token-exchange-profile",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_token_exchange_profile",
+      "file": "dialects/auth0/extensibility/token-exchange.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/token_exchange_profile",
+      "paths": [
+        {
+          "path": "action_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/token-exchange-profile-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_token_exchange_profile",
+      "file": "dialects/auth0/extensibility/token-exchange.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/token_exchange_profile",
+      "paths": [
+        {
+          "path": "action_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/trigger-action",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_trigger_action",
+      "file": "dialects/auth0/extensibility/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/trigger_action",
+      "paths": [
+        {
+          "path": "action_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "auth0/trigger-actions",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_trigger_actions",
+      "file": "dialects/auth0/extensibility/configuration.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/trigger_actions",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/user-attribute-profile",
+      "construct_kind": "managed_resource",
+      "resource_type": "auth0_user_attribute_profile",
+      "file": "dialects/auth0/connections/self-service-sso.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/user_attribute_profile",
+      "paths": []
+    },
+    {
+      "rule_id": "auth0/user-attribute-profile-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "auth0_user_attribute_profile",
+      "file": "dialects/auth0/connections/self-service-sso.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/user_attribute_profile",
+      "paths": []
+    }
+  ]
+}

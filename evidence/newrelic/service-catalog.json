@@ -1,0 +1,187 @@
+{
+  "format_version": "1",
+  "products": [
+    {
+      "id": "accounts",
+      "family": "governance-management",
+      "official_name": "New Relic accounts",
+      "source_url": "https://docs.newrelic.com/docs/accounts/",
+      "major": true,
+      "constructs": 2,
+      "counts": {
+        "supported": 2,
+        "partial": 0,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "application-observability",
+      "family": "digital-experience",
+      "official_name": "New Relic application and browser monitoring",
+      "source_url": "https://docs.newrelic.com/docs/browser/",
+      "major": true,
+      "constructs": 5,
+      "counts": {
+        "supported": 2,
+        "partial": 3,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "cloud-integrations",
+      "family": "integrations",
+      "official_name": "New Relic cloud integrations",
+      "source_url": "https://docs.newrelic.com/docs/infrastructure/cloud-integrations/",
+      "major": true,
+      "constructs": 13,
+      "counts": {
+        "supported": 7,
+        "partial": 6,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "federated-logs",
+      "family": "telemetry",
+      "official_name": "New Relic Federated Logs",
+      "source_url": "https://docs.newrelic.com/docs/logs/",
+      "major": true,
+      "constructs": 3,
+      "counts": {
+        "supported": 2,
+        "partial": 1,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "fleet-control",
+      "family": "telemetry",
+      "official_name": "New Relic Fleet Control",
+      "source_url": "https://docs.newrelic.com/docs/new-relic-control/fleet-control/overview/",
+      "major": true,
+      "constructs": 6,
+      "counts": {
+        "supported": 1,
+        "partial": 5,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "synthetics",
+      "family": "digital-experience",
+      "official_name": "New Relic Synthetic monitoring",
+      "source_url": "https://docs.newrelic.com/docs/synthetics/",
+      "major": true,
+      "constructs": 11,
+      "counts": {
+        "supported": 2,
+        "partial": 5,
+        "intentionally-unrepresented": 4,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "telemetry-data-management",
+      "family": "telemetry",
+      "official_name": "New Relic data management and Pipeline Control",
+      "source_url": "https://docs.newrelic.com/docs/manage-data/",
+      "major": true,
+      "constructs": 10,
+      "counts": {
+        "supported": 0,
+        "partial": 10,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "service-management",
+      "family": "service-management",
+      "official_name": "New Relic workloads and service levels",
+      "source_url": "https://docs.newrelic.com/docs/new-relic-solutions/new-relic-one/core-concepts/workloads/",
+      "major": true,
+      "constructs": 3,
+      "counts": {
+        "supported": 1,
+        "partial": 1,
+        "intentionally-unrepresented": 1,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "automation",
+      "family": "automation",
+      "official_name": "New Relic Workflow Automation",
+      "source_url": "https://docs.newrelic.com/docs/workflow-automation/",
+      "major": true,
+      "constructs": 1,
+      "counts": {
+        "supported": 1,
+        "partial": 0,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "alerting",
+      "family": "observability-configuration",
+      "official_name": "New Relic alerting",
+      "source_url": "https://docs.newrelic.com/docs/alerts/",
+      "major": false,
+      "constructs": 11,
+      "counts": {
+        "supported": 0,
+        "partial": 0,
+        "intentionally-unrepresented": 11,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "dashboards-notifications",
+      "family": "observability-configuration",
+      "official_name": "New Relic dashboards and notifications",
+      "source_url": "https://docs.newrelic.com/docs/query-your-data/explore-query-data/dashboards/introduction-dashboards/",
+      "major": false,
+      "constructs": 7,
+      "counts": {
+        "supported": 0,
+        "partial": 0,
+        "intentionally-unrepresented": 7,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "access-management",
+      "family": "identity-access",
+      "official_name": "New Relic access management",
+      "source_url": "https://docs.newrelic.com/docs/accounts/accounts-billing/new-relic-one-user-management/",
+      "major": false,
+      "constructs": 7,
+      "counts": {
+        "supported": 0,
+        "partial": 0,
+        "intentionally-unrepresented": 7,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "platform-configuration",
+      "family": "observability-configuration",
+      "official_name": "New Relic platform configuration",
+      "source_url": "https://docs.newrelic.com/docs/infrastructure-as-code/terraform/terraform-intro/",
+      "major": false,
+      "constructs": 4,
+      "counts": {
+        "supported": 0,
+        "partial": 0,
+        "intentionally-unrepresented": 4,
+        "unsupported": 0
+      }
+    }
+  ]
+}

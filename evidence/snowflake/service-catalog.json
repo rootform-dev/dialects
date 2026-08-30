@@ -1,0 +1,232 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-30",
+  "source_url": "https://docs.snowflake.com/en/",
+  "derivation": "every provider construct maps to exactly one official product family",
+  "products": [
+    {
+      "id": "organizations-accounts",
+      "family": "governance",
+      "official_name": "Snowflake organizations and accounts",
+      "major": true,
+      "source_url": "https://docs.snowflake.com/en/user-guide/organizations",
+      "coverage": "partial",
+      "coverage_reason": "account scopes are visible while provider configuration and administrative parameters create no inferred containment",
+      "constructs": 10,
+      "counts": {
+        "supported": 2,
+        "partial": 2,
+        "intentionally-unrepresented": 6,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "databases-schemas",
+      "family": "data-platform",
+      "official_name": "Snowflake databases and schemas",
+      "major": true,
+      "source_url": "https://docs.snowflake.com/en/user-guide/intro-key-concepts",
+      "coverage": "supported",
+      "coverage_reason": "database and schema scopes own durable services while fine-grained SQL objects remain supporting detail or inventory",
+      "constructs": 43,
+      "counts": {
+        "supported": 4,
+        "partial": 3,
+        "intentionally-unrepresented": 36,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "virtual-warehouses",
+      "family": "compute",
+      "official_name": "Snowflake virtual warehouses",
+      "major": true,
+      "source_url": "https://docs.snowflake.com/en/user-guide/warehouses",
+      "coverage": "supported",
+      "coverage_reason": "standard, adaptive, and interactive virtual warehouses are represented without invented database ownership",
+      "constructs": 4,
+      "counts": {
+        "supported": 3,
+        "partial": 0,
+        "intentionally-unrepresented": 1,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "stages-storage",
+      "family": "storage",
+      "official_name": "Snowflake stages and storage integrations",
+      "major": true,
+      "source_url": "https://docs.snowflake.com/en/user-guide/data-load-overview",
+      "coverage": "supported",
+      "coverage_reason": "named stages, storage integrations, external volumes, cloud stores, identities, and keys use explicit evidence",
+      "constructs": 13,
+      "counts": {
+        "supported": 10,
+        "partial": 0,
+        "intentionally-unrepresented": 3,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "iceberg-catalogs",
+      "family": "data-catalog",
+      "official_name": "Snowflake Apache Iceberg tables and catalog integrations",
+      "major": true,
+      "source_url": "https://docs.snowflake.com/en/user-guide/tables-iceberg",
+      "coverage": "partial",
+      "coverage_reason": "external volumes and catalog integrations remain visible while individual Iceberg tables contribute schema detail",
+      "constructs": 13,
+      "counts": {
+        "supported": 5,
+        "partial": 5,
+        "intentionally-unrepresented": 3,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "ingestion-orchestration",
+      "family": "data-pipelines",
+      "official_name": "Snowpipe, streams, tasks, and notifications",
+      "major": true,
+      "source_url": "https://docs.snowflake.com/en/user-guide/data-load-snowpipe-intro",
+      "coverage": "supported",
+      "coverage_reason": "pipes, workflows, notifications, warehouses, and cloud messaging are explicit; SQL and stream offsets are not parsed",
+      "constructs": 11,
+      "counts": {
+        "supported": 4,
+        "partial": 4,
+        "intentionally-unrepresented": 3,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "api-external-access",
+      "family": "api-integration",
+      "official_name": "Snowflake API integrations and external access",
+      "major": true,
+      "source_url": "https://docs.snowflake.com/en/sql-reference/external-functions-implementation",
+      "coverage": "supported",
+      "coverage_reason": "API integrations, external functions, external access, and Git repositories preserve documented references",
+      "constructs": 17,
+      "counts": {
+        "supported": 13,
+        "partial": 0,
+        "intentionally-unrepresented": 4,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "snowpark-container-services",
+      "family": "containers",
+      "official_name": "Snowpark Container Services",
+      "major": true,
+      "source_url": "https://docs.snowflake.com/en/developer-guide/snowpark-container-services/overview",
+      "coverage": "supported",
+      "coverage_reason": "compute pools, image repositories, services, jobs, stages, warehouses, and external access are represented",
+      "constructs": 7,
+      "counts": {
+        "supported": 4,
+        "partial": 0,
+        "intentionally-unrepresented": 3,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "cortex-ai",
+      "family": "ai-ml",
+      "official_name": "Snowflake Cortex AI",
+      "major": true,
+      "source_url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents",
+      "coverage": "supported",
+      "coverage_reason": "Cortex Agents, Cortex Search services, and managed MCP servers remain distinct governed services",
+      "constructs": 6,
+      "counts": {
+        "supported": 3,
+        "partial": 0,
+        "intentionally-unrepresented": 3,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "sharing-continuity",
+      "family": "sharing-continuity",
+      "official_name": "Snowflake Secure Data Sharing and replication",
+      "major": true,
+      "source_url": "https://docs.snowflake.com/en/user-guide/security-data-sharing",
+      "coverage": "supported",
+      "coverage_reason": "shares, listings, replicated databases, connections, and failover groups use explicit account/object references",
+      "constructs": 11,
+      "counts": {
+        "supported": 7,
+        "partial": 0,
+        "intentionally-unrepresented": 4,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "identity-access",
+      "family": "identity-iam",
+      "official_name": "Snowflake identity and access management",
+      "major": true,
+      "source_url": "https://docs.snowflake.com/en/user-guide/security-access-control-overview",
+      "coverage": "partial",
+      "coverage_reason": "service identities, roles, and identity integrations are visible while human users, grants, and credentials stay off topology",
+      "constructs": 48,
+      "counts": {
+        "supported": 11,
+        "partial": 1,
+        "intentionally-unrepresented": 36,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "network-security",
+      "family": "security",
+      "official_name": "Snowflake network and governance policies",
+      "major": true,
+      "source_url": "https://docs.snowflake.com/en/user-guide/network-policies",
+      "coverage": "partial",
+      "coverage_reason": "network policies and rules are represented; masking, row access, tags, and attachments remain configuration",
+      "constructs": 17,
+      "counts": {
+        "supported": 1,
+        "partial": 1,
+        "intentionally-unrepresented": 15,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "applications",
+      "family": "applications",
+      "official_name": "Streamlit in Snowflake and Snowflake Notebooks",
+      "major": true,
+      "source_url": "https://docs.snowflake.com/en/developer-guide/streamlit/about-streamlit",
+      "coverage": "supported",
+      "coverage_reason": "applications expose exact schema, stage, warehouse, and external-access references",
+      "constructs": 4,
+      "counts": {
+        "supported": 2,
+        "partial": 0,
+        "intentionally-unrepresented": 2,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "observability-cost",
+      "family": "observability",
+      "official_name": "Snowflake alerts and resource monitors",
+      "major": true,
+      "source_url": "https://docs.snowflake.com/en/user-guide/alerts",
+      "coverage": "partial",
+      "coverage_reason": "alerts and monitors remain supporting operational detail with exact warehouse links and no SQL parsing",
+      "constructs": 4,
+      "counts": {
+        "supported": 1,
+        "partial": 1,
+        "intentionally-unrepresented": 2,
+        "unsupported": 0
+      }
+    }
+  ]
+}

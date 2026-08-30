@@ -1,0 +1,13 @@
+concept "data-fusion-instance" {
+  kind        = entity
+  description = "A Cloud Data Fusion instance for managed data integration pipelines."
+}
+
+rule "data-fusion-instance" {
+  match {
+    kind = "resource"
+    type = "google_data_fusion_instance"
+  }
+
+  as = concept.data-fusion-instance
+}

@@ -1,0 +1,113 @@
+concept "kafka-cluster" {
+  kind        = entity
+  description = "A managed Apache Kafka cluster in Confluent Cloud."
+}
+
+concept "kafka-configuration" {
+  kind        = detail
+  description = "Cluster, topic, quota, or access configuration supporting a Confluent Cloud Kafka cluster."
+}
+
+rule "kafka-cluster" {
+  match {
+    kind = "resource"
+    type = "confluent_kafka_cluster"
+  }
+
+  as = concept.kafka-cluster
+
+  context {
+    as  = context.core.ownership
+    to  = concept.environment
+    via = source.environment[0].id
+  }
+
+  context {
+    as  = context.core.network
+    to  = concept.core.virtual-network
+    via = source.network[0].id
+  }
+
+  relation "uses-key" {
+    to  = concept.byok-key
+    via = source.byok_key[0].id
+  }
+}
+
+rule "kafka-topic" {
+  match {
+    kind = "resource"
+    type = "confluent_kafka_topic"
+  }
+
+  as = concept.core.message-topic
+
+  context {
+    as  = context.core.runtime
+    to  = concept.kafka-cluster
+    via = source.kafka_cluster[0].id
+  }
+}
+
+rule "rtce-topic" {
+  match {
+    kind = "resource"
+    type = "confluent_rtce_topic"
+  }
+
+  as = concept.core.message-topic
+
+  context {
+    as  = context.core.ownership
+    to  = concept.environment
+    via = source.environment[0].id
+  }
+
+  context {
+    as  = context.core.runtime
+    to  = concept.kafka-cluster
+    via = source.kafka_cluster[0].id
+  }
+}
+
+rule "kafka-acl" {
+  match {
+    kind = "resource"
+    type = "confluent_kafka_acl"
+  }
+
+  as = concept.kafka-configuration
+
+  contribution {
+    to  = concept.kafka-cluster
+    via = source.kafka_cluster[0].id
+  }
+}
+
+rule "kafka-client-quota" {
+  match {
+    kind = "resource"
+    type = "confluent_kafka_client_quota"
+  }
+
+  as = concept.kafka-configuration
+
+  contribution {
+    to  = concept.kafka-cluster
+    via = source.kafka_cluster[0].id
+  }
+}
+
+rule "kafka-cluster-config" {
+  match {
+    kind = "resource"
+    type = "confluent_kafka_cluster_config"
+  }
+
+  as = concept.kafka-configuration
+
+  contribution {
+    to  = concept.kafka-cluster
+    via = source.kafka_cluster[0].id
+  }
+}

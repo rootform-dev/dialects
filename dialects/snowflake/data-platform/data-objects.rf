@@ -1,0 +1,148 @@
+concept "data-object-configuration" {
+  kind        = detail
+  description = "A Snowflake table, stream, view, or governed data-object definition supporting a schema."
+}
+
+concept "dynamic-table" {
+  kind        = entity
+  description = "A Snowflake dynamic table refreshed as a declarative data pipeline workload."
+}
+
+rule "dynamic-table" {
+  match {
+    kind = "resource"
+    type = "snowflake_dynamic_table"
+  }
+
+  as = concept.dynamic-table
+
+  context {
+    as  = context.core.ownership
+    to  = concept.schema
+    via = source.schema
+  }
+
+  context {
+    as  = context.core.runtime
+    to  = concept.virtual-warehouse
+    via = source.warehouse
+  }
+}
+
+rule "external-table" {
+  match {
+    kind = "resource"
+    type = "snowflake_external_table"
+  }
+
+  as = concept.data-object-configuration
+
+  contribution {
+    to  = concept.schema
+    via = source.schema
+  }
+
+}
+
+rule "hybrid-table" {
+  match {
+    kind = "resource"
+    type = "snowflake_hybrid_table"
+  }
+
+  as = concept.data-object-configuration
+
+  contribution {
+    to  = concept.schema
+    via = source.schema
+  }
+}
+
+rule "iceberg-table" {
+  match {
+    kind = "resource"
+    type = "snowflake_iceberg_table"
+  }
+
+  as = concept.data-object-configuration
+
+  contribution {
+    to  = concept.schema
+    via = source.schema
+  }
+
+}
+
+rule "iceberg-table-from-aws-glue" {
+  match {
+    kind = "resource"
+    type = "snowflake_iceberg_table_from_aws_glue"
+  }
+
+  as = concept.data-object-configuration
+
+  contribution {
+    to  = concept.schema
+    via = source.schema
+  }
+
+}
+
+rule "iceberg-table-from-delta-files" {
+  match {
+    kind = "resource"
+    type = "snowflake_iceberg_table_from_delta_files"
+  }
+
+  as = concept.data-object-configuration
+
+  contribution {
+    to  = concept.schema
+    via = source.schema
+  }
+
+}
+
+rule "iceberg-table-from-files" {
+  match {
+    kind = "resource"
+    type = "snowflake_iceberg_table_from_files"
+  }
+
+  as = concept.data-object-configuration
+
+  contribution {
+    to  = concept.schema
+    via = source.schema
+  }
+
+}
+
+rule "iceberg-table-from-rest" {
+  match {
+    kind = "resource"
+    type = "snowflake_iceberg_table_from_rest"
+  }
+
+  as = concept.data-object-configuration
+
+  contribution {
+    to  = concept.schema
+    via = source.schema
+  }
+
+}
+
+rule "semantic-view" {
+  match {
+    kind = "resource"
+    type = "snowflake_semantic_view"
+  }
+
+  as = concept.data-object-configuration
+
+  contribution {
+    to  = concept.schema
+    via = source.schema
+  }
+}

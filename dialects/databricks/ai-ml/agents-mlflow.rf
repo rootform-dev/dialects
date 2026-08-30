@@ -1,0 +1,143 @@
+concept "knowledge-assistant" {
+  kind        = entity
+  description = "A Databricks Knowledge Assistant grounded in governed enterprise knowledge."
+}
+
+concept "supervisor-agent" {
+  kind        = entity
+  description = "A Databricks supervisor agent coordinating governed tools and specialist agents."
+}
+
+concept "registered-model" {
+  kind        = entity
+  description = "A governed machine-learning model registered in Unity Catalog."
+}
+
+concept "ml-platform-detail" {
+  kind        = detail
+  description = "An experiment, model version, agent tool, feature, or ML configuration supporting Databricks AI and ML."
+}
+
+rule "knowledge-assistant" {
+  match {
+    kind = "resource"
+    type = "databricks_knowledge_assistant"
+  }
+
+  as = concept.knowledge-assistant
+}
+
+rule "knowledge-assistant-source" {
+  match {
+    kind = "resource"
+    type = "databricks_knowledge_assistant_knowledge_source"
+  }
+
+  as = concept.ml-platform-detail
+
+  contribution {
+    to  = concept.knowledge-assistant
+    via = source.parent
+  }
+}
+
+rule "supervisor-agent" {
+  match {
+    kind = "resource"
+    type = "databricks_supervisor_agent"
+  }
+
+  as = concept.supervisor-agent
+}
+
+rule "supervisor-agent-tool" {
+  match {
+    kind = "resource"
+    type = "databricks_supervisor_agent_tool"
+  }
+
+  as = concept.ml-platform-detail
+
+  contribution {
+    to  = concept.supervisor-agent
+    via = source.parent
+  }
+}
+
+rule "registered-model" {
+  match {
+    kind = "resource"
+    type = "databricks_registered_model"
+  }
+
+  as = concept.registered-model
+
+  context {
+    as  = context.core.ownership
+    to  = concept.unity-catalog-schema
+    via = source.schema_name
+  }
+}
+
+rule "mlflow-experiment" {
+  match {
+    kind = "resource"
+    type = "databricks_mlflow_experiment"
+  }
+
+  as = concept.ml-platform-detail
+}
+
+rule "mlflow-model" {
+  match {
+    kind = "resource"
+    type = "databricks_mlflow_model"
+  }
+
+  as = concept.ml-platform-detail
+}
+
+rule "mlflow-webhook" {
+  match {
+    kind = "resource"
+    type = "databricks_mlflow_webhook"
+  }
+
+  as = concept.ml-platform-detail
+}
+
+rule "feature-engineering-feature" {
+  match {
+    kind = "resource"
+    type = "databricks_feature_engineering_feature"
+  }
+
+  as = concept.ml-platform-detail
+}
+
+rule "feature-engineering-kafka-config" {
+  match {
+    kind = "resource"
+    type = "databricks_feature_engineering_kafka_config"
+  }
+
+  as = concept.ml-platform-detail
+}
+
+rule "feature-engineering-materialized-feature" {
+  match {
+    kind = "resource"
+    type = "databricks_feature_engineering_materialized_feature"
+  }
+
+  as = concept.ml-platform-detail
+}
+
+rule "materialized-feature-tag" {
+  match {
+    kind = "resource"
+    type = "databricks_materialized_features_feature_tag"
+  }
+
+  as = concept.ml-platform-detail
+}

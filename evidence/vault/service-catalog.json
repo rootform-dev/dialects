@@ -1,0 +1,216 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-30",
+  "source_url": "https://developer.hashicorp.com/vault/docs",
+  "derivation": "every provider construct maps to exactly one researched Vault product family",
+  "products": [
+    {
+      "id": "namespaces-governance",
+      "family": "governance",
+      "official_name": "Vault namespaces and governance",
+      "source_url": "https://developer.hashicorp.com/vault/docs/enterprise/namespaces",
+      "major": true,
+      "coverage": "partial",
+      "coverage_reason": "explicit namespace tenancy is visible while policies, quotas, tokens, UI, and administrative settings stay detail or unrepresented",
+      "constructs": 34,
+      "counts": {
+        "supported": 1,
+        "partial": 7,
+        "intentionally-unrepresented": 26,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "secrets-engines",
+      "family": "secrets",
+      "official_name": "Vault secrets engines",
+      "source_url": "https://developer.hashicorp.com/vault/docs/secrets",
+      "major": true,
+      "coverage": "supported",
+      "coverage_reason": "durable engine mounts are represented and supporting configuration remains off topology",
+      "constructs": 1,
+      "counts": {
+        "supported": 1,
+        "partial": 0,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "kv-secrets",
+      "family": "secrets",
+      "official_name": "Vault KV secrets engine",
+      "source_url": "https://developer.hashicorp.com/vault/docs/secrets/kv",
+      "major": true,
+      "coverage": "partial",
+      "coverage_reason": "KV engine boundaries and secret definitions are accounted without exposing values or promoting each secret to topology",
+      "constructs": 12,
+      "counts": {
+        "supported": 0,
+        "partial": 7,
+        "intentionally-unrepresented": 5,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "cloud-secrets",
+      "family": "cloud-integrations",
+      "official_name": "Vault cloud secrets engines",
+      "source_url": "https://developer.hashicorp.com/vault/docs/secrets",
+      "major": true,
+      "coverage": "supported",
+      "coverage_reason": "AWS, Azure, Google Cloud, and Alibaba Cloud engines are visible with only exact safe identity references",
+      "constructs": 19,
+      "counts": {
+        "supported": 4,
+        "partial": 8,
+        "intentionally-unrepresented": 7,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "database-directory-secrets",
+      "family": "secrets",
+      "official_name": "Vault database and directory secrets engines",
+      "source_url": "https://developer.hashicorp.com/vault/docs/secrets/databases",
+      "major": true,
+      "coverage": "supported",
+      "coverage_reason": "database, directory, MongoDB Atlas, and RabbitMQ engines are visible while connections and roles stay detail",
+      "constructs": 17,
+      "counts": {
+        "supported": 5,
+        "partial": 10,
+        "intentionally-unrepresented": 2,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "platform-secrets",
+      "family": "service-integrations",
+      "official_name": "Vault platform secrets engines",
+      "source_url": "https://developer.hashicorp.com/vault/docs/secrets",
+      "major": true,
+      "coverage": "supported",
+      "coverage_reason": "Consul, Kubernetes, Nomad, OS, SPIFFE, SSH, and Terraform Cloud integrations retain service boundaries",
+      "constructs": 18,
+      "counts": {
+        "supported": 4,
+        "partial": 10,
+        "intentionally-unrepresented": 4,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "authentication",
+      "family": "authentication",
+      "official_name": "Vault auth methods",
+      "source_url": "https://developer.hashicorp.com/vault/docs/auth",
+      "major": true,
+      "coverage": "supported",
+      "coverage_reason": "auth methods are visible while roles, mappings, users, logins, and generated tokens stay detail or unrepresented",
+      "constructs": 58,
+      "counts": {
+        "supported": 8,
+        "partial": 32,
+        "intentionally-unrepresented": 18,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "identity-oidc",
+      "family": "identity",
+      "official_name": "Vault identity and OIDC",
+      "source_url": "https://developer.hashicorp.com/vault/docs/concepts/identity",
+      "major": true,
+      "coverage": "supported",
+      "coverage_reason": "entities, groups, OIDC providers, clients, and signing keys are visible without credential or membership topology",
+      "constructs": 31,
+      "counts": {
+        "supported": 5,
+        "partial": 21,
+        "intentionally-unrepresented": 5,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "pki-kmip",
+      "family": "pki",
+      "official_name": "Vault PKI, KMIP, and SSH certificate authorities",
+      "source_url": "https://developer.hashicorp.com/vault/docs/secrets/pki",
+      "major": true,
+      "coverage": "supported",
+      "coverage_reason": "certificate authorities, issuers, keys, scopes, and listeners remain visible while issuance operations remain transient",
+      "constructs": 41,
+      "counts": {
+        "supported": 10,
+        "partial": 12,
+        "intentionally-unrepresented": 19,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "encryption-key-management",
+      "family": "encryption",
+      "official_name": "Vault Transit, Transform, and Key Management",
+      "source_url": "https://developer.hashicorp.com/vault/docs/secrets/transit",
+      "major": true,
+      "coverage": "supported",
+      "coverage_reason": "durable keys, transformations, and cloud key-management integrations are represented without crypto payloads or operations",
+      "constructs": 29,
+      "counts": {
+        "supported": 8,
+        "partial": 8,
+        "intentionally-unrepresented": 13,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "secrets-sync",
+      "family": "secrets-sync",
+      "official_name": "Vault Secrets Sync",
+      "source_url": "https://developer.hashicorp.com/vault/docs/sync",
+      "major": true,
+      "coverage": "supported",
+      "coverage_reason": "cloud and SaaS destinations are represented; associations contribute only through exact destination references",
+      "constructs": 8,
+      "counts": {
+        "supported": 6,
+        "partial": 2,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "operations-continuity",
+      "family": "operations",
+      "official_name": "Vault audit, agents, and continuity",
+      "source_url": "https://developer.hashicorp.com/vault/docs/audit",
+      "major": true,
+      "coverage": "partial",
+      "coverage_reason": "audit devices, registered agents, and snapshot plans are visible while runtime settings remain detail or unrepresented",
+      "constructs": 6,
+      "counts": {
+        "supported": 3,
+        "partial": 2,
+        "intentionally-unrepresented": 1,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "plugins-extensibility",
+      "family": "plugins",
+      "official_name": "Vault plugins and plugin runtimes",
+      "source_url": "https://developer.hashicorp.com/vault/docs/plugins",
+      "major": true,
+      "coverage": "partial",
+      "coverage_reason": "plugin runtime boundaries are visible while plugin registration and version pinning remain detail",
+      "constructs": 4,
+      "counts": {
+        "supported": 1,
+        "partial": 2,
+        "intentionally-unrepresented": 1,
+        "unsupported": 0
+      }
+    }
+  ]
+}

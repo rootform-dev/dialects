@@ -1,0 +1,31 @@
+rule "sns-topic" {
+  match {
+    kind = "resource"
+    type = "aws_sns_topic"
+  }
+
+  as = concept.core.message-topic
+}
+
+rule "sns-topic-subscription" {
+  match {
+    kind = "resource"
+    type = "aws_sns_topic_subscription"
+  }
+
+  as = concept.core.message-subscription
+
+  relation "subscribes-to" {
+    to  = concept.core.message-topic
+    via = source.topic_arn
+  }
+}
+
+rule "sqs-queue" {
+  match {
+    kind = "resource"
+    type = "aws_sqs_queue"
+  }
+
+  as = concept.core.message-queue
+}

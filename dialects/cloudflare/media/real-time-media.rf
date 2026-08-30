@@ -1,0 +1,69 @@
+concept "calls-sfu-application" {
+  kind        = entity
+  description = "A Cloudflare Calls selective forwarding unit application."
+}
+
+concept "calls-turn-application" {
+  kind        = entity
+  description = "A Cloudflare Calls TURN application providing relay credentials and endpoints."
+}
+
+concept "moq-relay" {
+  kind        = entity
+  description = "A Cloudflare Media over QUIC relay."
+}
+
+concept "stream-live-input" {
+  kind        = entity
+  description = "A Cloudflare Stream live video input."
+}
+
+concept "stream-configuration" {
+  kind        = detail
+  description = "Webhook or delivery configuration supporting Cloudflare Stream."
+}
+
+rule "calls-sfu-app" {
+  match {
+    kind = "resource"
+    type = "cloudflare_calls_sfu_app"
+  }
+
+  as = concept.calls-sfu-application
+}
+
+rule "calls-turn-app" {
+  match {
+    kind = "resource"
+    type = "cloudflare_calls_turn_app"
+  }
+
+  as = concept.calls-turn-application
+}
+
+rule "moq-relay" {
+  match {
+    kind = "resource"
+    type = "cloudflare_moq_relay"
+  }
+
+  as = concept.moq-relay
+}
+
+rule "stream-live-input" {
+  match {
+    kind = "resource"
+    type = "cloudflare_stream_live_input"
+  }
+
+  as = concept.stream-live-input
+}
+
+rule "stream-webhook" {
+  match {
+    kind = "resource"
+    type = "cloudflare_stream_webhook"
+  }
+
+  as = concept.stream-configuration
+}

@@ -1,0 +1,28 @@
+rule "service-networking-connection" {
+  match {
+    kind = "resource"
+    type = "google_service_networking_connection"
+  }
+
+  as = concept.core.service-networking-detail
+
+  contribution {
+    to  = concept.core.virtual-network
+    via = source.network
+  }
+}
+
+rule "private-services-access-range" {
+  match {
+    kind  = "resource"
+    type  = "google_compute_global_address"
+    where = source.purpose == "VPC_PEERING" && source.address_type == "INTERNAL"
+  }
+
+  as = concept.core.allocated-network-range
+
+  contribution {
+    to  = concept.core.virtual-network
+    via = source.network
+  }
+}

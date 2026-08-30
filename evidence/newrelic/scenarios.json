@@ -1,0 +1,172 @@
+{
+  "format_version": "1",
+  "dialect": "newrelic",
+  "provider_version": "3.96.4",
+  "scenarios": [
+    {
+      "id": "newrelic-minimal",
+      "fixture": "testdata/architecture/newrelic-v3/minimal",
+      "limitations": ["synthetic Terraform proves roots without contacting New Relic"],
+      "minimum": {
+        "entities": 3,
+        "scopes": 1
+      },
+      "maximum_facts": {
+        "contexts": 0,
+        "contributions": 0,
+        "relations": 0
+      },
+      "required_rules": [
+        "newrelic/account-management",
+        "newrelic/browser-application",
+        "newrelic/fleet",
+        "newrelic/synthetics-private-location"
+      ],
+      "expected_html_labels": [
+        "New Relic account",
+        "New Relic browser application",
+        "New Relic Fleet Control fleet",
+        "New Relic Synthetics private location"
+      ]
+    },
+    {
+      "id": "newrelic-broad-observability",
+      "fixture": "testdata/architecture/newrelic-v3/scenarios",
+      "limitations": [
+        "only exact Terraform references create ownership, composition, or cross-dialect relations"
+      ],
+      "minimum": {
+        "entities": 17,
+        "scopes": 3,
+        "details": 31,
+        "contexts": 34,
+        "contributions": 15,
+        "relations": 7
+      },
+      "maximum_facts": {
+        "contexts": 34,
+        "contributions": 15,
+        "relations": 7
+      },
+      "required_rules": [
+        "newrelic/account-lookup",
+        "newrelic/account-management",
+        "newrelic/application-lookup",
+        "newrelic/application-settings",
+        "newrelic/aws-connection",
+        "newrelic/browser-application",
+        "newrelic/cardinality-management",
+        "newrelic/cloud-account-lookup",
+        "newrelic/cloud-aws-eu-sovereign-integrations",
+        "newrelic/cloud-aws-eu-sovereign-link-account",
+        "newrelic/cloud-aws-govcloud-integrations",
+        "newrelic/cloud-aws-govcloud-link-account",
+        "newrelic/cloud-aws-integrations",
+        "newrelic/cloud-aws-link-account",
+        "newrelic/cloud-azure-integrations",
+        "newrelic/cloud-azure-link-account",
+        "newrelic/cloud-gcp-dm-integrations",
+        "newrelic/cloud-gcp-integrations",
+        "newrelic/cloud-gcp-link-account",
+        "newrelic/cloud-oci-link-account",
+        "newrelic/data-partition-rule",
+        "newrelic/events-to-metrics-rule",
+        "newrelic/federated-logs-partition",
+        "newrelic/federated-logs-setup",
+        "newrelic/fleet",
+        "newrelic/fleet-configuration",
+        "newrelic/fleet-configuration-lookup",
+        "newrelic/fleet-deployment",
+        "newrelic/fleet-members",
+        "newrelic/fleet-members-lookup",
+        "newrelic/key-transaction",
+        "newrelic/key-transaction-lookup",
+        "newrelic/log-parsing-rule",
+        "newrelic/metric-pruning-rule",
+        "newrelic/nrql-drop-rule",
+        "newrelic/obfuscation-expression",
+        "newrelic/obfuscation-expression-lookup",
+        "newrelic/obfuscation-rule",
+        "newrelic/pipeline-cloud-rule",
+        "newrelic/service-level",
+        "newrelic/synthetics-broken-links-monitor",
+        "newrelic/synthetics-cert-check-monitor",
+        "newrelic/synthetics-monitor",
+        "newrelic/synthetics-private-location",
+        "newrelic/synthetics-private-location-lookup",
+        "newrelic/synthetics-script-monitor",
+        "newrelic/synthetics-step-monitor",
+        "newrelic/workflow-automation",
+        "newrelic/workload"
+      ],
+      "required_facts": [
+        {
+          "collection": "relations",
+          "from": "entity:newrelic_cloud_aws_link_account.production",
+          "to": "entity:aws_iam_role.newrelic",
+          "type": "authorized-by",
+          "rule": "newrelic/cloud-aws-link-account"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:newrelic_cloud_gcp_link_account.production",
+          "to": "entity:google_service_account.newrelic",
+          "type": "authorized-by",
+          "rule": "newrelic/cloud-gcp-link-account"
+        },
+        {
+          "collection": "relations",
+          "from": "entity:newrelic_federated_logs_setup.logs",
+          "to": "entity:newrelic_aws_connection.ingest",
+          "type": "ingests-through",
+          "rule": "newrelic/federated-logs-setup"
+        },
+        {
+          "collection": "contributions",
+          "from": "detail:newrelic_synthetics_monitor.api",
+          "to": "entity:newrelic_synthetics_private_location.private",
+          "rule": "newrelic/synthetics-monitor"
+        }
+      ],
+      "required_outcomes": {
+        "newrelic_one_dashboard.must_not_create_topology": "unsupported",
+        "newrelic_account_management.platform": "represented",
+        "newrelic_fleet.production": "represented",
+        "newrelic_synthetics_monitor.api": "represented"
+      },
+      "expected_html_labels": [
+        "New Relic account",
+        "New Relic AWS linked account",
+        "New Relic Federated Logs setup",
+        "New Relic Fleet Control fleet",
+        "New Relic workload"
+      ],
+      "forbidden_output": [
+        "ROOTFORM_NEWRELIC_PROVIDER_KEY_SENTINEL",
+        "ROOTFORM_NEWRELIC_AZURE_SECRET_SENTINEL",
+        "ROOTFORM_NEWRELIC_OCI_SECRET_SENTINEL",
+        "ROOTFORM_NEWRELIC_FLEET_CONFIG_SENTINEL",
+        "ROOTFORM_NEWRELIC_SCRIPT_SENTINEL",
+        "ROOTFORM_NEWRELIC_WORKFLOW_DEFINITION_SENTINEL",
+        "ROOTFORM_NEWRELIC_NRQL_SENTINEL",
+        "ROOTFORM_NEWRELIC_DASHBOARD_SENTINEL"
+      ]
+    },
+    {
+      "id": "newrelic-fail-closed",
+      "fixture": "testdata/architecture/newrelic-v3/boundary",
+      "limitations": [
+        "negative fixture proves literals, ambiguity, dangling references, concept mismatches, and depends_on create no facts"
+      ],
+      "expected_build_failure": true,
+      "expected_diagnostic_codes": [
+        "DEPENDENCY_DANGLING",
+        "FACT_CONCEPT_MISMATCH",
+        "TRAVERSAL_AMBIGUOUS",
+        "TRAVERSAL_DANGLING",
+        "TRAVERSAL_UNRESOLVED"
+      ],
+      "forbidden_output": ["ROOTFORM_NEWRELIC_BOUNDARY_SECRET_SENTINEL"]
+    }
+  ]
+}

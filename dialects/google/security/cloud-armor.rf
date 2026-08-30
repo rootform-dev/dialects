@@ -1,0 +1,32 @@
+concept "cloud-armor-security-policy" {
+  kind        = entity
+  description = "A Cloud Armor security policy protecting load-balanced applications."
+}
+
+concept "cloud-armor-security-rule" {
+  kind        = detail
+  description = "A rule contributing traffic controls to a Cloud Armor security policy."
+}
+
+rule "cloud-armor-security-policy" {
+  match {
+    kind = "resource"
+    type = "google_compute_security_policy"
+  }
+
+  as = concept.cloud-armor-security-policy
+}
+
+rule "cloud-armor-security-rule" {
+  match {
+    kind = "resource"
+    type = "google_compute_security_policy_rule"
+  }
+
+  as = concept.cloud-armor-security-rule
+
+  contribution {
+    to  = concept.cloud-armor-security-policy
+    via = source.security_policy
+  }
+}

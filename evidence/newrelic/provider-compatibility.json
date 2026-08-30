@@ -1,0 +1,825 @@
+{
+  "format_version": "1",
+  "dialect": {
+    "name": "newrelic",
+    "version": "0.1.0"
+  },
+  "provider": {
+    "source": "registry.terraform.io/newrelic/newrelic",
+    "baseline_version": "3.96.4",
+    "compatibility": "= 3.96.4",
+    "bound": "temporary-exact-evidence",
+    "schema_sha256": "sha256:e2c5e2940ec7af80a9718c2003f0036a32bedc7739d21134a864f01419f87431"
+  },
+  "review_policy": "compare schema paths and official meaning before widening; compatible provider releases do not require a dialect release automatically",
+  "semantic_sources_sha256": "sha256:95efa18d57686e650d5460556cc0e793ce6f741e2edcd6378091715efb558d47",
+  "rules": [
+    {
+      "rule_id": "newrelic/account-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "newrelic_account",
+      "file": "dialects/newrelic/governance-management/accounts.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/data-sources/account",
+      "paths": []
+    },
+    {
+      "rule_id": "newrelic/account-management",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_account_management",
+      "file": "dialects/newrelic/governance-management/accounts.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/account_management",
+      "paths": []
+    },
+    {
+      "rule_id": "newrelic/application-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "newrelic_application",
+      "file": "dialects/newrelic/digital-experience/applications.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/data-sources/application",
+      "paths": []
+    },
+    {
+      "rule_id": "newrelic/application-settings",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_application_settings",
+      "file": "dialects/newrelic/digital-experience/applications.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/application_settings",
+      "paths": []
+    },
+    {
+      "rule_id": "newrelic/aws-connection",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_aws_connection",
+      "file": "dialects/newrelic/telemetry/federated-logs.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/aws_connection",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "credential[0].assume_role[0].role_arn",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/browser-application",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_browser_application",
+      "file": "dialects/newrelic/digital-experience/applications.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/browser_application",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/cardinality-management",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_cardinality_management",
+      "file": "dialects/newrelic/telemetry/data-management.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cardinality_management",
+      "paths": []
+    },
+    {
+      "rule_id": "newrelic/cloud-account-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "newrelic_cloud_account",
+      "file": "dialects/newrelic/integrations/cloud-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/data-sources/cloud_account",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/cloud-aws-eu-sovereign-integrations",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_cloud_aws_eu_sovereign_integrations",
+      "file": "dialects/newrelic/integrations/cloud-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cloud_aws_eu_sovereign_integrations",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "linked_account_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/cloud-aws-eu-sovereign-link-account",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_cloud_aws_eu_sovereign_link_account",
+      "file": "dialects/newrelic/integrations/cloud-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cloud_aws_eu_sovereign_link_account",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "arn",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/cloud-aws-govcloud-integrations",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_cloud_aws_govcloud_integrations",
+      "file": "dialects/newrelic/integrations/cloud-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cloud_aws_govcloud_integrations",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "linked_account_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/cloud-aws-govcloud-link-account",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_cloud_aws_govcloud_link_account",
+      "file": "dialects/newrelic/integrations/cloud-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cloud_aws_govcloud_link_account",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "arn",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/cloud-aws-integrations",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_cloud_aws_integrations",
+      "file": "dialects/newrelic/integrations/cloud-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cloud_aws_integrations",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "linked_account_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/cloud-aws-link-account",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_cloud_aws_link_account",
+      "file": "dialects/newrelic/integrations/cloud-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cloud_aws_link_account",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "arn",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/cloud-azure-integrations",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_cloud_azure_integrations",
+      "file": "dialects/newrelic/integrations/cloud-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cloud_azure_integrations",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "linked_account_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/cloud-azure-link-account",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_cloud_azure_link_account",
+      "file": "dialects/newrelic/integrations/cloud-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cloud_azure_link_account",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/cloud-gcp-dm-integrations",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_cloud_gcp_dm_integrations",
+      "file": "dialects/newrelic/integrations/cloud-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cloud_gcp_dm_integrations",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "linked_account_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/cloud-gcp-integrations",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_cloud_gcp_integrations",
+      "file": "dialects/newrelic/integrations/cloud-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cloud_gcp_integrations",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "linked_account_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/cloud-gcp-link-account",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_cloud_gcp_link_account",
+      "file": "dialects/newrelic/integrations/cloud-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cloud_gcp_link_account",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "service_account_email",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/cloud-oci-link-account",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_cloud_oci_link_account",
+      "file": "dialects/newrelic/integrations/cloud-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cloud_oci_link_account",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/data-partition-rule",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_data_partition_rule",
+      "file": "dialects/newrelic/telemetry/data-management.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/data_partition_rule",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/events-to-metrics-rule",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_events_to_metrics_rule",
+      "file": "dialects/newrelic/telemetry/data-management.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/events_to_metrics_rule",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/federated-logs-partition",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_federated_logs_partition",
+      "file": "dialects/newrelic/telemetry/federated-logs.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/federated_logs_partition",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "setup_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/federated-logs-setup",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_federated_logs_setup",
+      "file": "dialects/newrelic/telemetry/federated-logs.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/federated_logs_setup",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "storage[0].data_ingest_connection_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "storage[0].query_connection_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/fleet",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_fleet",
+      "file": "dialects/newrelic/telemetry/fleet-control.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/fleet",
+      "paths": []
+    },
+    {
+      "rule_id": "newrelic/fleet-configuration",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_fleet_configuration",
+      "file": "dialects/newrelic/telemetry/fleet-control.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/fleet_configuration",
+      "paths": []
+    },
+    {
+      "rule_id": "newrelic/fleet-configuration-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "newrelic_fleet_configuration",
+      "file": "dialects/newrelic/telemetry/fleet-control.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/data-sources/fleet_configuration",
+      "paths": []
+    },
+    {
+      "rule_id": "newrelic/fleet-deployment",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_fleet_deployment",
+      "file": "dialects/newrelic/telemetry/fleet-control.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/fleet_deployment",
+      "paths": [
+        {
+          "path": "fleet_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/fleet-members",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_fleet_members",
+      "file": "dialects/newrelic/telemetry/fleet-control.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/fleet_members",
+      "paths": [
+        {
+          "path": "fleet_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/fleet-members-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "newrelic_fleet_members",
+      "file": "dialects/newrelic/telemetry/fleet-control.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/data-sources/fleet_members",
+      "paths": [
+        {
+          "path": "fleet_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/key-transaction",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_key_transaction",
+      "file": "dialects/newrelic/digital-experience/applications.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/key_transaction",
+      "paths": []
+    },
+    {
+      "rule_id": "newrelic/key-transaction-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "newrelic_key_transaction",
+      "file": "dialects/newrelic/digital-experience/applications.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/data-sources/key_transaction",
+      "paths": []
+    },
+    {
+      "rule_id": "newrelic/log-parsing-rule",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_log_parsing_rule",
+      "file": "dialects/newrelic/telemetry/data-management.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/log_parsing_rule",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/metric-pruning-rule",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_metric_pruning_rule",
+      "file": "dialects/newrelic/telemetry/data-management.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/metric_pruning_rule",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/nrql-drop-rule",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_nrql_drop_rule",
+      "file": "dialects/newrelic/telemetry/data-management.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/nrql_drop_rule",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/obfuscation-expression",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_obfuscation_expression",
+      "file": "dialects/newrelic/telemetry/data-management.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/obfuscation_expression",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/obfuscation-expression-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "newrelic_obfuscation_expression",
+      "file": "dialects/newrelic/telemetry/data-management.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/data-sources/obfuscation_expression",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/obfuscation-rule",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_obfuscation_rule",
+      "file": "dialects/newrelic/telemetry/data-management.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/obfuscation_rule",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/pipeline-cloud-rule",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_pipeline_cloud_rule",
+      "file": "dialects/newrelic/telemetry/data-management.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/pipeline_cloud_rule",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/service-level",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_service_level",
+      "file": "dialects/newrelic/service-management/service-objectives.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/service_level",
+      "paths": []
+    },
+    {
+      "rule_id": "newrelic/synthetics-broken-links-monitor",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_synthetics_broken_links_monitor",
+      "file": "dialects/newrelic/digital-experience/synthetics.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/synthetics_broken_links_monitor",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "locations_private",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/synthetics-cert-check-monitor",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_synthetics_cert_check_monitor",
+      "file": "dialects/newrelic/digital-experience/synthetics.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/synthetics_cert_check_monitor",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "locations_private",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/synthetics-monitor",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_synthetics_monitor",
+      "file": "dialects/newrelic/digital-experience/synthetics.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/synthetics_monitor",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "locations_private",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/synthetics-private-location",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_synthetics_private_location",
+      "file": "dialects/newrelic/digital-experience/synthetics.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/synthetics_private_location",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/synthetics-private-location-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "newrelic_synthetics_private_location",
+      "file": "dialects/newrelic/digital-experience/synthetics.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/data-sources/synthetics_private_location",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/synthetics-script-monitor",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_synthetics_script_monitor",
+      "file": "dialects/newrelic/digital-experience/synthetics.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/synthetics_script_monitor",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "location_private[0].guid",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/synthetics-step-monitor",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_synthetics_step_monitor",
+      "file": "dialects/newrelic/digital-experience/synthetics.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/synthetics_step_monitor",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        },
+        {
+          "path": "location_private[0].guid",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "newrelic/workflow-automation",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_workflow_automation",
+      "file": "dialects/newrelic/automation/workflow-automation.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/workflow_automation",
+      "paths": []
+    },
+    {
+      "rule_id": "newrelic/workload",
+      "construct_kind": "managed_resource",
+      "resource_type": "newrelic_workload",
+      "file": "dialects/newrelic/service-management/workloads.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/workload",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    }
+  ]
+}

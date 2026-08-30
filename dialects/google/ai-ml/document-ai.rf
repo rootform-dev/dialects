@@ -1,0 +1,13 @@
+concept "document-ai-processor" {
+  kind        = entity
+  description = "A Document AI processor extracting or classifying document content."
+}
+
+rule "document-ai-processor" {
+  match {
+    kind = "resource"
+    type = "google_document_ai_processor"
+  }
+
+  as = concept.document-ai-processor
+}

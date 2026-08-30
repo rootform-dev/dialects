@@ -1,0 +1,9 @@
+concept "service-identity" {
+  kind        = entity
+  description = "An identity used by services and access controls."
+}
+
+concept "service-identity-binding" {
+  kind        = detail
+  description = "An access-control binding that contributes to a service identity."
+}

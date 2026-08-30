@@ -1,0 +1,4 @@
+concept "identity-application" {
+  kind        = entity
+  description = "An application or relying-party client registered with an identity platform."
+}

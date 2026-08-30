@@ -1,0 +1,283 @@
+concept "identity-configuration" {
+  kind        = detail
+  description = "An alias, membership, assignment, MFA, scope, or role supporting Vault identity."
+}
+
+concept "identity-entity" {
+  kind        = entity
+  description = "A canonical Vault identity joining aliases from one or more auth methods."
+}
+
+concept "oidc-provider" {
+  kind        = entity
+  description = "A Vault OpenID Connect identity provider boundary."
+}
+
+rule "identity-entity" {
+  match {
+    kind = "resource"
+    type = "vault_identity_entity"
+  }
+
+  as = concept.identity-entity
+
+  context {
+    as  = context.core.ownership
+    to  = concept.namespace
+    via = source.namespace
+  }
+}
+
+rule "identity-entity-alias" {
+  match {
+    kind = "resource"
+    type = "vault_identity_entity_alias"
+  }
+
+  as = concept.identity-configuration
+}
+
+rule "identity-entity-policies" {
+  match {
+    kind = "resource"
+    type = "vault_identity_entity_policies"
+  }
+
+  as = concept.identity-configuration
+}
+
+rule "identity-group" {
+  match {
+    kind = "resource"
+    type = "vault_identity_group"
+  }
+
+  as = concept.core.identity-group
+
+  context {
+    as  = context.core.ownership
+    to  = concept.namespace
+    via = source.namespace
+  }
+}
+
+rule "identity-group-alias" {
+  match {
+    kind = "resource"
+    type = "vault_identity_group_alias"
+  }
+
+  as = concept.identity-configuration
+}
+
+rule "identity-group-member-entity-ids" {
+  match {
+    kind = "resource"
+    type = "vault_identity_group_member_entity_ids"
+  }
+
+  as = concept.identity-configuration
+}
+
+rule "identity-group-member-group-ids" {
+  match {
+    kind = "resource"
+    type = "vault_identity_group_member_group_ids"
+  }
+
+  as = concept.identity-configuration
+}
+
+rule "identity-group-policies" {
+  match {
+    kind = "resource"
+    type = "vault_identity_group_policies"
+  }
+
+  as = concept.identity-configuration
+}
+
+rule "identity-mfa-duo" {
+  match {
+    kind = "resource"
+    type = "vault_identity_mfa_duo"
+  }
+
+  as = concept.identity-configuration
+}
+
+rule "identity-mfa-login-enforcement" {
+  match {
+    kind = "resource"
+    type = "vault_identity_mfa_login_enforcement"
+  }
+
+  as = concept.identity-configuration
+}
+
+rule "identity-mfa-okta" {
+  match {
+    kind = "resource"
+    type = "vault_identity_mfa_okta"
+  }
+
+  as = concept.identity-configuration
+}
+
+rule "identity-mfa-pingid" {
+  match {
+    kind = "resource"
+    type = "vault_identity_mfa_pingid"
+  }
+
+  as = concept.identity-configuration
+}
+
+rule "identity-mfa-totp" {
+  match {
+    kind = "resource"
+    type = "vault_identity_mfa_totp"
+  }
+
+  as = concept.identity-configuration
+}
+
+rule "identity-oidc" {
+  match {
+    kind = "resource"
+    type = "vault_identity_oidc"
+  }
+
+  as = concept.identity-configuration
+}
+
+rule "identity-oidc-assignment" {
+  match {
+    kind = "resource"
+    type = "vault_identity_oidc_assignment"
+  }
+
+  as = concept.identity-configuration
+}
+
+rule "identity-oidc-client" {
+  match {
+    kind = "resource"
+    type = "vault_identity_oidc_client"
+  }
+
+  as = concept.core.identity-application
+
+  context {
+    as  = context.core.ownership
+    to  = concept.namespace
+    via = source.namespace
+  }
+
+  relation "uses-signing-key" {
+    to  = concept.core.encryption-key
+    via = source.key
+  }
+}
+
+rule "identity-oidc-key" {
+  match {
+    kind = "resource"
+    type = "vault_identity_oidc_key"
+  }
+
+  as = concept.core.encryption-key
+
+  context {
+    as  = context.core.ownership
+    to  = concept.namespace
+    via = source.namespace
+  }
+}
+
+rule "identity-oidc-key-allowed-client-id" {
+  match {
+    kind = "resource"
+    type = "vault_identity_oidc_key_allowed_client_id"
+  }
+
+  as = concept.identity-configuration
+}
+
+rule "identity-oidc-provider" {
+  match {
+    kind = "resource"
+    type = "vault_identity_oidc_provider"
+  }
+
+  as = concept.oidc-provider
+
+  context {
+    as  = context.core.ownership
+    to  = concept.namespace
+    via = source.namespace
+  }
+}
+
+rule "identity-oidc-role" {
+  match {
+    kind = "resource"
+    type = "vault_identity_oidc_role"
+  }
+
+  as = concept.identity-configuration
+}
+
+rule "identity-oidc-scope" {
+  match {
+    kind = "resource"
+    type = "vault_identity_oidc_scope"
+  }
+
+  as = concept.identity-configuration
+}
+
+rule "mfa-duo" {
+  match {
+    kind = "resource"
+    type = "vault_mfa_duo"
+  }
+
+  as = concept.identity-configuration
+}
+
+rule "mfa-okta" {
+  match {
+    kind = "resource"
+    type = "vault_mfa_okta"
+  }
+
+  as = concept.identity-configuration
+}
+
+rule "mfa-pingid" {
+  match {
+    kind = "resource"
+    type = "vault_mfa_pingid"
+  }
+
+  as = concept.identity-configuration
+}
+
+rule "mfa-totp" {
+  match {
+    kind = "resource"
+    type = "vault_mfa_totp"
+  }
+
+  as = concept.identity-configuration
+}
+
+rule "oauth-resource-server-config-profile" {
+  match {
+    kind = "resource"
+    type = "vault_oauth_resource_server_config_profile"
+  }
+
+  as = concept.identity-configuration
+}

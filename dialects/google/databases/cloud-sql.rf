@@ -1,0 +1,13 @@
+rule "cloud-sql-instance" {
+  match {
+    kind = "resource"
+    type = "google_sql_database_instance"
+  }
+
+  as = concept.core.managed-database
+
+  relation "private-reachability" {
+    to  = concept.core.virtual-network
+    via = source.settings[0].ip_configuration[0].private_network
+  }
+}

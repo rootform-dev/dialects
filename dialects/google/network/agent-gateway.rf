@@ -1,0 +1,13 @@
+concept "agent-gateway" {
+  kind        = entity
+  description = "A managed Agent Gateway controlling network paths to and from agentic services."
+}
+
+rule "agent-gateway" {
+  match {
+    kind = "resource"
+    type = "google_network_services_agent_gateway"
+  }
+
+  as = concept.agent-gateway
+}

@@ -1,0 +1,65 @@
+concept "cortex-agent" {
+  kind        = entity
+  description = "A Cortex Agent orchestrating tools across governed structured and unstructured data."
+}
+
+concept "cortex-search-service" {
+  kind        = entity
+  description = "A Cortex Search service exposing low-latency retrieval over Snowflake data."
+}
+
+concept "mcp-server" {
+  kind        = entity
+  description = "A Snowflake-managed Model Context Protocol server exposing governed tools."
+}
+
+rule "cortex-agent" {
+  match {
+    kind = "resource"
+    type = "snowflake_cortex_agent"
+  }
+
+  as = concept.cortex-agent
+
+  context {
+    as  = context.core.ownership
+    to  = concept.schema
+    via = source.schema
+  }
+}
+
+rule "cortex-search-service" {
+  match {
+    kind = "resource"
+    type = "snowflake_cortex_search_service"
+  }
+
+  as = concept.cortex-search-service
+
+  context {
+    as  = context.core.ownership
+    to  = concept.schema
+    via = source.schema
+  }
+
+  context {
+    as  = context.core.runtime
+    to  = concept.virtual-warehouse
+    via = source.warehouse
+  }
+}
+
+rule "mcp-server" {
+  match {
+    kind = "resource"
+    type = "snowflake_mcp_server"
+  }
+
+  as = concept.mcp-server
+
+  context {
+    as  = context.core.ownership
+    to  = concept.schema
+    via = source.schema
+  }
+}

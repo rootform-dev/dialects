@@ -1,0 +1,1173 @@
+{
+  "format_version": "1",
+  "source_url": "https://azure.microsoft.com/en-us/products/",
+  "verified_date": "2026-08-29",
+  "source_bytes": 608225,
+  "source_sha256": "sha256:1ae768ed76f88fde3b3ed41596ff3ecdd428192ad16b3a676d575522ed609f43",
+  "products": [
+    {
+      "name": "Azure Advisor",
+      "url": "https://azure.microsoft.com/en-us/products/advisor",
+      "availability": "unspecified",
+      "id": "advisor"
+    },
+    {
+      "name": "Foundry Agent Service",
+      "url": "https://azure.microsoft.com/en-us/products/ai-agent-service",
+      "availability": "unspecified",
+      "id": "ai-agent-service"
+    },
+    {
+      "name": "Microsoft Foundry",
+      "url": "https://azure.microsoft.com/en-us/products/ai-foundry",
+      "availability": "unspecified",
+      "id": "ai-foundry"
+    },
+    {
+      "name": "Foundry Control Plane",
+      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/control-plane",
+      "availability": "unspecified",
+      "id": "ai-foundry-control-plane"
+    },
+    {
+      "name": "Observability in Foundry Control Plane",
+      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/observability",
+      "availability": "unspecified",
+      "id": "ai-foundry-observability"
+    },
+    {
+      "name": "Foundry Tools",
+      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/tools",
+      "availability": "unspecified",
+      "id": "ai-foundry-tools"
+    },
+    {
+      "name": "Azure Content Understanding in Foundry Tools",
+      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/tools/content-understanding",
+      "availability": "unspecified",
+      "id": "ai-foundry-tools-content-understanding"
+    },
+    {
+      "name": "Azure Document Intelligence in Foundry Tools",
+      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/tools/document-intelligence",
+      "availability": "unspecified",
+      "id": "ai-foundry-tools-document-intelligence"
+    },
+    {
+      "name": "Azure Language in Foundry Tools",
+      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/tools/language",
+      "availability": "unspecified",
+      "id": "ai-foundry-tools-language"
+    },
+    {
+      "name": "Azure Speech in Foundry Tools",
+      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/tools/speech",
+      "availability": "unspecified",
+      "id": "ai-foundry-tools-speech"
+    },
+    {
+      "name": "Azure Translator in Foundry Tools",
+      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/tools/translator",
+      "availability": "unspecified",
+      "id": "ai-foundry-tools-translator"
+    },
+    {
+      "name": "Azure Vision in Foundry Tools",
+      "url": "https://azure.microsoft.com/en-us/products/ai-foundry/tools/vision",
+      "availability": "unspecified",
+      "id": "ai-foundry-tools-vision"
+    },
+    {
+      "name": "Foundry Models",
+      "url": "https://azure.microsoft.com/en-us/products/ai-model-catalog",
+      "availability": "unspecified",
+      "id": "ai-model-catalog"
+    },
+    {
+      "name": "AI Anomaly Detector",
+      "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-anomaly-detector",
+      "availability": "unspecified",
+      "id": "ai-services-ai-anomaly-detector"
+    },
+    {
+      "name": "Azure AI Bot Service",
+      "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-bot-service",
+      "availability": "unspecified",
+      "id": "ai-services-ai-bot-service"
+    },
+    {
+      "name": "Content Safety in Foundry Control Plane",
+      "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-content-safety",
+      "availability": "unspecified",
+      "id": "ai-services-ai-content-safety"
+    },
+    {
+      "name": "Azure AI Custom Vision",
+      "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-custom-vision",
+      "availability": "unspecified",
+      "id": "ai-services-ai-custom-vision"
+    },
+    {
+      "name": "Azure AI Immersive Reader",
+      "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-immersive-reader",
+      "availability": "unspecified",
+      "id": "ai-services-ai-immersive-reader"
+    },
+    {
+      "name": "Azure AI Metrics Advisor",
+      "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-metrics-advisor",
+      "availability": "unspecified",
+      "id": "ai-services-ai-metrics-advisor"
+    },
+    {
+      "name": "Azure AI Personalizer",
+      "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-personalizer",
+      "availability": "unspecified",
+      "id": "ai-services-ai-personalizer"
+    },
+    {
+      "name": "Azure AI Search",
+      "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-search",
+      "availability": "unspecified",
+      "id": "ai-services-ai-search"
+    },
+    {
+      "name": "Azure OpenAI in Foundry Models",
+      "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service",
+      "availability": "unspecified",
+      "id": "ai-services-openai-service"
+    },
+    {
+      "name": "Azure AI Video Indexer",
+      "url": "https://azure.microsoft.com/en-us/products/ai-video-indexer",
+      "availability": "unspecified",
+      "id": "ai-video-indexer"
+    },
+    {
+      "name": "Azure Analysis Services",
+      "url": "https://azure.microsoft.com/en-us/products/analysis-services",
+      "availability": "unspecified",
+      "id": "analysis-services"
+    },
+    {
+      "name": "API Management",
+      "url": "https://azure.microsoft.com/en-us/products/api-management",
+      "availability": "unspecified",
+      "id": "api-management"
+    },
+    {
+      "name": "App Configuration",
+      "url": "https://azure.microsoft.com/en-us/products/app-configuration",
+      "availability": "unspecified",
+      "id": "app-configuration-app-configuration"
+    },
+    {
+      "name": "Azure App Configuration",
+      "url": "https://azure.microsoft.com/en-us/products/app-configuration",
+      "availability": "unspecified",
+      "id": "app-configuration-azure-app-configuration"
+    },
+    {
+      "name": "App Service",
+      "url": "https://azure.microsoft.com/en-us/products/app-service",
+      "availability": "unspecified",
+      "id": "app-service"
+    },
+    {
+      "name": "Static Web Apps",
+      "url": "https://azure.microsoft.com/en-us/products/app-service/static",
+      "availability": "unspecified",
+      "id": "app-service-static"
+    },
+    {
+      "name": "Azure App Testing",
+      "url": "https://azure.microsoft.com/en-us/products/app-testing",
+      "availability": "unspecified",
+      "id": "app-testing"
+    },
+    {
+      "name": "Azure Application Gateway",
+      "url": "https://azure.microsoft.com/en-us/products/application-gateway",
+      "availability": "unspecified",
+      "id": "application-gateway"
+    },
+    {
+      "name": "Azure Resource Manager templates",
+      "url": "https://azure.microsoft.com/en-us/products/arm-templates",
+      "availability": "unspecified",
+      "id": "arm-templates"
+    },
+    {
+      "name": "Artifact Signing",
+      "url": "https://azure.microsoft.com/en-us/products/artifact-signing",
+      "availability": "unspecified",
+      "id": "artifact-signing"
+    },
+    {
+      "name": "Automation",
+      "url": "https://azure.microsoft.com/en-us/products/automation",
+      "availability": "unspecified",
+      "id": "automation"
+    },
+    {
+      "name": "Azure Arc",
+      "url": "https://azure.microsoft.com/en-us/products/azure-arc",
+      "availability": "unspecified",
+      "id": "azure-arc"
+    },
+    {
+      "name": "Microsoft Azure Attestation",
+      "url": "https://azure.microsoft.com/en-us/products/azure-attestation",
+      "availability": "unspecified",
+      "id": "azure-attestation"
+    },
+    {
+      "name": "Azure Automanage",
+      "url": "https://azure.microsoft.com/en-us/products/azure-automanage",
+      "availability": "unspecified",
+      "id": "azure-automanage"
+    },
+    {
+      "name": "Azure Bastion",
+      "url": "https://azure.microsoft.com/en-us/products/azure-bastion",
+      "availability": "unspecified",
+      "id": "azure-bastion"
+    },
+    {
+      "name": "Azure confidential ledger",
+      "url": "https://azure.microsoft.com/en-us/products/azure-confidential-ledger",
+      "availability": "unspecified",
+      "id": "azure-confidential-ledger"
+    },
+    {
+      "name": "Azure Firewall",
+      "url": "https://azure.microsoft.com/en-us/products/azure-firewall",
+      "availability": "unspecified",
+      "id": "azure-firewall"
+    },
+    {
+      "name": "Azure Lighthouse",
+      "url": "https://azure.microsoft.com/en-us/products/azure-lighthouse",
+      "availability": "unspecified",
+      "id": "azure-lighthouse"
+    },
+    {
+      "name": "Azure Linux",
+      "url": "https://azure.microsoft.com/en-us/products/azure-linux",
+      "availability": "unspecified",
+      "id": "azure-linux"
+    },
+    {
+      "name": "Azure Maps",
+      "url": "https://azure.microsoft.com/en-us/products/azure-maps",
+      "availability": "unspecified",
+      "id": "azure-maps"
+    },
+    {
+      "name": "Azure Migrate",
+      "url": "https://azure.microsoft.com/en-us/products/azure-migrate",
+      "availability": "unspecified",
+      "id": "azure-migrate"
+    },
+    {
+      "name": "Azure NAT Gateway",
+      "url": "https://azure.microsoft.com/en-us/products/azure-nat-gateway",
+      "availability": "unspecified",
+      "id": "azure-nat-gateway"
+    },
+    {
+      "name": "Azure Network Function Manager",
+      "url": "https://azure.microsoft.com/en-us/products/azure-network-function-manager",
+      "availability": "unspecified",
+      "id": "azure-network-function-manager"
+    },
+    {
+      "name": "Azure Policy",
+      "url": "https://azure.microsoft.com/en-us/products/azure-policy",
+      "availability": "unspecified",
+      "id": "azure-policy"
+    },
+    {
+      "name": "Azure Sphere",
+      "url": "https://azure.microsoft.com/en-us/products/azure-sphere",
+      "availability": "unspecified",
+      "id": "azure-sphere"
+    },
+    {
+      "name": "Azure SQL",
+      "url": "https://azure.microsoft.com/en-us/products/azure-sql",
+      "availability": "unspecified",
+      "id": "azure-sql"
+    },
+    {
+      "name": "Azure SQL Database",
+      "url": "https://azure.microsoft.com/en-us/products/azure-sql/database",
+      "availability": "unspecified",
+      "id": "azure-sql-database"
+    },
+    {
+      "name": "Azure SQL Managed Instance",
+      "url": "https://azure.microsoft.com/en-us/products/azure-sql/managed-instance",
+      "availability": "unspecified",
+      "id": "azure-sql-managed-instance"
+    },
+    {
+      "name": "Azure Stack Edge",
+      "url": "https://azure.microsoft.com/en-us/products/azure-stack/edge",
+      "availability": "unspecified",
+      "id": "azure-stack-edge"
+    },
+    {
+      "name": "Azure Stack Hub",
+      "url": "https://azure.microsoft.com/en-us/products/azure-stack/hub",
+      "availability": "unspecified",
+      "id": "azure-stack-hub"
+    },
+    {
+      "name": "Update management center",
+      "url": "https://azure.microsoft.com/en-us/products/azure-update-management-center",
+      "availability": "preview",
+      "id": "azure-update-management-center"
+    },
+    {
+      "name": "Azure VMware Solution",
+      "url": "https://azure.microsoft.com/en-us/products/azure-vmware",
+      "availability": "unspecified",
+      "id": "azure-vmware"
+    },
+    {
+      "name": "Azure Backup",
+      "url": "https://azure.microsoft.com/en-us/products/backup",
+      "availability": "unspecified",
+      "id": "backup"
+    },
+    {
+      "name": "Batch",
+      "url": "https://azure.microsoft.com/en-us/products/batch",
+      "availability": "unspecified",
+      "id": "batch"
+    },
+    {
+      "name": "Azure Blueprints",
+      "url": "https://azure.microsoft.com/en-us/products/blueprints",
+      "availability": "preview",
+      "id": "blueprints"
+    },
+    {
+      "name": "Health Bot",
+      "url": "https://azure.microsoft.com/en-us/products/bot-services/health-bot",
+      "availability": "unspecified",
+      "id": "bot-services-health-bot"
+    },
+    {
+      "name": "Storage Accounts",
+      "url": "https://azure.microsoft.com/en-us/products/category/storage",
+      "availability": "unspecified",
+      "id": "category-storage"
+    },
+    {
+      "name": "Azure Content Delivery Network",
+      "url": "https://azure.microsoft.com/en-us/products/cdn",
+      "availability": "unspecified",
+      "id": "cdn-azure-content-delivery-network"
+    },
+    {
+      "name": "Content Delivery Network",
+      "url": "https://azure.microsoft.com/en-us/products/cdn",
+      "availability": "unspecified",
+      "id": "cdn-content-delivery-network"
+    },
+    {
+      "name": "Azure Chaos Studio",
+      "url": "https://azure.microsoft.com/en-us/products/chaos-studio",
+      "availability": "unspecified",
+      "id": "chaos-studio"
+    },
+    {
+      "name": "Azure Cloud HSM",
+      "url": "https://azure.microsoft.com/en-us/products/cloud-hsm",
+      "availability": "unspecified",
+      "id": "cloud-hsm"
+    },
+    {
+      "name": "Cloud Services",
+      "url": "https://azure.microsoft.com/en-us/products/cloud-services",
+      "availability": "unspecified",
+      "id": "cloud-services"
+    },
+    {
+      "name": "Azure Communication Services",
+      "url": "https://azure.microsoft.com/en-us/products/communication-services",
+      "availability": "unspecified",
+      "id": "communication-services"
+    },
+    {
+      "name": "Azure Compute Fleet",
+      "url": "https://azure.microsoft.com/en-us/products/compute-fleet",
+      "availability": "preview",
+      "id": "compute-fleet"
+    },
+    {
+      "name": "Azure Container Apps",
+      "url": "https://azure.microsoft.com/en-us/products/container-apps",
+      "availability": "unspecified",
+      "id": "container-apps"
+    },
+    {
+      "name": "Azure Container Instances",
+      "url": "https://azure.microsoft.com/en-us/products/container-instances",
+      "availability": "unspecified",
+      "id": "container-instances"
+    },
+    {
+      "name": "Azure Container Registry",
+      "url": "https://azure.microsoft.com/en-us/products/container-registry",
+      "availability": "unspecified",
+      "id": "container-registry"
+    },
+    {
+      "name": "Azure Container Storage",
+      "url": "https://azure.microsoft.com/en-us/products/container-storage",
+      "availability": "unspecified",
+      "id": "container-storage"
+    },
+    {
+      "name": "Azure Copilot",
+      "url": "https://azure.microsoft.com/en-us/products/copilot",
+      "availability": "unspecified",
+      "id": "copilot"
+    },
+    {
+      "name": "Azure Cosmos DB",
+      "url": "https://azure.microsoft.com/en-us/products/cosmos-db",
+      "availability": "unspecified",
+      "id": "cosmos-db"
+    },
+    {
+      "name": "Microsoft Cost Management",
+      "url": "https://azure.microsoft.com/en-us/products/cost-management",
+      "availability": "unspecified",
+      "id": "cost-management"
+    },
+    {
+      "name": "Data Catalog",
+      "url": "https://azure.microsoft.com/en-us/products/data-catalog",
+      "availability": "unspecified",
+      "id": "data-catalog"
+    },
+    {
+      "name": "Azure Data Explorer",
+      "url": "https://azure.microsoft.com/en-us/products/data-explorer",
+      "availability": "unspecified",
+      "id": "data-explorer"
+    },
+    {
+      "name": "Azure Data Factory",
+      "url": "https://azure.microsoft.com/en-us/products/data-factory",
+      "availability": "unspecified",
+      "id": "data-factory"
+    },
+    {
+      "name": "Data Lake Analytics",
+      "url": "https://azure.microsoft.com/en-us/products/data-lake-analytics",
+      "availability": "unspecified",
+      "id": "data-lake-analytics"
+    },
+    {
+      "name": "Microsoft Energy Data Services",
+      "url": "https://azure.microsoft.com/en-us/products/data-manager-for-energy",
+      "availability": "unspecified",
+      "id": "data-manager-for-energy"
+    },
+    {
+      "name": "Azure Data Share",
+      "url": "https://azure.microsoft.com/en-us/products/data-share",
+      "availability": "unspecified",
+      "id": "data-share"
+    },
+    {
+      "name": "Azure Database Migration Service",
+      "url": "https://azure.microsoft.com/en-us/products/database-migration",
+      "availability": "unspecified",
+      "id": "database-migration"
+    },
+    {
+      "name": "Azure Data Box",
+      "url": "https://azure.microsoft.com/en-us/products/databox",
+      "availability": "unspecified",
+      "id": "databox"
+    },
+    {
+      "name": "Azure Databricks",
+      "url": "https://azure.microsoft.com/en-us/products/databricks",
+      "availability": "unspecified",
+      "id": "databricks"
+    },
+    {
+      "name": "Azure DDoS Protection",
+      "url": "https://azure.microsoft.com/en-us/products/ddos-protection",
+      "availability": "unspecified",
+      "id": "ddos-protection"
+    },
+    {
+      "name": "Defender External Attack Surface Management",
+      "url": "https://azure.microsoft.com/en-us/products/defender-external-attack-surface-management",
+      "availability": "unspecified",
+      "id": "defender-external-attack-surface-management-defender-external-attack-surface-management"
+    },
+    {
+      "name": "Microsoft Defender External Attack Surface Management",
+      "url": "https://azure.microsoft.com/en-us/products/defender-external-attack-surface-management",
+      "availability": "unspecified",
+      "id": "defender-external-attack-surface-management-microsoft-defender-external-attack-surface-management"
+    },
+    {
+      "name": "Microsoft Defender for Cloud",
+      "url": "https://azure.microsoft.com/en-us/products/defender-for-cloud",
+      "availability": "unspecified",
+      "id": "defender-for-cloud"
+    },
+    {
+      "name": "Azure Deployment Environments",
+      "url": "https://azure.microsoft.com/en-us/products/deployment-environments",
+      "availability": "unspecified",
+      "id": "deployment-environments"
+    },
+    {
+      "name": "Microsoft Dev Box",
+      "url": "https://azure.microsoft.com/en-us/products/dev-box",
+      "availability": "unspecified",
+      "id": "dev-box"
+    },
+    {
+      "name": "Azure Artifacts",
+      "url": "https://azure.microsoft.com/en-us/products/devops/artifacts",
+      "availability": "unspecified",
+      "id": "devops-artifacts"
+    },
+    {
+      "name": "Azure DevOps",
+      "url": "https://azure.microsoft.com/en-us/products/devops",
+      "availability": "unspecified",
+      "id": "devops-azure-devops"
+    },
+    {
+      "name": "Azure Boards",
+      "url": "https://azure.microsoft.com/en-us/products/devops/boards",
+      "availability": "unspecified",
+      "id": "devops-boards"
+    },
+    {
+      "name": "DevOps tool integrations",
+      "url": "https://azure.microsoft.com/en-us/products/devops",
+      "availability": "unspecified",
+      "id": "devops-devops-tool-integrations"
+    },
+    {
+      "name": "GitHub Advanced Security for Azure DevOps",
+      "url": "https://azure.microsoft.com/en-us/products/devops/github-advanced-security",
+      "availability": "unspecified",
+      "id": "devops-github-advanced-security"
+    },
+    {
+      "name": "Azure Pipelines",
+      "url": "https://azure.microsoft.com/en-us/products/devops/pipelines",
+      "availability": "unspecified",
+      "id": "devops-pipelines"
+    },
+    {
+      "name": "Azure Repos",
+      "url": "https://azure.microsoft.com/en-us/products/devops/repos",
+      "availability": "unspecified",
+      "id": "devops-repos"
+    },
+    {
+      "name": "Azure Test Plans",
+      "url": "https://azure.microsoft.com/en-us/products/devops/test-plans",
+      "availability": "unspecified",
+      "id": "devops-test-plans"
+    },
+    {
+      "name": "Azure DevTest Labs",
+      "url": "https://azure.microsoft.com/en-us/products/devtest-lab",
+      "availability": "unspecified",
+      "id": "devtest-lab"
+    },
+    {
+      "name": "Azure Digital Twins",
+      "url": "https://azure.microsoft.com/en-us/products/digital-twins",
+      "availability": "unspecified",
+      "id": "digital-twins"
+    },
+    {
+      "name": "Azure DNS",
+      "url": "https://azure.microsoft.com/en-us/products/dns",
+      "availability": "unspecified",
+      "id": "dns"
+    },
+    {
+      "name": "Azure DocumentDB",
+      "url": "https://azure.microsoft.com/en-us/products/documentdb",
+      "availability": "unspecified",
+      "id": "documentdb"
+    },
+    {
+      "name": "Azure Enclave",
+      "url": "https://azure.microsoft.com/en-us/products/enclave",
+      "availability": "unspecified",
+      "id": "enclave"
+    },
+    {
+      "name": "Event Grid",
+      "url": "https://azure.microsoft.com/en-us/products/event-grid",
+      "availability": "unspecified",
+      "id": "event-grid"
+    },
+    {
+      "name": "Event Hubs",
+      "url": "https://azure.microsoft.com/en-us/products/event-hubs",
+      "availability": "unspecified",
+      "id": "event-hubs"
+    },
+    {
+      "name": "Azure ExpressRoute",
+      "url": "https://azure.microsoft.com/en-us/products/expressroute",
+      "availability": "unspecified",
+      "id": "expressroute"
+    },
+    {
+      "name": "Azure Firewall Manager",
+      "url": "https://azure.microsoft.com/en-us/products/firewall-manager",
+      "availability": "unspecified",
+      "id": "firewall-manager"
+    },
+    {
+      "name": "Azure Fluid Relay",
+      "url": "https://azure.microsoft.com/en-us/products/fluid-relay",
+      "availability": "unspecified",
+      "id": "fluid-relay"
+    },
+    {
+      "name": "Foundry IQ",
+      "url": "https://azure.microsoft.com/en-us/products/foundry/iq",
+      "availability": "unspecified",
+      "id": "foundry-iq"
+    },
+    {
+      "name": "Azure Front Door",
+      "url": "https://azure.microsoft.com/en-us/products/frontdoor",
+      "availability": "unspecified",
+      "id": "frontdoor"
+    },
+    {
+      "name": "Azure Functions",
+      "url": "https://azure.microsoft.com/en-us/products/functions",
+      "availability": "unspecified",
+      "id": "functions"
+    },
+    {
+      "name": "Github Enterprise",
+      "url": "https://azure.microsoft.com/en-us/products/github",
+      "availability": "unspecified",
+      "id": "github"
+    },
+    {
+      "name": "GitHub Advanced Security",
+      "url": "https://azure.microsoft.com/en-us/products/github/Advanced-Security",
+      "availability": "unspecified",
+      "id": "github-advanced-security"
+    },
+    {
+      "name": "GitHub Copilot",
+      "url": "https://azure.microsoft.com/en-us/products/github/Copilot",
+      "availability": "unspecified",
+      "id": "github-copilot"
+    },
+    {
+      "name": "Microsoft Graph Data Connect",
+      "url": "https://azure.microsoft.com/en-us/products/graph-data-connect",
+      "availability": "preview",
+      "id": "graph-data-connect"
+    },
+    {
+      "name": "HDInsight",
+      "url": "https://azure.microsoft.com/en-us/products/hdinsight",
+      "availability": "unspecified",
+      "id": "hdinsight"
+    },
+    {
+      "name": "Azure Health Data Services",
+      "url": "https://azure.microsoft.com/en-us/products/health-data-services",
+      "availability": "unspecified",
+      "id": "health-data-services"
+    },
+    {
+      "name": "Azure HorizonDB",
+      "url": "https://azure.microsoft.com/en-us/products/horizondb",
+      "availability": "preview",
+      "id": "horizondb"
+    },
+    {
+      "name": "Azure VM Image Builder",
+      "url": "https://azure.microsoft.com/en-us/products/image-builder",
+      "availability": "unspecified",
+      "id": "image-builder"
+    },
+    {
+      "name": "Azure IoT Central",
+      "url": "https://azure.microsoft.com/en-us/products/iot-central",
+      "availability": "unspecified",
+      "id": "iot-central"
+    },
+    {
+      "name": "Azure IoT Edge",
+      "url": "https://azure.microsoft.com/en-us/products/iot-edge",
+      "availability": "unspecified",
+      "id": "iot-edge"
+    },
+    {
+      "name": "Azure IoT Hub",
+      "url": "https://azure.microsoft.com/en-us/products/iot-hub",
+      "availability": "unspecified",
+      "id": "iot-hub"
+    },
+    {
+      "name": "Azure IoT Operations",
+      "url": "https://azure.microsoft.com/en-us/products/iot-operations",
+      "availability": "unspecified",
+      "id": "iot-operations"
+    },
+    {
+      "name": "Azure Key Vault",
+      "url": "https://azure.microsoft.com/en-us/products/key-vault",
+      "availability": "unspecified",
+      "id": "key-vault"
+    },
+    {
+      "name": "Azure Kubernetes Fleet Manager",
+      "url": "https://azure.microsoft.com/en-us/products/kubernetes-fleet-manager",
+      "availability": "unspecified",
+      "id": "kubernetes-fleet-manager"
+    },
+    {
+      "name": "Azure Kubernetes Service (AKS)",
+      "url": "https://azure.microsoft.com/en-us/products/kubernetes-service",
+      "availability": "unspecified",
+      "id": "kubernetes-service"
+    },
+    {
+      "name": "Azure Lab Services",
+      "url": "https://azure.microsoft.com/en-us/products/lab-services",
+      "availability": "unspecified",
+      "id": "lab-services"
+    },
+    {
+      "name": "Azure Load Balancer",
+      "url": "https://azure.microsoft.com/en-us/products/load-balancer",
+      "availability": "unspecified",
+      "id": "load-balancer"
+    },
+    {
+      "name": "Azure Local",
+      "url": "https://azure.microsoft.com/en-us/products/local",
+      "availability": "unspecified",
+      "id": "local"
+    },
+    {
+      "name": "Logic Apps",
+      "url": "https://azure.microsoft.com/en-us/products/logic-apps",
+      "availability": "unspecified",
+      "id": "logic-apps"
+    },
+    {
+      "name": "Azure Machine Learning",
+      "url": "https://azure.microsoft.com/en-us/products/machine-learning",
+      "availability": "unspecified",
+      "id": "machine-learning"
+    },
+    {
+      "name": "Azure Managed Applications",
+      "url": "https://azure.microsoft.com/en-us/products/managed-applications",
+      "availability": "unspecified",
+      "id": "managed-applications"
+    },
+    {
+      "name": "Azure Managed Grafana",
+      "url": "https://azure.microsoft.com/en-us/products/managed-grafana",
+      "availability": "unspecified",
+      "id": "managed-grafana"
+    },
+    {
+      "name": "Azure Managed Instance for Apache Cassandra",
+      "url": "https://azure.microsoft.com/en-us/products/managed-instance-apache-cassandra",
+      "availability": "unspecified",
+      "id": "managed-instance-apache-cassandra"
+    },
+    {
+      "name": "Azure Managed Lustre",
+      "url": "https://azure.microsoft.com/en-us/products/managed-lustre",
+      "availability": "unspecified",
+      "id": "managed-lustre"
+    },
+    {
+      "name": "Azure Managed Redis",
+      "url": "https://azure.microsoft.com/en-us/products/managed-redis",
+      "availability": "unspecified",
+      "id": "managed-redis"
+    },
+    {
+      "name": "Microsoft Entra Domain Services",
+      "url": "https://azure.microsoft.com/en-us/products/microsoft-entra-ds",
+      "availability": "unspecified",
+      "id": "microsoft-entra-ds"
+    },
+    {
+      "name": "Microsoft Sentinel",
+      "url": "https://azure.microsoft.com/en-us/products/microsoft-sentinel",
+      "availability": "unspecified",
+      "id": "microsoft-sentinel"
+    },
+    {
+      "name": "Azure Monitor",
+      "url": "https://azure.microsoft.com/en-us/products/monitor",
+      "availability": "unspecified",
+      "id": "monitor"
+    },
+    {
+      "name": "Azure Database for MySQL",
+      "url": "https://azure.microsoft.com/en-us/products/mysql",
+      "availability": "unspecified",
+      "id": "mysql"
+    },
+    {
+      "name": "Azure NetApp Files",
+      "url": "https://azure.microsoft.com/en-us/products/netapp",
+      "availability": "unspecified",
+      "id": "netapp"
+    },
+    {
+      "name": "Azure Network Watcher",
+      "url": "https://azure.microsoft.com/en-us/products/network-watcher",
+      "availability": "unspecified",
+      "id": "network-watcher"
+    },
+    {
+      "name": "Notification Hubs",
+      "url": "https://azure.microsoft.com/en-us/products/notification-hubs",
+      "availability": "unspecified",
+      "id": "notification-hubs"
+    },
+    {
+      "name": "Nutanix Cloud Clusters",
+      "url": "https://azure.microsoft.com/en-us/products/nutanix",
+      "availability": "unspecified",
+      "id": "nutanix"
+    },
+    {
+      "name": "Azure Open Datasets",
+      "url": "https://azure.microsoft.com/en-us/products/open-datasets",
+      "availability": "unspecified",
+      "id": "open-datasets"
+    },
+    {
+      "name": "Azure Red Hat OpenShift",
+      "url": "https://azure.microsoft.com/en-us/products/openshift",
+      "availability": "unspecified",
+      "id": "openshift"
+    },
+    {
+      "name": "Azure Operator Nexus",
+      "url": "https://azure.microsoft.com/en-us/products/operator-nexus",
+      "availability": "unspecified",
+      "id": "operator-nexus"
+    },
+    {
+      "name": "Azure Operator Service Manager",
+      "url": "https://azure.microsoft.com/en-us/products/operator-service-manager",
+      "availability": "unspecified",
+      "id": "operator-service-manager"
+    },
+    {
+      "name": "Phi open models",
+      "url": "https://azure.microsoft.com/en-us/products/phi-3",
+      "availability": "unspecified",
+      "id": "phi-3"
+    },
+    {
+      "name": "Microsoft Planetary Computer Pro",
+      "url": "https://azure.microsoft.com/en-us/products/planetary-computer-pro",
+      "availability": "unspecified",
+      "id": "planetary-computer-pro"
+    },
+    {
+      "name": "Microsoft Playwright Testing",
+      "url": "https://azure.microsoft.com/en-us/products/playwright-testing",
+      "availability": "unspecified",
+      "id": "playwright-testing"
+    },
+    {
+      "name": "Azure Database for PostgreSQL",
+      "url": "https://azure.microsoft.com/en-us/products/postgresql",
+      "availability": "unspecified",
+      "id": "postgresql"
+    },
+    {
+      "name": "Power BI Embedded",
+      "url": "https://azure.microsoft.com/en-us/products/power-bi-embedded",
+      "availability": "unspecified",
+      "id": "power-bi-embedded"
+    },
+    {
+      "name": "Azure Private Link",
+      "url": "https://azure.microsoft.com/en-us/products/private-link",
+      "availability": "unspecified",
+      "id": "private-link"
+    },
+    {
+      "name": "Azure Quantum",
+      "url": "https://azure.microsoft.com/en-us/products/quantum",
+      "availability": "unspecified",
+      "id": "quantum"
+    },
+    {
+      "name": "Azure Resource Mover",
+      "url": "https://azure.microsoft.com/en-us/products/resource-mover",
+      "availability": "unspecified",
+      "id": "resource-mover"
+    },
+    {
+      "name": "Azure Route Server",
+      "url": "https://azure.microsoft.com/en-us/products/route-server",
+      "availability": "unspecified",
+      "id": "route-server"
+    },
+    {
+      "name": "Service Bus",
+      "url": "https://azure.microsoft.com/en-us/products/service-bus",
+      "availability": "unspecified",
+      "id": "service-bus"
+    },
+    {
+      "name": "Azure SignalR Service",
+      "url": "https://azure.microsoft.com/en-us/products/signalr-service",
+      "availability": "unspecified",
+      "id": "signalr-service"
+    },
+    {
+      "name": "Azure Site Recovery",
+      "url": "https://azure.microsoft.com/en-us/products/site-recovery",
+      "availability": "unspecified",
+      "id": "site-recovery"
+    },
+    {
+      "name": "Azure Spring Apps",
+      "url": "https://azure.microsoft.com/en-us/products/spring-apps",
+      "availability": "unspecified",
+      "id": "spring-apps"
+    },
+    {
+      "name": "Azure SRE Agent",
+      "url": "https://azure.microsoft.com/en-us/products/sre-agent",
+      "availability": "preview",
+      "id": "sre-agent"
+    },
+    {
+      "name": "Archive Storage",
+      "url": "https://azure.microsoft.com/en-us/products/storage",
+      "availability": "unspecified",
+      "id": "storage"
+    },
+    {
+      "name": "Azure Storage Actions",
+      "url": "https://azure.microsoft.com/en-us/products/storage-actions",
+      "availability": "unspecified",
+      "id": "storage-actions"
+    },
+    {
+      "name": "Azure Blob Storage",
+      "url": "https://azure.microsoft.com/en-us/products/storage/blobs",
+      "availability": "unspecified",
+      "id": "storage-blobs"
+    },
+    {
+      "name": "Azure Data Lake Storage",
+      "url": "https://azure.microsoft.com/en-us/products/storage/data-lake-storage",
+      "availability": "unspecified",
+      "id": "storage-data-lake-storage"
+    },
+    {
+      "name": "Azure Storage Discovery",
+      "url": "https://azure.microsoft.com/en-us/products/storage-discovery",
+      "availability": "unspecified",
+      "id": "storage-discovery"
+    },
+    {
+      "name": "Azure Disk Storage",
+      "url": "https://azure.microsoft.com/en-us/products/storage/disks",
+      "availability": "unspecified",
+      "id": "storage-disks"
+    },
+    {
+      "name": "Azure Elastic SAN",
+      "url": "https://azure.microsoft.com/en-us/products/storage/elastic-san",
+      "availability": "unspecified",
+      "id": "storage-elastic-san"
+    },
+    {
+      "name": "Azure Files",
+      "url": "https://azure.microsoft.com/en-us/products/storage/files",
+      "availability": "unspecified",
+      "id": "storage-files"
+    },
+    {
+      "name": "Azure Storage Mover",
+      "url": "https://azure.microsoft.com/en-us/products/storage-mover",
+      "availability": "unspecified",
+      "id": "storage-mover"
+    },
+    {
+      "name": "Queue Storage",
+      "url": "https://azure.microsoft.com/en-us/products/storage/queues",
+      "availability": "unspecified",
+      "id": "storage-queues"
+    },
+    {
+      "name": "Storage Explorer",
+      "url": "https://azure.microsoft.com/en-us/products/storage/storage-explorer",
+      "availability": "unspecified",
+      "id": "storage-storage-explorer"
+    },
+    {
+      "name": "Table Storage",
+      "url": "https://azure.microsoft.com/en-us/products/storage/tables",
+      "availability": "unspecified",
+      "id": "storage-tables"
+    },
+    {
+      "name": "Azure Stream Analytics",
+      "url": "https://azure.microsoft.com/en-us/products/stream-analytics",
+      "availability": "unspecified",
+      "id": "stream-analytics"
+    },
+    {
+      "name": "Azure Synapse Analytics",
+      "url": "https://azure.microsoft.com/en-us/products/synapse-analytics",
+      "availability": "unspecified",
+      "id": "synapse-analytics"
+    },
+    {
+      "name": "Azure Traffic Manager",
+      "url": "https://azure.microsoft.com/en-us/products/traffic-manager",
+      "availability": "unspecified",
+      "id": "traffic-manager"
+    },
+    {
+      "name": "Azure Virtual Desktop",
+      "url": "https://azure.microsoft.com/en-us/products/virtual-desktop",
+      "availability": "unspecified",
+      "id": "virtual-desktop"
+    },
+    {
+      "name": "Virtual Machine Scale Sets",
+      "url": "https://azure.microsoft.com/en-us/products/virtual-machine-scale-sets",
+      "availability": "unspecified",
+      "id": "virtual-machine-scale-sets"
+    },
+    {
+      "name": "Virtual Machines",
+      "url": "https://azure.microsoft.com/en-us/products/virtual-machines",
+      "availability": "unspecified",
+      "id": "virtual-machines"
+    },
+    {
+      "name": "Data Science Virtual Machines",
+      "url": "https://azure.microsoft.com/en-us/products/virtual-machines/data-science-virtual-machines",
+      "availability": "unspecified",
+      "id": "virtual-machines-data-science-virtual-machines"
+    },
+    {
+      "name": "Azure Dedicated Host",
+      "url": "https://azure.microsoft.com/en-us/products/virtual-machines/dedicated-host",
+      "availability": "unspecified",
+      "id": "virtual-machines-dedicated-host"
+    },
+    {
+      "name": "Linux Virtual Machines",
+      "url": "https://azure.microsoft.com/en-us/products/virtual-machines/linux",
+      "availability": "unspecified",
+      "id": "virtual-machines-linux"
+    },
+    {
+      "name": "Azure Spot Virtual Machines",
+      "url": "https://azure.microsoft.com/en-us/products/virtual-machines/spot",
+      "availability": "unspecified",
+      "id": "virtual-machines-spot"
+    },
+    {
+      "name": "SQL Server on Azure Virtual Machines",
+      "url": "https://azure.microsoft.com/en-us/products/virtual-machines/sql-server",
+      "availability": "unspecified",
+      "id": "virtual-machines-sql-server"
+    },
+    {
+      "name": "Azure Virtual Network",
+      "url": "https://azure.microsoft.com/en-us/products/virtual-network",
+      "availability": "unspecified",
+      "id": "virtual-network"
+    },
+    {
+      "name": "Azure Virtual Network Manager",
+      "url": "https://azure.microsoft.com/en-us/products/virtual-network-manager",
+      "availability": "unspecified",
+      "id": "virtual-network-manager"
+    },
+    {
+      "name": "Azure Virtual WAN",
+      "url": "https://azure.microsoft.com/en-us/products/virtual-wan",
+      "availability": "unspecified",
+      "id": "virtual-wan"
+    },
+    {
+      "name": "Visual Studio",
+      "url": "https://azure.microsoft.com/en-us/products/visual-studio",
+      "availability": "unspecified",
+      "id": "visual-studio"
+    },
+    {
+      "name": "Visual Studio Code",
+      "url": "https://azure.microsoft.com/en-us/products/visual-studio-code",
+      "availability": "unspecified",
+      "id": "visual-studio-code"
+    },
+    {
+      "name": "Azure VPN Gateway",
+      "url": "https://azure.microsoft.com/en-us/products/vpn-gateway",
+      "availability": "unspecified",
+      "id": "vpn-gateway"
+    },
+    {
+      "name": "Azure Web Application Firewall",
+      "url": "https://azure.microsoft.com/en-us/products/web-application-firewall",
+      "availability": "unspecified",
+      "id": "web-application-firewall"
+    },
+    {
+      "name": "Azure Web PubSub",
+      "url": "https://azure.microsoft.com/en-us/products/web-pubsub",
+      "availability": "unspecified",
+      "id": "web-pubsub"
+    },
+    {
+      "name": "Windows for IoT",
+      "url": "https://azure.microsoft.com/en-us/products/windows-iot",
+      "availability": "unspecified",
+      "id": "windows-iot"
+    },
+    {
+      "name": "Windows Server",
+      "url": "https://azure.microsoft.com/en-us/products/windows-server",
+      "availability": "unspecified",
+      "id": "windows-server"
+    }
+  ]
+}

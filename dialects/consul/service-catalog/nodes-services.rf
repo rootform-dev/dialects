@@ -1,0 +1,80 @@
+concept "catalog-registration" {
+  kind        = entity
+  description = "A legacy combined Consul catalog node or service registration."
+}
+
+concept "consul-node" {
+  kind        = entity
+  description = "A node registered in the Consul service catalog."
+}
+
+concept "consul-service" {
+  kind        = entity
+  description = "A service registered or selected in the Consul catalog."
+}
+
+rule "agent-service" {
+  match {
+    kind = "resource"
+    type = "consul_agent_service"
+  }
+
+  as = concept.consul-service
+}
+
+rule "catalog-entry" {
+  match {
+    kind = "resource"
+    type = "consul_catalog_entry"
+  }
+
+  as = concept.catalog-registration
+}
+
+rule "catalog-service-lookup" {
+  match {
+    kind = "data"
+    type = "consul_catalog_service"
+  }
+
+  as = concept.consul-service
+}
+
+rule "node" {
+  match {
+    kind = "resource"
+    type = "consul_node"
+  }
+
+  as = concept.consul-node
+}
+
+rule "service" {
+  match {
+    kind = "resource"
+    type = "consul_service"
+  }
+
+  as = concept.consul-service
+
+  context {
+    as  = context.core.runtime
+    to  = concept.consul-node
+    via = source.node
+  }
+
+  context {
+    as  = context.core.ownership
+    to  = concept.namespace
+    via = source.namespace
+  }
+}
+
+rule "service-lookup" {
+  match {
+    kind = "data"
+    type = "consul_service"
+  }
+
+  as = concept.consul-service
+}

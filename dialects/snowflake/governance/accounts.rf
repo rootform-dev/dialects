@@ -1,0 +1,45 @@
+concept "account" {
+  kind        = scope
+  description = "A Snowflake account providing an administrative and regional service boundary."
+}
+
+concept "account-configuration" {
+  kind        = detail
+  description = "Configuration applied to a Snowflake account without creating independent service topology."
+}
+
+rule "account" {
+  match {
+    kind = "resource"
+    type = "snowflake_account"
+  }
+
+  as = concept.account
+}
+
+rule "managed-account" {
+  match {
+    kind = "resource"
+    type = "snowflake_managed_account"
+  }
+
+  as = concept.account
+}
+
+rule "current-account" {
+  match {
+    kind = "resource"
+    type = "snowflake_current_account"
+  }
+
+  as = concept.account-configuration
+}
+
+rule "current-organization-account" {
+  match {
+    kind = "resource"
+    type = "snowflake_current_organization_account"
+  }
+
+  as = concept.account-configuration
+}

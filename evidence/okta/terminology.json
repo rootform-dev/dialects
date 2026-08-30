@@ -1,0 +1,420 @@
+{
+  "format_version": "1",
+  "dialect": "okta",
+  "verified_date": "2026-08-30",
+  "integrity_boundary": "presentation digest is separate from semantic source digest",
+  "presentation_sha256": "sha256:5043c0e3a5a4780f81f21dbaa13c8a1ff3f09f299f7f543f6390b5d94cc25256",
+  "asset": {
+    "decision": "generic-identities-only",
+    "reason": "Okta media assets carry separate terms and no explicit redistribution permission was established",
+    "cdn_or_remote_asset": false
+  },
+  "rules": [
+    {
+      "id": "okta/api-service-integration",
+      "label": "Okta API Service Integration"
+    },
+    {
+      "id": "okta/api-service-integration-lookup",
+      "label": "Okta API Service Integration lookup"
+    },
+    {
+      "id": "okta/app-access-policy-assignment",
+      "label": "Okta app access policy assignment"
+    },
+    {
+      "id": "okta/app-auto-login",
+      "label": "Okta Auto Login app integration"
+    },
+    {
+      "id": "okta/app-basic-auth",
+      "label": "Okta Basic Auth app integration"
+    },
+    {
+      "id": "okta/app-bookmark",
+      "label": "Okta Bookmark app integration"
+    },
+    {
+      "id": "okta/app-connection",
+      "label": "Okta provisioning connection"
+    },
+    {
+      "id": "okta/app-connection-lookup",
+      "label": "Okta provisioning connection lookup"
+    },
+    {
+      "id": "okta/app-features",
+      "label": "Okta app integration features"
+    },
+    {
+      "id": "okta/app-features-lookup",
+      "label": "Okta app integration features lookup"
+    },
+    {
+      "id": "okta/app-federated-claim",
+      "label": "Okta app federated claim"
+    },
+    {
+      "id": "okta/app-federated-claim-lookup",
+      "label": "Okta app federated claim lookup"
+    },
+    {
+      "id": "okta/app-lookup",
+      "label": "Okta app integration lookup"
+    },
+    {
+      "id": "okta/app-oauth",
+      "label": "Okta OIDC app integration"
+    },
+    {
+      "id": "okta/app-oauth-api-scope",
+      "label": "Okta app API scope grant"
+    },
+    {
+      "id": "okta/app-oauth-lookup",
+      "label": "Okta OIDC app integration lookup"
+    },
+    {
+      "id": "okta/app-oauth-post-logout-redirect-uri",
+      "label": "Okta app post-logout redirect URI"
+    },
+    {
+      "id": "okta/app-oauth-redirect-uri",
+      "label": "Okta app redirect URI"
+    },
+    {
+      "id": "okta/app-saml",
+      "label": "Okta SAML app integration"
+    },
+    {
+      "id": "okta/app-saml-app-settings",
+      "label": "Okta SAML app settings"
+    },
+    {
+      "id": "okta/app-saml-lookup",
+      "label": "Okta SAML app integration lookup"
+    },
+    {
+      "id": "okta/app-secure-password-store",
+      "label": "Okta Secure Password Store app integration"
+    },
+    {
+      "id": "okta/app-shared-credentials",
+      "label": "Okta Shared Credentials app integration"
+    },
+    {
+      "id": "okta/app-sign-on-policy-rule-lookup",
+      "label": "Okta app sign-on policy rule lookup"
+    },
+    {
+      "id": "okta/app-signon-policy",
+      "label": "Okta app sign-on policy"
+    },
+    {
+      "id": "okta/app-signon-policy-lookup",
+      "label": "Okta app sign-on policy lookup"
+    },
+    {
+      "id": "okta/app-signon-policy-rule",
+      "label": "Okta app sign-on policy rule"
+    },
+    {
+      "id": "okta/app-swa",
+      "label": "Okta SWA app integration"
+    },
+    {
+      "id": "okta/app-three-field",
+      "label": "Okta Three Field app integration"
+    },
+    {
+      "id": "okta/auth-server",
+      "label": "Okta Authorization Server"
+    },
+    {
+      "id": "okta/auth-server-claim",
+      "label": "Okta Authorization Server claim"
+    },
+    {
+      "id": "okta/auth-server-claim-default",
+      "label": "Okta default Authorization Server claim"
+    },
+    {
+      "id": "okta/auth-server-claim-lookup",
+      "label": "Okta Authorization Server claim lookup"
+    },
+    {
+      "id": "okta/auth-server-default",
+      "label": "Okta default custom Authorization Server"
+    },
+    {
+      "id": "okta/auth-server-lookup",
+      "label": "Okta Authorization Server lookup"
+    },
+    {
+      "id": "okta/auth-server-policy",
+      "label": "Okta Authorization Server policy"
+    },
+    {
+      "id": "okta/auth-server-policy-lookup",
+      "label": "Okta Authorization Server policy lookup"
+    },
+    {
+      "id": "okta/auth-server-policy-rule",
+      "label": "Okta Authorization Server policy rule"
+    },
+    {
+      "id": "okta/auth-server-scope",
+      "label": "Okta Authorization Server scope"
+    },
+    {
+      "id": "okta/authenticator",
+      "label": "Okta authenticator"
+    },
+    {
+      "id": "okta/authenticator-lookup",
+      "label": "Okta authenticator lookup"
+    },
+    {
+      "id": "okta/authenticator-method-webauthn",
+      "label": "Okta WebAuthn authenticator method"
+    },
+    {
+      "id": "okta/authenticator-method-webauthn-lookup",
+      "label": "Okta WebAuthn authenticator method lookup"
+    },
+    {
+      "id": "okta/authenticator-webauthn-custom-aaguid",
+      "label": "Okta custom WebAuthn AAGUID"
+    },
+    {
+      "id": "okta/authenticator-webauthn-custom-aaguids-lookup",
+      "label": "Okta custom WebAuthn AAGUID lookup"
+    },
+    {
+      "id": "okta/behavior",
+      "label": "Okta behavior detection"
+    },
+    {
+      "id": "okta/behavior-lookup",
+      "label": "Okta behavior detection lookup"
+    },
+    {
+      "id": "okta/captcha",
+      "label": "Okta CAPTCHA integration"
+    },
+    {
+      "id": "okta/captcha-lookup",
+      "label": "Okta CAPTCHA integration lookup"
+    },
+    {
+      "id": "okta/domain",
+      "label": "Okta custom domain"
+    },
+    {
+      "id": "okta/domain-certificate",
+      "label": "Okta custom domain certificate"
+    },
+    {
+      "id": "okta/domain-lookup",
+      "label": "Okta custom domain lookup"
+    },
+    {
+      "id": "okta/domain-verification",
+      "label": "Okta custom domain verification"
+    },
+    {
+      "id": "okta/event-hook",
+      "label": "Okta event hook"
+    },
+    {
+      "id": "okta/event-hook-verification",
+      "label": "Okta event hook verification"
+    },
+    {
+      "id": "okta/hook-key",
+      "label": "Okta hook key"
+    },
+    {
+      "id": "okta/hook-key-lookup",
+      "label": "Okta hook key lookup"
+    },
+    {
+      "id": "okta/idp-oidc",
+      "label": "Okta OIDC Identity Provider"
+    },
+    {
+      "id": "okta/idp-oidc-lookup",
+      "label": "Okta OIDC Identity Provider lookup"
+    },
+    {
+      "id": "okta/idp-saml",
+      "label": "Okta SAML Identity Provider"
+    },
+    {
+      "id": "okta/idp-saml-lookup",
+      "label": "Okta SAML Identity Provider lookup"
+    },
+    {
+      "id": "okta/idp-social",
+      "label": "Okta social Identity Provider"
+    },
+    {
+      "id": "okta/idp-social-lookup",
+      "label": "Okta social Identity Provider lookup"
+    },
+    {
+      "id": "okta/inline-hook",
+      "label": "Okta inline hook"
+    },
+    {
+      "id": "okta/log-stream",
+      "label": "Okta log stream"
+    },
+    {
+      "id": "okta/log-stream-lookup",
+      "label": "Okta log stream lookup"
+    },
+    {
+      "id": "okta/network-zone",
+      "label": "Okta Network Zone"
+    },
+    {
+      "id": "okta/network-zone-lookup",
+      "label": "Okta Network Zone lookup"
+    },
+    {
+      "id": "okta/oauth-authorization-server-lookup",
+      "label": "Okta OAuth Authorization Server lookup"
+    },
+    {
+      "id": "okta/org-captcha",
+      "label": "Okta org-wide CAPTCHA settings"
+    },
+    {
+      "id": "okta/org-captcha-lookup",
+      "label": "Okta org-wide CAPTCHA settings lookup"
+    },
+    {
+      "id": "okta/org-configuration",
+      "label": "Okta org"
+    },
+    {
+      "id": "okta/org-metadata-lookup",
+      "label": "Okta org metadata"
+    },
+    {
+      "id": "okta/policy-rule-idp-discovery",
+      "label": "Okta Identity Provider discovery rule"
+    },
+    {
+      "id": "okta/realm",
+      "label": "Okta Realm"
+    },
+    {
+      "id": "okta/realm-assignment",
+      "label": "Okta Realm assignment"
+    },
+    {
+      "id": "okta/realm-assignment-lookup",
+      "label": "Okta Realm assignment lookup"
+    },
+    {
+      "id": "okta/realm-lookup",
+      "label": "Okta Realm lookup"
+    },
+    {
+      "id": "okta/security-events-provider",
+      "label": "Okta Security Events Provider"
+    },
+    {
+      "id": "okta/security-events-provider-lookup",
+      "label": "Okta Security Events Provider lookup"
+    },
+    {
+      "id": "okta/threat-insight-settings",
+      "label": "Okta ThreatInsight settings"
+    },
+    {
+      "id": "okta/threat-insight-settings-lookup",
+      "label": "Okta ThreatInsight settings lookup"
+    },
+    {
+      "id": "okta/trusted-origin",
+      "label": "Okta Trusted Origin"
+    },
+    {
+      "id": "okta/trusted-origin-lookup",
+      "label": "Okta Trusted Origin lookup"
+    },
+    {
+      "id": "okta/trusted-server",
+      "label": "Okta trusted Authorization Server association"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "okta/identity-tenant",
+      "label": "Okta org"
+    },
+    {
+      "id": "okta/identity-realm",
+      "label": "Okta Realm"
+    },
+    {
+      "id": "okta/application-configuration",
+      "label": "Okta app integration configuration"
+    },
+    {
+      "id": "okta/provisioning-connection",
+      "label": "Okta provisioning connection"
+    },
+    {
+      "id": "okta/authorization-server",
+      "label": "Okta Authorization Server"
+    },
+    {
+      "id": "okta/authorization-server-configuration",
+      "label": "Okta Authorization Server configuration"
+    },
+    {
+      "id": "okta/external-identity-provider",
+      "label": "Okta external Identity Provider"
+    },
+    {
+      "id": "okta/federation-configuration",
+      "label": "Okta federation configuration"
+    },
+    {
+      "id": "okta/identity-domain",
+      "label": "Okta custom domain"
+    },
+    {
+      "id": "okta/domain-configuration",
+      "label": "Okta custom domain configuration"
+    },
+    {
+      "id": "okta/identity-event-extension",
+      "label": "Okta hook"
+    },
+    {
+      "id": "okta/hook-configuration",
+      "label": "Okta hook configuration"
+    },
+    {
+      "id": "okta/identity-log-stream",
+      "label": "Okta log stream"
+    },
+    {
+      "id": "okta/security-events-provider",
+      "label": "Okta Security Events Provider"
+    },
+    {
+      "id": "okta/network-zone",
+      "label": "Okta Network Zone"
+    },
+    {
+      "id": "okta/authentication-configuration",
+      "label": "Okta authentication configuration"
+    }
+  ]
+}

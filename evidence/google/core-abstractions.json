@@ -1,0 +1,813 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-29",
+  "outcome": "accepted-promotions",
+  "policy": {
+    "comparison_trigger": "proposed-core-promotion-only",
+    "required_providers": ["Google Cloud", "AWS", "Azure"],
+    "accepted_adr_required": true
+  },
+  "core_source_sha256": "sha256:1a39c40bc7521a4367b5b1f450504cd61f5dd351045dca10c3c862d6e854187d",
+  "promotions": [
+    {
+      "concept": "ai-inference-endpoint",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/077-ai-endpoint-and-identity-group-core-concepts.md"
+    },
+    {
+      "concept": "api-gateway",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+    },
+    {
+      "concept": "backup-plan",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+    },
+    {
+      "concept": "backup-vault",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+    },
+    {
+      "concept": "block-storage-volume",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+    },
+    {
+      "concept": "compute-instance",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+    },
+    {
+      "concept": "dedicated-interconnect",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+    },
+    {
+      "concept": "dns-zone",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+    },
+    {
+      "concept": "encryption-key",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+    },
+    {
+      "concept": "identity-group",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/077-ai-endpoint-and-identity-group-core-concepts.md"
+    },
+    {
+      "concept": "managed-cache",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+    },
+    {
+      "concept": "managed-file-storage",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+    },
+    {
+      "concept": "managed-nat",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+    },
+    {
+      "concept": "managed-secret",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+    },
+    {
+      "concept": "message-queue",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+    },
+    {
+      "concept": "message-subscription",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+    },
+    {
+      "concept": "message-topic",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+    },
+    {
+      "concept": "network-peering",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+    },
+    {
+      "concept": "object-storage-container",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+    },
+    {
+      "concept": "private-endpoint",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+    },
+    {
+      "concept": "serverless-function",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+    },
+    {
+      "concept": "vpn-connection",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+    },
+    {
+      "concept": "vpn-gateway",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+    },
+    {
+      "concept": "workflow",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+    }
+  ],
+  "provider_comparisons": [
+    {
+      "concept": "ai-inference-endpoint",
+      "evidence_ref": "specs/061-azure-cloud-dialect/evidence/core-promotion-spike.json#ai-inference-endpoint",
+      "sources": {
+        "google": "https://cloud.google.com/vertex-ai/docs/predictions/get-online-predictions",
+        "aws": "https://docs.aws.amazon.com/sagemaker/latest/dg/realtime-endpoints.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/machine-learning/concept-endpoints"
+      }
+    },
+    {
+      "concept": "api-gateway",
+      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#api-gateway",
+      "sources": {
+        "google": "https://cloud.google.com/api-gateway/docs/about-api-gateway",
+        "aws": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/api-management/api-management-gateways-overview"
+      }
+    },
+    {
+      "concept": "backup-plan",
+      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#backup-plan",
+      "sources": {
+        "google": "https://cloud.google.com/backup-disaster-recovery/docs/concepts/backup-plans",
+        "aws": "https://docs.aws.amazon.com/aws-backup/latest/devguide/about-backup-plans.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/backup/backup-architecture"
+      }
+    },
+    {
+      "concept": "backup-vault",
+      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#backup-vault",
+      "sources": {
+        "google": "https://cloud.google.com/backup-disaster-recovery/docs/concepts/backup-vault",
+        "aws": "https://docs.aws.amazon.com/aws-backup/latest/devguide/vaults.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/backup/backup-vault-overview"
+      }
+    },
+    {
+      "concept": "block-storage-volume",
+      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#block-storage-volume",
+      "sources": {
+        "google": "https://cloud.google.com/compute/docs/disks",
+        "aws": "https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/virtual-machines/managed-disks-overview"
+      }
+    },
+    {
+      "concept": "compute-instance",
+      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#compute-instance",
+      "sources": {
+        "google": "https://cloud.google.com/compute/docs/instances",
+        "aws": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Instances.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/virtual-machines/overview"
+      }
+    },
+    {
+      "concept": "dedicated-interconnect",
+      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#dedicated-interconnect",
+      "sources": {
+        "google": "https://cloud.google.com/network-connectivity/docs/interconnect/concepts/overview",
+        "aws": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/Welcome.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/expressroute/expressroute-introduction"
+      }
+    },
+    {
+      "concept": "dns-zone",
+      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#dns-zone",
+      "sources": {
+        "google": "https://cloud.google.com/dns/docs/zones",
+        "aws": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/hosted-zones-working-with.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/dns/dns-zones-records"
+      }
+    },
+    {
+      "concept": "encryption-key",
+      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#encryption-key",
+      "sources": {
+        "google": "https://cloud.google.com/kms/docs/resource-hierarchy",
+        "aws": "https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/key-vault/keys/about-keys"
+      }
+    },
+    {
+      "concept": "identity-group",
+      "evidence_ref": "specs/061-azure-cloud-dialect/evidence/core-promotion-spike.json#identity-group",
+      "sources": {
+        "google": "https://cloud.google.com/identity/docs/groups",
+        "aws": "https://docs.aws.amazon.com/singlesignon/latest/userguide/users-groups-provisioning.html",
+        "azure": "https://learn.microsoft.com/en-us/entra/fundamentals/how-to-manage-groups"
+      }
+    },
+    {
+      "concept": "managed-cache",
+      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#managed-cache",
+      "sources": {
+        "google": "https://cloud.google.com/memorystore/docs/redis/memorystore-for-redis-overview",
+        "aws": "https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/WhatIs.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/redis/overview"
+      }
+    },
+    {
+      "concept": "managed-file-storage",
+      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#managed-file-storage",
+      "sources": {
+        "google": "https://cloud.google.com/filestore/docs/overview",
+        "aws": "https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/storage/files/storage-files-introduction"
+      }
+    },
+    {
+      "concept": "managed-nat",
+      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#managed-nat",
+      "sources": {
+        "google": "https://cloud.google.com/nat/docs/overview",
+        "aws": "https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-basics.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/nat-gateway/nat-overview"
+      }
+    },
+    {
+      "concept": "managed-secret",
+      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#managed-secret",
+      "sources": {
+        "google": "https://cloud.google.com/secret-manager/docs/overview",
+        "aws": "https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/key-vault/secrets/about-secrets"
+      }
+    },
+    {
+      "concept": "message-queue",
+      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#message-queue",
+      "sources": {
+        "google": "https://cloud.google.com/tasks/docs/dual-overview",
+        "aws": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions"
+      }
+    },
+    {
+      "concept": "message-subscription",
+      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#message-subscription",
+      "sources": {
+        "google": "https://cloud.google.com/pubsub/docs/subscription-overview",
+        "aws": "https://docs.aws.amazon.com/sns/latest/dg/sns-create-subscribe-endpoint-to-topic.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions"
+      }
+    },
+    {
+      "concept": "message-topic",
+      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#message-topic",
+      "sources": {
+        "google": "https://cloud.google.com/pubsub/docs/publish-message-overview",
+        "aws": "https://docs.aws.amazon.com/sns/latest/dg/sns-create-topic.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions"
+      }
+    },
+    {
+      "concept": "network-peering",
+      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#network-peering",
+      "sources": {
+        "google": "https://cloud.google.com/vpc/docs/vpc-peering",
+        "aws": "https://docs.aws.amazon.com/vpc/latest/peering/working-with-vpc-peering.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-peering-overview"
+      }
+    },
+    {
+      "concept": "object-storage-container",
+      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#object-storage-container",
+      "sources": {
+        "google": "https://cloud.google.com/storage/docs/buckets",
+        "aws": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingBucket.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction"
+      }
+    },
+    {
+      "concept": "private-endpoint",
+      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#private-endpoint",
+      "sources": {
+        "google": "https://cloud.google.com/vpc/docs/about-accessing-vpc-hosted-services-endpoints",
+        "aws": "https://docs.aws.amazon.com/vpc/latest/userguide/endpoint-services-overview.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview"
+      }
+    },
+    {
+      "concept": "serverless-function",
+      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#serverless-function",
+      "sources": {
+        "google": "https://cloud.google.com/functions/docs/concepts/overview",
+        "aws": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-functions.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview"
+      }
+    },
+    {
+      "concept": "vpn-connection",
+      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#vpn-connection",
+      "sources": {
+        "google": "https://cloud.google.com/network-connectivity/docs/vpn/concepts/overview",
+        "aws": "https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways"
+      }
+    },
+    {
+      "concept": "vpn-gateway",
+      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#vpn-gateway",
+      "sources": {
+        "google": "https://cloud.google.com/network-connectivity/docs/vpn/concepts/overview",
+        "aws": "https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways"
+      }
+    },
+    {
+      "concept": "workflow",
+      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#workflow",
+      "sources": {
+        "google": "https://cloud.google.com/workflows/docs/overview",
+        "aws": "https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/logic-apps/logic-apps-overview"
+      }
+    }
+  ],
+  "reused_core_concepts": [
+    {
+      "concept": "ai-inference-endpoint",
+      "google_rules": ["google/vertex-ai-endpoint", "google/vertex-ai-model-garden-endpoint"]
+    },
+    {
+      "concept": "allocated-network-range",
+      "google_rules": ["google/private-services-access-range"]
+    },
+    {
+      "concept": "api-gateway",
+      "google_rules": ["google/api-gateway", "google/cloud-endpoints-service"]
+    },
+    {
+      "concept": "backup-plan",
+      "google_rules": ["google/backup-dr-backup-plan", "google/gke-backup-plan"]
+    },
+    {
+      "concept": "backup-vault",
+      "google_rules": ["google/backup-dr-backup-plan", "google/backup-dr-backup-vault"]
+    },
+    {
+      "concept": "block-storage-volume",
+      "google_rules": ["google/persistent-disk", "google/regional-persistent-disk"]
+    },
+    {
+      "concept": "compute-instance",
+      "google_rules": [
+        "google/compute-engine-instance",
+        "google/compute-instance-from-machine-image",
+        "google/compute-instance-from-template",
+        "google/tpu-vm"
+      ]
+    },
+    {
+      "concept": "dedicated-interconnect",
+      "google_rules": ["google/cloud-interconnect"]
+    },
+    {
+      "concept": "dns-zone",
+      "google_rules": ["google/cloud-dns-managed-zone", "google/cloud-dns-record-set"]
+    },
+    {
+      "concept": "encryption-key",
+      "google_rules": ["google/cloud-kms-key", "google/cloud-kms-key-version"]
+    },
+    {
+      "concept": "identity-group",
+      "google_rules": ["google/cloud-identity-group", "google/cloud-identity-group-membership"]
+    },
+    {
+      "concept": "kubernetes-cluster",
+      "google_rules": [
+        "google/bare-metal-gdc-admin-cluster",
+        "google/bare-metal-gdc-cluster",
+        "google/edge-container-cluster",
+        "google/gke-attached-cluster",
+        "google/gke-aws-cluster",
+        "google/gke-azure-cluster",
+        "google/gke-cluster",
+        "google/gke-node-pool",
+        "google/vmware-gdc-admin-cluster",
+        "google/vmware-gdc-cluster"
+      ]
+    },
+    {
+      "concept": "kubernetes-node-pool",
+      "google_rules": [
+        "google/bare-metal-gdc-node-pool",
+        "google/edge-container-node-pool",
+        "google/gke-aws-node-pool",
+        "google/gke-azure-node-pool",
+        "google/gke-node-pool",
+        "google/vmware-gdc-node-pool"
+      ]
+    },
+    {
+      "concept": "load-balancer",
+      "google_rules": ["google/application-load-balancer", "google/regional-load-balancer"]
+    },
+    {
+      "concept": "managed-cache",
+      "google_rules": [
+        "google/memorystore-instance",
+        "google/memorystore-memcached-instance",
+        "google/memorystore-redis-cluster",
+        "google/memorystore-redis-instance"
+      ]
+    },
+    {
+      "concept": "managed-database",
+      "google_rules": [
+        "google/alloydb-cluster",
+        "google/alloydb-instance",
+        "google/bigtable-instance",
+        "google/bigtable-table",
+        "google/cloud-sql-instance",
+        "google/firebase-realtime-database",
+        "google/firestore-database",
+        "google/oracle-autonomous-database",
+        "google/spanner-database",
+        "google/spanner-instance"
+      ]
+    },
+    {
+      "concept": "managed-file-storage",
+      "google_rules": [
+        "google/filestore-instance",
+        "google/managed-lustre-instance",
+        "google/netapp-volume",
+        "google/parallelstore-instance"
+      ]
+    },
+    {
+      "concept": "managed-nat",
+      "google_rules": ["google/cloud-nat"]
+    },
+    {
+      "concept": "managed-secret",
+      "google_rules": [
+        "google/secret-manager-regional-secret",
+        "google/secret-manager-regional-secret-version",
+        "google/secret-manager-secret",
+        "google/secret-manager-secret-version"
+      ]
+    },
+    {
+      "concept": "message-queue",
+      "google_rules": ["google/cloud-tasks-queue"]
+    },
+    {
+      "concept": "message-subscription",
+      "google_rules": ["google/pubsub-lite-subscription", "google/pubsub-subscription"]
+    },
+    {
+      "concept": "message-topic",
+      "google_rules": [
+        "google/managed-kafka-topic",
+        "google/pubsub-lite-topic",
+        "google/pubsub-subscription",
+        "google/pubsub-topic"
+      ]
+    },
+    {
+      "concept": "network-peering",
+      "google_rules": ["google/vpc-network-peering"]
+    },
+    {
+      "concept": "object-storage-container",
+      "google_rules": ["google/cloud-storage-bucket", "google/cloud-storage-bucket-iam-member"]
+    },
+    {
+      "concept": "private-endpoint",
+      "google_rules": ["google/private-service-connect-endpoint"]
+    },
+    {
+      "concept": "serverless-function",
+      "google_rules": ["google/cloud-run-function", "google/cloud-run-function-v2"]
+    },
+    {
+      "concept": "service-identity",
+      "google_rules": [
+        "google/iam-service-account",
+        "google/project-iam-binding",
+        "google/project-iam-member",
+        "google/service-account-key"
+      ]
+    },
+    {
+      "concept": "service-identity-binding",
+      "google_rules": [
+        "google/project-iam-binding",
+        "google/project-iam-member",
+        "google/project-iam-policy"
+      ]
+    },
+    {
+      "concept": "service-networking-detail",
+      "google_rules": ["google/service-networking-connection"]
+    },
+    {
+      "concept": "subnet",
+      "google_rules": [
+        "google/cloud-run-service",
+        "google/edge-network-subnet",
+        "google/gke-cluster",
+        "google/oracle-odb-subnet",
+        "google/private-service-connect-endpoint",
+        "google/vmware-engine-subnet",
+        "google/vpc-subnetwork"
+      ]
+    },
+    {
+      "concept": "virtual-network",
+      "google_rules": [
+        "google/classic-vpn-gateway",
+        "google/cloud-ids-endpoint",
+        "google/cloud-router",
+        "google/cloud-run-service",
+        "google/cloud-sql-instance",
+        "google/edge-network",
+        "google/gke-cluster",
+        "google/ha-vpn-gateway",
+        "google/oracle-odb-network",
+        "google/parallelstore-instance",
+        "google/private-service-connect-endpoint",
+        "google/private-services-access-range",
+        "google/serverless-vpc-access-connector",
+        "google/service-networking-connection",
+        "google/vmware-engine-network",
+        "google/vpc-firewall-rule",
+        "google/vpc-network",
+        "google/vpc-network-peering",
+        "google/vpc-subnetwork"
+      ]
+    },
+    {
+      "concept": "vpn-connection",
+      "google_rules": ["google/cloud-vpn-tunnel"]
+    },
+    {
+      "concept": "vpn-gateway",
+      "google_rules": ["google/classic-vpn-gateway", "google/ha-vpn-gateway"]
+    },
+    {
+      "concept": "workflow",
+      "google_rules": ["google/workflows-workflow"]
+    }
+  ],
+  "google_specific_concepts": [
+    "access-binding",
+    "access-context-policy",
+    "agent-gateway",
+    "agent-registry-binding",
+    "agent-registry-service",
+    "alloydb-instance",
+    "analytics-hub-data-exchange",
+    "analytics-hub-listing",
+    "analytics-hub-subscription",
+    "api-hub",
+    "apigee-api-product",
+    "apigee-api-proxy",
+    "apigee-environment",
+    "apigee-instance",
+    "apigee-organization",
+    "app-engine-application",
+    "app-engine-service-version",
+    "app-hub-application",
+    "app-hub-service",
+    "app-hub-workload",
+    "artifact-registry-repository",
+    "assured-workloads-boundary",
+    "beyondcorp-gateway-application",
+    "beyondcorp-security-gateway",
+    "biglake-catalog",
+    "biglake-database",
+    "biglake-table",
+    "bigquery-dataset",
+    "bigquery-table",
+    "bigtable-table",
+    "binary-authorization-attestor",
+    "binary-authorization-policy",
+    "blockchain-node",
+    "certificate-map",
+    "chronicle-detection-rule",
+    "chronicle-environment",
+    "chronicle-feed",
+    "cloud-armor-security-policy",
+    "cloud-armor-security-rule",
+    "cloud-asset-feed",
+    "cloud-build-trigger",
+    "cloud-build-worker-pool",
+    "cloud-cdn-origin",
+    "cloud-cdn-service",
+    "cloud-deploy-automation",
+    "cloud-deploy-pipeline",
+    "cloud-deploy-target",
+    "cloud-dns-record-set",
+    "cloud-domains-registration",
+    "cloud-identity-group-membership",
+    "cloud-ids-endpoint",
+    "cloud-kms-key-ring",
+    "cloud-kms-key-version",
+    "cloud-logging-bucket",
+    "cloud-logging-scope",
+    "cloud-logging-sink",
+    "cloud-monitoring-alerting-policy",
+    "cloud-monitoring-service",
+    "cloud-monitoring-slo",
+    "cloud-router",
+    "cloud-run-job",
+    "cloud-run-service",
+    "cloud-scheduler-job",
+    "cloud-trace-scope",
+    "colab-enterprise-configuration",
+    "colab-enterprise-runtime",
+    "compliance-manager-configuration",
+    "compliance-manager-framework",
+    "composer-environment",
+    "compute-instance-group",
+    "conversational-agent",
+    "cx-agent-studio-agent",
+    "cx-agent-studio-app",
+    "cx-agent-studio-configuration",
+    "data-catalog-entry-group",
+    "data-catalog-taxonomy",
+    "data-fusion-instance",
+    "data-pipeline",
+    "database-migration-connection",
+    "database-migration-job",
+    "dataflow-job",
+    "dataform-repository",
+    "dataform-workflow",
+    "dataplex-asset",
+    "dataplex-data-product",
+    "dataplex-lake",
+    "dataplex-zone",
+    "dataproc-batch",
+    "dataproc-cluster",
+    "dataproc-metastore",
+    "dataproc-workflow-template",
+    "datastream-stream",
+    "discovery-engine",
+    "discovery-engine-assistant",
+    "discovery-engine-data-store",
+    "document-ai-processor",
+    "edge-network-interconnect-attachment",
+    "eventarc-channel",
+    "eventarc-message-bus",
+    "eventarc-pipeline",
+    "eventarc-trigger",
+    "firebase-app-hosting-backend",
+    "firebase-data-connect-service",
+    "firebase-hosting-site",
+    "firewall-policy",
+    "firewall-policy-rule",
+    "gke-backup-channel",
+    "gke-fleet",
+    "gke-fleet-membership",
+    "gke-restore-plan",
+    "google-cloud-folder",
+    "google-cloud-project",
+    "healthcare-dataset",
+    "healthcare-pipeline",
+    "healthcare-store",
+    "hypercompute-cluster",
+    "iap-tunnel-destination-group",
+    "identity-platform",
+    "identity-platform-tenant",
+    "integration-connector",
+    "integration-connector-endpoint",
+    "interconnect-vlan-attachment",
+    "looker-instance",
+    "managed-certificate",
+    "managed-kafka-cluster",
+    "managed-kafka-connect-cluster",
+    "managed-kafka-connector",
+    "managed-microsoft-ad-domain",
+    "managed-microsoft-ad-peering",
+    "managed-prometheus-project-link",
+    "migration-center-assessment",
+    "migration-center-discovery-client",
+    "migration-center-source",
+    "model-armor-floor-setting",
+    "model-armor-template",
+    "multicast-configuration",
+    "multicast-domain",
+    "multicast-domain-group",
+    "netapp-storage-pool",
+    "network-connectivity-center-hub",
+    "network-connectivity-center-spoke",
+    "network-services-gateway",
+    "network-services-route",
+    "oracle-database-vm-cluster",
+    "oracle-exadata-infrastructure",
+    "private-ca-pool",
+    "private-certificate",
+    "private-certificate-authority",
+    "private-service-connect-service-attachment",
+    "privileged-access-entitlement",
+    "privileged-access-settings",
+    "recaptcha-enterprise-key",
+    "saas-runtime-service",
+    "saas-runtime-tenant",
+    "secret-manager-secret-version",
+    "secure-source-manager-instance",
+    "security-command-center-source",
+    "security-posture",
+    "security-posture-deployment",
+    "sensitive-data-protection-scan",
+    "sensitive-data-protection-template",
+    "serverless-vpc-access-connector",
+    "service-credential",
+    "service-directory-endpoint",
+    "service-directory-namespace",
+    "service-directory-service",
+    "service-enablement",
+    "service-mesh",
+    "service-perimeter",
+    "source-connection",
+    "source-repository",
+    "spanner-database",
+    "storage-transfer-agent-pool",
+    "storage-transfer-job",
+    "vector-search-collection",
+    "vertex-ai-dataset",
+    "vertex-ai-feature-store",
+    "vertex-ai-index-endpoint",
+    "vertex-ai-metadata-store",
+    "vertex-ai-persistent-resource",
+    "vertex-ai-reasoning-engine",
+    "vertex-ai-vector-index",
+    "vertex-ai-workbench-instance",
+    "vm-manager-policy",
+    "vmware-engine-cluster",
+    "vmware-engine-private-cloud",
+    "vpc-firewall-rule",
+    "web-security-scan",
+    "workforce-identity-pool",
+    "workload-identity-pool",
+    "workstation",
+    "workstation-configuration",
+    "workstations-cluster"
+  ],
+  "google_specific_rationale": "AWS/Azure comparison promoted only stable provider-neutral identities. Product hierarchy, topology, lifecycle, and weak equivalences remain Google-specific.",
+  "rejected_candidates": [
+    {
+      "concepts": ["artifact-registry-repository"],
+      "disposition": "keep-google-specific",
+      "reason": "Azure registry and Google/AWS repository provider boundaries differ."
+    },
+    {
+      "concepts": ["bigquery-dataset", "bigquery-table"],
+      "disposition": "keep-google-specific",
+      "reason": "Warehouse dataset, cluster, workspace, database, and table boundaries differ across providers."
+    },
+    {
+      "concepts": ["cloud-kms-key-ring"],
+      "disposition": "keep-google-specific",
+      "reason": "AWS has no key-ring hierarchy; only encryption-key identity is core."
+    },
+    {
+      "concepts": ["cloud-run-job", "cloud-run-service"],
+      "disposition": "keep-google-specific",
+      "reason": "Managed-container workload and deployment boundaries differ across Google Cloud, AWS, and Azure."
+    },
+    {
+      "concepts": ["firewall-policy", "vpc-firewall-rule"],
+      "disposition": "keep-google-specific",
+      "reason": "GCP firewall, AWS security group or network ACL, and Azure NSG semantics differ."
+    },
+    {
+      "concepts": ["network-connectivity-center-hub"],
+      "disposition": "keep-google-specific",
+      "reason": "NCC, Cloud WAN or Transit Gateway, and Virtual WAN control-plane identities are not yet equivalent."
+    }
+  ],
+  "limitations": [
+    "Core identity does not claim cross-provider feature parity.",
+    "Provider-specific contexts, relations, composition, hierarchy, and configuration remain in provider dialects.",
+    "Future promotion or semantic widening requires official comparison and an accepted ADR."
+  ]
+}

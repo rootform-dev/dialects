@@ -1,0 +1,101 @@
+concept "vault-dedicated-cluster" {
+  kind        = entity
+  description = "A HashiCorp-managed Vault Dedicated cluster on HCP."
+}
+
+concept "vault-plugin" {
+  kind        = entity
+  description = "A custom plugin installed into an HCP Vault Dedicated cluster."
+}
+
+rule "vault-cluster" {
+  match {
+    kind = "resource"
+    type = "hcp_vault_cluster"
+  }
+
+  as = concept.vault-dedicated-cluster
+
+  context {
+    as  = context.core.network
+    to  = concept.core.virtual-network
+    via = source.hvn_id
+  }
+
+  context {
+    as  = context.core.ownership
+    to  = concept.project
+    via = source.project_id
+  }
+
+  relation "replicates-from" {
+    to  = concept.vault-dedicated-cluster
+    via = source.primary_link
+  }
+}
+
+rule "vault-cluster-lookup" {
+  match {
+    kind = "data"
+    type = "hcp_vault_cluster"
+  }
+
+  as = concept.vault-dedicated-cluster
+
+  context {
+    as  = context.core.network
+    to  = concept.core.virtual-network
+    via = source.hvn_id
+  }
+
+  context {
+    as  = context.core.ownership
+    to  = concept.project
+    via = source.project_id
+  }
+
+  relation "replicates-from" {
+    to  = concept.vault-dedicated-cluster
+    via = source.primary_link
+  }
+}
+
+rule "vault-plugin" {
+  match {
+    kind = "resource"
+    type = "hcp_vault_plugin"
+  }
+
+  as = concept.vault-plugin
+
+  context {
+    as  = context.core.ownership
+    to  = concept.project
+    via = source.project_id
+  }
+
+  relation "extends-cluster" {
+    to  = concept.vault-dedicated-cluster
+    via = source.cluster_id
+  }
+}
+
+rule "vault-plugin-lookup" {
+  match {
+    kind = "data"
+    type = "hcp_vault_plugin"
+  }
+
+  as = concept.vault-plugin
+
+  context {
+    as  = context.core.ownership
+    to  = concept.project
+    via = source.project_id
+  }
+
+  relation "extends-cluster" {
+    to  = concept.vault-dedicated-cluster
+    via = source.cluster_id
+  }
+}

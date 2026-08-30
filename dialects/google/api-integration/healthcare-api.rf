@@ -1,0 +1,92 @@
+concept "healthcare-dataset" {
+  kind        = scope
+  description = "A Cloud Healthcare API dataset containing healthcare data stores."
+}
+
+concept "healthcare-store" {
+  kind        = entity
+  description = "A FHIR, DICOM, HL7v2, or consent store in a Cloud Healthcare API dataset."
+}
+
+concept "healthcare-pipeline" {
+  kind        = entity
+  description = "A Cloud Healthcare API pipeline moving or transforming healthcare data."
+}
+
+rule "healthcare-dataset" {
+  match {
+    kind = "resource"
+    type = "google_healthcare_dataset"
+  }
+
+  as = concept.healthcare-dataset
+}
+
+rule "healthcare-fhir-store" {
+  match {
+    kind = "resource"
+    type = "google_healthcare_fhir_store"
+  }
+
+  as = concept.healthcare-store
+
+  context {
+    as  = context.core.ownership
+    to  = concept.healthcare-dataset
+    via = source.dataset
+  }
+}
+
+rule "healthcare-dicom-store" {
+  match {
+    kind = "resource"
+    type = "google_healthcare_dicom_store"
+  }
+
+  as = concept.healthcare-store
+
+  context {
+    as  = context.core.ownership
+    to  = concept.healthcare-dataset
+    via = source.dataset
+  }
+}
+
+rule "healthcare-hl7v2-store" {
+  match {
+    kind = "resource"
+    type = "google_healthcare_hl7_v2_store"
+  }
+
+  as = concept.healthcare-store
+
+  context {
+    as  = context.core.ownership
+    to  = concept.healthcare-dataset
+    via = source.dataset
+  }
+}
+
+rule "healthcare-consent-store" {
+  match {
+    kind = "resource"
+    type = "google_healthcare_consent_store"
+  }
+
+  as = concept.healthcare-store
+
+  context {
+    as  = context.core.ownership
+    to  = concept.healthcare-dataset
+    via = source.dataset
+  }
+}
+
+rule "healthcare-pipeline" {
+  match {
+    kind = "resource"
+    type = "google_healthcare_pipeline_job"
+  }
+
+  as = concept.healthcare-pipeline
+}

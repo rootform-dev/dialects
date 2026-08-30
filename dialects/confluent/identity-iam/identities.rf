@@ -1,0 +1,82 @@
+concept "identity-provider" {
+  kind        = entity
+  description = "An OpenID Connect identity provider trusted by Confluent Cloud."
+}
+
+concept "identity-pool" {
+  kind        = entity
+  description = "A Confluent Cloud identity pool mapping external identities to access."
+}
+
+concept "identity-access-configuration" {
+  kind        = detail
+  description = "Identity mapping, role binding, or access configuration in Confluent Cloud."
+}
+
+rule "service-account" {
+  match {
+    kind = "resource"
+    type = "confluent_service_account"
+  }
+
+  as = concept.core.service-identity
+}
+
+rule "identity-provider" {
+  match {
+    kind = "resource"
+    type = "confluent_identity_provider"
+  }
+
+  as = concept.identity-provider
+}
+
+rule "identity-pool" {
+  match {
+    kind = "resource"
+    type = "confluent_identity_pool"
+  }
+
+  as = concept.identity-pool
+
+  relation "trusts" {
+    to  = concept.identity-provider
+    via = source.identity_provider[0].id
+  }
+}
+
+rule "group-mapping" {
+  match {
+    kind = "resource"
+    type = "confluent_group_mapping"
+  }
+
+  as = concept.identity-access-configuration
+}
+
+rule "role-binding" {
+  match {
+    kind = "resource"
+    type = "confluent_role_binding"
+  }
+
+  as = concept.identity-access-configuration
+}
+
+rule "ip-group" {
+  match {
+    kind = "resource"
+    type = "confluent_ip_group"
+  }
+
+  as = concept.identity-access-configuration
+}
+
+rule "ip-filter" {
+  match {
+    kind = "resource"
+    type = "confluent_ip_filter"
+  }
+
+  as = concept.identity-access-configuration
+}

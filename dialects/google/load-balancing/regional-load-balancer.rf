@@ -1,0 +1,9 @@
+rule "regional-load-balancer" {
+  match {
+    kind  = "resource"
+    type  = "google_compute_forwarding_rule"
+    where = source.load_balancing_scheme != ""
+  }
+
+  as = concept.core.load-balancer
+}

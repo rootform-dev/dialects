@@ -1,0 +1,714 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-30",
+  "dialect": "snowflake",
+  "product_name": "Snowflake",
+  "presentation_sha256": "sha256:ec1864abd9570afdc175aa02b9af6a66b41242ce1209ef7e0efd11975c86133e",
+  "integrity_boundary": "presentation integrity is separate from semantic_sources_sha256; label or identity drift changes this digest only",
+  "rules": [
+    {
+      "id": "snowflake/account",
+      "terraform_type": "snowflake_account",
+      "label": "Snowflake account",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/account.md"
+    },
+    {
+      "id": "snowflake/account-role",
+      "terraform_type": "snowflake_account_role",
+      "label": "Snowflake account role",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/account_role.md"
+    },
+    {
+      "id": "snowflake/adaptive-warehouse",
+      "terraform_type": "snowflake_warehouse_adaptive",
+      "label": "Snowflake adaptive warehouse",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/warehouse_adaptive.md"
+    },
+    {
+      "id": "snowflake/alert",
+      "terraform_type": "snowflake_alert",
+      "label": "Snowflake alert",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/alert.md"
+    },
+    {
+      "id": "snowflake/amazon-api-gateway-integration",
+      "terraform_type": "snowflake_api_integration_amazon_api_gateway",
+      "label": "Snowflake API integration for Amazon API Gateway",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_amazon_api_gateway.md"
+    },
+    {
+      "id": "snowflake/api-integration",
+      "terraform_type": "snowflake_api_integration",
+      "label": "Snowflake API integration",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration.md"
+    },
+    {
+      "id": "snowflake/authorization-code-api-authentication",
+      "terraform_type": "snowflake_api_authentication_integration_with_authorization_code_grant",
+      "label": "Snowflake API authentication integration with authorization code grant",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_authentication_integration_with_authorization_code_grant.md"
+    },
+    {
+      "id": "snowflake/aws-glue-catalog-integration",
+      "terraform_type": "snowflake_catalog_integration_aws_glue",
+      "label": "Snowflake catalog integration for AWS Glue",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/catalog_integration_aws_glue.md"
+    },
+    {
+      "id": "snowflake/aws-storage-integration",
+      "terraform_type": "snowflake_storage_integration_aws",
+      "label": "Snowflake storage integration for Amazon S3",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/storage_integration_aws.md"
+    },
+    {
+      "id": "snowflake/azure-api-management-integration",
+      "terraform_type": "snowflake_api_integration_azure_api_management",
+      "label": "Snowflake API integration for Azure API Management",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_azure_api_management.md"
+    },
+    {
+      "id": "snowflake/azure-storage-integration",
+      "terraform_type": "snowflake_storage_integration_azure",
+      "label": "Snowflake storage integration for Azure Storage",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/storage_integration_azure.md"
+    },
+    {
+      "id": "snowflake/client-credentials-api-authentication",
+      "terraform_type": "snowflake_api_authentication_integration_with_client_credentials",
+      "label": "Snowflake API authentication integration with client credentials",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_authentication_integration_with_client_credentials.md"
+    },
+    {
+      "id": "snowflake/compute-pool",
+      "terraform_type": "snowflake_compute_pool",
+      "label": "Snowpark Container Services compute pool",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/compute_pool.md"
+    },
+    {
+      "id": "snowflake/cortex-agent",
+      "terraform_type": "snowflake_cortex_agent",
+      "label": "Cortex Agent",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/cortex_agent.md"
+    },
+    {
+      "id": "snowflake/cortex-search-service",
+      "terraform_type": "snowflake_cortex_search_service",
+      "label": "Cortex Search service",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/cortex_search_service.md"
+    },
+    {
+      "id": "snowflake/current-account",
+      "terraform_type": "snowflake_current_account",
+      "label": "Current Snowflake account configuration",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/current_account.md"
+    },
+    {
+      "id": "snowflake/current-organization-account",
+      "terraform_type": "snowflake_current_organization_account",
+      "label": "Current Snowflake organization account configuration",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/current_organization_account.md"
+    },
+    {
+      "id": "snowflake/custom-client-oauth-integration",
+      "terraform_type": "snowflake_oauth_integration_for_custom_clients",
+      "label": "Snowflake OAuth integration for custom clients",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/oauth_integration_for_custom_clients.md"
+    },
+    {
+      "id": "snowflake/database",
+      "terraform_type": "snowflake_database",
+      "label": "Snowflake database",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/database.md"
+    },
+    {
+      "id": "snowflake/database-role",
+      "terraform_type": "snowflake_database_role",
+      "label": "Snowflake database role",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/database_role.md"
+    },
+    {
+      "id": "snowflake/dynamic-table",
+      "terraform_type": "snowflake_dynamic_table",
+      "label": "Snowflake dynamic table",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/dynamic_table.md"
+    },
+    {
+      "id": "snowflake/email-notification-integration",
+      "terraform_type": "snowflake_email_notification_integration",
+      "label": "Snowflake email notification integration",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/email_notification_integration.md"
+    },
+    {
+      "id": "snowflake/external-access-integration",
+      "terraform_type": "snowflake_external_access_integration",
+      "label": "Snowflake external access integration",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/external_access_integration.md"
+    },
+    {
+      "id": "snowflake/external-azure-stage",
+      "terraform_type": "snowflake_stage_external_azure",
+      "label": "Snowflake external stage for Azure Storage",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stage_external_azure.md"
+    },
+    {
+      "id": "snowflake/external-function",
+      "terraform_type": "snowflake_external_function",
+      "label": "Snowflake external function",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/external_function.md"
+    },
+    {
+      "id": "snowflake/external-gcs-stage",
+      "terraform_type": "snowflake_stage_external_gcs",
+      "label": "Snowflake external stage for Google Cloud Storage",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stage_external_gcs.md"
+    },
+    {
+      "id": "snowflake/external-mcp-dynamic-client-integration",
+      "terraform_type": "snowflake_api_integration_external_mcp_dynamic_client",
+      "label": "Snowflake external MCP dynamic client API integration",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_external_mcp_dynamic_client.md"
+    },
+    {
+      "id": "snowflake/external-mcp-oauth2-integration",
+      "terraform_type": "snowflake_api_integration_external_mcp_oauth2",
+      "label": "Snowflake external MCP OAuth 2.0 API integration",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_external_mcp_oauth2.md"
+    },
+    {
+      "id": "snowflake/external-oauth-integration",
+      "terraform_type": "snowflake_external_oauth_integration",
+      "label": "Snowflake external OAuth integration",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/external_oauth_integration.md"
+    },
+    {
+      "id": "snowflake/external-s3-compatible-stage",
+      "terraform_type": "snowflake_stage_external_s3_compatible",
+      "label": "Snowflake external stage for S3-compatible storage",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stage_external_s3_compatible.md"
+    },
+    {
+      "id": "snowflake/external-s3-stage",
+      "terraform_type": "snowflake_stage_external_s3",
+      "label": "Snowflake external stage for Amazon S3",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stage_external_s3.md"
+    },
+    {
+      "id": "snowflake/external-table",
+      "terraform_type": "snowflake_external_table",
+      "label": "Snowflake external table",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/external_table.md"
+    },
+    {
+      "id": "snowflake/external-volume",
+      "terraform_type": "snowflake_external_volume",
+      "label": "Snowflake external volume",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/external_volume.md"
+    },
+    {
+      "id": "snowflake/failover-group",
+      "terraform_type": "snowflake_failover_group",
+      "label": "Snowflake failover group",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/failover_group.md"
+    },
+    {
+      "id": "snowflake/gcs-storage-integration",
+      "terraform_type": "snowflake_storage_integration_gcs",
+      "label": "Snowflake storage integration for Google Cloud Storage",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/storage_integration_gcs.md"
+    },
+    {
+      "id": "snowflake/git-repository",
+      "terraform_type": "snowflake_git_repository",
+      "label": "Snowflake Git repository",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/git_repository.md"
+    },
+    {
+      "id": "snowflake/github-app-repository-integration",
+      "terraform_type": "snowflake_api_integration_git_repository_github_app",
+      "label": "Snowflake GitHub App repository API integration",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_git_repository_github_app.md"
+    },
+    {
+      "id": "snowflake/google-cloud-api-gateway-integration",
+      "terraform_type": "snowflake_api_integration_google_cloud_api_gateway",
+      "label": "Snowflake API integration for Google Cloud API Gateway",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_google_cloud_api_gateway.md"
+    },
+    {
+      "id": "snowflake/hybrid-table",
+      "terraform_type": "snowflake_hybrid_table",
+      "label": "Snowflake hybrid table",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/hybrid_table.md"
+    },
+    {
+      "id": "snowflake/iceberg-rest-catalog-integration",
+      "terraform_type": "snowflake_catalog_integration_iceberg_rest",
+      "label": "Snowflake catalog integration for Iceberg REST",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/catalog_integration_iceberg_rest.md"
+    },
+    {
+      "id": "snowflake/iceberg-table",
+      "terraform_type": "snowflake_iceberg_table",
+      "label": "Snowflake Apache Iceberg table",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/iceberg_table.md"
+    },
+    {
+      "id": "snowflake/iceberg-table-from-aws-glue",
+      "terraform_type": "snowflake_iceberg_table_from_aws_glue",
+      "label": "Snowflake Apache Iceberg table from AWS Glue",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/iceberg_table_from_aws_glue.md"
+    },
+    {
+      "id": "snowflake/iceberg-table-from-delta-files",
+      "terraform_type": "snowflake_iceberg_table_from_delta_files",
+      "label": "Snowflake Apache Iceberg table from Delta files",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/iceberg_table_from_delta_files.md"
+    },
+    {
+      "id": "snowflake/iceberg-table-from-files",
+      "terraform_type": "snowflake_iceberg_table_from_files",
+      "label": "Snowflake Apache Iceberg table from files",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/iceberg_table_from_files.md"
+    },
+    {
+      "id": "snowflake/iceberg-table-from-rest",
+      "terraform_type": "snowflake_iceberg_table_from_rest",
+      "label": "Snowflake Apache Iceberg table from REST catalog",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/iceberg_table_from_rest.md"
+    },
+    {
+      "id": "snowflake/image-repository",
+      "terraform_type": "snowflake_image_repository",
+      "label": "Snowpark Container Services image repository",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/image_repository.md"
+    },
+    {
+      "id": "snowflake/interactive-warehouse",
+      "terraform_type": "snowflake_warehouse_interactive",
+      "label": "Snowflake interactive warehouse",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/warehouse_interactive.md"
+    },
+    {
+      "id": "snowflake/internal-stage",
+      "terraform_type": "snowflake_stage_internal",
+      "label": "Snowflake internal stage",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stage_internal.md"
+    },
+    {
+      "id": "snowflake/job-service",
+      "terraform_type": "snowflake_job_service",
+      "label": "Snowpark Container Services job service",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/job_service.md"
+    },
+    {
+      "id": "snowflake/jwt-bearer-api-authentication",
+      "terraform_type": "snowflake_api_authentication_integration_with_jwt_bearer",
+      "label": "Snowflake API authentication integration with JWT bearer grant",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_authentication_integration_with_jwt_bearer.md"
+    },
+    {
+      "id": "snowflake/legacy-service-user",
+      "terraform_type": "snowflake_legacy_service_user",
+      "label": "Snowflake legacy service user",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/legacy_service_user.md"
+    },
+    {
+      "id": "snowflake/listing",
+      "terraform_type": "snowflake_listing",
+      "label": "Snowflake listing",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/listing.md"
+    },
+    {
+      "id": "snowflake/managed-account",
+      "terraform_type": "snowflake_managed_account",
+      "label": "Snowflake managed account",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/managed_account.md"
+    },
+    {
+      "id": "snowflake/mcp-server",
+      "terraform_type": "snowflake_mcp_server",
+      "label": "Snowflake-managed MCP server",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/mcp_server.md"
+    },
+    {
+      "id": "snowflake/network-policy",
+      "terraform_type": "snowflake_network_policy",
+      "label": "Snowflake network policy",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/network_policy.md"
+    },
+    {
+      "id": "snowflake/network-rule",
+      "terraform_type": "snowflake_network_rule",
+      "label": "Snowflake network rule",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/network_rule.md"
+    },
+    {
+      "id": "snowflake/notebook",
+      "terraform_type": "snowflake_notebook",
+      "label": "Snowflake Notebook",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/notebook.md"
+    },
+    {
+      "id": "snowflake/notification-integration",
+      "terraform_type": "snowflake_notification_integration",
+      "label": "Snowflake notification integration",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/notification_integration.md"
+    },
+    {
+      "id": "snowflake/oauth2-repository-integration",
+      "terraform_type": "snowflake_api_integration_git_repository_oauth2",
+      "label": "Snowflake OAuth 2.0 repository API integration",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_git_repository_oauth2.md"
+    },
+    {
+      "id": "snowflake/object-storage-catalog-integration",
+      "terraform_type": "snowflake_catalog_integration_object_storage",
+      "label": "Snowflake catalog integration for object storage",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/catalog_integration_object_storage.md"
+    },
+    {
+      "id": "snowflake/open-catalog-integration",
+      "terraform_type": "snowflake_catalog_integration_open_catalog",
+      "label": "Snowflake Open Catalog integration",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/catalog_integration_open_catalog.md"
+    },
+    {
+      "id": "snowflake/partner-application-oauth-integration",
+      "terraform_type": "snowflake_oauth_integration_for_partner_applications",
+      "label": "Snowflake OAuth integration for partner applications",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/oauth_integration_for_partner_applications.md"
+    },
+    {
+      "id": "snowflake/pipe",
+      "terraform_type": "snowflake_pipe",
+      "label": "Snowpipe pipe",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/pipe.md"
+    },
+    {
+      "id": "snowflake/postgres-instance",
+      "terraform_type": "snowflake_postgres_instance",
+      "label": "Snowflake Postgres instance",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/postgres_instance.md"
+    },
+    {
+      "id": "snowflake/primary-connection",
+      "terraform_type": "snowflake_primary_connection",
+      "label": "Snowflake primary connection",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/primary_connection.md"
+    },
+    {
+      "id": "snowflake/private-link-repository-integration",
+      "terraform_type": "snowflake_api_integration_git_repository_private_link",
+      "label": "Snowflake private link repository API integration",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_git_repository_private_link.md"
+    },
+    {
+      "id": "snowflake/resource-monitor",
+      "terraform_type": "snowflake_resource_monitor",
+      "label": "Snowflake resource monitor",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/resource_monitor.md"
+    },
+    {
+      "id": "snowflake/saml2-integration",
+      "terraform_type": "snowflake_saml2_integration",
+      "label": "Snowflake SAML2 security integration",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/saml2_integration.md"
+    },
+    {
+      "id": "snowflake/schema",
+      "terraform_type": "snowflake_schema",
+      "label": "Snowflake schema",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/schema.md"
+    },
+    {
+      "id": "snowflake/scim-integration",
+      "terraform_type": "snowflake_scim_integration",
+      "label": "Snowflake SCIM security integration",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/scim_integration.md"
+    },
+    {
+      "id": "snowflake/secondary-connection",
+      "terraform_type": "snowflake_secondary_connection",
+      "label": "Snowflake secondary connection",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/secondary_connection.md"
+    },
+    {
+      "id": "snowflake/secondary-database",
+      "terraform_type": "snowflake_secondary_database",
+      "label": "Snowflake secondary database",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/secondary_database.md"
+    },
+    {
+      "id": "snowflake/semantic-view",
+      "terraform_type": "snowflake_semantic_view",
+      "label": "Snowflake semantic view",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/semantic_view.md"
+    },
+    {
+      "id": "snowflake/service",
+      "terraform_type": "snowflake_service",
+      "label": "Snowpark Container Services service",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/service.md"
+    },
+    {
+      "id": "snowflake/service-user",
+      "terraform_type": "snowflake_service_user",
+      "label": "Snowflake service user",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/service_user.md"
+    },
+    {
+      "id": "snowflake/share",
+      "terraform_type": "snowflake_share",
+      "label": "Snowflake secure data share",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/share.md"
+    },
+    {
+      "id": "snowflake/shared-database",
+      "terraform_type": "snowflake_shared_database",
+      "label": "Snowflake database from a share",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/shared_database.md"
+    },
+    {
+      "id": "snowflake/stage",
+      "terraform_type": "snowflake_stage",
+      "label": "Snowflake stage",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stage.md"
+    },
+    {
+      "id": "snowflake/storage-integration",
+      "terraform_type": "snowflake_storage_integration",
+      "label": "Snowflake storage integration",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/storage_integration.md"
+    },
+    {
+      "id": "snowflake/stream-on-directory-table",
+      "terraform_type": "snowflake_stream_on_directory_table",
+      "label": "Snowflake stream on a directory table",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stream_on_directory_table.md"
+    },
+    {
+      "id": "snowflake/stream-on-external-table",
+      "terraform_type": "snowflake_stream_on_external_table",
+      "label": "Snowflake stream on an external table",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stream_on_external_table.md"
+    },
+    {
+      "id": "snowflake/stream-on-table",
+      "terraform_type": "snowflake_stream_on_table",
+      "label": "Snowflake stream on a table",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stream_on_table.md"
+    },
+    {
+      "id": "snowflake/stream-on-view",
+      "terraform_type": "snowflake_stream_on_view",
+      "label": "Snowflake stream on a view",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stream_on_view.md"
+    },
+    {
+      "id": "snowflake/streamlit",
+      "terraform_type": "snowflake_streamlit",
+      "label": "Streamlit in Snowflake application",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/streamlit.md"
+    },
+    {
+      "id": "snowflake/task",
+      "terraform_type": "snowflake_task",
+      "label": "Snowflake task",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/task.md"
+    },
+    {
+      "id": "snowflake/token-repository-integration",
+      "terraform_type": "snowflake_api_integration_git_repository_token",
+      "label": "Snowflake token repository API integration",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_git_repository_token.md"
+    },
+    {
+      "id": "snowflake/warehouse",
+      "terraform_type": "snowflake_warehouse",
+      "label": "Snowflake virtual warehouse",
+      "source": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/warehouse.md"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "snowflake/account",
+      "label": "Snowflake account",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/account-configuration",
+      "label": "Snowflake account configuration",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/account-connection",
+      "label": "Snowflake account connection",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/account-role",
+      "label": "Snowflake account role",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/alert",
+      "label": "Snowflake alert",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/api-integration",
+      "label": "Snowflake API integration",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/application",
+      "label": "Snowflake application",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/catalog-integration",
+      "label": "Snowflake catalog integration",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/compute-pool",
+      "label": "Snowpark Container Services compute pool",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/container-service",
+      "label": "Snowpark Container Services service",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/cortex-agent",
+      "label": "Cortex Agent",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/cortex-search-service",
+      "label": "Cortex Search service",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/data-object-configuration",
+      "label": "Snowflake data object",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/data-pipe",
+      "label": "Snowpipe pipe",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/data-share",
+      "label": "Snowflake secure data share",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/database",
+      "label": "Snowflake database",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/dynamic-table",
+      "label": "Snowflake dynamic table",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/external-access-integration",
+      "label": "Snowflake external access integration",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/external-function",
+      "label": "Snowflake external function",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/external-volume",
+      "label": "Snowflake external volume",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/failover-group",
+      "label": "Snowflake failover group",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/git-repository",
+      "label": "Snowflake Git repository",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/identity-integration",
+      "label": "Snowflake identity integration",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/image-repository",
+      "label": "Snowpark Container Services image repository",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/listing",
+      "label": "Snowflake listing",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/mcp-server",
+      "label": "Snowflake-managed MCP server",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/monitoring-configuration",
+      "label": "Snowflake monitoring configuration",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/network-policy",
+      "label": "Snowflake network policy",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/notification-integration",
+      "label": "Snowflake notification integration",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/schema",
+      "label": "Snowflake schema",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/security-configuration",
+      "label": "Snowflake security configuration",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/stage",
+      "label": "Snowflake stage",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/storage-integration",
+      "label": "Snowflake storage integration",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/stream-configuration",
+      "label": "Snowflake stream",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    },
+    {
+      "id": "snowflake/virtual-warehouse",
+      "label": "Snowflake virtual warehouse",
+      "source": "https://docs.snowflake.com/en/user-guide/intro-key-concepts"
+    }
+  ],
+  "asset": {
+    "decision": "generic-identities-only",
+    "reason": "no Snowflake trademark asset is required for faithful architecture presentation",
+    "official_source": "https://www.snowflake.com/legal/trademark-guidelines/"
+  }
+}

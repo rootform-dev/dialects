@@ -1,0 +1,17 @@
+rule "cloud-stack" {
+  match {
+    kind = "resource"
+    type = "grafana_cloud_stack"
+  }
+
+  as = concept.core.observability-tenant
+}
+
+rule "cloud-stack-lookup" {
+  match {
+    kind = "data"
+    type = "grafana_cloud_stack"
+  }
+
+  as = concept.core.observability-tenant
+}

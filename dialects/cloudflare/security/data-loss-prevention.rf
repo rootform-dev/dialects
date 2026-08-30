@@ -1,0 +1,49 @@
+concept "data-loss-prevention-configuration" {
+  kind        = detail
+  description = "Cloudflare One Data Loss Prevention profile, dataset, integration, or service configuration."
+}
+
+rule "dlp-custom-profile" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zero_trust_dlp_custom_profile"
+  }
+
+  as = concept.data-loss-prevention-configuration
+}
+
+rule "dlp-predefined-profile" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zero_trust_dlp_predefined_profile"
+  }
+
+  as = concept.data-loss-prevention-configuration
+}
+
+rule "dlp-dataset" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zero_trust_dlp_dataset"
+  }
+
+  as = concept.data-loss-prevention-configuration
+}
+
+rule "dlp-integration-entry" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zero_trust_dlp_integration_entry"
+  }
+
+  as = concept.data-loss-prevention-configuration
+}
+
+rule "dlp-settings" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zero_trust_dlp_settings"
+  }
+
+  as = concept.data-loss-prevention-configuration
+}

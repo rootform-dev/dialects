@@ -1,0 +1,8 @@
+# Forbidden payload sentinels for the sensitive-literals fixture. Every line
+# must be absent from the canonical Architecture IR of a Google compile.
+SECRET_SSL_CERTIFICATE_31a
+SECRET_SSL_KEYPAIR_31b
+SECRET_PROJECT_ID_31c
+SECRET_POLICY_DATA_31d
+SECRET_PROJECT_ID_31e
+SECRET_MEMBER_LITERAL_31f

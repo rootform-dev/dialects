@@ -1,0 +1,23 @@
+rule "vpc-network" {
+  match {
+    kind = "resource"
+    type = "google_compute_network"
+  }
+
+  as = concept.core.virtual-network
+}
+
+rule "vpc-subnetwork" {
+  match {
+    kind = "resource"
+    type = "google_compute_subnetwork"
+  }
+
+  as = concept.core.subnet
+
+  context {
+    as  = context.core.network
+    to  = concept.core.virtual-network
+    via = source.network
+  }
+}

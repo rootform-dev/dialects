@@ -1,0 +1,21 @@
+{
+  "format_version": "1",
+  "rules": {
+    "kubernetes-daemon-set": "kubernetes/daemon-set",
+    "kubernetes-deployment": "kubernetes/deployment",
+    "kubernetes-ingress": "kubernetes/ingress",
+    "kubernetes-namespace": "kubernetes/namespace",
+    "kubernetes-service": "kubernetes/service",
+    "kubernetes-service-account": "kubernetes/service-account",
+    "kubernetes-stateful-set": "kubernetes/stateful-set"
+  },
+  "concepts": {
+    "daemon-set": "kubernetes/daemon-set",
+    "deployment": "kubernetes/deployment",
+    "ingress": "kubernetes/ingress",
+    "namespace": "kubernetes/namespace",
+    "service": "kubernetes/service",
+    "service-account": "kubernetes/service-account",
+    "stateful-set": "kubernetes/stateful-set"
+  }
+}

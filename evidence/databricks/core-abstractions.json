@@ -1,0 +1,208 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-29",
+  "accepted_adr": "docs/adr/084-databricks-provider-boundaries.md",
+  "core_source_sha256": "sha256:1a39c40bc7521a4367b5b1f450504cd61f5dd351045dca10c3c862d6e854187d",
+  "policy": {
+    "comparison_trigger": "proposed-core-promotion-only",
+    "accepted_adr_required": true,
+    "required_providers": ["Google Cloud", "AWS", "Azure"]
+  },
+  "reused_core_concepts": [
+    {
+      "concept": "ai-inference-endpoint",
+      "databricks_rules": [
+        "databricks/model-serving",
+        "databricks/model-serving-provisioned-throughput"
+      ]
+    },
+    {
+      "concept": "identity-group",
+      "databricks_rules": [
+        "databricks/account-identity-group",
+        "databricks/identity-group",
+        "databricks/workspace-identity-group"
+      ]
+    },
+    {
+      "concept": "managed-database",
+      "databricks_rules": [
+        "databricks/lakebase-database",
+        "databricks/lakebase-provisioned-instance"
+      ]
+    },
+    {
+      "concept": "service-identity",
+      "databricks_rules": [
+        "databricks/account-service-principal",
+        "databricks/service-principal",
+        "databricks/workspace-service-principal"
+      ]
+    },
+    {
+      "concept": "workflow",
+      "databricks_rules": ["databricks/lakeflow-job"]
+    }
+  ],
+  "referenced_core_concepts": [
+    "ai-inference-endpoint",
+    "encryption-key",
+    "identity-group",
+    "managed-database",
+    "object-storage-container",
+    "private-endpoint",
+    "service-identity",
+    "virtual-network",
+    "workflow"
+  ],
+  "promotions": [],
+  "databricks_specific_concepts": [
+    "ai-gateway-service",
+    "ai-search-endpoint",
+    "ai-search-index",
+    "analytics-artifact",
+    "app-space",
+    "application-configuration",
+    "compute-cluster",
+    "compute-configuration",
+    "database-configuration",
+    "databricks-app",
+    "delta-share",
+    "delta-sharing-provider",
+    "delta-sharing-recipient",
+    "disaster-recovery-failover-group",
+    "external-location",
+    "identity-access-configuration",
+    "instance-pool",
+    "knowledge-assistant",
+    "lakebase-branch",
+    "lakebase-data-api",
+    "lakebase-endpoint",
+    "lakebase-project",
+    "lakeflow-pipeline",
+    "lakehouse-federation-connection",
+    "legacy-storage-mount",
+    "log-delivery",
+    "ml-platform-detail",
+    "monitoring-configuration",
+    "network-binding",
+    "network-connectivity-configuration",
+    "network-security-configuration",
+    "notification-destination",
+    "oauth-application-integration",
+    "online-serving-configuration",
+    "online-store",
+    "orchestration-configuration",
+    "private-access-settings",
+    "private-endpoint-registration",
+    "private-endpoint-rule",
+    "quality-monitor",
+    "registered-model",
+    "secret-configuration",
+    "secret-scope",
+    "service-credential",
+    "sharing-configuration",
+    "sql-configuration",
+    "sql-warehouse",
+    "storage-credential",
+    "supervisor-agent",
+    "unity-catalog-access-detail",
+    "unity-catalog-catalog",
+    "unity-catalog-data-detail",
+    "unity-catalog-metastore",
+    "unity-catalog-schema",
+    "unity-catalog-volume",
+    "vector-search-endpoint",
+    "vector-search-index",
+    "workspace",
+    "workspace-configuration",
+    "workspace-deployment-credential",
+    "workspace-key-configuration",
+    "workspace-network-configuration",
+    "workspace-root-storage"
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": "platform-workspace",
+      "comparison": "Databricks workspace, Vertex AI Workbench instance, SageMaker domain, and Azure Machine Learning workspace differ in tenancy, control plane, and owned services.",
+      "sources": {
+        "databricks": "https://docs.databricks.com/aws/en/admin/workspace/",
+        "google": "https://cloud.google.com/vertex-ai/docs/workbench/introduction",
+        "aws": "https://docs.aws.amazon.com/sagemaker/latest/dg/onboard-domain.html",
+        "azure": "https://learn.microsoft.com/azure/machine-learning/concept-workspace"
+      },
+      "disposition": "keep-databricks-specific"
+    },
+    {
+      "candidate": "data-catalog",
+      "comparison": "Unity Catalog catalog is a namespace inside a metastore; Dataplex Universal Catalog, AWS Glue Data Catalog, and Microsoft Purview own different discovery and governance boundaries.",
+      "sources": {
+        "databricks": "https://docs.databricks.com/aws/en/data-governance/unity-catalog/",
+        "google": "https://cloud.google.com/dataplex/docs/catalog-overview",
+        "aws": "https://docs.aws.amazon.com/glue/latest/dg/catalog-and-crawler.html",
+        "azure": "https://learn.microsoft.com/purview/unified-catalog-overview"
+      },
+      "disposition": "keep-databricks-specific"
+    },
+    {
+      "candidate": "analytics-compute-cluster",
+      "comparison": "Databricks compute, Dataproc clusters, EMR clusters, and Azure HDInsight clusters share batch compute but differ in lifecycle, runtime ownership, and serverless behavior.",
+      "sources": {
+        "databricks": "https://docs.databricks.com/aws/en/compute/",
+        "google": "https://cloud.google.com/dataproc/docs/concepts/overview",
+        "aws": "https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html",
+        "azure": "https://learn.microsoft.com/azure/hdinsight/hdinsight-overview"
+      },
+      "disposition": "keep-databricks-specific"
+    },
+    {
+      "candidate": "sql-warehouse",
+      "comparison": "Databricks SQL warehouse is query compute over lakehouse data; BigQuery, Redshift, and Synapse combine different storage, compute, and service boundaries.",
+      "sources": {
+        "databricks": "https://docs.databricks.com/aws/en/compute/sql-warehouse",
+        "google": "https://cloud.google.com/bigquery/docs/introduction",
+        "aws": "https://docs.aws.amazon.com/redshift/latest/mgmt/welcome.html",
+        "azure": "https://learn.microsoft.com/azure/synapse-analytics/overview-what-is"
+      },
+      "disposition": "keep-databricks-specific"
+    },
+    {
+      "candidate": "data-pipeline",
+      "comparison": "Lakeflow declarative pipelines own flows and materialized datasets; Dataflow, AWS Glue, and Azure Data Factory expose different execution and orchestration contracts.",
+      "sources": {
+        "databricks": "https://docs.databricks.com/aws/en/data-engineering/",
+        "google": "https://cloud.google.com/dataflow/docs/overview",
+        "aws": "https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html",
+        "azure": "https://learn.microsoft.com/azure/data-factory/introduction"
+      },
+      "disposition": "keep-databricks-specific"
+    },
+    {
+      "candidate": "lakebase-project",
+      "comparison": "Lakebase project owns branch and endpoint hierarchy; Cloud SQL, Aurora, and Azure Database for PostgreSQL expose database server or cluster boundaries without equivalent branching ownership.",
+      "sources": {
+        "databricks": "https://docs.databricks.com/aws/en/oltp/projects/core-concepts",
+        "google": "https://cloud.google.com/sql/docs/introduction",
+        "aws": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/CHAP_AuroraOverview.html",
+        "azure": "https://learn.microsoft.com/azure/postgresql/flexible-server/overview"
+      },
+      "disposition": "keep-databricks-specific"
+    },
+    {
+      "candidate": "external-location",
+      "comparison": "Unity Catalog external location pairs governed path and credential; BigLake, Lake Formation, and Microsoft Purview use different authorization and namespace objects.",
+      "sources": {
+        "databricks": "https://docs.databricks.com/aws/en/data-governance/unity-catalog/external-locations",
+        "google": "https://cloud.google.com/bigquery/docs/biglake-intro",
+        "aws": "https://docs.aws.amazon.com/lake-formation/latest/dg/what-is-lake-formation.html",
+        "azure": "https://learn.microsoft.com/purview/unified-catalog-overview"
+      },
+      "disposition": "keep-databricks-specific"
+    }
+  ],
+  "limitations": [
+    "Core reuse records output concepts separately from relation targets.",
+    "Provider configuration never creates a core context.",
+    "Rejected candidates may be reconsidered only with accepted three-provider proof."
+  ]
+}

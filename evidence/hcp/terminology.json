@@ -1,0 +1,759 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-30",
+  "dialect": "hcp",
+  "product_name": "HashiCorp Cloud Platform",
+  "presentation_sha256": "sha256:959558687967b300e8bdf85e704f586c120e32b0215c1dcb9081dae2a57a0bd4",
+  "integrity_boundary": "presentation integrity is separate from semantic_sources_sha256; label or identity drift changes this digest only",
+  "legacy_boundary": {
+    "product": "HCP Consul Dedicated",
+    "state": "end-of-life",
+    "effective_date": "2025-11-12",
+    "source": "https://developer.hashicorp.com/consul/docs/hcp"
+  },
+  "qualified_constructs": {
+    "deprecated": [
+      "hcp_vault_secrets_integration_aws",
+      "hcp_vault_secrets_integration_azure",
+      "hcp_vault_secrets_integration_confluent",
+      "hcp_vault_secrets_integration_gcp",
+      "hcp_vault_secrets_integration_mongodbatlas",
+      "hcp_vault_secrets_integration_twilio"
+    ],
+    "private_beta": [
+      "hcp_vault_radar_source_github_cloud",
+      "hcp_vault_radar_source_github_enterprise"
+    ]
+  },
+  "rules": [
+    {
+      "id": "hcp/aws-network-peering",
+      "terraform_type": "hcp_aws_network_peering",
+      "label": "HCP AWS network peering",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/aws_network_peering"
+    },
+    {
+      "id": "hcp/aws-network-peering-lookup",
+      "terraform_type": "hcp_aws_network_peering",
+      "label": "HCP AWS network peering lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/aws_network_peering"
+    },
+    {
+      "id": "hcp/aws-transit-gateway-attachment",
+      "terraform_type": "hcp_aws_transit_gateway_attachment",
+      "label": "HCP AWS Transit Gateway attachment",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/aws_transit_gateway_attachment"
+    },
+    {
+      "id": "hcp/aws-transit-gateway-attachment-lookup",
+      "terraform_type": "hcp_aws_transit_gateway_attachment",
+      "label": "HCP AWS Transit Gateway attachment lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/aws_transit_gateway_attachment"
+    },
+    {
+      "id": "hcp/azure-peering-connection",
+      "terraform_type": "hcp_azure_peering_connection",
+      "label": "HCP Azure peering connection",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/azure_peering_connection"
+    },
+    {
+      "id": "hcp/azure-peering-connection-lookup",
+      "terraform_type": "hcp_azure_peering_connection",
+      "label": "HCP Azure peering connection lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/azure_peering_connection"
+    },
+    {
+      "id": "hcp/boundary-cluster",
+      "terraform_type": "hcp_boundary_cluster",
+      "label": "HCP Boundary cluster",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/boundary_cluster"
+    },
+    {
+      "id": "hcp/boundary-cluster-lookup",
+      "terraform_type": "hcp_boundary_cluster",
+      "label": "HCP Boundary cluster lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/boundary_cluster"
+    },
+    {
+      "id": "hcp/consul-cluster",
+      "terraform_type": "hcp_consul_cluster",
+      "label": "HCP Consul Dedicated cluster (legacy)",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/consul_cluster"
+    },
+    {
+      "id": "hcp/consul-cluster-lookup",
+      "terraform_type": "hcp_consul_cluster",
+      "label": "HCP Consul Dedicated cluster (legacy) lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/consul_cluster"
+    },
+    {
+      "id": "hcp/consul-snapshot",
+      "terraform_type": "hcp_consul_snapshot",
+      "label": "HCP Consul Dedicated snapshot (legacy)",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/consul_snapshot"
+    },
+    {
+      "id": "hcp/dns-forwarding",
+      "terraform_type": "hcp_dns_forwarding",
+      "label": "HCP DNS forwarding configuration",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/dns_forwarding"
+    },
+    {
+      "id": "hcp/dns-forwarding-lookup",
+      "terraform_type": "hcp_dns_forwarding",
+      "label": "HCP DNS forwarding configuration lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/dns_forwarding"
+    },
+    {
+      "id": "hcp/dns-forwarding-rule",
+      "terraform_type": "hcp_dns_forwarding_rule",
+      "label": "HCP DNS forwarding rule",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/dns_forwarding_rule"
+    },
+    {
+      "id": "hcp/dns-forwarding-rule-lookup",
+      "terraform_type": "hcp_dns_forwarding_rule",
+      "label": "HCP DNS forwarding rule lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/dns_forwarding_rule"
+    },
+    {
+      "id": "hcp/group",
+      "terraform_type": "hcp_group",
+      "label": "HCP group",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/group"
+    },
+    {
+      "id": "hcp/group-iam-binding",
+      "terraform_type": "hcp_group_iam_binding",
+      "label": "HCP group IAM binding",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/group_iam_binding"
+    },
+    {
+      "id": "hcp/group-iam-policy",
+      "terraform_type": "hcp_group_iam_policy",
+      "label": "HCP group IAM policy",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/group_iam_policy"
+    },
+    {
+      "id": "hcp/group-lookup",
+      "terraform_type": "hcp_group",
+      "label": "HCP group lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/group"
+    },
+    {
+      "id": "hcp/group-members",
+      "terraform_type": "hcp_group_members",
+      "label": "HCP group members",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/group_members"
+    },
+    {
+      "id": "hcp/hvn",
+      "terraform_type": "hcp_hvn",
+      "label": "HashiCorp Virtual Network (HVN)",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/hvn"
+    },
+    {
+      "id": "hcp/hvn-lookup",
+      "terraform_type": "hcp_hvn",
+      "label": "HashiCorp Virtual Network (HVN) lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/hvn"
+    },
+    {
+      "id": "hcp/hvn-peering-connection",
+      "terraform_type": "hcp_hvn_peering_connection",
+      "label": "HCP HVN peering connection",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/hvn_peering_connection"
+    },
+    {
+      "id": "hcp/hvn-peering-connection-lookup",
+      "terraform_type": "hcp_hvn_peering_connection",
+      "label": "HCP HVN peering connection lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/hvn_peering_connection"
+    },
+    {
+      "id": "hcp/hvn-route",
+      "terraform_type": "hcp_hvn_route",
+      "label": "HCP HVN route",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/hvn_route"
+    },
+    {
+      "id": "hcp/hvn-route-lookup",
+      "terraform_type": "hcp_hvn_route",
+      "label": "HCP HVN route lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/hvn_route"
+    },
+    {
+      "id": "hcp/iam-workload-identity-provider",
+      "terraform_type": "hcp_iam_workload_identity_provider",
+      "label": "HCP workload identity provider",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/iam_workload_identity_provider"
+    },
+    {
+      "id": "hcp/log-streaming-destination",
+      "terraform_type": "hcp_log_streaming_destination",
+      "label": "HCP audit log streaming destination",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/log_streaming_destination"
+    },
+    {
+      "id": "hcp/notifications-webhook",
+      "terraform_type": "hcp_notifications_webhook",
+      "label": "HCP notification webhook",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/notifications_webhook"
+    },
+    {
+      "id": "hcp/organization-iam-binding",
+      "terraform_type": "hcp_organization_iam_binding",
+      "label": "HCP organization IAM binding",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/organization_iam_binding"
+    },
+    {
+      "id": "hcp/organization-iam-policy",
+      "terraform_type": "hcp_organization_iam_policy",
+      "label": "HCP organization IAM policy",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/organization_iam_policy"
+    },
+    {
+      "id": "hcp/organization-lookup",
+      "terraform_type": "hcp_organization",
+      "label": "HCP organization lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/organization"
+    },
+    {
+      "id": "hcp/packer-artifact-lookup",
+      "terraform_type": "hcp_packer_artifact",
+      "label": "HCP Packer artifact lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/packer_artifact"
+    },
+    {
+      "id": "hcp/packer-bucket",
+      "terraform_type": "hcp_packer_bucket",
+      "label": "HCP Packer bucket",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/packer_bucket"
+    },
+    {
+      "id": "hcp/packer-bucket-iam-binding",
+      "terraform_type": "hcp_packer_bucket_iam_binding",
+      "label": "HCP Packer bucket IAM binding",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/packer_bucket_iam_binding"
+    },
+    {
+      "id": "hcp/packer-bucket-iam-policy",
+      "terraform_type": "hcp_packer_bucket_iam_policy",
+      "label": "HCP Packer bucket IAM policy",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/packer_bucket_iam_policy"
+    },
+    {
+      "id": "hcp/packer-channel",
+      "terraform_type": "hcp_packer_channel",
+      "label": "HCP Packer channel",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/packer_channel"
+    },
+    {
+      "id": "hcp/packer-channel-assignment",
+      "terraform_type": "hcp_packer_channel_assignment",
+      "label": "HCP Packer channel assignment",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/packer_channel_assignment"
+    },
+    {
+      "id": "hcp/packer-version-lookup",
+      "terraform_type": "hcp_packer_version",
+      "label": "HCP Packer version lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/packer_version"
+    },
+    {
+      "id": "hcp/private-link",
+      "terraform_type": "hcp_private_link",
+      "label": "HCP Vault Private Link",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/private_link"
+    },
+    {
+      "id": "hcp/private-link-lookup",
+      "terraform_type": "hcp_private_link",
+      "label": "HCP Vault Private Link lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/private_link"
+    },
+    {
+      "id": "hcp/project",
+      "terraform_type": "hcp_project",
+      "label": "HCP project",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/project"
+    },
+    {
+      "id": "hcp/project-iam-binding",
+      "terraform_type": "hcp_project_iam_binding",
+      "label": "HCP project IAM binding",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/project_iam_binding"
+    },
+    {
+      "id": "hcp/project-iam-policy",
+      "terraform_type": "hcp_project_iam_policy",
+      "label": "HCP project IAM policy",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/project_iam_policy"
+    },
+    {
+      "id": "hcp/project-lookup",
+      "terraform_type": "hcp_project",
+      "label": "HCP project lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/project"
+    },
+    {
+      "id": "hcp/resource-control-policy",
+      "terraform_type": "hcp_resource_control_policy",
+      "label": "HCP resource control policy",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/resource_control_policy"
+    },
+    {
+      "id": "hcp/service-principal",
+      "terraform_type": "hcp_service_principal",
+      "label": "HCP service principal",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/service_principal"
+    },
+    {
+      "id": "hcp/service-principal-lookup",
+      "terraform_type": "hcp_service_principal",
+      "label": "HCP service principal lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/service_principal"
+    },
+    {
+      "id": "hcp/vault-cluster",
+      "terraform_type": "hcp_vault_cluster",
+      "label": "HCP Vault Dedicated cluster",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_cluster"
+    },
+    {
+      "id": "hcp/vault-cluster-lookup",
+      "terraform_type": "hcp_vault_cluster",
+      "label": "HCP Vault Dedicated cluster lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/vault_cluster"
+    },
+    {
+      "id": "hcp/vault-plugin",
+      "terraform_type": "hcp_vault_plugin",
+      "label": "HCP Vault plugin",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_plugin"
+    },
+    {
+      "id": "hcp/vault-plugin-lookup",
+      "terraform_type": "hcp_vault_plugin",
+      "label": "HCP Vault plugin lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/vault_plugin"
+    },
+    {
+      "id": "hcp/vault-radar-integration-jira-connection",
+      "terraform_type": "hcp_vault_radar_integration_jira_connection",
+      "label": "HCP Vault Radar Jira connection",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_radar_integration_jira_connection"
+    },
+    {
+      "id": "hcp/vault-radar-integration-jira-subscription",
+      "terraform_type": "hcp_vault_radar_integration_jira_subscription",
+      "label": "HCP Vault Radar Jira subscription",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_radar_integration_jira_subscription"
+    },
+    {
+      "id": "hcp/vault-radar-integration-slack-connection",
+      "terraform_type": "hcp_vault_radar_integration_slack_connection",
+      "label": "HCP Vault Radar Slack connection",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_radar_integration_slack_connection"
+    },
+    {
+      "id": "hcp/vault-radar-integration-slack-subscription",
+      "terraform_type": "hcp_vault_radar_integration_slack_subscription",
+      "label": "HCP Vault Radar Slack subscription",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_radar_integration_slack_subscription"
+    },
+    {
+      "id": "hcp/vault-radar-resource-iam-binding",
+      "terraform_type": "hcp_vault_radar_resource_iam_binding",
+      "label": "HCP Vault Radar resource IAM binding",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_radar_resource_iam_binding"
+    },
+    {
+      "id": "hcp/vault-radar-resource-iam-policy",
+      "terraform_type": "hcp_vault_radar_resource_iam_policy",
+      "label": "HCP Vault Radar resource IAM policy",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_radar_resource_iam_policy"
+    },
+    {
+      "id": "hcp/vault-radar-secret-manager-vault-dedicated",
+      "terraform_type": "hcp_vault_radar_secret_manager_vault_dedicated",
+      "label": "HCP Vault Radar Vault Dedicated secret manager",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_radar_secret_manager_vault_dedicated"
+    },
+    {
+      "id": "hcp/vault-radar-source-github-cloud",
+      "terraform_type": "hcp_vault_radar_source_github_cloud",
+      "label": "HCP Vault Radar GitHub Cloud source (private beta)",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_radar_source_github_cloud"
+    },
+    {
+      "id": "hcp/vault-radar-source-github-enterprise",
+      "terraform_type": "hcp_vault_radar_source_github_enterprise",
+      "label": "HCP Vault Radar GitHub Enterprise Server source (private beta)",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_radar_source_github_enterprise"
+    },
+    {
+      "id": "hcp/vault-secrets-app",
+      "terraform_type": "hcp_vault_secrets_app",
+      "label": "HCP Vault Secrets app",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_app"
+    },
+    {
+      "id": "hcp/vault-secrets-app-iam-binding",
+      "terraform_type": "hcp_vault_secrets_app_iam_binding",
+      "label": "HCP Vault Secrets app IAM binding",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_app_iam_binding"
+    },
+    {
+      "id": "hcp/vault-secrets-app-iam-policy",
+      "terraform_type": "hcp_vault_secrets_app_iam_policy",
+      "label": "HCP Vault Secrets app IAM policy",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_app_iam_policy"
+    },
+    {
+      "id": "hcp/vault-secrets-app-lookup",
+      "terraform_type": "hcp_vault_secrets_app",
+      "label": "HCP Vault Secrets app lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/vault_secrets_app"
+    },
+    {
+      "id": "hcp/vault-secrets-dynamic-secret",
+      "terraform_type": "hcp_vault_secrets_dynamic_secret",
+      "label": "HCP Vault Secrets dynamic secret",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_dynamic_secret"
+    },
+    {
+      "id": "hcp/vault-secrets-dynamic-secret-lookup",
+      "terraform_type": "hcp_vault_secrets_dynamic_secret",
+      "label": "HCP Vault Secrets dynamic secret lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/vault_secrets_dynamic_secret"
+    },
+    {
+      "id": "hcp/vault-secrets-integration",
+      "terraform_type": "hcp_vault_secrets_integration",
+      "label": "HCP Vault Secrets integration",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_integration"
+    },
+    {
+      "id": "hcp/vault-secrets-integration-aws",
+      "terraform_type": "hcp_vault_secrets_integration_aws",
+      "label": "HCP Vault Secrets AWS integration (deprecated)",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_integration_aws"
+    },
+    {
+      "id": "hcp/vault-secrets-integration-azure",
+      "terraform_type": "hcp_vault_secrets_integration_azure",
+      "label": "HCP Vault Secrets Azure integration (deprecated)",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_integration_azure"
+    },
+    {
+      "id": "hcp/vault-secrets-integration-confluent",
+      "terraform_type": "hcp_vault_secrets_integration_confluent",
+      "label": "HCP Vault Secrets Confluent integration (deprecated)",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_integration_confluent"
+    },
+    {
+      "id": "hcp/vault-secrets-integration-gcp",
+      "terraform_type": "hcp_vault_secrets_integration_gcp",
+      "label": "HCP Vault Secrets Google Cloud integration (deprecated)",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_integration_gcp"
+    },
+    {
+      "id": "hcp/vault-secrets-integration-mongodbatlas",
+      "terraform_type": "hcp_vault_secrets_integration_mongodbatlas",
+      "label": "HCP Vault Secrets MongoDB Atlas integration (deprecated)",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_integration_mongodbatlas"
+    },
+    {
+      "id": "hcp/vault-secrets-integration-twilio",
+      "terraform_type": "hcp_vault_secrets_integration_twilio",
+      "label": "HCP Vault Secrets Twilio integration (deprecated)",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_integration_twilio"
+    },
+    {
+      "id": "hcp/vault-secrets-rotating-secret",
+      "terraform_type": "hcp_vault_secrets_rotating_secret",
+      "label": "HCP Vault Secrets rotating secret",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_rotating_secret"
+    },
+    {
+      "id": "hcp/vault-secrets-rotating-secret-lookup",
+      "terraform_type": "hcp_vault_secrets_rotating_secret",
+      "label": "HCP Vault Secrets rotating secret lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/vault_secrets_rotating_secret"
+    },
+    {
+      "id": "hcp/vault-secrets-secret",
+      "terraform_type": "hcp_vault_secrets_secret",
+      "label": "HCP Vault Secrets secret",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_secret"
+    },
+    {
+      "id": "hcp/vault-secrets-secret-lookup",
+      "terraform_type": "hcp_vault_secrets_secret",
+      "label": "HCP Vault Secrets secret lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/vault_secrets_secret"
+    },
+    {
+      "id": "hcp/vault-secrets-sync",
+      "terraform_type": "hcp_vault_secrets_sync",
+      "label": "HCP Vault Secrets sync",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/vault_secrets_sync"
+    },
+    {
+      "id": "hcp/waypoint-action",
+      "terraform_type": "hcp_waypoint_action",
+      "label": "HCP Waypoint action",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/waypoint_action"
+    },
+    {
+      "id": "hcp/waypoint-action-lookup",
+      "terraform_type": "hcp_waypoint_action",
+      "label": "HCP Waypoint action lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/waypoint_action"
+    },
+    {
+      "id": "hcp/waypoint-add-on",
+      "terraform_type": "hcp_waypoint_add_on",
+      "label": "HCP Waypoint add on",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/waypoint_add_on"
+    },
+    {
+      "id": "hcp/waypoint-add-on-definition",
+      "terraform_type": "hcp_waypoint_add_on_definition",
+      "label": "HCP Waypoint add on definition",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/waypoint_add_on_definition"
+    },
+    {
+      "id": "hcp/waypoint-add-on-definition-lookup",
+      "terraform_type": "hcp_waypoint_add_on_definition",
+      "label": "HCP Waypoint add on definition lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/waypoint_add_on_definition"
+    },
+    {
+      "id": "hcp/waypoint-add-on-lookup",
+      "terraform_type": "hcp_waypoint_add_on",
+      "label": "HCP Waypoint add on lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/waypoint_add_on"
+    },
+    {
+      "id": "hcp/waypoint-agent-group",
+      "terraform_type": "hcp_waypoint_agent_group",
+      "label": "HCP Waypoint agent group",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/waypoint_agent_group"
+    },
+    {
+      "id": "hcp/waypoint-agent-group-lookup",
+      "terraform_type": "hcp_waypoint_agent_group",
+      "label": "HCP Waypoint agent group lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/waypoint_agent_group"
+    },
+    {
+      "id": "hcp/waypoint-application",
+      "terraform_type": "hcp_waypoint_application",
+      "label": "HCP Waypoint application",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/waypoint_application"
+    },
+    {
+      "id": "hcp/waypoint-application-lookup",
+      "terraform_type": "hcp_waypoint_application",
+      "label": "HCP Waypoint application lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/waypoint_application"
+    },
+    {
+      "id": "hcp/waypoint-template",
+      "terraform_type": "hcp_waypoint_template",
+      "label": "HCP Waypoint template",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/waypoint_template"
+    },
+    {
+      "id": "hcp/waypoint-template-lookup",
+      "terraform_type": "hcp_waypoint_template",
+      "label": "HCP Waypoint template lookup",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/data-sources/waypoint_template"
+    },
+    {
+      "id": "hcp/waypoint-tfc-config",
+      "terraform_type": "hcp_waypoint_tfc_config",
+      "label": "HCP Waypoint HCP Terraform config",
+      "source": "https://registry.terraform.io/providers/hashicorp/hcp/0.114.0/docs/resources/waypoint_tfc_config"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "hcp/access-control-configuration",
+      "label": "HCP access control configuration",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/audit-log-destination",
+      "label": "HCP audit log streaming destination",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/boundary-cluster",
+      "label": "HCP Boundary cluster",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/consul-configuration",
+      "label": "HCP Consul Dedicated configuration (legacy)",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/consul-dedicated-cluster",
+      "label": "HCP Consul Dedicated cluster (legacy)",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/dns-forwarding",
+      "label": "HCP DNS forwarding configuration",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/network-configuration",
+      "label": "HCP network configuration",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/notification-webhook",
+      "label": "HCP notification webhook",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/organization",
+      "label": "HCP organization",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/packer-artifact",
+      "label": "HCP Packer artifact",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/packer-bucket",
+      "label": "HCP Packer bucket",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/packer-channel",
+      "label": "HCP Packer channel",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/packer-configuration",
+      "label": "HCP Packer configuration",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/packer-version",
+      "label": "HCP Packer version",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/private-link-service",
+      "label": "HCP Vault Private Link service",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/project",
+      "label": "HCP project",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/transit-gateway-attachment",
+      "label": "HCP AWS Transit Gateway attachment",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/vault-dedicated-cluster",
+      "label": "HCP Vault Dedicated cluster",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/vault-plugin",
+      "label": "HCP Vault plugin",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/vault-radar-configuration",
+      "label": "HCP Vault Radar configuration",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/vault-radar-integration",
+      "label": "HCP Vault Radar integration",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/vault-radar-secret-manager",
+      "label": "HCP Vault Radar secret manager",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/vault-radar-source",
+      "label": "HCP Vault Radar source",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/vault-secrets-application",
+      "label": "HCP Vault Secrets application",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/vault-secrets-configuration",
+      "label": "HCP Vault Secrets configuration",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/vault-secrets-integration",
+      "label": "HCP Vault Secrets integration",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/vault-secrets-sync",
+      "label": "HCP Vault Secrets sync",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/waypoint-add-on",
+      "label": "HCP Waypoint add-on",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/waypoint-add-on-definition",
+      "label": "HCP Waypoint add-on definition",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/waypoint-agent-group",
+      "label": "HCP Waypoint agent group",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/waypoint-application",
+      "label": "HCP Waypoint application",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/waypoint-configuration",
+      "label": "HCP Waypoint configuration",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/waypoint-template",
+      "label": "HCP Waypoint template",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    },
+    {
+      "id": "hcp/workload-identity-provider",
+      "label": "HCP workload identity provider",
+      "source": "https://developer.hashicorp.com/hcp/docs"
+    }
+  ],
+  "asset": {
+    "decision": "generic-identities-only",
+    "reason": "faithful HCP architecture does not require a redistributed HashiCorp trademark asset",
+    "official_source": "https://www.hashicorp.com/trademark-policy"
+  }
+}

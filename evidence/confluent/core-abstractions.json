@@ -1,0 +1,155 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-29",
+  "core_source_sha256": "sha256:1a39c40bc7521a4367b5b1f450504cd61f5dd351045dca10c3c862d6e854187d",
+  "policy": {
+    "comparison_trigger": "proposed-core-promotion-only",
+    "required_providers": ["Google Cloud", "AWS", "Azure"],
+    "accepted_adr_required": true
+  },
+  "reused_core_concepts": [
+    {
+      "concept": "message-topic",
+      "confluent_rules": [
+        "confluent/kafka-mirror-topic",
+        "confluent/kafka-topic",
+        "confluent/rtce-topic"
+      ]
+    },
+    {
+      "concept": "network-peering",
+      "confluent_rules": ["confluent/network-peering"]
+    },
+    {
+      "concept": "private-endpoint",
+      "confluent_rules": ["confluent/access-point", "confluent/private-link-attachment-connection"]
+    },
+    {
+      "concept": "service-identity",
+      "confluent_rules": ["confluent/service-account"]
+    },
+    {
+      "concept": "virtual-network",
+      "confluent_rules": ["confluent/network"]
+    }
+  ],
+  "referenced_core_concepts": [
+    "encryption-key",
+    "message-topic",
+    "network-peering",
+    "object-storage-container",
+    "private-endpoint",
+    "service-identity",
+    "virtual-network"
+  ],
+  "promotions": [],
+  "confluent_specific_concepts": [
+    "byok-key",
+    "catalog-integration",
+    "certificate-authority",
+    "certificate-pool",
+    "cluster-link",
+    "connector",
+    "connector-artifact",
+    "dns-forwarder",
+    "environment",
+    "flink-artifact",
+    "flink-compute-pool",
+    "flink-configuration",
+    "flink-connection",
+    "flink-materialized-table",
+    "governance-configuration",
+    "identity-access-configuration",
+    "identity-pool",
+    "identity-provider",
+    "kafka-cluster",
+    "kafka-configuration",
+    "ksqldb-cluster",
+    "network-configuration",
+    "network-gateway",
+    "network-link-endpoint",
+    "network-link-service",
+    "private-link-attachment",
+    "provider-integration",
+    "schema-link",
+    "schema-registry",
+    "schema-registry-configuration",
+    "security-configuration",
+    "tableflow-topic",
+    "transit-gateway-attachment"
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": "environment",
+      "disposition": "keep-confluent-specific",
+      "comparison": "Confluent environments isolate Confluent resources and Stream Governance; AWS accounts, Azure subscriptions, and Google Cloud projects own broader cloud tenancy and billing boundaries.",
+      "sources": {
+        "confluent": "https://docs.confluent.io/cloud/current/access-management/hierarchy/cloud-environments.html",
+        "google": "https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy",
+        "aws": "https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-creating.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources"
+      }
+    },
+    {
+      "candidate": "kafka-cluster",
+      "disposition": "keep-confluent-specific",
+      "comparison": "Managed Kafka and Kafka-compatible services overlap, but cluster tiers, ownership, networking, capacity, and protocol contracts differ across Confluent Cloud, Amazon MSK, Azure Event Hubs, and Google Managed Service for Apache Kafka.",
+      "sources": {
+        "confluent": "https://docs.confluent.io/cloud/current/clusters/index.html",
+        "google": "https://cloud.google.com/managed-service-for-apache-kafka/docs/overview",
+        "aws": "https://docs.aws.amazon.com/msk/latest/developerguide/what-is-msk.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-about"
+      }
+    },
+    {
+      "candidate": "cluster-link",
+      "disposition": "keep-confluent-specific",
+      "comparison": "Cluster Linking preserves Confluent Kafka mirror-topic offsets and partitions; MSK Replicator, Event Hubs geo-replication, and MirrorMaker connectors expose different replication identity and failover semantics.",
+      "sources": {
+        "confluent": "https://docs.confluent.io/cloud/current/multi-cloud/cluster-linking/index.html",
+        "google": "https://cloud.google.com/managed-service-for-apache-kafka/docs/connect-cluster/create-mirrormaker-connector",
+        "aws": "https://docs.aws.amazon.com/msk/latest/developerguide/msk-replicator.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/event-hubs/geo-replication"
+      }
+    },
+    {
+      "candidate": "connector",
+      "disposition": "keep-confluent-specific",
+      "comparison": "Confluent managed connectors run against Kafka clusters; MSK Connect, Azure Data Factory connectors, and Google Integration Connectors differ in runtime, direction, ownership, and configuration contracts.",
+      "sources": {
+        "confluent": "https://docs.confluent.io/cloud/current/connectors/overview.html",
+        "google": "https://cloud.google.com/integration-connectors/docs/overview",
+        "aws": "https://docs.aws.amazon.com/msk/latest/developerguide/msk-connect.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/data-factory/connector-overview"
+      }
+    },
+    {
+      "candidate": "flink-compute-pool",
+      "disposition": "keep-confluent-specific",
+      "comparison": "Confluent Flink compute pools provide regional CFU capacity for statements; AWS Managed Service for Apache Flink, Azure Stream Analytics, and Google Cloud Dataflow expose different job and capacity ownership.",
+      "sources": {
+        "confluent": "https://docs.confluent.io/cloud/current/flink/concepts/compute-pools.html",
+        "google": "https://cloud.google.com/dataflow/docs/concepts/overview",
+        "aws": "https://docs.aws.amazon.com/managed-flink/latest/java/what-is.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/stream-analytics/stream-analytics-introduction"
+      }
+    },
+    {
+      "candidate": "schema-registry",
+      "disposition": "keep-confluent-specific",
+      "comparison": "Confluent Schema Registry is one environment-scoped registry with subjects and compatibility modes; AWS Glue Schema Registry, Azure Schema Registry, and Pub/Sub schemas use different ownership and compatibility models.",
+      "sources": {
+        "confluent": "https://docs.confluent.io/cloud/current/get-started/schema-registry.html",
+        "google": "https://cloud.google.com/pubsub/docs/schemas",
+        "aws": "https://docs.aws.amazon.com/glue/latest/dg/schema-registry.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/event-hubs/schema-registry-overview"
+      }
+    }
+  ],
+  "accepted_adr": "docs/adr/083-confluent-cloud-provider-boundaries.md",
+  "limitations": [
+    "No core concept was added during Confluent Cloud implementation.",
+    "Kafka, Schema Registry, Cluster Linking, connectors, and Flink remain Confluent-specific.",
+    "Core reuse preserves only stable provider-neutral roles and does not erase Confluent topology."
+  ]
+}

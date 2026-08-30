@@ -1,0 +1,171 @@
+concept "private-endpoint-service" {
+  kind        = entity
+  description = "A MongoDB Atlas regional private endpoint service exposed to a customer cloud network."
+}
+
+concept "private-endpoint-registration" {
+  kind        = entity
+  description = "A registration joining an Atlas private endpoint service to a customer cloud private endpoint."
+}
+
+concept "data-service-private-endpoint" {
+  kind        = entity
+  description = "A private endpoint connection for Atlas Data Federation or Online Archive."
+}
+
+concept "network-configuration" {
+  kind        = detail
+  description = "A network access, DNS, or private-connectivity setting supporting an Atlas project."
+}
+
+rule "network-container" {
+  match {
+    kind = "resource"
+    type = "mongodbatlas_network_container"
+  }
+
+  as = concept.core.virtual-network
+
+  context {
+    as  = context.core.ownership
+    to  = concept.project
+    via = source.project_id
+  }
+}
+
+rule "network-peering" {
+  match {
+    kind = "resource"
+    type = "mongodbatlas_network_peering"
+  }
+
+  as = concept.core.network-peering
+
+  context {
+    as  = context.core.ownership
+    to  = concept.project
+    via = source.project_id
+  }
+
+  relation "connects-atlas-network" {
+    to  = concept.core.virtual-network
+    via = source.container_id
+  }
+
+  relation "connects-cloud-network" {
+    to  = concept.core.virtual-network
+    via = source.vpc_id
+  }
+
+  relation "connects-cloud-network" {
+    to  = concept.core.virtual-network
+    via = source.vnet_name
+  }
+
+  relation "connects-cloud-network" {
+    to  = concept.core.virtual-network
+    via = source.network_name
+  }
+}
+
+rule "private-endpoint-service" {
+  match {
+    kind = "resource"
+    type = "mongodbatlas_privatelink_endpoint"
+  }
+
+  as = concept.private-endpoint-service
+
+  context {
+    as  = context.core.ownership
+    to  = concept.project
+    via = source.project_id
+  }
+}
+
+rule "private-endpoint-registration" {
+  match {
+    kind = "resource"
+    type = "mongodbatlas_privatelink_endpoint_service"
+  }
+
+  as = concept.private-endpoint-registration
+
+  context {
+    as  = context.core.ownership
+    to  = concept.project
+    via = source.project_id
+  }
+
+  relation "registers-atlas-service" {
+    to  = concept.private-endpoint-service
+    via = source.private_link_id
+  }
+
+  relation "registers-cloud-endpoint" {
+    to  = concept.core.private-endpoint
+    via = source.endpoint_service_id
+  }
+}
+
+rule "data-service-private-endpoint" {
+  match {
+    kind = "resource"
+    type = "mongodbatlas_privatelink_endpoint_service_data_federation_online_archive"
+  }
+
+  as = concept.data-service-private-endpoint
+
+  context {
+    as  = context.core.ownership
+    to  = concept.project
+    via = source.project_id
+  }
+
+  relation "uses-cloud-endpoint" {
+    to  = concept.core.private-endpoint
+    via = source.endpoint_id
+  }
+}
+
+rule "private-endpoint-regional-mode" {
+  match {
+    kind = "resource"
+    type = "mongodbatlas_private_endpoint_regional_mode"
+  }
+
+  as = concept.network-configuration
+
+  contribution {
+    to  = concept.project
+    via = source.project_id
+  }
+}
+
+rule "project-ip-access-list" {
+  match {
+    kind = "resource"
+    type = "mongodbatlas_project_ip_access_list"
+  }
+
+  as = concept.network-configuration
+
+  contribution {
+    to  = concept.project
+    via = source.project_id
+  }
+}
+
+rule "custom-dns-configuration-aws" {
+  match {
+    kind = "resource"
+    type = "mongodbatlas_custom_dns_configuration_cluster_aws"
+  }
+
+  as = concept.network-configuration
+
+  contribution {
+    to  = concept.project
+    via = source.project_id
+  }
+}

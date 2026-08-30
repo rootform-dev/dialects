@@ -1,0 +1,45 @@
+concept "vmware-engine-private-cloud" {
+  kind        = scope
+  description = "A Google Cloud VMware Engine private cloud."
+}
+
+concept "vmware-engine-cluster" {
+  kind        = entity
+  description = "A VMware Engine cluster contributing compute capacity to a private cloud."
+}
+
+rule "vmware-engine-private-cloud" {
+  match {
+    kind = "resource"
+    type = "google_vmwareengine_private_cloud"
+  }
+
+  as = concept.vmware-engine-private-cloud
+}
+
+rule "vmware-engine-cluster" {
+  match {
+    kind = "resource"
+    type = "google_vmwareengine_cluster"
+  }
+
+  as = concept.vmware-engine-cluster
+}
+
+rule "vmware-engine-network" {
+  match {
+    kind = "resource"
+    type = "google_vmwareengine_network"
+  }
+
+  as = concept.core.virtual-network
+}
+
+rule "vmware-engine-subnet" {
+  match {
+    kind = "resource"
+    type = "google_vmwareengine_subnet"
+  }
+
+  as = concept.core.subnet
+}

@@ -1,0 +1,17 @@
+rule "account-lookup" {
+  match {
+    kind = "data"
+    type = "newrelic_account"
+  }
+
+  as = concept.core.observability-tenant
+}
+
+rule "account-management" {
+  match {
+    kind = "resource"
+    type = "newrelic_account_management"
+  }
+
+  as = concept.core.observability-tenant
+}

@@ -1,0 +1,13 @@
+concept "telemetry-pipeline" {
+  kind        = entity
+  description = "A Datadog Observability Pipeline collecting, processing, and routing telemetry."
+}
+
+rule "observability-pipeline" {
+  match {
+    kind = "resource"
+    type = "datadog_observability_pipeline"
+  }
+
+  as = concept.telemetry-pipeline
+}

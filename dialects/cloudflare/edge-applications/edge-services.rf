@@ -1,0 +1,180 @@
+concept "spectrum-application" {
+  kind        = entity
+  description = "A Cloudflare Spectrum TCP or UDP application."
+}
+
+concept "waiting-room" {
+  kind        = entity
+  description = "A Cloudflare Waiting Room controlling application admission."
+}
+
+concept "email-routing-configuration" {
+  kind        = detail
+  description = "Cloudflare Email Routing configuration for a zone."
+}
+
+concept "waiting-room-configuration" {
+  kind        = detail
+  description = "An event, bypass rule, or setting supporting a Cloudflare Waiting Room."
+}
+
+concept "email-security-configuration" {
+  kind        = detail
+  description = "Trusted-domain, sender-blocking, or impersonation configuration for Cloudflare Email Security."
+}
+
+rule "spectrum-application" {
+  match {
+    kind = "resource"
+    type = "cloudflare_spectrum_application"
+  }
+
+  as = concept.spectrum-application
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+
+  relation "routes-to" {
+    to  = concept.core.load-balancer
+    via = source.origin_direct
+  }
+}
+
+rule "waiting-room" {
+  match {
+    kind = "resource"
+    type = "cloudflare_waiting_room"
+  }
+
+  as = concept.waiting-room
+
+  context {
+    as  = context.core.ownership
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "email-routing-settings" {
+  match {
+    kind = "resource"
+    type = "cloudflare_email_routing_settings"
+  }
+
+  as = concept.email-routing-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "email-routing-rule" {
+  match {
+    kind = "resource"
+    type = "cloudflare_email_routing_rule"
+  }
+
+  as = concept.email-routing-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "email-routing-catch-all" {
+  match {
+    kind = "resource"
+    type = "cloudflare_email_routing_catch_all"
+  }
+
+  as = concept.email-routing-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "waiting-room-event" {
+  match {
+    kind = "resource"
+    type = "cloudflare_waiting_room_event"
+  }
+
+  as = concept.waiting-room-configuration
+
+  contribution {
+    to  = concept.waiting-room
+    via = source.waiting_room_id
+  }
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "waiting-room-rules" {
+  match {
+    kind = "resource"
+    type = "cloudflare_waiting_room_rules"
+  }
+
+  as = concept.waiting-room-configuration
+
+  contribution {
+    to  = concept.waiting-room
+    via = source.waiting_room_id
+  }
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "waiting-room-settings" {
+  match {
+    kind = "resource"
+    type = "cloudflare_waiting_room_settings"
+  }
+
+  as = concept.waiting-room-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "email-security-block-sender" {
+  match {
+    kind = "resource"
+    type = "cloudflare_email_security_block_sender"
+  }
+
+  as = concept.email-security-configuration
+}
+
+rule "email-security-impersonation-registry" {
+  match {
+    kind = "resource"
+    type = "cloudflare_email_security_impersonation_registry"
+  }
+
+  as = concept.email-security-configuration
+}
+
+rule "email-security-trusted-domains" {
+  match {
+    kind = "resource"
+    type = "cloudflare_email_security_trusted_domains"
+  }
+
+  as = concept.email-security-configuration
+}

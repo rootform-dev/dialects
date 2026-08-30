@@ -1,0 +1,13 @@
+concept "recaptcha-enterprise-key" {
+  kind        = entity
+  description = "A reCAPTCHA Enterprise key protecting an application surface."
+}
+
+rule "recaptcha-enterprise-key" {
+  match {
+    kind = "resource"
+    type = "google_recaptcha_enterprise_key"
+  }
+
+  as = concept.recaptcha-enterprise-key
+}

@@ -1,0 +1,352 @@
+{
+  "format_version": "1",
+  "dialect": "grafana",
+  "verified_date": "2026-08-30",
+  "integrity_boundary": "presentation digest is separate from semantic source digest",
+  "presentation_sha256": "sha256:0255c7c5442596310497e7f3d4108540067b39351afa4a206dd7acad07be35fc",
+  "asset": {
+    "decision": "generic-identities-only",
+    "reason": "no explicit redistribution permission for Grafana trademark assets was established",
+    "cdn_or_remote_asset": false
+  },
+  "rules": [
+    {
+      "id": "grafana/agento11y-collection",
+      "label": "Grafana Agent Observability collection"
+    },
+    {
+      "id": "grafana/agento11y-evaluation-rule",
+      "label": "Grafana Agent Observability evaluation rule"
+    },
+    {
+      "id": "grafana/agento11y-evaluator",
+      "label": "Grafana Agent Observability evaluator"
+    },
+    {
+      "id": "grafana/agento11y-hook-rule",
+      "label": "Grafana Agent Observability guard rule"
+    },
+    {
+      "id": "grafana/agento11y-rule-action",
+      "label": "Grafana Agent Observability rule action"
+    },
+    {
+      "id": "grafana/apps-productactivation-appo11yconfig-v1alpha1",
+      "label": "Grafana Cloud Application Observability activation"
+    },
+    {
+      "id": "grafana/apps-productactivation-dbo11yconfig-v1alpha1",
+      "label": "Grafana Cloud Database Observability activation"
+    },
+    {
+      "id": "grafana/apps-productactivation-k8so11yconfig-v1alpha1",
+      "label": "Grafana Cloud Kubernetes Monitoring activation"
+    },
+    {
+      "id": "grafana/apps-provisioning-connection-v0alpha1",
+      "label": "Grafana Git Sync connection"
+    },
+    {
+      "id": "grafana/apps-provisioning-repository-v0alpha1",
+      "label": "Grafana Git Sync repository"
+    },
+    {
+      "id": "grafana/apps-secret-keeper-activation-v1beta1",
+      "label": "Grafana Secrets Management activation"
+    },
+    {
+      "id": "grafana/apps-secret-keeper-v1beta1",
+      "label": "Grafana Secrets Management keeper"
+    },
+    {
+      "id": "grafana/apps-secret-securevalue-v1beta1",
+      "label": "Grafana managed secret"
+    },
+    {
+      "id": "grafana/asserts-custom-model-rules",
+      "label": "Grafana Cloud Knowledge Graph custom model rules"
+    },
+    {
+      "id": "grafana/asserts-log-config",
+      "label": "Grafana Cloud Knowledge Graph log configuration"
+    },
+    {
+      "id": "grafana/asserts-notification-alerts-config",
+      "label": "Grafana Cloud Knowledge Graph notification alerts configuration"
+    },
+    {
+      "id": "grafana/asserts-profile-config",
+      "label": "Grafana Cloud Knowledge Graph profile configuration"
+    },
+    {
+      "id": "grafana/asserts-prom-rule-file",
+      "label": "Grafana Cloud Knowledge Graph Prometheus rule file"
+    },
+    {
+      "id": "grafana/asserts-stack",
+      "label": "Grafana Cloud Knowledge Graph"
+    },
+    {
+      "id": "grafana/asserts-suppressed-assertions-config",
+      "label": "Grafana Cloud Knowledge Graph suppressed assertions configuration"
+    },
+    {
+      "id": "grafana/asserts-thresholds",
+      "label": "Grafana Cloud Knowledge Graph thresholds"
+    },
+    {
+      "id": "grafana/asserts-trace-config",
+      "label": "Grafana Cloud Knowledge Graph trace configuration"
+    },
+    {
+      "id": "grafana/assistant-mcp-server",
+      "label": "Grafana Assistant MCP server integration"
+    },
+    {
+      "id": "grafana/cloud-integration",
+      "label": "Grafana Cloud integration package"
+    },
+    {
+      "id": "grafana/cloud-plugin-installation",
+      "label": "Grafana Cloud plugin installation"
+    },
+    {
+      "id": "grafana/cloud-private-data-source-connect-network",
+      "label": "Grafana Cloud Private Data Source Connect network"
+    },
+    {
+      "id": "grafana/cloud-provider-aws-account",
+      "label": "Grafana Cloud AWS account integration"
+    },
+    {
+      "id": "grafana/cloud-provider-aws-account-lookup",
+      "label": "Grafana Cloud AWS account integration lookup"
+    },
+    {
+      "id": "grafana/cloud-provider-aws-cloudwatch-scrape-job",
+      "label": "Grafana CloudWatch metrics scrape job"
+    },
+    {
+      "id": "grafana/cloud-provider-aws-cloudwatch-scrape-job-lookup",
+      "label": "Grafana CloudWatch metrics scrape job lookup"
+    },
+    {
+      "id": "grafana/cloud-provider-aws-resource-metadata-scrape-job",
+      "label": "Grafana AWS Resource Metadata scrape job"
+    },
+    {
+      "id": "grafana/cloud-provider-azure-credential",
+      "label": "Grafana Cloud Azure integration"
+    },
+    {
+      "id": "grafana/cloud-provider-azure-credential-lookup",
+      "label": "Grafana Cloud Azure integration lookup"
+    },
+    {
+      "id": "grafana/cloud-stack",
+      "label": "Grafana Cloud stack"
+    },
+    {
+      "id": "grafana/cloud-stack-lookup",
+      "label": "Grafana Cloud stack lookup"
+    },
+    {
+      "id": "grafana/connections-metrics-endpoint-scrape-job",
+      "label": "Grafana Cloud Metrics Endpoint scrape job"
+    },
+    {
+      "id": "grafana/connections-metrics-endpoint-scrape-job-lookup",
+      "label": "Grafana Cloud Metrics Endpoint scrape job lookup"
+    },
+    {
+      "id": "grafana/data-source",
+      "label": "Grafana data source"
+    },
+    {
+      "id": "grafana/data-source-lookup",
+      "label": "Grafana data source lookup"
+    },
+    {
+      "id": "grafana/fleet-management-collector",
+      "label": "Grafana Fleet Management collector"
+    },
+    {
+      "id": "grafana/fleet-management-collector-lookup",
+      "label": "Grafana Fleet Management collector lookup"
+    },
+    {
+      "id": "grafana/fleet-management-pipeline",
+      "label": "Grafana Fleet Management pipeline"
+    },
+    {
+      "id": "grafana/frontend-o11y-app",
+      "label": "Grafana Cloud Frontend Observability application"
+    },
+    {
+      "id": "grafana/frontend-o11y-app-lookup",
+      "label": "Grafana Cloud Frontend Observability application lookup"
+    },
+    {
+      "id": "grafana/k6-installation",
+      "label": "Grafana Cloud k6 installation"
+    },
+    {
+      "id": "grafana/k6-load-test",
+      "label": "Grafana Cloud k6 load test"
+    },
+    {
+      "id": "grafana/k6-load-test-lookup",
+      "label": "Grafana Cloud k6 load test lookup"
+    },
+    {
+      "id": "grafana/k6-project",
+      "label": "Grafana Cloud k6 project"
+    },
+    {
+      "id": "grafana/k6-project-lookup",
+      "label": "Grafana Cloud k6 project lookup"
+    },
+    {
+      "id": "grafana/machine-learning-alert",
+      "label": "Grafana Machine Learning alert"
+    },
+    {
+      "id": "grafana/machine-learning-job",
+      "label": "Grafana Machine Learning job"
+    },
+    {
+      "id": "grafana/machine-learning-outlier-detector",
+      "label": "Grafana Machine Learning outlier detector"
+    },
+    {
+      "id": "grafana/oncall-integration",
+      "label": "Grafana OnCall integration"
+    },
+    {
+      "id": "grafana/oncall-integration-lookup",
+      "label": "Grafana OnCall integration lookup"
+    },
+    {
+      "id": "grafana/oncall-route",
+      "label": "Grafana OnCall route"
+    },
+    {
+      "id": "grafana/organization",
+      "label": "Grafana organization"
+    },
+    {
+      "id": "grafana/organization-lookup",
+      "label": "Grafana organization lookup"
+    },
+    {
+      "id": "grafana/scim-config",
+      "label": "Grafana SCIM configuration"
+    },
+    {
+      "id": "grafana/slo",
+      "label": "Grafana SLO"
+    },
+    {
+      "id": "grafana/sso-settings",
+      "label": "Grafana SSO settings"
+    },
+    {
+      "id": "grafana/synthetic-monitoring-check",
+      "label": "Grafana Synthetic Monitoring check"
+    },
+    {
+      "id": "grafana/synthetic-monitoring-installation",
+      "label": "Grafana Synthetic Monitoring installation"
+    },
+    {
+      "id": "grafana/synthetic-monitoring-probe",
+      "label": "Grafana Synthetic Monitoring probe"
+    },
+    {
+      "id": "grafana/synthetic-monitoring-probe-lookup",
+      "label": "Grafana Synthetic Monitoring probe lookup"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "grafana/data-source",
+      "label": "Grafana data source"
+    },
+    {
+      "id": "grafana/private-data-source-connect-network",
+      "label": "Grafana Cloud Private Data Source Connect network"
+    },
+    {
+      "id": "grafana/cloud-integration-configuration",
+      "label": "Grafana Cloud integration configuration"
+    },
+    {
+      "id": "grafana/metrics-scrape-job",
+      "label": "Grafana Cloud Metrics Endpoint scrape job"
+    },
+    {
+      "id": "grafana/telemetry-collector",
+      "label": "Grafana Fleet Management collector"
+    },
+    {
+      "id": "grafana/telemetry-pipeline",
+      "label": "Grafana Fleet Management pipeline"
+    },
+    {
+      "id": "grafana/performance-testing-project",
+      "label": "Grafana Cloud k6 project"
+    },
+    {
+      "id": "grafana/performance-test",
+      "label": "Grafana Cloud k6 load test"
+    },
+    {
+      "id": "grafana/platform-installation",
+      "label": "Grafana Cloud product installation"
+    },
+    {
+      "id": "grafana/knowledge-graph",
+      "label": "Grafana Cloud Knowledge Graph"
+    },
+    {
+      "id": "grafana/knowledge-graph-configuration",
+      "label": "Grafana Cloud Knowledge Graph configuration"
+    },
+    {
+      "id": "grafana/oncall-integration",
+      "label": "Grafana OnCall integration"
+    },
+    {
+      "id": "grafana/oncall-routing",
+      "label": "Grafana OnCall routing configuration"
+    },
+    {
+      "id": "grafana/git-sync-connection",
+      "label": "Grafana Git Sync connection"
+    },
+    {
+      "id": "grafana/git-sync-repository",
+      "label": "Grafana Git Sync repository"
+    },
+    {
+      "id": "grafana/secret-keeper",
+      "label": "Grafana Secrets Management keeper"
+    },
+    {
+      "id": "grafana/assistant-integration",
+      "label": "Grafana Assistant MCP server integration"
+    },
+    {
+      "id": "grafana/agent-observability-configuration",
+      "label": "Grafana Agent Observability configuration"
+    },
+    {
+      "id": "grafana/machine-learning-configuration",
+      "label": "Grafana Machine Learning configuration"
+    },
+    {
+      "id": "grafana/identity-configuration",
+      "label": "Grafana identity federation configuration"
+    }
+  ]
+}

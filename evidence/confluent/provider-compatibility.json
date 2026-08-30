@@ -1,0 +1,665 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-29",
+  "dialect": {
+    "name": "confluent",
+    "version": "0.1.0"
+  },
+  "provider": {
+    "source": "registry.terraform.io/confluentinc/confluent",
+    "baseline_version": "2.83.0",
+    "compatibility": "= 2.83.0",
+    "bound": "temporary-exact-evidence",
+    "schema_sha256": "sha256:9d01161496826c366746c93c53f358e6d66b0120ab86653c2e2e057b1feb3731"
+  },
+  "semantic_sources_sha256": "sha256:f09f74be9b4097bf84b4756b94ce99c0cabe8e440f51d4882cb9a90b0b159bd6",
+  "rules": [
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/network/networking.rf",
+      "paths": [
+        "aws_ingress_private_link_endpoint[0].vpc_endpoint_id",
+        "azure_ingress_private_link_endpoint[0].private_endpoint_resource_id",
+        "gateway[0].id",
+        "gcp_ingress_private_service_connect_endpoint[0].private_service_connect_connection_id"
+      ],
+      "resource_type": "confluent_access_point",
+      "rule_id": "confluent/access-point",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_access_point.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/governance-management/environments.rf",
+      "paths": [],
+      "resource_type": "confluent_business_metadata",
+      "rule_id": "confluent/business-metadata",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_business_metadata.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/governance-management/environments.rf",
+      "paths": [],
+      "resource_type": "confluent_business_metadata_binding",
+      "rule_id": "confluent/business-metadata-binding",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_business_metadata_binding.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/security/encryption-certificates.rf",
+      "paths": ["aws[0].key_arn", "azure[0].key_identifier", "gcp[0].key_id"],
+      "resource_type": "confluent_byok_key",
+      "rule_id": "confluent/byok-key",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_byok_key.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/governance-management/environments.rf",
+      "paths": [],
+      "resource_type": "confluent_catalog_entity_attributes",
+      "rule_id": "confluent/catalog-entity-attributes",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_catalog_entity_attributes.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/data-governance/catalog-tableflow.rf",
+      "paths": ["aws_glue[0].provider_integration_id", "environment[0].id", "kafka_cluster[0].id"],
+      "resource_type": "confluent_catalog_integration",
+      "rule_id": "confluent/catalog-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_catalog_integration.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/security/encryption-certificates.rf",
+      "paths": [],
+      "resource_type": "confluent_certificate_authority",
+      "rule_id": "confluent/certificate-authority",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_certificate_authority.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/security/encryption-certificates.rf",
+      "paths": ["certificate_authority[0].id"],
+      "resource_type": "confluent_certificate_pool",
+      "rule_id": "confluent/certificate-pool",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_certificate_pool.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/streaming/cluster-linking.rf",
+      "paths": [
+        "destination_kafka_cluster[0].id",
+        "local_kafka_cluster[0].id",
+        "remote_kafka_cluster[0].id",
+        "source_kafka_cluster[0].id"
+      ],
+      "resource_type": "confluent_cluster_link",
+      "rule_id": "confluent/cluster-link",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_cluster_link.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/connectors/connectors.rf",
+      "paths": ["environment[0].id"],
+      "resource_type": "confluent_connect_artifact",
+      "rule_id": "confluent/connect-artifact",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_connect_artifact.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/connectors/connectors.rf",
+      "paths": ["environment[0].id", "kafka_cluster[0].id"],
+      "resource_type": "confluent_connector",
+      "rule_id": "confluent/connector",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_connector.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/connectors/connectors.rf",
+      "paths": [],
+      "resource_type": "confluent_custom_connector_plugin",
+      "rule_id": "confluent/custom-connector-plugin",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_custom_connector_plugin.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/connectors/connectors.rf",
+      "paths": ["environment[0].id"],
+      "resource_type": "confluent_custom_connector_plugin_version",
+      "rule_id": "confluent/custom-connector-plugin-version",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_custom_connector_plugin_version.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/network/networking.rf",
+      "paths": ["gateway[0].id"],
+      "resource_type": "confluent_dns_forwarder",
+      "rule_id": "confluent/dns-forwarder",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_dns_forwarder.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/network/networking.rf",
+      "paths": [],
+      "resource_type": "confluent_dns_record",
+      "rule_id": "confluent/dns-record",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_dns_record.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/governance-management/environments.rf",
+      "paths": [],
+      "resource_type": "confluent_environment",
+      "rule_id": "confluent/environment",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_environment.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/stream-processing/flink.rf",
+      "paths": ["environment[0].id"],
+      "resource_type": "confluent_flink_artifact",
+      "rule_id": "confluent/flink-artifact",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_flink_artifact.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/stream-processing/flink.rf",
+      "paths": ["environment[0].id"],
+      "resource_type": "confluent_flink_compute_pool",
+      "rule_id": "confluent/flink-compute-pool",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_flink_compute_pool.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/stream-processing/flink.rf",
+      "paths": [],
+      "resource_type": "confluent_flink_compute_pool_config",
+      "rule_id": "confluent/flink-compute-pool-config",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_flink_compute_pool_config.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/stream-processing/flink.rf",
+      "paths": ["compute_pool[0].id", "environment[0].id", "principal[0].id"],
+      "resource_type": "confluent_flink_connection",
+      "rule_id": "confluent/flink-connection",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_flink_connection.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/stream-processing/flink.rf",
+      "paths": ["compute_pool[0].id", "kafka_cluster[0].id", "principal[0].id"],
+      "resource_type": "confluent_flink_materialized_table",
+      "rule_id": "confluent/flink-materialized-table",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_flink_materialized_table.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/stream-processing/flink.rf",
+      "paths": ["compute_pool[0].id"],
+      "resource_type": "confluent_flink_statement",
+      "rule_id": "confluent/flink-statement",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_flink_statement.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/network/networking.rf",
+      "paths": ["environment[0].id"],
+      "resource_type": "confluent_gateway",
+      "rule_id": "confluent/gateway",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_gateway.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "confluent_group_mapping",
+      "rule_id": "confluent/group-mapping",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_group_mapping.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/identity-iam/identities.rf",
+      "paths": ["identity_provider[0].id"],
+      "resource_type": "confluent_identity_pool",
+      "rule_id": "confluent/identity-pool",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_identity_pool.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "confluent_identity_provider",
+      "rule_id": "confluent/identity-provider",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_identity_provider.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "confluent_ip_filter",
+      "rule_id": "confluent/ip-filter",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_ip_filter.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "confluent_ip_group",
+      "rule_id": "confluent/ip-group",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_ip_group.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/streaming/kafka.rf",
+      "paths": ["kafka_cluster[0].id"],
+      "resource_type": "confluent_kafka_acl",
+      "rule_id": "confluent/kafka-acl",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_kafka_acl.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/streaming/kafka.rf",
+      "paths": ["kafka_cluster[0].id"],
+      "resource_type": "confluent_kafka_client_quota",
+      "rule_id": "confluent/kafka-client-quota",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_kafka_client_quota.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/streaming/kafka.rf",
+      "paths": ["byok_key[0].id", "environment[0].id", "network[0].id"],
+      "resource_type": "confluent_kafka_cluster",
+      "rule_id": "confluent/kafka-cluster",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_kafka_cluster.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/streaming/kafka.rf",
+      "paths": ["kafka_cluster[0].id"],
+      "resource_type": "confluent_kafka_cluster_config",
+      "rule_id": "confluent/kafka-cluster-config",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_kafka_cluster_config.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/streaming/cluster-linking.rf",
+      "paths": [
+        "cluster_link[0].link_name",
+        "kafka_cluster[0].id",
+        "source_kafka_topic[0].topic_name"
+      ],
+      "resource_type": "confluent_kafka_mirror_topic",
+      "rule_id": "confluent/kafka-mirror-topic",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_kafka_mirror_topic.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/streaming/kafka.rf",
+      "paths": ["kafka_cluster[0].id"],
+      "resource_type": "confluent_kafka_topic",
+      "rule_id": "confluent/kafka-topic",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_kafka_topic.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/stream-processing/ksqldb.rf",
+      "paths": ["credential_identity[0].id", "environment[0].id", "kafka_cluster[0].id"],
+      "resource_type": "confluent_ksql_cluster",
+      "rule_id": "confluent/ksqldb-cluster",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_ksql_cluster.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/connectors/connectors.rf",
+      "paths": [],
+      "resource_type": "confluent_plugin",
+      "rule_id": "confluent/legacy-connector-plugin",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_plugin.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/network/networking.rf",
+      "paths": ["environment[0].id"],
+      "resource_type": "confluent_network",
+      "rule_id": "confluent/network",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_network.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/network/networking.rf",
+      "paths": ["network[0].id", "network_link_service[0].id"],
+      "resource_type": "confluent_network_link_endpoint",
+      "rule_id": "confluent/network-link-endpoint",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_network_link_endpoint.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/network/networking.rf",
+      "paths": ["network[0].id"],
+      "resource_type": "confluent_network_link_service",
+      "rule_id": "confluent/network-link-service",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_network_link_service.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/network/networking.rf",
+      "paths": ["aws[0].vpc", "azure[0].vnet", "gcp[0].vpc_network", "network[0].id"],
+      "resource_type": "confluent_peering",
+      "rule_id": "confluent/network-peering",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_peering.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/network/networking.rf",
+      "paths": ["network[0].id"],
+      "resource_type": "confluent_private_link_access",
+      "rule_id": "confluent/private-link-access",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_private_link_access.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/network/networking.rf",
+      "paths": ["environment[0].id"],
+      "resource_type": "confluent_private_link_attachment",
+      "rule_id": "confluent/private-link-attachment",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_private_link_attachment.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/network/networking.rf",
+      "paths": [
+        "aws[0].vpc_endpoint_id",
+        "azure[0].private_endpoint_resource_id",
+        "gcp[0].private_service_connect_connection_id",
+        "private_link_attachment[0].id"
+      ],
+      "resource_type": "confluent_private_link_attachment_connection",
+      "rule_id": "confluent/private-link-attachment-connection",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_private_link_attachment_connection.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/security/encryption-certificates.rf",
+      "paths": ["aws[0].customer_role_arn", "environment[0].id"],
+      "resource_type": "confluent_provider_integration",
+      "rule_id": "confluent/provider-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_provider_integration.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/security/encryption-certificates.rf",
+      "paths": ["provider_integration_id"],
+      "resource_type": "confluent_provider_integration_authorization",
+      "rule_id": "confluent/provider-integration-authorization",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_provider_integration_authorization.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/security/encryption-certificates.rf",
+      "paths": ["environment[0].id"],
+      "resource_type": "confluent_provider_integration_setup",
+      "rule_id": "confluent/provider-integration-setup",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_provider_integration_setup.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "confluent_role_binding",
+      "rule_id": "confluent/role-binding",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_role_binding.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/streaming/kafka.rf",
+      "paths": ["environment[0].id", "kafka_cluster[0].id"],
+      "resource_type": "confluent_rtce_topic",
+      "rule_id": "confluent/rtce-topic",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_rtce_topic.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/data-governance/schema-registry.rf",
+      "paths": ["schema_registry_cluster[0].id"],
+      "resource_type": "confluent_schema",
+      "rule_id": "confluent/schema",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_schema.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/data-governance/schema-registry.rf",
+      "paths": ["destination_schema_registry_cluster[0].id", "schema_registry_cluster[0].id"],
+      "resource_type": "confluent_schema_exporter",
+      "rule_id": "confluent/schema-exporter",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_schema_exporter.md"
+    },
+    {
+      "construct_kind": "data_source",
+      "file": "dialects/confluent/data-governance/schema-registry.rf",
+      "paths": ["environment[0].id"],
+      "resource_type": "confluent_schema_registry_cluster",
+      "rule_id": "confluent/schema-registry",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/data-sources/confluent_schema_registry_cluster.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/data-governance/schema-registry.rf",
+      "paths": ["schema_registry_cluster[0].id"],
+      "resource_type": "confluent_schema_registry_cluster_config",
+      "rule_id": "confluent/schema-registry-cluster-config",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_schema_registry_cluster_config.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/data-governance/schema-registry.rf",
+      "paths": ["schema_registry_cluster[0].id"],
+      "resource_type": "confluent_schema_registry_cluster_mode",
+      "rule_id": "confluent/schema-registry-cluster-mode",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_schema_registry_cluster_mode.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/data-governance/schema-registry.rf",
+      "paths": ["schema_registry_cluster[0].id"],
+      "resource_type": "confluent_schema_registry_dek",
+      "rule_id": "confluent/schema-registry-dek",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_schema_registry_dek.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/data-governance/schema-registry.rf",
+      "paths": ["schema_registry_cluster[0].id"],
+      "resource_type": "confluent_schema_registry_kek",
+      "rule_id": "confluent/schema-registry-kek",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_schema_registry_kek.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "confluent_service_account",
+      "rule_id": "confluent/service-account",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_service_account.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/data-governance/schema-registry.rf",
+      "paths": ["schema_registry_cluster[0].id"],
+      "resource_type": "confluent_subject_config",
+      "rule_id": "confluent/subject-config",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_subject_config.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/data-governance/schema-registry.rf",
+      "paths": ["schema_registry_cluster[0].id"],
+      "resource_type": "confluent_subject_mode",
+      "rule_id": "confluent/subject-mode",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_subject_mode.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/data-governance/catalog-tableflow.rf",
+      "paths": [
+        "azure_data_lake_storage_gen_2[0].container_name",
+        "azure_data_lake_storage_gen_2[0].provider_integration_id",
+        "byob_aws[0].bucket_name",
+        "byob_aws[0].provider_integration_id",
+        "environment[0].id",
+        "kafka_cluster[0].id"
+      ],
+      "resource_type": "confluent_tableflow_topic",
+      "rule_id": "confluent/tableflow-topic",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_tableflow_topic.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/governance-management/environments.rf",
+      "paths": [],
+      "resource_type": "confluent_tag",
+      "rule_id": "confluent/tag",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_tag.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/governance-management/environments.rf",
+      "paths": [],
+      "resource_type": "confluent_tag_binding",
+      "rule_id": "confluent/tag-binding",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_tag_binding.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/confluent/network/networking.rf",
+      "paths": ["network[0].id"],
+      "resource_type": "confluent_transit_gateway_attachment",
+      "rule_id": "confluent/transit-gateway-attachment",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_transit_gateway_attachment.md"
+    }
+  ],
+  "review_policy": "later provider releases require schema-path and documented-meaning comparison; they do not require a dialect release automatically"
+}

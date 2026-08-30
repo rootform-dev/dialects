@@ -1,0 +1,2 @@
+db_password = "SECRET_TFVARS_DB_PASSWORD_32a"
+project     = "SECRET_TFVARS_PROJECT_32b"

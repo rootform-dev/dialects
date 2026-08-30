@@ -1,0 +1,63 @@
+{
+  "format_version": "1",
+  "matrix_sha256": "sha256:88e9a5348ab54ed9d506d294ce047490d504dda161b2f2db2da0044ce45d1738",
+  "total_rows": 3055,
+  "by_inventory": {
+    "provider_constructs": 2950,
+    "catalog_products": 105
+  },
+  "provider_surfaces": {
+    "managed-resource": 1459,
+    "data-source": 493,
+    "ephemeral-resource": 6,
+    "provider-function": 6,
+    "resource-identity": 986
+  },
+  "provider_parity": {
+    "shared": 2703,
+    "stable_only": 0,
+    "beta_only": 247
+  },
+  "by_decision": {
+    "supported": 300,
+    "partial": 124,
+    "intentionally-unrepresented": 2131,
+    "unsupported": 500
+  },
+  "by_declaration_outcome": {
+    "represented": 265,
+    "supporting": 87,
+    "filtered": 0,
+    "unsupported": 1606,
+    "failed": 0,
+    "not-applicable": 1097
+  },
+  "by_family": {
+    "compute": 89,
+    "containers": 28,
+    "serverless": 107,
+    "networking": 136,
+    "load-balancing": 101,
+    "dns-cdn": 24,
+    "storage": 139,
+    "databases": 114,
+    "data-analytics": 366,
+    "messaging-eventing": 66,
+    "ai-ml": 352,
+    "identity-iam": 208,
+    "security": 537,
+    "api-integration": 136,
+    "operations": 85,
+    "developer-ci-cd": 99,
+    "hybrid-distributed-cloud": 129,
+    "migration": 32,
+    "governance-management": 307
+  },
+  "catalog": {
+    "supported": 70,
+    "partial": 2,
+    "intentionally_unrepresented": 8,
+    "unsupported": 0,
+    "no_provider_surface": 25
+  }
+}

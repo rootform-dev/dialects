@@ -1,0 +1,68 @@
+concept "network-services-gateway" {
+  kind        = entity
+  description = "A Network Services gateway receiving and routing application traffic."
+}
+
+concept "service-mesh" {
+  kind        = entity
+  description = "A managed service mesh traffic-control boundary."
+}
+
+concept "network-services-route" {
+  kind        = detail
+  description = "An HTTP, gRPC, TCP, or TLS route contributing traffic policy."
+}
+
+rule "network-services-gateway" {
+  match {
+    kind = "resource"
+    type = "google_network_services_gateway"
+  }
+
+  as = concept.network-services-gateway
+}
+
+rule "service-mesh" {
+  match {
+    kind = "resource"
+    type = "google_network_services_mesh"
+  }
+
+  as = concept.service-mesh
+}
+
+rule "network-services-http-route" {
+  match {
+    kind = "resource"
+    type = "google_network_services_http_route"
+  }
+
+  as = concept.network-services-route
+}
+
+rule "network-services-grpc-route" {
+  match {
+    kind = "resource"
+    type = "google_network_services_grpc_route"
+  }
+
+  as = concept.network-services-route
+}
+
+rule "network-services-tcp-route" {
+  match {
+    kind = "resource"
+    type = "google_network_services_tcp_route"
+  }
+
+  as = concept.network-services-route
+}
+
+rule "network-services-tls-route" {
+  match {
+    kind = "resource"
+    type = "google_network_services_tls_route"
+  }
+
+  as = concept.network-services-route
+}

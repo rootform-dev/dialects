@@ -1,0 +1,17 @@
+rule "organization" {
+  match {
+    kind = "resource"
+    type = "grafana_organization"
+  }
+
+  as = concept.core.observability-tenant
+}
+
+rule "organization-lookup" {
+  match {
+    kind = "data"
+    type = "grafana_organization"
+  }
+
+  as = concept.core.observability-tenant
+}

@@ -1,0 +1,22 @@
+concept "firebase-data-connect-service" {
+  kind        = entity
+  description = "A Firebase Data Connect service exposing an application data API."
+}
+
+rule "firebase-realtime-database" {
+  match {
+    kind = "resource"
+    type = "google_firebase_database_instance"
+  }
+
+  as = concept.core.managed-database
+}
+
+rule "firebase-data-connect-service" {
+  match {
+    kind = "resource"
+    type = "google_firebase_data_connect_service"
+  }
+
+  as = concept.firebase-data-connect-service
+}

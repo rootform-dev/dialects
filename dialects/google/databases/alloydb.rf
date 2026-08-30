@@ -1,0 +1,27 @@
+concept "alloydb-instance" {
+  kind        = detail
+  description = "A database instance contributing compute capacity to an AlloyDB cluster."
+}
+
+rule "alloydb-cluster" {
+  match {
+    kind = "resource"
+    type = "google_alloydb_cluster"
+  }
+
+  as = concept.core.managed-database
+}
+
+rule "alloydb-instance" {
+  match {
+    kind = "resource"
+    type = "google_alloydb_instance"
+  }
+
+  as = concept.alloydb-instance
+
+  contribution {
+    to  = concept.core.managed-database
+    via = source.cluster
+  }
+}

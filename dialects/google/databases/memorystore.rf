@@ -1,0 +1,35 @@
+rule "memorystore-redis-instance" {
+  match {
+    kind = "resource"
+    type = "google_redis_instance"
+  }
+
+  as = concept.core.managed-cache
+}
+
+rule "memorystore-redis-cluster" {
+  match {
+    kind = "resource"
+    type = "google_redis_cluster"
+  }
+
+  as = concept.core.managed-cache
+}
+
+rule "memorystore-memcached-instance" {
+  match {
+    kind = "resource"
+    type = "google_memcache_instance"
+  }
+
+  as = concept.core.managed-cache
+}
+
+rule "memorystore-instance" {
+  match {
+    kind = "resource"
+    type = "google_memorystore_instance"
+  }
+
+  as = concept.core.managed-cache
+}

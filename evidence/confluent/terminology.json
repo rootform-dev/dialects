@@ -1,0 +1,616 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-29",
+  "dialect": "confluent",
+  "product_name": "Confluent Cloud",
+  "rules": [
+    {
+      "id": "confluent/access-point",
+      "terraform_type": "confluent_access_point",
+      "label": "Confluent Cloud Access Point",
+      "product": "Confluent Cloud networking",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_access_point.md"
+    },
+    {
+      "id": "confluent/business-metadata",
+      "terraform_type": "confluent_business_metadata",
+      "label": "Confluent Cloud business metadata",
+      "product": "Confluent Cloud catalog integrations and Tableflow",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_business_metadata.md"
+    },
+    {
+      "id": "confluent/business-metadata-binding",
+      "terraform_type": "confluent_business_metadata_binding",
+      "label": "Confluent Cloud business metadata binding",
+      "product": "Confluent Cloud catalog integrations and Tableflow",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_business_metadata_binding.md"
+    },
+    {
+      "id": "confluent/byok-key",
+      "terraform_type": "confluent_byok_key",
+      "label": "Confluent Cloud BYOK key",
+      "product": "Confluent Cloud security and provider integrations",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_byok_key.md"
+    },
+    {
+      "id": "confluent/catalog-entity-attributes",
+      "terraform_type": "confluent_catalog_entity_attributes",
+      "label": "Confluent Cloud catalog entity attributes",
+      "product": "Confluent Cloud catalog integrations and Tableflow",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_catalog_entity_attributes.md"
+    },
+    {
+      "id": "confluent/catalog-integration",
+      "terraform_type": "confluent_catalog_integration",
+      "label": "Confluent Cloud catalog integration",
+      "product": "Confluent Cloud catalog integrations and Tableflow",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_catalog_integration.md"
+    },
+    {
+      "id": "confluent/certificate-authority",
+      "terraform_type": "confluent_certificate_authority",
+      "label": "Confluent Cloud certificate authority",
+      "product": "Confluent Cloud security and provider integrations",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_certificate_authority.md"
+    },
+    {
+      "id": "confluent/certificate-pool",
+      "terraform_type": "confluent_certificate_pool",
+      "label": "Confluent Cloud certificate pool",
+      "product": "Confluent Cloud security and provider integrations",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_certificate_pool.md"
+    },
+    {
+      "id": "confluent/cluster-link",
+      "terraform_type": "confluent_cluster_link",
+      "label": "Confluent Cloud Cluster Link",
+      "product": "Confluent Cloud Cluster Linking",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_cluster_link.md"
+    },
+    {
+      "id": "confluent/connect-artifact",
+      "terraform_type": "confluent_connect_artifact",
+      "label": "Confluent Cloud connect artifact",
+      "product": "Confluent Cloud connectors",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_connect_artifact.md"
+    },
+    {
+      "id": "confluent/connector",
+      "terraform_type": "confluent_connector",
+      "label": "Confluent Cloud connector",
+      "product": "Confluent Cloud connectors",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_connector.md"
+    },
+    {
+      "id": "confluent/custom-connector-plugin",
+      "terraform_type": "confluent_custom_connector_plugin",
+      "label": "Confluent Cloud custom connector plugin",
+      "product": "Confluent Cloud connectors",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_custom_connector_plugin.md"
+    },
+    {
+      "id": "confluent/custom-connector-plugin-version",
+      "terraform_type": "confluent_custom_connector_plugin_version",
+      "label": "Confluent Cloud custom connector plugin version",
+      "product": "Confluent Cloud connectors",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_custom_connector_plugin_version.md"
+    },
+    {
+      "id": "confluent/dns-forwarder",
+      "terraform_type": "confluent_dns_forwarder",
+      "label": "Confluent Cloud DNS forwarder",
+      "product": "Confluent Cloud networking",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_dns_forwarder.md"
+    },
+    {
+      "id": "confluent/dns-record",
+      "terraform_type": "confluent_dns_record",
+      "label": "Confluent Cloud DNS record",
+      "product": "Confluent Cloud networking",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_dns_record.md"
+    },
+    {
+      "id": "confluent/environment",
+      "terraform_type": "confluent_environment",
+      "label": "Confluent Cloud environment",
+      "product": "Confluent Cloud environments",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_environment.md"
+    },
+    {
+      "id": "confluent/flink-artifact",
+      "terraform_type": "confluent_flink_artifact",
+      "label": "Confluent Cloud for Apache Flink artifact",
+      "product": "Confluent Cloud for Apache Flink",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_flink_artifact.md"
+    },
+    {
+      "id": "confluent/flink-compute-pool",
+      "terraform_type": "confluent_flink_compute_pool",
+      "label": "Confluent Cloud for Apache Flink compute pool",
+      "product": "Confluent Cloud for Apache Flink",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_flink_compute_pool.md"
+    },
+    {
+      "id": "confluent/flink-compute-pool-config",
+      "terraform_type": "confluent_flink_compute_pool_config",
+      "label": "Confluent Cloud for Apache Flink compute pool configuration",
+      "product": "Confluent Cloud for Apache Flink",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_flink_compute_pool_config.md"
+    },
+    {
+      "id": "confluent/flink-connection",
+      "terraform_type": "confluent_flink_connection",
+      "label": "Confluent Cloud for Apache Flink connection",
+      "product": "Confluent Cloud for Apache Flink",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_flink_connection.md"
+    },
+    {
+      "id": "confluent/flink-materialized-table",
+      "terraform_type": "confluent_flink_materialized_table",
+      "label": "Confluent Cloud for Apache Flink materialized table",
+      "product": "Confluent Cloud for Apache Flink",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_flink_materialized_table.md"
+    },
+    {
+      "id": "confluent/flink-statement",
+      "terraform_type": "confluent_flink_statement",
+      "label": "Confluent Cloud for Apache Flink statement",
+      "product": "Confluent Cloud for Apache Flink",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_flink_statement.md"
+    },
+    {
+      "id": "confluent/gateway",
+      "terraform_type": "confluent_gateway",
+      "label": "Confluent Cloud gateway",
+      "product": "Confluent Cloud networking",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_gateway.md"
+    },
+    {
+      "id": "confluent/group-mapping",
+      "terraform_type": "confluent_group_mapping",
+      "label": "Confluent Cloud group mapping",
+      "product": "Confluent Cloud identity and access management",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_group_mapping.md"
+    },
+    {
+      "id": "confluent/identity-pool",
+      "terraform_type": "confluent_identity_pool",
+      "label": "Confluent Cloud identity pool",
+      "product": "Confluent Cloud identity and access management",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_identity_pool.md"
+    },
+    {
+      "id": "confluent/identity-provider",
+      "terraform_type": "confluent_identity_provider",
+      "label": "Confluent Cloud identity provider",
+      "product": "Confluent Cloud identity and access management",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_identity_provider.md"
+    },
+    {
+      "id": "confluent/ip-filter",
+      "terraform_type": "confluent_ip_filter",
+      "label": "Confluent Cloud IP filter",
+      "product": "Confluent Cloud identity and access management",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_ip_filter.md"
+    },
+    {
+      "id": "confluent/ip-group",
+      "terraform_type": "confluent_ip_group",
+      "label": "Confluent Cloud IP group",
+      "product": "Confluent Cloud identity and access management",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_ip_group.md"
+    },
+    {
+      "id": "confluent/kafka-acl",
+      "terraform_type": "confluent_kafka_acl",
+      "label": "Confluent Cloud Kafka ACL",
+      "product": "Confluent Cloud Kafka",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_kafka_acl.md"
+    },
+    {
+      "id": "confluent/kafka-client-quota",
+      "terraform_type": "confluent_kafka_client_quota",
+      "label": "Confluent Cloud Kafka client quota",
+      "product": "Confluent Cloud Kafka",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_kafka_client_quota.md"
+    },
+    {
+      "id": "confluent/kafka-cluster",
+      "terraform_type": "confluent_kafka_cluster",
+      "label": "Confluent Cloud Kafka cluster",
+      "product": "Confluent Cloud Kafka",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_kafka_cluster.md"
+    },
+    {
+      "id": "confluent/kafka-cluster-config",
+      "terraform_type": "confluent_kafka_cluster_config",
+      "label": "Confluent Cloud Kafka cluster config",
+      "product": "Confluent Cloud Kafka",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_kafka_cluster_config.md"
+    },
+    {
+      "id": "confluent/kafka-mirror-topic",
+      "terraform_type": "confluent_kafka_mirror_topic",
+      "label": "Confluent Cloud mirror topic",
+      "product": "Confluent Cloud Cluster Linking",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_kafka_mirror_topic.md"
+    },
+    {
+      "id": "confluent/kafka-topic",
+      "terraform_type": "confluent_kafka_topic",
+      "label": "Confluent Cloud Kafka topic",
+      "product": "Confluent Cloud Kafka",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_kafka_topic.md"
+    },
+    {
+      "id": "confluent/ksqldb-cluster",
+      "terraform_type": "confluent_ksql_cluster",
+      "label": "Confluent Cloud ksqlDB cluster",
+      "product": "Confluent Cloud ksqlDB",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_ksql_cluster.md"
+    },
+    {
+      "id": "confluent/legacy-connector-plugin",
+      "terraform_type": "confluent_plugin",
+      "label": "Confluent Cloud plugin",
+      "product": "Confluent Cloud connectors",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_plugin.md"
+    },
+    {
+      "id": "confluent/network",
+      "terraform_type": "confluent_network",
+      "label": "Confluent Cloud network",
+      "product": "Confluent Cloud networking",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_network.md"
+    },
+    {
+      "id": "confluent/network-link-endpoint",
+      "terraform_type": "confluent_network_link_endpoint",
+      "label": "Confluent Cloud Network Linking endpoint",
+      "product": "Confluent Cloud networking",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_network_link_endpoint.md"
+    },
+    {
+      "id": "confluent/network-link-service",
+      "terraform_type": "confluent_network_link_service",
+      "label": "Confluent Cloud Network Linking service",
+      "product": "Confluent Cloud networking",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_network_link_service.md"
+    },
+    {
+      "id": "confluent/network-peering",
+      "terraform_type": "confluent_peering",
+      "label": "Confluent Cloud network peering",
+      "product": "Confluent Cloud networking",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_peering.md"
+    },
+    {
+      "id": "confluent/private-link-access",
+      "terraform_type": "confluent_private_link_access",
+      "label": "Confluent Cloud private Link access",
+      "product": "Confluent Cloud networking",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_private_link_access.md"
+    },
+    {
+      "id": "confluent/private-link-attachment",
+      "terraform_type": "confluent_private_link_attachment",
+      "label": "Confluent Cloud Private Link Attachment",
+      "product": "Confluent Cloud networking",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_private_link_attachment.md"
+    },
+    {
+      "id": "confluent/private-link-attachment-connection",
+      "terraform_type": "confluent_private_link_attachment_connection",
+      "label": "Confluent Cloud Private Link Attachment connection",
+      "product": "Confluent Cloud networking",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_private_link_attachment_connection.md"
+    },
+    {
+      "id": "confluent/provider-integration",
+      "terraform_type": "confluent_provider_integration",
+      "label": "Confluent Cloud provider integration",
+      "product": "Confluent Cloud security and provider integrations",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_provider_integration.md"
+    },
+    {
+      "id": "confluent/provider-integration-authorization",
+      "terraform_type": "confluent_provider_integration_authorization",
+      "label": "Confluent Cloud provider integration authorization",
+      "product": "Confluent Cloud security and provider integrations",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_provider_integration_authorization.md"
+    },
+    {
+      "id": "confluent/provider-integration-setup",
+      "terraform_type": "confluent_provider_integration_setup",
+      "label": "Confluent Cloud provider integration setup",
+      "product": "Confluent Cloud security and provider integrations",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_provider_integration_setup.md"
+    },
+    {
+      "id": "confluent/role-binding",
+      "terraform_type": "confluent_role_binding",
+      "label": "Confluent Cloud role binding",
+      "product": "Confluent Cloud identity and access management",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_role_binding.md"
+    },
+    {
+      "id": "confluent/rtce-topic",
+      "terraform_type": "confluent_rtce_topic",
+      "label": "Confluent Cloud real-time context engine topic",
+      "product": "Confluent Cloud Kafka",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_rtce_topic.md"
+    },
+    {
+      "id": "confluent/schema",
+      "terraform_type": "confluent_schema",
+      "label": "Confluent Cloud schema",
+      "product": "Confluent Cloud Stream Governance",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_schema.md"
+    },
+    {
+      "id": "confluent/schema-exporter",
+      "terraform_type": "confluent_schema_exporter",
+      "label": "Confluent Cloud Schema Exporter",
+      "product": "Confluent Cloud Stream Governance",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_schema_exporter.md"
+    },
+    {
+      "id": "confluent/schema-registry",
+      "terraform_type": "confluent_schema_registry_cluster",
+      "label": "Confluent Cloud Schema Registry",
+      "product": "Confluent Cloud Stream Governance",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/data-sources/confluent_schema_registry_cluster.md"
+    },
+    {
+      "id": "confluent/schema-registry-cluster-config",
+      "terraform_type": "confluent_schema_registry_cluster_config",
+      "label": "Confluent Cloud schema registry cluster config",
+      "product": "Confluent Cloud Stream Governance",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_schema_registry_cluster_config.md"
+    },
+    {
+      "id": "confluent/schema-registry-cluster-mode",
+      "terraform_type": "confluent_schema_registry_cluster_mode",
+      "label": "Confluent Cloud schema registry cluster mode",
+      "product": "Confluent Cloud Stream Governance",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_schema_registry_cluster_mode.md"
+    },
+    {
+      "id": "confluent/schema-registry-dek",
+      "terraform_type": "confluent_schema_registry_dek",
+      "label": "Confluent Cloud schema registry DEK",
+      "product": "Confluent Cloud Stream Governance",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_schema_registry_dek.md"
+    },
+    {
+      "id": "confluent/schema-registry-kek",
+      "terraform_type": "confluent_schema_registry_kek",
+      "label": "Confluent Cloud schema registry KEK",
+      "product": "Confluent Cloud Stream Governance",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_schema_registry_kek.md"
+    },
+    {
+      "id": "confluent/service-account",
+      "terraform_type": "confluent_service_account",
+      "label": "Confluent Cloud service account",
+      "product": "Confluent Cloud identity and access management",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_service_account.md"
+    },
+    {
+      "id": "confluent/subject-config",
+      "terraform_type": "confluent_subject_config",
+      "label": "Confluent Cloud subject config",
+      "product": "Confluent Cloud Stream Governance",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_subject_config.md"
+    },
+    {
+      "id": "confluent/subject-mode",
+      "terraform_type": "confluent_subject_mode",
+      "label": "Confluent Cloud subject mode",
+      "product": "Confluent Cloud Stream Governance",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_subject_mode.md"
+    },
+    {
+      "id": "confluent/tableflow-topic",
+      "terraform_type": "confluent_tableflow_topic",
+      "label": "Confluent Cloud Tableflow topic",
+      "product": "Confluent Cloud catalog integrations and Tableflow",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_tableflow_topic.md"
+    },
+    {
+      "id": "confluent/tag",
+      "terraform_type": "confluent_tag",
+      "label": "Confluent Cloud tag",
+      "product": "Confluent Cloud catalog integrations and Tableflow",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_tag.md"
+    },
+    {
+      "id": "confluent/tag-binding",
+      "terraform_type": "confluent_tag_binding",
+      "label": "Confluent Cloud tag binding",
+      "product": "Confluent Cloud catalog integrations and Tableflow",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_tag_binding.md"
+    },
+    {
+      "id": "confluent/transit-gateway-attachment",
+      "terraform_type": "confluent_transit_gateway_attachment",
+      "label": "Confluent Cloud AWS Transit Gateway attachment",
+      "product": "Confluent Cloud networking",
+      "source": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_transit_gateway_attachment.md"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "confluent/byok-key",
+      "label": "Confluent Cloud BYOK key",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/catalog-integration",
+      "label": "Confluent Cloud catalog integration",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/certificate-authority",
+      "label": "Confluent Cloud certificate authority",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/certificate-pool",
+      "label": "Confluent Cloud certificate pool",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/cluster-link",
+      "label": "Confluent Cloud Cluster Link",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/connector",
+      "label": "Confluent Cloud connector",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/connector-artifact",
+      "label": "Confluent Cloud connector artifact",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/dns-forwarder",
+      "label": "Confluent Cloud DNS forwarder",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/environment",
+      "label": "Confluent Cloud environment",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/flink-artifact",
+      "label": "Confluent Cloud Flink artifact",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/flink-compute-pool",
+      "label": "Confluent Cloud for Apache Flink compute pool",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/flink-configuration",
+      "label": "Confluent Cloud Flink configuration",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/flink-connection",
+      "label": "Confluent Cloud for Apache Flink connection",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/flink-materialized-table",
+      "label": "Confluent Cloud for Apache Flink materialized table",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/governance-configuration",
+      "label": "Confluent Cloud governance configuration",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/identity-access-configuration",
+      "label": "Confluent Cloud identity access configuration",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/identity-pool",
+      "label": "Confluent Cloud identity pool",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/identity-provider",
+      "label": "Confluent Cloud identity provider",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/kafka-cluster",
+      "label": "Confluent Cloud Kafka cluster",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/kafka-configuration",
+      "label": "Confluent Cloud Kafka configuration",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/ksqldb-cluster",
+      "label": "Confluent Cloud ksqlDB cluster",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/network-configuration",
+      "label": "Confluent Cloud network configuration",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/network-gateway",
+      "label": "Confluent Cloud gateway",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/network-link-endpoint",
+      "label": "Confluent Cloud Network Linking endpoint",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/network-link-service",
+      "label": "Confluent Cloud Network Linking service",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/private-link-attachment",
+      "label": "Confluent Cloud Private Link Attachment",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/provider-integration",
+      "label": "Confluent Cloud provider integration",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/schema-link",
+      "label": "Confluent Cloud Schema Exporter link",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/schema-registry",
+      "label": "Confluent Cloud Schema Registry",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/schema-registry-configuration",
+      "label": "Confluent Cloud schema registry configuration",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/security-configuration",
+      "label": "Confluent Cloud security configuration",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/tableflow-topic",
+      "label": "Confluent Cloud Tableflow topic",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    },
+    {
+      "id": "confluent/transit-gateway-attachment",
+      "label": "Confluent Cloud AWS Transit Gateway attachment",
+      "source": "https://docs.confluent.io/cloud/current/overview.html"
+    }
+  ],
+  "asset": {
+    "decision": "neutral-generic-identities",
+    "official_redistribution_permission_proven": false,
+    "official_source": "https://www.confluent.io/legal/trademarks/",
+    "redistributed_files": [],
+    "reason": "No explicit permission to redistribute a Confluent logo inside the Rootform binary was proven."
+  }
+}

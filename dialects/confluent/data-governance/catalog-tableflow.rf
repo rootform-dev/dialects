@@ -1,0 +1,76 @@
+concept "catalog-integration" {
+  kind        = entity
+  description = "A Confluent Cloud catalog integration with AWS Glue, Snowflake, or Unity Catalog."
+}
+
+concept "tableflow-topic" {
+  kind        = entity
+  description = "A Kafka topic materialized as an Iceberg or Delta Lake table by Confluent Cloud Tableflow."
+}
+
+rule "catalog-integration" {
+  match {
+    kind = "resource"
+    type = "confluent_catalog_integration"
+  }
+
+  as = concept.catalog-integration
+
+  context {
+    as  = context.core.ownership
+    to  = concept.environment
+    via = source.environment[0].id
+  }
+
+  context {
+    as  = context.core.runtime
+    to  = concept.kafka-cluster
+    via = source.kafka_cluster[0].id
+  }
+
+  relation "uses-provider-integration" {
+    to  = concept.provider-integration
+    via = source.aws_glue[0].provider_integration_id
+  }
+}
+
+rule "tableflow-topic" {
+  match {
+    kind = "resource"
+    type = "confluent_tableflow_topic"
+  }
+
+  as = concept.tableflow-topic
+
+  context {
+    as  = context.core.ownership
+    to  = concept.environment
+    via = source.environment[0].id
+  }
+
+  context {
+    as  = context.core.runtime
+    to  = concept.kafka-cluster
+    via = source.kafka_cluster[0].id
+  }
+
+  relation "stores-in" {
+    to  = concept.core.object-storage-container
+    via = source.byob_aws[0].bucket_name
+  }
+
+  relation "stores-in" {
+    to  = concept.core.object-storage-container
+    via = source.azure_data_lake_storage_gen_2[0].container_name
+  }
+
+  relation "uses-provider-integration" {
+    to  = concept.provider-integration
+    via = source.byob_aws[0].provider_integration_id
+  }
+
+  relation "uses-provider-integration" {
+    to  = concept.provider-integration
+    via = source.azure_data_lake_storage_gen_2[0].provider_integration_id
+  }
+}

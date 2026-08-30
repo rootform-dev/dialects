@@ -1,0 +1,506 @@
+{
+  "format_version": "1",
+  "dialect": {
+    "name": "datadog",
+    "version": "0.1.0"
+  },
+  "provider": {
+    "source": "registry.terraform.io/datadog/datadog",
+    "baseline_version": "4.19.0",
+    "compatibility": "= 4.19.0",
+    "bound": "temporary-exact-evidence",
+    "schema_sha256": "sha256:11a37efaaffb26ee8ebc890ab2092a516005d0b8a659b158fd9954dc51b44f6c"
+  },
+  "review_policy": "compare schema paths and official meaning before widening; compatible provider releases do not require a dialect release automatically",
+  "semantic_sources_sha256": "sha256:5a70cf76aa4b354d1e5c222c091a877e8f2cafb06c21743b10c88d6d6b2266ea",
+  "rules": [
+    {
+      "rule_id": "datadog/action-connection",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_action_connection",
+      "file": "dialects/datadog/integrations/service-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/action_connection",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/action-connection-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "datadog_action_connection",
+      "file": "dialects/datadog/integrations/service-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/data-sources/action_connection",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/app-builder-app",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_app_builder_app",
+      "file": "dialects/datadog/automation/app-platform.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/app_builder_app",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/app-builder-app-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "datadog_app_builder_app",
+      "file": "dialects/datadog/automation/app-platform.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/data-sources/app_builder_app",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/child-organization",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_child_organization",
+      "file": "dialects/datadog/governance-management/organizations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/child_organization",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/compliance-custom-framework",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_compliance_custom_framework",
+      "file": "dialects/datadog/security/cloud-security.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/compliance_custom_framework",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/csm-threats-policy",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_csm_threats_policy",
+      "file": "dialects/datadog/security/cloud-security.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/csm_threats_policy",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/datastore",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_datastore",
+      "file": "dialects/datadog/automation/app-platform.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/datastore",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/datastore-item",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_datastore_item",
+      "file": "dialects/datadog/automation/app-platform.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/datastore_item",
+      "paths": [
+        {
+          "path": "datastore_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "datadog/datastore-item-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "datadog_datastore_item",
+      "file": "dialects/datadog/automation/app-platform.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/data-sources/datastore_item",
+      "paths": [
+        {
+          "path": "datastore_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "datadog/datastore-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "datadog_datastore",
+      "file": "dialects/datadog/automation/app-platform.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/data-sources/datastore",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/integration-aws-account",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_integration_aws_account",
+      "file": "dialects/datadog/integrations/cloud-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/integration_aws_account",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/integration-azure",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_integration_azure",
+      "file": "dialects/datadog/integrations/cloud-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/integration_azure",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/integration-cloudflare-account",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_integration_cloudflare_account",
+      "file": "dialects/datadog/integrations/service-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/integration_cloudflare_account",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/integration-confluent-account",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_integration_confluent_account",
+      "file": "dialects/datadog/integrations/service-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/integration_confluent_account",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/integration-confluent-resource",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_integration_confluent_resource",
+      "file": "dialects/datadog/integrations/service-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/integration_confluent_resource",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "datadog/integration-fastly-account",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_integration_fastly_account",
+      "file": "dialects/datadog/integrations/service-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/integration_fastly_account",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/integration-fastly-service",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_integration_fastly_service",
+      "file": "dialects/datadog/integrations/service-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/integration_fastly_service",
+      "paths": [
+        {
+          "path": "account_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "datadog/integration-gcp",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_integration_gcp",
+      "file": "dialects/datadog/integrations/cloud-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/integration_gcp",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/integration-gcp-sts",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_integration_gcp_sts",
+      "file": "dialects/datadog/integrations/cloud-integrations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/integration_gcp_sts",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/logs-archive",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_logs_archive",
+      "file": "dialects/datadog/telemetry/log-management.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/logs_archive",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/logs-archive-order",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_logs_archive_order",
+      "file": "dialects/datadog/telemetry/log-management.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/logs_archive_order",
+      "paths": [
+        {
+          "path": "archive_ids",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "datadog/logs-custom-destination",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_logs_custom_destination",
+      "file": "dialects/datadog/telemetry/log-management.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/logs_custom_destination",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/logs-custom-pipeline",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_logs_custom_pipeline",
+      "file": "dialects/datadog/telemetry/log-management.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/logs_custom_pipeline",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/logs-index",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_logs_index",
+      "file": "dialects/datadog/telemetry/log-management.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/logs_index",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/logs-integration-pipeline",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_logs_integration_pipeline",
+      "file": "dialects/datadog/telemetry/log-management.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/logs_integration_pipeline",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/observability-pipeline",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_observability_pipeline",
+      "file": "dialects/datadog/telemetry/observability-pipelines.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/observability_pipeline",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/org-connection",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_org_connection",
+      "file": "dialects/datadog/governance-management/organizations.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/org_connection",
+      "paths": [
+        {
+          "path": "sink_org_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "datadog/rum-application",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_rum_application",
+      "file": "dialects/datadog/digital-experience/rum.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/rum_application",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/rum-application-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "datadog_rum_application",
+      "file": "dialects/datadog/digital-experience/rum.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/data-sources/rum_application",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/rum-retention-filter",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_rum_retention_filter",
+      "file": "dialects/datadog/digital-experience/rum.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/rum_retention_filter",
+      "paths": [
+        {
+          "path": "application_id",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "datadog/security-monitoring-rule",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_security_monitoring_rule",
+      "file": "dialects/datadog/security/cloud-security.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/security_monitoring_rule",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/sensitive-data-scanner-group",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_sensitive_data_scanner_group",
+      "file": "dialects/datadog/security/cloud-security.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/sensitive_data_scanner_group",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/service-definition-yaml",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_service_definition_yaml",
+      "file": "dialects/datadog/service-management/software-catalog.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/service_definition_yaml",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/service-level-objective",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_service_level_objective",
+      "file": "dialects/datadog/service-management/service-objectives.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/service_level_objective",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/service-level-objective-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "datadog_service_level_objective",
+      "file": "dialects/datadog/service-management/service-objectives.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/data-sources/service_level_objective",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/software-catalog",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_software_catalog",
+      "file": "dialects/datadog/service-management/software-catalog.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/software_catalog",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/software-catalog-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "datadog_software_catalog",
+      "file": "dialects/datadog/service-management/software-catalog.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/data-sources/software_catalog",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/synthetics-private-location",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_synthetics_private_location",
+      "file": "dialects/datadog/digital-experience/synthetics.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/synthetics_private_location",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/synthetics-suite",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_synthetics_suite",
+      "file": "dialects/datadog/digital-experience/synthetics.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/synthetics_suite",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/synthetics-test",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_synthetics_test",
+      "file": "dialects/datadog/digital-experience/synthetics.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/synthetics_test",
+      "paths": [
+        {
+          "path": "locations",
+          "sensitive": false,
+          "write_only": false
+        }
+      ]
+    },
+    {
+      "rule_id": "datadog/synthetics-test-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "datadog_synthetics_test",
+      "file": "dialects/datadog/digital-experience/synthetics.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/data-sources/synthetics_test",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/workflow-automation",
+      "construct_kind": "managed_resource",
+      "resource_type": "datadog_workflow_automation",
+      "file": "dialects/datadog/automation/workflows.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/workflow_automation",
+      "paths": []
+    },
+    {
+      "rule_id": "datadog/workflow-automation-lookup",
+      "construct_kind": "data_source",
+      "resource_type": "datadog_workflow_automation",
+      "file": "dialects/datadog/automation/workflows.rf",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/data-sources/workflow_automation",
+      "paths": []
+    }
+  ]
+}

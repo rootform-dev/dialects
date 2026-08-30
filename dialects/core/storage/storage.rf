@@ -1,0 +1,9 @@
+concept "object-storage-container" {
+  kind        = entity
+  description = "A managed container holding objects in an object-storage service."
+}
+
+concept "managed-file-storage" {
+  kind        = entity
+  description = "A managed shared file-storage service."
+}

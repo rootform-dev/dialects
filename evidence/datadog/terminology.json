@@ -1,0 +1,243 @@
+{
+  "format_version": "1",
+  "dialect": "datadog",
+  "verified_date": "2026-08-30",
+  "integrity_boundary": "presentation digest is separate from semantic source digest",
+  "presentation_sha256": "sha256:0818ba9c9ff4e9e0e4c296d1095697342102a60b3327a5d4c714c66df46bbe35",
+  "asset": {
+    "decision": "generic-identities-only",
+    "reason": "no explicit redistribution permission for Datadog trademark assets was established",
+    "cdn_or_remote_asset": false
+  },
+  "lifecycle_boundaries": [
+    {
+      "surface": "datadog_integration_gcp",
+      "state": "deprecated",
+      "label": "Datadog Google Cloud integration (deprecated)"
+    }
+  ],
+  "rules": [
+    {
+      "id": "datadog/action-connection",
+      "label": "Datadog Action connection"
+    },
+    {
+      "id": "datadog/action-connection-lookup",
+      "label": "Datadog Action connection lookup"
+    },
+    {
+      "id": "datadog/app-builder-app",
+      "label": "Datadog App Builder app"
+    },
+    {
+      "id": "datadog/app-builder-app-lookup",
+      "label": "Datadog App Builder app lookup"
+    },
+    {
+      "id": "datadog/child-organization",
+      "label": "Datadog child organization"
+    },
+    {
+      "id": "datadog/compliance-custom-framework",
+      "label": "Datadog compliance custom framework"
+    },
+    {
+      "id": "datadog/csm-threats-policy",
+      "label": "Datadog CSM Threats policy"
+    },
+    {
+      "id": "datadog/datastore",
+      "label": "Datadog datastore"
+    },
+    {
+      "id": "datadog/datastore-item",
+      "label": "Datadog datastore item"
+    },
+    {
+      "id": "datadog/datastore-item-lookup",
+      "label": "Datadog datastore item lookup"
+    },
+    {
+      "id": "datadog/datastore-lookup",
+      "label": "Datadog datastore lookup"
+    },
+    {
+      "id": "datadog/integration-aws-account",
+      "label": "Datadog AWS integration"
+    },
+    {
+      "id": "datadog/integration-azure",
+      "label": "Datadog Azure integration"
+    },
+    {
+      "id": "datadog/integration-cloudflare-account",
+      "label": "Datadog Cloudflare integration"
+    },
+    {
+      "id": "datadog/integration-confluent-account",
+      "label": "Datadog Confluent Cloud integration"
+    },
+    {
+      "id": "datadog/integration-confluent-resource",
+      "label": "Datadog integration confluent resource"
+    },
+    {
+      "id": "datadog/integration-fastly-account",
+      "label": "Datadog Fastly integration"
+    },
+    {
+      "id": "datadog/integration-fastly-service",
+      "label": "Datadog integration fastly service"
+    },
+    {
+      "id": "datadog/integration-gcp",
+      "label": "Datadog Google Cloud integration (deprecated)"
+    },
+    {
+      "id": "datadog/integration-gcp-sts",
+      "label": "Datadog Google Cloud integration"
+    },
+    {
+      "id": "datadog/logs-archive",
+      "label": "Datadog Logs archive"
+    },
+    {
+      "id": "datadog/logs-archive-order",
+      "label": "Datadog logs archive order"
+    },
+    {
+      "id": "datadog/logs-custom-destination",
+      "label": "Datadog Logs custom destination"
+    },
+    {
+      "id": "datadog/logs-custom-pipeline",
+      "label": "Datadog Logs custom pipeline"
+    },
+    {
+      "id": "datadog/logs-index",
+      "label": "Datadog Logs index"
+    },
+    {
+      "id": "datadog/logs-integration-pipeline",
+      "label": "Datadog Logs integration pipeline"
+    },
+    {
+      "id": "datadog/observability-pipeline",
+      "label": "Datadog Observability Pipeline"
+    },
+    {
+      "id": "datadog/org-connection",
+      "label": "Datadog org connection"
+    },
+    {
+      "id": "datadog/rum-application",
+      "label": "Datadog RUM application"
+    },
+    {
+      "id": "datadog/rum-application-lookup",
+      "label": "Datadog RUM application lookup"
+    },
+    {
+      "id": "datadog/rum-retention-filter",
+      "label": "Datadog RUM retention filter"
+    },
+    {
+      "id": "datadog/security-monitoring-rule",
+      "label": "Datadog Cloud SIEM detection rule"
+    },
+    {
+      "id": "datadog/sensitive-data-scanner-group",
+      "label": "Datadog Sensitive Data Scanner group"
+    },
+    {
+      "id": "datadog/service-definition-yaml",
+      "label": "Datadog service definition"
+    },
+    {
+      "id": "datadog/service-level-objective",
+      "label": "Datadog service level objective"
+    },
+    {
+      "id": "datadog/service-level-objective-lookup",
+      "label": "Datadog service level objective lookup"
+    },
+    {
+      "id": "datadog/software-catalog",
+      "label": "Datadog Software Catalog entity"
+    },
+    {
+      "id": "datadog/software-catalog-lookup",
+      "label": "Datadog Software Catalog lookup"
+    },
+    {
+      "id": "datadog/synthetics-private-location",
+      "label": "Datadog Synthetics private location"
+    },
+    {
+      "id": "datadog/synthetics-suite",
+      "label": "Datadog Synthetics test suite"
+    },
+    {
+      "id": "datadog/synthetics-test",
+      "label": "Datadog synthetics test"
+    },
+    {
+      "id": "datadog/synthetics-test-lookup",
+      "label": "Datadog Synthetic test lookup"
+    },
+    {
+      "id": "datadog/workflow-automation",
+      "label": "Datadog Workflow Automation workflow"
+    },
+    {
+      "id": "datadog/workflow-automation-lookup",
+      "label": "Datadog Workflow Automation lookup"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "datadog/organization-connection",
+      "label": "Datadog organization connection"
+    },
+    {
+      "id": "datadog/service-integration",
+      "label": "Datadog service integration"
+    },
+    {
+      "id": "datadog/service-integration-configuration",
+      "label": "Datadog service integration configuration"
+    },
+    {
+      "id": "datadog/telemetry-pipeline",
+      "label": "Datadog Observability Pipeline"
+    },
+    {
+      "id": "datadog/telemetry-destination",
+      "label": "Datadog telemetry destination"
+    },
+    {
+      "id": "datadog/telemetry-configuration",
+      "label": "Datadog telemetry configuration"
+    },
+    {
+      "id": "datadog/application-datastore",
+      "label": "Datadog datastore"
+    },
+    {
+      "id": "datadog/automation-application",
+      "label": "Datadog App Builder app"
+    },
+    {
+      "id": "datadog/automation-workflow",
+      "label": "Datadog Workflow Automation workflow"
+    },
+    {
+      "id": "datadog/catalog-definition",
+      "label": "Datadog Software Catalog definition"
+    },
+    {
+      "id": "datadog/security-configuration",
+      "label": "Datadog Cloud Security configuration"
+    }
+  ]
+}

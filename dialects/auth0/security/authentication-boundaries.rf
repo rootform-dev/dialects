@@ -1,0 +1,108 @@
+concept "authentication-boundary" {
+  kind        = scope
+  description = "An Auth0 Network ACL bounding authentication or management traffic."
+}
+
+concept "authentication-configuration" {
+  kind        = detail
+  description = "Attack protection, MFA, risk, rate-limit, or encryption configuration supporting Auth0."
+}
+
+rule "attack-protection" {
+  match {
+    kind = "resource"
+    type = "auth0_attack_protection"
+  }
+
+  as = concept.authentication-configuration
+}
+
+rule "attack-protection-lookup" {
+  match {
+    kind = "data"
+    type = "auth0_attack_protection"
+  }
+
+  as = concept.authentication-configuration
+}
+
+rule "encryption-key-manager" {
+  match {
+    kind = "resource"
+    type = "auth0_encryption_key_manager"
+  }
+
+  as = concept.authentication-configuration
+}
+
+rule "guardian" {
+  match {
+    kind = "resource"
+    type = "auth0_guardian"
+  }
+
+  as = concept.authentication-configuration
+}
+
+rule "network-acl" {
+  match {
+    kind = "resource"
+    type = "auth0_network_acl"
+  }
+
+  as = concept.authentication-boundary
+}
+
+rule "network-acl-lookup" {
+  match {
+    kind = "data"
+    type = "auth0_network_acl"
+  }
+
+  as = concept.authentication-boundary
+}
+
+rule "rate-limit-policy" {
+  match {
+    kind = "resource"
+    type = "auth0_rate_limit_policy"
+  }
+
+  as = concept.authentication-configuration
+}
+
+rule "rate-limit-policy-lookup" {
+  match {
+    kind = "data"
+    type = "auth0_rate_limit_policy"
+  }
+
+  as = concept.authentication-configuration
+}
+
+rule "risk-assessments" {
+  match {
+    kind = "resource"
+    type = "auth0_risk_assessments"
+  }
+
+  as = concept.authentication-configuration
+}
+
+rule "risk-assessments-new-device" {
+  match {
+    kind = "resource"
+    type = "auth0_risk_assessments_new_device"
+  }
+
+  as = concept.authentication-configuration
+}
+
+rule "supplemental-signals" {
+  match {
+    kind = "resource"
+    type = "auth0_supplemental_signals"
+  }
+
+  as = concept.authentication-configuration
+}

@@ -1,0 +1,428 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-29",
+  "core_source_sha256": "sha256:1a39c40bc7521a4367b5b1f450504cd61f5dd351045dca10c3c862d6e854187d",
+  "policy": {
+    "comparison_trigger": "proposed-core-promotion-only",
+    "required_providers": ["Google Cloud", "AWS", "Azure"],
+    "accepted_adr_required": true
+  },
+  "reused_core_concepts": [
+    {
+      "concept": "ai-inference-endpoint",
+      "azure_rules": ["azure/ai-model-deployment", "azure/machine-learning-inference-cluster"]
+    },
+    {
+      "concept": "api-gateway",
+      "azure_rules": ["azure/api-management", "azure/api-management-standalone-gateway"]
+    },
+    {
+      "concept": "backup-plan",
+      "azure_rules": [
+        "azure/data-protection-blob-backup-policy",
+        "azure/data-protection-disk-backup-policy",
+        "azure/file-share-backup-policy",
+        "azure/netapp-backup-policy",
+        "azure/virtual-machine-backup-policy"
+      ]
+    },
+    {
+      "concept": "backup-vault",
+      "azure_rules": [
+        "azure/data-protection-backup-vault",
+        "azure/netapp-backup-vault",
+        "azure/recovery-services-vault"
+      ]
+    },
+    {
+      "concept": "block-storage-volume",
+      "azure_rules": [
+        "azure/elastic-san-volume",
+        "azure/managed-disk",
+        "azure/stack-hci-virtual-hard-disk"
+      ]
+    },
+    {
+      "concept": "compute-instance",
+      "azure_rules": [
+        "azure/dev-test-linux-virtual-machine",
+        "azure/dev-test-windows-virtual-machine",
+        "azure/linux-virtual-machine",
+        "azure/system-center-virtual-machine",
+        "azure/virtual-machine",
+        "azure/windows-virtual-machine"
+      ]
+    },
+    {
+      "concept": "dedicated-interconnect",
+      "azure_rules": ["azure/expressroute-circuit", "azure/expressroute-port"]
+    },
+    {
+      "concept": "dns-zone",
+      "azure_rules": ["azure/dns-zone", "azure/private-dns-zone"]
+    },
+    {
+      "concept": "encryption-key",
+      "azure_rules": ["azure/key-vault-key", "azure/managed-hsm-key"]
+    },
+    {
+      "concept": "identity-group",
+      "azure_rules": ["azure/entra-group", "azure/entra-group-without-members"]
+    },
+    {
+      "concept": "kubernetes-cluster",
+      "azure_rules": [
+        "azure/aks-cluster",
+        "azure/arc-kubernetes-cluster",
+        "azure/arc-provisioned-kubernetes-cluster",
+        "azure/automatic-kubernetes-cluster",
+        "azure/red-hat-openshift-cluster"
+      ]
+    },
+    {
+      "concept": "kubernetes-node-pool",
+      "azure_rules": ["azure/aks-node-pool"]
+    },
+    {
+      "concept": "load-balancer",
+      "azure_rules": [
+        "azure/application-gateway",
+        "azure/application-load-balancer",
+        "azure/load-balancer"
+      ]
+    },
+    {
+      "concept": "managed-cache",
+      "azure_rules": ["azure/azure-cache-for-redis", "azure/azure-managed-redis"]
+    },
+    {
+      "concept": "managed-database",
+      "azure_rules": [
+        "azure/cosmos-cassandra-cluster",
+        "azure/cosmos-cassandra-keyspace",
+        "azure/cosmos-gremlin-database",
+        "azure/cosmos-mongo-database",
+        "azure/cosmos-postgresql-cluster",
+        "azure/cosmos-sql-database",
+        "azure/horizondb-cluster",
+        "azure/mongo-cluster",
+        "azure/mssql-database",
+        "azure/mysql-database",
+        "azure/mysql-flexible-server",
+        "azure/oracle-autonomous-database",
+        "azure/postgresql-database",
+        "azure/postgresql-flexible-server",
+        "azure/sql-managed-database",
+        "azure/sql-managed-instance"
+      ]
+    },
+    {
+      "concept": "managed-file-storage",
+      "azure_rules": [
+        "azure/azure-files-share",
+        "azure/managed-lustre-file-system",
+        "azure/netapp-volume",
+        "azure/qumulo-file-system"
+      ]
+    },
+    {
+      "concept": "managed-nat",
+      "azure_rules": ["azure/nat-gateway"]
+    },
+    {
+      "concept": "managed-secret",
+      "azure_rules": ["azure/key-vault-secret"]
+    },
+    {
+      "concept": "message-queue",
+      "azure_rules": ["azure/queue-storage-queue", "azure/service-bus-queue"]
+    },
+    {
+      "concept": "message-subscription",
+      "azure_rules": [
+        "azure/event-grid-event-subscription",
+        "azure/event-grid-system-topic-subscription",
+        "azure/service-bus-subscription"
+      ]
+    },
+    {
+      "concept": "message-topic",
+      "azure_rules": [
+        "azure/event-grid-namespace-topic",
+        "azure/event-grid-system-topic",
+        "azure/event-grid-topic",
+        "azure/service-bus-topic"
+      ]
+    },
+    {
+      "concept": "network-peering",
+      "azure_rules": ["azure/databricks-virtual-network-peering", "azure/virtual-network-peering"]
+    },
+    {
+      "concept": "object-storage-container",
+      "azure_rules": ["azure/blob-container", "azure/data-lake-filesystem"]
+    },
+    {
+      "concept": "private-endpoint",
+      "azure_rules": ["azure/private-endpoint"]
+    },
+    {
+      "concept": "serverless-function",
+      "azure_rules": [
+        "azure/flex-consumption-function-app",
+        "azure/function-app-function",
+        "azure/linux-function-app",
+        "azure/windows-function-app"
+      ]
+    },
+    {
+      "concept": "service-identity",
+      "azure_rules": ["azure/entra-service-principal", "azure/user-assigned-managed-identity"]
+    },
+    {
+      "concept": "service-identity-binding",
+      "azure_rules": ["azure/federated-identity-credential"]
+    },
+    {
+      "concept": "subnet",
+      "azure_rules": ["azure/subnet"]
+    },
+    {
+      "concept": "virtual-network",
+      "azure_rules": ["azure/virtual-network"]
+    },
+    {
+      "concept": "vpn-connection",
+      "azure_rules": ["azure/virtual-network-gateway-connection", "azure/vpn-gateway-connection"]
+    },
+    {
+      "concept": "vpn-gateway",
+      "azure_rules": [
+        "azure/point-to-site-vpn-gateway",
+        "azure/virtual-network-gateway",
+        "azure/vpn-gateway"
+      ]
+    },
+    {
+      "concept": "workflow",
+      "azure_rules": [
+        "azure/automation-runbook",
+        "azure/data-factory-pipeline",
+        "azure/logic-app-standard",
+        "azure/logic-app-workflow"
+      ]
+    }
+  ],
+  "promotions": [
+    {
+      "concept": "ai-inference-endpoint",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/077-ai-endpoint-and-identity-group-core-concepts.md",
+      "evidence_ref": "specs/061-azure-cloud-dialect/evidence/core-promotion-spike.json#ai-inference-endpoint",
+      "sources": {
+        "google": "https://cloud.google.com/vertex-ai/docs/predictions/get-online-predictions",
+        "aws": "https://docs.aws.amazon.com/sagemaker/latest/dg/realtime-endpoints.html",
+        "azure": "https://learn.microsoft.com/en-us/azure/machine-learning/concept-endpoints"
+      }
+    },
+    {
+      "concept": "identity-group",
+      "disposition": "promoted-to-core",
+      "accepted_adr": "docs/adr/077-ai-endpoint-and-identity-group-core-concepts.md",
+      "evidence_ref": "specs/061-azure-cloud-dialect/evidence/core-promotion-spike.json#identity-group",
+      "sources": {
+        "google": "https://cloud.google.com/identity/docs/groups",
+        "aws": "https://docs.aws.amazon.com/singlesignon/latest/userguide/users-groups-provisioning.html",
+        "azure": "https://learn.microsoft.com/en-us/entra/fundamentals/how-to-manage-groups"
+      }
+    }
+  ],
+  "azure_specific_concepts": [
+    "ai-foundry",
+    "ai-search-service",
+    "ai-service-account",
+    "analytics-cluster",
+    "analytics-pool",
+    "api-management-detail",
+    "app-configuration",
+    "app-service",
+    "app-service-environment",
+    "app-service-plan",
+    "application-insights",
+    "arc-enabled-server",
+    "arc-resource-bridge",
+    "attestation-provider",
+    "automation-account",
+    "azure-enclave",
+    "azure-firewall",
+    "azure-local-cluster",
+    "bastion-host",
+    "batch-account",
+    "batch-job",
+    "batch-pool",
+    "bot-service",
+    "chaos-experiment",
+    "communication-service",
+    "compute-image",
+    "compute-placement",
+    "conditional-access-policy",
+    "confidential-ledger",
+    "container-app",
+    "container-app-environment",
+    "container-app-job",
+    "container-instance-group",
+    "container-registry",
+    "content-delivery-profile",
+    "cosmos-account",
+    "custom-location",
+    "data-explorer-cluster",
+    "data-explorer-database",
+    "data-factory",
+    "data-integration-detail",
+    "data-integration-runtime",
+    "data-share",
+    "data-share-account",
+    "database-component",
+    "databricks-workspace",
+    "ddos-protection-plan",
+    "dedicated-host",
+    "dedicated-host-group",
+    "defender-plan",
+    "dev-center",
+    "dev-center-project",
+    "developer-environment",
+    "digital-twins-instance",
+    "disk-snapshot",
+    "dns-record",
+    "elastic-san",
+    "email-communication-service",
+    "entra-access-package",
+    "entra-access-package-catalog",
+    "entra-administrative-unit",
+    "entra-application",
+    "entra-directory",
+    "entra-domain-service",
+    "event-grid-domain",
+    "event-stream",
+    "expressroute-gateway",
+    "firewall-policy",
+    "front-door-profile",
+    "governance-detail",
+    "graph-data-connect-account",
+    "health-data-service",
+    "health-data-workspace",
+    "hybrid-platform",
+    "identity-governance-detail",
+    "identity-synchronization-job",
+    "image-gallery",
+    "integration-account",
+    "integration-connection",
+    "iot-central-application",
+    "iot-detail",
+    "iot-hub",
+    "iot-provisioning-service",
+    "iot-update-service",
+    "key-vault",
+    "kubernetes-fleet",
+    "load-balancer-component",
+    "load-test",
+    "local-network-gateway",
+    "log-analytics-workspace",
+    "machine-learning-compute",
+    "machine-learning-workspace",
+    "maintenance-configuration",
+    "managed-application",
+    "managed-grafana",
+    "managed-hsm",
+    "management-group",
+    "maps-account",
+    "messaging-detail",
+    "messaging-namespace",
+    "migration-service",
+    "monitor-workspace",
+    "netapp-account",
+    "netapp-capacity-pool",
+    "network-function-service",
+    "network-interface",
+    "network-policy-detail",
+    "network-security-group",
+    "network-security-perimeter",
+    "network-watcher",
+    "notification-hub",
+    "notification-namespace",
+    "operations-detail",
+    "private-dns-resolver",
+    "private-link-scope",
+    "private-link-service",
+    "private-network-link",
+    "public-address",
+    "purview-account",
+    "realtime-communication-service",
+    "relay-connection",
+    "relay-namespace",
+    "resource-group",
+    "route-server",
+    "route-table",
+    "security-detail",
+    "sentinel-service",
+    "service-fabric-cluster",
+    "site-recovery-detail",
+    "site-recovery-fabric",
+    "spring-app",
+    "spring-apps-service",
+    "sql-server",
+    "sre-agent",
+    "static-web-app",
+    "storage-account",
+    "storage-object-detail",
+    "storage-sync-service",
+    "stream-analytics-job",
+    "subscription",
+    "synapse-workspace",
+    "table-storage-table",
+    "third-party-monitor",
+    "traffic-manager-profile",
+    "trusted-signing-account",
+    "video-indexer-account",
+    "virtual-desktop-application-group",
+    "virtual-desktop-host-pool",
+    "virtual-desktop-workspace",
+    "virtual-hub",
+    "virtual-machine-scale-set",
+    "virtual-network-manager",
+    "virtual-wan",
+    "vmware-private-cloud"
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": "container-registry",
+      "disposition": "keep-provider-specific",
+      "reason": "Azure owns a registry resource, Google owns repositories, and AWS registry ownership is partly implicit."
+    },
+    {
+      "candidate": "content-delivery-service",
+      "disposition": "keep-provider-specific",
+      "reason": "Azure and AWS expose durable distribution/profile resources while Google Cloud CDN is enabled through load-balancing backends."
+    },
+    {
+      "candidate": "event-stream",
+      "disposition": "keep-provider-specific",
+      "reason": "Event Hubs, Pub/Sub, Kinesis, and managed Kafka differ in stream, topic, consumer, and retention identity."
+    },
+    {
+      "candidate": "managed-container-service",
+      "disposition": "keep-provider-specific",
+      "reason": "Azure Container Apps, Cloud Run, and AWS container services retain materially different workload and deployment boundaries."
+    },
+    {
+      "candidate": "network-security-group",
+      "disposition": "keep-provider-specific",
+      "reason": "ADR-074 already rejects one firewall/security boundary across Azure NSGs, AWS security groups/NACLs, and Google Cloud firewall policy."
+    }
+  ],
+  "limitations": [
+    "Core identity does not import Azure topology, hierarchy, lifecycle, or configuration.",
+    "AWS implementation remains future work; official AWS contracts are comparison evidence only.",
+    "New Azure concepts stay provider-specific unless another accepted three-cloud comparison promotes them."
+  ]
+}

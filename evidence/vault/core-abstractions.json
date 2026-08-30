@@ -1,0 +1,85 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-30",
+  "accepted_adr": "docs/adr/087-vault-provider-boundaries.md",
+  "reused_core_concepts": [
+    "backup-plan",
+    "encryption-key",
+    "identity-application",
+    "identity-group"
+  ],
+  "referenced_core_concepts": [
+    "backup-plan",
+    "encryption-key",
+    "identity-application",
+    "identity-group",
+    "kubernetes-cluster",
+    "object-storage-container",
+    "service-identity"
+  ],
+  "promoted_core_concepts": ["identity-application"],
+  "vault_specific_concepts": [
+    "audit-device",
+    "auth-configuration",
+    "auth-method",
+    "certificate-authority",
+    "data-transformation",
+    "encryption-configuration",
+    "external-ca-integration",
+    "governance-configuration",
+    "identity-configuration",
+    "identity-entity",
+    "key-management-integration",
+    "kmip-listener",
+    "kmip-scope",
+    "kubernetes-auth-integration",
+    "namespace",
+    "oidc-provider",
+    "operations-configuration",
+    "pki-configuration",
+    "plugin-configuration",
+    "plugin-runtime",
+    "secret-definition",
+    "secret-read",
+    "secret-sync-configuration",
+    "secret-sync-destination",
+    "secrets-engine",
+    "secrets-engine-configuration",
+    "vault-agent"
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": "secrets-engine",
+      "disposition": "keep-vault-specific",
+      "reason": "Vault mount can store, generate, sign, or transform data; cloud secret-manager service boundaries do not share that full role",
+      "sources": {
+        "vault": "https://developer.hashicorp.com/vault/docs/secrets",
+        "aws": "https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html",
+        "azure": "https://learn.microsoft.com/azure/key-vault/general/overview",
+        "google": "https://cloud.google.com/secret-manager/docs/overview"
+      }
+    },
+    {
+      "candidate": "certificate-authority",
+      "disposition": "keep-vault-specific",
+      "reason": "Vault PKI mounts and issuers combine secrets-engine lifecycle while cloud CA services own dedicated control planes and Azure baseline exposes no equivalent CA root",
+      "sources": {
+        "vault": "https://developer.hashicorp.com/vault/docs/secrets/pki",
+        "aws": "https://docs.aws.amazon.com/privateca/latest/userguide/PcaWelcome.html",
+        "azure": "https://learn.microsoft.com/azure/key-vault/certificates/about-certificates",
+        "google": "https://cloud.google.com/certificate-authority-service/docs/ca-service-overview"
+      }
+    },
+    {
+      "candidate": "authentication-method",
+      "disposition": "keep-vault-specific",
+      "reason": "Vault auth method is a mounted credential-verification backend, not a provider-neutral service identity or identity application",
+      "sources": {
+        "vault": "https://developer.hashicorp.com/vault/docs/auth",
+        "aws": "https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html",
+        "azure": "https://learn.microsoft.com/entra/fundamentals/whatis",
+        "google": "https://cloud.google.com/iam/docs/overview"
+      }
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-29",
+  "accepted_adr": "docs/adr/085-mongodb-atlas-provider-boundaries.md",
+  "core_source_sha256": "sha256:1a39c40bc7521a4367b5b1f450504cd61f5dd351045dca10c3c862d6e854187d",
+  "policy": {
+    "comparison_trigger": "proposed-core-promotion-only",
+    "accepted_adr_required": true,
+    "required_providers": ["Google Cloud", "AWS", "Azure"]
+  },
+  "reused_core_concepts": [
+    {
+      "concept": "backup-plan",
+      "mongodb_atlas_rules": ["mongodb-atlas/cloud-backup-schedule"]
+    },
+    {
+      "concept": "identity-group",
+      "mongodb_atlas_rules": ["mongodb-atlas/team"]
+    },
+    {
+      "concept": "managed-database",
+      "mongodb_atlas_rules": [
+        "mongodb-atlas/advanced-cluster",
+        "mongodb-atlas/cluster",
+        "mongodb-atlas/flex-cluster",
+        "mongodb-atlas/serverless-instance"
+      ]
+    },
+    {
+      "concept": "network-peering",
+      "mongodb_atlas_rules": ["mongodb-atlas/network-peering"]
+    },
+    {
+      "concept": "private-endpoint",
+      "mongodb_atlas_rules": [
+        "mongodb-atlas/encryption-private-endpoint",
+        "mongodb-atlas/stream-private-endpoint"
+      ]
+    },
+    {
+      "concept": "service-identity",
+      "mongodb_atlas_rules": [
+        "mongodb-atlas/organization-service-account",
+        "mongodb-atlas/project-service-account"
+      ]
+    },
+    {
+      "concept": "virtual-network",
+      "mongodb_atlas_rules": ["mongodb-atlas/network-container"]
+    }
+  ],
+  "referenced_core_concepts": [
+    "backup-plan",
+    "encryption-key",
+    "identity-group",
+    "managed-database",
+    "network-peering",
+    "object-storage-container",
+    "private-endpoint",
+    "service-identity",
+    "virtual-network"
+  ],
+  "promotions": [],
+  "mongodb_atlas_specific_concepts": [
+    "backup-configuration",
+    "backup-export-destination",
+    "cloud-provider-access",
+    "cloud-provider-authorization",
+    "customer-key-management",
+    "data-service-private-endpoint",
+    "database-configuration",
+    "event-trigger",
+    "federated-database-instance",
+    "federation-configuration",
+    "governance-configuration",
+    "identity-configuration",
+    "identity-provider",
+    "log-integration",
+    "metric-integration",
+    "network-configuration",
+    "observability-configuration",
+    "online-archive",
+    "organization",
+    "private-endpoint-registration",
+    "private-endpoint-service",
+    "project",
+    "search-configuration",
+    "search-deployment",
+    "security-configuration",
+    "stream-configuration",
+    "stream-connection",
+    "stream-processing-workspace",
+    "stream-processor"
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": "cloud-resource-hierarchy",
+      "comparison": "Atlas organizations and projects, Google Cloud organizations and projects, AWS organizations and accounts, and Azure management groups and subscriptions differ in tenancy, billing, policy, and isolation boundaries.",
+      "sources": {
+        "mongodb": "https://www.mongodb.com/docs/atlas/organizations-projects/",
+        "google": "https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy",
+        "aws": "https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html",
+        "azure": "https://learn.microsoft.com/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org"
+      },
+      "disposition": "keep-mongodb-atlas-specific"
+    },
+    {
+      "candidate": "federated-query-service",
+      "comparison": "Atlas Data Federation owns virtual databases over Atlas and external stores; BigQuery federated queries, Athena federation, and Synapse serverless SQL expose different catalogs, connectors, and execution boundaries.",
+      "sources": {
+        "mongodb": "https://www.mongodb.com/docs/atlas/data-federation/adf-overview/overview/",
+        "google": "https://cloud.google.com/bigquery/docs/federated-data-overview",
+        "aws": "https://docs.aws.amazon.com/athena/latest/ug/connect-to-a-data-source.html",
+        "azure": "https://learn.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview"
+      },
+      "disposition": "keep-mongodb-atlas-specific"
+    },
+    {
+      "candidate": "managed-search-deployment",
+      "comparison": "MongoDB Search nodes extend an Atlas database deployment; Vertex AI Search, Amazon OpenSearch Service, and Azure AI Search own different data, indexing, and serving boundaries.",
+      "sources": {
+        "mongodb": "https://www.mongodb.com/docs/atlas/atlas-search/about/",
+        "google": "https://cloud.google.com/generative-ai-app-builder/docs/introduction",
+        "aws": "https://docs.aws.amazon.com/opensearch-service/latest/developerguide/what-is.html",
+        "azure": "https://learn.microsoft.com/azure/search/search-what-is-azure-search"
+      },
+      "disposition": "keep-mongodb-atlas-specific"
+    },
+    {
+      "candidate": "online-data-archive",
+      "comparison": "Atlas Online Archive extends a live cluster with queryable archived data; Google Cloud, S3, and Azure archive storage tiers do not own the same database-query federation contract.",
+      "sources": {
+        "mongodb": "https://www.mongodb.com/docs/atlas/online-archive/overview/",
+        "google": "https://cloud.google.com/storage/docs/storage-classes",
+        "aws": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html",
+        "azure": "https://learn.microsoft.com/azure/storage/blobs/access-tiers-overview"
+      },
+      "disposition": "keep-mongodb-atlas-specific"
+    },
+    {
+      "candidate": "customer-key-management-integration",
+      "comparison": "Atlas customer-key management coordinates database encryption with AWS KMS, Azure Key Vault, or Cloud KMS; cloud-native encryption attachments have provider-specific principals, rotation, and access contracts.",
+      "sources": {
+        "mongodb": "https://www.mongodb.com/docs/atlas/security-kms-encryption/",
+        "google": "https://cloud.google.com/kms/docs/cmek",
+        "aws": "https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html",
+        "azure": "https://learn.microsoft.com/azure/key-vault/general/basic-concepts"
+      },
+      "disposition": "keep-mongodb-atlas-specific"
+    },
+    {
+      "candidate": "stream-processing-workspace",
+      "comparison": "Atlas Stream Processing workspace owns instances, connections, and processors; Dataflow, Managed Service for Apache Flink, and Stream Analytics use different job, application, and input-output ownership models.",
+      "sources": {
+        "mongodb": "https://www.mongodb.com/docs/atlas/atlas-stream-processing/architecture/",
+        "google": "https://cloud.google.com/dataflow/docs/concepts/beam-programming-model",
+        "aws": "https://docs.aws.amazon.com/managed-flink/latest/java/what-is.html",
+        "azure": "https://learn.microsoft.com/azure/stream-analytics/stream-analytics-introduction"
+      },
+      "disposition": "keep-mongodb-atlas-specific"
+    }
+  ],
+  "limitations": [
+    "Core reuse records output concepts separately from relation targets.",
+    "Shared project, provider, or region values never create a cross-cloud relation.",
+    "Rejected candidates may be reconsidered only with accepted three-provider proof."
+  ]
+}

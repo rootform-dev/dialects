@@ -1,0 +1,42 @@
+concept "plugin-configuration" {
+  kind        = detail
+  description = "A plugin registration or version setting supporting a Vault plugin runtime."
+}
+
+concept "plugin-runtime" {
+  kind        = entity
+  description = "A runtime boundary executing external Vault plugins."
+}
+
+rule "plugin" {
+  match {
+    kind = "resource"
+    type = "vault_plugin"
+  }
+
+  as = concept.plugin-configuration
+}
+
+rule "plugin-pinned-version" {
+  match {
+    kind = "resource"
+    type = "vault_plugin_pinned_version"
+  }
+
+  as = concept.plugin-configuration
+}
+
+rule "plugin-runtime" {
+  match {
+    kind = "resource"
+    type = "vault_plugin_runtime"
+  }
+
+  as = concept.plugin-runtime
+
+  context {
+    as  = context.core.ownership
+    to  = concept.namespace
+    via = source.namespace
+  }
+}

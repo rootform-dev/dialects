@@ -1,0 +1,92 @@
+concept "deployment" {
+  kind        = entity
+  description = "A declaratively managed set of replica pods."
+}
+
+concept "stateful-set" {
+  kind        = entity
+  description = "A stateful workload whose pods keep stable identity and storage."
+}
+
+concept "daemon-set" {
+  kind        = entity
+  description = "A pod scheduler runs on every selected node."
+}
+
+rule "kubernetes-deployment" {
+  match {
+    kind = "resource"
+    type = "kubernetes_deployment_v1"
+  }
+
+  as = concept.deployment
+
+  context {
+    as  = context.core.runtime
+    to  = concept.core.kubernetes-cluster
+    via = provider.host
+  }
+
+  context {
+    as  = context.core.ownership
+    to  = concept.namespace
+    via = source.metadata[0].namespace
+
+    match {
+      by       = target.metadata[0].name
+      strategy = "exact"
+    }
+  }
+}
+
+rule "kubernetes-stateful-set" {
+  match {
+    kind = "resource"
+    type = "kubernetes_stateful_set_v1"
+  }
+
+  as = concept.stateful-set
+
+  context {
+    as  = context.core.runtime
+    to  = concept.core.kubernetes-cluster
+    via = provider.host
+  }
+
+  context {
+    as  = context.core.ownership
+    to  = concept.namespace
+    via = source.metadata[0].namespace
+
+    match {
+      by       = target.metadata[0].name
+      strategy = "exact"
+    }
+  }
+}
+
+rule "kubernetes-daemon-set" {
+  match {
+    kind = "resource"
+    type = "kubernetes_daemon_set_v1"
+  }
+
+  as = concept.daemon-set
+
+  context {
+    as  = context.core.runtime
+    to  = concept.core.kubernetes-cluster
+    via = provider.host
+  }
+
+  context {
+    as  = context.core.ownership
+    to  = concept.namespace
+    via = source.metadata[0].namespace
+
+    match {
+      by       = target.metadata[0].name
+      strategy = "exact"
+    }
+  }
+}

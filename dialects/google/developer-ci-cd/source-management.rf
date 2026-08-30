@@ -1,0 +1,77 @@
+concept "source-repository" {
+  kind        = entity
+  description = "A source-code repository hosted or connected through Google Cloud developer services."
+}
+
+concept "source-connection" {
+  kind        = entity
+  description = "A managed connection from Google Cloud developer services to a source host."
+}
+
+concept "secure-source-manager-instance" {
+  kind        = scope
+  description = "A Secure Source Manager instance containing private source repositories."
+}
+
+rule "cloud-build-v2-connection" {
+  match {
+    kind = "resource"
+    type = "google_cloudbuildv2_connection"
+  }
+
+  as = concept.source-connection
+}
+
+rule "cloud-build-v2-repository" {
+  match {
+    kind = "resource"
+    type = "google_cloudbuildv2_repository"
+  }
+
+  as = concept.source-repository
+}
+
+rule "developer-connect-connection" {
+  match {
+    kind = "resource"
+    type = "google_developer_connect_connection"
+  }
+
+  as = concept.source-connection
+}
+
+rule "developer-connect-repository-link" {
+  match {
+    kind = "resource"
+    type = "google_developer_connect_git_repository_link"
+  }
+
+  as = concept.source-repository
+}
+
+rule "secure-source-manager-instance" {
+  match {
+    kind = "resource"
+    type = "google_secure_source_manager_instance"
+  }
+
+  as = concept.secure-source-manager-instance
+}
+
+rule "secure-source-manager-repository" {
+  match {
+    kind = "resource"
+    type = "google_secure_source_manager_repository"
+  }
+
+  as = concept.source-repository
+}
+
+rule "cloud-source-repository" {
+  match {
+    kind = "resource"
+    type = "google_sourcerepo_repository"
+  }
+
+  as = concept.source-repository
+}

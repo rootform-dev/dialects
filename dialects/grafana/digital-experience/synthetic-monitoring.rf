@@ -1,0 +1,31 @@
+rule "synthetic-monitoring-check" {
+  match {
+    kind = "resource"
+    type = "grafana_synthetic_monitoring_check"
+  }
+
+  as = concept.core.synthetic-check
+
+  contribution {
+    to  = concept.core.synthetic-execution-location
+    via = source.probes
+  }
+}
+
+rule "synthetic-monitoring-probe" {
+  match {
+    kind = "resource"
+    type = "grafana_synthetic_monitoring_probe"
+  }
+
+  as = concept.core.synthetic-execution-location
+}
+
+rule "synthetic-monitoring-probe-lookup" {
+  match {
+    kind = "data"
+    type = "grafana_synthetic_monitoring_probe"
+  }
+
+  as = concept.core.synthetic-execution-location
+}

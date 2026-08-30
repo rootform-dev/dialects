@@ -1,0 +1,31 @@
+rule "rum-application" {
+  match {
+    kind = "resource"
+    type = "datadog_rum_application"
+  }
+
+  as = concept.core.browser-observability-application
+}
+
+rule "rum-application-lookup" {
+  match {
+    kind = "data"
+    type = "datadog_rum_application"
+  }
+
+  as = concept.core.browser-observability-application
+}
+
+rule "rum-retention-filter" {
+  match {
+    kind = "resource"
+    type = "datadog_rum_retention_filter"
+  }
+
+  as = concept.telemetry-configuration
+
+  contribution {
+    to  = concept.core.browser-observability-application
+    via = source.application_id
+  }
+}

@@ -1,0 +1,13 @@
+concept "assistant-integration" {
+  kind        = entity
+  description = "An MCP server integration available to Grafana Assistant."
+}
+
+rule "assistant-mcp-server" {
+  match {
+    kind = "resource"
+    type = "grafana_assistant_mcp_server"
+  }
+
+  as = concept.assistant-integration
+}

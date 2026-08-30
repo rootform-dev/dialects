@@ -1,0 +1,19 @@
+rule "storage-account" {
+  match {
+    kind = "resource"
+    type = "azurerm_storage_account"
+  }
+
+  as = concept.storage-account
+
+  context {
+    as  = context.core.ownership
+    to  = concept.resource-group
+    via = source.resource_group_name
+
+    match {
+      by       = target.name
+      strategy = "exact"
+    }
+  }
+}

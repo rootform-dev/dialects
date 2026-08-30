@@ -1,0 +1,27 @@
+concept "security-posture" {
+  kind        = entity
+  description = "A Security Command Center security posture containing preventive and detective policies."
+}
+
+concept "security-posture-deployment" {
+  kind        = detail
+  description = "A deployment applying a security posture to a resource hierarchy target."
+}
+
+rule "security-posture" {
+  match {
+    kind = "resource"
+    type = "google_securityposture_posture"
+  }
+
+  as = concept.security-posture
+}
+
+rule "security-posture-deployment" {
+  match {
+    kind = "resource"
+    type = "google_securityposture_posture_deployment"
+  }
+
+  as = concept.security-posture-deployment
+}

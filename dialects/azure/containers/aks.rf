@@ -1,0 +1,39 @@
+rule "aks-cluster" {
+  match {
+    kind = "resource"
+    type = "azurerm_kubernetes_cluster"
+  }
+
+  as = concept.core.kubernetes-cluster
+
+  context {
+    as  = context.core.network
+    to  = concept.core.subnet
+    via = source.default_node_pool[0].vnet_subnet_id
+  }
+
+  context {
+    as  = context.core.ownership
+    to  = concept.resource-group
+    via = source.resource_group_name
+
+    match {
+      by       = target.name
+      strategy = "exact"
+    }
+  }
+}
+
+rule "aks-node-pool" {
+  match {
+    kind = "resource"
+    type = "azurerm_kubernetes_cluster_node_pool"
+  }
+
+  as = concept.core.kubernetes-node-pool
+
+  contribution {
+    to  = concept.core.kubernetes-cluster
+    via = source.kubernetes_cluster_id
+  }
+}

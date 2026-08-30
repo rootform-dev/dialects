@@ -1,0 +1,32 @@
+concept "hyperdrive-configuration" {
+  kind        = entity
+  description = "A Cloudflare Hyperdrive database accelerator and connection pool."
+}
+
+rule "d1-database" {
+  match {
+    kind = "resource"
+    type = "cloudflare_d1_database"
+  }
+
+  as = concept.core.managed-database
+}
+
+rule "hyperdrive-config" {
+  match {
+    kind = "resource"
+    type = "cloudflare_hyperdrive_config"
+  }
+
+  as = concept.hyperdrive-configuration
+
+  relation "connects-to" {
+    to  = concept.core.managed-database
+    via = source.origin.host
+  }
+
+  relation "connects-through" {
+    to  = concept.connectivity-service
+    via = source.origin.service_id
+  }
+}

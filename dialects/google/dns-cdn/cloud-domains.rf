@@ -1,0 +1,13 @@
+concept "cloud-domains-registration" {
+  kind        = entity
+  description = "A domain registration managed through Cloud Domains."
+}
+
+rule "cloud-domains-registration" {
+  match {
+    kind = "resource"
+    type = "google_clouddomains_registration"
+  }
+
+  as = concept.cloud-domains-registration
+}

@@ -1,0 +1,95 @@
+concept "multicast-domain" {
+  kind        = entity
+  description = "A Cloud Multicast reliability boundary distributing multicast traffic."
+}
+
+concept "multicast-domain-group" {
+  kind        = entity
+  description = "A Cloud Multicast high-availability group containing related multicast domains."
+}
+
+concept "multicast-configuration" {
+  kind        = detail
+  description = "An activation, group range, or network association configuring Cloud Multicast."
+}
+
+rule "multicast-domain" {
+  match {
+    kind = "resource"
+    type = "google_network_services_multicast_domain"
+  }
+
+  as = concept.multicast-domain
+}
+
+rule "multicast-domain-group" {
+  match {
+    kind = "resource"
+    type = "google_network_services_multicast_domain_group"
+  }
+
+  as = concept.multicast-domain-group
+}
+
+rule "multicast-domain-activation" {
+  match {
+    kind = "resource"
+    type = "google_network_services_multicast_domain_activation"
+  }
+
+  as = concept.multicast-configuration
+}
+
+rule "multicast-consumer-association" {
+  match {
+    kind = "resource"
+    type = "google_network_services_multicast_consumer_association"
+  }
+
+  as = concept.multicast-configuration
+}
+
+rule "multicast-producer-association" {
+  match {
+    kind = "resource"
+    type = "google_network_services_multicast_producer_association"
+  }
+
+  as = concept.multicast-configuration
+}
+
+rule "multicast-group-range" {
+  match {
+    kind = "resource"
+    type = "google_network_services_multicast_group_range"
+  }
+
+  as = concept.multicast-configuration
+}
+
+rule "multicast-group-range-activation" {
+  match {
+    kind = "resource"
+    type = "google_network_services_multicast_group_range_activation"
+  }
+
+  as = concept.multicast-configuration
+}
+
+rule "multicast-group-consumer-activation" {
+  match {
+    kind = "resource"
+    type = "google_network_services_multicast_group_consumer_activation"
+  }
+
+  as = concept.multicast-configuration
+}
+
+rule "multicast-group-producer-activation" {
+  match {
+    kind = "resource"
+    type = "google_network_services_multicast_group_producer_activation"
+  }
+
+  as = concept.multicast-configuration
+}

@@ -1,0 +1,59 @@
+concept "databricks-app" {
+  kind        = entity
+  description = "A secure data or AI application deployed on the Databricks serverless platform."
+}
+
+concept "app-space" {
+  kind        = scope
+  description = "A Databricks application space organizing deployed application resources."
+}
+
+concept "application-configuration" {
+  kind        = detail
+  description = "A template, embedding, or deployment configuration supporting Databricks applications."
+}
+
+rule "databricks-app" {
+  match {
+    kind = "resource"
+    type = "databricks_app"
+  }
+
+  as = concept.databricks-app
+}
+
+rule "app-space" {
+  match {
+    kind = "resource"
+    type = "databricks_app_space"
+  }
+
+  as = concept.app-space
+}
+
+rule "apps-custom-template" {
+  match {
+    kind = "resource"
+    type = "databricks_apps_settings_custom_template"
+  }
+
+  as = concept.application-configuration
+}
+
+rule "dashboard-embedding-access-policy" {
+  match {
+    kind = "resource"
+    type = "databricks_aibi_dashboard_embedding_access_policy_setting"
+  }
+
+  as = concept.application-configuration
+}
+
+rule "dashboard-embedding-approved-domains" {
+  match {
+    kind = "resource"
+    type = "databricks_aibi_dashboard_embedding_approved_domains_setting"
+  }
+
+  as = concept.application-configuration
+}

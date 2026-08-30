@@ -1,0 +1,19 @@
+concept "cloud-router" {
+  kind        = entity
+  description = "A Cloud Router exchanging dynamic routes for a VPC network."
+}
+
+rule "cloud-router" {
+  match {
+    kind = "resource"
+    type = "google_compute_router"
+  }
+
+  as = concept.cloud-router
+
+  context {
+    as  = context.core.network
+    to  = concept.core.virtual-network
+    via = source.network
+  }
+}

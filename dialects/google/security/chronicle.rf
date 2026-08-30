@@ -1,0 +1,41 @@
+concept "chronicle-environment" {
+  kind        = scope
+  description = "A Google Security Operations environment."
+}
+
+concept "chronicle-feed" {
+  kind        = entity
+  description = "A Google Security Operations feed ingesting security telemetry."
+}
+
+concept "chronicle-detection-rule" {
+  kind        = entity
+  description = "A Google Security Operations detection rule."
+}
+
+rule "chronicle-environment" {
+  match {
+    kind = "resource"
+    type = "google_chronicle_environment"
+  }
+
+  as = concept.chronicle-environment
+}
+
+rule "chronicle-feed" {
+  match {
+    kind = "resource"
+    type = "google_chronicle_feed"
+  }
+
+  as = concept.chronicle-feed
+}
+
+rule "chronicle-detection-rule" {
+  match {
+    kind = "resource"
+    type = "google_chronicle_rule"
+  }
+
+  as = concept.chronicle-detection-rule
+}

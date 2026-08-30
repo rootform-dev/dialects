@@ -1,0 +1,31 @@
+concept "cloud-asset-feed" {
+  kind        = entity
+  description = "A Cloud Asset Inventory feed publishing asset changes to a destination."
+}
+
+rule "cloud-asset-project-feed" {
+  match {
+    kind = "resource"
+    type = "google_cloud_asset_project_feed"
+  }
+
+  as = concept.cloud-asset-feed
+}
+
+rule "cloud-asset-folder-feed" {
+  match {
+    kind = "resource"
+    type = "google_cloud_asset_folder_feed"
+  }
+
+  as = concept.cloud-asset-feed
+}
+
+rule "cloud-asset-organization-feed" {
+  match {
+    kind = "resource"
+    type = "google_cloud_asset_organization_feed"
+  }
+
+  as = concept.cloud-asset-feed
+}

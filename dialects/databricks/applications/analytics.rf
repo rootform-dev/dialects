@@ -1,0 +1,99 @@
+concept "analytics-artifact" {
+  kind        = detail
+  description = "A dashboard, query, alert, visualization, or widget presented through Databricks analytics."
+}
+
+concept "notification-destination" {
+  kind        = entity
+  description = "A managed destination receiving Databricks operational or analytics notifications."
+}
+
+rule "dashboard" {
+  match {
+    kind = "resource"
+    type = "databricks_dashboard"
+  }
+
+  as = concept.analytics-artifact
+}
+
+rule "sql-dashboard" {
+  match {
+    kind = "resource"
+    type = "databricks_sql_dashboard"
+  }
+
+  as = concept.analytics-artifact
+}
+
+rule "alert" {
+  match {
+    kind = "resource"
+    type = "databricks_alert"
+  }
+
+  as = concept.analytics-artifact
+}
+
+rule "alert-v2" {
+  match {
+    kind = "resource"
+    type = "databricks_alert_v2"
+  }
+
+  as = concept.analytics-artifact
+}
+
+rule "sql-alert" {
+  match {
+    kind = "resource"
+    type = "databricks_sql_alert"
+  }
+
+  as = concept.analytics-artifact
+}
+
+rule "notification-destination" {
+  match {
+    kind = "resource"
+    type = "databricks_notification_destination"
+  }
+
+  as = concept.notification-destination
+}
+
+rule "query" {
+  match {
+    kind = "resource"
+    type = "databricks_query"
+  }
+
+  as = concept.analytics-artifact
+}
+
+rule "sql-query" {
+  match {
+    kind = "resource"
+    type = "databricks_sql_query"
+  }
+
+  as = concept.analytics-artifact
+}
+
+rule "sql-visualization" {
+  match {
+    kind = "resource"
+    type = "databricks_sql_visualization"
+  }
+
+  as = concept.analytics-artifact
+}
+
+rule "sql-widget" {
+  match {
+    kind = "resource"
+    type = "databricks_sql_widget"
+  }
+
+  as = concept.analytics-artifact
+}

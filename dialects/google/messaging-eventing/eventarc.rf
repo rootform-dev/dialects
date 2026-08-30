@@ -1,0 +1,55 @@
+concept "eventarc-channel" {
+  kind        = entity
+  description = "An Eventarc channel receiving events from publishers."
+}
+
+concept "eventarc-message-bus" {
+  kind        = entity
+  description = "An Eventarc Advanced message bus routing events through pipelines."
+}
+
+concept "eventarc-pipeline" {
+  kind        = entity
+  description = "An Eventarc Advanced pipeline filtering, transforming, and delivering events."
+}
+
+concept "eventarc-trigger" {
+  kind        = entity
+  description = "An Eventarc Standard trigger routing selected events to a destination."
+}
+
+rule "eventarc-channel" {
+  match {
+    kind = "resource"
+    type = "google_eventarc_channel"
+  }
+
+  as = concept.eventarc-channel
+}
+
+rule "eventarc-message-bus" {
+  match {
+    kind = "resource"
+    type = "google_eventarc_message_bus"
+  }
+
+  as = concept.eventarc-message-bus
+}
+
+rule "eventarc-pipeline" {
+  match {
+    kind = "resource"
+    type = "google_eventarc_pipeline"
+  }
+
+  as = concept.eventarc-pipeline
+}
+
+rule "eventarc-trigger" {
+  match {
+    kind = "resource"
+    type = "google_eventarc_trigger"
+  }
+
+  as = concept.eventarc-trigger
+}

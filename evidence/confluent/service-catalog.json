@@ -1,0 +1,200 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-29",
+  "source_url": "https://docs.confluent.io/cloud/current/overview.html",
+  "derivation": "every provider construct maps to exactly one official product family",
+  "products": [
+    {
+      "id": "connectors",
+      "family": "connectors",
+      "official_name": "Confluent Cloud connectors",
+      "major": true,
+      "source_url": "https://docs.confluent.io/cloud/current/connectors/overview.html",
+      "coverage": "partial",
+      "coverage_reason": "connectors and artifacts are represented, but opaque provider maps cannot prove source or sink direction",
+      "constructs": 6,
+      "counts": {
+        "supported": 1,
+        "partial": 4,
+        "intentionally-unrepresented": 1,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "catalog-tableflow",
+      "family": "data-governance",
+      "official_name": "Confluent Cloud catalog integrations and Tableflow",
+      "major": true,
+      "source_url": "https://docs.confluent.io/cloud/current/topics/tableflow/overview.html",
+      "coverage": "partial",
+      "coverage_reason": "catalog integrations and Tableflow storage topology are represented; opaque Snowflake and Unity credentials and endpoints remain unlinked",
+      "constructs": 13,
+      "counts": {
+        "supported": 2,
+        "partial": 5,
+        "intentionally-unrepresented": 6,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "cloud-administration",
+      "family": "governance-management",
+      "official_name": "Confluent Cloud administration",
+      "major": false,
+      "source_url": "https://docs.confluent.io/cloud/current/access-management/index.html",
+      "coverage": "intentionally-unrepresented",
+      "coverage_reason": "organization lookup and Terraform importer surfaces own no durable architecture",
+      "constructs": 2,
+      "counts": {
+        "supported": 0,
+        "partial": 0,
+        "intentionally-unrepresented": 2,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "environments",
+      "family": "governance-management",
+      "official_name": "Confluent Cloud environments",
+      "major": true,
+      "source_url": "https://docs.confluent.io/cloud/current/access-management/hierarchy/cloud-environments.html",
+      "coverage": "supported",
+      "coverage_reason": "environment ownership and the durable Schema Registry provisioned through Stream Governance are represented",
+      "constructs": 3,
+      "counts": {
+        "supported": 1,
+        "partial": 0,
+        "intentionally-unrepresented": 2,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "flink",
+      "family": "stream-processing",
+      "official_name": "Confluent Cloud for Apache Flink",
+      "major": true,
+      "source_url": "https://docs.confluent.io/cloud/current/flink/overview.html",
+      "coverage": "supported",
+      "coverage_reason": "compute pools, connections, materialized tables, artifacts, configuration, and statement contribution are represented without SQL or credentials",
+      "constructs": 12,
+      "counts": {
+        "supported": 3,
+        "partial": 3,
+        "intentionally-unrepresented": 6,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "identity-access",
+      "family": "identity-iam",
+      "official_name": "Confluent Cloud identity and access management",
+      "major": true,
+      "source_url": "https://docs.confluent.io/cloud/current/access-management/index.html",
+      "coverage": "partial",
+      "coverage_reason": "service accounts, identity providers, identity pools, mappings, filters, and bindings are represented; credentials and user administration are excluded",
+      "constructs": 19,
+      "counts": {
+        "supported": 3,
+        "partial": 4,
+        "intentionally-unrepresented": 12,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "kafka",
+      "family": "streaming",
+      "official_name": "Confluent Cloud Kafka",
+      "major": true,
+      "source_url": "https://docs.confluent.io/cloud/current/clusters/index.html",
+      "coverage": "supported",
+      "coverage_reason": "Kafka clusters, topics, real-time context engine topics, ACLs, quotas, and cluster configuration are represented at architecture or detail level",
+      "constructs": 11,
+      "counts": {
+        "supported": 3,
+        "partial": 3,
+        "intentionally-unrepresented": 5,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "cluster-linking",
+      "family": "streaming",
+      "official_name": "Confluent Cloud Cluster Linking",
+      "major": true,
+      "source_url": "https://docs.confluent.io/cloud/current/multi-cloud/cluster-linking/index.html",
+      "coverage": "supported",
+      "coverage_reason": "Cluster Links and mirror topics preserve documented source, destination, and replication topology",
+      "constructs": 3,
+      "counts": {
+        "supported": 2,
+        "partial": 0,
+        "intentionally-unrepresented": 1,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "ksqldb",
+      "family": "stream-processing",
+      "official_name": "Confluent Cloud ksqlDB",
+      "major": true,
+      "source_url": "https://docs.confluent.io/cloud/current/ksqldb/index.html",
+      "coverage": "supported",
+      "coverage_reason": "ksqlDB clusters retain environment, Kafka runtime, and principal topology",
+      "constructs": 2,
+      "counts": {
+        "supported": 1,
+        "partial": 0,
+        "intentionally-unrepresented": 1,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "networking",
+      "family": "network",
+      "official_name": "Confluent Cloud networking",
+      "major": true,
+      "source_url": "https://docs.confluent.io/cloud/current/networking/overview.html",
+      "coverage": "partial",
+      "coverage_reason": "networks, gateways, access points, peering, Private Link Attachments, Network Linking, DNS, and transit attachments are represented; literal cloud identifiers remain unlinked",
+      "constructs": 26,
+      "counts": {
+        "supported": 10,
+        "partial": 2,
+        "intentionally-unrepresented": 14,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "security-integrations",
+      "family": "security",
+      "official_name": "Confluent Cloud security and provider integrations",
+      "major": true,
+      "source_url": "https://docs.confluent.io/cloud/current/security/index.html",
+      "coverage": "partial",
+      "coverage_reason": "BYOK, certificate trust, and provider integrations are represented; cloud authorization setup remains bounded detail where provider identifiers are opaque",
+      "constructs": 12,
+      "counts": {
+        "supported": 4,
+        "partial": 2,
+        "intentionally-unrepresented": 6,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "stream-governance",
+      "family": "data-governance",
+      "official_name": "Confluent Cloud Stream Governance",
+      "major": true,
+      "source_url": "https://docs.confluent.io/cloud/current/get-started/schema-registry.html",
+      "coverage": "supported",
+      "coverage_reason": "Schema Registry, schemas, subject and cluster settings, envelope encryption details, and Schema Exporter topology are represented without schema or key material",
+      "constructs": 18,
+      "counts": {
+        "supported": 2,
+        "partial": 7,
+        "intentionally-unrepresented": 9,
+        "unsupported": 0
+      }
+    }
+  ]
+}

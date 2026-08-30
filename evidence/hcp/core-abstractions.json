@@ -1,0 +1,113 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-30",
+  "accepted_adr": "docs/adr/088-hcp-provider-boundaries.md",
+  "reused_core_concepts": [
+    "identity-group",
+    "managed-secret",
+    "network-peering",
+    "service-identity",
+    "virtual-network"
+  ],
+  "referenced_core_concepts": [
+    "identity-group",
+    "managed-secret",
+    "network-peering",
+    "service-identity",
+    "virtual-network"
+  ],
+  "promoted_core_concepts": [],
+  "hcp_specific_concepts": [
+    "access-control-configuration",
+    "audit-log-destination",
+    "boundary-cluster",
+    "consul-configuration",
+    "consul-dedicated-cluster",
+    "dns-forwarding",
+    "network-configuration",
+    "notification-webhook",
+    "organization",
+    "packer-artifact",
+    "packer-bucket",
+    "packer-channel",
+    "packer-configuration",
+    "packer-version",
+    "private-link-service",
+    "project",
+    "transit-gateway-attachment",
+    "vault-dedicated-cluster",
+    "vault-plugin",
+    "vault-radar-configuration",
+    "vault-radar-integration",
+    "vault-radar-secret-manager",
+    "vault-radar-source",
+    "vault-secrets-application",
+    "vault-secrets-configuration",
+    "vault-secrets-integration",
+    "vault-secrets-sync",
+    "waypoint-add-on",
+    "waypoint-add-on-definition",
+    "waypoint-agent-group",
+    "waypoint-application",
+    "waypoint-configuration",
+    "waypoint-template",
+    "workload-identity-provider"
+  ],
+  "candidates": [
+    {
+      "candidate": "private-link-service",
+      "disposition": "keep-hcp-specific",
+      "reason": "HCP resource owns a provider-side endpoint service, not the consumer private endpoint modeled by core",
+      "sources": {
+        "hcp": "https://developer.hashicorp.com/hcp/docs/vault/aws-privatelink",
+        "aws": "https://docs.aws.amazon.com/vpc/latest/privatelink/concepts.html",
+        "azure": "https://learn.microsoft.com/azure/private-link/private-link-service-overview",
+        "google": "https://cloud.google.com/vpc/docs/private-service-connect"
+      }
+    },
+    {
+      "candidate": "transit-network-hub",
+      "disposition": "reject-for-hcp-attachment",
+      "reason": "HCP provider owns only an attachment to a user-owned AWS Transit Gateway, not the transit hub itself",
+      "sources": {
+        "hcp": "https://developer.hashicorp.com/hcp/docs/hcp/network/hvn-aws/transit-gateway",
+        "aws": "https://docs.aws.amazon.com/vpc/latest/tgw/what-is-transit-gateway.html",
+        "azure": "https://learn.microsoft.com/azure/virtual-wan/virtual-wan-about",
+        "google": "https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/overview"
+      }
+    },
+    {
+      "candidate": "workload-identity-provider",
+      "disposition": "defer-identity-wave-comparison",
+      "reason": "HCP federation targets service principals; stable common scope needs Okta/Auth0 plus cloud-provider comparison",
+      "sources": {
+        "hcp": "https://developer.hashicorp.com/hcp/docs/hcp/iam/workload-identity",
+        "aws": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers.html",
+        "azure": "https://learn.microsoft.com/entra/workload-id/workload-identities-overview",
+        "google": "https://cloud.google.com/iam/docs/workload-identity-federation"
+      }
+    },
+    {
+      "candidate": "telemetry-destination",
+      "disposition": "defer-observability-wave-comparison",
+      "reason": "HCP resource streams audit logs; Datadog, Grafana, New Relic, and cloud sinks must prove a stable wider telemetry role",
+      "sources": {
+        "hcp": "https://developer.hashicorp.com/hcp/docs/hcp/admin/audit-logs",
+        "datadog": "https://docs.datadoghq.com/logs/",
+        "grafana": "https://grafana.com/docs/loki/latest/",
+        "newrelic": "https://docs.newrelic.com/docs/logs/"
+      }
+    },
+    {
+      "candidate": "machine-image-artifact",
+      "disposition": "defer-cross-cloud-image-comparison",
+      "reason": "HCP Packer stores metadata rather than images; cloud image resources own different lifecycle boundaries",
+      "sources": {
+        "hcp": "https://developer.hashicorp.com/hcp/docs/packer",
+        "aws": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html",
+        "azure": "https://learn.microsoft.com/azure/virtual-machines/shared-image-galleries",
+        "google": "https://cloud.google.com/compute/docs/images"
+      }
+    }
+  ]
+}

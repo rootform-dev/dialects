@@ -1,0 +1,8 @@
+rule "service-level" {
+  match {
+    kind = "resource"
+    type = "newrelic_service_level"
+  }
+
+  as = concept.core.service-objective
+}

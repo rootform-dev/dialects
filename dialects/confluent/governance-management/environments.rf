@@ -1,0 +1,63 @@
+concept "environment" {
+  kind        = scope
+  description = "An isolated Confluent Cloud namespace for organizational and lifecycle ownership."
+}
+
+concept "governance-configuration" {
+  kind        = detail
+  description = "Business metadata, tags, or catalog attributes configuring Confluent Cloud governance."
+}
+
+rule "environment" {
+  match {
+    kind = "resource"
+    type = "confluent_environment"
+  }
+
+  as = concept.environment
+}
+
+rule "business-metadata" {
+  match {
+    kind = "resource"
+    type = "confluent_business_metadata"
+  }
+
+  as = concept.governance-configuration
+}
+
+rule "business-metadata-binding" {
+  match {
+    kind = "resource"
+    type = "confluent_business_metadata_binding"
+  }
+
+  as = concept.governance-configuration
+}
+
+rule "catalog-entity-attributes" {
+  match {
+    kind = "resource"
+    type = "confluent_catalog_entity_attributes"
+  }
+
+  as = concept.governance-configuration
+}
+
+rule "tag" {
+  match {
+    kind = "resource"
+    type = "confluent_tag"
+  }
+
+  as = concept.governance-configuration
+}
+
+rule "tag-binding" {
+  match {
+    kind = "resource"
+    type = "confluent_tag_binding"
+  }
+
+  as = concept.governance-configuration
+}

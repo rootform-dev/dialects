@@ -1,0 +1,38 @@
+concept "audit-log-destination" {
+  kind        = entity
+  description = "An external observability destination receiving HCP audit logs."
+}
+
+concept "notification-webhook" {
+  kind        = entity
+  description = "A webhook receiving HCP project resource lifecycle events."
+}
+
+rule "log-streaming-destination" {
+  match {
+    kind = "resource"
+    type = "hcp_log_streaming_destination"
+  }
+
+  as = concept.audit-log-destination
+
+  relation "uses-cloud-identity" {
+    to  = concept.core.service-identity
+    via = source.cloudwatch.role_arn
+  }
+}
+
+rule "notifications-webhook" {
+  match {
+    kind = "resource"
+    type = "hcp_notifications_webhook"
+  }
+
+  as = concept.notification-webhook
+
+  context {
+    as  = context.core.ownership
+    to  = concept.project
+    via = source.project_id
+  }
+}

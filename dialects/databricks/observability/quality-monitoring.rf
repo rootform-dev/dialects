@@ -1,0 +1,54 @@
+concept "quality-monitor" {
+  kind        = entity
+  description = "A Databricks monitor evaluating data or model quality over time."
+}
+
+concept "monitoring-configuration" {
+  kind        = detail
+  description = "A refresh or configuration supporting Databricks quality monitoring."
+}
+
+rule "data-quality-monitor" {
+  match {
+    kind = "resource"
+    type = "databricks_data_quality_monitor"
+  }
+
+  as = concept.quality-monitor
+}
+
+rule "lakehouse-monitor" {
+  match {
+    kind = "resource"
+    type = "databricks_lakehouse_monitor"
+  }
+
+  as = concept.quality-monitor
+}
+
+rule "quality-monitor" {
+  match {
+    kind = "resource"
+    type = "databricks_quality_monitor"
+  }
+
+  as = concept.quality-monitor
+}
+
+rule "quality-monitor-v2" {
+  match {
+    kind = "resource"
+    type = "databricks_quality_monitor_v2"
+  }
+
+  as = concept.quality-monitor
+}
+
+rule "data-quality-refresh" {
+  match {
+    kind = "resource"
+    type = "databricks_data_quality_refresh"
+  }
+
+  as = concept.monitoring-configuration
+}

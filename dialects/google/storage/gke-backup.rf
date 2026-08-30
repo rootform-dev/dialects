@@ -1,0 +1,45 @@
+concept "gke-restore-plan" {
+  kind        = entity
+  description = "A Backup for GKE restore plan defining recovery of protected workloads."
+}
+
+concept "gke-backup-channel" {
+  kind        = detail
+  description = "A Backup for GKE channel connecting backup or restore operations across projects."
+}
+
+rule "gke-backup-plan" {
+  match {
+    kind = "resource"
+    type = "google_gke_backup_backup_plan"
+  }
+
+  as = concept.core.backup-plan
+}
+
+rule "gke-restore-plan" {
+  match {
+    kind = "resource"
+    type = "google_gke_backup_restore_plan"
+  }
+
+  as = concept.gke-restore-plan
+}
+
+rule "gke-backup-channel" {
+  match {
+    kind = "resource"
+    type = "google_gke_backup_backup_channel"
+  }
+
+  as = concept.gke-backup-channel
+}
+
+rule "gke-restore-channel" {
+  match {
+    kind = "resource"
+    type = "google_gke_backup_restore_channel"
+  }
+
+  as = concept.gke-backup-channel
+}

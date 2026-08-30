@@ -1,0 +1,66 @@
+concept "lakehouse-federation-connection" {
+  kind        = entity
+  description = "A Unity Catalog connection to an external data system for Lakehouse Federation."
+}
+
+concept "delta-share" {
+  kind        = entity
+  description = "A governed collection of data assets shared through Delta Sharing."
+}
+
+concept "delta-sharing-recipient" {
+  kind        = entity
+  description = "An organization or user receiving governed data through Delta Sharing."
+}
+
+concept "delta-sharing-provider" {
+  kind        = entity
+  description = "An external organization providing data through Delta Sharing."
+}
+
+concept "sharing-configuration" {
+  kind        = detail
+  description = "A sharing, provider, recipient, or catalog integration configuration."
+}
+
+rule "lakehouse-federation-connection" {
+  match {
+    kind = "resource"
+    type = "databricks_connection"
+  }
+
+  as = concept.lakehouse-federation-connection
+
+  context {
+    as  = context.core.ownership
+    to  = concept.unity-catalog-metastore
+    via = source.metastore_id
+  }
+}
+
+rule "delta-share" {
+  match {
+    kind = "resource"
+    type = "databricks_share"
+  }
+
+  as = concept.delta-share
+}
+
+rule "delta-sharing-recipient" {
+  match {
+    kind = "resource"
+    type = "databricks_recipient"
+  }
+
+  as = concept.delta-sharing-recipient
+}
+
+rule "delta-sharing-provider" {
+  match {
+    kind = "resource"
+    type = "databricks_provider"
+  }
+
+  as = concept.delta-sharing-provider
+}

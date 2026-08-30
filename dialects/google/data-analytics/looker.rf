@@ -1,0 +1,13 @@
+concept "looker-instance" {
+  kind        = entity
+  description = "A managed Looker instance."
+}
+
+rule "looker-instance" {
+  match {
+    kind = "resource"
+    type = "google_looker_instance"
+  }
+
+  as = concept.looker-instance
+}

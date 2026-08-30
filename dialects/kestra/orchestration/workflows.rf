@@ -1,0 +1,38 @@
+concept "namespace" {
+  kind        = scope
+  description = "A Kestra namespace that organizes orchestration resources."
+}
+
+concept "flow" {
+  kind        = entity
+  description = "A declaratively managed Kestra orchestration flow."
+}
+
+rule "namespace" {
+  match {
+    kind = "resource"
+    type = "kestra_namespace"
+  }
+
+  as = concept.namespace
+}
+
+rule "flow" {
+  match {
+    kind = "resource"
+    type = "kestra_flow"
+  }
+
+  as = concept.flow
+
+  context {
+    as  = context.core.ownership
+    to  = concept.namespace
+    via = source.namespace
+
+    match {
+      by       = target.namespace_id
+      strategy = "dot-ancestor"
+    }
+  }
+}

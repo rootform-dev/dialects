@@ -1,0 +1,201 @@
+{
+  "format_version": "1",
+  "products": [
+    {
+      "id": "orgs-realms",
+      "family": "tenancy",
+      "official_name": "Okta orgs and Realms",
+      "source_url": "https://developer.okta.com/docs/concepts/okta-organizations/",
+      "major": true,
+      "constructs": 6,
+      "counts": {
+        "supported": 4,
+        "partial": 2,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "applications",
+      "family": "applications",
+      "official_name": "Okta app integrations",
+      "source_url": "https://developer.okta.com/docs/concepts/app-integration-models/",
+      "major": true,
+      "constructs": 41,
+      "counts": {
+        "supported": 16,
+        "partial": 13,
+        "intentionally-unrepresented": 12,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "authorization-servers",
+      "family": "authorization",
+      "official_name": "Okta Authorization Servers",
+      "source_url": "https://developer.okta.com/docs/concepts/auth-servers/",
+      "major": true,
+      "constructs": 17,
+      "counts": {
+        "supported": 4,
+        "partial": 8,
+        "intentionally-unrepresented": 5,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "identity-providers",
+      "family": "federation",
+      "official_name": "Okta external Identity Providers",
+      "source_url": "https://developer.okta.com/docs/concepts/identity-providers/",
+      "major": true,
+      "constructs": 9,
+      "counts": {
+        "supported": 6,
+        "partial": 1,
+        "intentionally-unrepresented": 2,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "custom-domains",
+      "family": "domains",
+      "official_name": "Okta custom domains",
+      "source_url": "https://developer.okta.com/docs/guides/custom-url-domain/main/",
+      "major": true,
+      "constructs": 4,
+      "counts": {
+        "supported": 2,
+        "partial": 2,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "hooks",
+      "family": "extensibility",
+      "official_name": "Okta event hooks and inline hooks",
+      "source_url": "https://developer.okta.com/docs/concepts/event-hooks/",
+      "major": true,
+      "constructs": 5,
+      "counts": {
+        "supported": 2,
+        "partial": 3,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "security-integrations",
+      "family": "security-observability",
+      "official_name": "Okta log streams and security integrations",
+      "source_url": "https://developer.okta.com/docs/concepts/log-streaming/",
+      "major": true,
+      "constructs": 4,
+      "counts": {
+        "supported": 4,
+        "partial": 0,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "authentication-security",
+      "family": "security",
+      "official_name": "Okta authentication and security boundaries",
+      "source_url": "https://developer.okta.com/docs/concepts/authenticators/",
+      "major": true,
+      "constructs": 49,
+      "counts": {
+        "supported": 2,
+        "partial": 16,
+        "intentionally-unrepresented": 31,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "provisioning",
+      "family": "provisioning",
+      "official_name": "Okta provisioning connections",
+      "source_url": "https://developer.okta.com/docs/concepts/scim/",
+      "major": true,
+      "constructs": 16,
+      "counts": {
+        "supported": 0,
+        "partial": 0,
+        "intentionally-unrepresented": 16,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "users-groups-directory",
+      "family": "identity-administration",
+      "official_name": "Okta users, groups, and directory profiles",
+      "source_url": "https://developer.okta.com/docs/concepts/user-profiles/",
+      "major": false,
+      "constructs": 28,
+      "counts": {
+        "supported": 0,
+        "partial": 0,
+        "intentionally-unrepresented": 28,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "access-policies",
+      "family": "identity-administration",
+      "official_name": "Okta access policies and assignments",
+      "source_url": "https://developer.okta.com/docs/concepts/policies/",
+      "major": false,
+      "constructs": 20,
+      "counts": {
+        "supported": 0,
+        "partial": 0,
+        "intentionally-unrepresented": 20,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "identity-governance",
+      "family": "identity-governance",
+      "official_name": "Okta Identity Governance",
+      "source_url": "https://help.okta.com/oie/en-us/content/topics/identity-governance/iga.htm",
+      "major": false,
+      "constructs": 28,
+      "counts": {
+        "supported": 0,
+        "partial": 0,
+        "intentionally-unrepresented": 28,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "branding-communications",
+      "family": "experience-configuration",
+      "official_name": "Okta branding and communications",
+      "source_url": "https://developer.okta.com/docs/concepts/brands/",
+      "major": false,
+      "constructs": 23,
+      "counts": {
+        "supported": 0,
+        "partial": 0,
+        "intentionally-unrepresented": 23,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "platform-administration",
+      "family": "platform-configuration",
+      "official_name": "Okta platform administration",
+      "source_url": "https://developer.okta.com/docs/guides/terraform-overview/",
+      "major": false,
+      "constructs": 21,
+      "counts": {
+        "supported": 0,
+        "partial": 0,
+        "intentionally-unrepresented": 21,
+        "unsupported": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+concept "cluster-peering" {
+  kind        = entity
+  description = "A Consul cluster peering connection for exported service discovery and mesh traffic."
+}
+
+concept "network-area" {
+  kind        = entity
+  description = "A Consul Enterprise server-RPC connection between datacenters."
+}
+
+concept "sameness-group" {
+  kind        = entity
+  description = "A Consul group of partitions or peers with equivalent service instances."
+}
+
+concept "service-export" {
+  kind        = detail
+  description = "A service export detail for peers, partitions, or sameness groups."
+}
+
+rule "config-entry-exported-services-json" {
+  match {
+    kind  = "resource"
+    type  = "consul_config_entry"
+    where = source.kind == "exported-services"
+  }
+
+  as = concept.service-export
+}
+
+rule "config-entry-exported-services-json-lookup" {
+  match {
+    kind  = "data"
+    type  = "consul_config_entry"
+    where = source.kind == "exported-services"
+  }
+
+  as = concept.service-export
+}
+
+rule "config-entry-sameness-group-json" {
+  match {
+    kind  = "resource"
+    type  = "consul_config_entry"
+    where = source.kind == "sameness-group"
+  }
+
+  as = concept.sameness-group
+}
+
+rule "config-entry-sameness-group-json-lookup" {
+  match {
+    kind  = "data"
+    type  = "consul_config_entry"
+    where = source.kind == "sameness-group"
+  }
+
+  as = concept.sameness-group
+}
+
+rule "config-entry-v2-exported-services" {
+  match {
+    kind = "resource"
+    type = "consul_config_entry_v2_exported_services"
+  }
+
+  as = concept.service-export
+
+  contribution {
+    to  = concept.consul-service
+    via = source.services
+  }
+
+  contribution {
+    to  = concept.cluster-peering
+    via = source.peer_consumers
+  }
+
+  contribution {
+    to  = concept.sameness-group
+    via = source.sameness_group_consumers
+  }
+}
+
+rule "config-entry-v2-exported-services-lookup" {
+  match {
+    kind = "data"
+    type = "consul_config_entry_v2_exported_services"
+  }
+
+  as = concept.service-export
+
+  contribution {
+    to  = concept.consul-service
+    via = source.services
+  }
+
+  contribution {
+    to  = concept.cluster-peering
+    via = source.peer_consumers
+  }
+
+  contribution {
+    to  = concept.sameness-group
+    via = source.sameness_group_consumers
+  }
+}
+
+rule "network-area" {
+  match {
+    kind = "resource"
+    type = "consul_network_area"
+  }
+
+  as = concept.network-area
+}
+
+rule "peering" {
+  match {
+    kind = "resource"
+    type = "consul_peering"
+  }
+
+  as = concept.cluster-peering
+}
+
+rule "peering-lookup" {
+  match {
+    kind = "data"
+    type = "consul_peering"
+  }
+
+  as = concept.cluster-peering
+}

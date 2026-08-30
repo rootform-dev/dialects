@@ -1,0 +1,1653 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-29",
+  "dialect": {
+    "name": "databricks",
+    "version": "0.1.0"
+  },
+  "provider": {
+    "source": "registry.terraform.io/databricks/databricks",
+    "baseline_version": "1.129.0",
+    "compatibility": "= 1.129.0",
+    "bound": "temporary-exact-evidence",
+    "schema_sha256": "sha256:d1bd261d5ce3228ed227c497384d8f6232da92e93211c65088233bf0d0acee9f"
+  },
+  "semantic_sources_sha256": "sha256:e394e491bbaf6d3b695cc9c682902433a6c021809ffe82209fc13720901e5e53",
+  "rules": [
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_access_control_rule_set",
+      "rule_id": "databricks/access-control-rule-set",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/access_control_rule_set.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_account_federation_policy",
+      "rule_id": "databricks/account-federation-policy",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/account_federation_policy.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_account_iam_direct_group_member_v2",
+      "rule_id": "databricks/account-group-member",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/account_iam_direct_group_member_v2.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_account_iam_group_v2",
+      "rule_id": "databricks/account-identity-group",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/account_iam_group_v2.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/network/classic-networking.rf",
+      "paths": [],
+      "resource_type": "databricks_account_network_policy",
+      "rule_id": "databricks/account-network-policy",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/account_network_policy.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_account_iam_service_principal_v2",
+      "rule_id": "databricks/account-service-principal",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/account_iam_service_principal_v2.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/deployment/workspaces.rf",
+      "paths": [],
+      "resource_type": "databricks_account_setting_v2",
+      "rule_id": "databricks/account-setting",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/account_setting_v2.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_account_iam_workspace_assignment_v2",
+      "rule_id": "databricks/account-workspace-assignment",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/account_iam_workspace_assignment_v2.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/ai-ml/serving-search.rf",
+      "paths": [],
+      "resource_type": "databricks_ai_gateway_mcp_service",
+      "rule_id": "databricks/ai-gateway-mcp-service",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/ai_gateway_mcp_service.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/ai-ml/serving-search.rf",
+      "paths": [],
+      "resource_type": "databricks_ai_gateway_model_provider_service",
+      "rule_id": "databricks/ai-gateway-model-provider-service",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/ai_gateway_model_provider_service.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/ai-ml/serving-search.rf",
+      "paths": [],
+      "resource_type": "databricks_ai_gateway_model_service",
+      "rule_id": "databricks/ai-gateway-model-service",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/ai_gateway_model_service.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/ai-ml/serving-search.rf",
+      "paths": [],
+      "resource_type": "databricks_ai_search_endpoint",
+      "rule_id": "databricks/ai-search-endpoint",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/ai_search_endpoint.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/ai-ml/serving-search.rf",
+      "paths": ["endpoint"],
+      "resource_type": "databricks_ai_search_index",
+      "rule_id": "databricks/ai-search-index",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/ai_search_index.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/applications/analytics.rf",
+      "paths": [],
+      "resource_type": "databricks_alert",
+      "rule_id": "databricks/alert",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/alert.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/applications/analytics.rf",
+      "paths": [],
+      "resource_type": "databricks_alert_v2",
+      "rule_id": "databricks/alert-v2",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/alert_v2.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/applications/apps.rf",
+      "paths": [],
+      "resource_type": "databricks_app_space",
+      "rule_id": "databricks/app-space",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/app_space.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/applications/apps.rf",
+      "paths": [],
+      "resource_type": "databricks_apps_settings_custom_template",
+      "rule_id": "databricks/apps-custom-template",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/apps_settings_custom_template.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/compute/compute.rf",
+      "paths": [],
+      "resource_type": "databricks_artifact_allowlist",
+      "rule_id": "databricks/artifact-allowlist",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/artifact_allowlist.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/deployment/workspaces.rf",
+      "paths": [],
+      "resource_type": "databricks_automatic_cluster_update_workspace_setting",
+      "rule_id": "databricks/automatic-cluster-update-setting",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/automatic_cluster_update_setting.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/storage/legacy-mounts.rf",
+      "paths": [],
+      "resource_type": "databricks_aws_s3_mount",
+      "rule_id": "databricks/aws-s3-mount",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/aws_s3_mount.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/storage/legacy-mounts.rf",
+      "paths": [],
+      "resource_type": "databricks_azure_adls_gen1_mount",
+      "rule_id": "databricks/azure-adls-gen1-mount",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/azure_adls_gen1_mount.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/storage/legacy-mounts.rf",
+      "paths": [],
+      "resource_type": "databricks_azure_adls_gen2_mount",
+      "rule_id": "databricks/azure-adls-gen2-mount",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/azure_adls_gen2_mount.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/storage/legacy-mounts.rf",
+      "paths": [],
+      "resource_type": "databricks_azure_blob_mount",
+      "rule_id": "databricks/azure-blob-mount",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/azure_blob_mount.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/data-governance/unity-catalog.rf",
+      "paths": [],
+      "resource_type": "databricks_catalog_workspace_binding",
+      "rule_id": "databricks/catalog-workspace-binding",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/catalog_workspace_binding.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/compute/compute.rf",
+      "paths": ["cluster_id"],
+      "resource_type": "databricks_library",
+      "rule_id": "databricks/cluster-library",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/library.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/compute/compute.rf",
+      "paths": [],
+      "resource_type": "databricks_cluster_policy",
+      "rule_id": "databricks/cluster-policy",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/cluster_policy.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/deployment/workspaces.rf",
+      "paths": [],
+      "resource_type": "databricks_compliance_security_profile_workspace_setting",
+      "rule_id": "databricks/compliance-security-profile-setting",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/compliance_security_profile_setting.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/compute/compute.rf",
+      "paths": [
+        "aws_attributes[0].instance_profile_arn",
+        "driver_instance_pool_id",
+        "gcp_attributes[0].google_service_account",
+        "instance_pool_id"
+      ],
+      "resource_type": "databricks_cluster",
+      "rule_id": "databricks/compute-cluster",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/cluster.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_custom_app_integration",
+      "rule_id": "databricks/custom-app-integration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/custom_app_integration.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/applications/analytics.rf",
+      "paths": [],
+      "resource_type": "databricks_dashboard",
+      "rule_id": "databricks/dashboard",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/dashboard.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/applications/apps.rf",
+      "paths": [],
+      "resource_type": "databricks_aibi_dashboard_embedding_access_policy_setting",
+      "rule_id": "databricks/dashboard-embedding-access-policy",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/aibi_dashboard_embedding_access_policy_setting.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/applications/apps.rf",
+      "paths": [],
+      "resource_type": "databricks_aibi_dashboard_embedding_approved_domains_setting",
+      "rule_id": "databricks/dashboard-embedding-approved-domains",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/aibi_dashboard_embedding_approved_domains_setting.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/data-governance/unity-catalog.rf",
+      "paths": [],
+      "resource_type": "databricks_data_classification_catalog_config",
+      "rule_id": "databricks/data-classification-catalog-config",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/data_classification_catalog_config.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/observability/quality-monitoring.rf",
+      "paths": [],
+      "resource_type": "databricks_data_quality_monitor",
+      "rule_id": "databricks/data-quality-monitor",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/data_quality_monitor.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/observability/quality-monitoring.rf",
+      "paths": [],
+      "resource_type": "databricks_data_quality_refresh",
+      "rule_id": "databricks/data-quality-refresh",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/data_quality_refresh.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/applications/apps.rf",
+      "paths": [],
+      "resource_type": "databricks_app",
+      "rule_id": "databricks/databricks-app",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/app.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/deployment/workspaces.rf",
+      "paths": [],
+      "resource_type": "databricks_default_namespace_setting",
+      "rule_id": "databricks/default-namespace-setting",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/default_namespace_setting.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/compute/compute.rf",
+      "paths": [],
+      "resource_type": "databricks_environments_default_workspace_base_environment",
+      "rule_id": "databricks/default-workspace-base-environment",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/environments_default_workspace_base_environment.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/data-governance/sharing-federation.rf",
+      "paths": [],
+      "resource_type": "databricks_share",
+      "rule_id": "databricks/delta-share",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/share.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/data-governance/sharing-federation.rf",
+      "paths": [],
+      "resource_type": "databricks_provider",
+      "rule_id": "databricks/delta-sharing-provider",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/provider.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/data-governance/sharing-federation.rf",
+      "paths": [],
+      "resource_type": "databricks_recipient",
+      "rule_id": "databricks/delta-sharing-recipient",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/recipient.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/deployment/workspaces.rf",
+      "paths": [],
+      "resource_type": "databricks_disable_legacy_access_setting",
+      "rule_id": "databricks/disable-legacy-access-setting",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/disable_legacy_access_setting.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/deployment/workspaces.rf",
+      "paths": [],
+      "resource_type": "databricks_disable_legacy_dbfs_setting",
+      "rule_id": "databricks/disable-legacy-dbfs-setting",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/disable_legacy_dbfs_setting.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/deployment/workspaces.rf",
+      "paths": [],
+      "resource_type": "databricks_disable_legacy_features_setting",
+      "rule_id": "databricks/disable-legacy-features-setting",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/disable_legacy_features_setting.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/deployment/workspaces.rf",
+      "paths": [],
+      "resource_type": "databricks_disaster_recovery_failover_group",
+      "rule_id": "databricks/disaster-recovery-failover-group",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/disaster_recovery_failover_group.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/deployment/workspaces.rf",
+      "paths": [],
+      "resource_type": "databricks_disaster_recovery_stable_url",
+      "rule_id": "databricks/disaster-recovery-stable-url",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/disaster_recovery_stable_url.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/deployment/workspaces.rf",
+      "paths": [],
+      "resource_type": "databricks_enhanced_security_monitoring_workspace_setting",
+      "rule_id": "databricks/enhanced-security-monitoring-setting",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/enhanced_security_monitoring_setting.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_entitlements",
+      "rule_id": "databricks/entitlements",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/entitlements.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/data-governance/unity-catalog.rf",
+      "paths": [],
+      "resource_type": "databricks_entity_tag_assignment",
+      "rule_id": "databricks/entity-tag-assignment",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/entity_tag_assignment.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/data-governance/unity-catalog.rf",
+      "paths": [
+        "credential_name",
+        "encryption_details[0].sse_encryption_details[0].aws_kms_key_arn",
+        "metastore_id",
+        "url"
+      ],
+      "resource_type": "databricks_external_location",
+      "rule_id": "databricks/external-location",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/external_location.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/data-governance/unity-catalog.rf",
+      "paths": [],
+      "resource_type": "databricks_external_metadata",
+      "rule_id": "databricks/external-metadata",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/external_metadata.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/ai-ml/agents-mlflow.rf",
+      "paths": [],
+      "resource_type": "databricks_feature_engineering_feature",
+      "rule_id": "databricks/feature-engineering-feature",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/feature_engineering_feature.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/ai-ml/agents-mlflow.rf",
+      "paths": [],
+      "resource_type": "databricks_feature_engineering_kafka_config",
+      "rule_id": "databricks/feature-engineering-kafka-config",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/feature_engineering_kafka_config.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/ai-ml/agents-mlflow.rf",
+      "paths": [],
+      "resource_type": "databricks_feature_engineering_materialized_feature",
+      "rule_id": "databricks/feature-engineering-materialized-feature",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/feature_engineering_materialized_feature.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/compute/compute.rf",
+      "paths": [],
+      "resource_type": "databricks_global_init_script",
+      "rule_id": "databricks/global-init-script",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/global_init_script.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_grant",
+      "rule_id": "databricks/grant",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/grant.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_grants",
+      "rule_id": "databricks/grants",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/grants.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_group_instance_profile",
+      "rule_id": "databricks/group-instance-profile",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/group_instance_profile.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_group_member",
+      "rule_id": "databricks/group-member",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/group_member.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_group_role",
+      "rule_id": "databricks/group-role",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/group_role.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_group",
+      "rule_id": "databricks/identity-group",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/group.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/compute/compute.rf",
+      "paths": ["aws_attributes[0].instance_profile_arn"],
+      "resource_type": "databricks_instance_pool",
+      "rule_id": "databricks/instance-pool",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/instance_pool.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/compute/compute.rf",
+      "paths": [],
+      "resource_type": "databricks_instance_profile",
+      "rule_id": "databricks/instance-profile",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/instance_profile.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/network/classic-networking.rf",
+      "paths": [],
+      "resource_type": "databricks_ip_access_list",
+      "rule_id": "databricks/ip-access-list",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/ip_access_list.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/ai-ml/agents-mlflow.rf",
+      "paths": [],
+      "resource_type": "databricks_knowledge_assistant",
+      "rule_id": "databricks/knowledge-assistant",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/knowledge_assistant.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/ai-ml/agents-mlflow.rf",
+      "paths": ["parent"],
+      "resource_type": "databricks_knowledge_assistant_knowledge_source",
+      "rule_id": "databricks/knowledge-assistant-source",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/knowledge_assistant_knowledge_source.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/databases/lakebase.rf",
+      "paths": ["parent", "spec.source_branch"],
+      "resource_type": "databricks_postgres_branch",
+      "rule_id": "databricks/lakebase-branch",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/postgres_branch.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/databases/lakebase.rf",
+      "paths": ["parent"],
+      "resource_type": "databricks_postgres_data_api",
+      "rule_id": "databricks/lakebase-data-api",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/postgres_data_api.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/databases/lakebase.rf",
+      "paths": ["parent"],
+      "resource_type": "databricks_postgres_database",
+      "rule_id": "databricks/lakebase-database",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/postgres_database.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/databases/lakebase.rf",
+      "paths": ["parent"],
+      "resource_type": "databricks_postgres_endpoint",
+      "rule_id": "databricks/lakebase-endpoint",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/postgres_endpoint.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/databases/lakebase.rf",
+      "paths": [],
+      "resource_type": "databricks_postgres_catalog",
+      "rule_id": "databricks/lakebase-postgres-catalog",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/postgres_catalog.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/databases/lakebase.rf",
+      "paths": [],
+      "resource_type": "databricks_postgres_cdf_config",
+      "rule_id": "databricks/lakebase-postgres-cdf-config",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/postgres_cdf_config.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/databases/lakebase.rf",
+      "paths": [],
+      "resource_type": "databricks_postgres_role",
+      "rule_id": "databricks/lakebase-postgres-role",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/postgres_role.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/databases/lakebase.rf",
+      "paths": [],
+      "resource_type": "databricks_postgres_synced_table",
+      "rule_id": "databricks/lakebase-postgres-synced-table",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/postgres_synced_table.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/databases/lakebase.rf",
+      "paths": [],
+      "resource_type": "databricks_postgres_project",
+      "rule_id": "databricks/lakebase-project",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/postgres_project.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/databases/lakebase.rf",
+      "paths": [],
+      "resource_type": "databricks_database_database_catalog",
+      "rule_id": "databricks/lakebase-provisioned-catalog",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/database_database_catalog.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/databases/lakebase.rf",
+      "paths": ["parent_instance_ref[0].name"],
+      "resource_type": "databricks_database_instance",
+      "rule_id": "databricks/lakebase-provisioned-instance",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/database_instance.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/databases/lakebase.rf",
+      "paths": [],
+      "resource_type": "databricks_database_synced_database_table",
+      "rule_id": "databricks/lakebase-provisioned-synced-table",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/database_synced_database_table.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/orchestration/lakeflow.rf",
+      "paths": ["existing_cluster_id"],
+      "resource_type": "databricks_job",
+      "rule_id": "databricks/lakeflow-job",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/job.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/orchestration/lakeflow.rf",
+      "paths": ["catalog", "target"],
+      "resource_type": "databricks_pipeline",
+      "rule_id": "databricks/lakeflow-pipeline",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/pipeline.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/data-governance/sharing-federation.rf",
+      "paths": ["metastore_id"],
+      "resource_type": "databricks_connection",
+      "rule_id": "databricks/lakehouse-federation-connection",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/connection.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/observability/quality-monitoring.rf",
+      "paths": [],
+      "resource_type": "databricks_lakehouse_monitor",
+      "rule_id": "databricks/lakehouse-monitor",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/lakehouse_monitor.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/deployment/workspaces.rf",
+      "paths": ["credentials_id", "storage_configuration_id"],
+      "resource_type": "databricks_mws_log_delivery",
+      "rule_id": "databricks/log-delivery",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mws_log_delivery.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/ai-ml/agents-mlflow.rf",
+      "paths": [],
+      "resource_type": "databricks_materialized_features_feature_tag",
+      "rule_id": "databricks/materialized-feature-tag",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/materialized_features_feature_tag.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/data-governance/unity-catalog.rf",
+      "paths": ["metastore_id", "workspace_id"],
+      "resource_type": "databricks_metastore_assignment",
+      "rule_id": "databricks/metastore-assignment",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/metastore_assignment.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/data-governance/unity-catalog.rf",
+      "paths": [
+        "aws_iam_role[0].role_arn",
+        "azure_managed_identity[0].managed_identity_id",
+        "gcp_service_account_key[0].email",
+        "metastore_id"
+      ],
+      "resource_type": "databricks_metastore_data_access",
+      "rule_id": "databricks/metastore-data-access",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/metastore_data_access.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/ai-ml/agents-mlflow.rf",
+      "paths": [],
+      "resource_type": "databricks_mlflow_experiment",
+      "rule_id": "databricks/mlflow-experiment",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mlflow_experiment.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/ai-ml/agents-mlflow.rf",
+      "paths": [],
+      "resource_type": "databricks_mlflow_model",
+      "rule_id": "databricks/mlflow-model",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mlflow_model.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/ai-ml/agents-mlflow.rf",
+      "paths": [],
+      "resource_type": "databricks_mlflow_webhook",
+      "rule_id": "databricks/mlflow-webhook",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mlflow_webhook.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/ai-ml/serving-search.rf",
+      "paths": [],
+      "resource_type": "databricks_model_serving",
+      "rule_id": "databricks/model-serving",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/model_serving.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/ai-ml/serving-search.rf",
+      "paths": [],
+      "resource_type": "databricks_model_serving_provisioned_throughput",
+      "rule_id": "databricks/model-serving-provisioned-throughput",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/model_serving_provisioned_throughput.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/storage/legacy-mounts.rf",
+      "paths": [],
+      "resource_type": "databricks_mount",
+      "rule_id": "databricks/mount",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mount.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_mws_permission_assignment",
+      "rule_id": "databricks/mws-permission-assignment",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mws_permission_assignment.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/network/serverless-connectivity.rf",
+      "paths": ["network_connectivity_config_id", "workspace_id"],
+      "resource_type": "databricks_mws_ncc_binding",
+      "rule_id": "databricks/network-connectivity-binding",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mws_ncc_binding.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/network/serverless-connectivity.rf",
+      "paths": [],
+      "resource_type": "databricks_mws_network_connectivity_config",
+      "rule_id": "databricks/network-connectivity-configuration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mws_network_connectivity_config.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/applications/analytics.rf",
+      "paths": [],
+      "resource_type": "databricks_notification_destination",
+      "rule_id": "databricks/notification-destination",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/notification_destination.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/databases/online-serving.rf",
+      "paths": [],
+      "resource_type": "databricks_online_store",
+      "rule_id": "databricks/online-store",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/online_store.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/databases/online-serving.rf",
+      "paths": ["spec.pipeline_id"],
+      "resource_type": "databricks_online_table",
+      "rule_id": "databricks/online-table",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/online_table.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_permission_assignment",
+      "rule_id": "databricks/permission-assignment",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/permission_assignment.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_permissions",
+      "rule_id": "databricks/permissions",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/permissions.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/compute/compute.rf",
+      "paths": [],
+      "resource_type": "databricks_policy_info",
+      "rule_id": "databricks/policy-info",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/policy_info.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/network/classic-networking.rf",
+      "paths": [],
+      "resource_type": "databricks_mws_private_access_settings",
+      "rule_id": "databricks/private-access-settings",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mws_private_access_settings.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/network/serverless-connectivity.rf",
+      "paths": ["network_connectivity_config_id", "resource_id", "vpc_endpoint_id"],
+      "resource_type": "databricks_mws_ncc_private_endpoint_rule",
+      "rule_id": "databricks/private-endpoint-rule",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mws_ncc_private_endpoint_rule.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/observability/quality-monitoring.rf",
+      "paths": [],
+      "resource_type": "databricks_quality_monitor",
+      "rule_id": "databricks/quality-monitor",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/quality_monitor.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/observability/quality-monitoring.rf",
+      "paths": [],
+      "resource_type": "databricks_quality_monitor_v2",
+      "rule_id": "databricks/quality-monitor-v2",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/quality_monitor_v2.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/applications/analytics.rf",
+      "paths": [],
+      "resource_type": "databricks_query",
+      "rule_id": "databricks/query",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/query.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/ai-ml/agents-mlflow.rf",
+      "paths": ["schema_name"],
+      "resource_type": "databricks_registered_model",
+      "rule_id": "databricks/registered-model",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/registered_model.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/deployment/workspaces.rf",
+      "paths": [],
+      "resource_type": "databricks_restrict_workspace_admins_setting",
+      "rule_id": "databricks/restrict-workspace-admins-setting",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/restrict_workspace_admins_setting.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_rfa_access_request_destinations",
+      "rule_id": "databricks/rfa-access-request-destinations",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/rfa_access_request_destinations.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/security/secrets.rf",
+      "paths": ["scope"],
+      "resource_type": "databricks_secret",
+      "rule_id": "databricks/secret",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/secret.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/security/secrets.rf",
+      "paths": ["scope"],
+      "resource_type": "databricks_secret_acl",
+      "rule_id": "databricks/secret-acl",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/secret_acl.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/security/secrets.rf",
+      "paths": [],
+      "resource_type": "databricks_secret_scope",
+      "rule_id": "databricks/secret-scope",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/secret_scope.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/data-governance/unity-catalog.rf",
+      "paths": [
+        "aws_iam_role[0].role_arn",
+        "azure_managed_identity[0].managed_identity_id",
+        "metastore_id"
+      ],
+      "resource_type": "databricks_credential",
+      "rule_id": "databricks/service-credential",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/credential.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/network/classic-networking.rf",
+      "paths": [
+        "aws_vpc_endpoint_info.aws_vpc_endpoint_id",
+        "azure_private_endpoint_info.private_endpoint_resource_id",
+        "gcp_psc_endpoint_info.psc_endpoint"
+      ],
+      "resource_type": "databricks_endpoint",
+      "rule_id": "databricks/service-direct-endpoint",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/endpoint.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_service_principal",
+      "rule_id": "databricks/service-principal",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/service_principal.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_service_principal_federation_policy",
+      "rule_id": "databricks/service-principal-federation-policy",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/service_principal_federation_policy.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_service_principal_role",
+      "rule_id": "databricks/service-principal-role",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/service_principal_role.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/security/secrets.rf",
+      "paths": [],
+      "resource_type": "databricks_service_principal_secret",
+      "rule_id": "databricks/service-principal-secret",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/service_principal_secret.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/applications/analytics.rf",
+      "paths": [],
+      "resource_type": "databricks_sql_alert",
+      "rule_id": "databricks/sql-alert",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/sql_alert.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/applications/analytics.rf",
+      "paths": [],
+      "resource_type": "databricks_sql_dashboard",
+      "rule_id": "databricks/sql-dashboard",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/sql_dashboard.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/compute/sql-warehouses.rf",
+      "paths": [],
+      "resource_type": "databricks_sql_global_config",
+      "rule_id": "databricks/sql-global-config",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/sql_global_config.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/compute/sql-warehouses.rf",
+      "paths": [],
+      "resource_type": "databricks_sql_permissions",
+      "rule_id": "databricks/sql-permissions",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/sql_permissions.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/applications/analytics.rf",
+      "paths": [],
+      "resource_type": "databricks_sql_query",
+      "rule_id": "databricks/sql-query",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/sql_query.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/data-governance/unity-catalog.rf",
+      "paths": [],
+      "resource_type": "databricks_sql_table",
+      "rule_id": "databricks/sql-table",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/sql_table.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/applications/analytics.rf",
+      "paths": [],
+      "resource_type": "databricks_sql_visualization",
+      "rule_id": "databricks/sql-visualization",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/sql_visualization.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/compute/sql-warehouses.rf",
+      "paths": ["instance_profile_arn"],
+      "resource_type": "databricks_sql_endpoint",
+      "rule_id": "databricks/sql-warehouse",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/sql_endpoint.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/applications/analytics.rf",
+      "paths": [],
+      "resource_type": "databricks_sql_widget",
+      "rule_id": "databricks/sql-widget",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/sql_widget.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/data-governance/unity-catalog.rf",
+      "paths": [
+        "aws_iam_role[0].role_arn",
+        "azure_managed_identity[0].managed_identity_id",
+        "gcp_service_account_key[0].email",
+        "metastore_id"
+      ],
+      "resource_type": "databricks_storage_credential",
+      "rule_id": "databricks/storage-credential",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/storage_credential.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/ai-ml/agents-mlflow.rf",
+      "paths": [],
+      "resource_type": "databricks_supervisor_agent",
+      "rule_id": "databricks/supervisor-agent",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/supervisor_agent.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/ai-ml/agents-mlflow.rf",
+      "paths": ["parent"],
+      "resource_type": "databricks_supervisor_agent_tool",
+      "rule_id": "databricks/supervisor-agent-tool",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/supervisor_agent_tool.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/data-governance/unity-catalog.rf",
+      "paths": [],
+      "resource_type": "databricks_system_schema",
+      "rule_id": "databricks/system-schema",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/system_schema.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/data-governance/unity-catalog.rf",
+      "paths": [],
+      "resource_type": "databricks_tag_policy",
+      "rule_id": "databricks/tag-policy",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/tag_policy.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/data-governance/unity-catalog.rf",
+      "paths": ["connection_name", "metastore_id", "provider_name", "share_name", "storage_root"],
+      "resource_type": "databricks_catalog",
+      "rule_id": "databricks/unity-catalog-catalog",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/catalog.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/data-governance/unity-catalog.rf",
+      "paths": ["storage_root"],
+      "resource_type": "databricks_metastore",
+      "rule_id": "databricks/unity-catalog-metastore",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/metastore.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/data-governance/unity-catalog.rf",
+      "paths": ["catalog_name", "storage_root"],
+      "resource_type": "databricks_schema",
+      "rule_id": "databricks/unity-catalog-schema",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/schema.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/security/secrets.rf",
+      "paths": [],
+      "resource_type": "databricks_secret_uc",
+      "rule_id": "databricks/unity-catalog-secret",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/secret_uc.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/data-governance/unity-catalog.rf",
+      "paths": [],
+      "resource_type": "databricks_table",
+      "rule_id": "databricks/unity-catalog-table",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/table.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/data-governance/unity-catalog.rf",
+      "paths": ["schema_name", "storage_location"],
+      "resource_type": "databricks_volume",
+      "rule_id": "databricks/unity-catalog-volume",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/volume.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_user_instance_profile",
+      "rule_id": "databricks/user-instance-profile",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/user_instance_profile.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_user_role",
+      "rule_id": "databricks/user-role",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/user_role.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/ai-ml/serving-search.rf",
+      "paths": [],
+      "resource_type": "databricks_vector_search_endpoint",
+      "rule_id": "databricks/vector-search-endpoint",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/vector_search_endpoint.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/ai-ml/serving-search.rf",
+      "paths": ["endpoint_name"],
+      "resource_type": "databricks_vector_search_index",
+      "rule_id": "databricks/vector-search-index",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/vector_search_index.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/network/classic-networking.rf",
+      "paths": ["aws_vpc_endpoint_id", "gcp_vpc_endpoint_info[0].psc_endpoint_name"],
+      "resource_type": "databricks_mws_vpc_endpoint",
+      "rule_id": "databricks/vpc-endpoint-registration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mws_vpc_endpoint.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/deployment/workspaces.rf",
+      "paths": [],
+      "resource_type": "databricks_warehouses_default_warehouse_override",
+      "rule_id": "databricks/warehouses-default-warehouse-override",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/warehouses_default_warehouse_override.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/deployment/workspaces.rf",
+      "paths": [
+        "credentials_id",
+        "network_connectivity_config_id",
+        "network_id",
+        "private_access_settings_id",
+        "storage_configuration_id"
+      ],
+      "resource_type": "databricks_mws_workspaces",
+      "rule_id": "databricks/workspace",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mws_workspaces.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/compute/compute.rf",
+      "paths": [],
+      "resource_type": "databricks_environments_workspace_base_environment",
+      "rule_id": "databricks/workspace-base-environment",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/environments_workspace_base_environment.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/deployment/workspaces.rf",
+      "paths": [],
+      "resource_type": "databricks_workspace_binding",
+      "rule_id": "databricks/workspace-binding",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/workspace_binding.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/deployment/workspaces.rf",
+      "paths": [],
+      "resource_type": "databricks_workspace_conf",
+      "rule_id": "databricks/workspace-configuration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/workspace_conf.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/deployment/workspaces.rf",
+      "paths": ["aws_key_info[0].key_arn", "gcp_key_info[0].kms_key_id"],
+      "resource_type": "databricks_mws_customer_managed_keys",
+      "rule_id": "databricks/workspace-customer-managed-key",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mws_customer_managed_keys.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/deployment/workspaces.rf",
+      "paths": ["role_arn"],
+      "resource_type": "databricks_mws_credentials",
+      "rule_id": "databricks/workspace-deployment-credential",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mws_credentials.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/data-governance/unity-catalog.rf",
+      "paths": [],
+      "resource_type": "databricks_workspace_entity_tag_assignment",
+      "rule_id": "databricks/workspace-entity-tag-assignment",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/workspace_entity_tag_assignment.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_workspace_iam_direct_group_member_v2",
+      "rule_id": "databricks/workspace-group-member",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/workspace_iam_direct_group_member_v2.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_workspace_iam_workspace_assignment_v2",
+      "rule_id": "databricks/workspace-identity-assignment",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/workspace_iam_workspace_assignment_v2.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_workspace_iam_workspace_identity_detail_v2",
+      "rule_id": "databricks/workspace-identity-detail",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/workspace_iam_workspace_identity_detail_v2.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_workspace_iam_group_v2",
+      "rule_id": "databricks/workspace-identity-group",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/workspace_iam_group_v2.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/network/classic-networking.rf",
+      "paths": ["gcp_network_info[0].vpc_id", "vpc_id"],
+      "resource_type": "databricks_mws_networks",
+      "rule_id": "databricks/workspace-network-configuration",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mws_networks.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/deployment/workspaces.rf",
+      "paths": [],
+      "resource_type": "databricks_workspace_network_option",
+      "rule_id": "databricks/workspace-network-option",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/workspace_network_option.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/deployment/workspaces.rf",
+      "paths": ["bucket_name", "role_arn"],
+      "resource_type": "databricks_mws_storage_configurations",
+      "rule_id": "databricks/workspace-root-storage",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/mws_storage_configurations.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/identity-iam/identities.rf",
+      "paths": [],
+      "resource_type": "databricks_workspace_iam_service_principal_v2",
+      "rule_id": "databricks/workspace-service-principal",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/workspace_iam_service_principal_v2.md"
+    },
+    {
+      "construct_kind": "managed_resource",
+      "file": "dialects/databricks/deployment/workspaces.rf",
+      "paths": [],
+      "resource_type": "databricks_workspace_setting_v2",
+      "rule_id": "databricks/workspace-setting",
+      "schema_verified": true,
+      "meaning_verified": true,
+      "source_url": "https://github.com/databricks/terraform-provider-databricks/blob/v1.129.0/docs/resources/workspace_setting_v2.md"
+    }
+  ],
+  "review_policy": "later provider releases require schema-path and documented-meaning comparison; they do not require a dialect release automatically"
+}

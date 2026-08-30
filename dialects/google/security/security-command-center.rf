@@ -1,0 +1,13 @@
+concept "security-command-center-source" {
+  kind        = entity
+  description = "A Security Command Center source publishing security findings."
+}
+
+rule "security-command-center-source" {
+  match {
+    kind = "resource"
+    type = "google_scc_source"
+  }
+
+  as = concept.security-command-center-source
+}

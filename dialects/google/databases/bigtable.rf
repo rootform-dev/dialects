@@ -1,0 +1,27 @@
+concept "bigtable-table" {
+  kind        = detail
+  description = "A table belonging to a Bigtable instance."
+}
+
+rule "bigtable-instance" {
+  match {
+    kind = "resource"
+    type = "google_bigtable_instance"
+  }
+
+  as = concept.core.managed-database
+}
+
+rule "bigtable-table" {
+  match {
+    kind = "resource"
+    type = "google_bigtable_table"
+  }
+
+  as = concept.bigtable-table
+
+  contribution {
+    to  = concept.core.managed-database
+    via = source.instance_name
+  }
+}

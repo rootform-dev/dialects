@@ -1,0 +1,54 @@
+concept "sensitive-data-protection-scan" {
+  kind        = entity
+  description = "A Sensitive Data Protection discovery or inspection job configuration."
+}
+
+concept "sensitive-data-protection-template" {
+  kind        = detail
+  description = "A reusable inspection, de-identification, or stored information type configuration."
+}
+
+rule "sensitive-data-protection-discovery" {
+  match {
+    kind = "resource"
+    type = "google_data_loss_prevention_discovery_config"
+  }
+
+  as = concept.sensitive-data-protection-scan
+}
+
+rule "sensitive-data-protection-job-trigger" {
+  match {
+    kind = "resource"
+    type = "google_data_loss_prevention_job_trigger"
+  }
+
+  as = concept.sensitive-data-protection-scan
+}
+
+rule "sensitive-data-protection-deidentify-template" {
+  match {
+    kind = "resource"
+    type = "google_data_loss_prevention_deidentify_template"
+  }
+
+  as = concept.sensitive-data-protection-template
+}
+
+rule "sensitive-data-protection-inspect-template" {
+  match {
+    kind = "resource"
+    type = "google_data_loss_prevention_inspect_template"
+  }
+
+  as = concept.sensitive-data-protection-template
+}
+
+rule "sensitive-data-protection-stored-info-type" {
+  match {
+    kind = "resource"
+    type = "google_data_loss_prevention_stored_info_type"
+  }
+
+  as = concept.sensitive-data-protection-template
+}

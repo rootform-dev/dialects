@@ -1,0 +1,4 @@
+concept "cloud-observability-integration" {
+  kind        = entity
+  description = "A provider-neutral integration collecting telemetry and resource data from a cloud account, subscription, or project."
+}

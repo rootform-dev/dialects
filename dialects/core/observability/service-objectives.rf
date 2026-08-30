@@ -1,0 +1,4 @@
+concept "service-objective" {
+  kind        = detail
+  description = "A provider-neutral service level indicator or objective supporting architecture operations."
+}

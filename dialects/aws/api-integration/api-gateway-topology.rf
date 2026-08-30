@@ -1,0 +1,78 @@
+rule "api-gateway-rest-api" {
+  match {
+    kind = "resource"
+    type = "aws_api_gateway_rest_api"
+  }
+
+  as = concept.core.api-gateway
+}
+
+rule "api-gateway-stage" {
+  match {
+    kind = "resource"
+    type = "aws_api_gateway_stage"
+  }
+
+  as = concept.api-component
+
+  contribution {
+    to  = concept.core.api-gateway
+    via = source.rest_api_id
+  }
+}
+
+rule "api-gateway-integration" {
+  match {
+    kind = "resource"
+    type = "aws_api_gateway_integration"
+  }
+
+  as = concept.api-component
+
+  contribution {
+    to  = concept.core.api-gateway
+    via = source.rest_api_id
+  }
+}
+
+rule "api-gateway-resource" {
+  match {
+    kind = "resource"
+    type = "aws_api_gateway_resource"
+  }
+
+  as = concept.api-component
+
+  contribution {
+    to  = concept.core.api-gateway
+    via = source.rest_api_id
+  }
+}
+
+rule "api-gateway-model" {
+  match {
+    kind = "resource"
+    type = "aws_api_gateway_model"
+  }
+
+  as = concept.api-component
+
+  contribution {
+    to  = concept.core.api-gateway
+    via = source.rest_api_id
+  }
+}
+
+rule "apigatewayv2-model" {
+  match {
+    kind = "resource"
+    type = "aws_apigatewayv2_model"
+  }
+
+  as = concept.api-component
+
+  contribution {
+    to  = concept.core.api-gateway
+    via = source.api_id
+  }
+}

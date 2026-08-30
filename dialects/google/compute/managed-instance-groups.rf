@@ -1,0 +1,49 @@
+concept "compute-instance-group" {
+  kind        = entity
+  description = "A managed or unmanaged Compute Engine instance group."
+}
+
+rule "compute-instance-from-template" {
+  match {
+    kind = "resource"
+    type = "google_compute_instance_from_template"
+  }
+
+  as = concept.core.compute-instance
+}
+
+rule "compute-instance-from-machine-image" {
+  match {
+    kind = "resource"
+    type = "google_compute_instance_from_machine_image"
+  }
+
+  as = concept.core.compute-instance
+}
+
+rule "unmanaged-instance-group" {
+  match {
+    kind = "resource"
+    type = "google_compute_instance_group"
+  }
+
+  as = concept.compute-instance-group
+}
+
+rule "zonal-managed-instance-group" {
+  match {
+    kind = "resource"
+    type = "google_compute_instance_group_manager"
+  }
+
+  as = concept.compute-instance-group
+}
+
+rule "regional-managed-instance-group" {
+  match {
+    kind = "resource"
+    type = "google_compute_region_instance_group_manager"
+  }
+
+  as = concept.compute-instance-group
+}

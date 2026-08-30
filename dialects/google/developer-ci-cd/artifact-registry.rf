@@ -1,0 +1,13 @@
+concept "artifact-registry-repository" {
+  kind        = entity
+  description = "An Artifact Registry repository storing artifacts in one format and location."
+}
+
+rule "artifact-registry-repository" {
+  match {
+    kind = "resource"
+    type = "google_artifact_registry_repository"
+  }
+
+  as = concept.artifact-registry-repository
+}

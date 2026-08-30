@@ -1,0 +1,577 @@
+{
+  "format_version": "1",
+  "dialect": "azure@0.1.0",
+  "baseline": {
+    "azurerm": "5.3.0",
+    "prior_rule_count": 18,
+    "audited_rule_count": 18
+  },
+  "result": {
+    "retained": 14,
+    "modified": 4,
+    "removed": 0
+  },
+  "entries": [
+    {
+      "rule_id": "azure/aks-cluster",
+      "terraform_type": "azurerm_kubernetes_cluster",
+      "provider": "azurerm",
+      "official_label": "Azure Kubernetes Service (AKS) cluster",
+      "prior_concept": "core/kubernetes-cluster",
+      "current_concept": "core/kubernetes-cluster",
+      "decision": "retained",
+      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "verified_paths": [
+        {
+          "path": "$resource",
+          "role": "source",
+          "status": "present"
+        },
+        {
+          "path": "default_node_pool[0].vnet_subnet_id",
+          "role": "source",
+          "status": "attribute"
+        },
+        {
+          "path": "resource_group_name",
+          "role": "source",
+          "status": "attribute"
+        },
+        {
+          "path": "name",
+          "role": "target",
+          "status": "attribute"
+        },
+        {
+          "path": "name",
+          "role": "target",
+          "status": "attribute"
+        }
+      ],
+      "evidence_refs": ["provider-baseline", "provider-compatibility", "rule:azure/aks-cluster"]
+    },
+    {
+      "rule_id": "azure/aks-node-pool",
+      "terraform_type": "azurerm_kubernetes_cluster_node_pool",
+      "provider": "azurerm",
+      "official_label": "AKS node pool",
+      "prior_concept": "core/kubernetes-node-pool",
+      "current_concept": "core/kubernetes-node-pool",
+      "decision": "retained",
+      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "verified_paths": [
+        {
+          "path": "$resource",
+          "role": "source",
+          "status": "present"
+        },
+        {
+          "path": "kubernetes_cluster_id",
+          "role": "source",
+          "status": "attribute"
+        }
+      ],
+      "evidence_refs": ["provider-baseline", "provider-compatibility", "rule:azure/aks-node-pool"]
+    },
+    {
+      "rule_id": "azure/application-gateway",
+      "terraform_type": "azurerm_application_gateway",
+      "provider": "azurerm",
+      "official_label": "Azure Application Gateway",
+      "prior_concept": "core/load-balancer",
+      "current_concept": "core/load-balancer",
+      "decision": "retained",
+      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "verified_paths": [
+        {
+          "path": "$resource",
+          "role": "source",
+          "status": "present"
+        },
+        {
+          "path": "resource_group_name",
+          "role": "source",
+          "status": "attribute"
+        },
+        {
+          "path": "name",
+          "role": "target",
+          "status": "attribute"
+        }
+      ],
+      "evidence_refs": [
+        "provider-baseline",
+        "provider-compatibility",
+        "rule:azure/application-gateway"
+      ]
+    },
+    {
+      "rule_id": "azure/load-balancer",
+      "terraform_type": "azurerm_lb",
+      "provider": "azurerm",
+      "official_label": "Azure Load Balancer",
+      "prior_concept": "core/load-balancer",
+      "current_concept": "core/load-balancer",
+      "decision": "retained",
+      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "verified_paths": [
+        {
+          "path": "$resource",
+          "role": "source",
+          "status": "present"
+        },
+        {
+          "path": "resource_group_name",
+          "role": "source",
+          "status": "attribute"
+        },
+        {
+          "path": "name",
+          "role": "target",
+          "status": "attribute"
+        }
+      ],
+      "evidence_refs": ["provider-baseline", "provider-compatibility", "rule:azure/load-balancer"]
+    },
+    {
+      "rule_id": "azure/load-balancer-backend-pool",
+      "terraform_type": "azurerm_lb_backend_address_pool",
+      "provider": "azurerm",
+      "official_label": "Azure Load Balancer backend pool",
+      "prior_concept": "azure/load-balancer-component",
+      "current_concept": "azure/load-balancer-component",
+      "decision": "retained",
+      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "verified_paths": [
+        {
+          "path": "$resource",
+          "role": "source",
+          "status": "present"
+        },
+        {
+          "path": "loadbalancer_id",
+          "role": "source",
+          "status": "attribute"
+        }
+      ],
+      "evidence_refs": [
+        "provider-baseline",
+        "provider-compatibility",
+        "rule:azure/load-balancer-backend-pool"
+      ]
+    },
+    {
+      "rule_id": "azure/load-balancer-rule",
+      "terraform_type": "azurerm_lb_rule",
+      "provider": "azurerm",
+      "official_label": "Azure Load Balancer rule",
+      "prior_concept": "azure/load-balancer-component",
+      "current_concept": "azure/load-balancer-component",
+      "decision": "retained",
+      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "verified_paths": [
+        {
+          "path": "$resource",
+          "role": "source",
+          "status": "present"
+        },
+        {
+          "path": "loadbalancer_id",
+          "role": "source",
+          "status": "attribute"
+        }
+      ],
+      "evidence_refs": [
+        "provider-baseline",
+        "provider-compatibility",
+        "rule:azure/load-balancer-rule"
+      ]
+    },
+    {
+      "rule_id": "azure/mssql-database",
+      "terraform_type": "azurerm_mssql_database",
+      "provider": "azurerm",
+      "official_label": "Azure SQL Database",
+      "prior_concept": "azure/sql-database",
+      "current_concept": "core/managed-database",
+      "decision": "modified",
+      "changes": [
+        "promoted Azure SQL Database from provider detail to core managed-database entity",
+        "replaced contribution collapse with proven ownership context to Azure SQL logical server"
+      ],
+      "verified_paths": [
+        {
+          "path": "$resource",
+          "role": "source",
+          "status": "present"
+        },
+        {
+          "path": "server_id",
+          "role": "source",
+          "status": "attribute"
+        }
+      ],
+      "evidence_refs": ["provider-baseline", "provider-compatibility", "rule:azure/mssql-database"]
+    },
+    {
+      "rule_id": "azure/mssql-server",
+      "terraform_type": "azurerm_mssql_server",
+      "provider": "azurerm",
+      "official_label": "Azure SQL logical server",
+      "prior_concept": "core/managed-database",
+      "current_concept": "azure/sql-server",
+      "decision": "modified",
+      "changes": [
+        "narrowed Azure SQL logical server from managed database entity to Azure-specific ownership scope"
+      ],
+      "verified_paths": [
+        {
+          "path": "$resource",
+          "role": "source",
+          "status": "present"
+        },
+        {
+          "path": "resource_group_name",
+          "role": "source",
+          "status": "attribute"
+        },
+        {
+          "path": "name",
+          "role": "target",
+          "status": "attribute"
+        }
+      ],
+      "evidence_refs": ["provider-baseline", "provider-compatibility", "rule:azure/mssql-server"]
+    },
+    {
+      "rule_id": "azure/postgresql-flexible-server",
+      "terraform_type": "azurerm_postgresql_flexible_server",
+      "provider": "azurerm",
+      "official_label": "Azure Database for PostgreSQL flexible server",
+      "prior_concept": "core/managed-database",
+      "current_concept": "core/managed-database",
+      "decision": "modified",
+      "changes": ["reused core DNS zone identity for private name resolution"],
+      "verified_paths": [
+        {
+          "path": "$resource",
+          "role": "source",
+          "status": "present"
+        },
+        {
+          "path": "delegated_subnet_id",
+          "role": "source",
+          "status": "attribute"
+        },
+        {
+          "path": "private_dns_zone_id",
+          "role": "source",
+          "status": "attribute"
+        },
+        {
+          "path": "resource_group_name",
+          "role": "source",
+          "status": "attribute"
+        },
+        {
+          "path": "name",
+          "role": "target",
+          "status": "attribute"
+        },
+        {
+          "path": "name",
+          "role": "target",
+          "status": "attribute"
+        },
+        {
+          "path": "name",
+          "role": "target",
+          "status": "attribute"
+        }
+      ],
+      "evidence_refs": [
+        "provider-baseline",
+        "provider-compatibility",
+        "rule:azure/postgresql-flexible-server"
+      ]
+    },
+    {
+      "rule_id": "azure/private-dns-zone",
+      "terraform_type": "azurerm_private_dns_zone",
+      "provider": "azurerm",
+      "official_label": "Azure Private DNS zone",
+      "prior_concept": "azure/private-dns-zone",
+      "current_concept": "core/dns-zone",
+      "decision": "modified",
+      "changes": ["reused core DNS zone identity and removed duplicated Azure concept"],
+      "verified_paths": [
+        {
+          "path": "$resource",
+          "role": "source",
+          "status": "present"
+        },
+        {
+          "path": "resource_group_name",
+          "role": "source",
+          "status": "attribute"
+        },
+        {
+          "path": "name",
+          "role": "target",
+          "status": "attribute"
+        }
+      ],
+      "evidence_refs": [
+        "provider-baseline",
+        "provider-compatibility",
+        "rule:azure/private-dns-zone"
+      ]
+    },
+    {
+      "rule_id": "azure/private-dns-zone-vnet-link",
+      "terraform_type": "azurerm_private_dns_zone_virtual_network_link",
+      "provider": "azurerm",
+      "official_label": "Azure Private DNS virtual network link",
+      "prior_concept": "azure/private-network-link",
+      "current_concept": "azure/private-network-link",
+      "decision": "retained",
+      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "verified_paths": [
+        {
+          "path": "$resource",
+          "role": "source",
+          "status": "present"
+        },
+        {
+          "path": "private_dns_zone_id",
+          "role": "source",
+          "status": "attribute"
+        },
+        {
+          "path": "virtual_network_id",
+          "role": "source",
+          "status": "attribute"
+        }
+      ],
+      "evidence_refs": [
+        "provider-baseline",
+        "provider-compatibility",
+        "rule:azure/private-dns-zone-vnet-link"
+      ]
+    },
+    {
+      "rule_id": "azure/private-endpoint",
+      "terraform_type": "azurerm_private_endpoint",
+      "provider": "azurerm",
+      "official_label": "Azure Private Endpoint",
+      "prior_concept": "core/private-endpoint",
+      "current_concept": "core/private-endpoint",
+      "decision": "retained",
+      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "verified_paths": [
+        {
+          "path": "$resource",
+          "role": "source",
+          "status": "present"
+        },
+        {
+          "path": "resource_group_name",
+          "role": "source",
+          "status": "attribute"
+        },
+        {
+          "path": "subnet_id",
+          "role": "source",
+          "status": "attribute"
+        },
+        {
+          "path": "name",
+          "role": "target",
+          "status": "attribute"
+        },
+        {
+          "path": "name",
+          "role": "target",
+          "status": "attribute"
+        }
+      ],
+      "evidence_refs": [
+        "provider-baseline",
+        "provider-compatibility",
+        "rule:azure/private-endpoint"
+      ]
+    },
+    {
+      "rule_id": "azure/public-address",
+      "terraform_type": "azurerm_public_ip",
+      "provider": "azurerm",
+      "official_label": "Azure Public IP address",
+      "prior_concept": "azure/public-address",
+      "current_concept": "azure/public-address",
+      "decision": "retained",
+      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "verified_paths": [
+        {
+          "path": "$resource",
+          "role": "source",
+          "status": "present"
+        },
+        {
+          "path": "resource_group_name",
+          "role": "source",
+          "status": "attribute"
+        },
+        {
+          "path": "name",
+          "role": "target",
+          "status": "attribute"
+        }
+      ],
+      "evidence_refs": ["provider-baseline", "provider-compatibility", "rule:azure/public-address"]
+    },
+    {
+      "rule_id": "azure/resource-group",
+      "terraform_type": "azurerm_resource_group",
+      "provider": "azurerm",
+      "official_label": "Azure Resource Group",
+      "prior_concept": "azure/resource-group",
+      "current_concept": "azure/resource-group",
+      "decision": "retained",
+      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "verified_paths": [
+        {
+          "path": "$resource",
+          "role": "source",
+          "status": "present"
+        }
+      ],
+      "evidence_refs": ["provider-baseline", "provider-compatibility", "rule:azure/resource-group"]
+    },
+    {
+      "rule_id": "azure/storage-account",
+      "terraform_type": "azurerm_storage_account",
+      "provider": "azurerm",
+      "official_label": "Azure Storage account",
+      "prior_concept": "azure/storage-account",
+      "current_concept": "azure/storage-account",
+      "decision": "retained",
+      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "verified_paths": [
+        {
+          "path": "$resource",
+          "role": "source",
+          "status": "present"
+        },
+        {
+          "path": "resource_group_name",
+          "role": "source",
+          "status": "attribute"
+        },
+        {
+          "path": "name",
+          "role": "target",
+          "status": "attribute"
+        }
+      ],
+      "evidence_refs": ["provider-baseline", "provider-compatibility", "rule:azure/storage-account"]
+    },
+    {
+      "rule_id": "azure/subnet",
+      "terraform_type": "azurerm_subnet",
+      "provider": "azurerm",
+      "official_label": "subnet",
+      "prior_concept": "core/subnet",
+      "current_concept": "core/subnet",
+      "decision": "retained",
+      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "verified_paths": [
+        {
+          "path": "$resource",
+          "role": "source",
+          "status": "present"
+        },
+        {
+          "path": "resource_group_name",
+          "role": "source",
+          "status": "attribute"
+        },
+        {
+          "path": "virtual_network_name",
+          "role": "source",
+          "status": "attribute"
+        },
+        {
+          "path": "name",
+          "role": "target",
+          "status": "attribute"
+        },
+        {
+          "path": "name",
+          "role": "target",
+          "status": "attribute"
+        }
+      ],
+      "evidence_refs": ["provider-baseline", "provider-compatibility", "rule:azure/subnet"]
+    },
+    {
+      "rule_id": "azure/user-assigned-managed-identity",
+      "terraform_type": "azurerm_user_assigned_identity",
+      "provider": "azurerm",
+      "official_label": "user-assigned managed identity",
+      "prior_concept": "core/service-identity",
+      "current_concept": "core/service-identity",
+      "decision": "retained",
+      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "verified_paths": [
+        {
+          "path": "$resource",
+          "role": "source",
+          "status": "present"
+        },
+        {
+          "path": "resource_group_name",
+          "role": "source",
+          "status": "attribute"
+        },
+        {
+          "path": "name",
+          "role": "target",
+          "status": "attribute"
+        }
+      ],
+      "evidence_refs": [
+        "provider-baseline",
+        "provider-compatibility",
+        "rule:azure/user-assigned-managed-identity"
+      ]
+    },
+    {
+      "rule_id": "azure/virtual-network",
+      "terraform_type": "azurerm_virtual_network",
+      "provider": "azurerm",
+      "official_label": "Azure Virtual Network",
+      "prior_concept": "core/virtual-network",
+      "current_concept": "core/virtual-network",
+      "decision": "retained",
+      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "verified_paths": [
+        {
+          "path": "$resource",
+          "role": "source",
+          "status": "present"
+        },
+        {
+          "path": "resource_group_name",
+          "role": "source",
+          "status": "attribute"
+        },
+        {
+          "path": "name",
+          "role": "target",
+          "status": "attribute"
+        }
+      ],
+      "evidence_refs": ["provider-baseline", "provider-compatibility", "rule:azure/virtual-network"]
+    }
+  ]
+}

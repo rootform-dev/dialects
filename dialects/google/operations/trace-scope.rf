@@ -1,0 +1,13 @@
+concept "cloud-trace-scope" {
+  kind        = scope
+  description = "A Cloud Trace scope aggregating trace data across projects."
+}
+
+rule "cloud-trace-scope" {
+  match {
+    kind = "resource"
+    type = "google_observability_trace_scope"
+  }
+
+  as = concept.cloud-trace-scope
+}

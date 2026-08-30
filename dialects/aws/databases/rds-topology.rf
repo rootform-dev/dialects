@@ -1,0 +1,115 @@
+rule "db-instance" {
+  match {
+    kind = "resource"
+    type = "aws_db_instance"
+  }
+
+  as = concept.core.managed-database
+}
+
+rule "rds-cluster" {
+  match {
+    kind = "resource"
+    type = "aws_rds_cluster"
+  }
+
+  as = concept.core.managed-database
+}
+
+rule "rds-cluster-instance" {
+  match {
+    kind = "resource"
+    type = "aws_rds_cluster_instance"
+  }
+
+  as = concept.managed-database-component
+
+  contribution {
+    to  = concept.core.managed-database
+    via = source.cluster_identifier
+  }
+}
+
+rule "docdb-cluster-instance" {
+  match {
+    kind = "resource"
+    type = "aws_docdb_cluster_instance"
+  }
+
+  as = concept.managed-database-component
+
+  contribution {
+    to  = concept.core.managed-database
+    via = source.cluster_identifier
+  }
+}
+
+rule "neptune-cluster-instance" {
+  match {
+    kind = "resource"
+    type = "aws_neptune_cluster_instance"
+  }
+
+  as = concept.managed-database-component
+
+  contribution {
+    to  = concept.core.managed-database
+    via = source.cluster_identifier
+  }
+}
+
+rule "rds-cluster-endpoint" {
+  match {
+    kind = "resource"
+    type = "aws_rds_cluster_endpoint"
+  }
+
+  as = concept.managed-database-component
+
+  contribution {
+    to  = concept.core.managed-database
+    via = source.cluster_identifier
+  }
+}
+
+rule "rds-cluster-activity-stream" {
+  match {
+    kind = "resource"
+    type = "aws_rds_cluster_activity_stream"
+  }
+
+  as = concept.managed-database-component
+
+  contribution {
+    to  = concept.core.managed-database
+    via = source.resource_arn
+  }
+}
+
+rule "db-proxy-default-target-group" {
+  match {
+    kind = "resource"
+    type = "aws_db_proxy_default_target_group"
+  }
+
+  as = concept.db-proxy-component
+
+  contribution {
+    to  = concept.db-proxy
+    via = source.db_proxy_name
+  }
+}
+
+rule "db-proxy-endpoint" {
+  match {
+    kind = "resource"
+    type = "aws_db_proxy_endpoint"
+  }
+
+  as = concept.db-proxy-component
+
+  contribution {
+    to  = concept.db-proxy
+    via = source.db_proxy_name
+  }
+}

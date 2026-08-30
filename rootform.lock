@@ -1,0 +1,125 @@
+{
+  "format_version": "1",
+  "entries": [
+    {
+      "name": "auth0",
+      "version": "0.1.0",
+      "digest": "sha256:412a6dec41621156ff5d5d3b1b9e52920bb0d5269c47d498e69f13164473c686",
+      "presentation_digest": "sha256:9bc0aa55c8c4177bf1e7cb96d24774acf2435c43865be3109e2fff12cdfbb07b"
+    },
+    {
+      "name": "aws",
+      "version": "0.1.0",
+      "digest": "sha256:f23bcd99d703f780ee7e9b9b26445712ccbb44114e99546b9c10a0e2c67f224a",
+      "presentation_digest": "sha256:e4a6b82007a46f8161e03020021cbeaaa032f3645effde63d616a9fab8b8adc1"
+    },
+    {
+      "name": "azure",
+      "version": "0.1.0",
+      "digest": "sha256:a763b57620db538a0c2e9a5eb39b2ab0ac6176c8f874a336e9bc287c8a8d291c",
+      "presentation_digest": "sha256:3644b4aa3b17953a5a1e134a5e140a900275eaa8edf7c654946b3d53a378cb97"
+    },
+    {
+      "name": "cloudflare",
+      "version": "0.1.0",
+      "digest": "sha256:4911e2adad0b90f11e14b37b71c4478e6c77713681a2274651e76b30ab9ca359",
+      "presentation_digest": "sha256:e45d185ce3c5d39ead98966bd404ac35c79de350442aaabc7a84ea1da3a43bc5"
+    },
+    {
+      "name": "confluent",
+      "version": "0.1.0",
+      "digest": "sha256:7b800b2ac07739c22806b056704a7ec6a167c2331a9756a60bc0afc6dcb98e7d",
+      "presentation_digest": "sha256:ebf9e7f6eaf5c66aed74eedffba80a7ba881efe3142fe3fe81927ce36329ee8b"
+    },
+    {
+      "name": "consul",
+      "version": "0.1.0",
+      "digest": "sha256:27aa3215398c89a66d90eb00baf04f6e4a1c0704d9ef5a384bb3c9bb01a5b55c",
+      "presentation_digest": "sha256:f97aa219fc923c15e1c063dd3f17154d159fc1110d7d88f216f4e19d7ba10914"
+    },
+    {
+      "name": "core",
+      "version": "0.1.0",
+      "digest": "sha256:af5a6b57e85bc5026b356542cf4950ccac62c2770f7d1a5f6b0272eef642a11d",
+      "presentation_digest": "sha256:6250b078276b44c2db9361c26c6c92351d26f49de7ac6daf22c9859cd2f962c8"
+    },
+    {
+      "name": "databricks",
+      "version": "0.1.0",
+      "digest": "sha256:ded889528eb7319ef112dfb7f765dba29d7d28d6fa16b8ffbf5037b57376784b",
+      "presentation_digest": "sha256:d5625caf22523642aa25a30425f84ae3e90a7d823c524837fc6ac0d615bf9938"
+    },
+    {
+      "name": "datadog",
+      "version": "0.1.0",
+      "digest": "sha256:3f19baa163f5511d0fb4053dbf22d2afedad1b1892ebc64da29060cfa15c1b53",
+      "presentation_digest": "sha256:562b4947e62746280b8c1903136a034b8d20e67c4041721c4fcbee799dda36c7"
+    },
+    {
+      "name": "google",
+      "version": "0.1.0",
+      "digest": "sha256:bf487398f5f36b6cfea69c32a916446814955c97eb2027cb0d82ed7cebc9fce3",
+      "presentation_digest": "sha256:caf31531224f2f5c63548c94733b2a32059ffef1604c22f10012b6990bcb944e"
+    },
+    {
+      "name": "grafana",
+      "version": "0.1.0",
+      "digest": "sha256:f312fbcb657257910653e8e6f58ce7fb726f9c68b2952151b028c57820bbf020",
+      "presentation_digest": "sha256:9972e66444ff12603bec833bcf5856dc3ef60fae34b7c0f3b67e0b61ae42120a"
+    },
+    {
+      "name": "hcp",
+      "version": "0.1.0",
+      "digest": "sha256:50dc2e6bdbcc0915f0d10a6f9038f9e3b6411893633380c2b05db091c0dc7ca1",
+      "presentation_digest": "sha256:f9e972bcc35a494d88133e62e7e88328c54e2813c9e6c9fb36576d1707a66cc4"
+    },
+    {
+      "name": "kestra",
+      "version": "0.1.0",
+      "digest": "sha256:8d5ec440800585637250be5bf8b9961245e50b9490ab8d58957fb201ba2d2157",
+      "presentation_digest": "sha256:f356d3d41c936a9bb0008412399c4912a4a526223a934e847d26da5539507447"
+    },
+    {
+      "name": "kubernetes",
+      "version": "0.1.0",
+      "digest": "sha256:1f0584dc88d9219ac60ff4a22261489220ec21d017be4fff4195e544ece3b99c",
+      "presentation_digest": "sha256:0f8be0c5ddaa1708018206d08f49c17e31390a15551823562598bab2a323d829"
+    },
+    {
+      "name": "mongodb-atlas",
+      "version": "0.1.0",
+      "digest": "sha256:79407cd4cec7788d714148811345f4d9f709efdb92254c3f25caec28dd9e0764",
+      "presentation_digest": "sha256:847d2acc98a991ccea544e4efa6de6b760dee21c211b54ffd9bbeb149e7c1a49"
+    },
+    {
+      "name": "newrelic",
+      "version": "0.1.0",
+      "digest": "sha256:2782a1cef3abe7430789919b23d538d19f0f7bdd6679a5105b30daa0ca369340",
+      "presentation_digest": "sha256:ef1c578fa5e50cd5851c942a5d0b94e29fe8a577c454a3f66082602ce5394be9"
+    },
+    {
+      "name": "okta",
+      "version": "0.1.0",
+      "digest": "sha256:537a1a46127a71dd1fd51e4ccb87d9e46ecdf4bcc65740092665a4f842706ca6",
+      "presentation_digest": "sha256:1795a76a3cc793987461c04d8a01faf2a48aec70213e81ab0174c024c45eca1a"
+    },
+    {
+      "name": "secrets",
+      "version": "0.1.0",
+      "digest": "sha256:ccabb684da6415bcdd63dc5ee6758b3815e01634688b71ab001dce76090ef97f",
+      "presentation_digest": "sha256:971a10285ea40b7b035da2efc3b61166f18855eec9895584f0ebda744e734c68"
+    },
+    {
+      "name": "snowflake",
+      "version": "0.1.0",
+      "digest": "sha256:00d7e9432df5a45334bf9f4d5d68579d5901c8a55d80abd30204084d832acb8c",
+      "presentation_digest": "sha256:ec9d1ba578076c9ffa1eb7f7e1ef8fc164b2f9bb4aa1c7c28825ebe7f178f41f"
+    },
+    {
+      "name": "vault",
+      "version": "0.1.0",
+      "digest": "sha256:3c08b2d7ff4da4bc6fe027357c8cde7c98c6515556b227ff189caa6cd3b5aecb",
+      "presentation_digest": "sha256:c3b6509579a79b4a7afb35e564ce322cf9965355c42c650acece736f66b16592"
+    }
+  ]
+}

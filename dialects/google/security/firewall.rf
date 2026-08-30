@@ -1,0 +1,75 @@
+concept "vpc-firewall-rule" {
+  kind        = entity
+  description = "A Google Cloud VPC firewall rule controlling network traffic."
+}
+
+concept "firewall-policy" {
+  kind        = entity
+  description = "A Google Cloud hierarchical or network firewall policy."
+}
+
+concept "firewall-policy-rule" {
+  kind        = detail
+  description = "A rule contributing controls to a Google Cloud firewall policy."
+}
+
+rule "vpc-firewall-rule" {
+  match {
+    kind = "resource"
+    type = "google_compute_firewall"
+  }
+
+  as = concept.vpc-firewall-rule
+
+  context {
+    as  = context.core.network
+    to  = concept.core.virtual-network
+    via = source.network
+  }
+}
+
+rule "hierarchical-firewall-policy" {
+  match {
+    kind = "resource"
+    type = "google_compute_firewall_policy"
+  }
+
+  as = concept.firewall-policy
+}
+
+rule "hierarchical-firewall-policy-rule" {
+  match {
+    kind = "resource"
+    type = "google_compute_firewall_policy_rule"
+  }
+
+  as = concept.firewall-policy-rule
+
+  contribution {
+    to  = concept.firewall-policy
+    via = source.firewall_policy
+  }
+}
+
+rule "network-firewall-policy" {
+  match {
+    kind = "resource"
+    type = "google_compute_network_firewall_policy"
+  }
+
+  as = concept.firewall-policy
+}
+
+rule "network-firewall-policy-rule" {
+  match {
+    kind = "resource"
+    type = "google_compute_network_firewall_policy_rule"
+  }
+
+  as = concept.firewall-policy-rule
+
+  contribution {
+    to  = concept.firewall-policy
+    via = source.firewall_policy
+  }
+}

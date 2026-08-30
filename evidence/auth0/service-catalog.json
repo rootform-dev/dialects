@@ -1,0 +1,187 @@
+{
+  "format_version": "1",
+  "products": [
+    {
+      "id": "tenants-organizations",
+      "family": "tenancy",
+      "official_name": "Auth0 tenants and Organizations",
+      "source_url": "https://auth0.com/docs/get-started/tenant-settings",
+      "major": true,
+      "constructs": 20,
+      "counts": {
+        "supported": 4,
+        "partial": 8,
+        "intentionally-unrepresented": 8,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "applications-apis",
+      "family": "applications",
+      "official_name": "Auth0 Applications and APIs",
+      "source_url": "https://auth0.com/docs/get-started/applications",
+      "major": true,
+      "constructs": 12,
+      "counts": {
+        "supported": 5,
+        "partial": 4,
+        "intentionally-unrepresented": 3,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "connections-federation",
+      "family": "connections",
+      "official_name": "Auth0 Connections and enterprise federation",
+      "source_url": "https://auth0.com/docs/authenticate/identity-providers",
+      "major": true,
+      "constructs": 14,
+      "counts": {
+        "supported": 4,
+        "partial": 8,
+        "intentionally-unrepresented": 2,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "custom-domains",
+      "family": "domains",
+      "official_name": "Auth0 custom domains",
+      "source_url": "https://auth0.com/docs/customize/custom-domains",
+      "major": true,
+      "constructs": 5,
+      "counts": {
+        "supported": 2,
+        "partial": 2,
+        "intentionally-unrepresented": 1,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "actions-hooks",
+      "family": "extensibility",
+      "official_name": "Auth0 Actions, Rules, and Hooks",
+      "source_url": "https://auth0.com/docs/customize/actions/actions-overview",
+      "major": true,
+      "constructs": 14,
+      "counts": {
+        "supported": 6,
+        "partial": 4,
+        "intentionally-unrepresented": 4,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "forms-flows",
+      "family": "workflows",
+      "official_name": "Auth0 Forms and Flows",
+      "source_url": "https://auth0.com/docs/customize/forms",
+      "major": true,
+      "constructs": 6,
+      "counts": {
+        "supported": 6,
+        "partial": 0,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "eventing-observability",
+      "family": "eventing-observability",
+      "official_name": "Auth0 Event Streams and Log Streams",
+      "source_url": "https://auth0.com/docs/customize/events",
+      "major": true,
+      "constructs": 3,
+      "counts": {
+        "supported": 3,
+        "partial": 0,
+        "intentionally-unrepresented": 0,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "authentication-security",
+      "family": "security",
+      "official_name": "Auth0 authentication security",
+      "source_url": "https://auth0.com/docs/secure/attack-protection",
+      "major": true,
+      "constructs": 12,
+      "counts": {
+        "supported": 2,
+        "partial": 9,
+        "intentionally-unrepresented": 1,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "self-service-sso",
+      "family": "connections",
+      "official_name": "Auth0 Self-Service SSO",
+      "source_url": "https://auth0.com/docs/authenticate/enterprise-connections/self-service-sso",
+      "major": true,
+      "constructs": 7,
+      "counts": {
+        "supported": 2,
+        "partial": 4,
+        "intentionally-unrepresented": 1,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "communications",
+      "family": "communications",
+      "official_name": "Auth0 email and phone providers",
+      "source_url": "https://auth0.com/docs/customize/email",
+      "major": false,
+      "constructs": 5,
+      "counts": {
+        "supported": 3,
+        "partial": 0,
+        "intentionally-unrepresented": 2,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "identity-administration",
+      "family": "identity-administration",
+      "official_name": "Auth0 users, roles, and permissions",
+      "source_url": "https://auth0.com/docs/manage-users",
+      "major": false,
+      "constructs": 12,
+      "counts": {
+        "supported": 0,
+        "partial": 0,
+        "intentionally-unrepresented": 12,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "experience-configuration",
+      "family": "experience-configuration",
+      "official_name": "Auth0 Universal Login and branding configuration",
+      "source_url": "https://auth0.com/docs/customize/login-pages",
+      "major": false,
+      "constructs": 17,
+      "counts": {
+        "supported": 0,
+        "partial": 0,
+        "intentionally-unrepresented": 17,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "platform-helpers",
+      "family": "platform-configuration",
+      "official_name": "Auth0 platform configuration helpers",
+      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs",
+      "major": false,
+      "constructs": 2,
+      "counts": {
+        "supported": 0,
+        "partial": 0,
+        "intentionally-unrepresented": 2,
+        "unsupported": 0
+      }
+    }
+  ]
+}

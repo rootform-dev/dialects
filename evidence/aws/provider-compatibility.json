@@ -1,0 +1,3868 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-29",
+  "provider": "registry.terraform.io/hashicorp/aws",
+  "research_baseline": "6.62.0",
+  "compatibility_constraint": "= 6.62.0",
+  "boundary": "temporary-voluntary-exact-proof",
+  "widening_policy": "a provider release triggers schema-path and semantic review, not a mandatory dialect release",
+  "rules": [
+    {
+      "rule_id": "aws/acm-certificate",
+      "terraform_type": "aws_acm_certificate",
+      "mode": "generated",
+      "schema_sha256": "sha256:6c07d0223489ce23cb2982792910045c76265b9b2c748706cae806d4a0cd22dc",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/acmpca-certificate",
+      "terraform_type": "aws_acmpca_certificate",
+      "mode": "generated",
+      "schema_sha256": "sha256:e241b36352a9341fb066d087620f48edfc67527e2ff8e2279e0a98f4209602cf",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/acmpca-certificate-authority",
+      "terraform_type": "aws_acmpca_certificate_authority",
+      "mode": "generated",
+      "schema_sha256": "sha256:be144323bc71bf9d7b925da322ee7243a9b8b049e46ba006682c7b06cedb17bd",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/alb",
+      "terraform_type": "aws_alb",
+      "mode": "generated",
+      "schema_sha256": "sha256:4a2b1a5baa78391bbf6f4f4b64ea2df55a95ce8a78645e1210543672d5b5c439",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/alb-target-group",
+      "terraform_type": "aws_alb_target_group",
+      "mode": "authored",
+      "schema_sha256": "sha256:cad6c8c609581957f3e6220660539c26413905a4ba34b98eb0e73258a9d06b4e",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ami-from-instance",
+      "terraform_type": "aws_ami_from_instance",
+      "mode": "generated",
+      "schema_sha256": "sha256:0f860ba68ddcedcd057952cdbccfd7f1ba9ed156857ad121aa9aca942e045723",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/amplify-backend-environment",
+      "terraform_type": "aws_amplify_backend_environment",
+      "mode": "generated",
+      "schema_sha256": "sha256:bf6d67635a7de3b6559cebe0d6f185f70c73e8a4c9eb9cbd6cb49108ba79b9bf",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/api-gateway-integration",
+      "terraform_type": "aws_api_gateway_integration",
+      "mode": "authored",
+      "schema_sha256": "sha256:e0bcc1aeda2b18d5b736e6c49a944a4b90926d188eade58905eae1b5e85d71d1",
+      "paths": [
+        {
+          "path": "rest_api_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/api-gateway-model",
+      "terraform_type": "aws_api_gateway_model",
+      "mode": "authored",
+      "schema_sha256": "sha256:535398127cfb0d905c720e9fa62b1c85591f0a8dd51f8aa85a3841f9cc2315be",
+      "paths": [
+        {
+          "path": "rest_api_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/api-gateway-resource",
+      "terraform_type": "aws_api_gateway_resource",
+      "mode": "authored",
+      "schema_sha256": "sha256:4de6bf413c79ecfd46c0c45b76a21e1643fe20177f6da68f5ae6fd710705b943",
+      "paths": [
+        {
+          "path": "rest_api_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/api-gateway-rest-api",
+      "terraform_type": "aws_api_gateway_rest_api",
+      "mode": "authored",
+      "schema_sha256": "sha256:d7f81b15a48911625e96ba612a86049b788805236b2ac521cdf7c13bc1ec59ee",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/api-gateway-stage",
+      "terraform_type": "aws_api_gateway_stage",
+      "mode": "authored",
+      "schema_sha256": "sha256:fc8db23210e9a6fc648efe87dbc183cd379ed87ad8a6abcbd4afabbe18f85b01",
+      "paths": [
+        {
+          "path": "rest_api_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/apigatewayv2-api",
+      "terraform_type": "aws_apigatewayv2_api",
+      "mode": "generated",
+      "schema_sha256": "sha256:aa57e3a4a2f24a73913e8e16b453b689fb52064316341cca086158ecbd0cb3d0",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/apigatewayv2-model",
+      "terraform_type": "aws_apigatewayv2_model",
+      "mode": "authored",
+      "schema_sha256": "sha256:ff775afcaec14d0c3577b766ccf3d6d7b9b245c663ebdb002ebeaeabce9a4351",
+      "paths": [
+        {
+          "path": "api_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/appconfig-application",
+      "terraform_type": "aws_appconfig_application",
+      "mode": "generated",
+      "schema_sha256": "sha256:16fcbe1dd2f498bb89605b6f8916c01c0e16591b18d56dc2748a39ec7e1bfda9",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/appconfig-environment",
+      "terraform_type": "aws_appconfig_environment",
+      "mode": "generated",
+      "schema_sha256": "sha256:0dec4497683b38a8cd4a7698819142637397dc0e6b1beb894d1766c929ff5d65",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/appfabric-app-authorization-connection",
+      "terraform_type": "aws_appfabric_app_authorization_connection",
+      "mode": "generated",
+      "schema_sha256": "sha256:574a43d0e9a82604d4c110e7f6f75fe006c0153850d18cbd8cce826f39758ece",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/appflow-flow",
+      "terraform_type": "aws_appflow_flow",
+      "mode": "generated",
+      "schema_sha256": "sha256:3e4085bbb895d639190036dc95be10cab66a1f7edb9e5c182286e93442e546b7",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/applicationinsights-application",
+      "terraform_type": "aws_applicationinsights_application",
+      "mode": "generated",
+      "schema_sha256": "sha256:87aa334eda9dd6b2df3bfd0d7b09e8102603520a061bbd53c8801458836367b7",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/appmesh-virtual-gateway",
+      "terraform_type": "aws_appmesh_virtual_gateway",
+      "mode": "generated",
+      "schema_sha256": "sha256:ac11f64f2cf060b2bd0eb05edb94bdb2abeb0d2cc6c22bd8d5dbadd5873116ca",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/appmesh-virtual-service",
+      "terraform_type": "aws_appmesh_virtual_service",
+      "mode": "generated",
+      "schema_sha256": "sha256:40632f6d9c138b300993e85a0cf052a667cd656184a455f567b2d99b69fe7898",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/apprunner-connection",
+      "terraform_type": "aws_apprunner_connection",
+      "mode": "generated",
+      "schema_sha256": "sha256:41df9d66717cff7a600907e56211963bd8b267688e3d04f9a2d923ed20e33e56",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/apprunner-service",
+      "terraform_type": "aws_apprunner_service",
+      "mode": "generated",
+      "schema_sha256": "sha256:f60eb202cfe7bd6927b28c70c9de4ab1ff0f3dee3cc07a99ae82a4202a7c3fac",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/apprunner-vpc-ingress-connection",
+      "terraform_type": "aws_apprunner_vpc_ingress_connection",
+      "mode": "generated",
+      "schema_sha256": "sha256:85084d2d80db79c334a9c36495f22ffaf296ae36f47afda1922f4e80522157a9",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/appstream-fleet",
+      "terraform_type": "aws_appstream_fleet",
+      "mode": "generated",
+      "schema_sha256": "sha256:8c29cd18c9761f55ed2961948678d40d2442f352f8afd342ea2e42fd486fca03",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/appsync-datasource",
+      "terraform_type": "aws_appsync_datasource",
+      "mode": "authored",
+      "schema_sha256": "sha256:c1231a4724102d324116a12e86dcdc152a4f89772438f60ac630910266b9922e",
+      "paths": [
+        {
+          "path": "api_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/appsync-function",
+      "terraform_type": "aws_appsync_function",
+      "mode": "authored",
+      "schema_sha256": "sha256:0e845d4918073585605cdfa11a4a27f1ff3dae70ecee1d37011825f5c7b77a7d",
+      "paths": [
+        {
+          "path": "api_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/appsync-graphql-api",
+      "terraform_type": "aws_appsync_graphql_api",
+      "mode": "authored",
+      "schema_sha256": "sha256:5805f4217925ed2d7781d8ff463bde2671e6da286adadfa68a51af50aefcecba",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/appsync-resolver",
+      "terraform_type": "aws_appsync_resolver",
+      "mode": "authored",
+      "schema_sha256": "sha256:22f15211995edce5f0a1bec82c88b19de57e68693bdfef3a6f81a657350bc5b9",
+      "paths": [
+        {
+          "path": "api_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/athena-data-catalog",
+      "terraform_type": "aws_athena_data_catalog",
+      "mode": "generated",
+      "schema_sha256": "sha256:36690adf0f9704a24c6d07bc905ec1e0facd78ae4ccb66a0ef9e176b27fd57ca",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/athena-database",
+      "terraform_type": "aws_athena_database",
+      "mode": "generated",
+      "schema_sha256": "sha256:d5231589110fe0e1fbc4439805654953709c1c0ebe422631a3d80a51808b641f",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/athena-workgroup",
+      "terraform_type": "aws_athena_workgroup",
+      "mode": "authored",
+      "schema_sha256": "sha256:73f660de0fcbeb19a14d78791c7ad90799f21a973ad53b289da652964916d36d",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/autoscaling-group",
+      "terraform_type": "aws_autoscaling_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:29aaa72fc8e4b5ad8c8a64d61845a1bfe721b29626b3a61b8ebbbdaf64ef87f9",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/backup-logically-air-gapped-vault",
+      "terraform_type": "aws_backup_logically_air_gapped_vault",
+      "mode": "generated",
+      "schema_sha256": "sha256:03c736a30e7c8ebb348e20869c058cbb9dedb859c5266dd7b084cc5428269494",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/backup-plan",
+      "terraform_type": "aws_backup_plan",
+      "mode": "generated",
+      "schema_sha256": "sha256:889f5ceac05e8841c3adb8a4686d746e20025e753cd9c3da73e239d95bc8e20a",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/backup-vault",
+      "terraform_type": "aws_backup_vault",
+      "mode": "generated",
+      "schema_sha256": "sha256:d344a390bf4f2657fc140baa819f1fcac6f1ee4ed336f589d36c1188ee392d63",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/batch-compute-environment",
+      "terraform_type": "aws_batch_compute_environment",
+      "mode": "generated",
+      "schema_sha256": "sha256:37e092339b24c4a78a21f8090ce79e90139b8273cb0806ea46f0cd48ff013273",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/batch-job-queue",
+      "terraform_type": "aws_batch_job_queue",
+      "mode": "generated",
+      "schema_sha256": "sha256:0fb472b1b24aadb608297127ed3d5dc79c281d1a40f7e57c4458112af3b50840",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/bedrock-custom-model",
+      "terraform_type": "aws_bedrock_custom_model",
+      "mode": "generated",
+      "schema_sha256": "sha256:ad166ba0a323e92b17f8d02d5c45bdd6971806a334fbe65f07ee52fd0b44073e",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/bedrock-guardrail",
+      "terraform_type": "aws_bedrock_guardrail",
+      "mode": "generated",
+      "schema_sha256": "sha256:810d3ef47755e83ac7d66d604ff13f42def25235ae26369c6e07083a3767a461",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/bedrock-inference-profile",
+      "terraform_type": "aws_bedrock_inference_profile",
+      "mode": "generated",
+      "schema_sha256": "sha256:2cab2ea669336da37fc864d849cad3434ee45995903ba96b8e8e8d71de5fc6dc",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/bedrockagent-agent",
+      "terraform_type": "aws_bedrockagent_agent",
+      "mode": "generated",
+      "schema_sha256": "sha256:3353263c974ba658100dce3355c4be759e9c9d56739d129919b77b455e19eae6",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/bedrockagent-agent-action-group",
+      "terraform_type": "aws_bedrockagent_agent_action_group",
+      "mode": "authored",
+      "schema_sha256": "sha256:1bc446ab6f31f686c80998ae61eeaa9768f109a5929ac555cd2e17cbd5697960",
+      "paths": [
+        {
+          "path": "agent_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/bedrockagent-flow",
+      "terraform_type": "aws_bedrockagent_flow",
+      "mode": "generated",
+      "schema_sha256": "sha256:b0098c398508d1bd83eb3e57fb85ec0543822a1a534ee9bd90e96c05c87b4d80",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/bedrockagent-knowledge-base",
+      "terraform_type": "aws_bedrockagent_knowledge_base",
+      "mode": "generated",
+      "schema_sha256": "sha256:c5b76b0282f688501c21d32a1d86f46c97a4a52f297e1c43007a9c0783af7ac8",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/bedrockagentcore-agent-runtime-endpoint",
+      "terraform_type": "aws_bedrockagentcore_agent_runtime_endpoint",
+      "mode": "generated",
+      "schema_sha256": "sha256:edd7ebe7243ac57090425ee0edb09aad3a4a415c60fdec477899efacb97611bc",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/bedrockagentcore-gateway",
+      "terraform_type": "aws_bedrockagentcore_gateway",
+      "mode": "generated",
+      "schema_sha256": "sha256:894c87dc41a8e940e53c252af28d01f404773f6bf7696f378087b803000644d1",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ce-anomaly-monitor",
+      "terraform_type": "aws_ce_anomaly_monitor",
+      "mode": "generated",
+      "schema_sha256": "sha256:9e2b443e9724a8403dd8fc73e10d3254e05dee35efdd808b48742fbcda8a361e",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/chime-voice-connector",
+      "terraform_type": "aws_chime_voice_connector",
+      "mode": "generated",
+      "schema_sha256": "sha256:07ff8177a8ce26365d1e688badb479d0d06d5ddf4ae6abe8dd7c57cd425fd103",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/chime-voice-connector-group",
+      "terraform_type": "aws_chime_voice_connector_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:59f6270652fe3db13e6721736b2dfc2a6d49150d16b7c117a4d71caf32e7b079",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/chimesdkvoice-sip-media-application",
+      "terraform_type": "aws_chimesdkvoice_sip_media_application",
+      "mode": "generated",
+      "schema_sha256": "sha256:76a10cba0f9c68206994e894be1e38fc080232c9019885a9629002c1c21a0a57",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/chimesdkvoice-voice-profile-domain",
+      "terraform_type": "aws_chimesdkvoice_voice_profile_domain",
+      "mode": "generated",
+      "schema_sha256": "sha256:a16503890b85df342b81bac90a31ce7adc712a7483285f72f10c8dcae0d298e9",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cleanrooms-configured-table",
+      "terraform_type": "aws_cleanrooms_configured_table",
+      "mode": "generated",
+      "schema_sha256": "sha256:b5ad264395050abcf689ff3ab761e47962a4801516fc8d24814a5ec55ebab990",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cloud9-environment-ec2",
+      "terraform_type": "aws_cloud9_environment_ec2",
+      "mode": "generated",
+      "schema_sha256": "sha256:21b50fd737502da5a2f0a6355b7d3ecb0a2e0908c8102e1c749e93006eb34762",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cloudformation-stack-set-instance",
+      "terraform_type": "aws_cloudformation_stack_set_instance",
+      "mode": "generated",
+      "schema_sha256": "sha256:800b8d73a0b11c1b3933f8f4ce4514b4931b5ce52b52bc822beb07559bc5e281",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cloudfront-connection-function",
+      "terraform_type": "aws_cloudfront_connection_function",
+      "mode": "generated",
+      "schema_sha256": "sha256:31d5d9d3198f4692eed0e3f3e8d22bced5348dc2c4041fb28d6bc934566bcb63",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cloudfront-connection-group",
+      "terraform_type": "aws_cloudfront_connection_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:919a0cfc033e13ce721fc554b10709dcb6ce1d69efaa5cad0e4c7b5291983914",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cloudfront-distribution",
+      "terraform_type": "aws_cloudfront_distribution",
+      "mode": "authored",
+      "schema_sha256": "sha256:88a6904611adb909745219b1ffab1759619fba919451caccbdb85d0e7e5c8dcd",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cloudfront-function",
+      "terraform_type": "aws_cloudfront_function",
+      "mode": "generated",
+      "schema_sha256": "sha256:0dfb6c937d85b737faa859ef6f143b87a4ad17cc59d82c3f89e7e67f9f4c6349",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cloudfront-key-value-store",
+      "terraform_type": "aws_cloudfront_key_value_store",
+      "mode": "generated",
+      "schema_sha256": "sha256:2930578cb108893bf91676fb7fae79cbb58a745b4d1b5d62e30c3dc5782eeae9",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cloudfront-multitenant-distribution",
+      "terraform_type": "aws_cloudfront_multitenant_distribution",
+      "mode": "generated",
+      "schema_sha256": "sha256:1203e0ac90040edaea1c9a0d7ad8030f58ddf2287b6a093e1d063b79ca94945a",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cloudhsm-v2-cluster",
+      "terraform_type": "aws_cloudhsm_v2_cluster",
+      "mode": "generated",
+      "schema_sha256": "sha256:b6e3ba757ebc7b0a8381a8ac2bf96238f57d4fd83d9083a8dec9dc71562256eb",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cloudsearch-domain",
+      "terraform_type": "aws_cloudsearch_domain",
+      "mode": "generated",
+      "schema_sha256": "sha256:cab2725a785a5ba77036af9a6accbb6a8070000939055dd481c99bc8d8eeb8ad",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cloudtrail-event-data-store",
+      "terraform_type": "aws_cloudtrail_event_data_store",
+      "mode": "generated",
+      "schema_sha256": "sha256:90b67f7d1bf489664c98b284c50212dd01de62ee703f948cdfe503a851605fe1",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cloudwatch-composite-alarm",
+      "terraform_type": "aws_cloudwatch_composite_alarm",
+      "mode": "generated",
+      "schema_sha256": "sha256:0f3784ad7d11fa170d4482a29ef643af4e4afdf58315f76b6ab562cc142a1599",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cloudwatch-dashboard",
+      "terraform_type": "aws_cloudwatch_dashboard",
+      "mode": "generated",
+      "schema_sha256": "sha256:e9f6967a642325375bff144c128c7b68f93afca5269e2ddeb8402b6036524c3d",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cloudwatch-event-bus",
+      "terraform_type": "aws_cloudwatch_event_bus",
+      "mode": "authored",
+      "schema_sha256": "sha256:bc2cd0be27b9d92a45ed735673dfc565fd42662be3ef58790c81ece3d26276f6",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cloudwatch-event-connection",
+      "terraform_type": "aws_cloudwatch_event_connection",
+      "mode": "generated",
+      "schema_sha256": "sha256:08185b944879638ab7881b471c89cfef051cdb0d8c505b8c067fea90b686f679",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cloudwatch-event-endpoint",
+      "terraform_type": "aws_cloudwatch_event_endpoint",
+      "mode": "generated",
+      "schema_sha256": "sha256:4b7393b5d7f65e8213bf9bc4750e9813a05fd605841a41cdf69944bf6f920fa4",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cloudwatch-event-rule",
+      "terraform_type": "aws_cloudwatch_event_rule",
+      "mode": "authored",
+      "schema_sha256": "sha256:83e106466047b9a0acf75dab125d6f399e6229d4e11177e8e0f3030d845ad55b",
+      "paths": [
+        {
+          "path": "event_bus_name",
+          "schema_sha256": "sha256:4f3c67cce362cafa252e91dc8f8ecae441bf0b0c63810fac255a07ab4b85aa40"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cloudwatch-event-target",
+      "terraform_type": "aws_cloudwatch_event_target",
+      "mode": "authored",
+      "schema_sha256": "sha256:0804f33689d24354e529cea6619c49f5e973e0ebe038ac4d6cea88e5e2928fbf",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cloudwatch-log-anomaly-detector",
+      "terraform_type": "aws_cloudwatch_log_anomaly_detector",
+      "mode": "generated",
+      "schema_sha256": "sha256:e68312eb49e0c38abd64e3e94840ff05f18441f06aa3159cd11d5e7f11eefccb",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cloudwatch-log-group",
+      "terraform_type": "aws_cloudwatch_log_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:9a90c1a784f486a2ddd5c71f3902a8b5bf0b4dee8507065b5159b42cf8e7f8e7",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cloudwatch-metric-alarm",
+      "terraform_type": "aws_cloudwatch_metric_alarm",
+      "mode": "generated",
+      "schema_sha256": "sha256:8d4af598797c5931ab09589beb459e6c0e18b4b38af492bd1196e123656cadbc",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cloudwatch-metric-stream",
+      "terraform_type": "aws_cloudwatch_metric_stream",
+      "mode": "generated",
+      "schema_sha256": "sha256:3dff56727922a2c3a94a3c4e1f63197b0f9b06d0e3b1aaefad019c4b4fa1471a",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/codeartifact-domain",
+      "terraform_type": "aws_codeartifact_domain",
+      "mode": "generated",
+      "schema_sha256": "sha256:ac5ef382d7e1b3770c2dc78a57e7cdac20fb0b5efad3bb3c27f13432bd710009",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/codeartifact-repository",
+      "terraform_type": "aws_codeartifact_repository",
+      "mode": "generated",
+      "schema_sha256": "sha256:54ba3393d5b1c21032e78d9309192178796484fe8ed40159a76fc87fbfc4d6bd",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/codebuild-fleet",
+      "terraform_type": "aws_codebuild_fleet",
+      "mode": "generated",
+      "schema_sha256": "sha256:1274142416275f75842a8c1ab364fdc62e18574b5c4d2dc5e97221de48d6343e",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/codebuild-project",
+      "terraform_type": "aws_codebuild_project",
+      "mode": "generated",
+      "schema_sha256": "sha256:dd3a41f6daefd8a857476c4f6958071d37509d1f579073a0d0cc38a844cd4ac6",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/codecatalyst-dev-environment",
+      "terraform_type": "aws_codecatalyst_dev_environment",
+      "mode": "generated",
+      "schema_sha256": "sha256:50e564588cfb8199580f525870d7a73aba84b0d6c6de1ed8c2c8ce70ecf2c157",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/codecatalyst-project",
+      "terraform_type": "aws_codecatalyst_project",
+      "mode": "generated",
+      "schema_sha256": "sha256:4fe07b952da0f89178de4906b56ee9b3d8091d93aa54666f88d09860b15b22ed",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/codecatalyst-source-repository",
+      "terraform_type": "aws_codecatalyst_source_repository",
+      "mode": "generated",
+      "schema_sha256": "sha256:b9a6889cc677a46e361d5324ef6aece82b51fe595a4bfdb04cad2bba829ef45d",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/codecommit-repository",
+      "terraform_type": "aws_codecommit_repository",
+      "mode": "generated",
+      "schema_sha256": "sha256:504a40ec6744864715e6ef5f226a52d51b2a470378c7c7ab7de1aba27a396526",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/codeconnections-connection",
+      "terraform_type": "aws_codeconnections_connection",
+      "mode": "generated",
+      "schema_sha256": "sha256:126142e5009564567cea5a6cea8a069741a484c2e5acb6169ce57c38e89ac42f",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/codedeploy-deployment-group",
+      "terraform_type": "aws_codedeploy_deployment_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:f8263ff9fe72c708ec09bf63d165ff34f0db6fa1d72b26c5b1f551ba69552016",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/codeguruprofiler-profiling-group",
+      "terraform_type": "aws_codeguruprofiler_profiling_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:16ef0004391b11bfe73e71777695ee2243382b2f9c7aed86f07bdd4190b5e5b1",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/codepipeline",
+      "terraform_type": "aws_codepipeline",
+      "mode": "generated",
+      "schema_sha256": "sha256:7dda34be1df03bf42172f7e71a9b1a91861fbcd184b2a87d83b97cd4f64e4386",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/codestarconnections-connection",
+      "terraform_type": "aws_codestarconnections_connection",
+      "mode": "generated",
+      "schema_sha256": "sha256:8fab924ac829d6c9580209b8dc31df28c5c7897e7d98c1b7eba17f5197249b35",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cognito-identity-pool",
+      "terraform_type": "aws_cognito_identity_pool",
+      "mode": "generated",
+      "schema_sha256": "sha256:681820aa9b78fc9b14264a82b5c79d3fb50ea7b8a6f39ecc5dba0821dc62d4e7",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cognito-user-group",
+      "terraform_type": "aws_cognito_user_group",
+      "mode": "authored",
+      "schema_sha256": "sha256:645011fdb0a98cfa97cca5352d103811310426b7cb3278bf1dc6ba0ef6b97a9d",
+      "paths": [
+        {
+          "path": "user_pool_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cognito-user-pool",
+      "terraform_type": "aws_cognito_user_pool",
+      "mode": "generated",
+      "schema_sha256": "sha256:a412faa275ca04ff9d3150d92ca93063c482b1938b8139822dc69737d4fa8494",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/cognito-user-pool-domain",
+      "terraform_type": "aws_cognito_user_pool_domain",
+      "mode": "authored",
+      "schema_sha256": "sha256:110f6e311031e68fd9deeb48953c1b050bc5cc34892a8db0d6daad07c3e836fb",
+      "paths": [
+        {
+          "path": "user_pool_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/comprehend-document-classifier",
+      "terraform_type": "aws_comprehend_document_classifier",
+      "mode": "generated",
+      "schema_sha256": "sha256:28e69fc8a24184ae21bc601e29a1db76c6b34bd82ee9ae4066a2659d35a62697",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/comprehend-entity-recognizer",
+      "terraform_type": "aws_comprehend_entity_recognizer",
+      "mode": "generated",
+      "schema_sha256": "sha256:79541ecdf14de3811d5fccb18dfbeb078d0efa043aadfbc99357b6a11fb1134b",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/config-delivery-channel",
+      "terraform_type": "aws_config_delivery_channel",
+      "mode": "generated",
+      "schema_sha256": "sha256:55efe98d38fc5157e2a15028a486ae99f1cd71781491edb9ce9c8d3f6e4b163c",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/connect-contact-flow",
+      "terraform_type": "aws_connect_contact_flow",
+      "mode": "authored",
+      "schema_sha256": "sha256:10ad358466fb2cc20143cdcedd59d838a582a2c5bd758c4bf31e0ebaf7bbc57d",
+      "paths": [
+        {
+          "path": "instance_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/connect-instance",
+      "terraform_type": "aws_connect_instance",
+      "mode": "generated",
+      "schema_sha256": "sha256:151e02241ccf34034d72feb44c76f92a6556a6a98d839228b0db8e3e2c6274f0",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/connect-queue",
+      "terraform_type": "aws_connect_queue",
+      "mode": "authored",
+      "schema_sha256": "sha256:ebbdc66645ebb92d11f600b7a8ec467938f199df2463b39be15001ca15578c6f",
+      "paths": [
+        {
+          "path": "instance_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/connect-routing-profile",
+      "terraform_type": "aws_connect_routing_profile",
+      "mode": "authored",
+      "schema_sha256": "sha256:115e3c354a6a90a4fa75ad45fca3cd448262257e9da3b79dfb5e555b01b218d8",
+      "paths": [
+        {
+          "path": "instance_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/connect-security-profile",
+      "terraform_type": "aws_connect_security_profile",
+      "mode": "authored",
+      "schema_sha256": "sha256:4b04f4f7d892fa72dc72d2f164446590b76ba1bebaa0441b4dfe538cc13cf24d",
+      "paths": [
+        {
+          "path": "instance_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/connect-user-hierarchy-group",
+      "terraform_type": "aws_connect_user_hierarchy_group",
+      "mode": "authored",
+      "schema_sha256": "sha256:67dd546e3037457d398adc36099582d72b5b366b122bab7021e7b6126c58b412",
+      "paths": [
+        {
+          "path": "instance_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/controltower-landing-zone",
+      "terraform_type": "aws_controltower_landing_zone",
+      "mode": "generated",
+      "schema_sha256": "sha256:4b4a342e8f0817a0097e8b37db9bb6fa7c6d6db7e45789a9681ed6ae2362d49e",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/customer-gateway",
+      "terraform_type": "aws_customer_gateway",
+      "mode": "generated",
+      "schema_sha256": "sha256:b7a9f9e03ec439923a919bf88a1c6f6e0ca61071fe7fa270d6bd591b8f014ec5",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/customerprofiles-domain",
+      "terraform_type": "aws_customerprofiles_domain",
+      "mode": "generated",
+      "schema_sha256": "sha256:6d9ee34d6f132c4902533ed7ff69585804467cad4325e21e1e3a2bb3ff5b1e33",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/dataexchange-data-set",
+      "terraform_type": "aws_dataexchange_data_set",
+      "mode": "generated",
+      "schema_sha256": "sha256:e614c4d0a20c52577f6607182295b585ba38fe7db109a32ed15ae2e57207dd02",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/datapipeline-pipeline",
+      "terraform_type": "aws_datapipeline_pipeline",
+      "mode": "generated",
+      "schema_sha256": "sha256:f5fb5520072e4928d267015b67b97cb91d5504a9466df34a591e8e5087842688",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/datasync-agent",
+      "terraform_type": "aws_datasync_agent",
+      "mode": "generated",
+      "schema_sha256": "sha256:2fdef4a3154df4ef3bafff986c6dcefeca099eba36b08fb564107ad5c5f54520",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/datasync-location-fsx-lustre-file-system",
+      "terraform_type": "aws_datasync_location_fsx_lustre_file_system",
+      "mode": "generated",
+      "schema_sha256": "sha256:d14a874231d52fb16a9b03eefda784dd4dbcbfccb484c88be0d790eec78b93e8",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/datasync-location-fsx-ontap-file-system",
+      "terraform_type": "aws_datasync_location_fsx_ontap_file_system",
+      "mode": "generated",
+      "schema_sha256": "sha256:429b5bbb9d7dc5f02bb4b037ceed49350c09948d36e4427fe90e06b53dbce1ae",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/datasync-location-fsx-openzfs-file-system",
+      "terraform_type": "aws_datasync_location_fsx_openzfs_file_system",
+      "mode": "generated",
+      "schema_sha256": "sha256:a7a415fb394dbafad8be6e82ca983870deab94252e7899a62d8dd60a8b6e4f5e",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/datasync-location-fsx-windows-file-system",
+      "terraform_type": "aws_datasync_location_fsx_windows_file_system",
+      "mode": "generated",
+      "schema_sha256": "sha256:e7ee851c15c049cbfa117197282710030d3cdd566cf89099710cb4fb20b2171c",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/datasync-task",
+      "terraform_type": "aws_datasync_task",
+      "mode": "generated",
+      "schema_sha256": "sha256:917bcc9de140a0af2d9a594d87e5ed15f7622d75d2e61157390b3b9b91bd8bb3",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/datazone-domain",
+      "terraform_type": "aws_datazone_domain",
+      "mode": "generated",
+      "schema_sha256": "sha256:cd4db6bd17242b15dfb0e94eba8b19c0e2020eadbcef31ea0b22fcc392b3caa9",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/datazone-environment",
+      "terraform_type": "aws_datazone_environment",
+      "mode": "generated",
+      "schema_sha256": "sha256:a5e45e1daf75d19537d33c2ccd83df3a144831d5b596080a862019f352ceda26",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/datazone-project",
+      "terraform_type": "aws_datazone_project",
+      "mode": "generated",
+      "schema_sha256": "sha256:288ef6b9cf6c5b437d7739c37c742ddee611517e63c4a144559e11eed32b17c9",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/dax-cluster",
+      "terraform_type": "aws_dax_cluster",
+      "mode": "generated",
+      "schema_sha256": "sha256:cd138b1cf7541caee8d04e9f51ea0d9f036d6ba402c6d8fc88376745de64dda4",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/db-instance",
+      "terraform_type": "aws_db_instance",
+      "mode": "authored",
+      "schema_sha256": "sha256:b6e4b7ffe619cdf6e91adc6b24b0208804458501609613b3dc29b553e60632af",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/db-proxy",
+      "terraform_type": "aws_db_proxy",
+      "mode": "generated",
+      "schema_sha256": "sha256:05fcc2ddd34050936e9585411e01604e6d372cb44e7f1eb46f099c6ea91b3413",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/db-proxy-default-target-group",
+      "terraform_type": "aws_db_proxy_default_target_group",
+      "mode": "authored",
+      "schema_sha256": "sha256:1f348d1da5076fba1431021d036b58a900f363d1937216690ea6e1cb0411cc9c",
+      "paths": [
+        {
+          "path": "db_proxy_name",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/db-proxy-endpoint",
+      "terraform_type": "aws_db_proxy_endpoint",
+      "mode": "authored",
+      "schema_sha256": "sha256:57fafbfb88b509b2679f2d4590d67f8e1be6457070a8c83f7d28c509b84a29a4",
+      "paths": [
+        {
+          "path": "db_proxy_name",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/detective-graph",
+      "terraform_type": "aws_detective_graph",
+      "mode": "generated",
+      "schema_sha256": "sha256:14ed60170f48f6e2d8dcd2da7605adbcccc8de92f5594ce02f526a30844bef13",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/devicefarm-device-pool",
+      "terraform_type": "aws_devicefarm_device_pool",
+      "mode": "generated",
+      "schema_sha256": "sha256:8f36f6f870e39c2dcd987ee7e3723e8dbefb84c295c6da208f40aff4d7ad9d90",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/devicefarm-project",
+      "terraform_type": "aws_devicefarm_project",
+      "mode": "generated",
+      "schema_sha256": "sha256:b4ef6ca45a8fb52bab92501f60b654f590a59516e18b1325887c6f86b4e425f8",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/devicefarm-test-grid-project",
+      "terraform_type": "aws_devicefarm_test_grid_project",
+      "mode": "generated",
+      "schema_sha256": "sha256:879eb12339b79b19ca42a197d788b37e89f7eb86058a9419f5a7d02122043b97",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/devopsguru-notification-channel",
+      "terraform_type": "aws_devopsguru_notification_channel",
+      "mode": "generated",
+      "schema_sha256": "sha256:7d41d3f0e19764568fdb613b3d42b894d704ee3185efab1579ce7f928514399a",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/devopsguru-resource-collection",
+      "terraform_type": "aws_devopsguru_resource_collection",
+      "mode": "generated",
+      "schema_sha256": "sha256:e48d11851c9cbee4ceb10fcd7abe0da997169876d38ce3031b4f06e40319d08a",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/directory-service-directory",
+      "terraform_type": "aws_directory_service_directory",
+      "mode": "generated",
+      "schema_sha256": "sha256:a2ceb2b9101ee6fcdd4c0f611ea2dd579bd2be1d63909634a39e80e0d75fb2b7",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/dms-endpoint",
+      "terraform_type": "aws_dms_endpoint",
+      "mode": "generated",
+      "schema_sha256": "sha256:4d806b4a34bc2754418be22c1f5829eab819267b849670da8917742d04031f06",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/dms-replication-instance",
+      "terraform_type": "aws_dms_replication_instance",
+      "mode": "generated",
+      "schema_sha256": "sha256:f32984b88d21b74f494cf63c499df3f1d2d639d4f5d9f90c770cc00f1546a464",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/dms-replication-task",
+      "terraform_type": "aws_dms_replication_task",
+      "mode": "generated",
+      "schema_sha256": "sha256:660d19a23ad6a182cce0d44f3656ebd4be4810e840b56b7f1ad3d169621e77d1",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/dms-s3-endpoint",
+      "terraform_type": "aws_dms_s3_endpoint",
+      "mode": "generated",
+      "schema_sha256": "sha256:8c21e4de6170171a422e8367e4bd681c1117d796f3fb95c7db252209fc758480",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/docdb-cluster",
+      "terraform_type": "aws_docdb_cluster",
+      "mode": "generated",
+      "schema_sha256": "sha256:8e27302b78fac1ad5998af04d583f181eb39b80f735e28d8d646a9f0f1a3e480",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/docdb-cluster-instance",
+      "terraform_type": "aws_docdb_cluster_instance",
+      "mode": "authored",
+      "schema_sha256": "sha256:4c563b9e1dd88a9a2e0f462e86ba7649bd576ba8a699d5ef342a28a4eb13cfef",
+      "paths": [
+        {
+          "path": "cluster_identifier",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/docdb-global-cluster",
+      "terraform_type": "aws_docdb_global_cluster",
+      "mode": "generated",
+      "schema_sha256": "sha256:42f01c0a3f8801c854b18b8ddbef4e720f2940875f784e0175b22c34fad39070",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/docdbelastic-cluster",
+      "terraform_type": "aws_docdbelastic_cluster",
+      "mode": "generated",
+      "schema_sha256": "sha256:7f740173ed444e9b2f6ab0937145bf2d797adf56e2d96ff63d473f2911dc910b",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/dsql-cluster",
+      "terraform_type": "aws_dsql_cluster",
+      "mode": "generated",
+      "schema_sha256": "sha256:5539eedadbe051c67012da8c318c6040599f4b6aa256cbec4eaae41ab2ef7add",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/dx-connection",
+      "terraform_type": "aws_dx_connection",
+      "mode": "generated",
+      "schema_sha256": "sha256:e26b3c3f52afa27aec5ef0ce6d3aedc2fe5459ad056492a7f81357e30fd95746",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/dx-gateway",
+      "terraform_type": "aws_dx_gateway",
+      "mode": "generated",
+      "schema_sha256": "sha256:f897f1218d4206a4e4d4fb3da5318baf9d62c65adf0f1ff88d46a9663c23f98f",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/dx-hosted-connection",
+      "terraform_type": "aws_dx_hosted_connection",
+      "mode": "generated",
+      "schema_sha256": "sha256:81fa1a0afa636875f9359d5da5029579d197d7b5a243bba08fcfd98696d6d450",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/dynamodb-global-secondary-index",
+      "terraform_type": "aws_dynamodb_global_secondary_index",
+      "mode": "authored",
+      "schema_sha256": "sha256:788eb1cfad5e352c8a9f93506b033f4e381237764343774d2353e6d97aac209b",
+      "paths": [
+        {
+          "path": "table_name",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/dynamodb-global-table",
+      "terraform_type": "aws_dynamodb_global_table",
+      "mode": "generated",
+      "schema_sha256": "sha256:e5ef36042bf07b4d1bc33eaee867e7fb5087f2f25b1242f72f8ad3a5d964dc18",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/dynamodb-table",
+      "terraform_type": "aws_dynamodb_table",
+      "mode": "generated",
+      "schema_sha256": "sha256:cad7fe7e5dd34356348ae8f804bd07c16726015a3a7c16ccf833df21d661ce75",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ebs-volume",
+      "terraform_type": "aws_ebs_volume",
+      "mode": "generated",
+      "schema_sha256": "sha256:66d54a18f1940bb95cc0b4eaaf9eaccc3d9689047c7794f13ad9aa796db24ebe",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ec2-carrier-gateway",
+      "terraform_type": "aws_ec2_carrier_gateway",
+      "mode": "generated",
+      "schema_sha256": "sha256:b70a030329e2967ad62128f0548a5e3ac6571b7640cc136093d33778e51d649e",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ec2-client-vpn-endpoint",
+      "terraform_type": "aws_ec2_client_vpn_endpoint",
+      "mode": "generated",
+      "schema_sha256": "sha256:dcea9198869ed592ffc6957e64d96639aad2d93404c155fdd5e5714be7452c4a",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ec2-fleet",
+      "terraform_type": "aws_ec2_fleet",
+      "mode": "generated",
+      "schema_sha256": "sha256:722f1e5bc1344e9da9eb6bba6c79a6741e7a87c204f8b6937f6c41275665677a",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ec2-instance-connect-endpoint",
+      "terraform_type": "aws_ec2_instance_connect_endpoint",
+      "mode": "generated",
+      "schema_sha256": "sha256:99f7b08a8b88ff29bba043804857dcbc00d463992710d73202cb1da6c4c784a5",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ec2-local-gateway-route-table",
+      "terraform_type": "aws_ec2_local_gateway_route_table",
+      "mode": "generated",
+      "schema_sha256": "sha256:19257224932397d6925295daf9e602d1216a1a84e84098757f55f6afe14b72f3",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ec2-secondary-network",
+      "terraform_type": "aws_ec2_secondary_network",
+      "mode": "generated",
+      "schema_sha256": "sha256:64618491434e9d73cf75b640f12168505d551f0faa7d7f5dfbb64ba489402ae7",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ec2-secondary-subnet",
+      "terraform_type": "aws_ec2_secondary_subnet",
+      "mode": "generated",
+      "schema_sha256": "sha256:b7f5f3a33a663428e0ac838f7de930607a654323e6b6f6e0516f1418296472d0",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ec2-transit-gateway",
+      "terraform_type": "aws_ec2_transit_gateway",
+      "mode": "authored",
+      "schema_sha256": "sha256:8cbbb17a2289dbd854e2abf90db3a8eef5c7708953cd659bfba50c59aa4c990c",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ec2-transit-gateway-multicast-domain",
+      "terraform_type": "aws_ec2_transit_gateway_multicast_domain",
+      "mode": "generated",
+      "schema_sha256": "sha256:464872ac6c726942d25f6404fa7fb7cf40c129107f0dbfee5e345d1fab2ea086",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ec2-transit-gateway-policy-table",
+      "terraform_type": "aws_ec2_transit_gateway_policy_table",
+      "mode": "generated",
+      "schema_sha256": "sha256:1191782182b5b650bc0d7db621cd8fc4dc9acea0ce3c2c083a1450c70e528b27",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ec2-transit-gateway-route-table",
+      "terraform_type": "aws_ec2_transit_gateway_route_table",
+      "mode": "generated",
+      "schema_sha256": "sha256:e3f823cce44717702786534bd7ad667784a8b81c91afa740a01485e72460a100",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ec2-transit-gateway-vpc-attachment",
+      "terraform_type": "aws_ec2_transit_gateway_vpc_attachment",
+      "mode": "authored",
+      "schema_sha256": "sha256:9d944b7accc7ef19a6c6354e901b817e866e50819c994fc944a896c87ad487ca",
+      "paths": [
+        {
+          "path": "transit_gateway_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        },
+        {
+          "path": "vpc_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ecr-lifecycle-policy",
+      "terraform_type": "aws_ecr_lifecycle_policy",
+      "mode": "authored",
+      "schema_sha256": "sha256:6c3b0b7ee3657aef4d6cef9d77048fa24cab8368eda26548d7947806829c1b27",
+      "paths": [
+        {
+          "path": "repository",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ecr-repository",
+      "terraform_type": "aws_ecr_repository",
+      "mode": "authored",
+      "schema_sha256": "sha256:ba63454da4698eb28c5cd15926936bac6098f5082231a934d1999ecff0e1f704",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ecrpublic-repository",
+      "terraform_type": "aws_ecrpublic_repository",
+      "mode": "generated",
+      "schema_sha256": "sha256:342dfe3c443f1b41a95b631f35fd1f4030fc0edc5062284fa4d72337a63d41d2",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ecs-cluster",
+      "terraform_type": "aws_ecs_cluster",
+      "mode": "authored",
+      "schema_sha256": "sha256:8f33deeb8463f6ca9a85eae6df386b80e9ee5240f5d7e844636a893bd512cac9",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ecs-express-gateway-service",
+      "terraform_type": "aws_ecs_express_gateway_service",
+      "mode": "generated",
+      "schema_sha256": "sha256:ba07acea1927250705603edcc981dc99b51ea4bfe74d83cc3cdb82b0f1d46b84",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ecs-service",
+      "terraform_type": "aws_ecs_service",
+      "mode": "authored",
+      "schema_sha256": "sha256:8115e259cba244c7ce68dee13e3e95e88c0a9c7ad3aeae4cf8faafefece075fc",
+      "paths": [
+        {
+          "path": "cluster",
+          "schema_sha256": "sha256:3700901cbc85301f87b410e86abbc79c3a89026b887a36a0681c32c4d03f93e9"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/efs-access-point",
+      "terraform_type": "aws_efs_access_point",
+      "mode": "generated",
+      "schema_sha256": "sha256:67217165a51dffd6bab6a5d16e4699c8f73f084492c0ddfa45f1dfd751fd8184",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/efs-file-system",
+      "terraform_type": "aws_efs_file_system",
+      "mode": "generated",
+      "schema_sha256": "sha256:51ff706e3a287d8a6ed599fdfdff5d1c5fbc261383cdd45db50c396ea5f6277d",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/egress-only-internet-gateway",
+      "terraform_type": "aws_egress_only_internet_gateway",
+      "mode": "generated",
+      "schema_sha256": "sha256:145c88dc33400e2e5bbcf534bcfe1ca5b19d5d30c473b2b21634baa52fe3b092",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/eks-cluster",
+      "terraform_type": "aws_eks_cluster",
+      "mode": "authored",
+      "schema_sha256": "sha256:53f200d9b3336a07f9d0153b7b4330e4f0a8be70ac790d87a3e55fa6b9bbb004",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/eks-fargate-profile",
+      "terraform_type": "aws_eks_fargate_profile",
+      "mode": "authored",
+      "schema_sha256": "sha256:bce0b3628690c77fb069b3c26c87e08a7c3d28245293f6bb2ddc628639fe71c5",
+      "paths": [
+        {
+          "path": "cluster_name",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/eks-node-group",
+      "terraform_type": "aws_eks_node_group",
+      "mode": "authored",
+      "schema_sha256": "sha256:8f993beea1a24fc331eb17a33017c3ec9ffe134d7b5696a176b15ce7e84e1508",
+      "paths": [
+        {
+          "path": "cluster_name",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/elastic-beanstalk-application",
+      "terraform_type": "aws_elastic_beanstalk_application",
+      "mode": "generated",
+      "schema_sha256": "sha256:005a7ec6a4e02a5bdb2ec0227078d21215adf0ff22bbb0672d9e66bda275d5ec",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/elastic-beanstalk-environment",
+      "terraform_type": "aws_elastic_beanstalk_environment",
+      "mode": "generated",
+      "schema_sha256": "sha256:42f8232dc29347ec17c5f40f307ec9fa770cc866fddbd3f8a6879da9dbd92b81",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/elasticache-cluster",
+      "terraform_type": "aws_elasticache_cluster",
+      "mode": "generated",
+      "schema_sha256": "sha256:77f1aabc907be9ea6dd0e11da9cc7e4c64affafda3d06993b48f7dbaddcae179",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/elasticache-global-replication-group",
+      "terraform_type": "aws_elasticache_global_replication_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:8a4ea8175d0b010e1ae93022d9e50ee54b485af20bde9f091e5c64e5f8201e21",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/elasticache-replication-group",
+      "terraform_type": "aws_elasticache_replication_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:e9493d3839c91c5d248f9e9b0636d261630a88b60c133f2784ce3ec1d55f3a28",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/elasticsearch-domain",
+      "terraform_type": "aws_elasticsearch_domain",
+      "mode": "generated",
+      "schema_sha256": "sha256:a8983eb0ef50026ca8da0673f70598b3667adb0af079bd045290841308fc4ca1",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/elasticsearch-vpc-endpoint",
+      "terraform_type": "aws_elasticsearch_vpc_endpoint",
+      "mode": "generated",
+      "schema_sha256": "sha256:12ea2598feabbc1111a1d1eb57dae1b10b8914b813920b8568c6e9faa220d1da",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/elastictranscoder-pipeline",
+      "terraform_type": "aws_elastictranscoder_pipeline",
+      "mode": "generated",
+      "schema_sha256": "sha256:0480916d024fb33728c521962fa84b71fc86d5ee43c53f8115bdac0a77deb6b8",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/elb",
+      "terraform_type": "aws_elb",
+      "mode": "generated",
+      "schema_sha256": "sha256:de083afd848fcd16457b8831901e4ca838d97e6545211a5c74297f4f9dc4da1c",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/emr-cluster",
+      "terraform_type": "aws_emr_cluster",
+      "mode": "generated",
+      "schema_sha256": "sha256:39a6230e6dd29721ef8f71a2a7346fe9140d7a5b650f268cb069fecbd1adeb82",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/emr-instance-fleet",
+      "terraform_type": "aws_emr_instance_fleet",
+      "mode": "authored",
+      "schema_sha256": "sha256:e8baf76767cc1ec504b4d1cc8695dad9a7c18386810ad1fc11e989abb90cb9da",
+      "paths": [
+        {
+          "path": "cluster_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/emr-instance-group",
+      "terraform_type": "aws_emr_instance_group",
+      "mode": "authored",
+      "schema_sha256": "sha256:3fb397cca21a5d6ca2780c61eaec0c4a2453204356a747fb609d0dee43a62c9a",
+      "paths": [
+        {
+          "path": "cluster_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/emrcontainers-virtual-cluster",
+      "terraform_type": "aws_emrcontainers_virtual_cluster",
+      "mode": "generated",
+      "schema_sha256": "sha256:fbc3a86f93957aae62b742a77b4ddc6110600789da47bed2ac62772c8f50bd5d",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/emrserverless-application",
+      "terraform_type": "aws_emrserverless_application",
+      "mode": "generated",
+      "schema_sha256": "sha256:7f7c60624243cb5bdd114c10f2fe6c53e24c7e0d2ca672432e9d5a42e684da5c",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/evidently-project",
+      "terraform_type": "aws_evidently_project",
+      "mode": "generated",
+      "schema_sha256": "sha256:296f2e3a5ac728cd9a24e6d3d38649a7cccd17a07cb8faca6506b45385f67f09",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/finspace-kx-cluster",
+      "terraform_type": "aws_finspace_kx_cluster",
+      "mode": "generated",
+      "schema_sha256": "sha256:fad012c728afb9c815dbad67a8df444d1b2133029d86d6ee768f869465fa30a8",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/finspace-kx-database",
+      "terraform_type": "aws_finspace_kx_database",
+      "mode": "generated",
+      "schema_sha256": "sha256:f392deaf1274c9270dd9424bb8eccc57f1dd10c9deea2e31ed89ab35f6b79d70",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/finspace-kx-environment",
+      "terraform_type": "aws_finspace_kx_environment",
+      "mode": "generated",
+      "schema_sha256": "sha256:e48fe4a003d23de1797a0591f4a6b0d05ce39cbcde5615720280f366ee7f8908",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/finspace-kx-volume",
+      "terraform_type": "aws_finspace_kx_volume",
+      "mode": "generated",
+      "schema_sha256": "sha256:027de3b13cb97a51e95d48e40e692434b3799eadf976d528e3a59bf4df3a3e7e",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/fsx-lustre-file-system",
+      "terraform_type": "aws_fsx_lustre_file_system",
+      "mode": "generated",
+      "schema_sha256": "sha256:f94becb12e5fbefe40eceaa4a2b605c4becf288b64b0aca17b7dc359a7fd0338",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/fsx-ontap-file-system",
+      "terraform_type": "aws_fsx_ontap_file_system",
+      "mode": "generated",
+      "schema_sha256": "sha256:43f3c2540a4ad988b8dd68ee744353b024202ef0f1c01ef45b1a2808a4311da9",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/fsx-ontap-volume",
+      "terraform_type": "aws_fsx_ontap_volume",
+      "mode": "generated",
+      "schema_sha256": "sha256:d429015282079ae7c4d0e97d147706933df97f1aef3fbe1b79f30303753884ee",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/fsx-openzfs-file-system",
+      "terraform_type": "aws_fsx_openzfs_file_system",
+      "mode": "generated",
+      "schema_sha256": "sha256:321d6bce2cd9f008e7b6792a92d9e494fc8ae628e3335f056623d294fd97c950",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/fsx-openzfs-volume",
+      "terraform_type": "aws_fsx_openzfs_volume",
+      "mode": "generated",
+      "schema_sha256": "sha256:d3614128760b2abe18c735b0fd19a017561938354533315341489a64505b0a22",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/fsx-windows-file-system",
+      "terraform_type": "aws_fsx_windows_file_system",
+      "mode": "generated",
+      "schema_sha256": "sha256:953c800d7afd3415e89d4ef39b5b7cf7fcef45f0f94710b7839d60a667290dba",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/gamelift-fleet",
+      "terraform_type": "aws_gamelift_fleet",
+      "mode": "generated",
+      "schema_sha256": "sha256:0e924aae365f7c2c305aa43387744ac19a9ad3e7b115586f462fe60ddde1a084",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/gamelift-game-server-group",
+      "terraform_type": "aws_gamelift_game_server_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:6dbcb744af1dfceb2b74fd368dfd8f975f220c64c3945b11bd0638884d3098f3",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/gamelift-game-session-queue",
+      "terraform_type": "aws_gamelift_game_session_queue",
+      "mode": "generated",
+      "schema_sha256": "sha256:ab8138afa6483d74192906a1f0229cda15adbe8fea9dc07ccaa080a7d4559839",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/glacier-vault",
+      "terraform_type": "aws_glacier_vault",
+      "mode": "generated",
+      "schema_sha256": "sha256:429451869de6e7752a773c919f61977e26cdd58ee8483b92272f0c5de735d116",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/globalaccelerator-accelerator",
+      "terraform_type": "aws_globalaccelerator_accelerator",
+      "mode": "authored",
+      "schema_sha256": "sha256:7cb6b100ba417f50788cd53b354d1672716f8aaec7050500b6748651fa926d04",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/globalaccelerator-custom-routing-accelerator",
+      "terraform_type": "aws_globalaccelerator_custom_routing_accelerator",
+      "mode": "authored",
+      "schema_sha256": "sha256:1cf46b841d6399d0bfc1bb3803c47e867b86f2b44914f171b199e2ad496d32be",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/globalaccelerator-custom-routing-endpoint-group",
+      "terraform_type": "aws_globalaccelerator_custom_routing_endpoint_group",
+      "mode": "authored",
+      "schema_sha256": "sha256:26f72e0e94cb97739018d75c715954ddf85d09f2272244a7b5230e5c21d10aec",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/globalaccelerator-custom-routing-listener",
+      "terraform_type": "aws_globalaccelerator_custom_routing_listener",
+      "mode": "authored",
+      "schema_sha256": "sha256:657ae7ebd8a3891bd1c09c500106cc65fd3dee2f4700cc420c4b86aea96e0c48",
+      "paths": [
+        {
+          "path": "accelerator_arn",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/globalaccelerator-endpoint-group",
+      "terraform_type": "aws_globalaccelerator_endpoint_group",
+      "mode": "authored",
+      "schema_sha256": "sha256:82f1e92c9e5ee5d3974c17175bbcf6817f549daba0f08011ad9c9511ea5c6314",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/globalaccelerator-listener",
+      "terraform_type": "aws_globalaccelerator_listener",
+      "mode": "authored",
+      "schema_sha256": "sha256:df8f551b2a7f06472cbe603fde50ab9b0f2217dcc2aa9fc8cc96372437229190",
+      "paths": [
+        {
+          "path": "accelerator_arn",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/glue-catalog",
+      "terraform_type": "aws_glue_catalog",
+      "mode": "generated",
+      "schema_sha256": "sha256:cc98d992bd81fb1df475741d616b7bbae6cab86145e3b7ef2efc42c2af17ff2f",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/glue-catalog-database",
+      "terraform_type": "aws_glue_catalog_database",
+      "mode": "generated",
+      "schema_sha256": "sha256:4d0d9594b44db9bb40001bc6d89c92f0ccca3c9f6b159c8aa7c8baa123071f09",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/glue-catalog-table",
+      "terraform_type": "aws_glue_catalog_table",
+      "mode": "generated",
+      "schema_sha256": "sha256:772ade7ea294eb357479d8a0da74835c409947b80c4e2bd39fec02cf2e492797",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/glue-connection",
+      "terraform_type": "aws_glue_connection",
+      "mode": "generated",
+      "schema_sha256": "sha256:49ff66e5238fe6559221bd1d39d35f9e1f7222797ff56a224d617f1d52e0a5e6",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/glue-dev-endpoint",
+      "terraform_type": "aws_glue_dev_endpoint",
+      "mode": "generated",
+      "schema_sha256": "sha256:379c2940a119a58f7172a8cfb6f33f36762fc80a167ca04d6325fcc5ddd584c2",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/glue-job",
+      "terraform_type": "aws_glue_job",
+      "mode": "generated",
+      "schema_sha256": "sha256:63a485755b94894fd92c11976e9e5dfa37f528577242011ecc05b715949da2f3",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/glue-workflow",
+      "terraform_type": "aws_glue_workflow",
+      "mode": "generated",
+      "schema_sha256": "sha256:10d34bd2476d5e5be4387e5852dcee7735e0c579cc41500c232c8080c415f0a7",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/grafana-workspace",
+      "terraform_type": "aws_grafana_workspace",
+      "mode": "generated",
+      "schema_sha256": "sha256:8e6f7b2296c5c06780516dcd92e336dd46cbaecc6917e9b5141701acae524597",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/guardduty-detector",
+      "terraform_type": "aws_guardduty_detector",
+      "mode": "generated",
+      "schema_sha256": "sha256:31f67357ae6c509019293bdc8f81971a229c82f367c83f1c6e1f65f4e52aa54f",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/iam-group",
+      "terraform_type": "aws_iam_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:780ebd7482c89c3fe1c7a773bb349ee5a7d68b83db7ab074d3ccca8592784577",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/iam-instance-profile",
+      "terraform_type": "aws_iam_instance_profile",
+      "mode": "authored",
+      "schema_sha256": "sha256:553bace97b2357290681c7a8eaf6a4ded373f4ec8f8204e455607358875d4fff",
+      "paths": [
+        {
+          "path": "role",
+          "schema_sha256": "sha256:4f3c67cce362cafa252e91dc8f8ecae441bf0b0c63810fac255a07ab4b85aa40"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/iam-role",
+      "terraform_type": "aws_iam_role",
+      "mode": "authored",
+      "schema_sha256": "sha256:81f5c95b24d5be11d5bd0696f83835b325fdce136990e021f916b44682b0a918",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/iam-role-policy-attachment",
+      "terraform_type": "aws_iam_role_policy_attachment",
+      "mode": "authored",
+      "schema_sha256": "sha256:599728c9a1949bce493ce9715020f649be8c4ed9df2388bd687ddfd64d1cd081",
+      "paths": [
+        {
+          "path": "role",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/identitystore-group",
+      "terraform_type": "aws_identitystore_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:51b521e8f6e73e9d61cd8e4b9d95c2815f8adfa37aad208e1fe2235ae70f87e1",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/imagebuilder-image-pipeline",
+      "terraform_type": "aws_imagebuilder_image_pipeline",
+      "mode": "generated",
+      "schema_sha256": "sha256:d816a1b3976b5b9109571f9dca0e61cfceae35d4ffe9542f48278383a1d3a23b",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/imagebuilder-workflow",
+      "terraform_type": "aws_imagebuilder_workflow",
+      "mode": "generated",
+      "schema_sha256": "sha256:021732e769fd09191fa28d249d8ed21e861c5b8149b68cbfda35c315b41ee995",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/instance",
+      "terraform_type": "aws_instance",
+      "mode": "authored",
+      "schema_sha256": "sha256:dba7fa34a18ad7268538aeadcb0d2643a1d63139dcf3998a11c8e2c8741abc7a",
+      "paths": [
+        {
+          "path": "subnet_id",
+          "schema_sha256": "sha256:3700901cbc85301f87b410e86abbc79c3a89026b887a36a0681c32c4d03f93e9"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/internet-gateway",
+      "terraform_type": "aws_internet_gateway",
+      "mode": "authored",
+      "schema_sha256": "sha256:b91c593c24ce28a0d17c75e0dc2e96b4d03c60141c480fbb2c317ed946810a6b",
+      "paths": [
+        {
+          "path": "vpc_id",
+          "schema_sha256": "sha256:3700901cbc85301f87b410e86abbc79c3a89026b887a36a0681c32c4d03f93e9"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/internetmonitor-monitor",
+      "terraform_type": "aws_internetmonitor_monitor",
+      "mode": "generated",
+      "schema_sha256": "sha256:f86eb3886f3771bdc3a845f2870c8959d931d2682e90af2b9b607e68a5fbc0cb",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/iot-thing",
+      "terraform_type": "aws_iot_thing",
+      "mode": "generated",
+      "schema_sha256": "sha256:1e5dd2e2dd92a94c3427f284ca93fe4503a5049c1b9792db27e1a4480dbc9de3",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/iot-thing-group",
+      "terraform_type": "aws_iot_thing_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:c49b407781037ca503be9851298ec55b9a4704bd58736bf15aaf9ef557ca2cdf",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ivs-channel",
+      "terraform_type": "aws_ivs_channel",
+      "mode": "generated",
+      "schema_sha256": "sha256:944fc57390ec046fac161e630ada69e4ac37fb0b31b1988d50f6ce9985d3ae29",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/kendra-index",
+      "terraform_type": "aws_kendra_index",
+      "mode": "generated",
+      "schema_sha256": "sha256:2dd83c7899d99b03bc7846965bbf1e0f9f4ed32912716512e6ea8b0c58017a91",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/keyspaces-table",
+      "terraform_type": "aws_keyspaces_table",
+      "mode": "generated",
+      "schema_sha256": "sha256:f55666533e229caf7d67bfd6ae038029c42914e11c3171f54fdb085e8554749d",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/kinesis-analytics-application",
+      "terraform_type": "aws_kinesis_analytics_application",
+      "mode": "generated",
+      "schema_sha256": "sha256:0cb68eebe1b87b8860a8efd9e355571d233624f2d4595ff41aa24e3f1f66e962",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/kinesis-firehose-delivery-stream",
+      "terraform_type": "aws_kinesis_firehose_delivery_stream",
+      "mode": "generated",
+      "schema_sha256": "sha256:19bde95a57c2206a0de4bba3a5b4944574df481dc375345e1fc6d6bef5487202",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/kinesis-stream",
+      "terraform_type": "aws_kinesis_stream",
+      "mode": "generated",
+      "schema_sha256": "sha256:6c1d5c716757911772ed4209d12fd68de27df5e9a3dc6ee6f3708850b87e92c1",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/kinesis-video-stream",
+      "terraform_type": "aws_kinesis_video_stream",
+      "mode": "generated",
+      "schema_sha256": "sha256:88ac7b654ec8fdf2dd13c57a0f1a2045dedb9e1369ef51b80526c9663d165420",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/kinesisanalyticsv2-application",
+      "terraform_type": "aws_kinesisanalyticsv2_application",
+      "mode": "generated",
+      "schema_sha256": "sha256:f39868ad9631600df5fa34a4e48ff5f1d83965008980af6852a3290055bd9fe2",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/kms-alias",
+      "terraform_type": "aws_kms_alias",
+      "mode": "authored",
+      "schema_sha256": "sha256:276d711832800ce217c7156b887c125084d3d31bf8c0dd876939a138a3c54f74",
+      "paths": [
+        {
+          "path": "target_key_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/kms-custom-key-store",
+      "terraform_type": "aws_kms_custom_key_store",
+      "mode": "generated",
+      "schema_sha256": "sha256:a274ec9d2f810d4007ccd33e98c54e40d1321cf8bd70eec9892a5e17cae12044",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/kms-external-key",
+      "terraform_type": "aws_kms_external_key",
+      "mode": "generated",
+      "schema_sha256": "sha256:18279ffa404b355f2123fcdef93cbfae933510e8b4624a88adcd854404ddfcf1",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/kms-key",
+      "terraform_type": "aws_kms_key",
+      "mode": "authored",
+      "schema_sha256": "sha256:eb30e39db7ce1d4cfdb5c3bf45d687d4e48976ae8daf7bac12b0badddf6ca56b",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/kms-replica-external-key",
+      "terraform_type": "aws_kms_replica_external_key",
+      "mode": "generated",
+      "schema_sha256": "sha256:51dc2ebaf29632e92af55c47009b9d319f750df816422a436522ebc60436548d",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/kms-replica-key",
+      "terraform_type": "aws_kms_replica_key",
+      "mode": "generated",
+      "schema_sha256": "sha256:8639ce0da2b8b8dc408c2db9023defafb13d050348a68fa3d284cd1097257244",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/lakeformation-resource",
+      "terraform_type": "aws_lakeformation_resource",
+      "mode": "generated",
+      "schema_sha256": "sha256:18e61734e34936accfe51300e81f0d285ca255e5c222ed85824c6ed4ed3eb758",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/lambda-function",
+      "terraform_type": "aws_lambda_function",
+      "mode": "authored",
+      "schema_sha256": "sha256:9078190fc3046bf46e888229630c6e527642a9aa1c7ea30cc61718322b2bd310",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/lb",
+      "terraform_type": "aws_lb",
+      "mode": "authored",
+      "schema_sha256": "sha256:4a2b1a5baa78391bbf6f4f4b64ea2df55a95ce8a78645e1210543672d5b5c439",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/lb-listener",
+      "terraform_type": "aws_lb_listener",
+      "mode": "authored",
+      "schema_sha256": "sha256:ca7f9cb484ca1b327e82dba01c3ebc3b524e66152bfe89457d67ddb86514da3d",
+      "paths": [
+        {
+          "path": "load_balancer_arn",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/lb-target-group",
+      "terraform_type": "aws_lb_target_group",
+      "mode": "authored",
+      "schema_sha256": "sha256:cad6c8c609581957f3e6220660539c26413905a4ba34b98eb0e73258a9d06b4e",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/lex-bot",
+      "terraform_type": "aws_lex_bot",
+      "mode": "generated",
+      "schema_sha256": "sha256:58b65312d5173e01589a7f90c270d4872fec9ed68a843b87962ee40585258f14",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/lexv2models-bot",
+      "terraform_type": "aws_lexv2models_bot",
+      "mode": "generated",
+      "schema_sha256": "sha256:fe95ad40ac129286d25ab2d12ef336869c1c49a5990a8c3d31d540d67900c8c5",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/lightsail-bucket",
+      "terraform_type": "aws_lightsail_bucket",
+      "mode": "generated",
+      "schema_sha256": "sha256:771e58760477d4c910bd8e24fb2fec4703c61403be21e6485f7eb0376f94b33e",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/lightsail-certificate",
+      "terraform_type": "aws_lightsail_certificate",
+      "mode": "generated",
+      "schema_sha256": "sha256:312c13be7bcf8eb1101db429bd26dca44743a40685ca30cfaa5fe81e894f1dc1",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/lightsail-container-service",
+      "terraform_type": "aws_lightsail_container_service",
+      "mode": "generated",
+      "schema_sha256": "sha256:3bd8f9f2d8589bacd37926a719854e1919af0744ef4ce841b04e8f4c0af11b3d",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/lightsail-database",
+      "terraform_type": "aws_lightsail_database",
+      "mode": "generated",
+      "schema_sha256": "sha256:5813c829bfeda134a088f2cee64fabc5ea1d2ddc78a76bedd85cd9182d4cb3de",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/lightsail-distribution",
+      "terraform_type": "aws_lightsail_distribution",
+      "mode": "generated",
+      "schema_sha256": "sha256:4520fce68180d2ecf76fba8ca0981c09641ff7d7791a387ed69f09338925bb2a",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/lightsail-domain",
+      "terraform_type": "aws_lightsail_domain",
+      "mode": "generated",
+      "schema_sha256": "sha256:8fb9b0cd3c3ea7eac99c0aa5fa82f34f26a541dbfe1d50457cc0921799d62ee9",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/lightsail-instance",
+      "terraform_type": "aws_lightsail_instance",
+      "mode": "generated",
+      "schema_sha256": "sha256:450636ac71e05ad6124a96e6ce378d0be8ff2a777c5d0e9b936565eb3f3a9294",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/location-geofence-collection",
+      "terraform_type": "aws_location_geofence_collection",
+      "mode": "generated",
+      "schema_sha256": "sha256:203d58fbed6bfe2c561c7525430af5d909cc17ba9d94b1a5257f83d390c8fd15",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/location-place-index",
+      "terraform_type": "aws_location_place_index",
+      "mode": "generated",
+      "schema_sha256": "sha256:f70279b5ef668278424915737f27fe843c7806e0c081ab892190349b537b7b37",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/m2-application",
+      "terraform_type": "aws_m2_application",
+      "mode": "generated",
+      "schema_sha256": "sha256:9eaa919fe710241aabdbdc5653ec25b0d0e35a9c96c86d22872d6c364265c4fd",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/m2-environment",
+      "terraform_type": "aws_m2_environment",
+      "mode": "generated",
+      "schema_sha256": "sha256:ecfb0fe443a626a7558895488a4e0fb02589737387f061b7bc6d1238e9ad7b02",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/media-convert-queue",
+      "terraform_type": "aws_media_convert_queue",
+      "mode": "generated",
+      "schema_sha256": "sha256:daa05b2fb6e1c842fe1d02a8a907ff52881492c53bb1e965219486b95ee64f0a",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/media-package-channel",
+      "terraform_type": "aws_media_package_channel",
+      "mode": "generated",
+      "schema_sha256": "sha256:01eca16d21373071423a6dda834584984dcbec44b7818e84e0e7784399f09abe",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/media-packagev2-channel-group",
+      "terraform_type": "aws_media_packagev2_channel_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:eb5a1d5b892a79f0060f6cb397ec1675299b2cca487b69ad21d41dd2bc94aedd",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/media-store-container",
+      "terraform_type": "aws_media_store_container",
+      "mode": "generated",
+      "schema_sha256": "sha256:3ef41d7280d797917a06d96c25ba00b1250fcdc1546c25c04672535353b96619",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/medialive-channel",
+      "terraform_type": "aws_medialive_channel",
+      "mode": "generated",
+      "schema_sha256": "sha256:460ef51bc58024baf7a66c40ddafd51169f7943cc2ac9f9dcf9a7ff324c14a99",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/medialive-input-security-group",
+      "terraform_type": "aws_medialive_input_security_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:e79c946ccdf34a1e15186cb028b65eccc7c3b255ab27ffb2a33f91e8327e8be8",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/memorydb-cluster",
+      "terraform_type": "aws_memorydb_cluster",
+      "mode": "generated",
+      "schema_sha256": "sha256:a638f5f9dc808c1d5121d98bc85d79950e7e484fced08d2f47dfcb5d5cbd1c41",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/memorydb-multi-region-cluster",
+      "terraform_type": "aws_memorydb_multi_region_cluster",
+      "mode": "generated",
+      "schema_sha256": "sha256:b216d8377095d7f63f3b733085e00d18eb872d8522c69d1646ab75d6eb785882",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/mq-broker",
+      "terraform_type": "aws_mq_broker",
+      "mode": "generated",
+      "schema_sha256": "sha256:fc64e3e13bd84a432997e447a1e366397fa04657cc7dd805df32423cfb4eecbd",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/msk-cluster",
+      "terraform_type": "aws_msk_cluster",
+      "mode": "generated",
+      "schema_sha256": "sha256:9770a86817a3e34514479830fc75cf605d48088d51fa2525bba74a78bfeadfdb",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/msk-serverless-cluster",
+      "terraform_type": "aws_msk_serverless_cluster",
+      "mode": "generated",
+      "schema_sha256": "sha256:295ab9e0a5ac7b4bc05c246bf5ca0c551b18a375e26be02a2f74dc43e2e2dd90",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/msk-topic",
+      "terraform_type": "aws_msk_topic",
+      "mode": "generated",
+      "schema_sha256": "sha256:052701b525ca054c25bdd49e80500a6605519c31ec6ee000fe12edf93c01f379",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/msk-vpc-connection",
+      "terraform_type": "aws_msk_vpc_connection",
+      "mode": "generated",
+      "schema_sha256": "sha256:cbbfb7d14889ea1bf7477af2c7a813e40deb23f906ef180099cfdee891c3e633",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/mwaa-environment",
+      "terraform_type": "aws_mwaa_environment",
+      "mode": "generated",
+      "schema_sha256": "sha256:541bb15c16c28d89c1fcc880660e893bcdc215f6b0e70771486709037e566752",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/nat-gateway",
+      "terraform_type": "aws_nat_gateway",
+      "mode": "authored",
+      "schema_sha256": "sha256:a9179049621f5835cc9c4a006ae47b0e4b2f5073958262107bc89dca9b01342b",
+      "paths": [
+        {
+          "path": "subnet_id",
+          "schema_sha256": "sha256:4f3c67cce362cafa252e91dc8f8ecae441bf0b0c63810fac255a07ab4b85aa40"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/neptune-cluster",
+      "terraform_type": "aws_neptune_cluster",
+      "mode": "generated",
+      "schema_sha256": "sha256:4fc60ac8cb57be2d43e30e1a54f0621833d4851c44d9dc6c732c63ad424fda57",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/neptune-cluster-endpoint",
+      "terraform_type": "aws_neptune_cluster_endpoint",
+      "mode": "generated",
+      "schema_sha256": "sha256:68c4592c9f7f2248dbe3f2d901868894e655be5bf167bcca38a79ccc406deaa4",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/neptune-cluster-instance",
+      "terraform_type": "aws_neptune_cluster_instance",
+      "mode": "authored",
+      "schema_sha256": "sha256:9bc769d272c6a74209150a357c830217fe8844f8e9c8addd3bff3a95493cf34c",
+      "paths": [
+        {
+          "path": "cluster_identifier",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/neptune-global-cluster",
+      "terraform_type": "aws_neptune_global_cluster",
+      "mode": "generated",
+      "schema_sha256": "sha256:3bd4c734799d1acff456a3f7ca36e935aa53cd2cd80067e4c5b37dbcb535c36c",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/neptunegraph-private-graph-endpoint",
+      "terraform_type": "aws_neptunegraph_private_graph_endpoint",
+      "mode": "generated",
+      "schema_sha256": "sha256:b6b2078ad9c22c6a4556cc1c039a4a02892be485a215ffa8a94b0044165b4c17",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/network-acl",
+      "terraform_type": "aws_network_acl",
+      "mode": "authored",
+      "schema_sha256": "sha256:a98ec0d6d0e582e2a89739162fe17980889ccd025251e4c012d9ab10a7a395e8",
+      "paths": [
+        {
+          "path": "vpc_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/networkfirewall-firewall",
+      "terraform_type": "aws_networkfirewall_firewall",
+      "mode": "generated",
+      "schema_sha256": "sha256:302005b52026ab643048f1992051ed3f12ff5a78c8de3db1de0e654b43832563",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/networkfirewall-rule-group",
+      "terraform_type": "aws_networkfirewall_rule_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:4ad31b1575fe218a7587664ea29f63c2bf8d470d6f66e8bef866ea6d7f68f578",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/networkflowmonitor-monitor",
+      "terraform_type": "aws_networkflowmonitor_monitor",
+      "mode": "generated",
+      "schema_sha256": "sha256:5b6c24ae84ce3b275587f138eea1af9367922bc6eedb7a9855201c0b42dd4d68",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/networkmanager-connection",
+      "terraform_type": "aws_networkmanager_connection",
+      "mode": "generated",
+      "schema_sha256": "sha256:76a80f40413d8aebbb1c6a34e04a10c0f0897e3a8170e91a788ab5103a1f482d",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/networkmanager-core-network",
+      "terraform_type": "aws_networkmanager_core_network",
+      "mode": "generated",
+      "schema_sha256": "sha256:ac150874c46a97e47cb978b6ec9cb99f50fcbfbf9517e55b0d71854375cdd86d",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/networkmanager-global-network",
+      "terraform_type": "aws_networkmanager_global_network",
+      "mode": "generated",
+      "schema_sha256": "sha256:4693bb6aed8b1ddb841de1b8b66c2e53df00c2aff090c643160cc055de4bbd73",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/networkmanager-site",
+      "terraform_type": "aws_networkmanager_site",
+      "mode": "generated",
+      "schema_sha256": "sha256:f4d8b1e1cbde2d8379d3091aad450ff89af697ba11e5f31fd667afca3264041d",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/networkmonitor-monitor",
+      "terraform_type": "aws_networkmonitor_monitor",
+      "mode": "generated",
+      "schema_sha256": "sha256:8e5dd05e5a7843a74e6cf577523934a85804a839480bf2d26355780ac281f7f2",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/notifications-notification-hub",
+      "terraform_type": "aws_notifications_notification_hub",
+      "mode": "generated",
+      "schema_sha256": "sha256:be628beed5c66e12d4351e2e24e27842a64ce3583a531a3421962921c23ec666",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/observabilityadmin-centralization-rule-for-organization",
+      "terraform_type": "aws_observabilityadmin_centralization_rule_for_organization",
+      "mode": "generated",
+      "schema_sha256": "sha256:abb0546be4c89d34c7fa1afb942c97cd284cd2fc3a13eacfb9f388db1a089b18",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/observabilityadmin-telemetry-evaluation-for-organization",
+      "terraform_type": "aws_observabilityadmin_telemetry_evaluation_for_organization",
+      "mode": "generated",
+      "schema_sha256": "sha256:6e4c59c7fd7557e8ca07a89d272fae8a82cd3d1b9b74f1404fb0bb161430b1dc",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/observabilityadmin-telemetry-pipeline",
+      "terraform_type": "aws_observabilityadmin_telemetry_pipeline",
+      "mode": "generated",
+      "schema_sha256": "sha256:ebb712dd22aa9ee43e96cf686f1eb5fdc40bba68f21eca849cce0eb4c6e3ad14",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/observabilityadmin-telemetry-rule-for-organization",
+      "terraform_type": "aws_observabilityadmin_telemetry_rule_for_organization",
+      "mode": "generated",
+      "schema_sha256": "sha256:76375f70ff0b5ca0991240b4721b83b08cea30278aba393f8f9040a0b5c2c02d",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/odb-cloud-autonomous-vm-cluster",
+      "terraform_type": "aws_odb_cloud_autonomous_vm_cluster",
+      "mode": "generated",
+      "schema_sha256": "sha256:f82122f3f1b5276267712c8e9ee4f14aa2b4074f7d6450a81332f064d7668ad8",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/odb-cloud-vm-cluster",
+      "terraform_type": "aws_odb_cloud_vm_cluster",
+      "mode": "generated",
+      "schema_sha256": "sha256:19b08f6205437223142c21d0e26e7b949b8bee65d28b6ae62257f8ed6d281b77",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/odb-network",
+      "terraform_type": "aws_odb_network",
+      "mode": "generated",
+      "schema_sha256": "sha256:0ed81d5a0163373c0ace93213ebfa0cb7389439f45c5f58a7ffdf8b9ff9e628d",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/odb-network-peering-connection",
+      "terraform_type": "aws_odb_network_peering_connection",
+      "mode": "generated",
+      "schema_sha256": "sha256:01142ad1a767f345935e2834afd532e627a2bc069ca764b38fd97f189661a683",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/opensearch-application",
+      "terraform_type": "aws_opensearch_application",
+      "mode": "generated",
+      "schema_sha256": "sha256:ac73b41a8b487fd32c48203560bd6d336c72d44361be99791615f52f58956588",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/opensearch-domain",
+      "terraform_type": "aws_opensearch_domain",
+      "mode": "generated",
+      "schema_sha256": "sha256:b65ebfc1533f2adf9e9e4858e514a5d9d958fd357a700f58d8591e30369aab38",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/opensearch-outbound-connection",
+      "terraform_type": "aws_opensearch_outbound_connection",
+      "mode": "generated",
+      "schema_sha256": "sha256:e6a4690af10f6fa63e2f59968c0789aec23fc2ef759b2bb1afcb8cb92b979f80",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/opensearch-vpc-endpoint",
+      "terraform_type": "aws_opensearch_vpc_endpoint",
+      "mode": "generated",
+      "schema_sha256": "sha256:12ea2598feabbc1111a1d1eb57dae1b10b8914b813920b8568c6e9faa220d1da",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/opensearchserverless-collection",
+      "terraform_type": "aws_opensearchserverless_collection",
+      "mode": "generated",
+      "schema_sha256": "sha256:05f224cdc790e1848c7b4acab7f4a86e89a189ed1c2a04c60cdb8ceb9fefc833",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/opensearchserverless-collection-group",
+      "terraform_type": "aws_opensearchserverless_collection_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:5ccf2a08bc2b4b8023973c5d5656d003a5928c7cb7e9b4c2b6f6c4772ad02479",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/opensearchserverless-vpc-endpoint",
+      "terraform_type": "aws_opensearchserverless_vpc_endpoint",
+      "mode": "generated",
+      "schema_sha256": "sha256:9f85cf0d6ec963470e0e2addd64750c4225eb3d38b98c088ab574cb75937df1e",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/organizations-account",
+      "terraform_type": "aws_organizations_account",
+      "mode": "generated",
+      "schema_sha256": "sha256:d4a28e3390ba83ecefe51882a96ea44cff1820f6792f9b1a043b524bbfc68e32",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/organizations-organization",
+      "terraform_type": "aws_organizations_organization",
+      "mode": "generated",
+      "schema_sha256": "sha256:9a7b0ad29140c06e9fc8f6aa3bc1bd89c19b852db4e25d5bddb829f4c3778733",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/organizations-organizational-unit",
+      "terraform_type": "aws_organizations_organizational_unit",
+      "mode": "generated",
+      "schema_sha256": "sha256:67fe1e863648b49d0da8da6d4f2620886dc0fb4b5294f251b86735c1c0813d07",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/osis-pipeline",
+      "terraform_type": "aws_osis_pipeline",
+      "mode": "generated",
+      "schema_sha256": "sha256:9b9fa918bd9edf9537198fa94a78e789be0d8d9cad84df21525fca58eb93fc81",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/osis-pipeline-endpoint",
+      "terraform_type": "aws_osis_pipeline_endpoint",
+      "mode": "generated",
+      "schema_sha256": "sha256:f5a7192131eafca4e8116a0a16af111e4fb87722d7e86bc57601cd6e0301d5ed",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/paymentcryptography-key",
+      "terraform_type": "aws_paymentcryptography_key",
+      "mode": "generated",
+      "schema_sha256": "sha256:6628abdeb9203b545c6c675a55d5e84ecded90106ddb3cb3d0e0a0f871e537c4",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/pinpoint-adm-channel",
+      "terraform_type": "aws_pinpoint_adm_channel",
+      "mode": "authored",
+      "schema_sha256": "sha256:4e08bc292574e0f41bcdcb001de2ce7fa0a32252dbef81e24e34606a35a31aa1",
+      "paths": [
+        {
+          "path": "application_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/pinpoint-apns-channel",
+      "terraform_type": "aws_pinpoint_apns_channel",
+      "mode": "authored",
+      "schema_sha256": "sha256:23b6f79998805e16c3020e87f261985a823eb7653f840943b9fa27366ae6d2a1",
+      "paths": [
+        {
+          "path": "application_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/pinpoint-apns-sandbox-channel",
+      "terraform_type": "aws_pinpoint_apns_sandbox_channel",
+      "mode": "authored",
+      "schema_sha256": "sha256:23b6f79998805e16c3020e87f261985a823eb7653f840943b9fa27366ae6d2a1",
+      "paths": [
+        {
+          "path": "application_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/pinpoint-apns-voip-channel",
+      "terraform_type": "aws_pinpoint_apns_voip_channel",
+      "mode": "authored",
+      "schema_sha256": "sha256:23b6f79998805e16c3020e87f261985a823eb7653f840943b9fa27366ae6d2a1",
+      "paths": [
+        {
+          "path": "application_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/pinpoint-apns-voip-sandbox-channel",
+      "terraform_type": "aws_pinpoint_apns_voip_sandbox_channel",
+      "mode": "authored",
+      "schema_sha256": "sha256:23b6f79998805e16c3020e87f261985a823eb7653f840943b9fa27366ae6d2a1",
+      "paths": [
+        {
+          "path": "application_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/pinpoint-app",
+      "terraform_type": "aws_pinpoint_app",
+      "mode": "generated",
+      "schema_sha256": "sha256:6ca3b90af52301b8fe661c84983f01bd15f99f9b52de87c511c8bdd6c59278fc",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/pinpoint-baidu-channel",
+      "terraform_type": "aws_pinpoint_baidu_channel",
+      "mode": "authored",
+      "schema_sha256": "sha256:4ba83ec99506e032d018ff6a1dc156fadad85aad1047e9b24864063184ea2230",
+      "paths": [
+        {
+          "path": "application_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/pinpoint-email-channel",
+      "terraform_type": "aws_pinpoint_email_channel",
+      "mode": "authored",
+      "schema_sha256": "sha256:27b73eece25c742719b3fbf450e2b40419a304f058e25ef8618e67d1095aae48",
+      "paths": [
+        {
+          "path": "application_id",
+          "schema_sha256": "sha256:f9efe6d5f2dd11df5eee337949d92dc865f0b93828d829710fbb8a83113e2e89"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/pinpoint-event-stream",
+      "terraform_type": "aws_pinpoint_event_stream",
+      "mode": "authored",
+      "schema_sha256": "sha256:603fe6b040b0ade15d9e770e8722ad784c1e7664881fb1550fa4346bbacfe816",
+      "paths": [
+        {
+          "path": "application_id",
+          "schema_sha256": "sha256:f9efe6d5f2dd11df5eee337949d92dc865f0b93828d829710fbb8a83113e2e89"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/pinpoint-gcm-channel",
+      "terraform_type": "aws_pinpoint_gcm_channel",
+      "mode": "authored",
+      "schema_sha256": "sha256:a3b6fae53c2b8fac05169cf92bc18965cf8a297208827c3e256449d457f6db39",
+      "paths": [
+        {
+          "path": "application_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/pinpoint-sms-channel",
+      "terraform_type": "aws_pinpoint_sms_channel",
+      "mode": "authored",
+      "schema_sha256": "sha256:6167b7998447eec0b05881e114aff266516c2d7eb5f5a17ba0210c6c198d9fe3",
+      "paths": [
+        {
+          "path": "application_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/pinpointsmsvoicev2-pool",
+      "terraform_type": "aws_pinpointsmsvoicev2_pool",
+      "mode": "generated",
+      "schema_sha256": "sha256:ac30005abc85441bb01d7fdd07147c7451109f212a2166fa15a40f6b9f10f522",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/prometheus-anomaly-detector",
+      "terraform_type": "aws_prometheus_anomaly_detector",
+      "mode": "generated",
+      "schema_sha256": "sha256:789f8d7c781df93304b4a23fe886ab80dca2588cd9dfb07ed53f58e31b7c21d8",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/prometheus-workspace",
+      "terraform_type": "aws_prometheus_workspace",
+      "mode": "generated",
+      "schema_sha256": "sha256:613074dce49062efd55ca73ae288d9ceee63555a0d7bebf596840de97352b168",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/qbusiness-application",
+      "terraform_type": "aws_qbusiness_application",
+      "mode": "generated",
+      "schema_sha256": "sha256:c349dc23e0661d8b3d19313561d3f1d8edb8213a932b67914ac8164ffec3e6b2",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/qldb-stream",
+      "terraform_type": "aws_qldb_stream",
+      "mode": "generated",
+      "schema_sha256": "sha256:9851538fd8713f9ce529c54fa23f0cd6218deed7d4e97400c57e38c775c37259",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/quicksight-dashboard",
+      "terraform_type": "aws_quicksight_dashboard",
+      "mode": "generated",
+      "schema_sha256": "sha256:1a63a6aaa8e2559cc7ee90128960b7f87d62c65eeae9f55c24c33f1c0c1db7ed",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/quicksight-vpc-connection",
+      "terraform_type": "aws_quicksight_vpc_connection",
+      "mode": "generated",
+      "schema_sha256": "sha256:d74f5cdd7b34d0e44a0304ac2aee0c6d5dd64cb9525232b4af248b803bbea53e",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ram-sharing-with-organization",
+      "terraform_type": "aws_ram_sharing_with_organization",
+      "mode": "generated",
+      "schema_sha256": "sha256:0cec994dcefa61d60ba7dda579c7ff283d3faee6ce00e4429427408477af8235",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/rds-cluster",
+      "terraform_type": "aws_rds_cluster",
+      "mode": "authored",
+      "schema_sha256": "sha256:79d16697be33030eb12ede0baaff7e420880d8460a923120abfe3e7d7eacd3c8",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/rds-cluster-activity-stream",
+      "terraform_type": "aws_rds_cluster_activity_stream",
+      "mode": "authored",
+      "schema_sha256": "sha256:e305c6c5733667a00cfa9410ef7a1fd4893fcc5dff5e53821135a805d848e289",
+      "paths": [
+        {
+          "path": "resource_arn",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/rds-cluster-endpoint",
+      "terraform_type": "aws_rds_cluster_endpoint",
+      "mode": "authored",
+      "schema_sha256": "sha256:90b853598040579474f976ae462f4a1c63e90bb1f29f0971e1bad75dced87ab3",
+      "paths": [
+        {
+          "path": "cluster_identifier",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/rds-cluster-instance",
+      "terraform_type": "aws_rds_cluster_instance",
+      "mode": "authored",
+      "schema_sha256": "sha256:cd82bf4bddd1f8dbf8a9c206b0f571deac191e98916521c5f9dcf8d7f7059567",
+      "paths": [
+        {
+          "path": "cluster_identifier",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/rds-global-cluster",
+      "terraform_type": "aws_rds_global_cluster",
+      "mode": "generated",
+      "schema_sha256": "sha256:57f70e8287b6a138a4cc8e55c44bc884eef161e41ca7514bc75e3efeb8672ae3",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/redshift-cluster",
+      "terraform_type": "aws_redshift_cluster",
+      "mode": "generated",
+      "schema_sha256": "sha256:f370f8cea9a7da5372a5441b8facfa40ce5a7b8b8042837c5389da7786e3c910",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/redshift-idc-application",
+      "terraform_type": "aws_redshift_idc_application",
+      "mode": "generated",
+      "schema_sha256": "sha256:12894fbdf3a17a5315670a2d492fc65df296caa5472774a5c712ba21de9d30c9",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/rekognition-collection",
+      "terraform_type": "aws_rekognition_collection",
+      "mode": "generated",
+      "schema_sha256": "sha256:c9f00d485a2981bb341f6f876a46eeac2cfaa80cacf6cdf5f9197fdd5e7af496",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/rekognition-project",
+      "terraform_type": "aws_rekognition_project",
+      "mode": "generated",
+      "schema_sha256": "sha256:db9d172509311adc1e4f0ed41da2847e351b8fe1719163f75c9ddda3a3868699",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/resiliencehubv2-service",
+      "terraform_type": "aws_resiliencehubv2_service",
+      "mode": "generated",
+      "schema_sha256": "sha256:95f33a15c94e79718141697e32d4dc02ef99dfbd9638daf003cefaadc0ad3bcc",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/resiliencehubv2-service-function",
+      "terraform_type": "aws_resiliencehubv2_service_function",
+      "mode": "generated",
+      "schema_sha256": "sha256:f5e0c7d36cee819623f4fa9e956cb96b9c330d34ce735e353ff06c9c4b7fb944",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/resourceexplorer2-index",
+      "terraform_type": "aws_resourceexplorer2_index",
+      "mode": "generated",
+      "schema_sha256": "sha256:f7487ac7eae82c73f7e23364c8ef620fe82997d0c4b7a39ff60e5b9ed9fea4ff",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/resourcegroups-group",
+      "terraform_type": "aws_resourcegroups_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:0dcc8aabb1fdc287ba6698e38321e2164945968efe41b2294256eeec292e5de4",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/rolesanywhere-profile",
+      "terraform_type": "aws_rolesanywhere_profile",
+      "mode": "generated",
+      "schema_sha256": "sha256:2dd4f535be837273788ce6fcc05a35b956400f41c025952b1de2678019f8f9c0",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/route-table",
+      "terraform_type": "aws_route_table",
+      "mode": "authored",
+      "schema_sha256": "sha256:1e1fefbe3a4093bcc551b687ac97882d52196cb6c99ae3bc807da6db8d8c1e2a",
+      "paths": [
+        {
+          "path": "vpc_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/route53-cidr-collection",
+      "terraform_type": "aws_route53_cidr_collection",
+      "mode": "generated",
+      "schema_sha256": "sha256:4442f121ff698e3028a28081992c4c059918f99a9a4eb330779cbb793b2917d5",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/route53-key-signing-key",
+      "terraform_type": "aws_route53_key_signing_key",
+      "mode": "generated",
+      "schema_sha256": "sha256:910a42c50791989f3a80b043b26b9d864e38e752263b6ab243375701c1449e04",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/route53-resolver-endpoint",
+      "terraform_type": "aws_route53_resolver_endpoint",
+      "mode": "generated",
+      "schema_sha256": "sha256:46b73d313a2d7ebc51d66b39c3df1bdfaa5e157512be0c5afdf197b359d3a380",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/route53-resolver-firewall-rule-group",
+      "terraform_type": "aws_route53_resolver_firewall_rule_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:a137dfab6e7d80d61e99605bc2143ab79837a771b0e80da379b3021ade6785a2",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/route53-traffic-policy-instance",
+      "terraform_type": "aws_route53_traffic_policy_instance",
+      "mode": "generated",
+      "schema_sha256": "sha256:42b3c9ad2059e85cde4a82a13148daec6ed2581879075396bc948a3290b18814",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/route53-zone",
+      "terraform_type": "aws_route53_zone",
+      "mode": "generated",
+      "schema_sha256": "sha256:5a053acc1164305baaeb3c13b3991daa6c4398044059e5ec0dd7b810d80cfd9f",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/route53domains-domain",
+      "terraform_type": "aws_route53domains_domain",
+      "mode": "generated",
+      "schema_sha256": "sha256:9eb20a24b2eb09438e3c262e755d28ccf8ffb19d9fe52cc7faf1aa9083417268",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/route53domains-registered-domain",
+      "terraform_type": "aws_route53domains_registered_domain",
+      "mode": "generated",
+      "schema_sha256": "sha256:ed44a2aab10edc0f3274dbd6095434281e3b3db073d2cdf057619ebce5cf61a0",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/route53profiles-profile",
+      "terraform_type": "aws_route53profiles_profile",
+      "mode": "generated",
+      "schema_sha256": "sha256:58332181269d973b5181f58cff357ac6f4e846ac1da5826e29f39b32eba15c65",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/route53recoverycontrolconfig-cluster",
+      "terraform_type": "aws_route53recoverycontrolconfig_cluster",
+      "mode": "generated",
+      "schema_sha256": "sha256:a60917e7538a0b104904e9bf7de10ae6268b241b2babfb75cc4b26c06a2e0832",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/route53recoveryreadiness-recovery-group",
+      "terraform_type": "aws_route53recoveryreadiness_recovery_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:46b8418e0dc8fe4028e532d65def62474f75ccfaecabc62e3a7733e2693f7495",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/rum-app-monitor",
+      "terraform_type": "aws_rum_app_monitor",
+      "mode": "generated",
+      "schema_sha256": "sha256:019b1f40c1098d2891f80f5efc097cb565af56771841f6756a23bc2d59af3a6a",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/s3-access-point",
+      "terraform_type": "aws_s3_access_point",
+      "mode": "generated",
+      "schema_sha256": "sha256:a30cc5e1eaae148c364f4b16bf2028d220d8939515b7f06683be48d76d905946",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/s3-bucket",
+      "terraform_type": "aws_s3_bucket",
+      "mode": "authored",
+      "schema_sha256": "sha256:c00cd93a17c3b7c9a99823cad605de406a3a2a04e56fa5135f9ed9836b15ca1b",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/s3-bucket-server-side-encryption-configuration",
+      "terraform_type": "aws_s3_bucket_server_side_encryption_configuration",
+      "mode": "authored",
+      "schema_sha256": "sha256:d41c0af4f6ad5c7dca85d083552f1b1342f9b13ab1e24fad1539d1a1d2881a07",
+      "paths": [
+        {
+          "path": "bucket",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/s3-bucket-versioning",
+      "terraform_type": "aws_s3_bucket_versioning",
+      "mode": "authored",
+      "schema_sha256": "sha256:2661cddd7ce7febdfa5a09e1512734bf2049a7994ce2cc727a880f62b05c0027",
+      "paths": [
+        {
+          "path": "bucket",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/s3-directory-bucket",
+      "terraform_type": "aws_s3_directory_bucket",
+      "mode": "generated",
+      "schema_sha256": "sha256:53be127d3b021d927cf00fd0d5e42c6b45c689ea9c63fc8f07d0edecc4c0d553",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/s3control-access-grants-instance",
+      "terraform_type": "aws_s3control_access_grants_instance",
+      "mode": "generated",
+      "schema_sha256": "sha256:3bd5e300c0e010e298161954bab415861230320d9287c836092bebd69d22fe6f",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/s3control-bucket",
+      "terraform_type": "aws_s3control_bucket",
+      "mode": "generated",
+      "schema_sha256": "sha256:92ff8a638cb44201a2a6c8c45d4d4e6cd90f0c9870eb786f811c7d4ab4deda3c",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/s3control-multi-region-access-point",
+      "terraform_type": "aws_s3control_multi_region_access_point",
+      "mode": "generated",
+      "schema_sha256": "sha256:5b862d37d05c1a0cb3f62a702191f04ea48c1ca6ac5f9e292f9a7ca11a937887",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/s3control-object-lambda-access-point",
+      "terraform_type": "aws_s3control_object_lambda_access_point",
+      "mode": "generated",
+      "schema_sha256": "sha256:4fc7d91482cb5d38d7439813317b43cbef28f8c9d3fecbebd54454a1441c6f26",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/s3files-access-point",
+      "terraform_type": "aws_s3files_access_point",
+      "mode": "generated",
+      "schema_sha256": "sha256:5e9cf90292c9f0cbd75120a7f3d9e27818460c91c63d22701bedd1341adc0fdc",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/s3files-file-system",
+      "terraform_type": "aws_s3files_file_system",
+      "mode": "generated",
+      "schema_sha256": "sha256:cf4d3d55999eab0d0a9e2d2341f374ad391527f82d0213a244ca3fec4e435fe7",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/s3outposts-endpoint",
+      "terraform_type": "aws_s3outposts_endpoint",
+      "mode": "generated",
+      "schema_sha256": "sha256:ee73421e4bae43b57de76e8ceff5d67d6e11d5313b8699f18d3a2380baff21bb",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/s3tables-table",
+      "terraform_type": "aws_s3tables_table",
+      "mode": "generated",
+      "schema_sha256": "sha256:87b61d3d5dbbc6bbe76618da694dcfbe61ffdb7864dd0db181a92aa82dd5f272",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/s3tables-table-bucket",
+      "terraform_type": "aws_s3tables_table_bucket",
+      "mode": "generated",
+      "schema_sha256": "sha256:028c98a55ca334ee81c689e43843862ed398a39b19f1336260e0bc76b81427a5",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/s3vectors-index",
+      "terraform_type": "aws_s3vectors_index",
+      "mode": "generated",
+      "schema_sha256": "sha256:79340c5d5c3100d89df19a661baca1154b26c3464243e3a658c564c49dc0cf26",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/s3vectors-vector-bucket",
+      "terraform_type": "aws_s3vectors_vector_bucket",
+      "mode": "generated",
+      "schema_sha256": "sha256:e6feb182e37e9efbe1db7346fe9e1e1d445b6c4cee501dd39f3e8345363669d3",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/sagemaker-code-repository",
+      "terraform_type": "aws_sagemaker_code_repository",
+      "mode": "generated",
+      "schema_sha256": "sha256:0f949700ca662611a7b73fff3bf2d02ed2a775141d110f38c789b88b094b637e",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/sagemaker-device-fleet",
+      "terraform_type": "aws_sagemaker_device_fleet",
+      "mode": "generated",
+      "schema_sha256": "sha256:44a90810c4d118766a90c1946e2f72b51e0196730ee213d590b7fc383332027f",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/sagemaker-domain",
+      "terraform_type": "aws_sagemaker_domain",
+      "mode": "generated",
+      "schema_sha256": "sha256:89f4b12c3d8762b7bac1d4d48d3f627076c4d74046983cb3ecb77fc1a81fa396",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/sagemaker-endpoint",
+      "terraform_type": "aws_sagemaker_endpoint",
+      "mode": "generated",
+      "schema_sha256": "sha256:c1995e8242ada37fe7b86f48d0160268203cac94ed442ff16083e0634e3fc488",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/sagemaker-feature-group",
+      "terraform_type": "aws_sagemaker_feature_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:6c6d74420acd83da6487c654bc292b2281f7cd486562a2cdf0e970ae9d0ec26f",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/sagemaker-hub",
+      "terraform_type": "aws_sagemaker_hub",
+      "mode": "generated",
+      "schema_sha256": "sha256:b365805b0cf10ec12d9dea724b7d99dd523369f2c50bf082b711f252a07076e1",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/sagemaker-model",
+      "terraform_type": "aws_sagemaker_model",
+      "mode": "generated",
+      "schema_sha256": "sha256:d34faa81d2db149d28a8762926b8cd8504ac8f30872937a1025cfac6e0119f76",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/sagemaker-model-package-group",
+      "terraform_type": "aws_sagemaker_model_package_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:884e0700abe6ec8a7c63622aa3a06c9d835efd04aa5ba46eee93cb51c0d3ae16",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/sagemaker-notebook-instance",
+      "terraform_type": "aws_sagemaker_notebook_instance",
+      "mode": "generated",
+      "schema_sha256": "sha256:fea9f1a06224b1e6630c2b35fe94a05a229ed0117efe23e52b7031ccf15ee606",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/sagemaker-pipeline",
+      "terraform_type": "aws_sagemaker_pipeline",
+      "mode": "generated",
+      "schema_sha256": "sha256:85345f221b9768e22944d33562afdb72fdb1d263b33080de73c066168ea812f5",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/sagemaker-project",
+      "terraform_type": "aws_sagemaker_project",
+      "mode": "generated",
+      "schema_sha256": "sha256:d7e7c3165baf5675a20edbb2e6276ac4d7c74aee44652454474c67cc35c776eb",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/scheduler-schedule-group",
+      "terraform_type": "aws_scheduler_schedule_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:aac05bb87d2dbb3ea78b9d271e02585cf11140eefae7156046f468b1d037b1e2",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/secretsmanager-secret",
+      "terraform_type": "aws_secretsmanager_secret",
+      "mode": "authored",
+      "schema_sha256": "sha256:550443ee1ba5feaf481e36e7d888270a3d1cda8a25404f50fd609fc5108c5033",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/security-group",
+      "terraform_type": "aws_security_group",
+      "mode": "authored",
+      "schema_sha256": "sha256:8b8954ed23f3e52aa0dc43948ddf8f6132de750e2eddb6d107a4d567d669073e",
+      "paths": [
+        {
+          "path": "vpc_id",
+          "schema_sha256": "sha256:3700901cbc85301f87b410e86abbc79c3a89026b887a36a0681c32c4d03f93e9"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/securitylake-data-lake",
+      "terraform_type": "aws_securitylake_data_lake",
+      "mode": "generated",
+      "schema_sha256": "sha256:4d69790c9ac2471ba3d42d6609b7e6c897175915ad40207e1e493cdcd5c03fef",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/service-discovery-instance",
+      "terraform_type": "aws_service_discovery_instance",
+      "mode": "generated",
+      "schema_sha256": "sha256:973b41604937a75a8e4d21294cd352b536d683bdd25c031796879ca3bcc71987",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/service-discovery-service",
+      "terraform_type": "aws_service_discovery_service",
+      "mode": "generated",
+      "schema_sha256": "sha256:c20e39d15a77e80449256da26eca152038104f2bfa3b3abddb36b507b975f278",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/servicecatalog-portfolio",
+      "terraform_type": "aws_servicecatalog_portfolio",
+      "mode": "generated",
+      "schema_sha256": "sha256:a49a7c45abf176ef95ec4b68cb6068c82dceba98ce87c61233e9d416f9e757ed",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/servicecatalog-product",
+      "terraform_type": "aws_servicecatalog_product",
+      "mode": "generated",
+      "schema_sha256": "sha256:87aa9c81d65d50e96727b3c230b33f3819f86f50f3633a3acea2877f5b3fbdec",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/servicecatalog-provisioned-product",
+      "terraform_type": "aws_servicecatalog_provisioned_product",
+      "mode": "generated",
+      "schema_sha256": "sha256:1a873d16a407c6e52cb79a7f7421d08ade1b7866d173543fe44a724497100ff3",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/servicecatalogappregistry-application",
+      "terraform_type": "aws_servicecatalogappregistry_application",
+      "mode": "generated",
+      "schema_sha256": "sha256:4932e0558919aa2b265e97ac97527addb9c240dd7cf593958479e1dd213e069f",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ses-identity-notification-topic",
+      "terraform_type": "aws_ses_identity_notification_topic",
+      "mode": "generated",
+      "schema_sha256": "sha256:e194982c5ecb81682e9c05869ed3ad11a2e6edf361e5f998a7584cde2e01c57b",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/sesv2-dedicated-ip-pool",
+      "terraform_type": "aws_sesv2_dedicated_ip_pool",
+      "mode": "generated",
+      "schema_sha256": "sha256:851a3a5a127408fae810c5e622b054f37711d6740f06d8fe830b1092ca82a2d0",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/sesv2-multi-region-endpoint",
+      "terraform_type": "aws_sesv2_multi_region_endpoint",
+      "mode": "generated",
+      "schema_sha256": "sha256:1440c9cf72503f1d623f3b9d22c74675ecba8f1f3b6e977c408308bb66e8401c",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/sfn-state-machine",
+      "terraform_type": "aws_sfn_state_machine",
+      "mode": "generated",
+      "schema_sha256": "sha256:0d618c9c294f513008273f14fb08196f306e5133bc6e88ac4aa78744a40317c9",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/shield-protection-group",
+      "terraform_type": "aws_shield_protection_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:90ba78d2710c6a9b170259d60ecacdd8eb5ad8db9f4f03724a8208db90ec495b",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/signer-signing-profile",
+      "terraform_type": "aws_signer_signing_profile",
+      "mode": "generated",
+      "schema_sha256": "sha256:1bc3f6ef9de2bac936a8a5f26eaf5200e7bfd349d4a4d2694fa93eff68f32fe0",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/sns-platform-application",
+      "terraform_type": "aws_sns_platform_application",
+      "mode": "generated",
+      "schema_sha256": "sha256:789b7b953ac8c38b59c99b64b55329a4cff8e923c5bb3241b214849f4d5c03b8",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/sns-topic",
+      "terraform_type": "aws_sns_topic",
+      "mode": "authored",
+      "schema_sha256": "sha256:fdb34b947d0c44d0b5b97f1af281c91f63b54f9eab189a00b7cf14a32c20fafd",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/sns-topic-subscription",
+      "terraform_type": "aws_sns_topic_subscription",
+      "mode": "authored",
+      "schema_sha256": "sha256:5e5c7e29c24c1d787515e311d43db523f28394f3c3855d135b5cb00498965411",
+      "paths": [
+        {
+          "path": "topic_arn",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/sqs-queue",
+      "terraform_type": "aws_sqs_queue",
+      "mode": "authored",
+      "schema_sha256": "sha256:6702e227540b3f0fcbde7e4b0e6c033a7f0cb9bb3521e68a18c0a8458b145378",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ssm-parameter",
+      "terraform_type": "aws_ssm_parameter",
+      "mode": "generated",
+      "schema_sha256": "sha256:a015a8be44764c36b5bae33993220b89d69fa568330899a48263210dda318fb5",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ssmcontacts-contact-channel",
+      "terraform_type": "aws_ssmcontacts_contact_channel",
+      "mode": "generated",
+      "schema_sha256": "sha256:b11c587e07af8915bb7d6d9fef3bc9710e805437643ef94976a3c3eab69a844a",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/ssoadmin-application",
+      "terraform_type": "aws_ssoadmin_application",
+      "mode": "generated",
+      "schema_sha256": "sha256:d3348926b67abc008adea81f6a3ecf6a285fb3962e515872a8580a0979103cdd",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/storagegateway-cached-iscsi-volume",
+      "terraform_type": "aws_storagegateway_cached_iscsi_volume",
+      "mode": "generated",
+      "schema_sha256": "sha256:7473103cbed728f6c6bce889a22c26d01d552b64d6caaa15a06a5fb419550b0c",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/storagegateway-gateway",
+      "terraform_type": "aws_storagegateway_gateway",
+      "mode": "generated",
+      "schema_sha256": "sha256:ab357d1bdc261f868e96cf9eabad15cc72ef137279bc9a9e7c1900b18149a4c5",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/storagegateway-stored-iscsi-volume",
+      "terraform_type": "aws_storagegateway_stored_iscsi_volume",
+      "mode": "generated",
+      "schema_sha256": "sha256:3ec101fe551dc4b2e58046b56f28e76f03d70d94bdc2fd0e79aaf45f04412b80",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/storagegateway-tape-pool",
+      "terraform_type": "aws_storagegateway_tape_pool",
+      "mode": "generated",
+      "schema_sha256": "sha256:8e7f579806ac4ee44c67e552e21aba5ad05f34a2c45f759070d20343c0a00c26",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/subnet",
+      "terraform_type": "aws_subnet",
+      "mode": "authored",
+      "schema_sha256": "sha256:32c7e766f6045294eaeb451b0a1958b62cf8ed4c375063d814965d3e8721bfdb",
+      "paths": [
+        {
+          "path": "vpc_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/swf-domain",
+      "terraform_type": "aws_swf_domain",
+      "mode": "generated",
+      "schema_sha256": "sha256:7b99e596809373842cac41c2665461a19ae52dc610aaa0f41fceb75928c5bb15",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/synthetics-canary",
+      "terraform_type": "aws_synthetics_canary",
+      "mode": "generated",
+      "schema_sha256": "sha256:df6cf08fb5d320ab58fa02f247c297d9b219a36a3759223e560b35dbad5b5b96",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/timestreaminfluxdb-db-cluster",
+      "terraform_type": "aws_timestreaminfluxdb_db_cluster",
+      "mode": "generated",
+      "schema_sha256": "sha256:fa259a494b7a633b61658044575260a25fe1fdc1711737f9794a2298545e06a5",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/timestreaminfluxdb-db-instance",
+      "terraform_type": "aws_timestreaminfluxdb_db_instance",
+      "mode": "generated",
+      "schema_sha256": "sha256:fd99b746df49e36b043bdc701e0d6bafbbc832884f90687acd93fa543762dbd1",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/timestreamwrite-database",
+      "terraform_type": "aws_timestreamwrite_database",
+      "mode": "generated",
+      "schema_sha256": "sha256:c9782e2208585bd149da09c76d9281d80973b5db378d6a04783388bbc42f7bd1",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/timestreamwrite-table",
+      "terraform_type": "aws_timestreamwrite_table",
+      "mode": "generated",
+      "schema_sha256": "sha256:048acab081dbd55feebfda001d340d7591a69956c757c260dfd4ec29e27286fd",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/transcribe-language-model",
+      "terraform_type": "aws_transcribe_language_model",
+      "mode": "generated",
+      "schema_sha256": "sha256:00ef9c2749a86a4b404385b5c187ab17b297c12053feebbec231f2c7b296ef21",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/transfer-connector",
+      "terraform_type": "aws_transfer_connector",
+      "mode": "generated",
+      "schema_sha256": "sha256:3f1ab2fe8ddd3f260252cd4cd5cc103097640b1e7b3b73ad7bc8b9f5b4d17d7c",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/transfer-server",
+      "terraform_type": "aws_transfer_server",
+      "mode": "generated",
+      "schema_sha256": "sha256:fbc4bbdffac9c83594afe61bd6b5e225f0af0011010f5ced412e017455d2a24b",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/transfer-workflow",
+      "terraform_type": "aws_transfer_workflow",
+      "mode": "generated",
+      "schema_sha256": "sha256:e0a49148c1ddef6e5b47bed179d4efd1d1e0e9557cf6f948c4e1f43c7c1d2928",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/verifiedaccess-endpoint",
+      "terraform_type": "aws_verifiedaccess_endpoint",
+      "mode": "generated",
+      "schema_sha256": "sha256:13c0230ef27d2a91d0628ee22713a536ebf7abde2cf277497ee347f1d0d92e4e",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/verifiedaccess-group",
+      "terraform_type": "aws_verifiedaccess_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:310ffa6f159cda8851ddd9d4e883f208e36f6321236df63c3f86b93379031c56",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/verifiedaccess-instance",
+      "terraform_type": "aws_verifiedaccess_instance",
+      "mode": "generated",
+      "schema_sha256": "sha256:64e14406dfaac80aedb6a5b729ef8bfdf1c851331f3f29c45a0f858e8445bef6",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/verifiedpermissions-policy-store",
+      "terraform_type": "aws_verifiedpermissions_policy_store",
+      "mode": "generated",
+      "schema_sha256": "sha256:0288a257398e6bed4280413ede40d2076f5b8f5bc3254e333d6e236ddbb386fd",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/vpc",
+      "terraform_type": "aws_vpc",
+      "mode": "authored",
+      "schema_sha256": "sha256:7afe12f7683d6caaef85f93a5bea8080b7f8e8755d2758ec17a47132cb9447c3",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/vpc-endpoint",
+      "terraform_type": "aws_vpc_endpoint",
+      "mode": "authored",
+      "schema_sha256": "sha256:3893ed3c0d17204088dffce9eb4bf5fab1864b2da7d599c5a1f21feeb652645c",
+      "paths": [
+        {
+          "path": "vpc_id",
+          "schema_sha256": "sha256:061d40f4010045026076495d82b23d97221c629fa82331cb370778af40788256"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/vpc-endpoint-service",
+      "terraform_type": "aws_vpc_endpoint_service",
+      "mode": "generated",
+      "schema_sha256": "sha256:9bc1df0f33779f950fdffa9659aee4fdeedb241336c08b83acaf6044f8d073a9",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/vpc-ipam-pool",
+      "terraform_type": "aws_vpc_ipam_pool",
+      "mode": "generated",
+      "schema_sha256": "sha256:311ccb31ed9e15bb54a2aac65bba36f71dd202d06c6a1e3398b41933a2a7e62f",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/vpc-peering-connection",
+      "terraform_type": "aws_vpc_peering_connection",
+      "mode": "authored",
+      "schema_sha256": "sha256:ae60bf4557a93de62190996e041c8508326bbfc2a5cf2f048a67d15e6ffb1978",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/vpc-route-server-endpoint",
+      "terraform_type": "aws_vpc_route_server_endpoint",
+      "mode": "generated",
+      "schema_sha256": "sha256:4c5b10f6967477c456a7f6f9d60de820ad6bc1643748a06f7b74c7c2d6ccaf74",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/vpclattice-resource-gateway",
+      "terraform_type": "aws_vpclattice_resource_gateway",
+      "mode": "generated",
+      "schema_sha256": "sha256:a5c0bee69bc80986e36fd5da60994d594a5969b38e6dc7e69b8068babfcf2a4d",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/vpclattice-service",
+      "terraform_type": "aws_vpclattice_service",
+      "mode": "generated",
+      "schema_sha256": "sha256:e9617d85be2217237c87e242357a1cd7e4615987a3603cf1db4de5ee6750642e",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/vpclattice-service-network",
+      "terraform_type": "aws_vpclattice_service_network",
+      "mode": "generated",
+      "schema_sha256": "sha256:ffa36a28c9d0c9b25e62d02cb60daa3a0e1250054587177bd26e4501f455e49b",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/vpclattice-target-group",
+      "terraform_type": "aws_vpclattice_target_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:d5393366ace091cfd473f5ea2d41a67bc5f20bfab500ab109d45c1c715c0d913",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/vpn-connection",
+      "terraform_type": "aws_vpn_connection",
+      "mode": "authored",
+      "schema_sha256": "sha256:64a14e903c47162ecea81e613397ee591c3780ba84d0cd144ad4705c9464abba",
+      "paths": [
+        {
+          "path": "transit_gateway_id",
+          "schema_sha256": "sha256:4f3c67cce362cafa252e91dc8f8ecae441bf0b0c63810fac255a07ab4b85aa40"
+        },
+        {
+          "path": "vpn_gateway_id",
+          "schema_sha256": "sha256:4f3c67cce362cafa252e91dc8f8ecae441bf0b0c63810fac255a07ab4b85aa40"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/vpn-gateway",
+      "terraform_type": "aws_vpn_gateway",
+      "mode": "authored",
+      "schema_sha256": "sha256:953fc8907960ea9eb8f9bfd571132cf23779c165d93bcd783aad31c9acc969a0",
+      "paths": [
+        {
+          "path": "vpc_id",
+          "schema_sha256": "sha256:3700901cbc85301f87b410e86abbc79c3a89026b887a36a0681c32c4d03f93e9"
+        }
+      ],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/waf-rule-group",
+      "terraform_type": "aws_waf_rule_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:ef37099b982c56c72c89d845c16e68e6be0ef986420d8b7ce0778c45b308b645",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/wafregional-rule-group",
+      "terraform_type": "aws_wafregional_rule_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:bdae52e61612bad4421d41ea2a1f50b4cbbe93af53e8f63959f63996b54fbc0b",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/wafv2-rule-group",
+      "terraform_type": "aws_wafv2_rule_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:c9d25b2ced7c393b639bad4197db2aa059bf17c7acaeaea56d599e90859567d0",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/workmail-default-domain",
+      "terraform_type": "aws_workmail_default_domain",
+      "mode": "generated",
+      "schema_sha256": "sha256:1eaf6636d4767b7166a7c7459462dbb7d75f49c450640572ff76a689f7a5031a",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/workmail-domain",
+      "terraform_type": "aws_workmail_domain",
+      "mode": "generated",
+      "schema_sha256": "sha256:aaa83611af8bb6cdcd4e7333816958c592b44b01a9eeb6ea30f83a27c93b2174",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/workmail-organization",
+      "terraform_type": "aws_workmail_organization",
+      "mode": "generated",
+      "schema_sha256": "sha256:b7b49a2a0a007d77a569ea1021e0c67c4657d6e3af688cf963a0f6ff7b0fda08",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/workspaces-pool",
+      "terraform_type": "aws_workspaces_pool",
+      "mode": "generated",
+      "schema_sha256": "sha256:7a97c9329c633383e411f9a9d86dfe93653bfb1b29a8f713bb65eb7007136478",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/workspaces-workspace",
+      "terraform_type": "aws_workspaces_workspace",
+      "mode": "generated",
+      "schema_sha256": "sha256:40e1de6022f955011fce3500f1a9c83def32087b034da78fbd6069c01bf7a63a",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/workspacesweb-trust-store",
+      "terraform_type": "aws_workspacesweb_trust_store",
+      "mode": "generated",
+      "schema_sha256": "sha256:eded1e99623ed8341e1234bc517221fb2691425ec23cf840bee083d9ee7d2ac0",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    },
+    {
+      "rule_id": "aws/xray-group",
+      "terraform_type": "aws_xray_group",
+      "mode": "generated",
+      "schema_sha256": "sha256:3d665e09268a2e4d300b06c8cf004707f1fa7208cbd882cb556d1f35fa000ceb",
+      "paths": [],
+      "semantics": "verified-at-exact-baseline"
+    }
+  ]
+}

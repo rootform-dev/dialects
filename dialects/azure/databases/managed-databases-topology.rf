@@ -1,0 +1,64 @@
+rule "postgresql-flexible-server" {
+  match {
+    kind = "resource"
+    type = "azurerm_postgresql_flexible_server"
+  }
+
+  as = concept.core.managed-database
+
+  relation "private-reachability" {
+    to  = concept.core.subnet
+    via = source.delegated_subnet_id
+  }
+
+  relation "private-name-resolution" {
+    to  = concept.core.dns-zone
+    via = source.private_dns_zone_id
+  }
+
+  context {
+    as  = context.core.ownership
+    to  = concept.resource-group
+    via = source.resource_group_name
+
+    match {
+      by       = target.name
+      strategy = "exact"
+    }
+  }
+}
+
+rule "mssql-server" {
+  match {
+    kind = "resource"
+    type = "azurerm_mssql_server"
+  }
+
+  as = concept.sql-server
+
+  context {
+    as  = context.core.ownership
+    to  = concept.resource-group
+    via = source.resource_group_name
+
+    match {
+      by       = target.name
+      strategy = "exact"
+    }
+  }
+}
+
+rule "mssql-database" {
+  match {
+    kind = "resource"
+    type = "azurerm_mssql_database"
+  }
+
+  as = concept.core.managed-database
+
+  context {
+    as  = context.core.ownership
+    to  = concept.sql-server
+    via = source.server_id
+  }
+}

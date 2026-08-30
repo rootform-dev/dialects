@@ -1,0 +1,40 @@
+concept "identity-extension" {
+  kind        = entity
+  description = "An Auth0 Action, Rule, or Hook executing custom identity logic."
+}
+
+rule "action" {
+  match {
+    kind = "resource"
+    type = "auth0_action"
+  }
+
+  as = concept.identity-extension
+}
+
+rule "action-lookup" {
+  match {
+    kind = "data"
+    type = "auth0_action"
+  }
+
+  as = concept.identity-extension
+}
+
+rule "hook" {
+  match {
+    kind = "resource"
+    type = "auth0_hook"
+  }
+
+  as = concept.identity-extension
+}
+
+rule "rule" {
+  match {
+    kind = "resource"
+    type = "auth0_rule"
+  }
+
+  as = concept.identity-extension
+}

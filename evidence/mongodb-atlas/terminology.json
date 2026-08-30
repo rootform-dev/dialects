@@ -1,0 +1,589 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-29",
+  "dialect": "mongodb-atlas",
+  "product_name": "MongoDB Atlas",
+  "rules": [
+    {
+      "id": "mongodb-atlas/advanced-cluster",
+      "terraform_type": "mongodbatlas_advanced_cluster",
+      "label": "MongoDB Atlas cluster",
+      "product": "MongoDB Atlas database deployments",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/advanced_cluster.md"
+    },
+    {
+      "id": "mongodb-atlas/ai-model-rate-limit",
+      "terraform_type": "mongodbatlas_ai_model_rate_limit",
+      "label": "MongoDB Atlas AI model rate limit",
+      "product": "MongoDB Search and Vector Search",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/ai_model_rate_limit.md"
+    },
+    {
+      "id": "mongodb-atlas/alert-configuration",
+      "terraform_type": "mongodbatlas_alert_configuration",
+      "label": "MongoDB Atlas alert configuration",
+      "product": "MongoDB Atlas observability and integrations",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/alert_configuration.md"
+    },
+    {
+      "id": "mongodb-atlas/api-key-project-assignment",
+      "terraform_type": "mongodbatlas_api_key_project_assignment",
+      "label": "Atlas API key project assignment",
+      "product": "MongoDB Atlas identity and access management",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/api_key_project_assignment.md"
+    },
+    {
+      "id": "mongodb-atlas/auditing",
+      "terraform_type": "mongodbatlas_auditing",
+      "label": "MongoDB Atlas database auditing",
+      "product": "Encryption at Rest using Customer Key Management",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/auditing.md"
+    },
+    {
+      "id": "mongodb-atlas/backup-compliance-policy",
+      "terraform_type": "mongodbatlas_backup_compliance_policy",
+      "label": "Atlas backup compliance policy",
+      "product": "MongoDB Atlas Cloud Backups",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/backup_compliance_policy.md"
+    },
+    {
+      "id": "mongodb-atlas/cloud-backup-export-destination",
+      "terraform_type": "mongodbatlas_cloud_backup_snapshot_export_bucket",
+      "label": "Atlas cloud backup export destination",
+      "product": "MongoDB Atlas Cloud Backups",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/cloud_backup_snapshot_export_bucket.md"
+    },
+    {
+      "id": "mongodb-atlas/cloud-backup-schedule",
+      "terraform_type": "mongodbatlas_cloud_backup_schedule",
+      "label": "Atlas cloud backup schedule",
+      "product": "MongoDB Atlas Cloud Backups",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/cloud_backup_schedule.md"
+    },
+    {
+      "id": "mongodb-atlas/cloud-provider-access-authorization",
+      "terraform_type": "mongodbatlas_cloud_provider_access_authorization",
+      "label": "Atlas cloud provider access authorization",
+      "product": "MongoDB Atlas identity and access management",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/cloud_provider_access_authorization.md"
+    },
+    {
+      "id": "mongodb-atlas/cloud-provider-access-setup",
+      "terraform_type": "mongodbatlas_cloud_provider_access_setup",
+      "label": "Atlas cloud provider access setup",
+      "product": "MongoDB Atlas identity and access management",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/cloud_provider_access_setup.md"
+    },
+    {
+      "id": "mongodb-atlas/cloud-user-organization-assignment",
+      "terraform_type": "mongodbatlas_cloud_user_org_assignment",
+      "label": "Atlas user organization assignment",
+      "product": "MongoDB Atlas identity and access management",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/cloud_user_org_assignment.md"
+    },
+    {
+      "id": "mongodb-atlas/cloud-user-project-assignment",
+      "terraform_type": "mongodbatlas_cloud_user_project_assignment",
+      "label": "Atlas user project assignment",
+      "product": "MongoDB Atlas identity and access management",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/cloud_user_project_assignment.md"
+    },
+    {
+      "id": "mongodb-atlas/cloud-user-team-assignment",
+      "terraform_type": "mongodbatlas_cloud_user_team_assignment",
+      "label": "Atlas user team assignment",
+      "product": "MongoDB Atlas identity and access management",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/cloud_user_team_assignment.md"
+    },
+    {
+      "id": "mongodb-atlas/cluster",
+      "terraform_type": "mongodbatlas_cluster",
+      "label": "MongoDB Atlas cluster (legacy resource)",
+      "product": "MongoDB Atlas database deployments",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/cluster.md"
+    },
+    {
+      "id": "mongodb-atlas/custom-database-role",
+      "terraform_type": "mongodbatlas_custom_db_role",
+      "label": "Atlas custom database role",
+      "product": "MongoDB Atlas identity and access management",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/custom_db_role.md"
+    },
+    {
+      "id": "mongodb-atlas/custom-dns-configuration-aws",
+      "terraform_type": "mongodbatlas_custom_dns_configuration_cluster_aws",
+      "label": "Atlas custom DNS configuration for AWS",
+      "product": "MongoDB Atlas networking and private endpoints",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/custom_dns_configuration_cluster_aws.md"
+    },
+    {
+      "id": "mongodb-atlas/data-service-private-endpoint",
+      "terraform_type": "mongodbatlas_privatelink_endpoint_service_data_federation_online_archive",
+      "label": "Atlas Data Federation and Online Archive private endpoint",
+      "product": "MongoDB Atlas Data Federation and Online Archive",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/privatelink_endpoint_service_data_federation_online_archive.md"
+    },
+    {
+      "id": "mongodb-atlas/database-user",
+      "terraform_type": "mongodbatlas_database_user",
+      "label": "Atlas database user",
+      "product": "MongoDB Atlas identity and access management",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/database_user.md"
+    },
+    {
+      "id": "mongodb-atlas/encryption-at-rest",
+      "terraform_type": "mongodbatlas_encryption_at_rest",
+      "label": "Encryption at Rest using Customer Key Management",
+      "product": "Encryption at Rest using Customer Key Management",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/encryption_at_rest.md"
+    },
+    {
+      "id": "mongodb-atlas/encryption-private-endpoint",
+      "terraform_type": "mongodbatlas_encryption_at_rest_private_endpoint",
+      "label": "Atlas customer key management private endpoint",
+      "product": "Encryption at Rest using Customer Key Management",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/encryption_at_rest_private_endpoint.md"
+    },
+    {
+      "id": "mongodb-atlas/event-trigger",
+      "terraform_type": "mongodbatlas_event_trigger",
+      "label": "Atlas App Services trigger",
+      "product": "MongoDB Atlas App Services triggers",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/event_trigger.md"
+    },
+    {
+      "id": "mongodb-atlas/federated-database-instance",
+      "terraform_type": "mongodbatlas_federated_database_instance",
+      "label": "Atlas federated database instance",
+      "product": "MongoDB Atlas Data Federation and Online Archive",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/federated_database_instance.md"
+    },
+    {
+      "id": "mongodb-atlas/federated-identity-provider",
+      "terraform_type": "mongodbatlas_federated_settings_identity_provider",
+      "label": "Atlas federated identity provider",
+      "product": "MongoDB Atlas identity and access management",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/federated_settings_identity_provider.md"
+    },
+    {
+      "id": "mongodb-atlas/federated-organization-configuration",
+      "terraform_type": "mongodbatlas_federated_settings_org_config",
+      "label": "Atlas federated organization configuration",
+      "product": "MongoDB Atlas identity and access management",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/federated_settings_org_config.md"
+    },
+    {
+      "id": "mongodb-atlas/federated-organization-role-mapping",
+      "terraform_type": "mongodbatlas_federated_settings_org_role_mapping",
+      "label": "Atlas federated organization role mapping",
+      "product": "MongoDB Atlas identity and access management",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/federated_settings_org_role_mapping.md"
+    },
+    {
+      "id": "mongodb-atlas/federated-query-limit",
+      "terraform_type": "mongodbatlas_federated_query_limit",
+      "label": "Atlas Data Federation query limit",
+      "product": "MongoDB Atlas Data Federation and Online Archive",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/federated_query_limit.md"
+    },
+    {
+      "id": "mongodb-atlas/flex-cluster",
+      "terraform_type": "mongodbatlas_flex_cluster",
+      "label": "MongoDB Atlas Flex cluster",
+      "product": "MongoDB Atlas database deployments",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/flex_cluster.md"
+    },
+    {
+      "id": "mongodb-atlas/global-cluster-configuration",
+      "terraform_type": "mongodbatlas_global_cluster_config",
+      "label": "Atlas global cluster configuration",
+      "product": "MongoDB Atlas database deployments",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/global_cluster_config.md"
+    },
+    {
+      "id": "mongodb-atlas/ldap-configuration",
+      "terraform_type": "mongodbatlas_ldap_configuration",
+      "label": "Atlas LDAP configuration",
+      "product": "MongoDB Atlas identity and access management",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/ldap_configuration.md"
+    },
+    {
+      "id": "mongodb-atlas/log-integration",
+      "terraform_type": "mongodbatlas_log_integration",
+      "label": "Atlas log integration",
+      "product": "MongoDB Atlas observability and integrations",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/log_integration.md"
+    },
+    {
+      "id": "mongodb-atlas/maintenance-window",
+      "terraform_type": "mongodbatlas_maintenance_window",
+      "label": "Atlas maintenance window",
+      "product": "MongoDB Atlas database deployments",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/maintenance_window.md"
+    },
+    {
+      "id": "mongodb-atlas/metric-integration",
+      "terraform_type": "mongodbatlas_metric_integration",
+      "label": "Atlas metric integration",
+      "product": "MongoDB Atlas observability and integrations",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/metric_integration.md"
+    },
+    {
+      "id": "mongodb-atlas/network-container",
+      "terraform_type": "mongodbatlas_network_container",
+      "label": "Atlas network container",
+      "product": "MongoDB Atlas networking and private endpoints",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/network_container.md"
+    },
+    {
+      "id": "mongodb-atlas/network-peering",
+      "terraform_type": "mongodbatlas_network_peering",
+      "label": "Atlas network peering connection",
+      "product": "MongoDB Atlas networking and private endpoints",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/network_peering.md"
+    },
+    {
+      "id": "mongodb-atlas/online-archive",
+      "terraform_type": "mongodbatlas_online_archive",
+      "label": "Atlas Online Archive",
+      "product": "MongoDB Atlas Data Federation and Online Archive",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/online_archive.md"
+    },
+    {
+      "id": "mongodb-atlas/organization",
+      "terraform_type": "mongodbatlas_organization",
+      "label": "MongoDB Atlas organization",
+      "product": "MongoDB Atlas Organizations and Projects",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/organization.md"
+    },
+    {
+      "id": "mongodb-atlas/organization-service-account",
+      "terraform_type": "mongodbatlas_service_account",
+      "label": "Atlas organization service account",
+      "product": "MongoDB Atlas identity and access management",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/service_account.md"
+    },
+    {
+      "id": "mongodb-atlas/organization-service-account-access-list",
+      "terraform_type": "mongodbatlas_service_account_access_list_entry",
+      "label": "Atlas organization service account access list",
+      "product": "MongoDB Atlas identity and access management",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/service_account_access_list_entry.md"
+    },
+    {
+      "id": "mongodb-atlas/private-endpoint-regional-mode",
+      "terraform_type": "mongodbatlas_private_endpoint_regional_mode",
+      "label": "Atlas private endpoint regional mode",
+      "product": "MongoDB Atlas networking and private endpoints",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/private_endpoint_regional_mode.md"
+    },
+    {
+      "id": "mongodb-atlas/private-endpoint-registration",
+      "terraform_type": "mongodbatlas_privatelink_endpoint_service",
+      "label": "Atlas private endpoint registration",
+      "product": "MongoDB Atlas networking and private endpoints",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/privatelink_endpoint_service.md"
+    },
+    {
+      "id": "mongodb-atlas/private-endpoint-service",
+      "terraform_type": "mongodbatlas_privatelink_endpoint",
+      "label": "Atlas private endpoint service",
+      "product": "MongoDB Atlas networking and private endpoints",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/privatelink_endpoint.md"
+    },
+    {
+      "id": "mongodb-atlas/project",
+      "terraform_type": "mongodbatlas_project",
+      "label": "MongoDB Atlas project",
+      "product": "MongoDB Atlas Organizations and Projects",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/project.md"
+    },
+    {
+      "id": "mongodb-atlas/project-ip-access-list",
+      "terraform_type": "mongodbatlas_project_ip_access_list",
+      "label": "Atlas project IP access list",
+      "product": "MongoDB Atlas networking and private endpoints",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/project_ip_access_list.md"
+    },
+    {
+      "id": "mongodb-atlas/project-service-account",
+      "terraform_type": "mongodbatlas_project_service_account",
+      "label": "Atlas project service account",
+      "product": "MongoDB Atlas identity and access management",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/project_service_account.md"
+    },
+    {
+      "id": "mongodb-atlas/project-service-account-access-list",
+      "terraform_type": "mongodbatlas_project_service_account_access_list_entry",
+      "label": "Atlas project service account access list",
+      "product": "MongoDB Atlas identity and access management",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/project_service_account_access_list_entry.md"
+    },
+    {
+      "id": "mongodb-atlas/push-based-log-export",
+      "terraform_type": "mongodbatlas_push_based_log_export",
+      "label": "Atlas push-based log export",
+      "product": "MongoDB Atlas observability and integrations",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/push_based_log_export.md"
+    },
+    {
+      "id": "mongodb-atlas/resource-policy",
+      "terraform_type": "mongodbatlas_resource_policy",
+      "label": "Atlas Resource Policy",
+      "product": "MongoDB Atlas Organizations and Projects",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/resource_policy.md"
+    },
+    {
+      "id": "mongodb-atlas/search-deployment",
+      "terraform_type": "mongodbatlas_search_deployment",
+      "label": "MongoDB Search deployment",
+      "product": "MongoDB Search and Vector Search",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/search_deployment.md"
+    },
+    {
+      "id": "mongodb-atlas/search-index",
+      "terraform_type": "mongodbatlas_search_index",
+      "label": "MongoDB Search and Vector Search index",
+      "product": "MongoDB Search and Vector Search",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/search_index.md"
+    },
+    {
+      "id": "mongodb-atlas/serverless-instance",
+      "terraform_type": "mongodbatlas_serverless_instance",
+      "label": "MongoDB Atlas serverless instance",
+      "product": "MongoDB Atlas database deployments",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/serverless_instance.md"
+    },
+    {
+      "id": "mongodb-atlas/service-account-project-assignment",
+      "terraform_type": "mongodbatlas_service_account_project_assignment",
+      "label": "Atlas service account project assignment",
+      "product": "MongoDB Atlas identity and access management",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/service_account_project_assignment.md"
+    },
+    {
+      "id": "mongodb-atlas/stream-connection",
+      "terraform_type": "mongodbatlas_stream_connection",
+      "label": "Atlas Stream Processing connection",
+      "product": "MongoDB Atlas Stream Processing",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/stream_connection.md"
+    },
+    {
+      "id": "mongodb-atlas/stream-connection-failover",
+      "terraform_type": "mongodbatlas_stream_connection_failover",
+      "label": "Atlas Stream Processing connection failover",
+      "product": "MongoDB Atlas Stream Processing",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/stream_connection_failover.md"
+    },
+    {
+      "id": "mongodb-atlas/stream-instance",
+      "terraform_type": "mongodbatlas_stream_instance",
+      "label": "Atlas Stream Processing instance",
+      "product": "MongoDB Atlas Stream Processing",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/stream_instance.md"
+    },
+    {
+      "id": "mongodb-atlas/stream-private-endpoint",
+      "terraform_type": "mongodbatlas_stream_privatelink_endpoint",
+      "label": "Atlas Stream Processing private endpoint",
+      "product": "MongoDB Atlas Stream Processing",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/stream_privatelink_endpoint.md"
+    },
+    {
+      "id": "mongodb-atlas/stream-processor",
+      "terraform_type": "mongodbatlas_stream_processor",
+      "label": "Atlas stream processor",
+      "product": "MongoDB Atlas Stream Processing",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/stream_processor.md"
+    },
+    {
+      "id": "mongodb-atlas/stream-workspace",
+      "terraform_type": "mongodbatlas_stream_workspace",
+      "label": "Atlas Stream Processing workspace",
+      "product": "MongoDB Atlas Stream Processing",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/stream_workspace.md"
+    },
+    {
+      "id": "mongodb-atlas/team",
+      "terraform_type": "mongodbatlas_team",
+      "label": "MongoDB Atlas team",
+      "product": "MongoDB Atlas identity and access management",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/team.md"
+    },
+    {
+      "id": "mongodb-atlas/team-project-assignment",
+      "terraform_type": "mongodbatlas_team_project_assignment",
+      "label": "Atlas team project assignment",
+      "product": "MongoDB Atlas identity and access management",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/team_project_assignment.md"
+    },
+    {
+      "id": "mongodb-atlas/third-party-integration",
+      "terraform_type": "mongodbatlas_third_party_integration",
+      "label": "Atlas third-party integration",
+      "product": "MongoDB Atlas observability and integrations",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/third_party_integration.md"
+    },
+    {
+      "id": "mongodb-atlas/x509-database-user",
+      "terraform_type": "mongodbatlas_x509_authentication_database_user",
+      "label": "Atlas X.509 database user",
+      "product": "MongoDB Atlas identity and access management",
+      "source": "https://github.com/mongodb/terraform-provider-mongodbatlas/blob/v2.16.0/docs/resources/x509_authentication_database_user.md"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "mongodb-atlas/backup-configuration",
+      "label": "Atlas backup configuration",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/backup-export-destination",
+      "label": "Atlas cloud backup export destination",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/cloud-provider-access",
+      "label": "Atlas cloud provider access",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/cloud-provider-authorization",
+      "label": "Atlas cloud provider access authorization",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/customer-key-management",
+      "label": "Atlas customer key management",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/data-service-private-endpoint",
+      "label": "Atlas data service private endpoint",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/database-configuration",
+      "label": "Atlas database deployment configuration",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/event-trigger",
+      "label": "Atlas App Services trigger",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/federated-database-instance",
+      "label": "Atlas federated database instance",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/federation-configuration",
+      "label": "Atlas Data Federation configuration",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/governance-configuration",
+      "label": "Atlas governance configuration",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/identity-configuration",
+      "label": "Atlas identity and access configuration",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/identity-provider",
+      "label": "Atlas identity provider",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/log-integration",
+      "label": "Atlas log integration",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/metric-integration",
+      "label": "Atlas metric integration",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/network-configuration",
+      "label": "Atlas network configuration",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/observability-configuration",
+      "label": "Atlas observability configuration",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/online-archive",
+      "label": "Atlas Online Archive",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/organization",
+      "label": "MongoDB Atlas organization",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/private-endpoint-registration",
+      "label": "Atlas private endpoint registration",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/private-endpoint-service",
+      "label": "Atlas private endpoint service",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/project",
+      "label": "MongoDB Atlas project",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/search-configuration",
+      "label": "MongoDB Search and Vector Search configuration",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/search-deployment",
+      "label": "MongoDB Search deployment",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/security-configuration",
+      "label": "Atlas security configuration",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/stream-configuration",
+      "label": "Atlas Stream Processing configuration",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/stream-connection",
+      "label": "Atlas Stream Processing connection",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/stream-processing-workspace",
+      "label": "Atlas Stream Processing workspace",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    },
+    {
+      "id": "mongodb-atlas/stream-processor",
+      "label": "Atlas stream processor",
+      "source": "https://www.mongodb.com/docs/atlas/"
+    }
+  ],
+  "asset": {
+    "decision": "neutral-generic-identities",
+    "official_redistribution_permission_proven": false,
+    "official_source": "https://www.mongodb.com/legal/trademark-usage-guidelines",
+    "redistributed_files": [],
+    "reason": "MongoDB trademark guidance does not prove a logo redistribution grant for the Rootform binary."
+  }
+}

@@ -1,0 +1,27 @@
+concept "agent-registry-service" {
+  kind        = entity
+  description = "An agentic component registered for discovery and governance in Agent Registry."
+}
+
+concept "agent-registry-binding" {
+  kind        = detail
+  description = "An Agent Registry binding governing access between registered agentic components."
+}
+
+rule "agent-registry-service" {
+  match {
+    kind = "resource"
+    type = "google_agent_registry_service"
+  }
+
+  as = concept.agent-registry-service
+}
+
+rule "agent-registry-binding" {
+  match {
+    kind = "resource"
+    type = "google_agent_registry_binding"
+  }
+
+  as = concept.agent-registry-binding
+}

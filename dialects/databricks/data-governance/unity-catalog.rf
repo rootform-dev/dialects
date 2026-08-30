@@ -1,0 +1,348 @@
+concept "unity-catalog-metastore" {
+  kind        = scope
+  description = "A regional Unity Catalog metastore governing Databricks data and AI assets."
+}
+
+concept "unity-catalog-catalog" {
+  kind        = scope
+  description = "A Unity Catalog catalog organizing governed data and AI assets."
+}
+
+concept "unity-catalog-schema" {
+  kind        = scope
+  description = "A Unity Catalog schema organizing tables, volumes, models, and functions within a catalog."
+}
+
+concept "external-location" {
+  kind        = entity
+  description = "A Unity Catalog external location pairing a cloud storage path with a storage credential."
+}
+
+concept "storage-credential" {
+  kind        = entity
+  description = "A Unity Catalog credential authorizing access to cloud storage."
+}
+
+concept "service-credential" {
+  kind        = entity
+  description = "A Unity Catalog credential authorizing access to a cloud service."
+}
+
+concept "unity-catalog-volume" {
+  kind        = entity
+  description = "A Unity Catalog volume governing file storage for non-tabular data."
+}
+
+concept "unity-catalog-data-detail" {
+  kind        = detail
+  description = "A governed data object or configuration within Unity Catalog."
+}
+
+concept "unity-catalog-access-detail" {
+  kind        = detail
+  description = "An assignment, binding, or access configuration supporting Unity Catalog."
+}
+
+rule "unity-catalog-metastore" {
+  match {
+    kind = "resource"
+    type = "databricks_metastore"
+  }
+
+  as = concept.unity-catalog-metastore
+
+  relation "stores-in" {
+    to  = concept.core.object-storage-container
+    via = source.storage_root
+  }
+}
+
+rule "metastore-assignment" {
+  match {
+    kind = "resource"
+    type = "databricks_metastore_assignment"
+  }
+
+  as = concept.unity-catalog-access-detail
+
+  contribution {
+    to  = concept.unity-catalog-metastore
+    via = source.metastore_id
+  }
+
+  contribution {
+    to  = concept.workspace
+    via = source.workspace_id
+  }
+}
+
+rule "metastore-data-access" {
+  match {
+    kind = "resource"
+    type = "databricks_metastore_data_access"
+  }
+
+  as = concept.storage-credential
+
+  context {
+    as  = context.core.ownership
+    to  = concept.unity-catalog-metastore
+    via = source.metastore_id
+  }
+
+  relation "uses-cloud-identity" {
+    to  = concept.core.service-identity
+    via = source.aws_iam_role[0].role_arn
+  }
+
+  relation "uses-cloud-identity" {
+    to  = concept.core.service-identity
+    via = source.azure_managed_identity[0].managed_identity_id
+  }
+
+  relation "uses-cloud-identity" {
+    to  = concept.core.service-identity
+    via = source.gcp_service_account_key[0].email
+  }
+}
+
+rule "unity-catalog-catalog" {
+  match {
+    kind = "resource"
+    type = "databricks_catalog"
+  }
+
+  as = concept.unity-catalog-catalog
+
+  context {
+    as  = context.core.ownership
+    to  = concept.unity-catalog-metastore
+    via = source.metastore_id
+  }
+
+  relation "stores-in" {
+    to  = concept.core.object-storage-container
+    via = source.storage_root
+  }
+
+  relation "federates-through" {
+    to  = concept.lakehouse-federation-connection
+    via = source.connection_name
+  }
+
+  relation "imports-from-provider" {
+    to  = concept.delta-sharing-provider
+    via = source.provider_name
+  }
+
+  relation "imports-share" {
+    to  = concept.delta-share
+    via = source.share_name
+  }
+}
+
+rule "unity-catalog-schema" {
+  match {
+    kind = "resource"
+    type = "databricks_schema"
+  }
+
+  as = concept.unity-catalog-schema
+
+  context {
+    as  = context.core.ownership
+    to  = concept.unity-catalog-catalog
+    via = source.catalog_name
+  }
+
+  relation "stores-in" {
+    to  = concept.core.object-storage-container
+    via = source.storage_root
+  }
+}
+
+rule "external-location" {
+  match {
+    kind = "resource"
+    type = "databricks_external_location"
+  }
+
+  as = concept.external-location
+
+  context {
+    as  = context.core.ownership
+    to  = concept.unity-catalog-metastore
+    via = source.metastore_id
+  }
+
+  relation "uses-credential" {
+    to  = concept.storage-credential
+    via = source.credential_name
+  }
+
+  relation "stores-in" {
+    to  = concept.core.object-storage-container
+    via = source.url
+  }
+
+  relation "uses-key" {
+    to  = concept.core.encryption-key
+    via = source.encryption_details[0].sse_encryption_details[0].aws_kms_key_arn
+  }
+}
+
+rule "storage-credential" {
+  match {
+    kind = "resource"
+    type = "databricks_storage_credential"
+  }
+
+  as = concept.storage-credential
+
+  context {
+    as  = context.core.ownership
+    to  = concept.unity-catalog-metastore
+    via = source.metastore_id
+  }
+
+  relation "uses-cloud-identity" {
+    to  = concept.core.service-identity
+    via = source.aws_iam_role[0].role_arn
+  }
+
+  relation "uses-cloud-identity" {
+    to  = concept.core.service-identity
+    via = source.azure_managed_identity[0].managed_identity_id
+  }
+
+  relation "uses-cloud-identity" {
+    to  = concept.core.service-identity
+    via = source.gcp_service_account_key[0].email
+  }
+}
+
+rule "service-credential" {
+  match {
+    kind = "resource"
+    type = "databricks_credential"
+  }
+
+  as = concept.service-credential
+
+  context {
+    as  = context.core.ownership
+    to  = concept.unity-catalog-metastore
+    via = source.metastore_id
+  }
+
+  relation "uses-cloud-identity" {
+    to  = concept.core.service-identity
+    via = source.aws_iam_role[0].role_arn
+  }
+
+  relation "uses-cloud-identity" {
+    to  = concept.core.service-identity
+    via = source.azure_managed_identity[0].managed_identity_id
+  }
+}
+
+rule "unity-catalog-volume" {
+  match {
+    kind = "resource"
+    type = "databricks_volume"
+  }
+
+  as = concept.unity-catalog-volume
+
+  context {
+    as  = context.core.ownership
+    to  = concept.unity-catalog-schema
+    via = source.schema_name
+  }
+
+  relation "stores-in" {
+    to  = concept.core.object-storage-container
+    via = source.storage_location
+  }
+}
+
+rule "catalog-workspace-binding" {
+  match {
+    kind = "resource"
+    type = "databricks_catalog_workspace_binding"
+  }
+
+  as = concept.unity-catalog-access-detail
+}
+
+rule "system-schema" {
+  match {
+    kind = "resource"
+    type = "databricks_system_schema"
+  }
+
+  as = concept.unity-catalog-data-detail
+}
+
+rule "unity-catalog-table" {
+  match {
+    kind = "resource"
+    type = "databricks_table"
+  }
+
+  as = concept.unity-catalog-data-detail
+}
+
+rule "sql-table" {
+  match {
+    kind = "resource"
+    type = "databricks_sql_table"
+  }
+
+  as = concept.unity-catalog-data-detail
+}
+
+rule "external-metadata" {
+  match {
+    kind = "resource"
+    type = "databricks_external_metadata"
+  }
+
+  as = concept.unity-catalog-data-detail
+}
+
+rule "data-classification-catalog-config" {
+  match {
+    kind = "resource"
+    type = "databricks_data_classification_catalog_config"
+  }
+
+  as = concept.unity-catalog-data-detail
+}
+
+rule "tag-policy" {
+  match {
+    kind = "resource"
+    type = "databricks_tag_policy"
+  }
+
+  as = concept.unity-catalog-data-detail
+}
+
+rule "entity-tag-assignment" {
+  match {
+    kind = "resource"
+    type = "databricks_entity_tag_assignment"
+  }
+
+  as = concept.unity-catalog-data-detail
+}
+
+rule "workspace-entity-tag-assignment" {
+  match {
+    kind = "resource"
+    type = "databricks_workspace_entity_tag_assignment"
+  }
+
+  as = concept.unity-catalog-data-detail
+}

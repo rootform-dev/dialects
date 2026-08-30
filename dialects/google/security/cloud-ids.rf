@@ -1,0 +1,19 @@
+concept "cloud-ids-endpoint" {
+  kind        = entity
+  description = "A Cloud IDS endpoint inspecting traffic in a VPC network."
+}
+
+rule "cloud-ids-endpoint" {
+  match {
+    kind = "resource"
+    type = "google_cloud_ids_endpoint"
+  }
+
+  as = concept.cloud-ids-endpoint
+
+  context {
+    as  = context.core.network
+    to  = concept.core.virtual-network
+    via = source.network
+  }
+}

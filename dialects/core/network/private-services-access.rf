@@ -1,0 +1,9 @@
+concept "service-networking-detail" {
+  kind        = detail
+  description = "A provider networking detail used to establish private service access."
+}
+
+concept "allocated-network-range" {
+  kind        = detail
+  description = "An allocated address range used by private service networking."
+}

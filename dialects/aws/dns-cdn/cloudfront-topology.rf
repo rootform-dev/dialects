@@ -1,0 +1,8 @@
+rule "cloudfront-distribution" {
+  match {
+    kind = "resource"
+    type = "aws_cloudfront_distribution"
+  }
+
+  as = concept.cloudfront-distribution
+}

@@ -1,0 +1,142 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-29",
+  "policy": {
+    "visible_labels": "official Cloudflare product terminology",
+    "technical_provenance": "exact cloudflare/cloudflare Terraform type",
+    "renderer": "presentation identity with neutral kind fallback"
+  },
+  "required_terms": [
+    {
+      "rule": "access-application",
+      "label": "Cloudflare Access application",
+      "source": "https://developers.cloudflare.com/cloudflare-one/access-controls/applications/"
+    },
+    {
+      "rule": "account-dns-internal-view",
+      "label": "Cloudflare internal DNS view",
+      "source": "https://developers.cloudflare.com/dns/internal-dns/"
+    },
+    {
+      "rule": "ai-gateway",
+      "label": "Cloudflare AI Gateway",
+      "source": "https://developers.cloudflare.com/ai-gateway/"
+    },
+    {
+      "rule": "ai-search-instance",
+      "label": "Cloudflare AI Search instance",
+      "source": "https://developers.cloudflare.com/ai-search/"
+    },
+    {
+      "rule": "calls-sfu-app",
+      "label": "Cloudflare Calls SFU application",
+      "source": "https://developers.cloudflare.com/calls/"
+    },
+    {
+      "rule": "calls-turn-app",
+      "label": "Cloudflare Calls TURN application",
+      "source": "https://developers.cloudflare.com/calls/"
+    },
+    {
+      "rule": "certificate-pack",
+      "label": "Cloudflare certificate pack",
+      "source": "https://developers.cloudflare.com/ssl/edge-certificates/advanced-certificate-manager/"
+    },
+    {
+      "rule": "cloudflare-tunnel",
+      "label": "Cloudflare Tunnel",
+      "source": "https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/"
+    },
+    {
+      "rule": "d1-database",
+      "label": "Cloudflare D1 database",
+      "source": "https://developers.cloudflare.com/d1/"
+    },
+    {
+      "rule": "dex-test",
+      "label": "Cloudflare DEX test",
+      "source": "https://developers.cloudflare.com/cloudflare-one/insights/dex/"
+    },
+    {
+      "rule": "dlp-custom-profile",
+      "label": "Cloudflare Zero Trust DLP custom profile",
+      "source": "https://developers.cloudflare.com/cloudflare-one/data-loss-prevention/"
+    },
+    {
+      "rule": "load-balancer",
+      "label": "Cloudflare Load Balancer",
+      "source": "https://developers.cloudflare.com/load-balancing/"
+    },
+    {
+      "rule": "load-balancer-pool",
+      "label": "Cloudflare Load Balancing pool",
+      "source": "https://developers.cloudflare.com/load-balancing/pools/"
+    },
+    {
+      "rule": "magic-wan-ipsec-tunnel",
+      "label": "Cloudflare WAN IPsec tunnel",
+      "source": "https://developers.cloudflare.com/cloudflare-one/networks/connectivity-options/"
+    },
+    {
+      "rule": "pages-project",
+      "label": "Cloudflare Pages project",
+      "source": "https://developers.cloudflare.com/pages/"
+    },
+    {
+      "rule": "queue",
+      "label": "Cloudflare Queue",
+      "source": "https://developers.cloudflare.com/queues/"
+    },
+    {
+      "rule": "r2-bucket",
+      "label": "Cloudflare R2 bucket",
+      "source": "https://developers.cloudflare.com/r2/"
+    },
+    {
+      "rule": "secrets-store",
+      "label": "Cloudflare Secrets Store",
+      "source": "https://developers.cloudflare.com/secrets-store/"
+    },
+    {
+      "rule": "spectrum-application",
+      "label": "Cloudflare Spectrum application",
+      "source": "https://developers.cloudflare.com/spectrum/"
+    },
+    {
+      "rule": "stream-live-input",
+      "label": "Cloudflare Stream live input",
+      "source": "https://developers.cloudflare.com/stream/"
+    },
+    {
+      "rule": "turnstile-widget",
+      "label": "Cloudflare Turnstile widget",
+      "source": "https://developers.cloudflare.com/turnstile/"
+    },
+    {
+      "rule": "worker",
+      "label": "Cloudflare Worker",
+      "source": "https://developers.cloudflare.com/workers/"
+    },
+    {
+      "rule": "workers-script",
+      "label": "Cloudflare Workers script",
+      "source": "https://developers.cloudflare.com/workers/platform/infrastructure-as-code/"
+    },
+    {
+      "rule": "workflow",
+      "label": "Cloudflare Workflows workflow",
+      "source": "https://developers.cloudflare.com/workflows/"
+    },
+    {
+      "rule": "zone",
+      "label": "Cloudflare zone",
+      "source": "https://developers.cloudflare.com/dns/zone-setups/"
+    }
+  ],
+  "asset": {
+    "disposition": "neutral-renderer-fallback",
+    "official_source": "https://www.cloudflare.com/trademark/",
+    "vendored_files": [],
+    "reason": "Cloudflare trademark terms require written permission for logo use."
+  }
+}

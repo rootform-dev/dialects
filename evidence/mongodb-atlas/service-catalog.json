@@ -1,0 +1,184 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-29",
+  "source_url": "https://www.mongodb.com/docs/atlas/",
+  "derivation": "every provider construct maps to exactly one official product family",
+  "products": [
+    {
+      "id": "organizations-projects",
+      "family": "governance",
+      "official_name": "MongoDB Atlas Organizations and Projects",
+      "major": true,
+      "source_url": "https://www.mongodb.com/docs/atlas/organizations-projects/",
+      "coverage": "partial",
+      "coverage_reason": "organization and project scopes preserve explicit ownership; invitations and human administration remain off topology",
+      "constructs": 12,
+      "counts": {
+        "supported": 2,
+        "partial": 1,
+        "intentionally-unrepresented": 9,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "database-deployments",
+      "family": "databases",
+      "official_name": "MongoDB Atlas database deployments",
+      "major": true,
+      "source_url": "https://www.mongodb.com/docs/atlas/create-connect-deployments/",
+      "coverage": "supported",
+      "coverage_reason": "dedicated, Flex, legacy, and serverless deployments reuse managed database while supporting configuration stays detail",
+      "constructs": 18,
+      "counts": {
+        "supported": 4,
+        "partial": 2,
+        "intentionally-unrepresented": 12,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "networking",
+      "family": "network",
+      "official_name": "MongoDB Atlas networking and private endpoints",
+      "major": true,
+      "source_url": "https://www.mongodb.com/docs/atlas/architecture/current/network-security/",
+      "coverage": "supported",
+      "coverage_reason": "Atlas networks, peerings, endpoint services, registrations, and exact AWS, Azure, and Google cloud targets are represented",
+      "constructs": 20,
+      "counts": {
+        "supported": 4,
+        "partial": 3,
+        "intentionally-unrepresented": 13,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "customer-encryption",
+      "family": "security",
+      "official_name": "Encryption at Rest using Customer Key Management",
+      "major": true,
+      "source_url": "https://www.mongodb.com/docs/atlas/security-kms-encryption/",
+      "coverage": "supported",
+      "coverage_reason": "project customer-key management preserves explicit AWS KMS, Azure Key Vault, Cloud KMS, and private endpoint evidence",
+      "constructs": 7,
+      "counts": {
+        "supported": 2,
+        "partial": 1,
+        "intentionally-unrepresented": 4,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "identity-access",
+      "family": "identity-iam",
+      "official_name": "MongoDB Atlas identity and access management",
+      "major": true,
+      "source_url": "https://www.mongodb.com/docs/atlas/access-tracking/",
+      "coverage": "partial",
+      "coverage_reason": "service identities, teams, identity providers, cloud access, and assignments are represented while credentials stay absent",
+      "constructs": 73,
+      "counts": {
+        "supported": 7,
+        "partial": 13,
+        "intentionally-unrepresented": 53,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "cloud-backup",
+      "family": "backup",
+      "official_name": "MongoDB Atlas Cloud Backups",
+      "major": true,
+      "source_url": "https://www.mongodb.com/docs/atlas/backup/cloud-backup/overview/",
+      "coverage": "partial",
+      "coverage_reason": "backup plans, compliance, export destinations, storage, and cloud authorization are modeled; snapshots and jobs remain operational",
+      "constructs": 24,
+      "counts": {
+        "supported": 2,
+        "partial": 1,
+        "intentionally-unrepresented": 21,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "data-federation",
+      "family": "data-federation",
+      "official_name": "MongoDB Atlas Data Federation and Online Archive",
+      "major": true,
+      "source_url": "https://www.mongodb.com/docs/atlas/data-federation/adf-overview/overview/",
+      "coverage": "supported",
+      "coverage_reason": "federated database instances, Online Archive, external stores, Atlas deployments, limits, and data-service endpoints are represented",
+      "constructs": 12,
+      "counts": {
+        "supported": 3,
+        "partial": 1,
+        "intentionally-unrepresented": 8,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "search-ai",
+      "family": "search",
+      "official_name": "MongoDB Search and Vector Search",
+      "major": true,
+      "source_url": "https://www.mongodb.com/docs/atlas/atlas-search/",
+      "coverage": "partial",
+      "coverage_reason": "dedicated Search deployments are visible while Search and Vector Search indexes and AI rate limits remain supporting details",
+      "constructs": 15,
+      "counts": {
+        "supported": 1,
+        "partial": 2,
+        "intentionally-unrepresented": 12,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "stream-processing",
+      "family": "stream-processing",
+      "official_name": "MongoDB Atlas Stream Processing",
+      "major": true,
+      "source_url": "https://www.mongodb.com/docs/atlas/atlas-stream-processing/architecture/",
+      "coverage": "supported",
+      "coverage_reason": "workspaces, processors, neutral connections, failover, private endpoints, identities, and database targets are represented without parsing pipelines",
+      "constructs": 19,
+      "counts": {
+        "supported": 5,
+        "partial": 1,
+        "intentionally-unrepresented": 13,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "observability-integrations",
+      "family": "observability",
+      "official_name": "MongoDB Atlas observability and integrations",
+      "major": true,
+      "source_url": "https://www.mongodb.com/docs/atlas/monitoring-alerts/",
+      "coverage": "supported",
+      "coverage_reason": "log and metric integrations remain visible while alert and notification settings stay details with secrets excluded",
+      "constructs": 14,
+      "counts": {
+        "supported": 3,
+        "partial": 2,
+        "intentionally-unrepresented": 9,
+        "unsupported": 0
+      }
+    },
+    {
+      "id": "app-services",
+      "family": "applications",
+      "official_name": "MongoDB Atlas App Services triggers",
+      "major": false,
+      "source_url": "https://www.mongodb.com/docs/atlas/app-services/triggers/",
+      "coverage": "supported",
+      "coverage_reason": "event triggers remain visible without inferring data flow from trigger configuration",
+      "constructs": 3,
+      "counts": {
+        "supported": 1,
+        "partial": 0,
+        "intentionally-unrepresented": 2,
+        "unsupported": 0
+      }
+    }
+  ]
+}

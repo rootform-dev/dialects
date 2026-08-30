@@ -1,0 +1,200 @@
+concept "edge-delivery-configuration" {
+  kind        = detail
+  description = "Cache, routing, transformation, or delivery configuration applied at the Cloudflare edge."
+}
+
+rule "argo-smart-routing" {
+  match {
+    kind = "resource"
+    type = "cloudflare_argo_smart_routing"
+  }
+
+  as = concept.edge-delivery-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "argo-tiered-caching" {
+  match {
+    kind = "resource"
+    type = "cloudflare_argo_tiered_caching"
+  }
+
+  as = concept.edge-delivery-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "tiered-cache" {
+  match {
+    kind = "resource"
+    type = "cloudflare_tiered_cache"
+  }
+
+  as = concept.edge-delivery-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "regional-tiered-cache" {
+  match {
+    kind = "resource"
+    type = "cloudflare_regional_tiered_cache"
+  }
+
+  as = concept.edge-delivery-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "zone-cache-reserve" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zone_cache_reserve"
+  }
+
+  as = concept.edge-delivery-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "zone-cache-variants" {
+  match {
+    kind = "resource"
+    type = "cloudflare_zone_cache_variants"
+  }
+
+  as = concept.edge-delivery-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "managed-transforms" {
+  match {
+    kind = "resource"
+    type = "cloudflare_managed_transforms"
+  }
+
+  as = concept.edge-delivery-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "url-normalization-settings" {
+  match {
+    kind = "resource"
+    type = "cloudflare_url_normalization_settings"
+  }
+
+  as = concept.edge-delivery-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "page-rule" {
+  match {
+    kind = "resource"
+    type = "cloudflare_page_rule"
+  }
+
+  as = concept.edge-delivery-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "google-tag-gateway" {
+  match {
+    kind = "resource"
+    type = "cloudflare_google_tag_gateway"
+  }
+
+  as = concept.edge-delivery-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "origin-cloud-region" {
+  match {
+    kind = "resource"
+    type = "cloudflare_origin_cloud_region"
+  }
+
+  as = concept.edge-delivery-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "snippet" {
+  match {
+    kind = "resource"
+    type = "cloudflare_snippet"
+  }
+
+  as = concept.edge-delivery-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "snippets" {
+  match {
+    kind = "resource"
+    type = "cloudflare_snippets"
+  }
+
+  as = concept.edge-delivery-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}
+
+rule "snippet-rules" {
+  match {
+    kind = "resource"
+    type = "cloudflare_snippet_rules"
+  }
+
+  as = concept.edge-delivery-configuration
+
+  contribution {
+    to  = concept.core.dns-zone
+    via = source.zone_id
+  }
+}

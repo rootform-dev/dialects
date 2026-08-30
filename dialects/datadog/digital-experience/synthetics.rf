@@ -1,0 +1,40 @@
+rule "synthetics-private-location" {
+  match {
+    kind = "resource"
+    type = "datadog_synthetics_private_location"
+  }
+
+  as = concept.core.synthetic-execution-location
+}
+
+rule "synthetics-suite" {
+  match {
+    kind = "resource"
+    type = "datadog_synthetics_suite"
+  }
+
+  as = concept.core.synthetic-check
+}
+
+rule "synthetics-test" {
+  match {
+    kind = "resource"
+    type = "datadog_synthetics_test"
+  }
+
+  as = concept.core.synthetic-check
+
+  contribution {
+    to  = concept.core.synthetic-execution-location
+    via = source.locations
+  }
+}
+
+rule "synthetics-test-lookup" {
+  match {
+    kind = "data"
+    type = "datadog_synthetics_test"
+  }
+
+  as = concept.core.synthetic-check
+}
