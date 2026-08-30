@@ -8,7 +8,8 @@ visibility change.
 
 ## Contents
 
-- `dialects/`: canonical `.rf` sources and `presentation.json` manifests;
+- provider directories at repository root: canonical `.rf` sources and
+  `presentation.json` manifests;
 - `fixtures/`: synthetic Terraform inputs and expected architecture documents;
 - `evidence/`: public provider baselines, compatibility envelopes, coverage,
   terminology, scenarios, and source provenance;
@@ -29,11 +30,11 @@ okta             secrets          snowflake        vault
 ## Authoring workflow
 
 ```bash
-rootform fmt --check ./dialects
-rootform validate dialects ./dialects
+rootform fmt --check .
+rootform validate dialects .
 
 export ROOTFORM_HOME="$(mktemp -d)"
-rootform install dialects ./dialects
+rootform install dialects .
 rootform test ./fixtures
 ```
 

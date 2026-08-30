@@ -11,7 +11,7 @@ remain deterministic, explainable, provider-scoped, and usable offline.
 - Rootform engine source never enters this repository.
 - Prompts, transcripts, private specifications, work logs, credentials,
   customer data, Terraform state, raw plans, and personal paths never enter Git.
-- Every official dialect lives only under `dialects/<name>/` here.
+- Every official dialect lives only under its named repository-root directory.
 - `presentation.json` carries identities only. It never carries SVG, HTML,
   URLs, styling, or behavior.
 - Fixtures are synthetic. Never commit real infrastructure or account data.

@@ -45,10 +45,10 @@ const environment = { ROOTFORM_HOME: isolatedHome };
 
 try {
   run([binary, "version"], environment);
-  run([binary, "fmt", "--check", "./dialects"], environment);
-  run([binary, "validate", "dialects", "./dialects"], environment);
-  run([binary, "install", "dialects", "./dialects"], environment);
-  run([binary, "verify", "dialects", "./dialects"], environment);
+  run([binary, "fmt", "--check", "."], environment);
+  run([binary, "validate", "dialects", "."], environment);
+  run([binary, "install", "dialects", "."], environment);
+  run([binary, "verify", "dialects", "."], environment);
   const first = run([binary, "test", "./fixtures", "--format", "json"], environment);
   const second = run([binary, "test", "./fixtures", "--format", "json"], environment);
   if (first !== second) throw new Error("fixture output changed between identical runs");

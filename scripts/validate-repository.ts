@@ -59,8 +59,36 @@ export function validateRepository(): void {
   }
 
   const expected = inventory.dialects.map(({ name }) => name);
-  const actual = readdirSync(join(root, "dialects"), { withFileTypes: true })
-    .filter((entry) => entry.isDirectory())
+  const allowedTopLevel = new Set([
+    ...expected,
+    ".gitattributes",
+    ".github",
+    ".gitignore",
+    ".gitleaks.toml",
+    "AGENTS.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "SECURITY.md",
+    "THIRD_PARTY_NOTICES.md",
+    "biome.json",
+    "bun.lock",
+    "dialects.json",
+    "evidence",
+    "fixtures",
+    "package.json",
+    "rootform.lock",
+    "scripts",
+    "toolchain.json",
+    "tsconfig.json",
+  ]);
+  for (const entry of readdirSync(root, { withFileTypes: true })) {
+    if ([".git", "artifacts", "build", "node_modules"].includes(entry.name)) continue;
+    if (!allowedTopLevel.has(entry.name))
+      throw new Error(`unexpected top-level path: ${entry.name}`);
+  }
+  const actual = readdirSync(root, { withFileTypes: true })
+    .filter((entry) => entry.isDirectory() && expected.includes(entry.name))
     .map(({ name }) => name)
     .sort((a, b) => a.localeCompare(b, "en"));
   if (JSON.stringify(actual) !== JSON.stringify(expected)) {
@@ -85,7 +113,7 @@ export function validateRepository(): void {
   for (const path of files) {
     if (forbiddenPath.test(path)) throw new Error(`private path is forbidden: ${path}`);
     if (
-      path.startsWith("dialects/") &&
+      expected.includes(path.split("/", 1)[0] ?? "") &&
       !path.endsWith(".rf") &&
       !path.endsWith("/presentation.json")
     ) {
@@ -105,14 +133,14 @@ export function validateRepository(): void {
   }
 
   for (const { name, version } of inventory.dialects) {
-    const declaration = readFileSync(join(root, "dialects", name, "dialect.rf"), "utf8");
+    const declaration = readFileSync(join(root, name, "dialect.rf"), "utf8");
     const match = declaration.match(
       /^dialect\s+"([^"]+)"\s*\{[\s\S]*?^\s*version\s*=\s*"([^"]+)"/mu,
     );
     if (!match || match[1] !== name || match[2] !== version) {
       throw new Error(`dialect declaration does not match inventory: ${name}@${version}`);
     }
-    JSON.parse(readFileSync(join(root, "dialects", name, "presentation.json"), "utf8"));
+    JSON.parse(readFileSync(join(root, name, "presentation.json"), "utf8"));
   }
 
   const workflowPaths = files.filter((path) => path.startsWith(".github/workflows/"));
