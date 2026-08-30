@@ -60,7 +60,7 @@ jobs:
           printf '%s\n' "$RUNNER_TEMP" >> "$GITHUB_PATH"
 
       - name: Install exact Rootform release
-        uses: rootform-dev/action/setup@c98469acd06b66c991049b03c7475211b91671bb
+        uses: rootform-dev/action/setup@f9049e72e6482a0f0508e5f8194aa31f5612f85b
         with:
           github-token: ${{ secrets.ROOTFORM_RELEASE_TOKEN }}
           version: 0.1.0-dev.1
