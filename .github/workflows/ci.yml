@@ -59,13 +59,17 @@ jobs:
           tar --extract --gzip --file "$RUNNER_TEMP/$ACTIONLINT_ARCHIVE" --directory "$RUNNER_TEMP" actionlint
           printf '%s\n' "$RUNNER_TEMP" >> "$GITHUB_PATH"
 
-      - name: Install exact Rootform release
-        uses: rootform-dev/action/setup@f9049e72e6482a0f0508e5f8194aa31f5612f85b
-        with:
-          github-token: ${{ secrets.ROOTFORM_REPOSITORIES_READ_TOKEN }}
-          version: 0.1.0-dev.1
+      - name: Run repository checks
+        run: bun run check
 
-      - name: Run complete gate
-        env:
-          ROOTFORM_BIN: rootform
-        run: bun run verify
+      - name: Validate workflows
+        run: actionlint -no-color -oneline
+
+      - name: Check clean patch
+        run: git diff --check
+
+      - name: Scan working tree
+        run: gitleaks dir --no-banner --redact --config .gitleaks.toml .
+
+      - name: Scan history
+        run: gitleaks git --no-banner --redact --config .gitleaks.toml .

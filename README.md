@@ -13,7 +13,8 @@ Official Rootform Language dialects and their public verification evidence.
   terminology, scenarios, and source provenance;
 - `dialects.json`: exact official inventory;
 - `rootform.lock`: canonical content and presentation digests for that inventory;
-- `toolchain.json`: exact Rootform release used by CI.
+- `toolchain.json`: exact Rootform product version covered by compatibility
+  verification.
 
 Current dialects:
 
@@ -36,10 +37,11 @@ rootform install dialects .
 rootform test ./fixtures
 ```
 
-`bun run verify` performs the same workflow with the exact binary declared by
-`toolchain.json`, isolated cache state, and repeated-output determinism checks.
-Set `ROOTFORM_BIN` to the already checksum-verified executable when running
-locally.
+`bun run check` validates this repository without downloading Rootform.
+Rootform distribution CI supplies an already verified assembled executable to
+`bun run verify`, which checks the exact version declared by `toolchain.json`,
+uses isolated cache state, and proves repeated-output determinism. Set
+`ROOTFORM_BIN` to that executable when running locally.
 
 ## Licensing
 

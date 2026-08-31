@@ -22,9 +22,13 @@ remain deterministic, explainable, provider-scoped, and usable offline.
 
 - Bun is the only JavaScript package manager.
 - Direct dependencies and GitHub Actions use exact immutable pins.
-- Rootform CLI version comes from `toolchain.json`; CI downloads that exact
-  release and verifies its checksum before use.
-- No network access occurs after CLI installation.
+- Rootform CLI version comes from `toolchain.json`. Rootform distribution CI
+  supplies a verified assembled binary and owns the complete compatibility
+  matrix by invoking this repository's `bun run verify` gate.
+- Dialects CI validates repository structure and history without downloading a
+  Rootform binary or holding a Rootform repository credential.
+- No network access occurs after dependencies, tools, and CLI inputs are
+  supplied.
 
 ## Changes
 
@@ -39,10 +43,17 @@ remain deterministic, explainable, provider-scoped, and usable offline.
 
 ## Validation
 
-Run focused CLI checks while editing, then:
+Run repository checks while editing:
 
 ```bash
-bun run verify
+bun run check
+```
+
+Run the complete compatibility gate with the exact assembled binary declared
+by `toolchain.json`:
+
+```bash
+ROOTFORM_BIN=/absolute/path/to/rootform bun run verify
 ```
 
 Completion requires structural checks, formatting, dialect validation, fixture

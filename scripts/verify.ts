@@ -1,8 +1,9 @@
 #!/usr/bin/env bun
 
-import { mkdtempSync, rmSync } from "node:fs";
+import { mkdtempSync, readFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { isAbsolute, join, resolve } from "node:path";
+import { requireRootformVersion } from "./verify-version.ts";
 
 const root = join(import.meta.dir, "..");
 
@@ -42,9 +43,12 @@ if (!configuredBinary)
 const binary = isAbsolute(configuredBinary) ? configuredBinary : resolve(root, configuredBinary);
 const isolatedHome = mkdtempSync(join(tmpdir(), "rootform-dialects-"));
 const environment = { ROOTFORM_HOME: isolatedHome };
+const toolchain = JSON.parse(readFileSync(join(root, "toolchain.json"), "utf8")) as {
+  version: string;
+};
 
 try {
-  run([binary, "version"], environment);
+  requireRootformVersion(run([binary, "version"], environment), toolchain.version);
   run([binary, "fmt", "--check", "."], environment);
   run([binary, "validate", "dialects", "."], environment);
   run([binary, "install", "dialects", "."], environment);

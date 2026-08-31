@@ -12,7 +12,8 @@ Run:
 
 ```bash
 bun install --frozen-lockfile
-bun run verify
+bun run check
+ROOTFORM_BIN=/absolute/path/to/rootform bun run verify
 ```
 
 By contributing, you agree that your contribution is licensed under MPL-2.0.
