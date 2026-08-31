@@ -3,7 +3,7 @@
 import { mkdtempSync, readFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { isAbsolute, join, resolve } from "node:path";
-import { requireRootformVersion } from "./verify-version.ts";
+import { requireRootformVersion, resolveRootformVersion } from "./verify-version.ts";
 
 const root = join(import.meta.dir, "..");
 
@@ -46,9 +46,10 @@ const environment = { ROOTFORM_HOME: isolatedHome };
 const toolchain = JSON.parse(readFileSync(join(root, "toolchain.json"), "utf8")) as {
   version: string;
 };
+const expectedVersion = resolveRootformVersion(process.argv.slice(2), toolchain.version);
 
 try {
-  requireRootformVersion(run([binary, "version"], environment), toolchain.version);
+  requireRootformVersion(run([binary, "version"], environment), expectedVersion);
   run([binary, "fmt", "--check", "."], environment);
   run([binary, "validate", "dialects", "."], environment);
   run([binary, "install", "dialects", "."], environment);
