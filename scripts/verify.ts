@@ -1,6 +1,6 @@
 #!/usr/bin/env bun
 
-import { mkdtempSync, readFileSync, rmSync } from "node:fs";
+import { mkdtempSync, readdirSync, readFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { isAbsolute, join, resolve } from "node:path";
 import { requireRootformVersion, resolveRootformVersion } from "./verify-version.ts";
@@ -21,6 +21,20 @@ function run(command: string[], environment: Record<string, string> = {}): strin
   process.stderr.write(stderr);
   if (result.exitCode !== 0) throw new Error(`${command.join(" ")} exited ${result.exitCode}`);
   return stdout;
+}
+
+function snapshot(directory: string, prefix = ""): Record<string, string> {
+  const files: Record<string, string> = {};
+  for (const entry of readdirSync(directory, { withFileTypes: true }).sort((left, right) =>
+    left.name.localeCompare(right.name, "en"),
+  )) {
+    const relative = prefix ? `${prefix}/${entry.name}` : entry.name;
+    const path = join(directory, entry.name);
+    if (entry.isDirectory()) Object.assign(files, snapshot(path, relative));
+    else if (entry.isFile()) files[relative] = readFileSync(path).toString("base64");
+    else throw new Error(`irregular distribution output: ${relative}`);
+  }
+  return files;
 }
 
 run(["bun", "run", "check"]);
@@ -54,6 +68,46 @@ try {
   run([binary, "validate", "dialects", "."], environment);
   run([binary, "install", "dialects", "."], environment);
   run([binary, "verify", "dialects", "."], environment);
+  const firstLayout = join(isolatedHome, "distribution-first");
+  const secondLayout = join(isolatedHome, "distribution-second");
+  run(
+    [
+      binary,
+      "package",
+      "dialects",
+      ".",
+      "--to",
+      firstLayout,
+      "--repository",
+      "ghcr.io/rootform-dev/dialects",
+    ],
+    environment,
+  );
+  run(
+    [
+      binary,
+      "package",
+      "dialects",
+      ".",
+      "--to",
+      secondLayout,
+      "--repository",
+      "ghcr.io/rootform-dev/dialects",
+    ],
+    environment,
+  );
+  const firstDistribution = snapshot(firstLayout);
+  const secondDistribution = snapshot(secondLayout);
+  if (JSON.stringify(firstDistribution) !== JSON.stringify(secondDistribution)) {
+    throw new Error("official dialect distribution changed between identical builds");
+  }
+  if (
+    !("index.json" in firstDistribution) ||
+    !("oci-layout" in firstDistribution) ||
+    !Object.keys(firstDistribution).some((path) => path.startsWith("blobs/sha256/"))
+  ) {
+    throw new Error("official dialect distribution is incomplete");
+  }
   const first = run([binary, "test", "./fixtures", "--format", "json"], environment);
   const second = run([binary, "test", "./fixtures", "--format", "json"], environment);
   if (first !== second) throw new Error("fixture output changed between identical runs");
