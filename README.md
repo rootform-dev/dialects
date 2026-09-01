@@ -43,6 +43,21 @@ Rootform distribution CI supplies an already verified assembled executable to
 uses isolated cache state, and proves repeated-output determinism. Set
 `ROOTFORM_BIN` to that executable when running locally.
 
+## Private distribution build
+
+Build deterministic official dialect packages and generated provider index
+with one exact verified Rootform executable:
+
+```bash
+ROOTFORM_BIN=/absolute/path/to/rootform \
+  bun run package:dialects -- --to artifacts/oci \
+  --rootform-version 0.1.0-pr.81.1
+```
+
+Output is a local OCI image layout under ignored `artifacts/`. Command performs
+no registry push. `bun run verify` builds layout twice and requires byte-identical
+outputs before compatibility tests pass.
+
 ## Licensing
 
 Original Rootform dialect files, fixtures, and repository tooling use
