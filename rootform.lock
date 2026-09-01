@@ -1,5 +1,6 @@
 {
-  "format_version": "2",
+  "format_version": "1",
+  "unsupported_providers": [],
   "entries": [
     {
       "name": "auth0",
