@@ -71,7 +71,7 @@ export function validateDialectLock(value: unknown, inventory: Inventory): void 
     lock.unsupported_providers.length !== 0 ||
     !Array.isArray(lock.entries)
   ) {
-    throw new Error("rootform.lock must use development format 1 and empty non-coverage");
+    throw new Error("rootform.lock must use format 1 with an empty unsupported provider set");
   }
   const actual = lock.entries.map((entry) => {
     if (!isRecord(entry) || typeof entry.name !== "string" || typeof entry.version !== "string") {

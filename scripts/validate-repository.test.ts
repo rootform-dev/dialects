@@ -5,7 +5,7 @@ test("current repository matches its explicit inventory", () => {
   expect(validateRepository).not.toThrow();
 });
 
-test("authoring lock stays on development format 1 and exact dialect identities", () => {
+test("authoring lock requires format 1, empty non-coverage, and exact dialect identities", () => {
   const inventory = {
     format_version: "1",
     dialects: [
@@ -23,14 +23,14 @@ test("authoring lock stays on development format 1 and exact dialect identities"
   };
   expect(() => validateDialectLock(lock, inventory)).not.toThrow();
   expect(() => validateDialectLock({ ...lock, format_version: "2" }, inventory)).toThrow(
-    "rootform.lock must use development format 1",
+    "rootform.lock must use format 1 with an empty unsupported provider set",
   );
   expect(() =>
     validateDialectLock(
       { ...lock, unsupported_providers: ["example.invalid/no/dialect"] },
       inventory,
     ),
-  ).toThrow("rootform.lock must use development format 1");
+  ).toThrow("rootform.lock must use format 1 with an empty unsupported provider set");
   expect(() =>
     validateDialectLock({ ...lock, entries: lock.entries.slice(0, 1) }, inventory),
   ).toThrow("rootform.lock dialect identities do not match dialects.json");
