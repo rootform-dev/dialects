@@ -8,6 +8,12 @@ type Inventory = {
   dialects: Array<{ name: string; version: string }>;
 };
 
+type DialectLock = {
+  entries?: unknown;
+  format_version?: unknown;
+  unsupported_providers?: unknown;
+};
+
 type Toolchain = {
   format_version: string;
   repository: string;
@@ -52,11 +58,38 @@ export function filesBelow(directory: string): string[] {
   return files;
 }
 
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return value !== null && typeof value === "object" && !Array.isArray(value);
+}
+
+export function validateDialectLock(value: unknown, inventory: Inventory): void {
+  if (!isRecord(value)) throw new Error("rootform.lock must be an object");
+  const lock = value as DialectLock;
+  if (
+    lock.format_version !== "1" ||
+    !Array.isArray(lock.unsupported_providers) ||
+    lock.unsupported_providers.length !== 0 ||
+    !Array.isArray(lock.entries)
+  ) {
+    throw new Error("rootform.lock must use development format 1 and empty non-coverage");
+  }
+  const actual = lock.entries.map((entry) => {
+    if (!isRecord(entry) || typeof entry.name !== "string" || typeof entry.version !== "string") {
+      throw new Error("rootform.lock contains an invalid dialect identity");
+    }
+    return { name: entry.name, version: entry.version };
+  });
+  if (JSON.stringify(actual) !== JSON.stringify(inventory.dialects)) {
+    throw new Error("rootform.lock dialect identities do not match dialects.json");
+  }
+}
+
 export function validateRepository(): void {
   const inventory = JSON.parse(readFileSync(join(root, "dialects.json"), "utf8")) as Inventory;
   if (inventory.format_version !== "1" || inventory.dialects.length === 0) {
     throw new Error("dialects.json must contain format version 1 and at least one dialect");
   }
+  validateDialectLock(JSON.parse(readFileSync(join(root, "rootform.lock"), "utf8")), inventory);
 
   const expected = inventory.dialects.map(({ name }) => name);
   const allowedTopLevel = new Set([

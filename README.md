@@ -51,7 +51,7 @@ with one exact verified Rootform executable:
 ```bash
 ROOTFORM_BIN=/absolute/path/to/rootform \
   bun run package:dialects -- --to artifacts/oci \
-  --rootform-version 0.1.0-pr.81.1
+  --rootform-version 0.1.0
 ```
 
 Output is a local OCI image layout under ignored `artifacts/`. Command performs
