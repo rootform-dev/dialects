@@ -43,7 +43,7 @@ Rootform distribution CI supplies an already verified assembled executable to
 uses isolated cache state, and proves repeated-output determinism. Set
 `ROOTFORM_BIN` to that executable when running locally.
 
-## Private distribution build
+## Distribution build
 
 Build deterministic official dialect packages and generated provider index
 with one exact verified Rootform executable:
@@ -57,6 +57,31 @@ ROOTFORM_BIN=/absolute/path/to/rootform \
 Output is a local OCI image layout under ignored `artifacts/`. Command performs
 no registry push. `bun run verify` builds layout twice and requires byte-identical
 outputs before compatibility tests pass.
+
+## Official publication
+
+Manual `publish private dialects` workflow consumes one exact published private
+Rootform prerelease archive and checks both GitHub asset digest and published
+checksums before compiling any dialect. It then:
+
+1. validates every source, fixture, license, and deterministic OCI layout;
+2. preflights every immutable `dialect-<name>-<version>` tag;
+3. pushes all missing dialect artifacts;
+4. pulls every artifact back by manifest digest and compares its complete OCI
+   descriptor graph with local verified bytes;
+5. regenerates byte-identical distribution layout only after all remote
+   dialects passed verification;
+6. pushes and verifies index under immutable
+   `index-sha256-<manifest-digest>` tag;
+7. moves mutable discovery tag `official-index-v1` to verified index digest as
+   final registry operation.
+
+Any artifact failure leaves discovery tag unchanged. Rerunning same publication
+is idempotent; existing version tag with different digest fails before first
+push. Workflow verifies GHCR package remains private and never changes package
+visibility. `scripts/publish.ts --test-repository` is bounded to loopback and
+exists only for ephemeral-registry verification; it does not add Rootform CLI
+configuration or private-registry authentication.
 
 ## Licensing
 

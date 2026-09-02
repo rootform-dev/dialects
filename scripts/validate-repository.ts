@@ -177,18 +177,31 @@ export function validateRepository(): void {
   }
 
   const workflowPaths = files.filter((path) => path.startsWith(".github/workflows/"));
-  if (JSON.stringify(workflowPaths) !== JSON.stringify([".github/workflows/ci.yml"])) {
-    throw new Error("workflow inventory must contain only .github/workflows/ci.yml");
+  if (
+    JSON.stringify(workflowPaths) !==
+    JSON.stringify([".github/workflows/ci.yml", ".github/workflows/publish.yml"])
+  ) {
+    throw new Error("workflow inventory is invalid");
   }
-  const workflow = readFileSync(join(root, workflowPaths[0] ?? ""), "utf8");
-  for (const match of workflow.matchAll(/^\s*-?\s*uses:\s*([^\s#]+)/gmu)) {
-    const reference = match[1] ?? "";
-    if (!/@[0-9a-f]{40}$/u.test(reference)) {
-      throw new Error(`GitHub Action is not SHA-pinned: ${reference}`);
+  for (const path of workflowPaths) {
+    const workflow = readFileSync(join(root, path), "utf8");
+    for (const match of workflow.matchAll(/^\s*-?\s*uses:\s*([^\s#]+)/gmu)) {
+      const reference = match[1] ?? "";
+      if (!/@[0-9a-f]{40}$/u.test(reference)) {
+        throw new Error(`GitHub Action is not SHA-pinned: ${reference}`);
+      }
+    }
+    if (/pull_request_target\s*:|permissions:\s*write-all/u.test(workflow)) {
+      throw new Error("workflow uses a forbidden privilege surface");
     }
   }
-  if (/pull_request_target\s*:|permissions:\s*write-all/u.test(workflow)) {
-    throw new Error("workflow uses a forbidden privilege surface");
+  const publication = readFileSync(join(root, ".github/workflows/publish.yml"), "utf8");
+  if (
+    !publication.includes("workflow_dispatch:") ||
+    !publication.includes("packages: write") ||
+    publication.includes("visibility public")
+  ) {
+    throw new Error("publication workflow boundary is invalid");
   }
 }
 

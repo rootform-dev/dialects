@@ -1,0 +1,232 @@
+name: publish private dialects
+
+on:
+  workflow_dispatch:
+    inputs:
+      rootform_archive_sha256:
+        description: SHA-256 of exact Rootform Linux amd64 release archive
+        required: true
+        type: string
+      rootform_release_id:
+        description: Exact published private Rootform prerelease ID
+        required: true
+        type: string
+      rootform_version:
+        description: Exact Rootform version used to compile official dialects
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  packages: write
+
+concurrency:
+  group: private-dialect-publication
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    name: verify and publish private OCI artifacts
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out full history
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Install exact Bun
+        uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+        with:
+          bun-version: 1.4.0
+
+      - name: Install exact dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Install verified repository and OCI tools
+        env:
+          ACTIONLINT_ARCHIVE: actionlint_1.7.12_linux_amd64.tar.gz
+          ACTIONLINT_SHA256: 8aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8
+          ACTIONLINT_VERSION: 1.7.12
+          GITLEAKS_ARCHIVE: gitleaks_8.30.1_linux_x64.tar.gz
+          GITLEAKS_SHA256: 551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb
+          GITLEAKS_VERSION: 8.30.1
+          ORAS_ARCHIVE: oras_1.3.4_linux_amd64.tar.gz
+          ORAS_SHA256: f27adb935022d94df8dc77719c322dda592c78a0d57a6f7dcdd8d900b248c454
+          ORAS_VERSION: 1.3.4
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error --location \
+            --output "$RUNNER_TEMP/$GITLEAKS_ARCHIVE" \
+            "https://github.com/gitleaks/gitleaks/releases/download/v$GITLEAKS_VERSION/$GITLEAKS_ARCHIVE"
+          printf '%s  %s\n' "$GITLEAKS_SHA256" "$RUNNER_TEMP/$GITLEAKS_ARCHIVE" | sha256sum --check --strict
+          tar --extract --gzip --file "$RUNNER_TEMP/$GITLEAKS_ARCHIVE" --directory "$RUNNER_TEMP" gitleaks
+          curl --fail --silent --show-error --location \
+            --output "$RUNNER_TEMP/$ACTIONLINT_ARCHIVE" \
+            "https://github.com/rhysd/actionlint/releases/download/v$ACTIONLINT_VERSION/$ACTIONLINT_ARCHIVE"
+          printf '%s  %s\n' "$ACTIONLINT_SHA256" "$RUNNER_TEMP/$ACTIONLINT_ARCHIVE" | sha256sum --check --strict
+          tar --extract --gzip --file "$RUNNER_TEMP/$ACTIONLINT_ARCHIVE" --directory "$RUNNER_TEMP" actionlint
+          curl --fail --silent --show-error --location \
+            --output "$RUNNER_TEMP/$ORAS_ARCHIVE" \
+            "https://github.com/oras-project/oras/releases/download/v$ORAS_VERSION/$ORAS_ARCHIVE"
+          printf '%s  %s\n' "$ORAS_SHA256" "$RUNNER_TEMP/$ORAS_ARCHIVE" | sha256sum --check --strict
+          tar --extract --gzip --file "$RUNNER_TEMP/$ORAS_ARCHIVE" --directory "$RUNNER_TEMP" oras
+          test "$("$RUNNER_TEMP/oras" version | awk '/^Version:/ { print $2 }')" = "$ORAS_VERSION"
+          printf '%s\n' "$RUNNER_TEMP" >> "$GITHUB_PATH"
+
+      - name: Validate source and workflow boundary
+        run: |
+          set -euo pipefail
+          bun run check
+          actionlint -no-color -oneline
+          git diff --check
+          gitleaks dir --no-banner --redact --config .gitleaks.toml .
+          gitleaks git --no-banner --redact --config .gitleaks.toml .
+
+      - name: Download exact verified Rootform binary
+        env:
+          GH_TOKEN: ${{ secrets.ROOTFORM_CONTENTS_READ_TOKEN }}
+          ROOTFORM_ARCHIVE_SHA256: ${{ inputs.rootform_archive_sha256 }}
+          ROOTFORM_RELEASE_ID: ${{ inputs.rootform_release_id }}
+          ROOTFORM_VERSION: ${{ inputs.rootform_version }}
+        run: |
+          set -euo pipefail
+          [[ "$ROOTFORM_RELEASE_ID" =~ ^[1-9][0-9]*$ ]]
+          [[ "$ROOTFORM_VERSION" =~ ^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]]
+          [[ "$ROOTFORM_ARCHIVE_SHA256" =~ ^[0-9a-f]{64}$ ]]
+          release="$(gh api "repos/rootform-dev/rootform/releases/$ROOTFORM_RELEASE_ID")"
+          jq -e --arg tag "v$ROOTFORM_VERSION" \
+            '.tag_name == $tag and .draft == false and .prerelease == true' <<<"$release" >/dev/null
+          archive="rootform_${ROOTFORM_VERSION}_linux_amd64.tar.gz"
+          archive_count="$(jq --arg name "$archive" '[.assets[] | select(.name == $name)] | length' <<<"$release")"
+          checksum_count="$(jq '[.assets[] | select(.name == "SHA256SUMS")] | length' <<<"$release")"
+          test "$archive_count" = 1
+          test "$checksum_count" = 1
+          archive_id="$(jq -r --arg name "$archive" '.assets[] | select(.name == $name) | .id' <<<"$release")"
+          archive_digest="$(jq -r --arg name "$archive" '.assets[] | select(.name == $name) | .digest' <<<"$release")"
+          checksum_id="$(jq -r '.assets[] | select(.name == "SHA256SUMS") | .id' <<<"$release")"
+          checksum_digest="$(jq -r '.assets[] | select(.name == "SHA256SUMS") | .digest' <<<"$release")"
+          test "$archive_digest" = "sha256:$ROOTFORM_ARCHIVE_SHA256"
+          [[ "$checksum_digest" =~ ^sha256:[0-9a-f]{64}$ ]]
+          mkdir -p build/release build/rootform
+          gh api -H 'Accept: application/octet-stream' \
+            "repos/rootform-dev/rootform/releases/assets/$archive_id" > "build/release/$archive"
+          gh api -H 'Accept: application/octet-stream' \
+            "repos/rootform-dev/rootform/releases/assets/$checksum_id" > build/release/SHA256SUMS
+          printf '%s  %s\n' "$ROOTFORM_ARCHIVE_SHA256" "build/release/$archive" | sha256sum --check --strict
+          printf '%s  %s\n' "${checksum_digest#sha256:}" build/release/SHA256SUMS | sha256sum --check --strict
+          grep -Fx "$ROOTFORM_ARCHIVE_SHA256  $archive" build/release/SHA256SUMS >/dev/null
+          tar --list --gzip --file "build/release/$archive" | LC_ALL=C sort > build/archive-files.txt
+          printf '%s\n' \
+            ROOTFORM-BINARY-LICENSE.txt \
+            SHA256SUMS \
+            THIRD_PARTY_NOTICES.txt \
+            rootform \
+            "rootform_${ROOTFORM_VERSION}_sbom.spdx.json" \
+            | LC_ALL=C sort > build/expected-archive-files.txt
+          diff --unified build/expected-archive-files.txt build/archive-files.txt
+          tar --list --verbose --gzip --file "build/release/$archive" \
+            | awk '$1 !~ /^-/ { exit 1 }'
+          tar --extract --gzip --file "build/release/$archive" --directory build/rootform
+          (
+            cd build/rootform
+            awk '
+              NF != 2 || $1 !~ /^[0-9a-f]{64}$/ || $2 !~ /^[A-Za-z0-9._-]+$/ { exit 1 }
+              { print $2 }
+            ' SHA256SUMS | LC_ALL=C sort > ../archive-checksum-files.txt
+            printf '%s\n' \
+              ROOTFORM-BINARY-LICENSE.txt \
+              THIRD_PARTY_NOTICES.txt \
+              rootform \
+              "rootform_${ROOTFORM_VERSION}_sbom.spdx.json" \
+              | LC_ALL=C sort > ../expected-checksum-files.txt
+            diff --unified ../expected-checksum-files.txt ../archive-checksum-files.txt
+            sha256sum --check --strict SHA256SUMS
+            test -x rootform
+          )
+          test "$(build/rootform/rootform version)" = "rootform $ROOTFORM_VERSION"
+          printf 'ROOTFORM_BIN=%s/build/rootform/rootform\n' "$GITHUB_WORKSPACE" >> "$GITHUB_ENV"
+
+      - name: Verify complete official dialect matrix and deterministic layouts
+        env:
+          ROOTFORM_VERSION: ${{ inputs.rootform_version }}
+        run: bun scripts/verify.ts --rootform-version "$ROOTFORM_VERSION"
+
+      - name: Require existing package to remain private
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          set +e
+          response="$(gh api orgs/rootform-dev/packages/container/dialects 2>&1)"
+          status=$?
+          set -e
+          if [[ "$status" == 0 ]]; then
+            test "$(jq -r .visibility <<<"$response")" = private
+          elif [[ "$response" != *"HTTP 404"* ]]; then
+            printf 'could not verify existing GHCR package visibility\n' >&2
+            exit 1
+          fi
+
+      - name: Authenticate publication client
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          install -d -m 0700 "$RUNNER_TEMP/oras-config"
+          printf '%s' "$GH_TOKEN" | oras login \
+            --registry-config "$RUNNER_TEMP/oras-config/config.json" \
+            --username "$GITHUB_ACTOR" \
+            --password-stdin \
+            ghcr.io
+
+      - name: Publish artifacts then verified official index
+        env:
+          ORAS_CONFIG: ${{ runner.temp }}/oras-config/config.json
+          ROOTFORM_VERSION: ${{ inputs.rootform_version }}
+        run: |
+          set -euo pipefail
+          bun scripts/publish.ts \
+            --rootform-version "$ROOTFORM_VERSION" \
+            --registry-config "$ORAS_CONFIG" \
+            --evidence build/dialect-publication.json
+          jq -e \
+            '.format_version == "1" and .repository == "ghcr.io/rootform-dev/dialects" and (.artifacts | length) > 0' \
+            build/dialect-publication.json >/dev/null
+
+      - name: Require published package to remain private
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          test "$(gh api orgs/rootform-dev/packages/container/dialects --jq .visibility)" = private
+
+      - name: Record immutable publication evidence
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: dialect-publication-${{ inputs.rootform_version }}
+          path: build/dialect-publication.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Summarize publication
+        env:
+          ROOTFORM_VERSION: ${{ inputs.rootform_version }}
+        run: |
+          set -euo pipefail
+          count="$(jq '.artifacts | length' build/dialect-publication.json)"
+          digest="$(jq -r '.index.manifest_digest' build/dialect-publication.json)"
+          {
+            printf '%s\n' '## Private Dialects publication' ''
+            printf '%s\n' "- Rootform compiler: \`$ROOTFORM_VERSION\`"
+            printf '%s\n' "- Dialects: \`$count\`"
+            printf '%s\n' "- Index: \`ghcr.io/rootform-dev/dialects@$digest\`"
+            printf '%s\n' "- Discovery tag: \`official-index-v1\`"
+            printf '%s\n' "- Visibility: \`private\`"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Remove registry credentials
+        if: always()
+        run: rm -f "$RUNNER_TEMP/oras-config/config.json"

@@ -14,9 +14,10 @@
   },
   "scripts": {
     "check": "bun scripts/validate-repository.ts && bun run typecheck && bun run check:format && bun test scripts",
-    "check:format": "biome check AGENTS.md README.md CONTRIBUTING.md SECURITY.md THIRD_PARTY_NOTICES.md package.json dialects.json toolchain.json scripts",
-    "format": "biome check --write AGENTS.md README.md CONTRIBUTING.md SECURITY.md THIRD_PARTY_NOTICES.md package.json dialects.json toolchain.json scripts",
+    "check:format": "biome check .github AGENTS.md README.md CONTRIBUTING.md SECURITY.md THIRD_PARTY_NOTICES.md package.json dialects.json toolchain.json scripts",
+    "format": "biome check --write .github AGENTS.md README.md CONTRIBUTING.md SECURITY.md THIRD_PARTY_NOTICES.md package.json dialects.json toolchain.json scripts",
     "package:dialects": "bun scripts/package.ts",
+    "publish:dialects": "bun scripts/publish.ts",
     "typecheck": "tsc --noEmit",
     "verify": "bun scripts/verify.ts"
   },

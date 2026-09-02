@@ -57,7 +57,7 @@ function run(command: string[], environment: Record<string, string>): string {
   return result.stdout.toString();
 }
 
-function packageDialects(arguments_: string[]): void {
+export function packageDialects(arguments_: string[]): void {
   const options = parsePackageArguments(arguments_);
   const configuredBinary = process.env.ROOTFORM_BIN;
   if (!configuredBinary) {
