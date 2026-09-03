@@ -200,7 +200,11 @@ export function validateRepository(): void {
     !publication.includes("workflow_dispatch:") ||
     !publication.includes("packages: write") ||
     publication.includes("ROOTFORM_CONTENTS_READ_TOKEN") ||
-    publication.includes("visibility public")
+    !publication.includes("name: publish official dialects") ||
+    (publication.match(/= public/gmu)?.length ?? 0) !== 2 ||
+    publication.includes("= private") ||
+    publication.includes("visibility public") ||
+    publication.includes("PATCH /orgs/rootform-dev/packages")
   ) {
     throw new Error("publication workflow boundary is invalid");
   }
