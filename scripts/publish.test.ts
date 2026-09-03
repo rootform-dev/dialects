@@ -232,28 +232,38 @@ test("layout inspection rejects an index that references another dialect digest"
 
 test("publish arguments keep production fixed and bound test injection to loopback", () => {
   const root = mkdtempSync(join(tmpdir(), "rootform-publish-arguments-"));
+  const revision = "a".repeat(40);
   const config = join(root, "config.json");
   const ca = join(root, "ca.pem");
   writeFileSync(config, "{}\n");
   writeFileSync(ca, "test-ca\n");
   expect(
     parsePublishArguments(
-      ["--rootform-version=0.1.0", "--evidence", "evidence.json", "--registry-config", config],
+      [
+        "--rootform-version=0.1.0",
+        `--revision=${revision}`,
+        "--evidence",
+        "evidence.json",
+        "--registry-config",
+        config,
+      ],
       root,
     ),
   ).toEqual({
     caFile: undefined,
     evidence: join(root, "evidence.json"),
+    packageArguments: ["--rootform-version", "0.1.0", "--revision", revision],
     plainHTTP: false,
     registryConfig: config,
     repository: OFFICIAL_REPOSITORY,
-    versionArguments: ["--rootform-version", "0.1.0"],
   });
   expect(
     parsePublishArguments(
       [
         "--rootform-version",
         "0.1.0",
+        "--revision",
+        revision,
         "--evidence=evidence.json",
         "--test-repository=127.0.0.1:5000/rootform-dev/dialects",
         "--ca-file",
@@ -263,18 +273,36 @@ test("publish arguments keep production fixed and bound test injection to loopba
     ).repository,
   ).toBe("127.0.0.1:5000/rootform-dev/dialects");
   expect(() =>
-    parsePublishArguments(["--rootform-version=0.1.0", "--evidence=x", "--plain-http"], root),
+    parsePublishArguments(
+      ["--rootform-version=0.1.0", `--revision=${revision}`, "--evidence=x", "--plain-http"],
+      root,
+    ),
   ).toThrow("custom transport");
   expect(() =>
     parsePublishArguments(
       [
         "--rootform-version=0.1.0",
+        `--revision=${revision}`,
         "--evidence=x",
         "--test-repository=registry.example/rootform-dev/dialects",
       ],
       root,
     ),
   ).toThrow("loopback registry");
+  expect(() =>
+    parsePublishArguments(["--rootform-version=0.1.0", "--revision=dev", "--evidence=x"], root),
+  ).toThrow("exact commit");
+  expect(() => parsePublishArguments(["--rootform-version=0.1.0", "--evidence=x"], root)).toThrow(
+    "--revision",
+  );
+  expect(() =>
+    parsePublishArguments([
+      "--rootform-version=0.1.0",
+      `--revision=${revision}`,
+      `--revision=${"b".repeat(40)}`,
+      "--evidence=x",
+    ]),
+  ).toThrow("duplicate");
 });
 
 test("ORAS copy applies registry transport flags to correct remote side", () => {

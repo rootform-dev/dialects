@@ -82,10 +82,10 @@ export interface PublicationRegistry {
 export type PublishArguments = {
   caFile?: string;
   evidence: string;
+  packageArguments: string[];
   plainHTTP: boolean;
   registryConfig?: string;
   repository: string;
-  versionArguments: string[];
 };
 
 function object(value: unknown, message: string): JsonObject {
@@ -568,8 +568,9 @@ export function parsePublishArguments(arguments_: string[], cwd = process.cwd())
   let plainHTTP = false;
   let registryConfig: string | undefined;
   let repository = OFFICIAL_REPOSITORY;
+  let revision: string | undefined;
+  let rootformVersion: string | undefined;
   let testOverride = false;
-  const versionArguments: string[] = [];
   const seen = new Set<string>();
   for (let index = 0; index < arguments_.length; index++) {
     const argument = arguments_[index] ?? "";
@@ -582,15 +583,13 @@ export function parsePublishArguments(arguments_: string[], cwd = process.cwd())
       "ca-file",
       "evidence",
       "registry-config",
+      "revision",
       "rootform-version",
       "test-repository",
     ].find((candidate) => argument === `--${candidate}` || argument.startsWith(`--${candidate}=`));
     if (!name) throw new Error(`unknown publish argument: ${argument}`);
-    if (name !== "rootform-version" && seen.has(name)) {
+    if (seen.has(name)) {
       throw new Error(`duplicate publish argument: --${name}`);
-    }
-    if (name === "rootform-version" && versionArguments.length !== 0) {
-      throw new Error("duplicate publish argument: --rootform-version");
     }
     seen.add(name);
     const supplied = takeValue(arguments_, index, name);
@@ -598,7 +597,8 @@ export function parsePublishArguments(arguments_: string[], cwd = process.cwd())
     if (name === "ca-file") caFile = resolve(cwd, supplied.value);
     if (name === "evidence") evidence = resolve(cwd, supplied.value);
     if (name === "registry-config") registryConfig = resolve(cwd, supplied.value);
-    if (name === "rootform-version") versionArguments.push("--rootform-version", supplied.value);
+    if (name === "revision") revision = supplied.value;
+    if (name === "rootform-version") rootformVersion = supplied.value;
     if (name === "test-repository") {
       if (!testRepository(supplied.value))
         throw new Error("--test-repository must use a loopback registry");
@@ -607,7 +607,10 @@ export function parsePublishArguments(arguments_: string[], cwd = process.cwd())
     }
   }
   if (!evidence) throw new Error("--evidence requires a file");
-  if (versionArguments.length === 0) throw new Error("--rootform-version requires a value");
+  if (!rootformVersion) throw new Error("--rootform-version requires a value");
+  if (!revision || !/^[0-9a-f]{40}$/u.test(revision)) {
+    throw new Error("--revision requires one exact commit");
+  }
   if ((plainHTTP || caFile) && !testOverride) {
     throw new Error("custom transport is allowed only with --test-repository");
   }
@@ -618,7 +621,14 @@ export function parsePublishArguments(arguments_: string[], cwd = process.cwd())
   ] as const) {
     if (path !== undefined) readRegular(path, label, 1024 * 1024);
   }
-  return { caFile, evidence, plainHTTP, registryConfig, repository, versionArguments };
+  return {
+    caFile,
+    evidence,
+    packageArguments: ["--rootform-version", rootformVersion, "--revision", revision],
+    plainHTTP,
+    registryConfig,
+    repository,
+  };
 }
 
 function writeEvidence(path: string, evidence: PublicationEvidence): void {
@@ -634,7 +644,7 @@ function main(arguments_: string[]): void {
   try {
     const evidence = publishDistribution({
       buildLayout(destination) {
-        packageDialects(["--to", destination, ...options.versionArguments]);
+        packageDialects(["--to", destination, ...options.packageArguments]);
       },
       registry: new OrasRegistry({
         binary: configuredBinary,
