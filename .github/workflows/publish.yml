@@ -1,4 +1,4 @@
-name: publish private dialects
+name: publish official dialects
 
 on:
   workflow_dispatch:
@@ -21,12 +21,12 @@ permissions:
   packages: write
 
 concurrency:
-  group: private-dialect-publication
+  group: official-dialect-publication
   cancel-in-progress: false
 
 jobs:
   publish:
-    name: verify and publish private OCI artifacts
+    name: verify and publish official OCI artifacts
     runs-on: ubuntu-24.04
     timeout-minutes: 30
 
@@ -154,21 +154,13 @@ jobs:
           ROOTFORM_VERSION: ${{ inputs.rootform_version }}
         run: bun scripts/verify.ts --rootform-version "$ROOTFORM_VERSION"
 
-      - name: Require existing package to remain private
+      - name: Require existing official package to be public
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          set +e
-          response="$(gh api orgs/rootform-dev/packages/container/dialects 2>&1)"
-          status=$?
-          set -e
-          if [[ "$status" == 0 ]]; then
-            test "$(jq -r .visibility <<<"$response")" = private
-          elif [[ "$response" != *"HTTP 404"* ]]; then
-            printf 'could not verify existing GHCR package visibility\n' >&2
-            exit 1
-          fi
+          visibility="$(gh api orgs/rootform-dev/packages/container/dialects --jq .visibility)"
+          test "$visibility" = public
 
       - name: Authenticate publication client
         env:
@@ -197,12 +189,12 @@ jobs:
             '.format_version == "1" and .repository == "ghcr.io/rootform-dev/dialects" and (.artifacts | length) > 0' \
             build/dialect-publication.json >/dev/null
 
-      - name: Require published package to remain private
+      - name: Require published official package to remain public
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          test "$(gh api orgs/rootform-dev/packages/container/dialects --jq .visibility)" = private
+          test "$(gh api orgs/rootform-dev/packages/container/dialects --jq .visibility)" = public
 
       - name: Record immutable publication evidence
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
@@ -220,12 +212,12 @@ jobs:
           count="$(jq '.artifacts | length' build/dialect-publication.json)"
           digest="$(jq -r '.index.manifest_digest' build/dialect-publication.json)"
           {
-            printf '%s\n' '## Private Dialects publication' ''
+            printf '%s\n' '## Official Dialects publication' ''
             printf '%s\n' "- Rootform compiler: \`$ROOTFORM_VERSION\`"
             printf '%s\n' "- Dialects: \`$count\`"
             printf '%s\n' "- Index: \`ghcr.io/rootform-dev/dialects@$digest\`"
             printf '%s\n' "- Discovery tag: \`official-index-v1\`"
-            printf '%s\n' "- Visibility: \`private\`"
+            printf '%s\n' "- Visibility: \`public\`"
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Remove registry credentials

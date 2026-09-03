@@ -63,7 +63,7 @@ revision-bound README URL, and `MPL-2.0`. It never discovers Git state.
 
 ## Official publication
 
-Manual `publish private dialects` workflow consumes one exact published
+Manual `publish official dialects` workflow consumes one exact published
 Rootform prerelease archive and checks both GitHub asset digest and published
 checksums before compiling any dialect. It then:
 
@@ -81,10 +81,12 @@ checksums before compiling any dialect. It then:
 
 Any artifact failure leaves discovery tag unchanged. Rerunning same publication
 is idempotent; existing version tag with different digest fails before first
-push. Workflow verifies GHCR package remains private and never changes package
-visibility. `scripts/publish.ts --test-repository` is bounded to loopback and
-exists only for ephemeral-registry verification; it does not add Rootform CLI
-configuration or private-registry authentication.
+push. Official GHCR package must already be public. Workflow verifies it remains
+public and never changes package visibility. Public dialects and official index
+can therefore be pulled without credentials. `scripts/publish.ts
+--test-repository` is bounded to loopback and exists only for
+ephemeral-registry verification; it does not add Rootform CLI configuration or
+private-registry authentication.
 
 Generic `rootform publish dialects` now shares immutable-tag preflight,
 canonical dialect order, digest repull, complete verification, and immutable
