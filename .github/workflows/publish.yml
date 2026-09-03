@@ -8,7 +8,7 @@ on:
         required: true
         type: string
       rootform_release_id:
-        description: Exact published private Rootform prerelease ID
+        description: Exact published Rootform prerelease ID
         required: true
         type: string
       rootform_version:
@@ -87,7 +87,7 @@ jobs:
 
       - name: Download exact verified Rootform binary
         env:
-          GH_TOKEN: ${{ secrets.ROOTFORM_CONTENTS_READ_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
           ROOTFORM_ARCHIVE_SHA256: ${{ inputs.rootform_archive_sha256 }}
           ROOTFORM_RELEASE_ID: ${{ inputs.rootform_release_id }}
           ROOTFORM_VERSION: ${{ inputs.rootform_version }}

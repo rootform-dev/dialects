@@ -63,7 +63,7 @@ revision-bound README URL, and `MPL-2.0`. It never discovers Git state.
 
 ## Official publication
 
-Manual `publish private dialects` workflow consumes one exact published private
+Manual `publish private dialects` workflow consumes one exact published
 Rootform prerelease archive and checks both GitHub asset digest and published
 checksums before compiling any dialect. It then:
 
@@ -89,7 +89,7 @@ configuration or private-registry authentication.
 Generic `rootform publish dialects` now shares immutable-tag preflight,
 canonical dialect order, digest repull, complete verification, and immutable
 index publication. Official script remains because it additionally owns
-private Rootform release verification, GHCR visibility checks, regenerated
+Rootform release verification, GHCR visibility checks, regenerated
 layout proof, and final mutable `official-index-v1` movement.
 
 ## Licensing
