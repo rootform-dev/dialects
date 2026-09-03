@@ -199,6 +199,7 @@ export function validateRepository(): void {
   if (
     !publication.includes("workflow_dispatch:") ||
     !publication.includes("packages: write") ||
+    publication.includes("ROOTFORM_CONTENTS_READ_TOKEN") ||
     publication.includes("visibility public")
   ) {
     throw new Error("publication workflow boundary is invalid");
