@@ -51,12 +51,15 @@ with one exact verified Rootform executable:
 ```bash
 ROOTFORM_BIN=/absolute/path/to/rootform \
   bun run package:dialects -- --to artifacts/oci \
-  --rootform-version 0.1.0
+  --rootform-version 0.1.0 \
+  --revision 0123456789abcdef0123456789abcdef01234567
 ```
 
 Output is a local OCI image layout under ignored `artifacts/`. Command performs
 no registry push. `bun run verify` builds layout twice and requires byte-identical
-outputs before compatibility tests pass.
+outputs before compatibility tests pass. Wrapper records only explicit,
+deterministic OCI provenance: repository source, exact supplied revision,
+revision-bound README URL, and `MPL-2.0`. It never discovers Git state.
 
 ## Official publication
 
@@ -82,6 +85,12 @@ push. Workflow verifies GHCR package remains private and never changes package
 visibility. `scripts/publish.ts --test-repository` is bounded to loopback and
 exists only for ephemeral-registry verification; it does not add Rootform CLI
 configuration or private-registry authentication.
+
+Generic `rootform publish dialects` now shares immutable-tag preflight,
+canonical dialect order, digest repull, complete verification, and immutable
+index publication. Official script remains because it additionally owns
+private Rootform release verification, GHCR visibility checks, regenerated
+layout proof, and final mutable `official-index-v1` movement.
 
 ## Licensing
 

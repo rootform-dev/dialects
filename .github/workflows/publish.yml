@@ -190,6 +190,7 @@ jobs:
           set -euo pipefail
           bun scripts/publish.ts \
             --rootform-version "$ROOTFORM_VERSION" \
+            --revision "$GITHUB_SHA" \
             --registry-config "$ORAS_CONFIG" \
             --evidence build/dialect-publication.json
           jq -e \
