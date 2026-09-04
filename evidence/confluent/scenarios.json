@@ -3,7 +3,7 @@
   "scenarios": [
     {
       "id": "minimal-private-kafka-platform",
-      "fixture": "testdata/architecture/confluent-v2/minimal",
+      "fixture": "fixtures/confluent-v2/minimal",
       "required_rules": [
         "confluent/connector",
         "confluent/environment",
@@ -64,7 +64,7 @@
     },
     {
       "id": "broad-cross-cloud-streaming-platform",
-      "fixture": "testdata/architecture/confluent-v2/scenarios",
+      "fixture": "fixtures/confluent-v2/scenarios",
       "required_rules": [
         "confluent/access-point",
         "confluent/byok-key",
@@ -234,7 +234,7 @@
     },
     {
       "id": "fail-closed-boundaries",
-      "fixture": "testdata/architecture/confluent-v2/boundary",
+      "fixture": "fixtures/confluent-v2/boundary",
       "expected_build_failure": true,
       "expected_diagnostic_codes": [
         "TRAVERSAL_AMBIGUOUS",

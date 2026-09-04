@@ -5,135 +5,110 @@
   "policy": {
     "comparison_trigger": "proposed-core-promotion-only",
     "required_providers": ["Google Cloud", "AWS", "Azure"],
-    "accepted_adr_required": true
+    "public_decision_evidence_required": true
   },
   "core_source_sha256": "sha256:1a39c40bc7521a4367b5b1f450504cd61f5dd351045dca10c3c862d6e854187d",
   "promotions": [
     {
       "concept": "ai-inference-endpoint",
-      "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/077-ai-endpoint-and-identity-group-core-concepts.md"
+      "disposition": "promoted-to-core"
     },
     {
       "concept": "api-gateway",
-      "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+      "disposition": "promoted-to-core"
     },
     {
       "concept": "backup-plan",
-      "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+      "disposition": "promoted-to-core"
     },
     {
       "concept": "backup-vault",
-      "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+      "disposition": "promoted-to-core"
     },
     {
       "concept": "block-storage-volume",
-      "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+      "disposition": "promoted-to-core"
     },
     {
       "concept": "compute-instance",
-      "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+      "disposition": "promoted-to-core"
     },
     {
       "concept": "dedicated-interconnect",
-      "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+      "disposition": "promoted-to-core"
     },
     {
       "concept": "dns-zone",
-      "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+      "disposition": "promoted-to-core"
     },
     {
       "concept": "encryption-key",
-      "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+      "disposition": "promoted-to-core"
     },
     {
       "concept": "identity-group",
-      "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/077-ai-endpoint-and-identity-group-core-concepts.md"
+      "disposition": "promoted-to-core"
     },
     {
       "concept": "managed-cache",
-      "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+      "disposition": "promoted-to-core"
     },
     {
       "concept": "managed-file-storage",
-      "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+      "disposition": "promoted-to-core"
     },
     {
       "concept": "managed-nat",
-      "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+      "disposition": "promoted-to-core"
     },
     {
       "concept": "managed-secret",
-      "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+      "disposition": "promoted-to-core"
     },
     {
       "concept": "message-queue",
-      "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+      "disposition": "promoted-to-core"
     },
     {
       "concept": "message-subscription",
-      "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+      "disposition": "promoted-to-core"
     },
     {
       "concept": "message-topic",
-      "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+      "disposition": "promoted-to-core"
     },
     {
       "concept": "network-peering",
-      "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+      "disposition": "promoted-to-core"
     },
     {
       "concept": "object-storage-container",
-      "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+      "disposition": "promoted-to-core"
     },
     {
       "concept": "private-endpoint",
-      "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+      "disposition": "promoted-to-core"
     },
     {
       "concept": "serverless-function",
-      "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+      "disposition": "promoted-to-core"
     },
     {
       "concept": "vpn-connection",
-      "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+      "disposition": "promoted-to-core"
     },
     {
       "concept": "vpn-gateway",
-      "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+      "disposition": "promoted-to-core"
     },
     {
       "concept": "workflow",
-      "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/074-multi-cloud-architectural-concepts.md"
+      "disposition": "promoted-to-core"
     }
   ],
   "provider_comparisons": [
     {
       "concept": "ai-inference-endpoint",
-      "evidence_ref": "specs/061-azure-cloud-dialect/evidence/core-promotion-spike.json#ai-inference-endpoint",
       "sources": {
         "google": "https://cloud.google.com/vertex-ai/docs/predictions/get-online-predictions",
         "aws": "https://docs.aws.amazon.com/sagemaker/latest/dg/realtime-endpoints.html",
@@ -142,7 +117,6 @@
     },
     {
       "concept": "api-gateway",
-      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#api-gateway",
       "sources": {
         "google": "https://cloud.google.com/api-gateway/docs/about-api-gateway",
         "aws": "https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html",
@@ -151,7 +125,6 @@
     },
     {
       "concept": "backup-plan",
-      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#backup-plan",
       "sources": {
         "google": "https://cloud.google.com/backup-disaster-recovery/docs/concepts/backup-plans",
         "aws": "https://docs.aws.amazon.com/aws-backup/latest/devguide/about-backup-plans.html",
@@ -160,7 +133,6 @@
     },
     {
       "concept": "backup-vault",
-      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#backup-vault",
       "sources": {
         "google": "https://cloud.google.com/backup-disaster-recovery/docs/concepts/backup-vault",
         "aws": "https://docs.aws.amazon.com/aws-backup/latest/devguide/vaults.html",
@@ -169,7 +141,6 @@
     },
     {
       "concept": "block-storage-volume",
-      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#block-storage-volume",
       "sources": {
         "google": "https://cloud.google.com/compute/docs/disks",
         "aws": "https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volumes.html",
@@ -178,7 +149,6 @@
     },
     {
       "concept": "compute-instance",
-      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#compute-instance",
       "sources": {
         "google": "https://cloud.google.com/compute/docs/instances",
         "aws": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Instances.html",
@@ -187,7 +157,6 @@
     },
     {
       "concept": "dedicated-interconnect",
-      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#dedicated-interconnect",
       "sources": {
         "google": "https://cloud.google.com/network-connectivity/docs/interconnect/concepts/overview",
         "aws": "https://docs.aws.amazon.com/directconnect/latest/UserGuide/Welcome.html",
@@ -196,7 +165,6 @@
     },
     {
       "concept": "dns-zone",
-      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#dns-zone",
       "sources": {
         "google": "https://cloud.google.com/dns/docs/zones",
         "aws": "https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/hosted-zones-working-with.html",
@@ -205,7 +173,6 @@
     },
     {
       "concept": "encryption-key",
-      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#encryption-key",
       "sources": {
         "google": "https://cloud.google.com/kms/docs/resource-hierarchy",
         "aws": "https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html",
@@ -214,7 +181,6 @@
     },
     {
       "concept": "identity-group",
-      "evidence_ref": "specs/061-azure-cloud-dialect/evidence/core-promotion-spike.json#identity-group",
       "sources": {
         "google": "https://cloud.google.com/identity/docs/groups",
         "aws": "https://docs.aws.amazon.com/singlesignon/latest/userguide/users-groups-provisioning.html",
@@ -223,7 +189,6 @@
     },
     {
       "concept": "managed-cache",
-      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#managed-cache",
       "sources": {
         "google": "https://cloud.google.com/memorystore/docs/redis/memorystore-for-redis-overview",
         "aws": "https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/WhatIs.html",
@@ -232,7 +197,6 @@
     },
     {
       "concept": "managed-file-storage",
-      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#managed-file-storage",
       "sources": {
         "google": "https://cloud.google.com/filestore/docs/overview",
         "aws": "https://docs.aws.amazon.com/efs/latest/ug/whatisefs.html",
@@ -241,7 +205,6 @@
     },
     {
       "concept": "managed-nat",
-      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#managed-nat",
       "sources": {
         "google": "https://cloud.google.com/nat/docs/overview",
         "aws": "https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-basics.html",
@@ -250,7 +213,6 @@
     },
     {
       "concept": "managed-secret",
-      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#managed-secret",
       "sources": {
         "google": "https://cloud.google.com/secret-manager/docs/overview",
         "aws": "https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html",
@@ -259,7 +221,6 @@
     },
     {
       "concept": "message-queue",
-      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#message-queue",
       "sources": {
         "google": "https://cloud.google.com/tasks/docs/dual-overview",
         "aws": "https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html",
@@ -268,7 +229,6 @@
     },
     {
       "concept": "message-subscription",
-      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#message-subscription",
       "sources": {
         "google": "https://cloud.google.com/pubsub/docs/subscription-overview",
         "aws": "https://docs.aws.amazon.com/sns/latest/dg/sns-create-subscribe-endpoint-to-topic.html",
@@ -277,7 +237,6 @@
     },
     {
       "concept": "message-topic",
-      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#message-topic",
       "sources": {
         "google": "https://cloud.google.com/pubsub/docs/publish-message-overview",
         "aws": "https://docs.aws.amazon.com/sns/latest/dg/sns-create-topic.html",
@@ -286,7 +245,6 @@
     },
     {
       "concept": "network-peering",
-      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#network-peering",
       "sources": {
         "google": "https://cloud.google.com/vpc/docs/vpc-peering",
         "aws": "https://docs.aws.amazon.com/vpc/latest/peering/working-with-vpc-peering.html",
@@ -295,7 +253,6 @@
     },
     {
       "concept": "object-storage-container",
-      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#object-storage-container",
       "sources": {
         "google": "https://cloud.google.com/storage/docs/buckets",
         "aws": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingBucket.html",
@@ -304,7 +261,6 @@
     },
     {
       "concept": "private-endpoint",
-      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#private-endpoint",
       "sources": {
         "google": "https://cloud.google.com/vpc/docs/about-accessing-vpc-hosted-services-endpoints",
         "aws": "https://docs.aws.amazon.com/vpc/latest/userguide/endpoint-services-overview.html",
@@ -313,7 +269,6 @@
     },
     {
       "concept": "serverless-function",
-      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#serverless-function",
       "sources": {
         "google": "https://cloud.google.com/functions/docs/concepts/overview",
         "aws": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-functions.html",
@@ -322,7 +277,6 @@
     },
     {
       "concept": "vpn-connection",
-      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#vpn-connection",
       "sources": {
         "google": "https://cloud.google.com/network-connectivity/docs/vpn/concepts/overview",
         "aws": "https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html",
@@ -331,7 +285,6 @@
     },
     {
       "concept": "vpn-gateway",
-      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#vpn-gateway",
       "sources": {
         "google": "https://cloud.google.com/network-connectivity/docs/vpn/concepts/overview",
         "aws": "https://docs.aws.amazon.com/vpn/latest/s2svpn/VPC_VPN.html",
@@ -340,7 +293,6 @@
     },
     {
       "concept": "workflow",
-      "evidence_ref": "specs/059-google-cloud-dialect-v8/evidence/core-promotion-spike.json#workflow",
       "sources": {
         "google": "https://cloud.google.com/workflows/docs/overview",
         "aws": "https://docs.aws.amazon.com/step-functions/latest/dg/welcome.html",
@@ -808,6 +760,6 @@
   "limitations": [
     "Core identity does not claim cross-provider feature parity.",
     "Provider-specific contexts, relations, composition, hierarchy, and configuration remain in provider dialects.",
-    "Future promotion or semantic widening requires official comparison and an accepted ADR."
+    "Future promotion or semantic widening requires official comparison and an public decision record."
   ]
 }

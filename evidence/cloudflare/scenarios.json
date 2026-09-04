@@ -3,7 +3,7 @@
   "scenarios": [
     {
       "id": "minimal-worker-storage",
-      "fixture": "testdata/architecture/cloudflare-v5/minimal",
+      "fixture": "fixtures/cloudflare-v5/minimal",
       "required_rules": ["cloudflare/r2-bucket", "cloudflare/workers-script", "cloudflare/zone"],
       "required_outcomes": {
         "cloudflare_r2_bucket.assets": "represented",
@@ -39,7 +39,7 @@
     },
     {
       "id": "broad-cross-cloud-edge-platform",
-      "fixture": "testdata/architecture/cloudflare-v5/scenarios",
+      "fixture": "fixtures/cloudflare-v5/scenarios",
       "required_rules": [
         "cloudflare/access-application",
         "cloudflare/account",
@@ -252,7 +252,7 @@
     },
     {
       "id": "fail-closed-boundaries",
-      "fixture": "testdata/architecture/cloudflare-v5/boundary",
+      "fixture": "fixtures/cloudflare-v5/boundary",
       "expected_build_failure": true,
       "expected_diagnostic_codes": [
         "TRAVERSAL_AMBIGUOUS",

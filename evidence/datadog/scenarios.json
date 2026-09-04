@@ -5,7 +5,7 @@
   "scenarios": [
     {
       "id": "datadog-minimal",
-      "fixture": "testdata/architecture/datadog-v4/minimal",
+      "fixture": "fixtures/datadog-v4/minimal",
       "limitations": [
         "synthetic Terraform proves durable Datadog roots without contacting Datadog"
       ],
@@ -33,7 +33,7 @@
     },
     {
       "id": "datadog-broad-observability",
-      "fixture": "testdata/architecture/datadog-v4/scenarios",
+      "fixture": "fixtures/datadog-v4/scenarios",
       "limitations": [
         "cloud and service integrations prove Datadog collection boundaries, not application traffic; nested OpenTelemetry blocks stay unclaimed"
       ],
@@ -164,7 +164,7 @@
     },
     {
       "id": "datadog-fail-closed",
-      "fixture": "testdata/architecture/datadog-v4/boundary",
+      "fixture": "fixtures/datadog-v4/boundary",
       "limitations": [
         "negative fixture deliberately fails build to prove literals, depends_on, ambiguity, dangling references, and concept mismatches create no partial output"
       ],

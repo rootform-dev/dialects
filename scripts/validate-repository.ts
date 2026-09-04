@@ -1,6 +1,6 @@
 #!/usr/bin/env bun
 
-import { readdirSync, readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join, relative } from "node:path";
 
 type Inventory = {
@@ -25,6 +25,8 @@ const root = join(import.meta.dir, "..");
 const forbiddenPath = /(?:^|\/)(?:\.ai-private|docs\/internal|prd\.md|node_modules)(?:\/|$)/u;
 const forbiddenText =
   /(?:\/Users\/|\/home\/[A-Za-z0-9._-]+\/|[A-Za-z]:\\Users\\|BEGIN (?:RSA|OPENSSH|EC|DSA) PRIVATE KEY|github_pat_|ghp_)/u;
+const privateImplementationReference =
+  /(?:^|[/ "'`])(?:specs\/[0-9]{3}-|testdata\/architecture\/|docs\/adr\/[0-9]{3}-|packages\/renderer\/|web\/src\/)|\b(?:SPEC|ADR)-[0-9]{3}\b|\baccepted_adr\b/u;
 const evidenceNames = new Set([
   "core-abstractions.json",
   "coverage-matrix.json",
@@ -60,6 +62,28 @@ export function filesBelow(directory: string): string[] {
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return value !== null && typeof value === "object" && !Array.isArray(value);
+}
+
+export function hasPrivateImplementationReference(body: string): boolean {
+  return privateImplementationReference.test(body);
+}
+
+function validatePublicEvidenceReferences(value: unknown, source: string): void {
+  if (typeof value === "string") {
+    if (!value.startsWith("evidence/") && !value.startsWith("fixtures/")) return;
+    const target = value.split("#", 1)[0] ?? "";
+    if (!target || !existsSync(join(root, target))) {
+      throw new Error(`public evidence reference is missing: ${source}: ${value}`);
+    }
+    return;
+  }
+  if (Array.isArray(value)) {
+    for (const entry of value) validatePublicEvidenceReferences(entry, source);
+    return;
+  }
+  if (isRecord(value)) {
+    for (const entry of Object.values(value)) validatePublicEvidenceReferences(entry, source);
+  }
 }
 
 export function validateDialectLock(value: unknown, inventory: Inventory): void {
@@ -162,6 +186,12 @@ export function validateRepository(): void {
       const body = readFileSync(join(root, path), "utf8");
       if (forbiddenText.test(body))
         throw new Error(`private or secret-shaped text is forbidden: ${path}`);
+      if (hasPrivateImplementationReference(body)) {
+        throw new Error(`private implementation reference is forbidden: ${path}`);
+      }
+      if (path.startsWith("evidence/") && path.endsWith(".json")) {
+        validatePublicEvidenceReferences(JSON.parse(body) as unknown, path);
+      }
     }
   }
 

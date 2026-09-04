@@ -3,7 +3,7 @@
   "scenarios": [
     {
       "id": "consul-minimal",
-      "fixture": "testdata/architecture/consul-v2/minimal",
+      "fixture": "fixtures/consul-v2/minimal",
       "limitations": [
         "synthetic Terraform proves partition, namespace, catalog node, service, and mesh root without contacting Consul"
       ],
@@ -56,7 +56,7 @@
     },
     {
       "id": "consul-service-networking",
-      "fixture": "testdata/architecture/consul-v2/scenarios",
+      "fixture": "fixtures/consul-v2/scenarios",
       "limitations": [
         "synthetic references prove service catalog, tenancy, mesh, gateways, traffic management, peering, exports, and identity without provider APIs; nested repeated-block targets stay unclaimed"
       ],
@@ -151,7 +151,7 @@
     },
     {
       "id": "consul-fail-closed",
-      "fixture": "testdata/architecture/consul-v2/boundary",
+      "fixture": "fixtures/consul-v2/boundary",
       "limitations": [
         "negative fixture deliberately fails build to prove literals, depends_on, ambiguity, dangling references, and concept mismatches create no partial output"
       ],

@@ -5,7 +5,7 @@
   "scenarios": [
     {
       "id": "auth0-minimal",
-      "fixture": "testdata/architecture/auth0-v1/minimal",
+      "fixture": "fixtures/auth0-v1/minimal",
       "limitations": ["synthetic Terraform proves roots without contacting Auth0"],
       "minimum": {
         "entities": 3,
@@ -30,7 +30,7 @@
     },
     {
       "id": "auth0-broad-identity",
-      "fixture": "testdata/architecture/auth0-v1/scenarios",
+      "fixture": "fixtures/auth0-v1/scenarios",
       "limitations": [
         "association helpers preserve composition but cannot invent direct application-to-connection authentication flows"
       ],
@@ -189,7 +189,7 @@
     },
     {
       "id": "auth0-evidence-boundary",
-      "fixture": "testdata/architecture/auth0-v1/boundary",
+      "fixture": "fixtures/auth0-v1/boundary",
       "limitations": [
         "literals, JSON, URLs, code, secrets, and depends_on must not create architecture facts"
       ],

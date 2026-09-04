@@ -15,7 +15,7 @@
     "sha256": "sha256:5555d4532a027c0ee14f40ef10ce8a230a4c31971f90a71b1aab5b068b4e2677"
   },
   "source_snapshot": {
-    "path": "specs/062-aws-cloud-dialect/evidence/provider-source-inventory.json",
+    "path": "evidence/aws/provider-source-inventory.json",
     "commit": "839fe4af13f9ed6e33a5a6f5938e3356e07951cc",
     "tree": "d0a313417785edd6eb729e92d212d941c98f2168",
     "generated_registration_files": 273,
@@ -23,7 +23,7 @@
   },
   "catalog_snapshot": {
     "count": 253,
-    "path": "specs/062-aws-cloud-dialect/evidence/service-catalog.json",
+    "path": "evidence/aws/service-catalog.json",
     "source_url": "https://aws.amazon.com/products/",
     "verified_date": "2026-08-29",
     "sha256": "sha256:f1836fa02fc87604e322b1c2832a08bd624d5a42dd89279f15e7dc145a17f21a"

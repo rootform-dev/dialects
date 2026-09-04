@@ -3,7 +3,7 @@
   "scenarios": [
     {
       "id": "vault-minimal",
-      "fixture": "testdata/architecture/vault-v5/minimal",
+      "fixture": "fixtures/vault-v5/minimal",
       "limitations": [
         "synthetic Terraform proves namespace ownership and supporting database configuration without contacting Vault"
       ],
@@ -41,7 +41,7 @@
     },
     {
       "id": "vault-cross-cloud",
-      "fixture": "testdata/architecture/vault-v5/scenarios",
+      "fixture": "fixtures/vault-v5/scenarios",
       "limitations": [
         "synthetic references prove GCP, AWS, Azure, and Kubernetes facts; provider APIs and credentials are never used"
       ],
@@ -120,7 +120,7 @@
     },
     {
       "id": "vault-fail-closed",
-      "fixture": "testdata/architecture/vault-v5/boundary",
+      "fixture": "fixtures/vault-v5/boundary",
       "limitations": [
         "negative fixture deliberately fails build to prove literal, depends_on, ambiguous, dangling, and concept-mismatched evidence creates no partial IR"
       ],

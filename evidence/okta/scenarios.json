@@ -5,7 +5,7 @@
   "scenarios": [
     {
       "id": "okta-minimal",
-      "fixture": "testdata/architecture/okta-v7/minimal",
+      "fixture": "fixtures/okta-v7/minimal",
       "limitations": ["synthetic Terraform proves roots without contacting Okta"],
       "minimum": {
         "entities": 4,
@@ -33,7 +33,7 @@
     },
     {
       "id": "okta-broad-identity",
-      "fixture": "testdata/architecture/okta-v7/scenarios",
+      "fixture": "fixtures/okta-v7/scenarios",
       "limitations": [
         "only exact Terraform references create composition or relations; routing helpers never invent authentication flows"
       ],
@@ -184,7 +184,7 @@
     },
     {
       "id": "okta-fail-closed",
-      "fixture": "testdata/architecture/okta-v7/boundary",
+      "fixture": "fixtures/okta-v7/boundary",
       "limitations": [
         "negative fixture proves literals, ambiguity, dangling references, concept mismatches, and depends_on create no facts"
       ],

@@ -10,7 +10,8 @@ Official Rootform Language dialects and their public verification evidence.
   `presentation.json` manifests;
 - `fixtures/`: synthetic Terraform inputs and expected architecture documents;
 - `evidence/`: public provider baselines, compatibility envelopes, coverage,
-  terminology, scenarios, and source provenance;
+  terminology, scenarios, and source provenance; every local reference is
+  repository-relative and must resolve within `evidence/` or `fixtures/`;
 - `dialects.json`: exact official inventory;
 - `rootform.lock`: canonical content and presentation digests for that inventory;
 - `toolchain.json`: exact Rootform product version covered by compatibility

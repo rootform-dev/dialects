@@ -3,7 +3,6 @@
 - Result: Resolved
 - Date: 2026-08-30
 - Provider: `hashicorp/vault` `5.11.0`
-- Decision: ADR-087
 
 ## Question and verdict
 

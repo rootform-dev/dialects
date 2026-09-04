@@ -1,11 +1,11 @@
 {
   "format_version": "1",
   "verified_date": "2026-08-29",
-  "accepted_adr": "docs/adr/085-mongodb-atlas-provider-boundaries.md",
+  "decision_evidence": "evidence/mongodb-atlas/provider-boundaries-spike.md",
   "core_source_sha256": "sha256:1a39c40bc7521a4367b5b1f450504cd61f5dd351045dca10c3c862d6e854187d",
   "policy": {
     "comparison_trigger": "proposed-core-promotion-only",
-    "accepted_adr_required": true,
+    "public_decision_evidence_required": true,
     "required_providers": ["Google Cloud", "AWS", "Azure"]
   },
   "reused_core_concepts": [

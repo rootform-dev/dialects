@@ -1,7 +1,7 @@
 {
   "format_version": "1",
   "verified_date": "2026-08-30",
-  "accepted_adr": "docs/adr/089-consul-provider-boundaries.md",
+  "decision_evidence": "evidence/consul/provider-boundaries-spike.md",
   "reused_core_concepts": ["api-gateway"],
   "referenced_core_concepts": ["api-gateway"],
   "promoted_core_concepts": [],

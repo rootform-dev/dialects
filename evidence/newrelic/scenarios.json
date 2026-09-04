@@ -5,7 +5,7 @@
   "scenarios": [
     {
       "id": "newrelic-minimal",
-      "fixture": "testdata/architecture/newrelic-v3/minimal",
+      "fixture": "fixtures/newrelic-v3/minimal",
       "limitations": ["synthetic Terraform proves roots without contacting New Relic"],
       "minimum": {
         "entities": 3,
@@ -31,7 +31,7 @@
     },
     {
       "id": "newrelic-broad-observability",
-      "fixture": "testdata/architecture/newrelic-v3/scenarios",
+      "fixture": "fixtures/newrelic-v3/scenarios",
       "limitations": [
         "only exact Terraform references create ownership, composition, or cross-dialect relations"
       ],
@@ -154,7 +154,7 @@
     },
     {
       "id": "newrelic-fail-closed",
-      "fixture": "testdata/architecture/newrelic-v3/boundary",
+      "fixture": "fixtures/newrelic-v3/boundary",
       "limitations": [
         "negative fixture proves literals, ambiguity, dangling references, concept mismatches, and depends_on create no facts"
       ],

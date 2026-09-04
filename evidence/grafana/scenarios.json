@@ -5,7 +5,7 @@
   "scenarios": [
     {
       "id": "grafana-minimal",
-      "fixture": "testdata/architecture/grafana-v4/minimal",
+      "fixture": "fixtures/grafana-v4/minimal",
       "limitations": ["synthetic Terraform proves Grafana roots without contacting Grafana"],
       "minimum": {
         "entities": 3,
@@ -31,7 +31,7 @@
     },
     {
       "id": "grafana-broad-observability",
-      "fixture": "testdata/architecture/grafana-v4/scenarios",
+      "fixture": "fixtures/grafana-v4/scenarios",
       "limitations": [
         "only exact Terraform references create ownership, contribution, or cross-dialect relations; dashboards and alerts remain configuration"
       ],
@@ -210,7 +210,7 @@
     },
     {
       "id": "grafana-fail-closed",
-      "fixture": "testdata/architecture/grafana-v4/boundary",
+      "fixture": "fixtures/grafana-v4/boundary",
       "limitations": [
         "negative fixture proves literals, ambiguity, dangling references, concept mismatches, and depends_on create no facts"
       ],

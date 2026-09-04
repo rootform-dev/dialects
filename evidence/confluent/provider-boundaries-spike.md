@@ -1,4 +1,4 @@
-# SPEC-066 provider boundaries spike
+# Confluent Cloud provider-boundaries spike
 
 - Date: 2026-08-29
 - Result: Pass
