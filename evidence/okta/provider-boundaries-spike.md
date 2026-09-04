@@ -1,7 +1,7 @@
 # Okta provider-boundary spike
 
 - Date: 2026-08-30
-- Result: resolved by ADR-093
+- Result: Resolved
 
 Official provider release `v7.0.0` was published 2026-08-24. Its lightweight
 tag resolves to verified commit `1f0d81dbcda7af4de754f73efc280ada9e3059d8`

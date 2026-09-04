@@ -1,7 +1,7 @@
 # Auth0 provider-boundary spike
 
 - Date: 2026-08-30
-- Result: resolved by ADR-094
+- Result: Resolved
 
 Official provider `v1.56.0` was published 2026-08-27. Its lightweight tag
 resolves to verified commit `573bb7646fdcd2b4bb19064c36ae5622dfe0e876`

@@ -2,7 +2,7 @@
 
 - Date: 2026-08-30
 - Provider: `hashicorp/consul` `2.23.0`
-- Result: resolved; ADR-089
+- Result: Resolved
 
 Terraform 1.12.2 installed the provider directly and reported a HashiCorp
 signature. Schema RPC returned 33 resources and 24 data sources. The provider

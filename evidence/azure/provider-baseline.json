@@ -15,7 +15,6 @@
   },
   "catalog_snapshot": {
     "count": 194,
-    "path": "specs/061-azure-cloud-dialect/evidence/service-catalog.json",
     "source_url": "https://azure.microsoft.com/en-us/products/",
     "verified_date": "2026-08-29",
     "sha256": "sha256:7fcdf48712dc4b21a29a295484b0a743f7308b9f223803b11e4a1bb5c08ebeae"

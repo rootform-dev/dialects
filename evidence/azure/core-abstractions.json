@@ -5,7 +5,7 @@
   "policy": {
     "comparison_trigger": "proposed-core-promotion-only",
     "required_providers": ["Google Cloud", "AWS", "Azure"],
-    "accepted_adr_required": true
+    "public_decision_evidence_required": true
   },
   "reused_core_concepts": [
     {
@@ -217,8 +217,6 @@
     {
       "concept": "ai-inference-endpoint",
       "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/077-ai-endpoint-and-identity-group-core-concepts.md",
-      "evidence_ref": "specs/061-azure-cloud-dialect/evidence/core-promotion-spike.json#ai-inference-endpoint",
       "sources": {
         "google": "https://cloud.google.com/vertex-ai/docs/predictions/get-online-predictions",
         "aws": "https://docs.aws.amazon.com/sagemaker/latest/dg/realtime-endpoints.html",
@@ -228,8 +226,6 @@
     {
       "concept": "identity-group",
       "disposition": "promoted-to-core",
-      "accepted_adr": "docs/adr/077-ai-endpoint-and-identity-group-core-concepts.md",
-      "evidence_ref": "specs/061-azure-cloud-dialect/evidence/core-promotion-spike.json#identity-group",
       "sources": {
         "google": "https://cloud.google.com/identity/docs/groups",
         "aws": "https://docs.aws.amazon.com/singlesignon/latest/userguide/users-groups-provisioning.html",
@@ -417,7 +413,7 @@
     {
       "candidate": "network-security-group",
       "disposition": "keep-provider-specific",
-      "reason": "ADR-074 already rejects one firewall/security boundary across Azure NSGs, AWS security groups/NACLs, and Google Cloud firewall policy."
+      "reason": "Existing three-cloud evidence rejects one firewall/security boundary across Azure NSGs, AWS security groups/NACLs, and Google Cloud firewall policy."
     }
   ],
   "limitations": [

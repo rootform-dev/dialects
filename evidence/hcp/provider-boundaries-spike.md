@@ -3,7 +3,6 @@
 - Result: Resolved
 - Date: 2026-08-30
 - Provider: `hashicorp/hcp` `0.114.0`
-- Decision: ADR-088
 
 ## Verdict
 

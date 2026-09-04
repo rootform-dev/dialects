@@ -1,7 +1,7 @@
 {
   "format_version": "1",
   "verified_date": "2026-08-30",
-  "accepted_adr": "docs/adr/094-auth0-provider-boundaries.md",
+  "decision_evidence": "evidence/auth0/provider-boundaries-spike.md",
   "reused_core_concepts": ["identity-application"],
   "referenced_core_concepts": ["identity-application"],
   "referenced_core_contexts": [],

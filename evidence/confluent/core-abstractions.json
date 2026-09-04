@@ -5,7 +5,7 @@
   "policy": {
     "comparison_trigger": "proposed-core-promotion-only",
     "required_providers": ["Google Cloud", "AWS", "Azure"],
-    "accepted_adr_required": true
+    "public_decision_evidence_required": true
   },
   "reused_core_concepts": [
     {
@@ -146,7 +146,7 @@
       }
     }
   ],
-  "accepted_adr": "docs/adr/083-confluent-cloud-provider-boundaries.md",
+  "decision_evidence": "evidence/confluent/provider-boundaries-spike.md",
   "limitations": [
     "No core concept was added during Confluent Cloud implementation.",
     "Kafka, Schema Registry, Cluster Linking, connectors, and Flink remain Confluent-specific.",

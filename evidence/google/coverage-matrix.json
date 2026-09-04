@@ -139,7 +139,7 @@
       ],
       "tests": [
         "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ReleaseCoverage",
-        "testdata/architecture/google-v8/release-coverage"
+        "fixtures/google-v8/release-coverage"
       ]
     },
     {
@@ -177,7 +177,7 @@
       ],
       "tests": [
         "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ReleaseCoverage",
-        "testdata/architecture/google-v8/release-coverage"
+        "fixtures/google-v8/release-coverage"
       ]
     },
     {
@@ -203,7 +203,7 @@
       ],
       "tests": [
         "internal/architecture/compiler/google_v8_test.go",
-        "testdata/architecture/slice/google-compute"
+        "fixtures/slice/google-compute"
       ]
     },
     {
@@ -232,7 +232,7 @@
       ],
       "tests": [
         "internal/architecture/compiler/google_v8_test.go",
-        "testdata/architecture/slice/gke"
+        "fixtures/slice/gke"
       ]
     },
     {
@@ -293,7 +293,7 @@
       ],
       "tests": [
         "internal/architecture/compiler/google_v8_test.go",
-        "testdata/architecture/slice/data-orchestration"
+        "fixtures/slice/data-orchestration"
       ]
     },
     {
@@ -329,7 +329,7 @@
       ],
       "tests": [
         "internal/architecture/compiler/google_v8_test.go",
-        "testdata/architecture/slice/cloud-sql"
+        "fixtures/slice/cloud-sql"
       ]
     },
     {
@@ -363,7 +363,7 @@
       ],
       "tests": [
         "internal/architecture/compiler/google_v8_test.go",
-        "testdata/architecture/slice/google-artifact-registry"
+        "fixtures/slice/google-artifact-registry"
       ]
     },
     {
@@ -386,7 +386,7 @@
       ],
       "tests": [
         "internal/architecture/compiler/google_v8_test.go",
-        "testdata/architecture/slice/google-cloud-dns"
+        "fixtures/slice/google-cloud-dns"
       ]
     },
     {
@@ -426,7 +426,7 @@
       ],
       "tests": [
         "internal/architecture/compiler/google_v8_test.go",
-        "testdata/architecture/slice/data-orchestration"
+        "fixtures/slice/data-orchestration"
       ]
     },
     {
@@ -465,7 +465,7 @@
       ],
       "tests": [
         "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ReleaseCoverage",
-        "testdata/architecture/google-v8/release-coverage"
+        "fixtures/google-v8/release-coverage"
       ]
     },
     {
@@ -498,7 +498,7 @@
       ],
       "tests": [
         "internal/architecture/compiler/google_v8_test.go",
-        "testdata/architecture/slice/iam"
+        "fixtures/slice/iam"
       ]
     },
     {
@@ -524,7 +524,7 @@
       ],
       "tests": [
         "internal/architecture/compiler/google_v8_test.go",
-        "testdata/architecture/slice/load-balancer"
+        "fixtures/slice/load-balancer"
       ]
     },
     {
@@ -560,7 +560,7 @@
       ],
       "tests": [
         "internal/architecture/compiler/google_v8_test.go",
-        "testdata/architecture/slice/google-pubsub"
+        "fixtures/slice/google-pubsub"
       ]
     },
     {
@@ -594,7 +594,7 @@
       ],
       "tests": [
         "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ReleaseCoverage",
-        "testdata/architecture/google-v8/release-coverage"
+        "fixtures/google-v8/release-coverage"
       ]
     },
     {
@@ -630,7 +630,7 @@
       ],
       "tests": [
         "internal/architecture/compiler/google_v8_test.go",
-        "testdata/architecture/slice/network"
+        "fixtures/slice/network"
       ]
     },
     {
@@ -668,7 +668,7 @@
       ],
       "tests": [
         "internal/architecture/compiler/google_v8_test.go",
-        "testdata/architecture/slice/google-cloud-monitoring"
+        "fixtures/slice/google-cloud-monitoring"
       ]
     },
     {
@@ -735,8 +735,8 @@
       ],
       "tests": [
         "internal/architecture/compiler/google_v8_test.go",
-        "testdata/architecture/slice/google-secret-manager",
-        "testdata/architecture/slice/google-cloud-kms"
+        "fixtures/slice/google-secret-manager",
+        "fixtures/slice/google-cloud-kms"
       ]
     },
     {
@@ -771,7 +771,7 @@
       ],
       "tests": [
         "internal/architecture/compiler/google_v8_test.go",
-        "testdata/architecture/slice/google-cloud-run"
+        "fixtures/slice/google-cloud-run"
       ]
     },
     {
@@ -804,7 +804,7 @@
       ],
       "tests": [
         "internal/architecture/compiler/google_v8_test.go",
-        "testdata/architecture/slice/data-orchestration"
+        "fixtures/slice/data-orchestration"
       ]
     }
   ],

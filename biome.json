@@ -7,19 +7,7 @@
   },
   "files": {
     "maxSize": 1048576,
-    "includes": [
-      "**",
-      "!!prd.md",
-      "!!docs/internal",
-      "!!.ai-private",
-      "!!packages/renderer/src/fixtures/generated-diff-fixtures.ts",
-      "!!packages/renderer/src/fixtures/generated-real-fixtures.ts",
-      "!!web/src/lib/architecture-icons/assets/*.svg",
-      "!!packages/renderer/src/contract/architecture-ir.generated.ts",
-      "!!specs/059-google-cloud-dialect-v8/evidence/coverage-matrix.json",
-      "!!specs/061-azure-cloud-dialect/evidence/coverage-matrix.json",
-      "!!specs/062-aws-cloud-dialect/evidence/coverage-matrix.json"
-    ]
+    "includes": ["**"]
   },
   "formatter": {
     "enabled": true,
@@ -35,56 +23,6 @@
       "preset": "recommended"
     }
   },
-  "overrides": [
-    {
-      "includes": ["**/*.svelte"],
-      "linter": {
-        "rules": {
-          "correctness": {
-            "noUnusedImports": "off",
-            "noUnusedVariables": "off"
-          }
-        }
-      }
-    },
-    {
-      "includes": [
-        "web/src/app.css",
-        "packages/renderer/src/tokens.css",
-        "packages/renderer/example/host.css"
-      ],
-      "css": {
-        "parser": {
-          "tailwindDirectives": true
-        }
-      }
-    },
-    {
-      "includes": ["web/fixtures/ir/*.json", "schemas/*.json"],
-      "formatter": {
-        "enabled": false
-      }
-    },
-    {
-      "includes": ["testdata/plan/*.json"],
-      "formatter": {
-        "enabled": false
-      }
-    },
-    {
-      "includes": [
-        "testdata/terraform/constructs/invalid/duplicate_json_attributes/main.tf.json",
-        "testdata/terraform/constructs/invalid/duplicate_json_blocks/main.tf.json"
-      ],
-      "linter": {
-        "rules": {
-          "suspicious": {
-            "noDuplicateObjectKeys": "off"
-          }
-        }
-      }
-    }
-  ],
   "assist": {
     "enabled": true,
     "actions": {

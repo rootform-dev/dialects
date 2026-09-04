@@ -3,7 +3,7 @@
   "scenarios": [
     {
       "id": "hcp-minimal",
-      "fixture": "testdata/architecture/hcp-v0/minimal",
+      "fixture": "fixtures/hcp-v0/minimal",
       "limitations": [
         "synthetic Terraform proves project, HVN, Vault Dedicated, and Private Link architecture without contacting HCP"
       ],
@@ -50,7 +50,7 @@
     },
     {
       "id": "hcp-cross-cloud-products",
-      "fixture": "testdata/architecture/hcp-v0/scenarios",
+      "fixture": "fixtures/hcp-v0/scenarios",
       "limitations": [
         "synthetic references prove AWS, Azure, Google Cloud, Confluent, networking, security, registry, platform, and operations facts; provider APIs and credentials are never used"
       ],
@@ -170,7 +170,7 @@
     },
     {
       "id": "hcp-fail-closed",
-      "fixture": "testdata/architecture/hcp-v0/boundary",
+      "fixture": "fixtures/hcp-v0/boundary",
       "limitations": [
         "negative fixture deliberately fails build to prove literal, depends_on, ambiguous, dangling, and concept-mismatched evidence creates no partial IR"
       ],

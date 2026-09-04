@@ -2,7 +2,6 @@
 
 - Status: Resolved
 - Date: 2026-08-30
-- Decision: ADR-091
 
 Signed `grafana/grafana` `4.45.2` schema contains 121 resources, 50 data
 sources, and function `k6bundle`. Official product and provider documentation

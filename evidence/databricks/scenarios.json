@@ -3,7 +3,7 @@
   "scenarios": [
     {
       "id": "platform-topology",
-      "fixture": "testdata/architecture/databricks-v1/minimal",
+      "fixture": "fixtures/databricks-v1/minimal",
       "required_rules": [
         "databricks/compute-cluster",
         "databricks/lakeflow-job",
@@ -67,7 +67,7 @@
     },
     {
       "id": "cross-cloud-platform",
-      "fixture": "testdata/architecture/databricks-v1/scenarios",
+      "fixture": "fixtures/databricks-v1/scenarios",
       "required_rules": [
         "databricks/workspace",
         "databricks/workspace-network-configuration",
@@ -162,7 +162,7 @@
     },
     {
       "id": "ambiguous-and-sensitive-boundary",
-      "fixture": "testdata/architecture/databricks-v1/boundary",
+      "fixture": "fixtures/databricks-v1/boundary",
       "expected_build_failure": true,
       "expected_diagnostic_codes": [
         "TRAVERSAL_AMBIGUOUS",

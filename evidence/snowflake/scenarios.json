@@ -4,7 +4,7 @@
   "scenarios": [
     {
       "id": "minimal-data-platform",
-      "fixture": "testdata/architecture/snowflake-v2/minimal",
+      "fixture": "fixtures/snowflake-v2/minimal",
       "required_rules": [
         "snowflake/database",
         "snowflake/dynamic-table",
@@ -76,7 +76,7 @@
     },
     {
       "id": "broad-cross-cloud",
-      "fixture": "testdata/architecture/snowflake-v2/scenarios",
+      "fixture": "fixtures/snowflake-v2/scenarios",
       "required_rules": [
         "snowflake/amazon-api-gateway-integration",
         "snowflake/aws-storage-integration",
@@ -243,7 +243,7 @@
     },
     {
       "id": "ambiguous-and-sensitive-boundary",
-      "fixture": "testdata/architecture/snowflake-v2/boundary",
+      "fixture": "fixtures/snowflake-v2/boundary",
       "expected_build_failure": true,
       "expected_diagnostic_codes": [
         "TRAVERSAL_AMBIGUOUS",

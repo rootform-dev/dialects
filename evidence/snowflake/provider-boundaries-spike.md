@@ -3,7 +3,6 @@
 - Result: Resolved
 - Date: 2026-08-30
 - Provider: `snowflakedb/snowflake` `2.20.0`
-- Decision: ADR-086
 
 Terraform `1.12.2` loaded schema without Snowflake credentials or provider
 configuration: 143 resources and 65 data sources. Snowflake accounts contain

@@ -1,4 +1,4 @@
-# SPEC-062 provider surfaces spike
+# AWS provider-surfaces spike
 
 - Date: 2026-08-29
 - Result: Pass

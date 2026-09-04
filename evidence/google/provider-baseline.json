@@ -15,7 +15,6 @@
   },
   "catalog_snapshot": {
     "count": 105,
-    "path": "specs/059-google-cloud-dialect-v8/evidence/catalog-products.json",
     "source_url": "https://cloud.google.com/products",
     "verified_date": "2026-08-28",
     "sha256": "sha256:a91e35953e3ec9b9759f2fb18c294576f899b1ebdc9936c6887467e0beb25850"

@@ -3,7 +3,7 @@
   "scenarios": [
     {
       "id": "release-family-coverage",
-      "fixture": "testdata/architecture/aws-v6/release-coverage",
+      "fixture": "fixtures/aws-v6/release-coverage",
       "required_rules": [
         "aws/api-gateway-rest-api",
         "aws/bedrock-guardrail",
@@ -44,7 +44,7 @@
     },
     {
       "id": "broad-multi-service-platform",
-      "fixture": "testdata/architecture/aws-v6/scenarios",
+      "fixture": "fixtures/aws-v6/scenarios",
       "required_rules": [
         "aws/api-gateway-model",
         "aws/api-gateway-rest-api",
@@ -149,7 +149,7 @@
     },
     {
       "id": "fail-closed-boundaries",
-      "fixture": "testdata/architecture/aws-v6/boundary",
+      "fixture": "fixtures/aws-v6/boundary",
       "required_rules": [
         "aws/instance",
         "aws/sns-topic",
@@ -184,7 +184,7 @@
     },
     {
       "id": "privacy",
-      "fixture": "testdata/architecture/aws-v6/privacy",
+      "fixture": "fixtures/aws-v6/privacy",
       "required_rules": [
         "aws/iam-role",
         "aws/instance",

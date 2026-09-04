@@ -1,7 +1,7 @@
 # New Relic provider boundary spike
 
 - Date: 2026-08-30
-- Decision: ADR-092
+- Result: Resolved
 - Baseline: `newrelic/newrelic` `3.96.4`
 
 ## Evidence

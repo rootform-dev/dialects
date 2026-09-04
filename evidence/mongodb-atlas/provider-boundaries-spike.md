@@ -3,7 +3,6 @@
 - Result: Resolved
 - Date: 2026-08-29
 - Provider: `mongodb/mongodbatlas` `2.16.0`
-- Decision: ADR-085
 
 ## Findings
 

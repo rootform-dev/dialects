@@ -5,7 +5,7 @@
   "policy": {
     "comparison_trigger": "proposed-core-promotion-only",
     "required_providers": ["Google Cloud", "AWS", "Azure"],
-    "accepted_adr_required": true
+    "public_decision_evidence_required": true
   },
   "reused_core_concepts": [
     {
@@ -209,7 +209,7 @@
       }
     }
   ],
-  "accepted_adr": "docs/adr/082-cloudflare-provider-boundaries.md",
+  "decision_evidence": "evidence/cloudflare/provider-boundaries-spike.md",
   "limitations": [
     "No core concept was added during Cloudflare implementation.",
     "Kubernetes Service remains Kubernetes-specific because omitted provider defaults cannot be matched safely.",

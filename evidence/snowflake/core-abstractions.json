@@ -1,7 +1,7 @@
 {
   "format_version": "1",
   "verified_date": "2026-08-30",
-  "accepted_adr": "docs/adr/086-snowflake-provider-boundaries.md",
+  "decision_evidence": "evidence/snowflake/provider-boundaries-spike.md",
   "reused_core_concepts": ["managed-database", "service-identity", "workflow"],
   "referenced_core_concepts": [
     "api-gateway",

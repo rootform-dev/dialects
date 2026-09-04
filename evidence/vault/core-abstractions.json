@@ -1,7 +1,7 @@
 {
   "format_version": "1",
   "verified_date": "2026-08-30",
-  "accepted_adr": "docs/adr/087-vault-provider-boundaries.md",
+  "decision_evidence": "evidence/vault/provider-boundaries-spike.md",
   "reused_core_concepts": [
     "backup-plan",
     "encryption-key",

@@ -5,7 +5,7 @@
   "policy": {
     "comparison_trigger": "proposed-core-promotion-only",
     "required_providers": ["Google Cloud", "AWS", "Azure"],
-    "accepted_adr_required": true
+    "public_decision_evidence_required": true
   },
   "reused_core_concepts": [
     {
@@ -590,10 +590,10 @@
       "disposition": "keep-provider-specific"
     }
   ],
-  "accepted_adr": "docs/adr/080-aws-validates-core-without-new-promotions.md",
+  "decision_evidence": "evidence/aws/provider-surfaces-spike.md",
   "limitations": [
     "Core identity imports no AWS topology, hierarchy, lifecycle, or configuration.",
     "Existing shared concepts claim common durable identity, not feature parity.",
-    "A rejected candidate needs a new official three-cloud comparison and accepted ADR before promotion."
+    "A rejected candidate needs a new official three-cloud comparison and public decision record before promotion."
   ]
 }

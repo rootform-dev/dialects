@@ -457,8 +457,8 @@
     "aws/xray-group"
   ],
   "evidence_refs": [
-    "specs/062-aws-cloud-dialect/evidence/provider-baseline.json",
-    "specs/062-aws-cloud-dialect/evidence/provider-compatibility.json",
-    "specs/062-aws-cloud-dialect/evidence/semantic-catalog.json"
+    "evidence/aws/provider-baseline.json",
+    "evidence/aws/provider-compatibility.json",
+    "evidence/aws/semantic-catalog.json"
   ]
 }

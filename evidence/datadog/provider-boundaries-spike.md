@@ -1,7 +1,7 @@
 # Datadog provider boundary spike
 
 - Date: 2026-08-30
-- Result: resolved by ADR-090
+- Result: Resolved
 
 Provider `4.19.0` exposes 152 resources and 82 data sources. Terraform 1.12.2
 installed signed protocol-6 provider without configuration or credentials.

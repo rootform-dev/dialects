@@ -1,4 +1,4 @@
-# SPEC-065 provider boundaries spike
+# Cloudflare provider-boundaries spike
 
 - Date: 2026-08-29
 - Result: Pass

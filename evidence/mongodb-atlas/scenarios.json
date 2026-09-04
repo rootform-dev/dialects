@@ -3,7 +3,7 @@
   "scenarios": [
     {
       "id": "atlas-service-topology",
-      "fixture": "testdata/architecture/mongodb-atlas-v2/minimal",
+      "fixture": "fixtures/mongodb-atlas-v2/minimal",
       "required_rules": [
         "mongodb-atlas/advanced-cluster",
         "mongodb-atlas/cloud-backup-schedule",
@@ -78,7 +78,7 @@
     },
     {
       "id": "cross-cloud-atlas-platform",
-      "fixture": "testdata/architecture/mongodb-atlas-v2/scenarios",
+      "fixture": "fixtures/mongodb-atlas-v2/scenarios",
       "required_rules": [
         "mongodb-atlas/cloud-backup-schedule",
         "mongodb-atlas/encryption-at-rest",
@@ -216,7 +216,7 @@
     },
     {
       "id": "ambiguous-and-sensitive-boundary",
-      "fixture": "testdata/architecture/mongodb-atlas-v2/boundary",
+      "fixture": "fixtures/mongodb-atlas-v2/boundary",
       "expected_build_failure": true,
       "expected_diagnostic_codes": [
         "TRAVERSAL_AMBIGUOUS",

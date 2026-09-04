@@ -1,8 +1,32 @@
 import { expect, test } from "bun:test";
-import { validateDialectLock, validateRepository } from "./validate-repository.ts";
+import {
+  hasPrivateImplementationReference,
+  validateDialectLock,
+  validateRepository,
+} from "./validate-repository.ts";
 
 test("current repository matches its explicit inventory", () => {
   expect(validateRepository).not.toThrow();
+});
+
+test("public evidence rejects private implementation references", () => {
+  for (const privateReference of [
+    `spe${"cs/062-aws/evidence.json"}`,
+    `docs/ad${"r/086-provider.md"}`,
+    `testdata/arch${"itecture/aws-v6/minimal"}`,
+    `packages/rend${"erer/src/private.ts"}`,
+    `web/s${"rc/private.ts"}`,
+    `AD${"R-086"}`,
+    `SPE${"C-062"}`,
+    `accepted_${"adr"}`,
+  ]) {
+    expect(hasPrivateImplementationReference(privateReference)).toBeTrue();
+  }
+  expect(
+    hasPrivateImplementationReference(
+      "Rootform CLI owns parsing; evidence/aws/provider-surfaces-spike.md is public.",
+    ),
+  ).toBeFalse();
 });
 
 test("authoring lock requires format 1, empty non-coverage, and exact dialect identities", () => {

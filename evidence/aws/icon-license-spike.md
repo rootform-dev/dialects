@@ -1,4 +1,4 @@
-# SPEC-062 AWS icon license spike
+# AWS icon-license spike
 
 - Date: 2026-08-29
 - Result: Pass
@@ -19,7 +19,7 @@ works from AWS Content unless a separate license expressly permits it. The icon
 page does not clearly grant redistribution of raw assets inside another
 software product or modification through SVG optimization.
 
-Rootform therefore vendors no AWS icon in SPEC-062. AWS presentation identities
+Rootform therefore vendors no AWS icon. AWS presentation identities
 remain data-only and resolve through neutral local fallback. This preserves
 semantics, offline operation, and provider-neutral rendering. Generated diagrams
 may be reconsidered separately, but raw asset bundling needs written permission

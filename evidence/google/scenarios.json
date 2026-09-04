@@ -3,7 +3,7 @@
   "scenarios": [
     {
       "id": "vpc-subnet-gke",
-      "fixture": "testdata/architecture/slice/gke",
+      "fixture": "fixtures/slice/gke",
       "required_outcomes": {
         "google_compute_network.vpc": "represented",
         "google_compute_subnetwork.sub": "represented",
@@ -26,7 +26,7 @@
     },
     {
       "id": "vpc-cloud-run",
-      "fixture": "testdata/architecture/slice/google-cloud-run",
+      "fixture": "fixtures/slice/google-cloud-run",
       "required_outcomes": {
         "google_compute_network.runtime": "represented",
         "google_compute_subnetwork.runtime": "represented",
@@ -50,7 +50,7 @@
     },
     {
       "id": "compute-engine-instance",
-      "fixture": "testdata/architecture/slice/google-compute",
+      "fixture": "fixtures/slice/google-compute",
       "required_outcomes": {
         "google_compute_instance.api": "represented"
       },
@@ -62,7 +62,7 @@
     },
     {
       "id": "pubsub-publication-consumption",
-      "fixture": "testdata/architecture/slice/google-pubsub",
+      "fixture": "fixtures/slice/google-pubsub",
       "required_outcomes": {
         "google_pubsub_topic.events": "represented",
         "google_pubsub_subscription.worker": "represented"
@@ -78,7 +78,7 @@
     },
     {
       "id": "cloud-dns-zone-record",
-      "fixture": "testdata/architecture/slice/google-cloud-dns",
+      "fixture": "fixtures/slice/google-cloud-dns",
       "required_outcomes": {
         "google_dns_managed_zone.public": "represented",
         "google_dns_record_set.api": "represented"
@@ -93,7 +93,7 @@
     },
     {
       "id": "secret-manager-version",
-      "fixture": "testdata/architecture/slice/google-secret-manager",
+      "fixture": "fixtures/slice/google-secret-manager",
       "required_outcomes": {
         "google_secret_manager_secret.api": "represented",
         "google_secret_manager_secret_version.api": "represented"
@@ -108,7 +108,7 @@
     },
     {
       "id": "cloud-kms-hierarchy",
-      "fixture": "testdata/architecture/slice/google-cloud-kms",
+      "fixture": "fixtures/slice/google-cloud-kms",
       "required_outcomes": {
         "google_kms_key_ring.application": "represented",
         "google_kms_crypto_key.application": "represented",
@@ -130,7 +130,7 @@
     },
     {
       "id": "artifact-registry-repository",
-      "fixture": "testdata/architecture/slice/google-artifact-registry",
+      "fixture": "fixtures/slice/google-artifact-registry",
       "required_outcomes": {
         "google_artifact_registry_repository.applications": "represented"
       },
@@ -144,7 +144,7 @@
     },
     {
       "id": "cloud-monitoring-alerting-policy",
-      "fixture": "testdata/architecture/slice/google-cloud-monitoring",
+      "fixture": "fixtures/slice/google-cloud-monitoring",
       "required_outcomes": {
         "google_monitoring_alert_policy.latency": "represented"
       },
@@ -156,7 +156,7 @@
     },
     {
       "id": "private-cloud-sql",
-      "fixture": "testdata/architecture/slice/cloud-sql",
+      "fixture": "fixtures/slice/cloud-sql",
       "required_outcomes": {
         "google_compute_network.vpc": "represented",
         "google_sql_database_instance.db": "represented"
@@ -171,7 +171,7 @@
     },
     {
       "id": "application-load-balancer",
-      "fixture": "testdata/architecture/slice/load-balancer",
+      "fixture": "fixtures/slice/load-balancer",
       "required_outcomes": {
         "google_compute_global_forwarding_rule.frontend": "represented",
         "google_compute_target_https_proxy.proxy": "supporting",
@@ -188,7 +188,7 @@
     },
     {
       "id": "bigquery-cloud-storage",
-      "fixture": "testdata/architecture/slice/data-orchestration",
+      "fixture": "fixtures/slice/data-orchestration",
       "required_outcomes": {
         "google_bigquery_dataset.analytics": "represented",
         "google_bigquery_table.events": "represented",
@@ -209,7 +209,7 @@
     },
     {
       "id": "shared-vpc-project-roles",
-      "fixture": "testdata/architecture/google-v8/shared-vpc",
+      "fixture": "fixtures/google-v8/shared-vpc",
       "required_outcomes": {
         "google_compute_shared_vpc_host_project.host": "unsupported",
         "google_compute_shared_vpc_service_project.service": "unsupported"
@@ -225,7 +225,7 @@
     },
     {
       "id": "cloud-sql-private-service-connect",
-      "fixture": "testdata/architecture/google-v8/private-service-connect",
+      "fixture": "fixtures/google-v8/private-service-connect",
       "required_outcomes": {
         "google_sql_database_instance.database": "represented"
       },
@@ -240,7 +240,7 @@
     },
     {
       "id": "gke-kubernetes-unlinked",
-      "fixture": "testdata/architecture/google-v8/gke-kubernetes-unlinked",
+      "fixture": "fixtures/google-v8/gke-kubernetes-unlinked",
       "required_outcomes": {
         "google_container_cluster.cluster": "represented",
         "kubernetes_namespace_v1.workloads": "represented"
@@ -253,7 +253,7 @@
     },
     {
       "id": "release-coverage-cross-family",
-      "fixture": "testdata/architecture/google-v8/release-coverage",
+      "fixture": "fixtures/google-v8/release-coverage",
       "required_outcomes": {
         "google_agent_registry_service.agent_catalog": "represented",
         "google_apigee_instance.runtime": "represented",
