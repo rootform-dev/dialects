@@ -23,7 +23,7 @@ rule "event-grid-domain-topic" {
     type = "azurerm_eventgrid_domain_topic"
   }
 
-  as = concept.core.message-topic
+  as = concept.event-grid-topic
 
   context {
     as  = context.core.ownership
@@ -50,7 +50,7 @@ rule "event-grid-event-subscription" {
   }
 
   relation "delivers-to" {
-    to  = concept.core.message-topic
+    to  = concept.service-bus-topic
     via = source.service_bus_topic_id
   }
 
@@ -112,7 +112,7 @@ rule "event-grid-system-topic" {
     type = "azurerm_eventgrid_system_topic"
   }
 
-  as = concept.core.message-topic
+  as = concept.event-grid-topic
 
   context {
     as  = context.core.ownership
@@ -130,12 +130,12 @@ rule "event-grid-system-topic-subscription" {
 
   context {
     as  = context.core.ownership
-    to  = concept.resource-group
-    via = source.resource_group_name
+    to  = concept.event-grid-topic
+    via = source.system_topic
   }
 
   relation "subscribes-to" {
-    to  = concept.core.message-topic
+    to  = concept.event-grid-topic
     via = source.system_topic
   }
 
@@ -150,7 +150,7 @@ rule "event-grid-system-topic-subscription" {
   }
 
   relation "delivers-to" {
-    to  = concept.core.message-topic
+    to  = concept.service-bus-topic
     via = source.service_bus_topic_id
   }
 
@@ -170,7 +170,7 @@ rule "event-grid-topic" {
     type = "azurerm_eventgrid_topic"
   }
 
-  as = concept.core.message-topic
+  as = concept.event-grid-topic
 
   context {
     as  = context.core.ownership

@@ -1541,7 +1541,7 @@
         {
           "emission": "emission:7fe434a6390d43e9927b6505fbf9b7257f96a7684c16859b07c2f0ece58bf158",
           "rule": "azure/event-grid-domain-topic",
-          "from": "core/message-topic",
+          "from": "azure/event-grid-topic",
           "to": "azure/event-grid-domain",
           "via": "source.domain_name"
         },
@@ -1569,21 +1569,21 @@
         {
           "emission": "emission:140695509a5374462c7feb7cf6ab00076e9fd5e722d6a881bc6598d04d5e548e",
           "rule": "azure/event-grid-system-topic",
-          "from": "core/message-topic",
+          "from": "azure/event-grid-topic",
           "to": "azure/resource-group",
           "via": "source.resource_group_name"
         },
         {
-          "emission": "emission:82d261b96b928592e6824b4a014027b1fd966bc251bb5eb8106f027e2789680e",
+          "emission": "emission:d1efe036d9f473e08da49cf5095d63b9a782469f75823c586425bfabaea51b8c",
           "rule": "azure/event-grid-system-topic-subscription",
           "from": "core/message-subscription",
-          "to": "azure/resource-group",
-          "via": "source.resource_group_name"
+          "to": "azure/event-grid-topic",
+          "via": "source.system_topic"
         },
         {
           "emission": "emission:55074d2898bd8af887981dc78568798996647b5c39425344986966348384e0d2",
           "rule": "azure/event-grid-topic",
-          "from": "core/message-topic",
+          "from": "azure/event-grid-topic",
           "to": "azure/resource-group",
           "via": "source.resource_group_name"
         },
@@ -2309,9 +2309,16 @@
           "via": "source.namespace_id"
         },
         {
+          "emission": "emission:748e98905c1982b15e79745043d0f5cc3716b68cb109301746ed2734cc6c5921",
+          "rule": "azure/service-bus-subscription",
+          "from": "core/message-subscription",
+          "to": "azure/service-bus-topic",
+          "via": "source.topic_id"
+        },
+        {
           "emission": "emission:4093602cd75310d788937ebf226ab2e35abb8212afae583dcd16f33e61483373",
           "rule": "azure/service-bus-topic",
-          "from": "core/message-topic",
+          "from": "azure/service-bus-topic",
           "to": "azure/messaging-namespace",
           "via": "source.namespace_id"
         },

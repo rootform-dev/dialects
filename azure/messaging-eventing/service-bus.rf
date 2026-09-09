@@ -34,8 +34,14 @@ rule "service-bus-subscription" {
 
   as = concept.core.message-subscription
 
+  context {
+    as  = context.core.ownership
+    to  = concept.service-bus-topic
+    via = source.topic_id
+  }
+
   relation "subscribes-to" {
-    to  = concept.core.message-topic
+    to  = concept.service-bus-topic
     via = source.topic_id
   }
 }
@@ -53,7 +59,7 @@ rule "service-bus-topic" {
     type = "azurerm_servicebus_topic"
   }
 
-  as = concept.core.message-topic
+  as = concept.service-bus-topic
 
   context {
     as  = context.core.ownership

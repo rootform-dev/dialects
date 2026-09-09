@@ -2,9 +2,9 @@
   "format_version": "1",
   "showcase_semantics": {
     "policy": "direct reference only; literal equivalents intentionally unresolved",
-    "implemented": ["AZ-02", "AZ-06", "AZ-07", "AZ-08", "AZ-10", "AZ-11", "AZ-14", "AZ-15", "AZ-16", "AZ-17", "AZ-18", "AZ-19", "AZ-20", "AZ-23", "AZ-24", "AZ-27", "AZ-28"],
+    "implemented": ["AZ-02", "AZ-06", "AZ-07", "AZ-08", "AZ-10", "AZ-11", "AZ-14", "AZ-15", "AZ-16", "AZ-17", "AZ-18", "AZ-19", "AZ-20", "AZ-23", "AZ-24", "AZ-27", "AZ-28", "AZ-29", "AZ-30"],
     "blocked": {
-      "AZ-01": "one source path can target many concepts; current fact resolution hard-fails mismatched target concepts"
+      "AZ-01": "scope is exact but polymorphic; v1 requires one exact target concept and valid non-topic scopes would emit FACT_CONCEPT_MISMATCH"
     },
     "fixtures": [
       "fixtures/slice/azure-aks",
@@ -19,10 +19,11 @@
   },
   "ownership_membership_sweep": {
     "policy": "direct reference only; literal equivalents intentionally unresolved",
-    "verified_date": "2026-09-09",
-    "resource_group_ownership_rules": 189,
-    "scope_membership_rules": 15,
+    "verified_date": "2026-09-10",
+    "resource_group_ownership_rules": 188,
+    "scope_membership_rules": 17,
     "detail_contribution_rules": 29,
+    "structural_topic_concepts": ["azure/event-grid-topic", "azure/service-bus-topic"],
     "new_rules": [
       "azure/event-grid-domain-topic",
       "azure/log-analytics-data-export-rule",
@@ -34,8 +35,8 @@
     ],
     "system_topic_event_subscription_relations": 6,
     "refused": {
-      "azurerm_eventgrid_event_subscription.scope": "scope can target many concepts; current fact resolution hard-fails mismatched target concepts",
-      "azurerm_servicebus_subscription.topic_id -> namespace": "namespace ownership needs a two-hop traversal through the topic; direct reference only",
+      "azurerm_eventgrid_event_subscription.scope": "exact polymorphic target cannot be narrowed to one concept in v1 without FACT_CONCEPT_MISMATCH on other valid scopes",
+      "azurerm_servicebus_subscription.topic_id -> namespace": "direct topic ownership implemented; direct namespace edge refused because topic_id references topic and chain already reaches namespace",
       "azurerm_application_gateway.gateway_ip_configuration[*].subnet_id": "block is bounded to max_items=2, not 1; no fixed index is admissible"
     },
     "fixtures": [
@@ -46,6 +47,7 @@
       "fixtures/slice/azure-dns-members",
       "fixtures/slice/azure-monitor-members",
       "fixtures/slice/azure-messaging-members",
+      "fixtures/slice/azure-service-bus",
       "fixtures/slice/azure-network",
       "fixtures/slice/azure-event-grid"
     ]

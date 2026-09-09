@@ -14,7 +14,7 @@
       "candidate": "AZ-06",
       "rule": "azure/service-bus-subscription",
       "path": "topic_id",
-      "fact": "subscribes-to core/message-topic",
+      "fact": "core/ownership and subscribes-to to azure/service-bus-topic",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/servicebus_subscription",
       "quote": "The ID of the ServiceBus Topic to create this Subscription in."
     },
@@ -155,10 +155,37 @@
       "fact": "core/ownership to azure/resource-group",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/web_application_firewall_policy",
       "quote": "The name of the resource group."
+    },
+    {
+      "candidate": "AZ-29",
+      "rules": ["azure/service-bus-topic", "azure/service-bus-subscription"],
+      "paths": ["namespace_id", "topic_id"],
+      "fact": "namespace -> service-bus-topic -> subscription ownership chain",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/servicebus_subscription",
+      "normative_url": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions",
+      "quote": "The ID of the ServiceBus Topic to create this Subscription in."
+    },
+    {
+      "candidate": "AZ-30",
+      "rules": [
+        "azure/event-grid-domain-topic",
+        "azure/event-grid-topic",
+        "azure/event-grid-system-topic",
+        "azure/event-grid-system-topic-subscription"
+      ],
+      "paths": ["domain_name", "resource_group_name", "system_topic"],
+      "fact": "custom, domain, and system topics are scopes; system topic subscription owns exact system topic",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/eventgrid_system_topic_event_subscription",
+      "normative_urls": [
+        "https://learn.microsoft.com/en-us/azure/event-grid/system-topics",
+        "https://learn.microsoft.com/en-us/azure/event-grid/how-to-event-domains",
+        "https://learn.microsoft.com/en-us/azure/event-grid/concepts"
+      ],
+      "quote": "The System Topic where the Event Subscription should be created in."
     }
   ],
   "ownership_membership_sweep": {
-    "verified_date": "2026-09-09",
+    "verified_date": "2026-09-10",
     "baseline": {
       "azurerm": "5.3.0",
       "schema_sha256": "sha256:9079f910d43a4ad678d942bb50d77707124f97f55c561d168cd408d3b68a9371"
@@ -1274,16 +1301,6 @@
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/eventgrid_system_topic",
         "quote": "The name of the Resource Group where the Event Grid System Topic should exist."
-      },
-      {
-        "section": "ownership_rg",
-        "rule": "azure/event-grid-system-topic-subscription",
-        "terraform_type": "azurerm_eventgrid_system_topic_event_subscription",
-        "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
-        "schema_status": "attribute",
-        "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/eventgrid_system_topic_event_subscription",
-        "quote": "The name of the Resource Group where the System Topic exists."
       },
       {
         "section": "ownership_rg",
@@ -2520,7 +2537,7 @@
         "rule": "azure/event-grid-system-topic-subscription",
         "terraform_type": "azurerm_eventgrid_system_topic_event_subscription",
         "path": "system_topic",
-        "fact": "subscribes-to core/message-topic",
+        "fact": "core/ownership and subscribes-to to azure/event-grid-topic",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/eventgrid_system_topic_event_subscription",
         "quote": "The System Topic where the Event Subscription should be created in."
@@ -2550,7 +2567,7 @@
         "rule": "azure/event-grid-system-topic-subscription",
         "terraform_type": "azurerm_eventgrid_system_topic_event_subscription",
         "path": "service_bus_topic_id",
-        "fact": "delivers-to core/message-topic",
+        "fact": "delivers-to azure/service-bus-topic",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/eventgrid_system_topic_event_subscription",
         "quote": "Specifies the id where the Service Bus Topic is located."
@@ -2589,7 +2606,7 @@
         "path": "scope",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/eventgrid_event_subscription",
         "quote": "Specifies the scope at which the EventGrid Event Subscription should be created.",
-        "decision": "no fact: scope targets many concepts (resource group, subscription, storage account, topic); current fact resolution hard-fails mismatched target concepts"
+        "decision": "no fact: scope is exact but polymorphic across resource groups, Azure resources, domains, and topics; v1 requires one exact target concept and emits FACT_CONCEPT_MISMATCH for other valid scopes"
       },
       {
         "candidate": "AZ-25",
@@ -2597,7 +2614,7 @@
         "path": "topic_id",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/servicebus_subscription",
         "quote": "The ID of the ServiceBus Topic to create this Subscription in.",
-        "decision": "no fact toward the namespace: topic_id references the topic only; namespace ownership would need a two-hop traversal, which no rule form expresses"
+        "decision": "direct ownership to azure/service-bus-topic is implemented; no direct subscription-to-namespace fact because topic_id references only the topic and the topic already owns its namespace"
       },
       {
         "candidate": "AZ-26",

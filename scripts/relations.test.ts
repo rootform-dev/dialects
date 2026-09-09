@@ -9,6 +9,7 @@ type Architecture = {
     emissions: { id: string; rule: string; predicate?: string }[];
   };
   architecture: {
+    scopes: { id: string; concept: string }[];
     contexts: {
       from: string;
       to: string;
@@ -177,4 +178,76 @@ test("Azure Application Gateway uses an owned WAF policy", () => {
       ],
     }),
   );
+});
+
+test("Azure Service Bus preserves namespace, topic, and subscription ownership", () => {
+  const document = fixture("azure-service-bus");
+  const topic = "scope:azurerm_servicebus_topic.events";
+  const subscription = "entity:azurerm_servicebus_subscription.worker";
+
+  expect(document.architecture.scopes).toContainEqual(
+    expect.objectContaining({ id: topic, concept: "azure/service-bus-topic" }),
+  );
+  expect(document.architecture.contexts).toContainEqual(
+    expect.objectContaining({
+      from: topic,
+      to: "scope:azurerm_servicebus_namespace.platform",
+      dimension: "core/ownership",
+    }),
+  );
+  expect(document.architecture.contexts).toContainEqual(
+    expect.objectContaining({ from: subscription, to: topic, dimension: "core/ownership" }),
+  );
+  expect(document.architecture.relations).toContainEqual(
+    expect.objectContaining({
+      from: subscription,
+      to: topic,
+      predicate: "azure/subscribes-to",
+    }),
+  );
+  expect(
+    document.architecture.contexts.some(
+      (fact) =>
+        fact.from === subscription && fact.to === "scope:azurerm_servicebus_namespace.platform",
+    ),
+  ).toBe(false);
+
+  for (const unresolved of ["literal", "unknown"]) {
+    const from = `entity:azurerm_servicebus_subscription.${unresolved}`;
+    expect(document.architecture.contexts.some((fact) => fact.from === from)).toBe(false);
+    expect(document.architecture.relations.some((fact) => fact.from === from)).toBe(false);
+  }
+});
+
+test("Azure Event Grid system subscriptions belong to their exact topic", () => {
+  const document = fixture("azure-event-grid");
+  const topic = "scope:azurerm_eventgrid_system_topic.storage";
+
+  expect(document.architecture.scopes).toContainEqual(
+    expect.objectContaining({ id: topic, concept: "azure/event-grid-topic" }),
+  );
+  for (const name of ["eventhub", "queue", "topic", "function", "storage"]) {
+    const from = `entity:azurerm_eventgrid_system_topic_event_subscription.${name}`;
+    expect(document.architecture.contexts).toContainEqual(
+      expect.objectContaining({ from, to: topic, dimension: "core/ownership" }),
+    );
+    expect(document.architecture.relations).toContainEqual(
+      expect.objectContaining({ from, to: topic, predicate: "azure/subscribes-to" }),
+    );
+    expect(
+      document.architecture.contexts.some(
+        (fact) => fact.from === from && fact.to === "scope:azurerm_resource_group.platform",
+      ),
+    ).toBe(false);
+  }
+
+  for (const unresolved of ["literal", "unknown"]) {
+    const from = `entity:azurerm_eventgrid_system_topic_event_subscription.${unresolved}`;
+    expect(document.architecture.contexts.some((fact) => fact.from === from)).toBe(false);
+    expect(
+      document.architecture.relations.some(
+        (fact) => fact.from === from && fact.predicate === "azure/subscribes-to",
+      ),
+    ).toBe(false);
+  }
 });

@@ -23,6 +23,36 @@ resource "azurerm_storage_account" "handler" {
   account_replication_type = "LRS"
 }
 
+resource "azurerm_eventgrid_topic" "commerce" {
+  name                = "commerce"
+  resource_group_name = azurerm_resource_group.platform.name
+  location            = azurerm_resource_group.platform.location
+}
+
+resource "azurerm_eventgrid_domain" "partners" {
+  name                = "partners"
+  resource_group_name = azurerm_resource_group.platform.name
+  location            = azurerm_resource_group.platform.location
+}
+
+resource "azurerm_eventgrid_domain_topic" "orders" {
+  name                = "orders"
+  domain_name         = azurerm_eventgrid_domain.partners.name
+  resource_group_name = azurerm_resource_group.platform.name
+}
+
+resource "azurerm_eventgrid_event_subscription" "commerce" {
+  name                 = "commerce"
+  scope                = azurerm_eventgrid_topic.commerce.id
+  service_bus_queue_id = azurerm_servicebus_queue.handler.id
+}
+
+resource "azurerm_eventgrid_event_subscription" "orders" {
+  name                 = "orders"
+  scope                = azurerm_eventgrid_domain_topic.orders.id
+  service_bus_queue_id = azurerm_servicebus_queue.handler.id
+}
+
 resource "azurerm_eventgrid_event_subscription" "eventhub" {
   name        = "eventhub"
   scope       = azurerm_resource_group.platform.id

@@ -14,7 +14,7 @@
   "showcase_negative_assertions": [
     "AKS literal and unknown workspace IDs produce no observed-by relation",
     "Service Bus literal and unknown namespace/topic IDs produce no ownership or subscribes-to fact",
-    "Event Grid literal and unknown handler IDs produce no delivers-to relation",
+    "Event Grid literal and unknown topic/handler IDs produce no ownership, subscribes-to, or delivers-to fact",
     "Web workload literal and unknown references produce no ownership, network, or runtime fact",
     "Container Apps literal and unknown references produce no ownership, network, runtime, or observed-by fact",
     "Compute literal and unknown resource-group names produce no ownership context",
@@ -33,7 +33,8 @@
       "fixtures/slice/azure-load-balancing",
       "fixtures/slice/azure-network",
       "fixtures/slice/azure-observability",
-      "fixtures/slice/azure-ownership-sweep"
+      "fixtures/slice/azure-ownership-sweep",
+      "fixtures/slice/azure-service-bus"
     ],
     "new_fixtures": [
       "fixtures/slice/azure-ownership-sweep",
@@ -50,11 +51,12 @@
       "fixtures/mongodb-atlas-v2/scenarios": "+3 core/ownership (key vault to resource group, key to vault, blob container to storage account)",
       "fixtures/snowflake-v2/scenarios": "+2 core/ownership (API Management to resource group, blob container to storage account)",
       "fixtures/vault-v5/scenarios": "+1 core/ownership (blob container to storage account)",
-      "fixtures/slice/azure-event-grid": "+8 core/ownership, +5 subscribes-to, +5 delivers-to from system topic event subscriptions",
+      "fixtures/slice/azure-event-grid": "custom, domain, and system topics become scopes; system-topic subscriptions move from direct resource-group ownership to exact topic ownership; delivery relations remain",
       "fixtures/slice/azure-load-balancing": "WAF policy gains resource-group ownership and Application Gateway emits one uses-waf-policy relation",
       "fixtures/slice/azure-network": "two reciprocal peerings each keep one local core/network context and emit one azure/peers-with relation; NAT Gateway public IP and prefix associations add five contributions",
       "fixtures/slice/azure-observability": "+1 core/ownership (Windows function app to resource group)",
-      "fixtures/slice/azure-ownership-sweep": "resource-group ownership remains explicit while absent local and remote VNet paths close deterministically as source_absent"
+      "fixtures/slice/azure-ownership-sweep": "resource-group ownership remains explicit while absent local and remote VNet paths close deterministically as source_absent",
+      "fixtures/slice/azure-service-bus": "Service Bus topic becomes a scope; subscription ownership resolves exactly to topic; topic retains namespace ownership and subscribes-to relation"
     },
     "negative_assertions": [
       "azure-ownership-sweep: literal and unknown resource_group_name produce no core/ownership (189 contexts for 189 direct references, 2 TRAVERSAL_UNRESOLVED warnings)",
@@ -63,9 +65,9 @@
       "azure-cosmos-members: literal account_name, unknown database_name, and unknown cosmosdb_account_id produce no ownership or contribution",
       "azure-dns-members: literal zone_name and unknown private_dns_zone_id produce no contribution",
       "azure-monitor-members: literal workspace_resource_id and unknown log_analytics_workspace_id produce no contribution",
-      "azure-messaging-members: literal namespace_id, unknown domain_name, and literal eventhub_name produce no ownership or contribution",
+      "azure-messaging-members: literal namespace_id, unknown domain_name, and literal eventhub_name produce no ownership or contribution; represented domain topics are structural scopes",
       "azure-network: unknown nat_gateway_id and public_ip_address_id produce no contribution; unknown public_ip_prefix_id produces only the NAT gateway contribution",
-      "azure-event-grid: literal system_topic and eventhub_id, unknown system_topic and service_bus_queue_id produce no subscribes-to or delivers-to relation"
+      "azure-event-grid: literal and unknown system_topic produce no ownership or subscribes-to fact; literal eventhub_id and unknown service_bus_queue_id produce no delivers-to relation; generic scope remains un-emitted because valid targets are polymorphic"
     ]
   },
   "scenarios": [
