@@ -1346,6 +1346,14 @@
       "official_source": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/"
     },
     {
+      "rule_id": "azure/event-grid-domain-topic",
+      "label": "Azure Event Grid domain topic",
+      "family": "messaging-eventing",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_eventgrid_domain_topic",
+      "official_source": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/"
+    },
+    {
       "rule_id": "azure/event-grid-event-subscription",
       "label": "Azure Event Grid event subscription",
       "family": "messaging-eventing",
@@ -1891,11 +1899,43 @@
       "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
     },
     {
+      "rule_id": "azure/log-analytics-data-export-rule",
+      "label": "Azure Log Analytics data export rule",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_log_analytics_data_export_rule",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/log-analytics-saved-search",
+      "label": "Azure Log Analytics saved search",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_log_analytics_saved_search",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/log-analytics-solution",
+      "label": "Azure Log Analytics solution",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_log_analytics_solution",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
       "rule_id": "azure/log-analytics-workspace",
       "label": "Azure Log Analytics workspace",
       "family": "operations",
       "provider": "azurerm",
       "terraform_type": "azurerm_log_analytics_workspace",
+      "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
+    },
+    {
+      "rule_id": "azure/log-analytics-workspace-table",
+      "label": "Azure Log Analytics workspace table",
+      "family": "operations",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_log_analytics_workspace_table",
       "official_source": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
     },
     {
@@ -2168,6 +2208,22 @@
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_nat_gateway",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/nat-gateway-public-ip-association",
+      "label": "NAT Gateway public IP address association",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_nat_gateway_public_ip_association",
+      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+    },
+    {
+      "rule_id": "azure/nat-gateway-public-ip-prefix-association",
+      "label": "NAT Gateway public IP prefix association",
+      "family": "network",
+      "provider": "azurerm",
+      "terraform_type": "azurerm_nat_gateway_public_ip_prefix_association",
       "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
     },
     {

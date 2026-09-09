@@ -10,6 +10,12 @@ rule "virtual-network-manager" {
   }
 
   as = concept.virtual-network-manager
+
+  context {
+    as  = context.core.ownership
+    to  = concept.resource-group
+    via = source.resource_group_name
+  }
 }
 
 rule "virtual-network-peering" {
@@ -18,6 +24,12 @@ rule "virtual-network-peering" {
   }
 
   as = concept.core.network-peering
+
+  context {
+    as  = context.core.ownership
+    to  = concept.resource-group
+    via = source.resource_group_name
+  }
 
   context {
     as  = context.core.network

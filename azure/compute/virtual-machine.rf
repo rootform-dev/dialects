@@ -5,6 +5,12 @@ rule "dev-test-linux-virtual-machine" {
   }
 
   as = concept.core.compute-instance
+
+  context {
+    as  = context.core.ownership
+    to  = concept.resource-group
+    via = source.resource_group_name
+  }
 }
 
 rule "dev-test-windows-virtual-machine" {
@@ -13,6 +19,12 @@ rule "dev-test-windows-virtual-machine" {
   }
 
   as = concept.core.compute-instance
+
+  context {
+    as  = context.core.ownership
+    to  = concept.resource-group
+    via = source.resource_group_name
+  }
 }
 
 rule "linux-virtual-machine" {

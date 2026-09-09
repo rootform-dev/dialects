@@ -10,6 +10,26 @@ rule "event-grid-domain" {
   }
 
   as = concept.event-grid-domain
+
+  context {
+    as  = context.core.ownership
+    to  = concept.resource-group
+    via = source.resource_group_name
+  }
+}
+
+rule "event-grid-domain-topic" {
+  match {
+    type = "azurerm_eventgrid_domain_topic"
+  }
+
+  as = concept.core.message-topic
+
+  context {
+    as  = context.core.ownership
+    to  = concept.event-grid-domain
+    via = source.domain_name
+  }
 }
 
 rule "event-grid-event-subscription" {
@@ -51,6 +71,12 @@ rule "event-grid-namespace" {
   }
 
   as = concept.event-grid-domain
+
+  context {
+    as  = context.core.ownership
+    to  = concept.resource-group
+    via = source.resource_group_name
+  }
 }
 
 rule "event-grid-namespace-topic" {
@@ -59,6 +85,12 @@ rule "event-grid-namespace-topic" {
   }
 
   as = concept.core.message-topic
+
+  context {
+    as  = context.core.ownership
+    to  = concept.event-grid-domain
+    via = source.eventgrid_namespace_id
+  }
 }
 
 rule "event-grid-partner-namespace" {
@@ -67,6 +99,12 @@ rule "event-grid-partner-namespace" {
   }
 
   as = concept.event-grid-domain
+
+  context {
+    as  = context.core.ownership
+    to  = concept.resource-group
+    via = source.resource_group_name
+  }
 }
 
 rule "event-grid-system-topic" {
@@ -75,6 +113,12 @@ rule "event-grid-system-topic" {
   }
 
   as = concept.core.message-topic
+
+  context {
+    as  = context.core.ownership
+    to  = concept.resource-group
+    via = source.resource_group_name
+  }
 }
 
 rule "event-grid-system-topic-subscription" {
@@ -83,6 +127,42 @@ rule "event-grid-system-topic-subscription" {
   }
 
   as = concept.core.message-subscription
+
+  context {
+    as  = context.core.ownership
+    to  = concept.resource-group
+    via = source.resource_group_name
+  }
+
+  relation "subscribes-to" {
+    to  = concept.core.message-topic
+    via = source.system_topic
+  }
+
+  relation "delivers-to" {
+    to  = concept.event-stream
+    via = source.eventhub_id
+  }
+
+  relation "delivers-to" {
+    to  = concept.core.message-queue
+    via = source.service_bus_queue_id
+  }
+
+  relation "delivers-to" {
+    to  = concept.core.message-topic
+    via = source.service_bus_topic_id
+  }
+
+  relation "delivers-to" {
+    to  = concept.core.serverless-function
+    via = source.azure_function_endpoint[0].function_id
+  }
+
+  relation "delivers-to" {
+    to  = concept.storage-account
+    via = source.storage_queue_endpoint[0].storage_account_id
+  }
 }
 
 rule "event-grid-topic" {
@@ -91,4 +171,10 @@ rule "event-grid-topic" {
   }
 
   as = concept.core.message-topic
+
+  context {
+    as  = context.core.ownership
+    to  = concept.resource-group
+    via = source.resource_group_name
+  }
 }
