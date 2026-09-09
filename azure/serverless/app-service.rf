@@ -67,10 +67,6 @@ rule "linux-web-app" {
     via = source.service_plan_id
   }
 
-  relation "observed-by" {
-    to  = concept.application-insights
-    via = source.site_config[0].application_insights_connection_string
-  }
 }
 
 rule "windows-web-app" {
@@ -98,8 +94,4 @@ rule "windows-web-app" {
     via = source.service_plan_id
   }
 
-  relation "observed-by" {
-    to  = concept.application-insights
-    via = source.site_config[0].application_insights_connection_string
-  }
 }

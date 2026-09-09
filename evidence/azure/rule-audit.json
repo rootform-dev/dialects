@@ -37,12 +37,12 @@
     },
     {
       "candidate": "AZ-10",
-      "rules": ["azure/linux-web-app", "azure/windows-web-app", "azure/linux-function-app", "azure/windows-function-app"],
+      "rules": ["azure/linux-function-app", "azure/windows-function-app"],
       "path": "site_config[0].application_insights_connection_string",
       "fact": "observed-by azure/application-insights",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/linux_function_app",
       "quote": "The Connection String for linking the Linux Function App to Application Insights.",
-      "schema_bounds": ["site_config max_items=1 for all four resource types"]
+      "schema_bounds": ["site_config max_items=1 for both function app resource types"]
     },
     {
       "candidate": "AZ-11",

@@ -31,29 +31,6 @@ rule "function-app-function" {
   }
 
   as = concept.core.serverless-function
-
-  context {
-    as  = context.core.ownership
-    to  = concept.resource-group
-    via = source.resource_group_name
-  }
-
-  context {
-    as  = context.core.network
-    to  = concept.core.subnet
-    via = source.virtual_network_subnet_id
-  }
-
-  context {
-    as  = context.core.runtime
-    to  = concept.app-service-plan
-    via = source.service_plan_id
-  }
-
-  relation "observed-by" {
-    to  = concept.application-insights
-    via = source.site_config[0].application_insights_connection_string
-  }
 }
 
 rule "linux-function-app" {

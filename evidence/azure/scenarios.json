@@ -15,7 +15,7 @@
     "AKS literal and unknown workspace IDs produce no observed-by relation",
     "Service Bus literal and unknown namespace/topic IDs produce no ownership or subscribes-to fact",
     "Event Grid literal and unknown handler IDs produce no delivers-to relation",
-    "Web workload literal and unknown references produce no ownership, network, runtime, or observed-by fact",
+    "Web workload literal and unknown references produce no ownership, network, or runtime fact",
     "Container Apps literal and unknown references produce no ownership, network, runtime, or observed-by fact",
     "Compute literal and unknown resource-group names produce no ownership context",
     "VNet peering literal and unknown references produce no network context",
