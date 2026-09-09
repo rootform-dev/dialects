@@ -11,7 +11,6 @@ concept "codeartifact-repository" {
 
 rule "codeartifact-domain" {
   match {
-    kind = "resource"
     type = "aws_codeartifact_domain"
   }
 
@@ -20,7 +19,6 @@ rule "codeartifact-domain" {
 
 rule "codeartifact-repository" {
   match {
-    kind = "resource"
     type = "aws_codeartifact_repository"
   }
 

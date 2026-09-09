@@ -10,7 +10,6 @@ concept "alert" {
 
 rule "alert" {
   match {
-    kind = "resource"
     type = "snowflake_alert"
   }
 
@@ -31,7 +30,6 @@ rule "alert" {
 
 rule "resource-monitor" {
   match {
-    kind = "resource"
     type = "snowflake_resource_monitor"
   }
 

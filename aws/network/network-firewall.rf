@@ -11,7 +11,6 @@ concept "networkfirewall-rule-group" {
 
 rule "networkfirewall-firewall" {
   match {
-    kind = "resource"
     type = "aws_networkfirewall_firewall"
   }
 
@@ -20,7 +19,6 @@ rule "networkfirewall-firewall" {
 
 rule "networkfirewall-rule-group" {
   match {
-    kind = "resource"
     type = "aws_networkfirewall_rule_group"
   }
 

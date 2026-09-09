@@ -1,6 +1,5 @@
 rule "db-instance" {
   match {
-    kind = "resource"
     type = "aws_db_instance"
   }
 
@@ -9,7 +8,6 @@ rule "db-instance" {
 
 rule "rds-cluster" {
   match {
-    kind = "resource"
     type = "aws_rds_cluster"
   }
 
@@ -18,7 +16,6 @@ rule "rds-cluster" {
 
 rule "rds-cluster-instance" {
   match {
-    kind = "resource"
     type = "aws_rds_cluster_instance"
   }
 
@@ -32,7 +29,6 @@ rule "rds-cluster-instance" {
 
 rule "docdb-cluster-instance" {
   match {
-    kind = "resource"
     type = "aws_docdb_cluster_instance"
   }
 
@@ -46,7 +42,6 @@ rule "docdb-cluster-instance" {
 
 rule "neptune-cluster-instance" {
   match {
-    kind = "resource"
     type = "aws_neptune_cluster_instance"
   }
 
@@ -60,7 +55,6 @@ rule "neptune-cluster-instance" {
 
 rule "rds-cluster-endpoint" {
   match {
-    kind = "resource"
     type = "aws_rds_cluster_endpoint"
   }
 
@@ -74,7 +68,6 @@ rule "rds-cluster-endpoint" {
 
 rule "rds-cluster-activity-stream" {
   match {
-    kind = "resource"
     type = "aws_rds_cluster_activity_stream"
   }
 
@@ -88,7 +81,6 @@ rule "rds-cluster-activity-stream" {
 
 rule "db-proxy-default-target-group" {
   match {
-    kind = "resource"
     type = "aws_db_proxy_default_target_group"
   }
 
@@ -102,7 +94,6 @@ rule "db-proxy-default-target-group" {
 
 rule "db-proxy-endpoint" {
   match {
-    kind = "resource"
     type = "aws_db_proxy_endpoint"
   }
 

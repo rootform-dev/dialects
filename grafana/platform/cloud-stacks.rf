@@ -1,6 +1,5 @@
 rule "cloud-stack" {
   match {
-    kind = "resource"
     type = "grafana_cloud_stack"
   }
 

@@ -1,6 +1,5 @@
 rule "instance" {
   match {
-    kind = "resource"
     type = "aws_instance"
   }
 

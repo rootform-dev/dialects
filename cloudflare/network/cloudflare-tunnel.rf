@@ -25,7 +25,6 @@ concept "warp-connector" {
 
 rule "cloudflare-tunnel" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_tunnel_cloudflared"
   }
 
@@ -34,7 +33,6 @@ rule "cloudflare-tunnel" {
 
 rule "cloudflare-tunnel-config" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_tunnel_cloudflared_config"
   }
 
@@ -47,7 +45,6 @@ rule "cloudflare-tunnel-config" {
 }
 rule "cloudflare-tunnel-route" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_tunnel_cloudflared_route"
   }
 
@@ -67,7 +64,6 @@ rule "cloudflare-tunnel-route" {
 
 rule "cloudflare-tunnel-virtual-network" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_tunnel_cloudflared_virtual_network"
   }
 
@@ -76,7 +72,6 @@ rule "cloudflare-tunnel-virtual-network" {
 
 rule "cloudflare-tunnel-hostname-route" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_network_hostname_route"
   }
 
@@ -90,7 +85,6 @@ rule "cloudflare-tunnel-hostname-route" {
 
 rule "connectivity-directory-service" {
   match {
-    kind = "resource"
     type = "cloudflare_connectivity_directory_service"
   }
 
@@ -109,7 +103,6 @@ rule "connectivity-directory-service" {
 
 rule "warp-connector" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_tunnel_warp_connector"
   }
 
@@ -118,7 +111,6 @@ rule "warp-connector" {
 
 rule "warp-connector-config" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_tunnel_warp_connector_config"
   }
 

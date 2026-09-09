@@ -5,7 +5,6 @@ concept "assistant-integration" {
 
 rule "assistant-mcp-server" {
   match {
-    kind = "resource"
     type = "grafana_assistant_mcp_server"
   }
 

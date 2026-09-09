@@ -6,7 +6,6 @@ concept "content-delivery-profile" {
 
 rule "cdn-endpoint" {
   match {
-    kind = "resource"
     type = "azurerm_cdn_endpoint"
   }
 
@@ -15,7 +14,6 @@ rule "cdn-endpoint" {
 
 rule "cdn-profile" {
   match {
-    kind = "resource"
     type = "azurerm_cdn_profile"
   }
 

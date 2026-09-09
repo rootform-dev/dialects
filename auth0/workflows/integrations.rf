@@ -5,7 +5,6 @@ concept "flow-vault-connection" {
 
 rule "flow-vault-connection" {
   match {
-    kind = "resource"
     type = "auth0_flow_vault_connection"
   }
 

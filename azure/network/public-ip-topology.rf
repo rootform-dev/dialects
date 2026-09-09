@@ -1,6 +1,5 @@
 rule "public-address" {
   match {
-    kind = "resource"
     type = "azurerm_public_ip"
   }
 

@@ -6,7 +6,6 @@ concept "networkflowmonitor-monitor" {
 
 rule "networkflowmonitor-monitor" {
   match {
-    kind = "resource"
     type = "aws_networkflowmonitor_monitor"
   }
 

@@ -1,6 +1,5 @@
 rule "synthetic-monitoring-check" {
   match {
-    kind = "resource"
     type = "grafana_synthetic_monitoring_check"
   }
 
@@ -14,7 +13,6 @@ rule "synthetic-monitoring-check" {
 
 rule "synthetic-monitoring-probe" {
   match {
-    kind = "resource"
     type = "grafana_synthetic_monitoring_probe"
   }
 

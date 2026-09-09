@@ -6,7 +6,6 @@ concept "cloudformation-stack-set-instance" {
 
 rule "cloudformation-stack-set-instance" {
   match {
-    kind = "resource"
     type = "aws_cloudformation_stack_set_instance"
   }
 

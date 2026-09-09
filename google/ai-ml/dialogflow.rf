@@ -5,7 +5,6 @@ concept "conversational-agent" {
 
 rule "dialogflow-agent" {
   match {
-    kind = "resource"
     type = "google_dialogflow_agent"
   }
 
@@ -14,7 +13,6 @@ rule "dialogflow-agent" {
 
 rule "dialogflow-cx-agent" {
   match {
-    kind = "resource"
     type = "google_dialogflow_cx_agent"
   }
 

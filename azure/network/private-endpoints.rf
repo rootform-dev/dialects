@@ -1,6 +1,5 @@
 rule "private-endpoint" {
   match {
-    kind = "resource"
     type = "azurerm_private_endpoint"
   }
 

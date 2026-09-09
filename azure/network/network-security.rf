@@ -11,7 +11,6 @@ concept "network-security-perimeter" {
 
 rule "application-security-group" {
   match {
-    kind = "resource"
     type = "azurerm_application_security_group"
   }
 
@@ -20,7 +19,6 @@ rule "application-security-group" {
 
 rule "ip-group" {
   match {
-    kind = "resource"
     type = "azurerm_ip_group"
   }
 
@@ -29,7 +27,6 @@ rule "ip-group" {
 
 rule "network-security-group" {
   match {
-    kind = "resource"
     type = "azurerm_network_security_group"
   }
 
@@ -38,7 +35,6 @@ rule "network-security-group" {
 
 rule "network-security-perimeter" {
   match {
-    kind = "resource"
     type = "azurerm_network_security_perimeter"
   }
 
@@ -47,7 +43,6 @@ rule "network-security-perimeter" {
 
 rule "network-security-rule" {
   match {
-    kind = "resource"
     type = "azurerm_network_security_rule"
   }
 

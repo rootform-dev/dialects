@@ -20,7 +20,6 @@ concept "vault-secrets-sync" {
 
 rule "vault-secrets-app" {
   match {
-    kind = "resource"
     type = "hcp_vault_secrets_app"
   }
 
@@ -40,7 +39,6 @@ rule "vault-secrets-app" {
 
 rule "vault-secrets-app-iam-binding" {
   match {
-    kind = "resource"
     type = "hcp_vault_secrets_app_iam_binding"
   }
 
@@ -54,7 +52,6 @@ rule "vault-secrets-app-iam-binding" {
 
 rule "vault-secrets-app-iam-policy" {
   match {
-    kind = "resource"
     type = "hcp_vault_secrets_app_iam_policy"
   }
 
@@ -83,7 +80,6 @@ rule "vault-secrets-app-lookup" {
 
 rule "vault-secrets-dynamic-secret" {
   match {
-    kind = "resource"
     type = "hcp_vault_secrets_dynamic_secret"
   }
 
@@ -127,7 +123,6 @@ rule "vault-secrets-dynamic-secret-lookup" {
 
 rule "vault-secrets-integration" {
   match {
-    kind = "resource"
     type = "hcp_vault_secrets_integration"
   }
 
@@ -162,7 +157,6 @@ rule "vault-secrets-integration" {
 
 rule "vault-secrets-integration-aws" {
   match {
-    kind = "resource"
     type = "hcp_vault_secrets_integration_aws"
   }
 
@@ -182,7 +176,6 @@ rule "vault-secrets-integration-aws" {
 
 rule "vault-secrets-integration-azure" {
   match {
-    kind = "resource"
     type = "hcp_vault_secrets_integration_azure"
   }
 
@@ -202,7 +195,6 @@ rule "vault-secrets-integration-azure" {
 
 rule "vault-secrets-integration-confluent" {
   match {
-    kind = "resource"
     type = "hcp_vault_secrets_integration_confluent"
   }
 
@@ -217,7 +209,6 @@ rule "vault-secrets-integration-confluent" {
 
 rule "vault-secrets-integration-gcp" {
   match {
-    kind = "resource"
     type = "hcp_vault_secrets_integration_gcp"
   }
 
@@ -242,7 +233,6 @@ rule "vault-secrets-integration-gcp" {
 
 rule "vault-secrets-integration-mongodbatlas" {
   match {
-    kind = "resource"
     type = "hcp_vault_secrets_integration_mongodbatlas"
   }
 
@@ -257,7 +247,6 @@ rule "vault-secrets-integration-mongodbatlas" {
 
 rule "vault-secrets-integration-twilio" {
   match {
-    kind = "resource"
     type = "hcp_vault_secrets_integration_twilio"
   }
 
@@ -272,7 +261,6 @@ rule "vault-secrets-integration-twilio" {
 
 rule "vault-secrets-rotating-secret" {
   match {
-    kind = "resource"
     type = "hcp_vault_secrets_rotating_secret"
   }
 
@@ -321,7 +309,6 @@ rule "vault-secrets-rotating-secret-lookup" {
 
 rule "vault-secrets-secret" {
   match {
-    kind = "resource"
     type = "hcp_vault_secrets_secret"
   }
 
@@ -350,7 +337,6 @@ rule "vault-secrets-secret-lookup" {
 
 rule "vault-secrets-sync" {
   match {
-    kind = "resource"
     type = "hcp_vault_secrets_sync"
   }
 

@@ -6,7 +6,6 @@ concept "iot-central-application" {
 
 rule "iot-central-application" {
   match {
-    kind = "resource"
     type = "azurerm_iotcentral_application"
   }
 

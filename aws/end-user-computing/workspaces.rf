@@ -11,7 +11,6 @@ concept "workspaces-workspace" {
 
 rule "workspaces-pool" {
   match {
-    kind = "resource"
     type = "aws_workspaces_pool"
   }
 
@@ -20,7 +19,6 @@ rule "workspaces-pool" {
 
 rule "workspaces-workspace" {
   match {
-    kind = "resource"
     type = "aws_workspaces_workspace"
   }
 

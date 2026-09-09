@@ -10,7 +10,6 @@ concept "vmware-engine-cluster" {
 
 rule "vmware-engine-private-cloud" {
   match {
-    kind = "resource"
     type = "google_vmwareengine_private_cloud"
   }
 
@@ -19,7 +18,6 @@ rule "vmware-engine-private-cloud" {
 
 rule "vmware-engine-cluster" {
   match {
-    kind = "resource"
     type = "google_vmwareengine_cluster"
   }
 
@@ -28,7 +26,6 @@ rule "vmware-engine-cluster" {
 
 rule "vmware-engine-network" {
   match {
-    kind = "resource"
     type = "google_vmwareengine_network"
   }
 
@@ -37,7 +34,6 @@ rule "vmware-engine-network" {
 
 rule "vmware-engine-subnet" {
   match {
-    kind = "resource"
     type = "google_vmwareengine_subnet"
   }
 

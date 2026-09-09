@@ -10,7 +10,6 @@ concept "cloud-build-trigger" {
 
 rule "cloud-build-worker-pool" {
   match {
-    kind = "resource"
     type = "google_cloudbuild_worker_pool"
   }
 
@@ -19,7 +18,6 @@ rule "cloud-build-worker-pool" {
 
 rule "cloud-build-trigger" {
   match {
-    kind = "resource"
     type = "google_cloudbuild_trigger"
   }
 

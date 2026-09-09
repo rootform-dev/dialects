@@ -5,7 +5,6 @@ concept "tls-configuration" {
 
 rule "authenticated-origin-pulls" {
   match {
-    kind = "resource"
     type = "cloudflare_authenticated_origin_pulls"
   }
 
@@ -19,7 +18,6 @@ rule "authenticated-origin-pulls" {
 
 rule "authenticated-origin-pulls-certificate" {
   match {
-    kind = "resource"
     type = "cloudflare_authenticated_origin_pulls_certificate"
   }
 
@@ -33,7 +31,6 @@ rule "authenticated-origin-pulls-certificate" {
 
 rule "authenticated-origin-pulls-hostname-certificate" {
   match {
-    kind = "resource"
     type = "cloudflare_authenticated_origin_pulls_hostname_certificate"
   }
 
@@ -47,7 +44,6 @@ rule "authenticated-origin-pulls-hostname-certificate" {
 
 rule "authenticated-origin-pulls-settings" {
   match {
-    kind = "resource"
     type = "cloudflare_authenticated_origin_pulls_settings"
   }
 
@@ -61,7 +57,6 @@ rule "authenticated-origin-pulls-settings" {
 
 rule "certificate-authority-hostname-associations" {
   match {
-    kind = "resource"
     type = "cloudflare_certificate_authorities_hostname_associations"
   }
 
@@ -75,7 +70,6 @@ rule "certificate-authority-hostname-associations" {
 
 rule "certificate-pack" {
   match {
-    kind = "resource"
     type = "cloudflare_certificate_pack"
   }
 
@@ -89,7 +83,6 @@ rule "certificate-pack" {
 
 rule "client-certificate" {
   match {
-    kind = "resource"
     type = "cloudflare_client_certificate"
   }
 
@@ -103,7 +96,6 @@ rule "client-certificate" {
 
 rule "certificate-transparency-alerting" {
   match {
-    kind = "resource"
     type = "cloudflare_ct_alerting"
   }
 
@@ -117,7 +109,6 @@ rule "certificate-transparency-alerting" {
 
 rule "custom-csr" {
   match {
-    kind = "resource"
     type = "cloudflare_custom_csr"
   }
 
@@ -131,7 +122,6 @@ rule "custom-csr" {
 
 rule "custom-origin-trust-store" {
   match {
-    kind = "resource"
     type = "cloudflare_custom_origin_trust_store"
   }
 
@@ -145,7 +135,6 @@ rule "custom-origin-trust-store" {
 
 rule "custom-ssl" {
   match {
-    kind = "resource"
     type = "cloudflare_custom_ssl"
   }
 
@@ -159,7 +148,6 @@ rule "custom-ssl" {
 
 rule "hostname-tls-setting" {
   match {
-    kind = "resource"
     type = "cloudflare_hostname_tls_setting"
   }
 
@@ -173,7 +161,6 @@ rule "hostname-tls-setting" {
 
 rule "keyless-certificate" {
   match {
-    kind = "resource"
     type = "cloudflare_keyless_certificate"
   }
 
@@ -187,7 +174,6 @@ rule "keyless-certificate" {
 
 rule "mtls-certificate" {
   match {
-    kind = "resource"
     type = "cloudflare_mtls_certificate"
   }
 
@@ -196,7 +182,6 @@ rule "mtls-certificate" {
 
 rule "origin-ca-certificate" {
   match {
-    kind = "resource"
     type = "cloudflare_origin_ca_certificate"
   }
 
@@ -205,7 +190,6 @@ rule "origin-ca-certificate" {
 
 rule "origin-tls-compliance-modes" {
   match {
-    kind = "resource"
     type = "cloudflare_origin_tls_compliance_modes"
   }
 
@@ -219,7 +203,6 @@ rule "origin-tls-compliance-modes" {
 
 rule "total-tls" {
   match {
-    kind = "resource"
     type = "cloudflare_total_tls"
   }
 
@@ -233,7 +216,6 @@ rule "total-tls" {
 
 rule "universal-ssl-setting" {
   match {
-    kind = "resource"
     type = "cloudflare_universal_ssl_setting"
   }
 
@@ -247,7 +229,6 @@ rule "universal-ssl-setting" {
 
 rule "zone-auto-origin-tls-kex" {
   match {
-    kind = "resource"
     type = "cloudflare_zone_auto_origin_tls_kex"
   }
 

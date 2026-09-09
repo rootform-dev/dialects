@@ -1,6 +1,5 @@
 rule "iam-role" {
   match {
-    kind = "resource"
     type = "aws_iam_role"
   }
 
@@ -9,7 +8,6 @@ rule "iam-role" {
 
 rule "iam-role-policy-attachment" {
   match {
-    kind = "resource"
     type = "aws_iam_role_policy_attachment"
   }
 
@@ -28,7 +26,6 @@ rule "iam-role-policy-attachment" {
 
 rule "iam-instance-profile" {
   match {
-    kind = "resource"
     type = "aws_iam_instance_profile"
   }
 

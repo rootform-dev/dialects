@@ -6,7 +6,6 @@ concept "codecommit-repository" {
 
 rule "codecommit-repository" {
   match {
-    kind = "resource"
     type = "aws_codecommit_repository"
   }
 

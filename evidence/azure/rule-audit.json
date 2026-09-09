@@ -1,5 +1,130 @@
 {
   "format_version": "1",
+  "showcase_semantics": [
+    {
+      "candidate": "AZ-01",
+      "rule": "azure/private-endpoint",
+      "path": "private_service_connection[0].private_connection_resource_id",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/private_endpoint",
+      "quote": "The ID of the Private Link Enabled Remote Resource which this Private Endpoint should be connected to.",
+      "schema_bounds": ["private_service_connection max_items=1"],
+      "decision": "blocked: multi-concept target requires soft concept filtering"
+    },
+    {
+      "candidate": "AZ-06",
+      "rule": "azure/service-bus-subscription",
+      "path": "topic_id",
+      "fact": "subscribes-to core/message-topic",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/servicebus_subscription",
+      "quote": "The ID of the ServiceBus Topic to create this Subscription in."
+    },
+    {
+      "candidate": "AZ-07",
+      "rules": ["azure/service-bus-queue", "azure/service-bus-topic"],
+      "path": "namespace_id",
+      "fact": "core/ownership to azure/messaging-namespace",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/servicebus_queue",
+      "quote": "The ID of the ServiceBus Namespace to create this queue in."
+    },
+    {
+      "candidate": "AZ-08",
+      "rule": "azure/event-grid-event-subscription",
+      "paths": ["eventhub_id", "service_bus_queue_id", "service_bus_topic_id", "azure_function_endpoint[0].function_id", "storage_queue_endpoint[0].storage_account_id"],
+      "fact": "delivers-to explicit handler",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/eventgrid_event_subscription",
+      "quote": "Specifies the ID of the Function where the Event Subscription will receive events.",
+      "schema_bounds": ["azure_function_endpoint max_items=1", "storage_queue_endpoint max_items=1"]
+    },
+    {
+      "candidate": "AZ-10",
+      "rules": ["azure/linux-function-app", "azure/windows-function-app"],
+      "path": "site_config[0].application_insights_connection_string",
+      "fact": "observed-by azure/application-insights",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/linux_function_app",
+      "quote": "The Connection String for linking the Linux Function App to Application Insights.",
+      "schema_bounds": ["site_config max_items=1 for both function app resource types"]
+    },
+    {
+      "candidate": "AZ-11",
+      "rule": "azure/aks-cluster",
+      "path": "oms_agent[0].log_analytics_workspace_id",
+      "fact": "observed-by azure/log-analytics-workspace",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/kubernetes_cluster",
+      "quote": "The ID of the Log Analytics Workspace which the OMS Agent should send data to.",
+      "schema_bounds": ["oms_agent max_items=1"]
+    },
+    {
+      "candidate": "AZ-14",
+      "rule": "azure/virtual-network-peering",
+      "paths": ["virtual_network_name", "remote_virtual_network_id"],
+      "fact": "core/network to each virtual network",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/virtual_network_peering",
+      "quote": "The full Azure resource ID of the remote virtual network."
+    },
+    {
+      "candidate": "AZ-15",
+      "rule": "azure/subnet-nat-gateway-association",
+      "paths": ["subnet_id", "nat_gateway_id"],
+      "fact": "contributes to subnet and managed NAT",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/subnet_nat_gateway_association",
+      "quote": "The ID of the NAT Gateway which should be associated with the Subnet."
+    },
+    {
+      "candidate": "AZ-16",
+      "rule": "azure/container-app-environment",
+      "path": "infrastructure_subnet_id",
+      "fact": "core/network to core/subnet",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/container_app_environment",
+      "quote": "The existing Subnet to use for the Container Apps Control Plane."
+    },
+    {
+      "candidate": "AZ-17",
+      "rule": "azure/container-app-environment",
+      "path": "log_analytics_workspace_id",
+      "fact": "observed-by azure/log-analytics-workspace",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/container_app_environment",
+      "quote": "The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to."
+    },
+    {
+      "candidate": "AZ-18",
+      "rule": "azure/application-insights",
+      "path": "workspace_id",
+      "fact": "observed-by azure/log-analytics-workspace",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/application_insights",
+      "quote": "Specifies the id of a log analytics workspace resource."
+    },
+    {
+      "candidate": "AZ-19",
+      "path": "resource_group_name",
+      "fact": "core/ownership to azure/resource-group",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/linux_web_app",
+      "quote": "The name of the Resource Group where the Linux Web App should exist."
+    },
+    {
+      "candidate": "AZ-20",
+      "rules": ["azure/linux-web-app", "azure/windows-web-app", "azure/linux-function-app", "azure/windows-function-app"],
+      "path": "virtual_network_subnet_id",
+      "fact": "core/network to core/subnet",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/linux_web_app",
+      "quote": "The subnet id used by this Web App for regional virtual network integration."
+    },
+    {
+      "candidate": "AZ-23",
+      "rules": ["azure/linux-web-app", "azure/windows-web-app", "azure/linux-function-app", "azure/windows-function-app"],
+      "path": "service_plan_id",
+      "fact": "core/runtime to azure/app-service-plan",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/linux_function_app",
+      "quote": "The ID of the App Service Plan within which to create this Function App."
+    },
+    {
+      "candidate": "AZ-24",
+      "rules": ["azure/container-app", "azure/container-app-job"],
+      "path": "container_app_environment_id",
+      "fact": "core/runtime to azure/container-app-environment",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/container_app_job",
+      "quote": "The ID of the Container App Environment in which to create the Container App Job."
+    }
+  ],
   "dialect": "azure@0.1.0",
   "baseline": {
     "azurerm": "5.3.0",

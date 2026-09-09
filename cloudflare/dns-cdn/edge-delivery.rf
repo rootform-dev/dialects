@@ -5,7 +5,6 @@ concept "edge-delivery-configuration" {
 
 rule "argo-smart-routing" {
   match {
-    kind = "resource"
     type = "cloudflare_argo_smart_routing"
   }
 
@@ -19,7 +18,6 @@ rule "argo-smart-routing" {
 
 rule "argo-tiered-caching" {
   match {
-    kind = "resource"
     type = "cloudflare_argo_tiered_caching"
   }
 
@@ -33,7 +31,6 @@ rule "argo-tiered-caching" {
 
 rule "tiered-cache" {
   match {
-    kind = "resource"
     type = "cloudflare_tiered_cache"
   }
 
@@ -47,7 +44,6 @@ rule "tiered-cache" {
 
 rule "regional-tiered-cache" {
   match {
-    kind = "resource"
     type = "cloudflare_regional_tiered_cache"
   }
 
@@ -61,7 +57,6 @@ rule "regional-tiered-cache" {
 
 rule "zone-cache-reserve" {
   match {
-    kind = "resource"
     type = "cloudflare_zone_cache_reserve"
   }
 
@@ -75,7 +70,6 @@ rule "zone-cache-reserve" {
 
 rule "zone-cache-variants" {
   match {
-    kind = "resource"
     type = "cloudflare_zone_cache_variants"
   }
 
@@ -89,7 +83,6 @@ rule "zone-cache-variants" {
 
 rule "managed-transforms" {
   match {
-    kind = "resource"
     type = "cloudflare_managed_transforms"
   }
 
@@ -103,7 +96,6 @@ rule "managed-transforms" {
 
 rule "url-normalization-settings" {
   match {
-    kind = "resource"
     type = "cloudflare_url_normalization_settings"
   }
 
@@ -117,7 +109,6 @@ rule "url-normalization-settings" {
 
 rule "page-rule" {
   match {
-    kind = "resource"
     type = "cloudflare_page_rule"
   }
 
@@ -131,7 +122,6 @@ rule "page-rule" {
 
 rule "google-tag-gateway" {
   match {
-    kind = "resource"
     type = "cloudflare_google_tag_gateway"
   }
 
@@ -145,7 +135,6 @@ rule "google-tag-gateway" {
 
 rule "origin-cloud-region" {
   match {
-    kind = "resource"
     type = "cloudflare_origin_cloud_region"
   }
 
@@ -159,7 +148,6 @@ rule "origin-cloud-region" {
 
 rule "snippet" {
   match {
-    kind = "resource"
     type = "cloudflare_snippet"
   }
 
@@ -173,7 +161,6 @@ rule "snippet" {
 
 rule "snippets" {
   match {
-    kind = "resource"
     type = "cloudflare_snippets"
   }
 
@@ -187,7 +174,6 @@ rule "snippets" {
 
 rule "snippet-rules" {
   match {
-    kind = "resource"
     type = "cloudflare_snippet_rules"
   }
 

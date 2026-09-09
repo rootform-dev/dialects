@@ -6,7 +6,6 @@ concept "load-balancer-component" {
 
 rule "alb" {
   match {
-    kind = "resource"
     type = "aws_alb"
   }
 

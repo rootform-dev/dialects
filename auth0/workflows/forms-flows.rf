@@ -5,7 +5,6 @@ concept "identity-workflow" {
 
 rule "flow" {
   match {
-    kind = "resource"
     type = "auth0_flow"
   }
 
@@ -23,7 +22,6 @@ rule "flow-lookup" {
 
 rule "form" {
   match {
-    kind = "resource"
     type = "auth0_form"
   }
 

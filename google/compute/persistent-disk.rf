@@ -1,6 +1,5 @@
 rule "persistent-disk" {
   match {
-    kind = "resource"
     type = "google_compute_disk"
   }
 
@@ -9,7 +8,6 @@ rule "persistent-disk" {
 
 rule "regional-persistent-disk" {
   match {
-    kind = "resource"
     type = "google_compute_region_disk"
   }
 

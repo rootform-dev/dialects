@@ -6,7 +6,6 @@ concept "table-storage-table" {
 
 rule "table-storage-table" {
   match {
-    kind = "resource"
     type = "azurerm_storage_table"
   }
 

@@ -10,7 +10,6 @@ concept "plugin-runtime" {
 
 rule "plugin" {
   match {
-    kind = "resource"
     type = "vault_plugin"
   }
 
@@ -19,7 +18,6 @@ rule "plugin" {
 
 rule "plugin-pinned-version" {
   match {
-    kind = "resource"
     type = "vault_plugin_pinned_version"
   }
 
@@ -28,7 +26,6 @@ rule "plugin-pinned-version" {
 
 rule "plugin-runtime" {
   match {
-    kind = "resource"
     type = "vault_plugin_runtime"
   }
 

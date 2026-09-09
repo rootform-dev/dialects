@@ -10,7 +10,6 @@ concept "service-integration-configuration" {
 
 rule "action-connection" {
   match {
-    kind = "resource"
     type = "datadog_action_connection"
   }
 
@@ -28,7 +27,6 @@ rule "action-connection-lookup" {
 
 rule "integration-cloudflare-account" {
   match {
-    kind = "resource"
     type = "datadog_integration_cloudflare_account"
   }
 
@@ -37,7 +35,6 @@ rule "integration-cloudflare-account" {
 
 rule "integration-confluent-account" {
   match {
-    kind = "resource"
     type = "datadog_integration_confluent_account"
   }
 
@@ -46,7 +43,6 @@ rule "integration-confluent-account" {
 
 rule "integration-confluent-resource" {
   match {
-    kind = "resource"
     type = "datadog_integration_confluent_resource"
   }
 
@@ -60,7 +56,6 @@ rule "integration-confluent-resource" {
 
 rule "integration-fastly-account" {
   match {
-    kind = "resource"
     type = "datadog_integration_fastly_account"
   }
 
@@ -69,7 +64,6 @@ rule "integration-fastly-account" {
 
 rule "integration-fastly-service" {
   match {
-    kind = "resource"
     type = "datadog_integration_fastly_service"
   }
 

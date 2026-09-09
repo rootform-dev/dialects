@@ -20,7 +20,6 @@ concept "dataplex-data-product" {
 
 rule "dataplex-lake" {
   match {
-    kind = "resource"
     type = "google_dataplex_lake"
   }
 
@@ -29,7 +28,6 @@ rule "dataplex-lake" {
 
 rule "dataplex-zone" {
   match {
-    kind = "resource"
     type = "google_dataplex_zone"
   }
 
@@ -44,7 +42,6 @@ rule "dataplex-zone" {
 
 rule "dataplex-asset" {
   match {
-    kind = "resource"
     type = "google_dataplex_asset"
   }
 
@@ -53,7 +50,6 @@ rule "dataplex-asset" {
 
 rule "dataplex-data-asset" {
   match {
-    kind = "resource"
     type = "google_dataplex_data_asset"
   }
 
@@ -62,7 +58,6 @@ rule "dataplex-data-asset" {
 
 rule "dataplex-data-product" {
   match {
-    kind = "resource"
     type = "google_dataplex_data_product"
   }
 

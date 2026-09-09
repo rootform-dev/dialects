@@ -46,7 +46,6 @@ concept "identity-synchronization-job" {
 
 rule "entra-access-package" {
   match {
-    kind = "resource"
     type = "azuread_access_package"
   }
 
@@ -55,7 +54,6 @@ rule "entra-access-package" {
 
 rule "entra-access-package-assignment-policy" {
   match {
-    kind = "resource"
     type = "azuread_access_package_assignment_policy"
   }
 
@@ -64,7 +62,6 @@ rule "entra-access-package-assignment-policy" {
 
 rule "entra-access-package-catalog" {
   match {
-    kind = "resource"
     type = "azuread_access_package_catalog"
   }
 
@@ -73,7 +70,6 @@ rule "entra-access-package-catalog" {
 
 rule "entra-administrative-unit" {
   match {
-    kind = "resource"
     type = "azuread_administrative_unit"
   }
 
@@ -82,7 +78,6 @@ rule "entra-administrative-unit" {
 
 rule "entra-app-role-assignment" {
   match {
-    kind = "resource"
     type = "azuread_app_role_assignment"
   }
 
@@ -91,7 +86,6 @@ rule "entra-app-role-assignment" {
 
 rule "entra-application" {
   match {
-    kind = "resource"
     type = "azuread_application"
   }
 
@@ -100,7 +94,6 @@ rule "entra-application" {
 
 rule "entra-application-federated-identity" {
   match {
-    kind = "resource"
     type = "azuread_application_federated_identity_credential"
   }
 
@@ -109,7 +102,6 @@ rule "entra-application-federated-identity" {
 
 rule "entra-application-registration" {
   match {
-    kind = "resource"
     type = "azuread_application_registration"
   }
 
@@ -118,7 +110,6 @@ rule "entra-application-registration" {
 
 rule "entra-authentication-strength-policy" {
   match {
-    kind = "resource"
     type = "azuread_authentication_strength_policy"
   }
 
@@ -127,7 +118,6 @@ rule "entra-authentication-strength-policy" {
 
 rule "entra-conditional-access-policy" {
   match {
-    kind = "resource"
     type = "azuread_conditional_access_policy"
   }
 
@@ -136,7 +126,6 @@ rule "entra-conditional-access-policy" {
 
 rule "entra-domain-services" {
   match {
-    kind = "resource"
     type = "azurerm_active_directory_domain_service"
   }
 
@@ -145,7 +134,6 @@ rule "entra-domain-services" {
 
 rule "entra-domain-services-replica-set" {
   match {
-    kind = "resource"
     type = "azurerm_active_directory_domain_service_replica_set"
   }
 
@@ -154,7 +142,6 @@ rule "entra-domain-services-replica-set" {
 
 rule "entra-domain-services-trust" {
   match {
-    kind = "resource"
     type = "azurerm_active_directory_domain_service_trust"
   }
 
@@ -163,7 +150,6 @@ rule "entra-domain-services-trust" {
 
 rule "entra-external-id-directory" {
   match {
-    kind = "resource"
     type = "azurerm_aadb2c_directory"
   }
 
@@ -172,7 +158,6 @@ rule "entra-external-id-directory" {
 
 rule "entra-group" {
   match {
-    kind = "resource"
     type = "azuread_group"
   }
 
@@ -181,7 +166,6 @@ rule "entra-group" {
 
 rule "entra-group-without-members" {
   match {
-    kind = "resource"
     type = "azuread_group_without_members"
   }
 
@@ -190,7 +174,6 @@ rule "entra-group-without-members" {
 
 rule "entra-named-location" {
   match {
-    kind = "resource"
     type = "azuread_named_location"
   }
 
@@ -199,7 +182,6 @@ rule "entra-named-location" {
 
 rule "entra-service-principal" {
   match {
-    kind = "resource"
     type = "azuread_service_principal"
   }
 
@@ -208,7 +190,6 @@ rule "entra-service-principal" {
 
 rule "entra-synchronization-job" {
   match {
-    kind = "resource"
     type = "azuread_synchronization_job"
   }
 

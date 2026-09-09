@@ -6,7 +6,6 @@ concept "ses-identity-notification-topic" {
 
 rule "ses-identity-notification-topic" {
   match {
-    kind = "resource"
     type = "aws_ses_identity_notification_topic"
   }
 

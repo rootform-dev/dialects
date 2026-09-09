@@ -6,7 +6,6 @@ concept "datapipeline-pipeline" {
 
 rule "datapipeline-pipeline" {
   match {
-    kind = "resource"
     type = "aws_datapipeline_pipeline"
   }
 

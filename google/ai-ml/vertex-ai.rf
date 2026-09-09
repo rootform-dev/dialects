@@ -35,7 +35,6 @@ concept "vertex-ai-metadata-store" {
 
 rule "vertex-ai-dataset" {
   match {
-    kind = "resource"
     type = "google_vertex_ai_dataset"
   }
 
@@ -44,7 +43,6 @@ rule "vertex-ai-dataset" {
 
 rule "vertex-ai-endpoint" {
   match {
-    kind = "resource"
     type = "google_vertex_ai_endpoint"
   }
 
@@ -53,7 +51,6 @@ rule "vertex-ai-endpoint" {
 
 rule "vertex-ai-model-garden-endpoint" {
   match {
-    kind = "resource"
     type = "google_vertex_ai_endpoint_with_model_garden_deployment"
   }
 
@@ -62,7 +59,6 @@ rule "vertex-ai-model-garden-endpoint" {
 
 rule "vertex-ai-vector-index" {
   match {
-    kind = "resource"
     type = "google_vertex_ai_index"
   }
 
@@ -71,7 +67,6 @@ rule "vertex-ai-vector-index" {
 
 rule "vertex-ai-index-endpoint" {
   match {
-    kind = "resource"
     type = "google_vertex_ai_index_endpoint"
   }
 
@@ -80,7 +75,6 @@ rule "vertex-ai-index-endpoint" {
 
 rule "vertex-ai-feature-store" {
   match {
-    kind = "resource"
     type = "google_vertex_ai_featurestore"
   }
 
@@ -89,7 +83,6 @@ rule "vertex-ai-feature-store" {
 
 rule "vertex-ai-feature-online-store" {
   match {
-    kind = "resource"
     type = "google_vertex_ai_feature_online_store"
   }
 
@@ -98,7 +91,6 @@ rule "vertex-ai-feature-online-store" {
 
 rule "vertex-ai-persistent-resource" {
   match {
-    kind = "resource"
     type = "google_vertex_ai_persistent_resource"
   }
 
@@ -107,7 +99,6 @@ rule "vertex-ai-persistent-resource" {
 
 rule "vertex-ai-reasoning-engine" {
   match {
-    kind = "resource"
     type = "google_vertex_ai_reasoning_engine"
   }
 
@@ -116,7 +107,6 @@ rule "vertex-ai-reasoning-engine" {
 
 rule "vertex-ai-metadata-store" {
   match {
-    kind = "resource"
     type = "google_vertex_ai_metadata_store"
   }
 

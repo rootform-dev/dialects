@@ -25,7 +25,6 @@ concept "sharing-configuration" {
 
 rule "lakehouse-federation-connection" {
   match {
-    kind = "resource"
     type = "databricks_connection"
   }
 
@@ -40,7 +39,6 @@ rule "lakehouse-federation-connection" {
 
 rule "delta-share" {
   match {
-    kind = "resource"
     type = "databricks_share"
   }
 
@@ -49,7 +47,6 @@ rule "delta-share" {
 
 rule "delta-sharing-recipient" {
   match {
-    kind = "resource"
     type = "databricks_recipient"
   }
 
@@ -58,7 +55,6 @@ rule "delta-sharing-recipient" {
 
 rule "delta-sharing-provider" {
   match {
-    kind = "resource"
     type = "databricks_provider"
   }
 

@@ -10,7 +10,6 @@ concept "bigquery-table" {
 
 rule "bigquery-dataset" {
   match {
-    kind = "resource"
     type = "google_bigquery_dataset"
   }
 
@@ -19,7 +18,6 @@ rule "bigquery-dataset" {
 
 rule "bigquery-table" {
   match {
-    kind = "resource"
     type = "google_bigquery_table"
   }
 
@@ -39,7 +37,6 @@ rule "bigquery-table" {
 
 rule "bigquery-dataset-access" {
   match {
-    kind = "resource"
     type = "google_bigquery_dataset_access"
   }
 
@@ -58,7 +55,6 @@ rule "bigquery-dataset-access" {
 
 rule "bigquery-table-iam-member" {
   match {
-    kind = "resource"
     type = "google_bigquery_table_iam_member"
   }
 

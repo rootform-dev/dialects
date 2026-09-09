@@ -1,6 +1,5 @@
 rule "ecr-repository" {
   match {
-    kind = "resource"
     type = "aws_ecr_repository"
   }
 
@@ -9,7 +8,6 @@ rule "ecr-repository" {
 
 rule "ecr-lifecycle-policy" {
   match {
-    kind = "resource"
     type = "aws_ecr_lifecycle_policy"
   }
 

@@ -6,7 +6,6 @@ concept "lexv2models-bot" {
 
 rule "lexv2models-bot" {
   match {
-    kind = "resource"
     type = "aws_lexv2models_bot"
   }
 

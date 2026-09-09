@@ -1,35 +1,67 @@
 rule "memorystore-redis-instance" {
   match {
-    kind = "resource"
     type = "google_redis_instance"
   }
 
   as = concept.core.managed-cache
+
+  context {
+    as  = context.core.network
+    to  = concept.core.virtual-network
+    via = source.authorized_network
+  }
+
+  context {
+    as  = context.core.ownership
+    to  = concept.google-cloud-project
+    via = source.project
+  }
 }
 
 rule "memorystore-redis-cluster" {
   match {
-    kind = "resource"
     type = "google_redis_cluster"
   }
 
   as = concept.core.managed-cache
+
+  context {
+    as  = context.core.ownership
+    to  = concept.google-cloud-project
+    via = source.project
+  }
 }
 
 rule "memorystore-memcached-instance" {
   match {
-    kind = "resource"
     type = "google_memcache_instance"
   }
 
   as = concept.core.managed-cache
+
+  context {
+    as  = context.core.network
+    to  = concept.core.virtual-network
+    via = source.authorized_network
+  }
+
+  context {
+    as  = context.core.ownership
+    to  = concept.google-cloud-project
+    via = source.project
+  }
 }
 
 rule "memorystore-instance" {
   match {
-    kind = "resource"
     type = "google_memorystore_instance"
   }
 
   as = concept.core.managed-cache
+
+  context {
+    as  = context.core.ownership
+    to  = concept.google-cloud-project
+    via = source.project
+  }
 }

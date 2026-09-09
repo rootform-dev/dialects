@@ -1,6 +1,5 @@
 rule "rum-application" {
   match {
-    kind = "resource"
     type = "datadog_rum_application"
   }
 
@@ -18,7 +17,6 @@ rule "rum-application-lookup" {
 
 rule "rum-retention-filter" {
   match {
-    kind = "resource"
     type = "datadog_rum_retention_filter"
   }
 

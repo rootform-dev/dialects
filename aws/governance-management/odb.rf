@@ -16,7 +16,6 @@ concept "odb-network" {
 
 rule "odb-cloud-autonomous-vm-cluster" {
   match {
-    kind = "resource"
     type = "aws_odb_cloud_autonomous_vm_cluster"
   }
 
@@ -25,7 +24,6 @@ rule "odb-cloud-autonomous-vm-cluster" {
 
 rule "odb-cloud-vm-cluster" {
   match {
-    kind = "resource"
     type = "aws_odb_cloud_vm_cluster"
   }
 
@@ -34,7 +32,6 @@ rule "odb-cloud-vm-cluster" {
 
 rule "odb-network" {
   match {
-    kind = "resource"
     type = "aws_odb_network"
   }
 

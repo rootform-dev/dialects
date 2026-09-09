@@ -5,7 +5,6 @@ concept "blockchain-node" {
 
 rule "blockchain-node" {
   match {
-    kind = "resource"
     type = "google_blockchain_node_engine_blockchain_nodes"
   }
 

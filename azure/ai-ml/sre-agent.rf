@@ -6,7 +6,6 @@ concept "sre-agent" {
 
 rule "sre-agent" {
   match {
-    kind  = "resource"
     type  = "azapi_resource"
     where = source.type == "Microsoft.App/agents@2026-01-01"
   }

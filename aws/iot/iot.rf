@@ -11,7 +11,6 @@ concept "iot-thing-group" {
 
 rule "iot-thing" {
   match {
-    kind = "resource"
     type = "aws_iot_thing"
   }
 
@@ -20,7 +19,6 @@ rule "iot-thing" {
 
 rule "iot-thing-group" {
   match {
-    kind = "resource"
     type = "aws_iot_thing_group"
   }
 

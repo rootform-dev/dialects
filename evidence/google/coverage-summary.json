@@ -1,5 +1,13 @@
 {
   "format_version": "1",
+  "showcase_delta": {
+    "verified_date": "2026-09-09",
+    "relations_added": ["routes-to", "delivers-to", "runs-as"],
+    "contexts_added": ["core/network", "core/ownership"],
+    "coverage": "targeted additions within existing exhaustive provider inventory",
+    "implemented_candidates": 9,
+    "narrowed_candidates": 1
+  },
   "matrix_sha256": "sha256:88e9a5348ab54ed9d506d294ce047490d504dda161b2f2db2da0044ce45d1738",
   "total_rows": 3055,
   "by_inventory": {

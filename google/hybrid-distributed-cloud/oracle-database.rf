@@ -10,7 +10,6 @@ concept "oracle-database-vm-cluster" {
 
 rule "oracle-autonomous-database" {
   match {
-    kind = "resource"
     type = "google_oracle_database_autonomous_database"
   }
 
@@ -19,7 +18,6 @@ rule "oracle-autonomous-database" {
 
 rule "oracle-exadata-infrastructure" {
   match {
-    kind = "resource"
     type = "google_oracle_database_cloud_exadata_infrastructure"
   }
 
@@ -28,7 +26,6 @@ rule "oracle-exadata-infrastructure" {
 
 rule "oracle-database-vm-cluster" {
   match {
-    kind = "resource"
     type = "google_oracle_database_cloud_vm_cluster"
   }
 
@@ -37,7 +34,6 @@ rule "oracle-database-vm-cluster" {
 
 rule "oracle-odb-network" {
   match {
-    kind = "resource"
     type = "google_oracle_database_odb_network"
   }
 
@@ -46,7 +42,6 @@ rule "oracle-odb-network" {
 
 rule "oracle-odb-subnet" {
   match {
-    kind = "resource"
     type = "google_oracle_database_odb_subnet"
   }
 

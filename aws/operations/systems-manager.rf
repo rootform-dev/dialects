@@ -6,7 +6,6 @@ concept "ssm-parameter" {
 
 rule "ssm-parameter" {
   match {
-    kind = "resource"
     type = "aws_ssm_parameter"
   }
 

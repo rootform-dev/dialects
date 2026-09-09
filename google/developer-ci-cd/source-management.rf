@@ -15,7 +15,6 @@ concept "secure-source-manager-instance" {
 
 rule "cloud-build-v2-connection" {
   match {
-    kind = "resource"
     type = "google_cloudbuildv2_connection"
   }
 
@@ -24,7 +23,6 @@ rule "cloud-build-v2-connection" {
 
 rule "cloud-build-v2-repository" {
   match {
-    kind = "resource"
     type = "google_cloudbuildv2_repository"
   }
 
@@ -33,7 +31,6 @@ rule "cloud-build-v2-repository" {
 
 rule "developer-connect-connection" {
   match {
-    kind = "resource"
     type = "google_developer_connect_connection"
   }
 
@@ -42,7 +39,6 @@ rule "developer-connect-connection" {
 
 rule "developer-connect-repository-link" {
   match {
-    kind = "resource"
     type = "google_developer_connect_git_repository_link"
   }
 
@@ -51,7 +47,6 @@ rule "developer-connect-repository-link" {
 
 rule "secure-source-manager-instance" {
   match {
-    kind = "resource"
     type = "google_secure_source_manager_instance"
   }
 
@@ -60,7 +55,6 @@ rule "secure-source-manager-instance" {
 
 rule "secure-source-manager-repository" {
   match {
-    kind = "resource"
     type = "google_secure_source_manager_repository"
   }
 
@@ -69,7 +63,6 @@ rule "secure-source-manager-repository" {
 
 rule "cloud-source-repository" {
   match {
-    kind = "resource"
     type = "google_sourcerepo_repository"
   }
 

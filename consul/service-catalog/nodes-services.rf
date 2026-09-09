@@ -15,7 +15,6 @@ concept "consul-service" {
 
 rule "agent-service" {
   match {
-    kind = "resource"
     type = "consul_agent_service"
   }
 
@@ -24,7 +23,6 @@ rule "agent-service" {
 
 rule "catalog-entry" {
   match {
-    kind = "resource"
     type = "consul_catalog_entry"
   }
 
@@ -42,7 +40,6 @@ rule "catalog-service-lookup" {
 
 rule "node" {
   match {
-    kind = "resource"
     type = "consul_node"
   }
 
@@ -51,7 +48,6 @@ rule "node" {
 
 rule "service" {
   match {
-    kind = "resource"
     type = "consul_service"
   }
 

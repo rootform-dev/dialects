@@ -10,7 +10,6 @@ concept "integration-connector-endpoint" {
 
 rule "integration-connector" {
   match {
-    kind = "resource"
     type = "google_integration_connectors_connection"
   }
 
@@ -19,7 +18,6 @@ rule "integration-connector" {
 
 rule "integration-connector-endpoint" {
   match {
-    kind = "resource"
     type = "google_integration_connectors_endpoint_attachment"
   }
 

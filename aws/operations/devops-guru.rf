@@ -11,7 +11,6 @@ concept "devopsguru-resource-collection" {
 
 rule "devopsguru-notification-channel" {
   match {
-    kind = "resource"
     type = "aws_devopsguru_notification_channel"
   }
 
@@ -20,7 +19,6 @@ rule "devopsguru-notification-channel" {
 
 rule "devopsguru-resource-collection" {
   match {
-    kind = "resource"
     type = "aws_devopsguru_resource_collection"
   }
 

@@ -1,15 +1,19 @@
 rule "pubsub-topic" {
   match {
-    kind = "resource"
     type = "google_pubsub_topic"
   }
 
   as = concept.core.message-topic
+
+  context {
+    as  = context.core.ownership
+    to  = concept.google-cloud-project
+    via = source.project
+  }
 }
 
 rule "pubsub-subscription" {
   match {
-    kind = "resource"
     type = "google_pubsub_subscription"
   }
 
@@ -19,11 +23,26 @@ rule "pubsub-subscription" {
     to  = concept.core.message-topic
     via = source.topic
   }
+
+  relation "delivers-to" {
+    to  = concept.cloud-run-service
+    via = source.push_config[0].push_endpoint
+  }
+
+  relation "delivers-to" {
+    to  = concept.core.message-topic
+    via = source.dead_letter_policy[0].dead_letter_topic
+  }
+
+  context {
+    as  = context.core.ownership
+    to  = concept.google-cloud-project
+    via = source.project
+  }
 }
 
 rule "pubsub-lite-topic" {
   match {
-    kind = "resource"
     type = "google_pubsub_lite_topic"
   }
 
@@ -32,7 +51,6 @@ rule "pubsub-lite-topic" {
 
 rule "pubsub-lite-subscription" {
   match {
-    kind = "resource"
     type = "google_pubsub_lite_subscription"
   }
 

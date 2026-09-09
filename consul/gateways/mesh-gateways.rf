@@ -10,7 +10,6 @@ concept "terminating-gateway" {
 
 rule "config-entry-ingress-gateway-json" {
   match {
-    kind  = "resource"
     type  = "consul_config_entry"
     where = source.kind == "ingress-gateway"
   }
@@ -30,7 +29,6 @@ rule "config-entry-ingress-gateway-json-lookup" {
 
 rule "config-entry-terminating-gateway-json" {
   match {
-    kind  = "resource"
     type  = "consul_config_entry"
     where = source.kind == "terminating-gateway"
   }

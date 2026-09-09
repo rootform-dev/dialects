@@ -6,7 +6,6 @@ concept "container-registry" {
 
 rule "connected-container-registry" {
   match {
-    kind = "resource"
     type = "azurerm_container_connected_registry"
   }
 
@@ -15,7 +14,6 @@ rule "connected-container-registry" {
 
 rule "container-registry" {
   match {
-    kind = "resource"
     type = "azurerm_container_registry"
   }
 

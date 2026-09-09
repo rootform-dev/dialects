@@ -6,7 +6,6 @@ concept "cloudtrail-event-data-store" {
 
 rule "cloudtrail-event-data-store" {
   match {
-    kind = "resource"
     type = "aws_cloudtrail_event_data_store"
   }
 

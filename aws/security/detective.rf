@@ -6,7 +6,6 @@ concept "detective-graph" {
 
 rule "detective-graph" {
   match {
-    kind = "resource"
     type = "aws_detective_graph"
   }
 

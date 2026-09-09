@@ -10,7 +10,6 @@ concept "access-binding" {
 
 rule "group" {
   match {
-    kind = "resource"
     type = "kestra_group"
   }
 
@@ -30,7 +29,6 @@ rule "group" {
 
 rule "role" {
   match {
-    kind = "resource"
     type = "kestra_role"
   }
 
@@ -59,7 +57,6 @@ rule "existing-role" {
 
 rule "binding" {
   match {
-    kind = "resource"
     type = "kestra_binding"
   }
 

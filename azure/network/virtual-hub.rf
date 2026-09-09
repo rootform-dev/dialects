@@ -11,7 +11,6 @@ concept "virtual-hub" {
 
 rule "virtual-hub" {
   match {
-    kind = "resource"
     type = "azurerm_virtual_hub"
   }
 
@@ -20,7 +19,6 @@ rule "virtual-hub" {
 
 rule "virtual-hub-routing-intent" {
   match {
-    kind = "resource"
     type = "azurerm_virtual_hub_routing_intent"
   }
 

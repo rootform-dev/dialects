@@ -6,7 +6,6 @@ concept "neptunegraph-private-graph-endpoint" {
 
 rule "neptunegraph-private-graph-endpoint" {
   match {
-    kind = "resource"
     type = "aws_neptunegraph_private_graph_endpoint"
   }
 

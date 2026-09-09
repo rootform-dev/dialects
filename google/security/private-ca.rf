@@ -15,7 +15,6 @@ concept "private-certificate" {
 
 rule "private-ca-pool" {
   match {
-    kind = "resource"
     type = "google_privateca_ca_pool"
   }
 
@@ -24,7 +23,6 @@ rule "private-ca-pool" {
 
 rule "private-certificate-authority" {
   match {
-    kind = "resource"
     type = "google_privateca_certificate_authority"
   }
 
@@ -39,7 +37,6 @@ rule "private-certificate-authority" {
 
 rule "private-certificate" {
   match {
-    kind = "resource"
     type = "google_privateca_certificate"
   }
 

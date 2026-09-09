@@ -10,7 +10,6 @@ concept "identity-tenant" {
 
 rule "organization" {
   match {
-    kind = "resource"
     type = "auth0_organization"
   }
 
@@ -28,7 +27,6 @@ rule "organization-lookup" {
 
 rule "tenant" {
   match {
-    kind = "resource"
     type = "auth0_tenant"
   }
 

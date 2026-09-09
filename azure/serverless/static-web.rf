@@ -6,7 +6,6 @@ concept "static-web-app" {
 
 rule "static-web-app" {
   match {
-    kind = "resource"
     type = "azurerm_static_web_app"
   }
 

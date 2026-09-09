@@ -1,5 +1,11 @@
 {
   "format_version": "1",
+  "showcase_schema_audit": {
+    "provider": "registry.terraform.io/hashicorp/azurerm@5.3.0",
+    "schema_sha256": "sha256:9079f910d43a4ad678d942bb50d77707124f97f55c561d168cd408d3b68a9371",
+    "command": "TF_CLI_CONFIG_FILE=<empty-config> terraform providers schema -json",
+    "verified_date": "2026-09-09"
+  },
   "verified_date": "2026-08-29",
   "acquisition": {
     "client": "Terraform 1.12.2 provider schema RPC",

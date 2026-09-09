@@ -16,7 +16,6 @@ concept "devicefarm-test-grid-project" {
 
 rule "devicefarm-device-pool" {
   match {
-    kind = "resource"
     type = "aws_devicefarm_device_pool"
   }
 
@@ -25,7 +24,6 @@ rule "devicefarm-device-pool" {
 
 rule "devicefarm-project" {
   match {
-    kind = "resource"
     type = "aws_devicefarm_project"
   }
 
@@ -34,7 +32,6 @@ rule "devicefarm-project" {
 
 rule "devicefarm-test-grid-project" {
   match {
-    kind = "resource"
     type = "aws_devicefarm_test_grid_project"
   }
 

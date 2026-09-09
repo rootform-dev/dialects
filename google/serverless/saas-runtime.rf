@@ -10,7 +10,6 @@ concept "saas-runtime-tenant" {
 
 rule "saas-runtime-service" {
   match {
-    kind = "resource"
     type = "google_saas_runtime_saas"
   }
 
@@ -19,7 +18,6 @@ rule "saas-runtime-service" {
 
 rule "saas-runtime-tenant" {
   match {
-    kind = "resource"
     type = "google_saas_runtime_tenant"
   }
 

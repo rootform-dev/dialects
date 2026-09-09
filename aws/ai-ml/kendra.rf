@@ -6,7 +6,6 @@ concept "kendra-index" {
 
 rule "kendra-index" {
   match {
-    kind = "resource"
     type = "aws_kendra_index"
   }
 

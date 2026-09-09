@@ -6,7 +6,6 @@ concept "automation-account" {
 
 rule "automation-account" {
   match {
-    kind = "resource"
     type = "azurerm_automation_account"
   }
 

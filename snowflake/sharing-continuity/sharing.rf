@@ -20,7 +20,6 @@ concept "account-connection" {
 
 rule "share" {
   match {
-    kind = "resource"
     type = "snowflake_share"
   }
 
@@ -34,7 +33,6 @@ rule "share" {
 
 rule "listing" {
   match {
-    kind = "resource"
     type = "snowflake_listing"
   }
 
@@ -49,7 +47,6 @@ rule "listing" {
 
 rule "failover-group" {
   match {
-    kind = "resource"
     type = "snowflake_failover_group"
   }
 
@@ -73,7 +70,6 @@ rule "failover-group" {
 
 rule "primary-connection" {
   match {
-    kind = "resource"
     type = "snowflake_primary_connection"
   }
 
@@ -87,7 +83,6 @@ rule "primary-connection" {
 
 rule "secondary-connection" {
   match {
-    kind = "resource"
     type = "snowflake_secondary_connection"
   }
 

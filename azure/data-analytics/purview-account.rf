@@ -6,7 +6,6 @@ concept "purview-account" {
 
 rule "purview-account" {
   match {
-    kind = "resource"
     type = "azurerm_purview_account"
   }
 

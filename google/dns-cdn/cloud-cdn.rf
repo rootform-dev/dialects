@@ -10,7 +10,6 @@ concept "cloud-cdn-origin" {
 
 rule "cloud-cdn-backend-bucket" {
   match {
-    kind  = "resource"
     type  = "google_compute_backend_bucket"
     where = source.enable_cdn == true
   }
@@ -20,7 +19,6 @@ rule "cloud-cdn-backend-bucket" {
 
 rule "media-cdn-service" {
   match {
-    kind = "resource"
     type = "google_network_services_edge_cache_service"
   }
 
@@ -29,7 +27,6 @@ rule "media-cdn-service" {
 
 rule "media-cdn-origin" {
   match {
-    kind = "resource"
     type = "google_network_services_edge_cache_origin"
   }
 

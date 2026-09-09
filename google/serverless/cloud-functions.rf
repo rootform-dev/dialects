@@ -1,6 +1,5 @@
 rule "cloud-run-function" {
   match {
-    kind = "resource"
     type = "google_cloudfunctions_function"
   }
 
@@ -9,7 +8,6 @@ rule "cloud-run-function" {
 
 rule "cloud-run-function-v2" {
   match {
-    kind = "resource"
     type = "google_cloudfunctions2_function"
   }
 

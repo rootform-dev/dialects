@@ -6,7 +6,6 @@ concept "msk-vpc-connection" {
 
 rule "msk-vpc-connection" {
   match {
-    kind = "resource"
     type = "aws_msk_vpc_connection"
   }
 

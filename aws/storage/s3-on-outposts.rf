@@ -6,7 +6,6 @@ concept "s3outposts-endpoint" {
 
 rule "s3outposts-endpoint" {
   match {
-    kind = "resource"
     type = "aws_s3outposts_endpoint"
   }
 

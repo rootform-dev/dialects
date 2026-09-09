@@ -5,7 +5,6 @@ concept "cloud-identity-group-membership" {
 
 rule "cloud-identity-group" {
   match {
-    kind = "resource"
     type = "google_cloud_identity_group"
   }
 
@@ -14,7 +13,6 @@ rule "cloud-identity-group" {
 
 rule "cloud-identity-group-membership" {
   match {
-    kind = "resource"
     type = "google_cloud_identity_group_membership"
   }
 

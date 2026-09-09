@@ -16,7 +16,6 @@ concept "datazone-project" {
 
 rule "datazone-domain" {
   match {
-    kind = "resource"
     type = "aws_datazone_domain"
   }
 
@@ -25,7 +24,6 @@ rule "datazone-domain" {
 
 rule "datazone-environment" {
   match {
-    kind = "resource"
     type = "aws_datazone_environment"
   }
 
@@ -34,7 +32,6 @@ rule "datazone-environment" {
 
 rule "datazone-project" {
   match {
-    kind = "resource"
     type = "aws_datazone_project"
   }
 

@@ -16,7 +16,6 @@ concept "bedrock-inference-profile" {
 
 rule "bedrock-custom-model" {
   match {
-    kind = "resource"
     type = "aws_bedrock_custom_model"
   }
 
@@ -25,7 +24,6 @@ rule "bedrock-custom-model" {
 
 rule "bedrock-guardrail" {
   match {
-    kind = "resource"
     type = "aws_bedrock_guardrail"
   }
 
@@ -34,7 +32,6 @@ rule "bedrock-guardrail" {
 
 rule "bedrock-inference-profile" {
   match {
-    kind = "resource"
     type = "aws_bedrock_inference_profile"
   }
 

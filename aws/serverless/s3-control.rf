@@ -6,7 +6,6 @@ concept "s3control-object-lambda-access-point" {
 
 rule "s3control-object-lambda-access-point" {
   match {
-    kind = "resource"
     type = "aws_s3control_object_lambda_access_point"
   }
 

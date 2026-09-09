@@ -16,7 +16,6 @@ concept "workmail-organization" {
 
 rule "workmail-default-domain" {
   match {
-    kind = "resource"
     type = "aws_workmail_default_domain"
   }
 
@@ -25,7 +24,6 @@ rule "workmail-default-domain" {
 
 rule "workmail-domain" {
   match {
-    kind = "resource"
     type = "aws_workmail_domain"
   }
 
@@ -34,7 +32,6 @@ rule "workmail-domain" {
 
 rule "workmail-organization" {
   match {
-    kind = "resource"
     type = "aws_workmail_organization"
   }
 

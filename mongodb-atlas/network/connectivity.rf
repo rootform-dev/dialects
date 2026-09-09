@@ -20,7 +20,6 @@ concept "network-configuration" {
 
 rule "network-container" {
   match {
-    kind = "resource"
     type = "mongodbatlas_network_container"
   }
 
@@ -35,7 +34,6 @@ rule "network-container" {
 
 rule "network-peering" {
   match {
-    kind = "resource"
     type = "mongodbatlas_network_peering"
   }
 
@@ -70,7 +68,6 @@ rule "network-peering" {
 
 rule "private-endpoint-service" {
   match {
-    kind = "resource"
     type = "mongodbatlas_privatelink_endpoint"
   }
 
@@ -85,7 +82,6 @@ rule "private-endpoint-service" {
 
 rule "private-endpoint-registration" {
   match {
-    kind = "resource"
     type = "mongodbatlas_privatelink_endpoint_service"
   }
 
@@ -110,7 +106,6 @@ rule "private-endpoint-registration" {
 
 rule "data-service-private-endpoint" {
   match {
-    kind = "resource"
     type = "mongodbatlas_privatelink_endpoint_service_data_federation_online_archive"
   }
 
@@ -130,7 +125,6 @@ rule "data-service-private-endpoint" {
 
 rule "private-endpoint-regional-mode" {
   match {
-    kind = "resource"
     type = "mongodbatlas_private_endpoint_regional_mode"
   }
 
@@ -144,7 +138,6 @@ rule "private-endpoint-regional-mode" {
 
 rule "project-ip-access-list" {
   match {
-    kind = "resource"
     type = "mongodbatlas_project_ip_access_list"
   }
 
@@ -158,7 +151,6 @@ rule "project-ip-access-list" {
 
 rule "custom-dns-configuration-aws" {
   match {
-    kind = "resource"
     type = "mongodbatlas_custom_dns_configuration_cluster_aws"
   }
 

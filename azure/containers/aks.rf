@@ -1,6 +1,5 @@
 rule "aks-cluster" {
   match {
-    kind = "resource"
     type = "azurerm_kubernetes_cluster"
   }
 
@@ -22,11 +21,15 @@ rule "aks-cluster" {
       strategy = "exact"
     }
   }
+
+  relation "observed-by" {
+    to  = concept.log-analytics-workspace
+    via = source.oms_agent[0].log_analytics_workspace_id
+  }
 }
 
 rule "aks-node-pool" {
   match {
-    kind = "resource"
     type = "azurerm_kubernetes_cluster_node_pool"
   }
 

@@ -15,7 +15,6 @@ concept "governance-configuration" {
 
 rule "organization" {
   match {
-    kind = "resource"
     type = "mongodbatlas_organization"
   }
 
@@ -24,7 +23,6 @@ rule "organization" {
 
 rule "project" {
   match {
-    kind = "resource"
     type = "mongodbatlas_project"
   }
 
@@ -39,7 +37,6 @@ rule "project" {
 
 rule "resource-policy" {
   match {
-    kind = "resource"
     type = "mongodbatlas_resource_policy"
   }
 

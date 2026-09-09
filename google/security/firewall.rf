@@ -15,7 +15,6 @@ concept "firewall-policy-rule" {
 
 rule "vpc-firewall-rule" {
   match {
-    kind = "resource"
     type = "google_compute_firewall"
   }
 
@@ -30,7 +29,6 @@ rule "vpc-firewall-rule" {
 
 rule "hierarchical-firewall-policy" {
   match {
-    kind = "resource"
     type = "google_compute_firewall_policy"
   }
 
@@ -39,7 +37,6 @@ rule "hierarchical-firewall-policy" {
 
 rule "hierarchical-firewall-policy-rule" {
   match {
-    kind = "resource"
     type = "google_compute_firewall_policy_rule"
   }
 
@@ -53,7 +50,6 @@ rule "hierarchical-firewall-policy-rule" {
 
 rule "network-firewall-policy" {
   match {
-    kind = "resource"
     type = "google_compute_network_firewall_policy"
   }
 
@@ -62,7 +58,6 @@ rule "network-firewall-policy" {
 
 rule "network-firewall-policy-rule" {
   match {
-    kind = "resource"
     type = "google_compute_network_firewall_policy_rule"
   }
 

@@ -11,7 +11,6 @@ concept "rekognition-project" {
 
 rule "rekognition-collection" {
   match {
-    kind = "resource"
     type = "aws_rekognition_collection"
   }
 
@@ -20,7 +19,6 @@ rule "rekognition-collection" {
 
 rule "rekognition-project" {
   match {
-    kind = "resource"
     type = "aws_rekognition_project"
   }
 

@@ -6,7 +6,6 @@ concept "cognito-identity-pool" {
 
 rule "cognito-identity-pool" {
   match {
-    kind = "resource"
     type = "aws_cognito_identity_pool"
   }
 

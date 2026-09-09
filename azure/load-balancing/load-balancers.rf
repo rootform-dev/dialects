@@ -1,6 +1,5 @@
 rule "load-balancer" {
   match {
-    kind = "resource"
     type = "azurerm_lb"
   }
 
@@ -20,7 +19,6 @@ rule "load-balancer" {
 
 rule "application-gateway" {
   match {
-    kind = "resource"
     type = "azurerm_application_gateway"
   }
 
@@ -40,7 +38,6 @@ rule "application-gateway" {
 
 rule "load-balancer-backend-pool" {
   match {
-    kind = "resource"
     type = "azurerm_lb_backend_address_pool"
   }
 
@@ -54,7 +51,6 @@ rule "load-balancer-backend-pool" {
 
 rule "load-balancer-rule" {
   match {
-    kind = "resource"
     type = "azurerm_lb_rule"
   }
 

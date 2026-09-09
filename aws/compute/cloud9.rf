@@ -6,7 +6,6 @@ concept "cloud9-environment-ec2" {
 
 rule "cloud9-environment-ec2" {
   match {
-    kind = "resource"
     type = "aws_cloud9_environment_ec2"
   }
 

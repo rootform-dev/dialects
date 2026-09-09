@@ -5,7 +5,6 @@ concept "edge-network-interconnect-attachment" {
 
 rule "edge-network" {
   match {
-    kind = "resource"
     type = "google_edgenetwork_network"
   }
 
@@ -14,7 +13,6 @@ rule "edge-network" {
 
 rule "edge-network-subnet" {
   match {
-    kind = "resource"
     type = "google_edgenetwork_subnet"
   }
 
@@ -23,7 +21,6 @@ rule "edge-network-subnet" {
 
 rule "edge-network-interconnect-attachment" {
   match {
-    kind = "resource"
     type = "google_edgenetwork_interconnect_attachment"
   }
 

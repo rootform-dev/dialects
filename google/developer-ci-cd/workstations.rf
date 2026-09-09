@@ -15,7 +15,6 @@ concept "workstation-configuration" {
 
 rule "workstations-cluster" {
   match {
-    kind = "resource"
     type = "google_workstations_workstation_cluster"
   }
 
@@ -24,7 +23,6 @@ rule "workstations-cluster" {
 
 rule "workstation" {
   match {
-    kind = "resource"
     type = "google_workstations_workstation"
   }
 
@@ -33,7 +31,6 @@ rule "workstation" {
 
 rule "workstation-configuration" {
   match {
-    kind = "resource"
     type = "google_workstations_workstation_config"
   }
 

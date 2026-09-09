@@ -5,7 +5,6 @@ concept "security-command-center-source" {
 
 rule "security-command-center-source" {
   match {
-    kind = "resource"
     type = "google_scc_source"
   }
 

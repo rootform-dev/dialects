@@ -6,7 +6,6 @@ concept "managed-grafana" {
 
 rule "managed-grafana" {
   match {
-    kind = "resource"
     type = "azurerm_dashboard_grafana"
   }
 

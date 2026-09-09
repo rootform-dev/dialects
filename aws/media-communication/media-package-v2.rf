@@ -6,7 +6,6 @@ concept "media-packagev2-channel-group" {
 
 rule "media-packagev2-channel-group" {
   match {
-    kind = "resource"
     type = "aws_media_packagev2_channel_group"
   }
 

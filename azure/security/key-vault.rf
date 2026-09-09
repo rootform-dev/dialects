@@ -6,7 +6,6 @@ concept "key-vault" {
 
 rule "key-vault" {
   match {
-    kind = "resource"
     type = "azurerm_key_vault"
   }
 
@@ -15,7 +14,6 @@ rule "key-vault" {
 
 rule "key-vault-access-policy" {
   match {
-    kind = "resource"
     type = "azurerm_key_vault_access_policy"
   }
 
@@ -24,7 +22,6 @@ rule "key-vault-access-policy" {
 
 rule "key-vault-certificate" {
   match {
-    kind = "resource"
     type = "azurerm_key_vault_certificate"
   }
 
@@ -33,7 +30,6 @@ rule "key-vault-certificate" {
 
 rule "key-vault-key" {
   match {
-    kind = "resource"
     type = "azurerm_key_vault_key"
   }
 
@@ -42,7 +38,6 @@ rule "key-vault-key" {
 
 rule "key-vault-secret" {
   match {
-    kind = "resource"
     type = "azurerm_key_vault_secret"
   }
 
@@ -51,7 +46,6 @@ rule "key-vault-secret" {
 
 rule "managed-hsm" {
   match {
-    kind = "resource"
     type = "azurerm_key_vault_managed_hardware_security_module"
   }
 
@@ -60,7 +54,6 @@ rule "managed-hsm" {
 
 rule "managed-hsm-key" {
   match {
-    kind = "resource"
     type = "azurerm_key_vault_managed_hardware_security_module_key"
   }
 

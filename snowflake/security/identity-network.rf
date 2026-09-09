@@ -20,7 +20,6 @@ concept "security-configuration" {
 
 rule "service-user" {
   match {
-    kind = "resource"
     type = "snowflake_service_user"
   }
 
@@ -39,7 +38,6 @@ rule "service-user" {
 
 rule "legacy-service-user" {
   match {
-    kind = "resource"
     type = "snowflake_legacy_service_user"
   }
 
@@ -58,7 +56,6 @@ rule "legacy-service-user" {
 
 rule "account-role" {
   match {
-    kind = "resource"
     type = "snowflake_account_role"
   }
 
@@ -67,7 +64,6 @@ rule "account-role" {
 
 rule "database-role" {
   match {
-    kind = "resource"
     type = "snowflake_database_role"
   }
 
@@ -81,7 +77,6 @@ rule "database-role" {
 
 rule "network-policy" {
   match {
-    kind = "resource"
     type = "snowflake_network_policy"
   }
 
@@ -91,7 +86,6 @@ rule "network-policy" {
 
 rule "network-rule" {
   match {
-    kind = "resource"
     type = "snowflake_network_rule"
   }
 
@@ -105,7 +99,6 @@ rule "network-rule" {
 
 rule "saml2-integration" {
   match {
-    kind = "resource"
     type = "snowflake_saml2_integration"
   }
 
@@ -114,7 +107,6 @@ rule "saml2-integration" {
 
 rule "scim-integration" {
   match {
-    kind = "resource"
     type = "snowflake_scim_integration"
   }
 
@@ -128,7 +120,6 @@ rule "scim-integration" {
 
 rule "external-oauth-integration" {
   match {
-    kind = "resource"
     type = "snowflake_external_oauth_integration"
   }
 
@@ -137,7 +128,6 @@ rule "external-oauth-integration" {
 
 rule "custom-client-oauth-integration" {
   match {
-    kind = "resource"
     type = "snowflake_oauth_integration_for_custom_clients"
   }
 
@@ -151,7 +141,6 @@ rule "custom-client-oauth-integration" {
 
 rule "partner-application-oauth-integration" {
   match {
-    kind = "resource"
     type = "snowflake_oauth_integration_for_partner_applications"
   }
 
@@ -160,7 +149,6 @@ rule "partner-application-oauth-integration" {
 
 rule "authorization-code-api-authentication" {
   match {
-    kind = "resource"
     type = "snowflake_api_authentication_integration_with_authorization_code_grant"
   }
 
@@ -169,7 +157,6 @@ rule "authorization-code-api-authentication" {
 
 rule "client-credentials-api-authentication" {
   match {
-    kind = "resource"
     type = "snowflake_api_authentication_integration_with_client_credentials"
   }
 
@@ -178,7 +165,6 @@ rule "client-credentials-api-authentication" {
 
 rule "jwt-bearer-api-authentication" {
   match {
-    kind = "resource"
     type = "snowflake_api_authentication_integration_with_jwt_bearer"
   }
 

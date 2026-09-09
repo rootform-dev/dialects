@@ -6,7 +6,6 @@ concept "rolesanywhere-profile" {
 
 rule "rolesanywhere-profile" {
   match {
-    kind = "resource"
     type = "aws_rolesanywhere_profile"
   }
 

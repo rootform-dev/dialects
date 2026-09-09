@@ -6,7 +6,6 @@ concept "front-door-profile" {
 
 rule "classic-front-door" {
   match {
-    kind = "resource"
     type = "azurerm_frontdoor"
   }
 
@@ -15,7 +14,6 @@ rule "classic-front-door" {
 
 rule "front-door-endpoint" {
   match {
-    kind = "resource"
     type = "azurerm_cdn_frontdoor_endpoint"
   }
 
@@ -24,7 +22,6 @@ rule "front-door-endpoint" {
 
 rule "front-door-origin" {
   match {
-    kind = "resource"
     type = "azurerm_cdn_frontdoor_origin"
   }
 
@@ -33,7 +30,6 @@ rule "front-door-origin" {
 
 rule "front-door-origin-group" {
   match {
-    kind = "resource"
     type = "azurerm_cdn_frontdoor_origin_group"
   }
 
@@ -42,7 +38,6 @@ rule "front-door-origin-group" {
 
 rule "front-door-profile" {
   match {
-    kind = "resource"
     type = "azurerm_cdn_frontdoor_profile"
   }
 
@@ -51,7 +46,6 @@ rule "front-door-profile" {
 
 rule "front-door-route" {
   match {
-    kind = "resource"
     type = "azurerm_cdn_frontdoor_route"
   }
 

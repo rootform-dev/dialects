@@ -6,7 +6,6 @@ concept "qbusiness-application" {
 
 rule "qbusiness-application" {
   match {
-    kind = "resource"
     type = "aws_qbusiness_application"
   }
 

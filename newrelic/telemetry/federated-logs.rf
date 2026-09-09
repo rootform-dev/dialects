@@ -15,7 +15,6 @@ concept "federated-logs-setup" {
 
 rule "aws-connection" {
   match {
-    kind = "resource"
     type = "newrelic_aws_connection"
   }
 
@@ -35,7 +34,6 @@ rule "aws-connection" {
 
 rule "federated-logs-partition" {
   match {
-    kind = "resource"
     type = "newrelic_federated_logs_partition"
   }
 
@@ -55,7 +53,6 @@ rule "federated-logs-partition" {
 
 rule "federated-logs-setup" {
   match {
-    kind = "resource"
     type = "newrelic_federated_logs_setup"
   }
 

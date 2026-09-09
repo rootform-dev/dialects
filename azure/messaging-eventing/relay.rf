@@ -11,7 +11,6 @@ concept "relay-namespace" {
 
 rule "relay-hybrid-connection" {
   match {
-    kind = "resource"
     type = "azurerm_relay_hybrid_connection"
   }
 
@@ -20,7 +19,6 @@ rule "relay-hybrid-connection" {
 
 rule "relay-namespace" {
   match {
-    kind = "resource"
     type = "azurerm_relay_namespace"
   }
 

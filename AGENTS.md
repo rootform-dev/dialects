@@ -22,10 +22,14 @@ remain deterministic, explainable, provider-scoped, and usable offline.
 
 - Bun is the only JavaScript package manager.
 - Direct dependencies and GitHub Actions use exact immutable pins.
-- Rootform CLI version defaults to `toolchain.json`. Rootform distribution CI
-  supplies a verified assembled binary and its exact candidate version through
-  `--rootform-version`, then owns the complete compatibility matrix by invoking
-  this repository's verification gate.
+- Rootform CLI version defaults to `toolchain.json`. During dev integration,
+  verification may use a deterministic binary built from a clean exact Engine
+  commit; record its commit and digest with results. Release/freeze uses the
+  verified assembled Rootform candidate and exact candidate version through
+  `--rootform-version`.
+- Dev artifacts are transient and make no release claim. Immutable Engine and
+  Rootform handoffs, final pins, and complete qualification belong to
+  release/freeze.
 - Dialects CI validates repository structure and history without downloading a
   Rootform binary or holding a Rootform repository credential.
 - No network access occurs after dependencies, tools, and CLI inputs are

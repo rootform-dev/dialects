@@ -16,7 +16,6 @@ concept "opensearch-outbound-connection" {
 
 rule "opensearch-application" {
   match {
-    kind = "resource"
     type = "aws_opensearch_application"
   }
 
@@ -25,7 +24,6 @@ rule "opensearch-application" {
 
 rule "opensearch-domain" {
   match {
-    kind = "resource"
     type = "aws_opensearch_domain"
   }
 
@@ -34,7 +32,6 @@ rule "opensearch-domain" {
 
 rule "opensearch-outbound-connection" {
   match {
-    kind = "resource"
     type = "aws_opensearch_outbound_connection"
   }
 

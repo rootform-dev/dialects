@@ -6,7 +6,6 @@ concept "sentinel-service" {
 
 rule "sentinel-automation-rule" {
   match {
-    kind = "resource"
     type = "azurerm_sentinel_automation_rule"
   }
 
@@ -15,7 +14,6 @@ rule "sentinel-automation-rule" {
 
 rule "sentinel-aws-cloudtrail-connector" {
   match {
-    kind = "resource"
     type = "azurerm_sentinel_data_connector_aws_cloud_trail"
   }
 
@@ -24,7 +22,6 @@ rule "sentinel-aws-cloudtrail-connector" {
 
 rule "sentinel-entra-connector" {
   match {
-    kind = "resource"
     type = "azurerm_sentinel_data_connector_azure_active_directory"
   }
 
@@ -33,7 +30,6 @@ rule "sentinel-entra-connector" {
 
 rule "sentinel-nrt-alert-rule" {
   match {
-    kind = "resource"
     type = "azurerm_sentinel_alert_rule_nrt"
   }
 
@@ -42,7 +38,6 @@ rule "sentinel-nrt-alert-rule" {
 
 rule "sentinel-onboarding" {
   match {
-    kind = "resource"
     type = "azurerm_sentinel_log_analytics_workspace_onboarding"
   }
 
@@ -51,7 +46,6 @@ rule "sentinel-onboarding" {
 
 rule "sentinel-scheduled-alert-rule" {
   match {
-    kind = "resource"
     type = "azurerm_sentinel_alert_rule_scheduled"
   }
 

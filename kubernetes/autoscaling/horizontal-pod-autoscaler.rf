@@ -5,7 +5,6 @@ concept "horizontal-pod-autoscaler" {
 
 rule "kubernetes-horizontal-pod-autoscaler" {
   match {
-    kind = "resource"
     type = "kubernetes_horizontal_pod_autoscaler_v1"
   }
 

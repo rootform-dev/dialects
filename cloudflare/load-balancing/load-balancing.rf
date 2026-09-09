@@ -10,7 +10,6 @@ concept "load-balancer-monitoring" {
 
 rule "load-balancer" {
   match {
-    kind = "resource"
     type = "cloudflare_load_balancer"
   }
 
@@ -35,7 +34,6 @@ rule "load-balancer" {
 
 rule "load-balancer-pool" {
   match {
-    kind = "resource"
     type = "cloudflare_load_balancer_pool"
   }
 
@@ -64,7 +62,6 @@ rule "load-balancer-pool" {
 
 rule "load-balancer-monitor" {
   match {
-    kind = "resource"
     type = "cloudflare_load_balancer_monitor"
   }
 
@@ -72,7 +69,6 @@ rule "load-balancer-monitor" {
 }
 rule "load-balancer-monitor-group" {
   match {
-    kind = "resource"
     type = "cloudflare_load_balancer_monitor_group"
   }
 
@@ -81,7 +77,6 @@ rule "load-balancer-monitor-group" {
 
 rule "healthcheck" {
   match {
-    kind = "resource"
     type = "cloudflare_healthcheck"
   }
 

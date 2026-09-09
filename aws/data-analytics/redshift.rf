@@ -11,7 +11,6 @@ concept "redshift-idc-application" {
 
 rule "redshift-cluster" {
   match {
-    kind = "resource"
     type = "aws_redshift_cluster"
   }
 
@@ -20,7 +19,6 @@ rule "redshift-cluster" {
 
 rule "redshift-idc-application" {
   match {
-    kind = "resource"
     type = "aws_redshift_idc_application"
   }
 

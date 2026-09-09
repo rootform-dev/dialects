@@ -6,7 +6,6 @@ concept "machine-learning-compute" {
 
 rule "machine-learning-compute-cluster" {
   match {
-    kind = "resource"
     type = "azurerm_machine_learning_compute_cluster"
   }
 
@@ -15,7 +14,6 @@ rule "machine-learning-compute-cluster" {
 
 rule "machine-learning-compute-instance" {
   match {
-    kind = "resource"
     type = "azurerm_machine_learning_compute_instance"
   }
 
@@ -24,7 +22,6 @@ rule "machine-learning-compute-instance" {
 
 rule "machine-learning-inference-cluster" {
   match {
-    kind = "resource"
     type = "azurerm_machine_learning_inference_cluster"
   }
 

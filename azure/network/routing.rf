@@ -6,7 +6,6 @@ concept "route-table" {
 
 rule "route-server" {
   match {
-    kind = "resource"
     type = "azurerm_route_server"
   }
 
@@ -15,7 +14,6 @@ rule "route-server" {
 
 rule "route-table" {
   match {
-    kind = "resource"
     type = "azurerm_route_table"
   }
 
@@ -24,7 +22,6 @@ rule "route-table" {
 
 rule "subnet-route-table-association" {
   match {
-    kind = "resource"
     type = "azurerm_subnet_route_table_association"
   }
 

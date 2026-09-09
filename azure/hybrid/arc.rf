@@ -16,7 +16,6 @@ concept "custom-location" {
 
 rule "arc-custom-location" {
   match {
-    kind = "resource"
     type = "azurerm_extended_location_custom_location"
   }
 
@@ -25,7 +24,6 @@ rule "arc-custom-location" {
 
 rule "arc-enabled-server" {
   match {
-    kind = "resource"
     type = "azurerm_arc_machine"
   }
 
@@ -34,7 +32,6 @@ rule "arc-enabled-server" {
 
 rule "arc-resource-bridge" {
   match {
-    kind = "resource"
     type = "azurerm_arc_resource_bridge_appliance"
   }
 

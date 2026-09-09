@@ -5,7 +5,6 @@ concept "namespace" {
 
 rule "kubernetes-namespace" {
   match {
-    kind = "resource"
     type = "kubernetes_namespace_v1"
   }
 

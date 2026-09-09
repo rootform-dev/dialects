@@ -16,7 +16,6 @@ concept "private-network-link" {
 
 rule "dns-a-record" {
   match {
-    kind = "resource"
     type = "azurerm_dns_a_record"
   }
 
@@ -25,7 +24,6 @@ rule "dns-a-record" {
 
 rule "dns-aaaa-record" {
   match {
-    kind = "resource"
     type = "azurerm_dns_aaaa_record"
   }
 
@@ -34,7 +32,6 @@ rule "dns-aaaa-record" {
 
 rule "dns-cname-record" {
   match {
-    kind = "resource"
     type = "azurerm_dns_cname_record"
   }
 
@@ -43,7 +40,6 @@ rule "dns-cname-record" {
 
 rule "dns-mx-record" {
   match {
-    kind = "resource"
     type = "azurerm_dns_mx_record"
   }
 
@@ -52,7 +48,6 @@ rule "dns-mx-record" {
 
 rule "dns-ns-record" {
   match {
-    kind = "resource"
     type = "azurerm_dns_ns_record"
   }
 
@@ -61,7 +56,6 @@ rule "dns-ns-record" {
 
 rule "dns-ptr-record" {
   match {
-    kind = "resource"
     type = "azurerm_dns_ptr_record"
   }
 
@@ -70,7 +64,6 @@ rule "dns-ptr-record" {
 
 rule "dns-srv-record" {
   match {
-    kind = "resource"
     type = "azurerm_dns_srv_record"
   }
 
@@ -79,7 +72,6 @@ rule "dns-srv-record" {
 
 rule "dns-txt-record" {
   match {
-    kind = "resource"
     type = "azurerm_dns_txt_record"
   }
 
@@ -88,7 +80,6 @@ rule "dns-txt-record" {
 
 rule "dns-zone" {
   match {
-    kind = "resource"
     type = "azurerm_dns_zone"
   }
 
@@ -97,7 +88,6 @@ rule "dns-zone" {
 
 rule "private-dns-a-record" {
   match {
-    kind = "resource"
     type = "azurerm_private_dns_a_record"
   }
 
@@ -106,7 +96,6 @@ rule "private-dns-a-record" {
 
 rule "private-dns-cname-record" {
   match {
-    kind = "resource"
     type = "azurerm_private_dns_cname_record"
   }
 
@@ -115,7 +104,6 @@ rule "private-dns-cname-record" {
 
 rule "private-dns-forwarding-ruleset" {
   match {
-    kind = "resource"
     type = "azurerm_private_dns_resolver_dns_forwarding_ruleset"
   }
 
@@ -124,7 +112,6 @@ rule "private-dns-forwarding-ruleset" {
 
 rule "private-dns-inbound-endpoint" {
   match {
-    kind = "resource"
     type = "azurerm_private_dns_resolver_inbound_endpoint"
   }
 
@@ -133,7 +120,6 @@ rule "private-dns-inbound-endpoint" {
 
 rule "private-dns-outbound-endpoint" {
   match {
-    kind = "resource"
     type = "azurerm_private_dns_resolver_outbound_endpoint"
   }
 
@@ -142,7 +128,6 @@ rule "private-dns-outbound-endpoint" {
 
 rule "private-dns-resolver" {
   match {
-    kind = "resource"
     type = "azurerm_private_dns_resolver"
   }
 

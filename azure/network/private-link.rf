@@ -6,7 +6,6 @@ concept "private-link-service" {
 
 rule "private-link-service" {
   match {
-    kind = "resource"
     type = "azurerm_private_link_service"
   }
 

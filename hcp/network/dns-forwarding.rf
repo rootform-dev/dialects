@@ -5,7 +5,6 @@ concept "dns-forwarding" {
 
 rule "dns-forwarding" {
   match {
-    kind = "resource"
     type = "hcp_dns_forwarding"
   }
 
@@ -47,7 +46,6 @@ rule "dns-forwarding-lookup" {
 
 rule "dns-forwarding-rule" {
   match {
-    kind = "resource"
     type = "hcp_dns_forwarding_rule"
   }
 

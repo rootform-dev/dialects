@@ -10,7 +10,6 @@ concept "firebase-app-hosting-backend" {
 
 rule "firebase-hosting-site" {
   match {
-    kind = "resource"
     type = "google_firebase_hosting_site"
   }
 
@@ -19,7 +18,6 @@ rule "firebase-hosting-site" {
 
 rule "firebase-app-hosting-backend" {
   match {
-    kind = "resource"
     type = "google_firebase_app_hosting_backend"
   }
 

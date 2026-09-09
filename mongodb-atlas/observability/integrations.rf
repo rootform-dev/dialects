@@ -15,7 +15,6 @@ concept "observability-configuration" {
 
 rule "log-integration" {
   match {
-    kind = "resource"
     type = "mongodbatlas_log_integration"
   }
 
@@ -55,7 +54,6 @@ rule "log-integration" {
 
 rule "push-based-log-export" {
   match {
-    kind = "resource"
     type = "mongodbatlas_push_based_log_export"
   }
 
@@ -80,7 +78,6 @@ rule "push-based-log-export" {
 
 rule "metric-integration" {
   match {
-    kind = "resource"
     type = "mongodbatlas_metric_integration"
   }
 
@@ -95,7 +92,6 @@ rule "metric-integration" {
 
 rule "alert-configuration" {
   match {
-    kind = "resource"
     type = "mongodbatlas_alert_configuration"
   }
 
@@ -109,7 +105,6 @@ rule "alert-configuration" {
 
 rule "third-party-integration" {
   match {
-    kind = "resource"
     type = "mongodbatlas_third_party_integration"
   }
 

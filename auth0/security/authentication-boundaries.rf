@@ -10,7 +10,6 @@ concept "authentication-configuration" {
 
 rule "attack-protection" {
   match {
-    kind = "resource"
     type = "auth0_attack_protection"
   }
 
@@ -28,7 +27,6 @@ rule "attack-protection-lookup" {
 
 rule "encryption-key-manager" {
   match {
-    kind = "resource"
     type = "auth0_encryption_key_manager"
   }
 
@@ -37,7 +35,6 @@ rule "encryption-key-manager" {
 
 rule "guardian" {
   match {
-    kind = "resource"
     type = "auth0_guardian"
   }
 
@@ -46,7 +43,6 @@ rule "guardian" {
 
 rule "network-acl" {
   match {
-    kind = "resource"
     type = "auth0_network_acl"
   }
 
@@ -64,7 +60,6 @@ rule "network-acl-lookup" {
 
 rule "rate-limit-policy" {
   match {
-    kind = "resource"
     type = "auth0_rate_limit_policy"
   }
 
@@ -82,7 +77,6 @@ rule "rate-limit-policy-lookup" {
 
 rule "risk-assessments" {
   match {
-    kind = "resource"
     type = "auth0_risk_assessments"
   }
 
@@ -91,7 +85,6 @@ rule "risk-assessments" {
 
 rule "risk-assessments-new-device" {
   match {
-    kind = "resource"
     type = "auth0_risk_assessments_new_device"
   }
 
@@ -100,7 +93,6 @@ rule "risk-assessments-new-device" {
 
 rule "supplemental-signals" {
   match {
-    kind = "resource"
     type = "auth0_supplemental_signals"
   }
 

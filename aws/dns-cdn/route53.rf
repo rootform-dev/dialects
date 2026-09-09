@@ -16,7 +16,6 @@ concept "route53-traffic-policy-instance" {
 
 rule "route53-cidr-collection" {
   match {
-    kind = "resource"
     type = "aws_route53_cidr_collection"
   }
 
@@ -25,7 +24,6 @@ rule "route53-cidr-collection" {
 
 rule "route53-key-signing-key" {
   match {
-    kind = "resource"
     type = "aws_route53_key_signing_key"
   }
 
@@ -34,7 +32,6 @@ rule "route53-key-signing-key" {
 
 rule "route53-traffic-policy-instance" {
   match {
-    kind = "resource"
     type = "aws_route53_traffic_policy_instance"
   }
 
@@ -43,7 +40,6 @@ rule "route53-traffic-policy-instance" {
 
 rule "route53-zone" {
   match {
-    kind = "resource"
     type = "aws_route53_zone"
   }
 

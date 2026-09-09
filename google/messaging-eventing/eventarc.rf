@@ -20,7 +20,6 @@ concept "eventarc-trigger" {
 
 rule "eventarc-channel" {
   match {
-    kind = "resource"
     type = "google_eventarc_channel"
   }
 
@@ -29,7 +28,6 @@ rule "eventarc-channel" {
 
 rule "eventarc-message-bus" {
   match {
-    kind = "resource"
     type = "google_eventarc_message_bus"
   }
 
@@ -38,7 +36,6 @@ rule "eventarc-message-bus" {
 
 rule "eventarc-pipeline" {
   match {
-    kind = "resource"
     type = "google_eventarc_pipeline"
   }
 
@@ -47,7 +44,6 @@ rule "eventarc-pipeline" {
 
 rule "eventarc-trigger" {
   match {
-    kind = "resource"
     type = "google_eventarc_trigger"
   }
 

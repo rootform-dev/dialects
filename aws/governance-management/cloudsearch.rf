@@ -6,7 +6,6 @@ concept "cloudsearch-domain" {
 
 rule "cloudsearch-domain" {
   match {
-    kind = "resource"
     type = "aws_cloudsearch_domain"
   }
 

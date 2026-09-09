@@ -1,6 +1,5 @@
 rule "bedrockagent-agent-action-group" {
   match {
-    kind = "resource"
     type = "aws_bedrockagent_agent_action_group"
   }
 

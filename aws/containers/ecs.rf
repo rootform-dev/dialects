@@ -16,7 +16,6 @@ concept "ecs-service" {
 
 rule "ecs-express-gateway-service" {
   match {
-    kind = "resource"
     type = "aws_ecs_express_gateway_service"
   }
 

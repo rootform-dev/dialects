@@ -6,7 +6,6 @@ concept "opensearch-vpc-endpoint" {
 
 rule "opensearch-vpc-endpoint" {
   match {
-    kind = "resource"
     type = "aws_opensearch_vpc_endpoint"
   }
 

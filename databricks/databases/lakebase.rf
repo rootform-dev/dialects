@@ -25,7 +25,6 @@ concept "database-configuration" {
 
 rule "lakebase-project" {
   match {
-    kind = "resource"
     type = "databricks_postgres_project"
   }
 
@@ -34,7 +33,6 @@ rule "lakebase-project" {
 
 rule "lakebase-branch" {
   match {
-    kind = "resource"
     type = "databricks_postgres_branch"
   }
 
@@ -54,7 +52,6 @@ rule "lakebase-branch" {
 
 rule "lakebase-endpoint" {
   match {
-    kind = "resource"
     type = "databricks_postgres_endpoint"
   }
 
@@ -69,7 +66,6 @@ rule "lakebase-endpoint" {
 
 rule "lakebase-database" {
   match {
-    kind = "resource"
     type = "databricks_postgres_database"
   }
 
@@ -84,7 +80,6 @@ rule "lakebase-database" {
 
 rule "lakebase-data-api" {
   match {
-    kind = "resource"
     type = "databricks_postgres_data_api"
   }
 
@@ -99,7 +94,6 @@ rule "lakebase-data-api" {
 
 rule "lakebase-provisioned-instance" {
   match {
-    kind = "resource"
     type = "databricks_database_instance"
   }
 
@@ -113,7 +107,6 @@ rule "lakebase-provisioned-instance" {
 
 rule "lakebase-provisioned-catalog" {
   match {
-    kind = "resource"
     type = "databricks_database_database_catalog"
   }
 
@@ -122,7 +115,6 @@ rule "lakebase-provisioned-catalog" {
 
 rule "lakebase-provisioned-synced-table" {
   match {
-    kind = "resource"
     type = "databricks_database_synced_database_table"
   }
 
@@ -131,7 +123,6 @@ rule "lakebase-provisioned-synced-table" {
 
 rule "lakebase-postgres-catalog" {
   match {
-    kind = "resource"
     type = "databricks_postgres_catalog"
   }
 
@@ -140,7 +131,6 @@ rule "lakebase-postgres-catalog" {
 
 rule "lakebase-postgres-role" {
   match {
-    kind = "resource"
     type = "databricks_postgres_role"
   }
 
@@ -149,7 +139,6 @@ rule "lakebase-postgres-role" {
 
 rule "lakebase-postgres-synced-table" {
   match {
-    kind = "resource"
     type = "databricks_postgres_synced_table"
   }
 
@@ -158,7 +147,6 @@ rule "lakebase-postgres-synced-table" {
 
 rule "lakebase-postgres-cdf-config" {
   match {
-    kind = "resource"
     type = "databricks_postgres_cdf_config"
   }
 

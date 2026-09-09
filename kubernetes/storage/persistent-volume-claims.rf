@@ -5,7 +5,6 @@ concept "persistent-volume-claim" {
 
 rule "kubernetes-persistent-volume-claim" {
   match {
-    kind = "resource"
     type = "kubernetes_persistent_volume_claim_v1"
   }
 

@@ -6,7 +6,6 @@ concept "maintenance-configuration" {
 
 rule "maintenance-configuration" {
   match {
-    kind = "resource"
     type = "azurerm_maintenance_configuration"
   }
 

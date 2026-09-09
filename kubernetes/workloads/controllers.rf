@@ -15,7 +15,6 @@ concept "daemon-set" {
 
 rule "kubernetes-deployment" {
   match {
-    kind = "resource"
     type = "kubernetes_deployment_v1"
   }
 
@@ -37,11 +36,15 @@ rule "kubernetes-deployment" {
       strategy = "exact"
     }
   }
+
+  relation "runs-as" {
+    to  = concept.service-account
+    via = source.spec[0].template[0].spec[0].service_account_name
+  }
 }
 
 rule "kubernetes-stateful-set" {
   match {
-    kind = "resource"
     type = "kubernetes_stateful_set_v1"
   }
 
@@ -63,11 +66,15 @@ rule "kubernetes-stateful-set" {
       strategy = "exact"
     }
   }
+
+  relation "runs-as" {
+    to  = concept.service-account
+    via = source.spec[0].template[0].spec[0].service_account_name
+  }
 }
 
 rule "kubernetes-daemon-set" {
   match {
-    kind = "resource"
     type = "kubernetes_daemon_set_v1"
   }
 

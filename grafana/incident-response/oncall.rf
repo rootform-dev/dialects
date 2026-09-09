@@ -10,7 +10,6 @@ concept "oncall-routing" {
 
 rule "oncall-integration" {
   match {
-    kind = "resource"
     type = "grafana_oncall_integration"
   }
 
@@ -28,7 +27,6 @@ rule "oncall-integration-lookup" {
 
 rule "oncall-route" {
   match {
-    kind = "resource"
     type = "grafana_oncall_route"
   }
 

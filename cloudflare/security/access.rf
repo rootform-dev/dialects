@@ -55,7 +55,6 @@ concept "gateway-configuration" {
 
 rule "access-application" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_access_application"
   }
 
@@ -89,7 +88,6 @@ rule "access-application" {
 
 rule "access-policy" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_access_policy"
   }
 
@@ -98,7 +96,6 @@ rule "access-policy" {
 
 rule "access-group" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_access_group"
   }
 
@@ -107,7 +104,6 @@ rule "access-group" {
 
 rule "access-identity-provider" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_access_identity_provider"
   }
 
@@ -116,7 +112,6 @@ rule "access-identity-provider" {
 
 rule "access-service-token" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_access_service_token"
   }
 
@@ -125,7 +120,6 @@ rule "access-service-token" {
 
 rule "access-infrastructure-target" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_access_infrastructure_target"
   }
 
@@ -134,7 +128,6 @@ rule "access-infrastructure-target" {
 
 rule "zero-trust-organization" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_organization"
   }
 
@@ -143,7 +136,6 @@ rule "zero-trust-organization" {
 
 rule "gateway-proxy-endpoint" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_gateway_proxy_endpoint"
   }
 
@@ -152,7 +144,6 @@ rule "gateway-proxy-endpoint" {
 
 rule "gateway-policy" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_gateway_policy"
   }
 
@@ -161,7 +152,6 @@ rule "gateway-policy" {
 
 rule "zero-trust-dns-location" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_dns_location"
   }
 
@@ -170,7 +160,6 @@ rule "zero-trust-dns-location" {
 
 rule "access-ai-controls-mcp-server" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_access_ai_controls_mcp_server"
   }
 
@@ -179,7 +168,6 @@ rule "access-ai-controls-mcp-server" {
 
 rule "access-ai-controls-mcp-portal" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_access_ai_controls_mcp_portal"
   }
 
@@ -188,7 +176,6 @@ rule "access-ai-controls-mcp-portal" {
 
 rule "gateway-settings" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_gateway_settings"
   }
 
@@ -197,7 +184,6 @@ rule "gateway-settings" {
 
 rule "gateway-logging" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_gateway_logging"
   }
 
@@ -206,7 +192,6 @@ rule "gateway-logging" {
 
 rule "risk-scoring-integration" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_risk_scoring_integration"
   }
 

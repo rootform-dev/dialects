@@ -30,7 +30,6 @@ concept "address-map" {
 
 rule "magic-transit-site" {
   match {
-    kind = "resource"
     type = "cloudflare_magic_transit_site"
   }
 
@@ -39,7 +38,6 @@ rule "magic-transit-site" {
 
 rule "magic-transit-cf1-site" {
   match {
-    kind = "resource"
     type = "cloudflare_magic_transit_cf1_site"
   }
 
@@ -48,7 +46,6 @@ rule "magic-transit-cf1-site" {
 
 rule "magic-transit-connector" {
   match {
-    kind = "resource"
     type = "cloudflare_magic_transit_connector"
   }
 
@@ -57,7 +54,6 @@ rule "magic-transit-connector" {
 
 rule "magic-transit-site-lan" {
   match {
-    kind = "resource"
     type = "cloudflare_magic_transit_site_lan"
   }
 
@@ -72,7 +68,6 @@ rule "magic-transit-site-lan" {
 
 rule "magic-transit-site-wan" {
   match {
-    kind = "resource"
     type = "cloudflare_magic_transit_site_wan"
   }
 
@@ -87,7 +82,6 @@ rule "magic-transit-site-wan" {
 
 rule "magic-transit-site-acl" {
   match {
-    kind = "resource"
     type = "cloudflare_magic_transit_site_acl"
   }
 
@@ -102,7 +96,6 @@ rule "magic-transit-site-acl" {
 
 rule "magic-wan-gre-tunnel" {
   match {
-    kind = "resource"
     type = "cloudflare_magic_wan_gre_tunnel"
   }
 
@@ -111,7 +104,6 @@ rule "magic-wan-gre-tunnel" {
 
 rule "magic-wan-ipsec-tunnel" {
   match {
-    kind = "resource"
     type = "cloudflare_magic_wan_ipsec_tunnel"
   }
 
@@ -125,7 +117,6 @@ rule "magic-wan-ipsec-tunnel" {
 
 rule "magic-wan-static-route" {
   match {
-    kind = "resource"
     type = "cloudflare_magic_wan_static_route"
   }
 
@@ -134,7 +125,6 @@ rule "magic-wan-static-route" {
 
 rule "byo-ip-prefix" {
   match {
-    kind = "resource"
     type = "cloudflare_byo_ip_prefix"
   }
 
@@ -143,7 +133,6 @@ rule "byo-ip-prefix" {
 
 rule "address-map" {
   match {
-    kind = "resource"
     type = "cloudflare_address_map"
   }
 
@@ -152,7 +141,6 @@ rule "address-map" {
 
 rule "cloud-connector-rules" {
   match {
-    kind = "resource"
     type = "cloudflare_cloud_connector_rules"
   }
 

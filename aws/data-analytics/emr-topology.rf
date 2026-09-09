@@ -1,6 +1,5 @@
 rule "emr-instance-fleet" {
   match {
-    kind = "resource"
     type = "aws_emr_instance_fleet"
   }
 
@@ -14,7 +13,6 @@ rule "emr-instance-fleet" {
 
 rule "emr-instance-group" {
   match {
-    kind = "resource"
     type = "aws_emr_instance_group"
   }
 

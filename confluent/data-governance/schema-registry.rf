@@ -30,7 +30,6 @@ rule "schema-registry" {
 
 rule "schema" {
   match {
-    kind = "resource"
     type = "confluent_schema"
   }
 
@@ -44,7 +43,6 @@ rule "schema" {
 
 rule "schema-registry-cluster-config" {
   match {
-    kind = "resource"
     type = "confluent_schema_registry_cluster_config"
   }
 
@@ -58,7 +56,6 @@ rule "schema-registry-cluster-config" {
 
 rule "schema-registry-cluster-mode" {
   match {
-    kind = "resource"
     type = "confluent_schema_registry_cluster_mode"
   }
 
@@ -72,7 +69,6 @@ rule "schema-registry-cluster-mode" {
 
 rule "schema-registry-dek" {
   match {
-    kind = "resource"
     type = "confluent_schema_registry_dek"
   }
 
@@ -86,7 +82,6 @@ rule "schema-registry-dek" {
 
 rule "schema-registry-kek" {
   match {
-    kind = "resource"
     type = "confluent_schema_registry_kek"
   }
 
@@ -100,7 +95,6 @@ rule "schema-registry-kek" {
 
 rule "subject-config" {
   match {
-    kind = "resource"
     type = "confluent_subject_config"
   }
 
@@ -114,7 +108,6 @@ rule "subject-config" {
 
 rule "subject-mode" {
   match {
-    kind = "resource"
     type = "confluent_subject_mode"
   }
 
@@ -128,7 +121,6 @@ rule "subject-mode" {
 
 rule "schema-exporter" {
   match {
-    kind = "resource"
     type = "confluent_schema_exporter"
   }
 

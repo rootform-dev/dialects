@@ -16,7 +16,6 @@ concept "data-integration-runtime" {
 
 rule "data-factory" {
   match {
-    kind = "resource"
     type = "azurerm_data_factory"
   }
 
@@ -25,7 +24,6 @@ rule "data-factory" {
 
 rule "data-factory-azure-integration-runtime" {
   match {
-    kind = "resource"
     type = "azurerm_data_factory_integration_runtime_azure"
   }
 
@@ -34,7 +32,6 @@ rule "data-factory-azure-integration-runtime" {
 
 rule "data-factory-blob-dataset" {
   match {
-    kind = "resource"
     type = "azurerm_data_factory_dataset_azure_blob"
   }
 
@@ -43,7 +40,6 @@ rule "data-factory-blob-dataset" {
 
 rule "data-factory-blob-linked-service" {
   match {
-    kind = "resource"
     type = "azurerm_data_factory_linked_service_azure_blob_storage"
   }
 
@@ -52,7 +48,6 @@ rule "data-factory-blob-linked-service" {
 
 rule "data-factory-data-flow" {
   match {
-    kind = "resource"
     type = "azurerm_data_factory_data_flow"
   }
 
@@ -61,7 +56,6 @@ rule "data-factory-data-flow" {
 
 rule "data-factory-managed-private-endpoint" {
   match {
-    kind = "resource"
     type = "azurerm_data_factory_managed_private_endpoint"
   }
 
@@ -70,7 +64,6 @@ rule "data-factory-managed-private-endpoint" {
 
 rule "data-factory-pipeline" {
   match {
-    kind = "resource"
     type = "azurerm_data_factory_pipeline"
   }
 
@@ -79,7 +72,6 @@ rule "data-factory-pipeline" {
 
 rule "data-factory-schedule-trigger" {
   match {
-    kind = "resource"
     type = "azurerm_data_factory_trigger_schedule"
   }
 
@@ -88,7 +80,6 @@ rule "data-factory-schedule-trigger" {
 
 rule "data-factory-self-hosted-integration-runtime" {
   match {
-    kind = "resource"
     type = "azurerm_data_factory_integration_runtime_self_hosted"
   }
 
@@ -97,7 +88,6 @@ rule "data-factory-self-hosted-integration-runtime" {
 
 rule "data-factory-sql-dataset" {
   match {
-    kind = "resource"
     type = "azurerm_data_factory_dataset_azure_sql_table"
   }
 
@@ -106,7 +96,6 @@ rule "data-factory-sql-dataset" {
 
 rule "data-factory-sql-linked-service" {
   match {
-    kind = "resource"
     type = "azurerm_data_factory_linked_service_azure_sql_database"
   }
 
@@ -115,7 +104,6 @@ rule "data-factory-sql-linked-service" {
 
 rule "stream-analytics-blob-output" {
   match {
-    kind = "resource"
     type = "azurerm_stream_analytics_output_blob"
   }
 
@@ -124,7 +112,6 @@ rule "stream-analytics-blob-output" {
 
 rule "stream-analytics-event-hubs-input" {
   match {
-    kind = "resource"
     type = "azurerm_stream_analytics_stream_input_eventhub_v2"
   }
 

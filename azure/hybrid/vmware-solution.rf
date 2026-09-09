@@ -6,7 +6,6 @@ concept "vmware-private-cloud" {
 
 rule "vmware-cluster" {
   match {
-    kind = "resource"
     type = "azurerm_vmware_cluster"
   }
 
@@ -15,7 +14,6 @@ rule "vmware-cluster" {
 
 rule "vmware-private-cloud" {
   match {
-    kind = "resource"
     type = "azurerm_vmware_private_cloud"
   }
 

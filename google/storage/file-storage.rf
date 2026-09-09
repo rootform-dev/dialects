@@ -5,7 +5,6 @@ concept "netapp-storage-pool" {
 
 rule "filestore-instance" {
   match {
-    kind = "resource"
     type = "google_filestore_instance"
   }
 
@@ -14,7 +13,6 @@ rule "filestore-instance" {
 
 rule "netapp-storage-pool" {
   match {
-    kind = "resource"
     type = "google_netapp_storage_pool"
   }
 
@@ -23,7 +21,6 @@ rule "netapp-storage-pool" {
 
 rule "netapp-volume" {
   match {
-    kind = "resource"
     type = "google_netapp_volume"
   }
 
@@ -38,7 +35,6 @@ rule "netapp-volume" {
 
 rule "parallelstore-instance" {
   match {
-    kind = "resource"
     type = "google_parallelstore_instance"
   }
 
@@ -53,7 +49,6 @@ rule "parallelstore-instance" {
 
 rule "managed-lustre-instance" {
   match {
-    kind = "resource"
     type = "google_lustre_instance"
   }
 

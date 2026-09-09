@@ -1,6 +1,5 @@
 rule "sns-topic" {
   match {
-    kind = "resource"
     type = "aws_sns_topic"
   }
 
@@ -9,7 +8,6 @@ rule "sns-topic" {
 
 rule "sns-topic-subscription" {
   match {
-    kind = "resource"
     type = "aws_sns_topic_subscription"
   }
 
@@ -23,7 +21,6 @@ rule "sns-topic-subscription" {
 
 rule "sqs-queue" {
   match {
-    kind = "resource"
     type = "aws_sqs_queue"
   }
 

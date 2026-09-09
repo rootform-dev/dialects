@@ -6,7 +6,6 @@ concept "elastictranscoder-pipeline" {
 
 rule "elastictranscoder-pipeline" {
   match {
-    kind = "resource"
     type = "aws_elastictranscoder_pipeline"
   }
 

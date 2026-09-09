@@ -15,7 +15,6 @@ concept "migration-center-assessment" {
 
 rule "migration-center-source" {
   match {
-    kind = "resource"
     type = "google_migration_center_source"
   }
 
@@ -24,7 +23,6 @@ rule "migration-center-source" {
 
 rule "migration-center-discovery-client" {
   match {
-    kind = "resource"
     type = "google_migration_center_discovery_client"
   }
 
@@ -33,7 +31,6 @@ rule "migration-center-discovery-client" {
 
 rule "migration-center-assets-export-job" {
   match {
-    kind = "resource"
     type = "google_migration_center_assets_export_job"
   }
 
@@ -42,7 +39,6 @@ rule "migration-center-assets-export-job" {
 
 rule "migration-center-group" {
   match {
-    kind = "resource"
     type = "google_migration_center_group"
   }
 
@@ -51,7 +47,6 @@ rule "migration-center-group" {
 
 rule "migration-center-import-data-file" {
   match {
-    kind = "resource"
     type = "google_migration_center_import_data_file"
   }
 
@@ -60,7 +55,6 @@ rule "migration-center-import-data-file" {
 
 rule "migration-center-import-job" {
   match {
-    kind = "resource"
     type = "google_migration_center_import_job"
   }
 
@@ -69,7 +63,6 @@ rule "migration-center-import-job" {
 
 rule "migration-center-preference-set" {
   match {
-    kind = "resource"
     type = "google_migration_center_preference_set"
   }
 
@@ -78,7 +71,6 @@ rule "migration-center-preference-set" {
 
 rule "migration-center-report" {
   match {
-    kind = "resource"
     type = "google_migration_center_report"
   }
 
@@ -87,7 +79,6 @@ rule "migration-center-report" {
 
 rule "migration-center-report-config" {
   match {
-    kind = "resource"
     type = "google_migration_center_report_config"
   }
 
@@ -96,7 +87,6 @@ rule "migration-center-report-config" {
 
 rule "migration-center-settings" {
   match {
-    kind = "resource"
     type = "google_migration_center_settings"
   }
 

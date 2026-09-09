@@ -5,7 +5,6 @@ concept "catalog-definition" {
 
 rule "service-definition-yaml" {
   match {
-    kind = "resource"
     type = "datadog_service_definition_yaml"
   }
 
@@ -14,7 +13,6 @@ rule "service-definition-yaml" {
 
 rule "software-catalog" {
   match {
-    kind = "resource"
     type = "datadog_software_catalog"
   }
 

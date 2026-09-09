@@ -15,7 +15,6 @@ concept "app-hub-workload" {
 
 rule "app-hub-application" {
   match {
-    kind = "resource"
     type = "google_apphub_application"
   }
 
@@ -24,7 +23,6 @@ rule "app-hub-application" {
 
 rule "app-hub-service" {
   match {
-    kind = "resource"
     type = "google_apphub_service"
   }
 
@@ -33,7 +31,6 @@ rule "app-hub-service" {
 
 rule "app-hub-workload" {
   match {
-    kind = "resource"
     type = "google_apphub_workload"
   }
 

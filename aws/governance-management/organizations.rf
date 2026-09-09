@@ -16,7 +16,6 @@ concept "organizations-organizational-unit" {
 
 rule "organizations-account" {
   match {
-    kind = "resource"
     type = "aws_organizations_account"
   }
 
@@ -25,7 +24,6 @@ rule "organizations-account" {
 
 rule "organizations-organization" {
   match {
-    kind = "resource"
     type = "aws_organizations_organization"
   }
 
@@ -34,7 +32,6 @@ rule "organizations-organization" {
 
 rule "organizations-organizational-unit" {
   match {
-    kind = "resource"
     type = "aws_organizations_organizational_unit"
   }
 

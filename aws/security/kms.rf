@@ -26,7 +26,6 @@ concept "kms-replica-key" {
 
 rule "kms-custom-key-store" {
   match {
-    kind = "resource"
     type = "aws_kms_custom_key_store"
   }
 
@@ -35,7 +34,6 @@ rule "kms-custom-key-store" {
 
 rule "kms-external-key" {
   match {
-    kind = "resource"
     type = "aws_kms_external_key"
   }
 
@@ -44,7 +42,6 @@ rule "kms-external-key" {
 
 rule "kms-replica-external-key" {
   match {
-    kind = "resource"
     type = "aws_kms_replica_external_key"
   }
 
@@ -53,7 +50,6 @@ rule "kms-replica-external-key" {
 
 rule "kms-replica-key" {
   match {
-    kind = "resource"
     type = "aws_kms_replica_key"
   }
 

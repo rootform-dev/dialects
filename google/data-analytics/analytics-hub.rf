@@ -15,7 +15,6 @@ concept "analytics-hub-subscription" {
 
 rule "analytics-hub-data-exchange" {
   match {
-    kind = "resource"
     type = "google_bigquery_analytics_hub_data_exchange"
   }
 
@@ -24,7 +23,6 @@ rule "analytics-hub-data-exchange" {
 
 rule "analytics-hub-listing" {
   match {
-    kind = "resource"
     type = "google_bigquery_analytics_hub_listing"
   }
 
@@ -33,7 +31,6 @@ rule "analytics-hub-listing" {
 
 rule "analytics-hub-data-exchange-subscription" {
   match {
-    kind = "resource"
     type = "google_bigquery_analytics_hub_data_exchange_subscription"
   }
 
@@ -42,7 +39,6 @@ rule "analytics-hub-data-exchange-subscription" {
 
 rule "analytics-hub-listing-subscription" {
   match {
-    kind = "resource"
     type = "google_bigquery_analytics_hub_listing_subscription"
   }
 

@@ -6,7 +6,6 @@ concept "ai-service-account" {
 
 rule "ai-services-account" {
   match {
-    kind = "resource"
     type = "azurerm_cognitive_account"
   }
 

@@ -6,7 +6,6 @@ concept "trusted-signing-account" {
 
 rule "trusted-signing-account" {
   match {
-    kind = "resource"
     type = "azurerm_trusted_signing_account"
   }
 

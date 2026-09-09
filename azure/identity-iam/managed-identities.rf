@@ -1,6 +1,5 @@
 rule "user-assigned-managed-identity" {
   match {
-    kind = "resource"
     type = "azurerm_user_assigned_identity"
   }
 

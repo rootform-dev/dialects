@@ -7,9 +7,22 @@ terraform {
   }
 }
 
+resource "google_project" "platform" {
+  name       = "platform"
+  project_id = "demo-project"
+}
+
 resource "google_secret_manager_secret" "api" {
   secret_id = "api"
+  project   = google_project.platform.project_id
 
+  replication {
+    auto {}
+  }
+}
+
+resource "google_secret_manager_secret" "provider_default_project" {
+  secret_id = "provider-default-project"
   replication {
     auto {}
   }

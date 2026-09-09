@@ -11,7 +11,6 @@ concept "codebuild-project" {
 
 rule "codebuild-fleet" {
   match {
-    kind = "resource"
     type = "aws_codebuild_fleet"
   }
 
@@ -20,7 +19,6 @@ rule "codebuild-fleet" {
 
 rule "codebuild-project" {
   match {
-    kind = "resource"
     type = "aws_codebuild_project"
   }
 

@@ -5,7 +5,6 @@ concept "authorization-server" {
 
 rule "auth-server" {
   match {
-    kind = "resource"
     type = "okta_auth_server"
   }
 
@@ -14,7 +13,6 @@ rule "auth-server" {
 
 rule "auth-server-default" {
   match {
-    kind = "resource"
     type = "okta_auth_server_default"
   }
 

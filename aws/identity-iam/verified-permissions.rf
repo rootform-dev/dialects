@@ -6,7 +6,6 @@ concept "verifiedpermissions-policy-store" {
 
 rule "verifiedpermissions-policy-store" {
   match {
-    kind = "resource"
     type = "aws_verifiedpermissions_policy_store"
   }
 

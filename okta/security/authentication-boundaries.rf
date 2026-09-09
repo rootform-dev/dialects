@@ -10,7 +10,6 @@ concept "network-zone" {
 
 rule "authenticator" {
   match {
-    kind = "resource"
     type = "okta_authenticator"
   }
 
@@ -28,7 +27,6 @@ rule "authenticator-lookup" {
 
 rule "authenticator-method-webauthn" {
   match {
-    kind = "resource"
     type = "okta_authenticator_method_webauthn"
   }
 
@@ -46,7 +44,6 @@ rule "authenticator-method-webauthn-lookup" {
 
 rule "authenticator-webauthn-custom-aaguid" {
   match {
-    kind = "resource"
     type = "okta_authenticator_webauthn_custom_aaguid"
   }
 
@@ -64,7 +61,6 @@ rule "authenticator-webauthn-custom-aaguids-lookup" {
 
 rule "behavior" {
   match {
-    kind = "resource"
     type = "okta_behavior"
   }
 
@@ -82,7 +78,6 @@ rule "behavior-lookup" {
 
 rule "captcha" {
   match {
-    kind = "resource"
     type = "okta_captcha"
   }
 
@@ -100,7 +95,6 @@ rule "captcha-lookup" {
 
 rule "network-zone" {
   match {
-    kind = "resource"
     type = "okta_network_zone"
   }
 
@@ -118,7 +112,6 @@ rule "network-zone-lookup" {
 
 rule "org-captcha" {
   match {
-    kind = "resource"
     type = "okta_org_captcha"
   }
 
@@ -136,7 +129,6 @@ rule "org-captcha-lookup" {
 
 rule "threat-insight-settings" {
   match {
-    kind = "resource"
     type = "okta_threat_insight_settings"
   }
 
@@ -154,7 +146,6 @@ rule "threat-insight-settings-lookup" {
 
 rule "trusted-origin" {
   match {
-    kind = "resource"
     type = "okta_trusted_origin"
   }
 

@@ -6,7 +6,6 @@ concept "directory-service-directory" {
 
 rule "directory-service-directory" {
   match {
-    kind = "resource"
     type = "aws_directory_service_directory"
   }
 

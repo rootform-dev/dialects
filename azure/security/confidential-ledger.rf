@@ -6,7 +6,6 @@ concept "confidential-ledger" {
 
 rule "confidential-ledger" {
   match {
-    kind = "resource"
     type = "azurerm_confidential_ledger"
   }
 

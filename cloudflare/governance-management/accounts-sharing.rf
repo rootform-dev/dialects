@@ -30,7 +30,6 @@ concept "account-configuration" {
 
 rule "account" {
   match {
-    kind = "resource"
     type = "cloudflare_account"
   }
 
@@ -39,7 +38,6 @@ rule "account" {
 
 rule "organization" {
   match {
-    kind = "resource"
     type = "cloudflare_organization"
   }
 
@@ -48,7 +46,6 @@ rule "organization" {
 
 rule "resource-share" {
   match {
-    kind = "resource"
     type = "cloudflare_share"
   }
 
@@ -57,7 +54,6 @@ rule "resource-share" {
 
 rule "flagship-app" {
   match {
-    kind = "resource"
     type = "cloudflare_flagship_app"
   }
 
@@ -66,7 +62,6 @@ rule "flagship-app" {
 
 rule "flagship-flag" {
   match {
-    kind = "resource"
     type = "cloudflare_flagship_flag"
   }
 
@@ -80,7 +75,6 @@ rule "flagship-flag" {
 
 rule "account-dns-settings" {
   match {
-    kind = "resource"
     type = "cloudflare_account_dns_settings"
   }
 

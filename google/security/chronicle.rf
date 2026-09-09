@@ -15,7 +15,6 @@ concept "chronicle-detection-rule" {
 
 rule "chronicle-environment" {
   match {
-    kind = "resource"
     type = "google_chronicle_environment"
   }
 
@@ -24,7 +23,6 @@ rule "chronicle-environment" {
 
 rule "chronicle-feed" {
   match {
-    kind = "resource"
     type = "google_chronicle_feed"
   }
 
@@ -33,7 +31,6 @@ rule "chronicle-feed" {
 
 rule "chronicle-detection-rule" {
   match {
-    kind = "resource"
     type = "google_chronicle_rule"
   }
 

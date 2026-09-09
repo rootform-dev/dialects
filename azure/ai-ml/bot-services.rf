@@ -6,7 +6,6 @@ concept "bot-service" {
 
 rule "azure-bot" {
   match {
-    kind = "resource"
     type = "azurerm_bot_service_azure_bot"
   }
 
@@ -15,7 +14,6 @@ rule "azure-bot" {
 
 rule "bot-channels-registration" {
   match {
-    kind = "resource"
     type = "azurerm_bot_channels_registration"
   }
 
@@ -24,7 +22,6 @@ rule "bot-channels-registration" {
 
 rule "bot-web-app" {
   match {
-    kind = "resource"
     type = "azurerm_bot_web_app"
   }
 
@@ -33,7 +30,6 @@ rule "bot-web-app" {
 
 rule "health-bot" {
   match {
-    kind = "resource"
     type = "azurerm_healthbot"
   }
 

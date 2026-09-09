@@ -6,7 +6,6 @@ concept "qldb-stream" {
 
 rule "qldb-stream" {
   match {
-    kind = "resource"
     type = "aws_qldb_stream"
   }
 

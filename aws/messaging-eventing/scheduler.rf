@@ -6,7 +6,6 @@ concept "scheduler-schedule-group" {
 
 rule "scheduler-schedule-group" {
   match {
-    kind = "resource"
     type = "aws_scheduler_schedule_group"
   }
 

@@ -5,7 +5,6 @@ concept "directory-sync" {
 
 rule "connection-directory" {
   match {
-    kind = "resource"
     type = "auth0_connection_directory"
   }
 

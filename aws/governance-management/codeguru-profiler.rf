@@ -6,7 +6,6 @@ concept "codeguruprofiler-profiling-group" {
 
 rule "codeguruprofiler-profiling-group" {
   match {
-    kind = "resource"
     type = "aws_codeguruprofiler_profiling_group"
   }
 

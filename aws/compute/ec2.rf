@@ -36,7 +36,6 @@ concept "ec2-secondary-subnet" {
 
 rule "ami-from-instance" {
   match {
-    kind = "resource"
     type = "aws_ami_from_instance"
   }
 
@@ -45,7 +44,6 @@ rule "ami-from-instance" {
 
 rule "ec2-carrier-gateway" {
   match {
-    kind = "resource"
     type = "aws_ec2_carrier_gateway"
   }
 
@@ -54,7 +52,6 @@ rule "ec2-carrier-gateway" {
 
 rule "ec2-fleet" {
   match {
-    kind = "resource"
     type = "aws_ec2_fleet"
   }
 
@@ -63,7 +60,6 @@ rule "ec2-fleet" {
 
 rule "ec2-instance-connect-endpoint" {
   match {
-    kind = "resource"
     type = "aws_ec2_instance_connect_endpoint"
   }
 
@@ -72,7 +68,6 @@ rule "ec2-instance-connect-endpoint" {
 
 rule "ec2-local-gateway-route-table" {
   match {
-    kind = "resource"
     type = "aws_ec2_local_gateway_route_table"
   }
 
@@ -81,7 +76,6 @@ rule "ec2-local-gateway-route-table" {
 
 rule "ec2-secondary-network" {
   match {
-    kind = "resource"
     type = "aws_ec2_secondary_network"
   }
 
@@ -90,7 +84,6 @@ rule "ec2-secondary-network" {
 
 rule "ec2-secondary-subnet" {
   match {
-    kind = "resource"
     type = "aws_ec2_secondary_subnet"
   }
 

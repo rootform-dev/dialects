@@ -5,7 +5,6 @@ concept "agent-gateway" {
 
 rule "agent-gateway" {
   match {
-    kind = "resource"
     type = "google_network_services_agent_gateway"
   }
 

@@ -6,7 +6,6 @@ concept "emrcontainers-virtual-cluster" {
 
 rule "emrcontainers-virtual-cluster" {
   match {
-    kind = "resource"
     type = "aws_emrcontainers_virtual_cluster"
   }
 

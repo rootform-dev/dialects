@@ -6,7 +6,6 @@ concept "media-package-channel" {
 
 rule "media-package-channel" {
   match {
-    kind = "resource"
     type = "aws_media_package_channel"
   }
 

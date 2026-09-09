@@ -6,7 +6,6 @@ concept "codestarconnections-connection" {
 
 rule "codestarconnections-connection" {
   match {
-    kind = "resource"
     type = "aws_codestarconnections_connection"
   }
 

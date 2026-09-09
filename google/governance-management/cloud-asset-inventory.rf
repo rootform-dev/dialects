@@ -5,7 +5,6 @@ concept "cloud-asset-feed" {
 
 rule "cloud-asset-project-feed" {
   match {
-    kind = "resource"
     type = "google_cloud_asset_project_feed"
   }
 
@@ -14,7 +13,6 @@ rule "cloud-asset-project-feed" {
 
 rule "cloud-asset-folder-feed" {
   match {
-    kind = "resource"
     type = "google_cloud_asset_folder_feed"
   }
 
@@ -23,7 +21,6 @@ rule "cloud-asset-folder-feed" {
 
 rule "cloud-asset-organization-feed" {
   match {
-    kind = "resource"
     type = "google_cloud_asset_organization_feed"
   }
 

@@ -20,7 +20,6 @@ concept "ml-platform-detail" {
 
 rule "knowledge-assistant" {
   match {
-    kind = "resource"
     type = "databricks_knowledge_assistant"
   }
 
@@ -29,7 +28,6 @@ rule "knowledge-assistant" {
 
 rule "knowledge-assistant-source" {
   match {
-    kind = "resource"
     type = "databricks_knowledge_assistant_knowledge_source"
   }
 
@@ -43,7 +41,6 @@ rule "knowledge-assistant-source" {
 
 rule "supervisor-agent" {
   match {
-    kind = "resource"
     type = "databricks_supervisor_agent"
   }
 
@@ -52,7 +49,6 @@ rule "supervisor-agent" {
 
 rule "supervisor-agent-tool" {
   match {
-    kind = "resource"
     type = "databricks_supervisor_agent_tool"
   }
 
@@ -66,7 +62,6 @@ rule "supervisor-agent-tool" {
 
 rule "registered-model" {
   match {
-    kind = "resource"
     type = "databricks_registered_model"
   }
 
@@ -81,7 +76,6 @@ rule "registered-model" {
 
 rule "mlflow-experiment" {
   match {
-    kind = "resource"
     type = "databricks_mlflow_experiment"
   }
 
@@ -90,7 +84,6 @@ rule "mlflow-experiment" {
 
 rule "mlflow-model" {
   match {
-    kind = "resource"
     type = "databricks_mlflow_model"
   }
 
@@ -99,7 +92,6 @@ rule "mlflow-model" {
 
 rule "mlflow-webhook" {
   match {
-    kind = "resource"
     type = "databricks_mlflow_webhook"
   }
 
@@ -108,7 +100,6 @@ rule "mlflow-webhook" {
 
 rule "feature-engineering-feature" {
   match {
-    kind = "resource"
     type = "databricks_feature_engineering_feature"
   }
 
@@ -117,7 +108,6 @@ rule "feature-engineering-feature" {
 
 rule "feature-engineering-kafka-config" {
   match {
-    kind = "resource"
     type = "databricks_feature_engineering_kafka_config"
   }
 
@@ -126,7 +116,6 @@ rule "feature-engineering-kafka-config" {
 
 rule "feature-engineering-materialized-feature" {
   match {
-    kind = "resource"
     type = "databricks_feature_engineering_materialized_feature"
   }
 
@@ -135,7 +124,6 @@ rule "feature-engineering-materialized-feature" {
 
 rule "materialized-feature-tag" {
   match {
-    kind = "resource"
     type = "databricks_materialized_features_feature_tag"
   }
 

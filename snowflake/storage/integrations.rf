@@ -15,7 +15,6 @@ concept "catalog-integration" {
 
 rule "storage-integration" {
   match {
-    kind = "resource"
     type = "snowflake_storage_integration"
   }
 
@@ -39,7 +38,6 @@ rule "storage-integration" {
 
 rule "aws-storage-integration" {
   match {
-    kind = "resource"
     type = "snowflake_storage_integration_aws"
   }
 
@@ -63,7 +61,6 @@ rule "aws-storage-integration" {
 
 rule "azure-storage-integration" {
   match {
-    kind = "resource"
     type = "snowflake_storage_integration_azure"
   }
 
@@ -82,7 +79,6 @@ rule "azure-storage-integration" {
 
 rule "gcs-storage-integration" {
   match {
-    kind = "resource"
     type = "snowflake_storage_integration_gcs"
   }
 
@@ -101,7 +97,6 @@ rule "gcs-storage-integration" {
 
 rule "external-volume" {
   match {
-    kind = "resource"
     type = "snowflake_external_volume"
   }
 
@@ -130,7 +125,6 @@ rule "external-volume" {
 
 rule "aws-glue-catalog-integration" {
   match {
-    kind = "resource"
     type = "snowflake_catalog_integration_aws_glue"
   }
 
@@ -144,7 +138,6 @@ rule "aws-glue-catalog-integration" {
 
 rule "iceberg-rest-catalog-integration" {
   match {
-    kind = "resource"
     type = "snowflake_catalog_integration_iceberg_rest"
   }
 
@@ -158,7 +151,6 @@ rule "iceberg-rest-catalog-integration" {
 
 rule "object-storage-catalog-integration" {
   match {
-    kind = "resource"
     type = "snowflake_catalog_integration_object_storage"
   }
 
@@ -167,7 +159,6 @@ rule "object-storage-catalog-integration" {
 
 rule "open-catalog-integration" {
   match {
-    kind = "resource"
     type = "snowflake_catalog_integration_open_catalog"
   }
 

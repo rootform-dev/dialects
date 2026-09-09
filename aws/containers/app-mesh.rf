@@ -11,7 +11,6 @@ concept "appmesh-virtual-service" {
 
 rule "appmesh-virtual-gateway" {
   match {
-    kind = "resource"
     type = "aws_appmesh_virtual_gateway"
   }
 
@@ -20,7 +19,6 @@ rule "appmesh-virtual-gateway" {
 
 rule "appmesh-virtual-service" {
   match {
-    kind = "resource"
     type = "aws_appmesh_virtual_service"
   }
 

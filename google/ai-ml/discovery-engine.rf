@@ -15,7 +15,6 @@ concept "discovery-engine-assistant" {
 
 rule "discovery-engine-data-store" {
   match {
-    kind = "resource"
     type = "google_discovery_engine_data_store"
   }
 
@@ -24,7 +23,6 @@ rule "discovery-engine-data-store" {
 
 rule "discovery-engine-search-engine" {
   match {
-    kind = "resource"
     type = "google_discovery_engine_search_engine"
   }
 
@@ -33,7 +31,6 @@ rule "discovery-engine-search-engine" {
 
 rule "discovery-engine-chat-engine" {
   match {
-    kind = "resource"
     type = "google_discovery_engine_chat_engine"
   }
 
@@ -42,7 +39,6 @@ rule "discovery-engine-chat-engine" {
 
 rule "discovery-engine-recommendation-engine" {
   match {
-    kind = "resource"
     type = "google_discovery_engine_recommendation_engine"
   }
 
@@ -51,7 +47,6 @@ rule "discovery-engine-recommendation-engine" {
 
 rule "discovery-engine-assistant" {
   match {
-    kind = "resource"
     type = "google_discovery_engine_assistant"
   }
 

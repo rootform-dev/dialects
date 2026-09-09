@@ -11,7 +11,6 @@ concept "location-place-index" {
 
 rule "location-geofence-collection" {
   match {
-    kind = "resource"
     type = "aws_location_geofence_collection"
   }
 
@@ -20,7 +19,6 @@ rule "location-geofence-collection" {
 
 rule "location-place-index" {
   match {
-    kind = "resource"
     type = "aws_location_place_index"
   }
 

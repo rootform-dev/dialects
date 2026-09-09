@@ -6,7 +6,6 @@ concept "ram-sharing-with-organization" {
 
 rule "ram-sharing-with-organization" {
   match {
-    kind = "resource"
     type = "aws_ram_sharing_with_organization"
   }
 

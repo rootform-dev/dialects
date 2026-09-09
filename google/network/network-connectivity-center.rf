@@ -10,7 +10,6 @@ concept "network-connectivity-center-spoke" {
 
 rule "network-connectivity-center-hub" {
   match {
-    kind = "resource"
     type = "google_network_connectivity_hub"
   }
 
@@ -19,7 +18,6 @@ rule "network-connectivity-center-hub" {
 
 rule "network-connectivity-center-spoke" {
   match {
-    kind = "resource"
     type = "google_network_connectivity_spoke"
   }
 

@@ -10,7 +10,6 @@ concept "self-service-sso-profile" {
 
 rule "connection-profile" {
   match {
-    kind = "resource"
     type = "auth0_connection_profile"
   }
 
@@ -28,7 +27,6 @@ rule "connection-profile-lookup" {
 
 rule "self-service-profile" {
   match {
-    kind = "resource"
     type = "auth0_self_service_profile"
   }
 
@@ -46,7 +44,6 @@ rule "self-service-profile-lookup" {
 
 rule "user-attribute-profile" {
   match {
-    kind = "resource"
     type = "auth0_user_attribute_profile"
   }
 

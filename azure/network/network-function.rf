@@ -6,7 +6,6 @@ concept "network-function-service" {
 
 rule "network-function-traffic-collector" {
   match {
-    kind = "resource"
     type = "azurerm_network_function_azure_traffic_collector"
   }
 

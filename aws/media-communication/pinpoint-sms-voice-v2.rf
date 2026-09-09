@@ -6,7 +6,6 @@ concept "pinpointsmsvoicev2-pool" {
 
 rule "pinpointsmsvoicev2-pool" {
   match {
-    kind = "resource"
     type = "aws_pinpointsmsvoicev2_pool"
   }
 

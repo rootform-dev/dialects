@@ -10,7 +10,6 @@ concept "identity-domain" {
 
 rule "domain" {
   match {
-    kind = "resource"
     type = "okta_domain"
   }
 
@@ -19,7 +18,6 @@ rule "domain" {
 
 rule "domain-certificate" {
   match {
-    kind = "resource"
     type = "okta_domain_certificate"
   }
 
@@ -42,7 +40,6 @@ rule "domain-lookup" {
 
 rule "domain-verification" {
   match {
-    kind = "resource"
     type = "okta_domain_verification"
   }
 

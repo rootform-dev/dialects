@@ -21,7 +21,6 @@ concept "dms-s3-endpoint" {
 
 rule "dms-endpoint" {
   match {
-    kind = "resource"
     type = "aws_dms_endpoint"
   }
 
@@ -30,7 +29,6 @@ rule "dms-endpoint" {
 
 rule "dms-replication-instance" {
   match {
-    kind = "resource"
     type = "aws_dms_replication_instance"
   }
 
@@ -39,7 +37,6 @@ rule "dms-replication-instance" {
 
 rule "dms-replication-task" {
   match {
-    kind = "resource"
     type = "aws_dms_replication_task"
   }
 
@@ -48,7 +45,6 @@ rule "dms-replication-task" {
 
 rule "dms-s3-endpoint" {
   match {
-    kind = "resource"
     type = "aws_dms_s3_endpoint"
   }
 

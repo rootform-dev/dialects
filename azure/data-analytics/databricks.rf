@@ -6,7 +6,6 @@ concept "databricks-workspace" {
 
 rule "databricks-workspace" {
   match {
-    kind = "resource"
     type = "azurerm_databricks_workspace"
   }
 

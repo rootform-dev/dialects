@@ -15,7 +15,6 @@ concept "transit-gateway-attachment" {
 
 rule "aws-network-peering" {
   match {
-    kind = "resource"
     type = "hcp_aws_network_peering"
   }
 
@@ -67,7 +66,6 @@ rule "aws-network-peering-lookup" {
 
 rule "aws-transit-gateway-attachment" {
   match {
-    kind = "resource"
     type = "hcp_aws_transit_gateway_attachment"
   }
 
@@ -109,7 +107,6 @@ rule "aws-transit-gateway-attachment-lookup" {
 
 rule "azure-peering-connection" {
   match {
-    kind = "resource"
     type = "hcp_azure_peering_connection"
   }
 
@@ -161,7 +158,6 @@ rule "azure-peering-connection-lookup" {
 
 rule "hvn-peering-connection" {
   match {
-    kind = "resource"
     type = "hcp_hvn_peering_connection"
   }
 
@@ -213,7 +209,6 @@ rule "hvn-peering-connection-lookup" {
 
 rule "hvn-route" {
   match {
-    kind = "resource"
     type = "hcp_hvn_route"
   }
 
@@ -241,7 +236,6 @@ rule "hvn-route-lookup" {
 
 rule "private-link" {
   match {
-    kind = "resource"
     type = "hcp_private_link"
   }
 

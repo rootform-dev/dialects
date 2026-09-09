@@ -5,7 +5,6 @@ concept "cloud-scheduler-job" {
 
 rule "cloud-tasks-queue" {
   match {
-    kind = "resource"
     type = "google_cloud_tasks_queue"
   }
 
@@ -14,7 +13,6 @@ rule "cloud-tasks-queue" {
 
 rule "cloud-scheduler-job" {
   match {
-    kind = "resource"
     type = "google_cloud_scheduler_job"
   }
 

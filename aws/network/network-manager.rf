@@ -21,7 +21,6 @@ concept "networkmanager-site" {
 
 rule "networkmanager-connection" {
   match {
-    kind = "resource"
     type = "aws_networkmanager_connection"
   }
 
@@ -30,7 +29,6 @@ rule "networkmanager-connection" {
 
 rule "networkmanager-core-network" {
   match {
-    kind = "resource"
     type = "aws_networkmanager_core_network"
   }
 
@@ -39,7 +37,6 @@ rule "networkmanager-core-network" {
 
 rule "networkmanager-global-network" {
   match {
-    kind = "resource"
     type = "aws_networkmanager_global_network"
   }
 
@@ -48,7 +45,6 @@ rule "networkmanager-global-network" {
 
 rule "networkmanager-site" {
   match {
-    kind = "resource"
     type = "aws_networkmanager_site"
   }
 

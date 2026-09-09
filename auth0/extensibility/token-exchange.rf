@@ -5,7 +5,6 @@ concept "token-exchange-profile" {
 
 rule "token-exchange-profile" {
   match {
-    kind = "resource"
     type = "auth0_token_exchange_profile"
   }
 

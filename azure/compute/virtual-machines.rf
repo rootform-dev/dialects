@@ -11,7 +11,6 @@ concept "dedicated-host-group" {
 
 rule "availability-set" {
   match {
-    kind = "resource"
     type = "azurerm_availability_set"
   }
 
@@ -20,7 +19,6 @@ rule "availability-set" {
 
 rule "capacity-reservation" {
   match {
-    kind = "resource"
     type = "azurerm_capacity_reservation"
   }
 
@@ -29,7 +27,6 @@ rule "capacity-reservation" {
 
 rule "capacity-reservation-group" {
   match {
-    kind = "resource"
     type = "azurerm_capacity_reservation_group"
   }
 
@@ -38,7 +35,6 @@ rule "capacity-reservation-group" {
 
 rule "dedicated-host" {
   match {
-    kind = "resource"
     type = "azurerm_dedicated_host"
   }
 
@@ -47,7 +43,6 @@ rule "dedicated-host" {
 
 rule "dedicated-host-group" {
   match {
-    kind = "resource"
     type = "azurerm_dedicated_host_group"
   }
 
@@ -56,7 +51,6 @@ rule "dedicated-host-group" {
 
 rule "proximity-placement-group" {
   match {
-    kind = "resource"
     type = "azurerm_proximity_placement_group"
   }
 
@@ -65,7 +59,6 @@ rule "proximity-placement-group" {
 
 rule "virtual-machine-restore-point" {
   match {
-    kind = "resource"
     type = "azurerm_virtual_machine_restore_point"
   }
 

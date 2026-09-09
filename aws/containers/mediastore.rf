@@ -6,7 +6,6 @@ concept "media-store-container" {
 
 rule "media-store-container" {
   match {
-    kind = "resource"
     type = "aws_media_store_container"
   }
 

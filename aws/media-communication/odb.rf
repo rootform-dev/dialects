@@ -6,7 +6,6 @@ concept "odb-network-peering-connection" {
 
 rule "odb-network-peering-connection" {
   match {
-    kind = "resource"
     type = "aws_odb_network_peering_connection"
   }
 

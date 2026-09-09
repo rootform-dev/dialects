@@ -10,7 +10,6 @@ concept "namespace" {
 
 rule "admin-partition" {
   match {
-    kind = "resource"
     type = "consul_admin_partition"
   }
 
@@ -19,7 +18,6 @@ rule "admin-partition" {
 
 rule "namespace" {
   match {
-    kind = "resource"
     type = "consul_namespace"
   }
 
@@ -34,7 +32,6 @@ rule "namespace" {
 
 rule "namespace-policy-attachment" {
   match {
-    kind = "resource"
     type = "consul_namespace_policy_attachment"
   }
 
@@ -48,7 +45,6 @@ rule "namespace-policy-attachment" {
 
 rule "namespace-role-attachment" {
   match {
-    kind = "resource"
     type = "consul_namespace_role_attachment"
   }
 

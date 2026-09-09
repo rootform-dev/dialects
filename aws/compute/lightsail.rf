@@ -31,7 +31,6 @@ concept "lightsail-instance" {
 
 rule "lightsail-bucket" {
   match {
-    kind = "resource"
     type = "aws_lightsail_bucket"
   }
 
@@ -40,7 +39,6 @@ rule "lightsail-bucket" {
 
 rule "lightsail-certificate" {
   match {
-    kind = "resource"
     type = "aws_lightsail_certificate"
   }
 
@@ -49,7 +47,6 @@ rule "lightsail-certificate" {
 
 rule "lightsail-database" {
   match {
-    kind = "resource"
     type = "aws_lightsail_database"
   }
 
@@ -58,7 +55,6 @@ rule "lightsail-database" {
 
 rule "lightsail-distribution" {
   match {
-    kind = "resource"
     type = "aws_lightsail_distribution"
   }
 
@@ -67,7 +63,6 @@ rule "lightsail-distribution" {
 
 rule "lightsail-domain" {
   match {
-    kind = "resource"
     type = "aws_lightsail_domain"
   }
 
@@ -76,7 +71,6 @@ rule "lightsail-domain" {
 
 rule "lightsail-instance" {
   match {
-    kind = "resource"
     type = "aws_lightsail_instance"
   }
 

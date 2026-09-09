@@ -21,7 +21,6 @@ concept "bedrockagent-knowledge-base" {
 
 rule "bedrockagent-agent" {
   match {
-    kind = "resource"
     type = "aws_bedrockagent_agent"
   }
 
@@ -30,7 +29,6 @@ rule "bedrockagent-agent" {
 
 rule "bedrockagent-flow" {
   match {
-    kind = "resource"
     type = "aws_bedrockagent_flow"
   }
 
@@ -39,7 +37,6 @@ rule "bedrockagent-flow" {
 
 rule "bedrockagent-knowledge-base" {
   match {
-    kind = "resource"
     type = "aws_bedrockagent_knowledge_base"
   }
 

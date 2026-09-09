@@ -6,7 +6,6 @@ concept "synthetics-canary" {
 
 rule "synthetics-canary" {
   match {
-    kind = "resource"
     type = "aws_synthetics_canary"
   }
 

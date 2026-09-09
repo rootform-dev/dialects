@@ -6,7 +6,6 @@ concept "attestation-provider" {
 
 rule "attestation-provider" {
   match {
-    kind = "resource"
     type = "azurerm_attestation_provider"
   }
 

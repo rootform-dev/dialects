@@ -6,7 +6,6 @@ concept "elastic-san" {
 
 rule "elastic-san" {
   match {
-    kind = "resource"
     type = "azurerm_elastic_san"
   }
 
@@ -15,7 +14,6 @@ rule "elastic-san" {
 
 rule "elastic-san-volume-group" {
   match {
-    kind = "resource"
     type = "azurerm_elastic_san_volume_group"
   }
 

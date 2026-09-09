@@ -6,7 +6,6 @@ concept "route53profiles-profile" {
 
 rule "route53profiles-profile" {
   match {
-    kind = "resource"
     type = "aws_route53profiles_profile"
   }
 

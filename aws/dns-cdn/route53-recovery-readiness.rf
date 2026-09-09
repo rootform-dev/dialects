@@ -6,7 +6,6 @@ concept "route53recoveryreadiness-recovery-group" {
 
 rule "route53recoveryreadiness-recovery-group" {
   match {
-    kind = "resource"
     type = "aws_route53recoveryreadiness_recovery_group"
   }
 

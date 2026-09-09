@@ -6,7 +6,6 @@ concept "customerprofiles-domain" {
 
 rule "customerprofiles-domain" {
   match {
-    kind = "resource"
     type = "aws_customerprofiles_domain"
   }
 

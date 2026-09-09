@@ -6,7 +6,6 @@ concept "resourcegroups-group" {
 
 rule "resourcegroups-group" {
   match {
-    kind = "resource"
     type = "aws_resourcegroups_group"
   }
 

@@ -16,7 +16,6 @@ concept "rds-global-cluster" {
 
 rule "db-proxy" {
   match {
-    kind = "resource"
     type = "aws_db_proxy"
   }
 
@@ -25,7 +24,6 @@ rule "db-proxy" {
 
 rule "rds-global-cluster" {
   match {
-    kind = "resource"
     type = "aws_rds_global_cluster"
   }
 

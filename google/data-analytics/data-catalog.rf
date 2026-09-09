@@ -10,7 +10,6 @@ concept "data-catalog-taxonomy" {
 
 rule "data-catalog-entry-group" {
   match {
-    kind = "resource"
     type = "google_data_catalog_entry_group"
   }
 
@@ -19,7 +18,6 @@ rule "data-catalog-entry-group" {
 
 rule "data-catalog-taxonomy" {
   match {
-    kind = "resource"
     type = "google_data_catalog_taxonomy"
   }
 

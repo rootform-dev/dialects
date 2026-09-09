@@ -10,7 +10,6 @@ concept "colab-enterprise-configuration" {
 
 rule "colab-enterprise-runtime" {
   match {
-    kind = "resource"
     type = "google_colab_runtime"
   }
 
@@ -19,7 +18,6 @@ rule "colab-enterprise-runtime" {
 
 rule "colab-enterprise-runtime-template" {
   match {
-    kind = "resource"
     type = "google_colab_runtime_template"
   }
 
@@ -28,7 +26,6 @@ rule "colab-enterprise-runtime-template" {
 
 rule "colab-enterprise-schedule" {
   match {
-    kind = "resource"
     type = "google_colab_schedule"
   }
 

@@ -5,7 +5,6 @@ concept "vm-manager-policy" {
 
 rule "vm-manager-guest-policy" {
   match {
-    kind = "resource"
     type = "google_os_config_guest_policies"
   }
 
@@ -14,7 +13,6 @@ rule "vm-manager-guest-policy" {
 
 rule "vm-manager-os-policy-assignment" {
   match {
-    kind = "resource"
     type = "google_os_config_os_policy_assignment"
   }
 
@@ -23,7 +21,6 @@ rule "vm-manager-os-policy-assignment" {
 
 rule "vm-manager-patch-deployment" {
   match {
-    kind = "resource"
     type = "google_os_config_patch_deployment"
   }
 
@@ -32,7 +29,6 @@ rule "vm-manager-patch-deployment" {
 
 rule "vm-manager-policy-orchestrator" {
   match {
-    kind = "resource"
     type = "google_os_config_v2_policy_orchestrator"
   }
 
@@ -41,7 +37,6 @@ rule "vm-manager-policy-orchestrator" {
 
 rule "vm-manager-folder-policy-orchestrator" {
   match {
-    kind = "resource"
     type = "google_os_config_v2_policy_orchestrator_for_folder"
   }
 
@@ -50,7 +45,6 @@ rule "vm-manager-folder-policy-orchestrator" {
 
 rule "vm-manager-organization-policy-orchestrator" {
   match {
-    kind = "resource"
     type = "google_os_config_v2_policy_orchestrator_for_organization"
   }
 

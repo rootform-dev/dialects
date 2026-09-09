@@ -5,7 +5,6 @@ concept "agent-observability-configuration" {
 
 rule "agento11y-collection" {
   match {
-    kind = "resource"
     type = "grafana_agento11y_collection"
   }
 
@@ -14,7 +13,6 @@ rule "agento11y-collection" {
 
 rule "agento11y-evaluation-rule" {
   match {
-    kind = "resource"
     type = "grafana_agento11y_evaluation_rule"
   }
 
@@ -23,7 +21,6 @@ rule "agento11y-evaluation-rule" {
 
 rule "agento11y-evaluator" {
   match {
-    kind = "resource"
     type = "grafana_agento11y_evaluator"
   }
 
@@ -32,7 +29,6 @@ rule "agento11y-evaluator" {
 
 rule "agento11y-hook-rule" {
   match {
-    kind = "resource"
     type = "grafana_agento11y_hook_rule"
   }
 
@@ -41,7 +37,6 @@ rule "agento11y-hook-rule" {
 
 rule "agento11y-rule-action" {
   match {
-    kind = "resource"
     type = "grafana_agento11y_rule_action"
   }
 

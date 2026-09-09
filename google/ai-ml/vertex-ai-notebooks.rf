@@ -5,7 +5,6 @@ concept "vertex-ai-workbench-instance" {
 
 rule "vertex-ai-workbench-instance" {
   match {
-    kind = "resource"
     type = "google_workbench_instance"
   }
 

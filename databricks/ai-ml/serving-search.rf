@@ -25,7 +25,6 @@ concept "ai-gateway-service" {
 
 rule "model-serving" {
   match {
-    kind = "resource"
     type = "databricks_model_serving"
   }
 
@@ -34,7 +33,6 @@ rule "model-serving" {
 
 rule "model-serving-provisioned-throughput" {
   match {
-    kind = "resource"
     type = "databricks_model_serving_provisioned_throughput"
   }
 
@@ -43,7 +41,6 @@ rule "model-serving-provisioned-throughput" {
 
 rule "vector-search-endpoint" {
   match {
-    kind = "resource"
     type = "databricks_vector_search_endpoint"
   }
 
@@ -52,7 +49,6 @@ rule "vector-search-endpoint" {
 
 rule "vector-search-index" {
   match {
-    kind = "resource"
     type = "databricks_vector_search_index"
   }
 
@@ -66,7 +62,6 @@ rule "vector-search-index" {
 
 rule "ai-search-endpoint" {
   match {
-    kind = "resource"
     type = "databricks_ai_search_endpoint"
   }
 
@@ -75,7 +70,6 @@ rule "ai-search-endpoint" {
 
 rule "ai-search-index" {
   match {
-    kind = "resource"
     type = "databricks_ai_search_index"
   }
 
@@ -89,7 +83,6 @@ rule "ai-search-index" {
 
 rule "ai-gateway-mcp-service" {
   match {
-    kind = "resource"
     type = "databricks_ai_gateway_mcp_service"
   }
 
@@ -98,7 +91,6 @@ rule "ai-gateway-mcp-service" {
 
 rule "ai-gateway-model-provider-service" {
   match {
-    kind = "resource"
     type = "databricks_ai_gateway_model_provider_service"
   }
 
@@ -107,7 +99,6 @@ rule "ai-gateway-model-provider-service" {
 
 rule "ai-gateway-model-service" {
   match {
-    kind = "resource"
     type = "databricks_ai_gateway_model_service"
   }
 

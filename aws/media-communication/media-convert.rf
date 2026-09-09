@@ -6,7 +6,6 @@ concept "media-convert-queue" {
 
 rule "media-convert-queue" {
   match {
-    kind = "resource"
     type = "aws_media_convert_queue"
   }
 

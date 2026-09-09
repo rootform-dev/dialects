@@ -6,7 +6,6 @@ concept "rum-app-monitor" {
 
 rule "rum-app-monitor" {
   match {
-    kind = "resource"
     type = "aws_rum_app_monitor"
   }
 

@@ -6,7 +6,6 @@ concept "wafregional-rule-group" {
 
 rule "wafregional-rule-group" {
   match {
-    kind = "resource"
     type = "aws_wafregional_rule_group"
   }
 

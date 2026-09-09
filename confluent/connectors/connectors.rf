@@ -10,7 +10,6 @@ concept "connector-artifact" {
 
 rule "connector" {
   match {
-    kind = "resource"
     type = "confluent_connector"
   }
 
@@ -31,7 +30,6 @@ rule "connector" {
 
 rule "connect-artifact" {
   match {
-    kind = "resource"
     type = "confluent_connect_artifact"
   }
 
@@ -46,7 +44,6 @@ rule "connect-artifact" {
 
 rule "custom-connector-plugin" {
   match {
-    kind = "resource"
     type = "confluent_custom_connector_plugin"
   }
 
@@ -55,7 +52,6 @@ rule "custom-connector-plugin" {
 
 rule "custom-connector-plugin-version" {
   match {
-    kind = "resource"
     type = "confluent_custom_connector_plugin_version"
   }
 
@@ -70,7 +66,6 @@ rule "custom-connector-plugin-version" {
 
 rule "legacy-connector-plugin" {
   match {
-    kind = "resource"
     type = "confluent_plugin"
   }
 

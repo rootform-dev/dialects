@@ -10,7 +10,6 @@ concept "cloud-run-job" {
 
 rule "cloud-run-service" {
   match {
-    kind = "resource"
     type = "google_cloud_run_v2_service"
   }
 
@@ -27,31 +26,62 @@ rule "cloud-run-service" {
     to  = concept.core.subnet
     via = source.template[0].vpc_access[0].network_interfaces[0].subnetwork
   }
+
+  context {
+    as  = context.core.ownership
+    to  = concept.google-cloud-project
+    via = source.project
+  }
+
+  relation "routes-to" {
+    to  = concept.serverless-vpc-access-connector
+    via = source.template[0].vpc_access[0].connector
+  }
+
+  relation "runs-as" {
+    to  = concept.core.service-identity
+    via = source.template[0].service_account
+  }
 }
 
 rule "cloud-run-job" {
   match {
-    kind = "resource"
     type = "google_cloud_run_v2_job"
   }
 
   as = concept.cloud-run-job
+
+  context {
+    as  = context.core.ownership
+    to  = concept.google-cloud-project
+    via = source.project
+  }
 }
 
 rule "cloud-run-service-v1" {
   match {
-    kind = "resource"
     type = "google_cloud_run_service"
   }
 
   as = concept.cloud-run-service
+
+  context {
+    as  = context.core.ownership
+    to  = concept.google-cloud-project
+    via = source.project
+  }
 }
 
 rule "cloud-run-worker-pool" {
   match {
-    kind = "resource"
     type = "google_cloud_run_v2_worker_pool"
   }
 
   as = concept.cloud-run-service
+
+  context {
+    as  = context.core.ownership
+    to  = concept.google-cloud-project
+    via = source.project
+  }
 }

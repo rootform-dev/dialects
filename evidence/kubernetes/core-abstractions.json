@@ -1,0 +1,16 @@
+{
+  "format_version": "1",
+  "contexts_reused": ["core/ownership", "core/runtime"],
+  "concepts_reused": ["core/kubernetes-cluster"],
+  "provider_concepts": [
+    "kubernetes/deployment",
+    "kubernetes/stateful-set",
+    "kubernetes/service-account",
+    "kubernetes/horizontal-pod-autoscaler",
+    "kubernetes/namespace",
+    "kubernetes/network-policy"
+  ],
+  "relations": {
+    "runs-as": "Workload executes under an explicitly referenced identity."
+  }
+}

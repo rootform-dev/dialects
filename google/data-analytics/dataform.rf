@@ -10,7 +10,6 @@ concept "dataform-workflow" {
 
 rule "dataform-repository" {
   match {
-    kind = "resource"
     type = "google_dataform_repository"
   }
 
@@ -19,7 +18,6 @@ rule "dataform-repository" {
 
 rule "dataform-workflow" {
   match {
-    kind = "resource"
     type = "google_dataform_repository_workflow_config"
   }
 

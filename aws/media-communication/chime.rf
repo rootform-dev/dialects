@@ -11,7 +11,6 @@ concept "chime-voice-connector-group" {
 
 rule "chime-voice-connector" {
   match {
-    kind = "resource"
     type = "aws_chime_voice_connector"
   }
 
@@ -20,7 +19,6 @@ rule "chime-voice-connector" {
 
 rule "chime-voice-connector-group" {
   match {
-    kind = "resource"
     type = "aws_chime_voice_connector_group"
   }
 

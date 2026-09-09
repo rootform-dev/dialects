@@ -5,7 +5,6 @@ concept "observability-workload" {
 
 rule "workload" {
   match {
-    kind = "resource"
     type = "newrelic_workload"
   }
 

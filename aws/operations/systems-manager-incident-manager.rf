@@ -6,7 +6,6 @@ concept "ssmcontacts-contact-channel" {
 
 rule "ssmcontacts-contact-channel" {
   match {
-    kind = "resource"
     type = "aws_ssmcontacts_contact_channel"
   }
 

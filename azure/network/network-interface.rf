@@ -6,7 +6,6 @@ concept "network-interface" {
 
 rule "network-interface" {
   match {
-    kind = "resource"
     type = "azurerm_network_interface"
   }
 

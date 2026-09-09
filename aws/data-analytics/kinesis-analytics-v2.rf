@@ -6,7 +6,6 @@ concept "kinesisanalyticsv2-application" {
 
 rule "kinesisanalyticsv2-application" {
   match {
-    kind = "resource"
     type = "aws_kinesisanalyticsv2_application"
   }
 

@@ -10,7 +10,6 @@ concept "monitoring-configuration" {
 
 rule "data-quality-monitor" {
   match {
-    kind = "resource"
     type = "databricks_data_quality_monitor"
   }
 
@@ -19,7 +18,6 @@ rule "data-quality-monitor" {
 
 rule "lakehouse-monitor" {
   match {
-    kind = "resource"
     type = "databricks_lakehouse_monitor"
   }
 
@@ -28,7 +26,6 @@ rule "lakehouse-monitor" {
 
 rule "quality-monitor" {
   match {
-    kind = "resource"
     type = "databricks_quality_monitor"
   }
 
@@ -37,7 +34,6 @@ rule "quality-monitor" {
 
 rule "quality-monitor-v2" {
   match {
-    kind = "resource"
     type = "databricks_quality_monitor_v2"
   }
 
@@ -46,7 +42,6 @@ rule "quality-monitor-v2" {
 
 rule "data-quality-refresh" {
   match {
-    kind = "resource"
     type = "databricks_data_quality_refresh"
   }
 

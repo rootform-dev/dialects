@@ -10,7 +10,6 @@ concept "flow" {
 
 rule "namespace" {
   match {
-    kind = "resource"
     type = "kestra_namespace"
   }
 
@@ -19,7 +18,6 @@ rule "namespace" {
 
 rule "flow" {
   match {
-    kind = "resource"
     type = "kestra_flow"
   }
 

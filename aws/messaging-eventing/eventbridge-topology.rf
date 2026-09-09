@@ -1,6 +1,5 @@
 rule "cloudwatch-event-bus" {
   match {
-    kind = "resource"
     type = "aws_cloudwatch_event_bus"
   }
 
@@ -9,7 +8,6 @@ rule "cloudwatch-event-bus" {
 
 rule "cloudwatch-event-rule" {
   match {
-    kind = "resource"
     type = "aws_cloudwatch_event_rule"
   }
 
@@ -28,7 +26,6 @@ rule "cloudwatch-event-rule" {
 
 rule "cloudwatch-event-target" {
   match {
-    kind = "resource"
     type = "aws_cloudwatch_event_target"
   }
 

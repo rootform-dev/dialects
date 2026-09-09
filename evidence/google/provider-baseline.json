@@ -1,5 +1,11 @@
 {
   "format_version": "1",
+  "showcase_schema_audit": {
+    "provider": "registry.terraform.io/hashicorp/google@8.0.0",
+    "schema_sha256": "sha256:e7b20e0e21683f191033c09dbc6cca77df2a8fc0f3b62604490ff8d8a06dccf8",
+    "command": "TF_CLI_CONFIG_FILE=<empty-config> terraform providers schema -json",
+    "verified_date": "2026-09-09"
+  },
   "verified_date": "2026-08-28",
   "acquisition": {
     "client": "Terraform 1.12.2 provider schema RPC",

@@ -1,6 +1,5 @@
 rule "api-gateway-rest-api" {
   match {
-    kind = "resource"
     type = "aws_api_gateway_rest_api"
   }
 
@@ -9,7 +8,6 @@ rule "api-gateway-rest-api" {
 
 rule "api-gateway-stage" {
   match {
-    kind = "resource"
     type = "aws_api_gateway_stage"
   }
 
@@ -23,7 +21,6 @@ rule "api-gateway-stage" {
 
 rule "api-gateway-integration" {
   match {
-    kind = "resource"
     type = "aws_api_gateway_integration"
   }
 
@@ -37,7 +34,6 @@ rule "api-gateway-integration" {
 
 rule "api-gateway-resource" {
   match {
-    kind = "resource"
     type = "aws_api_gateway_resource"
   }
 
@@ -51,7 +47,6 @@ rule "api-gateway-resource" {
 
 rule "api-gateway-model" {
   match {
-    kind = "resource"
     type = "aws_api_gateway_model"
   }
 
@@ -65,7 +60,6 @@ rule "api-gateway-model" {
 
 rule "apigatewayv2-model" {
   match {
-    kind = "resource"
     type = "aws_apigatewayv2_model"
   }
 

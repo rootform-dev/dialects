@@ -10,7 +10,6 @@ concept "knowledge-graph-configuration" {
 
 rule "asserts-custom-model-rules" {
   match {
-    kind = "resource"
     type = "grafana_asserts_custom_model_rules"
   }
 
@@ -19,7 +18,6 @@ rule "asserts-custom-model-rules" {
 
 rule "asserts-log-config" {
   match {
-    kind = "resource"
     type = "grafana_asserts_log_config"
   }
 
@@ -33,7 +31,6 @@ rule "asserts-log-config" {
 
 rule "asserts-notification-alerts-config" {
   match {
-    kind = "resource"
     type = "grafana_asserts_notification_alerts_config"
   }
 
@@ -42,7 +39,6 @@ rule "asserts-notification-alerts-config" {
 
 rule "asserts-profile-config" {
   match {
-    kind = "resource"
     type = "grafana_asserts_profile_config"
   }
 
@@ -56,7 +52,6 @@ rule "asserts-profile-config" {
 
 rule "asserts-prom-rule-file" {
   match {
-    kind = "resource"
     type = "grafana_asserts_prom_rule_file"
   }
 
@@ -65,7 +60,6 @@ rule "asserts-prom-rule-file" {
 
 rule "asserts-stack" {
   match {
-    kind = "resource"
     type = "grafana_asserts_stack"
   }
 
@@ -74,7 +68,6 @@ rule "asserts-stack" {
 
 rule "asserts-suppressed-assertions-config" {
   match {
-    kind = "resource"
     type = "grafana_asserts_suppressed_assertions_config"
   }
 
@@ -83,7 +76,6 @@ rule "asserts-suppressed-assertions-config" {
 
 rule "asserts-thresholds" {
   match {
-    kind = "resource"
     type = "grafana_asserts_thresholds"
   }
 
@@ -92,7 +84,6 @@ rule "asserts-thresholds" {
 
 rule "asserts-trace-config" {
   match {
-    kind = "resource"
     type = "grafana_asserts_trace_config"
   }
 

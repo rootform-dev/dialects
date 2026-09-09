@@ -6,7 +6,6 @@ concept "codeconnections-connection" {
 
 rule "codeconnections-connection" {
   match {
-    kind = "resource"
     type = "aws_codeconnections_connection"
   }
 

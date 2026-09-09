@@ -10,7 +10,6 @@ concept "telemetry-destination" {
 
 rule "logs-archive" {
   match {
-    kind = "resource"
     type = "datadog_logs_archive"
   }
 
@@ -19,7 +18,6 @@ rule "logs-archive" {
 
 rule "logs-archive-order" {
   match {
-    kind = "resource"
     type = "datadog_logs_archive_order"
   }
 
@@ -33,7 +31,6 @@ rule "logs-archive-order" {
 
 rule "logs-custom-destination" {
   match {
-    kind = "resource"
     type = "datadog_logs_custom_destination"
   }
 
@@ -42,7 +39,6 @@ rule "logs-custom-destination" {
 
 rule "logs-custom-pipeline" {
   match {
-    kind = "resource"
     type = "datadog_logs_custom_pipeline"
   }
 
@@ -51,7 +47,6 @@ rule "logs-custom-pipeline" {
 
 rule "logs-index" {
   match {
-    kind = "resource"
     type = "datadog_logs_index"
   }
 
@@ -60,7 +55,6 @@ rule "logs-index" {
 
 rule "logs-integration-pipeline" {
   match {
-    kind = "resource"
     type = "datadog_logs_integration_pipeline"
   }
 

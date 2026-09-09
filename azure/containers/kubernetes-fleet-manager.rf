@@ -6,7 +6,6 @@ concept "kubernetes-fleet" {
 
 rule "kubernetes-fleet" {
   match {
-    kind = "resource"
     type = "azurerm_kubernetes_fleet_manager"
   }
 

@@ -10,7 +10,6 @@ concept "git-sync-repository" {
 
 rule "apps-provisioning-connection-v0alpha1" {
   match {
-    kind = "resource"
     type = "grafana_apps_provisioning_connection_v0alpha1"
   }
 
@@ -19,7 +18,6 @@ rule "apps-provisioning-connection-v0alpha1" {
 
 rule "apps-provisioning-repository-v0alpha1" {
   match {
-    kind = "resource"
     type = "grafana_apps_provisioning_repository_v0alpha1"
   }
 

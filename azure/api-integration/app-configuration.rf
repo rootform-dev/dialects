@@ -6,7 +6,6 @@ concept "app-configuration" {
 
 rule "app-configuration" {
   match {
-    kind = "resource"
     type = "azurerm_app_configuration"
   }
 

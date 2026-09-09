@@ -5,7 +5,6 @@ concept "api-resource-server" {
 
 rule "client" {
   match {
-    kind = "resource"
     type = "auth0_client"
   }
 
@@ -24,7 +23,6 @@ rule "client" {
 
 rule "client-cimd" {
   match {
-    kind = "resource"
     type = "auth0_client_cimd"
   }
 
@@ -57,7 +55,6 @@ rule "client-lookup" {
 
 rule "resource-server" {
   match {
-    kind = "resource"
     type = "auth0_resource_server"
   }
 

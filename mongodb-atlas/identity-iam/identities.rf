@@ -20,7 +20,6 @@ concept "identity-configuration" {
 
 rule "cloud-provider-access-setup" {
   match {
-    kind = "resource"
     type = "mongodbatlas_cloud_provider_access_setup"
   }
 
@@ -40,7 +39,6 @@ rule "cloud-provider-access-setup" {
 
 rule "cloud-provider-access-authorization" {
   match {
-    kind = "resource"
     type = "mongodbatlas_cloud_provider_access_authorization"
   }
 
@@ -70,7 +68,6 @@ rule "cloud-provider-access-authorization" {
 
 rule "project-service-account" {
   match {
-    kind = "resource"
     type = "mongodbatlas_project_service_account"
   }
 
@@ -85,7 +82,6 @@ rule "project-service-account" {
 
 rule "organization-service-account" {
   match {
-    kind = "resource"
     type = "mongodbatlas_service_account"
   }
 
@@ -100,7 +96,6 @@ rule "organization-service-account" {
 
 rule "team" {
   match {
-    kind = "resource"
     type = "mongodbatlas_team"
   }
 
@@ -115,7 +110,6 @@ rule "team" {
 
 rule "federated-identity-provider" {
   match {
-    kind = "resource"
     type = "mongodbatlas_federated_settings_identity_provider"
   }
 
@@ -124,7 +118,6 @@ rule "federated-identity-provider" {
 
 rule "ldap-configuration" {
   match {
-    kind = "resource"
     type = "mongodbatlas_ldap_configuration"
   }
 
@@ -139,7 +132,6 @@ rule "ldap-configuration" {
 
 rule "api-key-project-assignment" {
   match {
-    kind = "resource"
     type = "mongodbatlas_api_key_project_assignment"
   }
 
@@ -153,7 +145,6 @@ rule "api-key-project-assignment" {
 
 rule "cloud-user-organization-assignment" {
   match {
-    kind = "resource"
     type = "mongodbatlas_cloud_user_org_assignment"
   }
 
@@ -167,7 +158,6 @@ rule "cloud-user-organization-assignment" {
 
 rule "cloud-user-project-assignment" {
   match {
-    kind = "resource"
     type = "mongodbatlas_cloud_user_project_assignment"
   }
 
@@ -181,7 +171,6 @@ rule "cloud-user-project-assignment" {
 
 rule "cloud-user-team-assignment" {
   match {
-    kind = "resource"
     type = "mongodbatlas_cloud_user_team_assignment"
   }
 
@@ -200,7 +189,6 @@ rule "cloud-user-team-assignment" {
 
 rule "custom-database-role" {
   match {
-    kind = "resource"
     type = "mongodbatlas_custom_db_role"
   }
 
@@ -214,7 +202,6 @@ rule "custom-database-role" {
 
 rule "database-user" {
   match {
-    kind = "resource"
     type = "mongodbatlas_database_user"
   }
 
@@ -228,7 +215,6 @@ rule "database-user" {
 
 rule "federated-organization-configuration" {
   match {
-    kind = "resource"
     type = "mongodbatlas_federated_settings_org_config"
   }
 
@@ -242,7 +228,6 @@ rule "federated-organization-configuration" {
 
 rule "federated-organization-role-mapping" {
   match {
-    kind = "resource"
     type = "mongodbatlas_federated_settings_org_role_mapping"
   }
 
@@ -256,7 +241,6 @@ rule "federated-organization-role-mapping" {
 
 rule "project-service-account-access-list" {
   match {
-    kind = "resource"
     type = "mongodbatlas_project_service_account_access_list_entry"
   }
 
@@ -275,7 +259,6 @@ rule "project-service-account-access-list" {
 
 rule "organization-service-account-access-list" {
   match {
-    kind = "resource"
     type = "mongodbatlas_service_account_access_list_entry"
   }
 
@@ -294,7 +277,6 @@ rule "organization-service-account-access-list" {
 
 rule "service-account-project-assignment" {
   match {
-    kind = "resource"
     type = "mongodbatlas_service_account_project_assignment"
   }
 
@@ -313,7 +295,6 @@ rule "service-account-project-assignment" {
 
 rule "team-project-assignment" {
   match {
-    kind = "resource"
     type = "mongodbatlas_team_project_assignment"
   }
 
@@ -332,7 +313,6 @@ rule "team-project-assignment" {
 
 rule "x509-database-user" {
   match {
-    kind = "resource"
     type = "mongodbatlas_x509_authentication_database_user"
   }
 

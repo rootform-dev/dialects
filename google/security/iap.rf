@@ -5,7 +5,6 @@ concept "iap-tunnel-destination-group" {
 
 rule "iap-tunnel-destination-group" {
   match {
-    kind = "resource"
     type = "google_iap_tunnel_dest_group"
   }
 

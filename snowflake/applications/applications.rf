@@ -5,7 +5,6 @@ concept "application" {
 
 rule "streamlit" {
   match {
-    kind = "resource"
     type = "snowflake_streamlit"
   }
 
@@ -36,7 +35,6 @@ rule "streamlit" {
 
 rule "notebook" {
   match {
-    kind = "resource"
     type = "snowflake_notebook"
   }
 

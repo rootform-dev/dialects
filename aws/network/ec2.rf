@@ -91,7 +91,6 @@ concept "vpc-route-server-endpoint" {
 
 rule "customer-gateway" {
   match {
-    kind = "resource"
     type = "aws_customer_gateway"
   }
 
@@ -100,7 +99,6 @@ rule "customer-gateway" {
 
 rule "ec2-client-vpn-endpoint" {
   match {
-    kind = "resource"
     type = "aws_ec2_client_vpn_endpoint"
   }
 
@@ -109,7 +107,6 @@ rule "ec2-client-vpn-endpoint" {
 
 rule "ec2-transit-gateway-multicast-domain" {
   match {
-    kind = "resource"
     type = "aws_ec2_transit_gateway_multicast_domain"
   }
 
@@ -118,7 +115,6 @@ rule "ec2-transit-gateway-multicast-domain" {
 
 rule "ec2-transit-gateway-policy-table" {
   match {
-    kind = "resource"
     type = "aws_ec2_transit_gateway_policy_table"
   }
 
@@ -127,7 +123,6 @@ rule "ec2-transit-gateway-policy-table" {
 
 rule "ec2-transit-gateway-route-table" {
   match {
-    kind = "resource"
     type = "aws_ec2_transit_gateway_route_table"
   }
 
@@ -136,7 +131,6 @@ rule "ec2-transit-gateway-route-table" {
 
 rule "egress-only-internet-gateway" {
   match {
-    kind = "resource"
     type = "aws_egress_only_internet_gateway"
   }
 
@@ -145,7 +139,6 @@ rule "egress-only-internet-gateway" {
 
 rule "verifiedaccess-endpoint" {
   match {
-    kind = "resource"
     type = "aws_verifiedaccess_endpoint"
   }
 
@@ -154,7 +147,6 @@ rule "verifiedaccess-endpoint" {
 
 rule "verifiedaccess-group" {
   match {
-    kind = "resource"
     type = "aws_verifiedaccess_group"
   }
 
@@ -163,7 +155,6 @@ rule "verifiedaccess-group" {
 
 rule "verifiedaccess-instance" {
   match {
-    kind = "resource"
     type = "aws_verifiedaccess_instance"
   }
 
@@ -172,7 +163,6 @@ rule "verifiedaccess-instance" {
 
 rule "vpc-endpoint-service" {
   match {
-    kind = "resource"
     type = "aws_vpc_endpoint_service"
   }
 
@@ -181,7 +171,6 @@ rule "vpc-endpoint-service" {
 
 rule "vpc-ipam-pool" {
   match {
-    kind = "resource"
     type = "aws_vpc_ipam_pool"
   }
 
@@ -190,7 +179,6 @@ rule "vpc-ipam-pool" {
 
 rule "vpc-route-server-endpoint" {
   match {
-    kind = "resource"
     type = "aws_vpc_route_server_endpoint"
   }
 

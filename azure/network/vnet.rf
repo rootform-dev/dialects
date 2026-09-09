@@ -1,6 +1,5 @@
 rule "virtual-network" {
   match {
-    kind = "resource"
     type = "azurerm_virtual_network"
   }
 
@@ -20,7 +19,6 @@ rule "virtual-network" {
 
 rule "subnet" {
   match {
-    kind = "resource"
     type = "azurerm_subnet"
   }
 

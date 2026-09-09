@@ -6,7 +6,6 @@ concept "traffic-manager-profile" {
 
 rule "traffic-manager-azure-endpoint" {
   match {
-    kind = "resource"
     type = "azurerm_traffic_manager_azure_endpoint"
   }
 
@@ -15,7 +14,6 @@ rule "traffic-manager-azure-endpoint" {
 
 rule "traffic-manager-profile" {
   match {
-    kind = "resource"
     type = "azurerm_traffic_manager_profile"
   }
 

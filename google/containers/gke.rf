@@ -1,6 +1,5 @@
 rule "gke-cluster" {
   match {
-    kind = "resource"
     type = "google_container_cluster"
   }
 
@@ -17,11 +16,16 @@ rule "gke-cluster" {
     to  = concept.core.subnet
     via = source.subnetwork
   }
+
+  context {
+    as  = context.core.ownership
+    to  = concept.google-cloud-project
+    via = source.project
+  }
 }
 
 rule "gke-node-pool" {
   match {
-    kind = "resource"
     type = "google_container_node_pool"
   }
 
@@ -35,7 +39,6 @@ rule "gke-node-pool" {
 
 rule "gke-attached-cluster" {
   match {
-    kind = "resource"
     type = "google_container_attached_cluster"
   }
 
@@ -44,7 +47,6 @@ rule "gke-attached-cluster" {
 
 rule "gke-aws-cluster" {
   match {
-    kind = "resource"
     type = "google_container_aws_cluster"
   }
 
@@ -53,7 +55,6 @@ rule "gke-aws-cluster" {
 
 rule "gke-aws-node-pool" {
   match {
-    kind = "resource"
     type = "google_container_aws_node_pool"
   }
 
@@ -62,7 +63,6 @@ rule "gke-aws-node-pool" {
 
 rule "gke-azure-cluster" {
   match {
-    kind = "resource"
     type = "google_container_azure_cluster"
   }
 
@@ -71,7 +71,6 @@ rule "gke-azure-cluster" {
 
 rule "gke-azure-node-pool" {
   match {
-    kind = "resource"
     type = "google_container_azure_node_pool"
   }
 

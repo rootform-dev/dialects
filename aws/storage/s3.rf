@@ -6,7 +6,6 @@ concept "storage-configuration" {
 
 rule "s3-directory-bucket" {
   match {
-    kind = "resource"
     type = "aws_s3_directory_bucket"
   }
 

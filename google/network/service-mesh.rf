@@ -15,7 +15,6 @@ concept "network-services-route" {
 
 rule "network-services-gateway" {
   match {
-    kind = "resource"
     type = "google_network_services_gateway"
   }
 
@@ -24,7 +23,6 @@ rule "network-services-gateway" {
 
 rule "service-mesh" {
   match {
-    kind = "resource"
     type = "google_network_services_mesh"
   }
 
@@ -33,7 +31,6 @@ rule "service-mesh" {
 
 rule "network-services-http-route" {
   match {
-    kind = "resource"
     type = "google_network_services_http_route"
   }
 
@@ -42,7 +39,6 @@ rule "network-services-http-route" {
 
 rule "network-services-grpc-route" {
   match {
-    kind = "resource"
     type = "google_network_services_grpc_route"
   }
 
@@ -51,7 +47,6 @@ rule "network-services-grpc-route" {
 
 rule "network-services-tcp-route" {
   match {
-    kind = "resource"
     type = "google_network_services_tcp_route"
   }
 
@@ -60,7 +55,6 @@ rule "network-services-tcp-route" {
 
 rule "network-services-tls-route" {
   match {
-    kind = "resource"
     type = "google_network_services_tls_route"
   }
 

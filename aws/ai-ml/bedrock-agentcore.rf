@@ -11,7 +11,6 @@ concept "bedrockagentcore-gateway" {
 
 rule "bedrockagentcore-agent-runtime-endpoint" {
   match {
-    kind = "resource"
     type = "aws_bedrockagentcore_agent_runtime_endpoint"
   }
 
@@ -20,7 +19,6 @@ rule "bedrockagentcore-agent-runtime-endpoint" {
 
 rule "bedrockagentcore-gateway" {
   match {
-    kind = "resource"
     type = "aws_bedrockagentcore_gateway"
   }
 

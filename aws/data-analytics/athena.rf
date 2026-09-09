@@ -16,7 +16,6 @@ concept "athena-workgroup" {
 
 rule "athena-data-catalog" {
   match {
-    kind = "resource"
     type = "aws_athena_data_catalog"
   }
 
@@ -25,7 +24,6 @@ rule "athena-data-catalog" {
 
 rule "athena-database" {
   match {
-    kind = "resource"
     type = "aws_athena_database"
   }
 

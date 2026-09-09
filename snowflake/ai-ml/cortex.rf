@@ -15,7 +15,6 @@ concept "mcp-server" {
 
 rule "cortex-agent" {
   match {
-    kind = "resource"
     type = "snowflake_cortex_agent"
   }
 
@@ -30,7 +29,6 @@ rule "cortex-agent" {
 
 rule "cortex-search-service" {
   match {
-    kind = "resource"
     type = "snowflake_cortex_search_service"
   }
 
@@ -51,7 +49,6 @@ rule "cortex-search-service" {
 
 rule "mcp-server" {
   match {
-    kind = "resource"
     type = "snowflake_mcp_server"
   }
 

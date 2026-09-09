@@ -10,7 +10,6 @@ concept "performance-testing-project" {
 
 rule "k6-load-test" {
   match {
-    kind = "resource"
     type = "grafana_k6_load_test"
   }
 
@@ -38,7 +37,6 @@ rule "k6-load-test-lookup" {
 
 rule "k6-project" {
   match {
-    kind = "resource"
     type = "grafana_k6_project"
   }
 

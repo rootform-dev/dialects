@@ -6,7 +6,6 @@ concept "graph-data-connect-account" {
 
 rule "graph-data-connect-account" {
   match {
-    kind = "resource"
     type = "azurerm_graph_services_account"
   }
 

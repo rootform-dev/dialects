@@ -5,7 +5,6 @@ concept "connection-configuration" {
 
 rule "connection-client" {
   match {
-    kind = "resource"
     type = "auth0_connection_client"
   }
 
@@ -24,7 +23,6 @@ rule "connection-client" {
 
 rule "connection-clients" {
   match {
-    kind = "resource"
     type = "auth0_connection_clients"
   }
 
@@ -38,7 +36,6 @@ rule "connection-clients" {
 
 rule "connection-directory-synchronized-groups" {
   match {
-    kind = "resource"
     type = "auth0_connection_directory_synchronized_groups"
   }
 
@@ -66,7 +63,6 @@ rule "connection-directory-synchronized-groups-lookup" {
 
 rule "connection-keys" {
   match {
-    kind = "resource"
     type = "auth0_connection_keys"
   }
 
@@ -94,7 +90,6 @@ rule "connection-keys-lookup" {
 
 rule "connection-scim-configuration" {
   match {
-    kind = "resource"
     type = "auth0_connection_scim_configuration"
   }
 

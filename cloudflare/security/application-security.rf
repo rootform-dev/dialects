@@ -15,7 +15,6 @@ concept "vulnerability-scanner-target" {
 
 rule "ruleset" {
   match {
-    kind = "resource"
     type = "cloudflare_ruleset"
   }
 
@@ -29,7 +28,6 @@ rule "ruleset" {
 
 rule "firewall-rule" {
   match {
-    kind = "resource"
     type = "cloudflare_firewall_rule"
   }
 
@@ -43,7 +41,6 @@ rule "firewall-rule" {
 
 rule "rate-limit" {
   match {
-    kind = "resource"
     type = "cloudflare_rate_limit"
   }
 
@@ -57,7 +54,6 @@ rule "rate-limit" {
 
 rule "api-shield" {
   match {
-    kind = "resource"
     type = "cloudflare_api_shield"
   }
 
@@ -71,7 +67,6 @@ rule "api-shield" {
 
 rule "bot-management" {
   match {
-    kind = "resource"
     type = "cloudflare_bot_management"
   }
 
@@ -85,7 +80,6 @@ rule "bot-management" {
 
 rule "page-shield-policy" {
   match {
-    kind = "resource"
     type = "cloudflare_page_shield_policy"
   }
 
@@ -99,7 +93,6 @@ rule "page-shield-policy" {
 
 rule "content-scanning" {
   match {
-    kind = "resource"
     type = "cloudflare_content_scanning"
   }
 
@@ -113,7 +106,6 @@ rule "content-scanning" {
 
 rule "token-validation-config" {
   match {
-    kind = "resource"
     type = "cloudflare_token_validation_config"
   }
 
@@ -127,7 +119,6 @@ rule "token-validation-config" {
 
 rule "turnstile-widget" {
   match {
-    kind = "resource"
     type = "cloudflare_turnstile_widget"
   }
 
@@ -136,7 +127,6 @@ rule "turnstile-widget" {
 
 rule "vulnerability-scanner-target" {
   match {
-    kind = "resource"
     type = "cloudflare_vulnerability_scanner_target_environment"
   }
 
@@ -145,7 +135,6 @@ rule "vulnerability-scanner-target" {
 
 rule "precursor" {
   match {
-    kind = "resource"
     type = "cloudflare_precursor"
   }
 
@@ -159,7 +148,6 @@ rule "precursor" {
 
 rule "api-shield-discovery-operation" {
   match {
-    kind = "resource"
     type = "cloudflare_api_shield_discovery_operation"
   }
 
@@ -173,7 +161,6 @@ rule "api-shield-discovery-operation" {
 
 rule "api-shield-operation" {
   match {
-    kind = "resource"
     type = "cloudflare_api_shield_operation"
   }
 
@@ -187,7 +174,6 @@ rule "api-shield-operation" {
 
 rule "api-shield-operation-schema-validation" {
   match {
-    kind = "resource"
     type = "cloudflare_api_shield_operation_schema_validation_settings"
   }
 
@@ -201,7 +187,6 @@ rule "api-shield-operation-schema-validation" {
 
 rule "api-shield-schema" {
   match {
-    kind = "resource"
     type = "cloudflare_api_shield_schema"
   }
 
@@ -215,7 +200,6 @@ rule "api-shield-schema" {
 
 rule "api-shield-schema-validation" {
   match {
-    kind = "resource"
     type = "cloudflare_api_shield_schema_validation_settings"
   }
 
@@ -229,7 +213,6 @@ rule "api-shield-schema-validation" {
 
 rule "schema-validation-operation-settings" {
   match {
-    kind = "resource"
     type = "cloudflare_schema_validation_operation_settings"
   }
 
@@ -243,7 +226,6 @@ rule "schema-validation-operation-settings" {
 
 rule "schema-validation-schemas" {
   match {
-    kind = "resource"
     type = "cloudflare_schema_validation_schemas"
   }
 
@@ -257,7 +239,6 @@ rule "schema-validation-schemas" {
 
 rule "schema-validation-settings" {
   match {
-    kind = "resource"
     type = "cloudflare_schema_validation_settings"
   }
 
@@ -271,7 +252,6 @@ rule "schema-validation-settings" {
 
 rule "content-scanning-expression" {
   match {
-    kind = "resource"
     type = "cloudflare_content_scanning_expression"
   }
 
@@ -285,7 +265,6 @@ rule "content-scanning-expression" {
 
 rule "user-agent-blocking-rule" {
   match {
-    kind = "resource"
     type = "cloudflare_user_agent_blocking_rule"
   }
 
@@ -299,7 +278,6 @@ rule "user-agent-blocking-rule" {
 
 rule "zone-lockdown" {
   match {
-    kind = "resource"
     type = "cloudflare_zone_lockdown"
   }
 

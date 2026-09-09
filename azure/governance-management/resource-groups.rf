@@ -1,6 +1,5 @@
 rule "resource-group" {
   match {
-    kind = "resource"
     type = "azurerm_resource_group"
   }
 

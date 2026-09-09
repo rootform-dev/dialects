@@ -20,7 +20,6 @@ concept "stream-configuration" {
 
 rule "stream-workspace" {
   match {
-    kind = "resource"
     type = "mongodbatlas_stream_workspace"
   }
 
@@ -35,7 +34,6 @@ rule "stream-workspace" {
 
 rule "stream-instance" {
   match {
-    kind = "resource"
     type = "mongodbatlas_stream_instance"
   }
 
@@ -50,7 +48,6 @@ rule "stream-instance" {
 
 rule "stream-connection" {
   match {
-    kind = "resource"
     type = "mongodbatlas_stream_connection"
   }
 
@@ -102,7 +99,6 @@ rule "stream-connection" {
 
 rule "stream-connection-failover" {
   match {
-    kind = "resource"
     type = "mongodbatlas_stream_connection_failover"
   }
 
@@ -116,7 +112,6 @@ rule "stream-connection-failover" {
 
 rule "stream-private-endpoint" {
   match {
-    kind = "resource"
     type = "mongodbatlas_stream_privatelink_endpoint"
   }
 
@@ -136,7 +131,6 @@ rule "stream-private-endpoint" {
 
 rule "stream-processor" {
   match {
-    kind = "resource"
     type = "mongodbatlas_stream_processor"
   }
 

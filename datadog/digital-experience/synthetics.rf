@@ -1,6 +1,5 @@
 rule "synthetics-private-location" {
   match {
-    kind = "resource"
     type = "datadog_synthetics_private_location"
   }
 
@@ -9,7 +8,6 @@ rule "synthetics-private-location" {
 
 rule "synthetics-suite" {
   match {
-    kind = "resource"
     type = "datadog_synthetics_suite"
   }
 
@@ -18,7 +16,6 @@ rule "synthetics-suite" {
 
 rule "synthetics-test" {
   match {
-    kind = "resource"
     type = "datadog_synthetics_test"
   }
 

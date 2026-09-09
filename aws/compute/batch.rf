@@ -11,7 +11,6 @@ concept "batch-job-queue" {
 
 rule "batch-compute-environment" {
   match {
-    kind = "resource"
     type = "aws_batch_compute_environment"
   }
 
@@ -20,7 +19,6 @@ rule "batch-compute-environment" {
 
 rule "batch-job-queue" {
   match {
-    kind = "resource"
     type = "aws_batch_job_queue"
   }
 

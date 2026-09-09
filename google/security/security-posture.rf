@@ -10,7 +10,6 @@ concept "security-posture-deployment" {
 
 rule "security-posture" {
   match {
-    kind = "resource"
     type = "google_securityposture_posture"
   }
 
@@ -19,7 +18,6 @@ rule "security-posture" {
 
 rule "security-posture-deployment" {
   match {
-    kind = "resource"
     type = "google_securityposture_posture_deployment"
   }
 

@@ -1,5 +1,21 @@
 {
   "format_version": "1",
+  "showcase_semantics": {
+    "policy": "direct reference only; literal equivalents intentionally unresolved",
+    "implemented": ["GCP-01", "GCP-02", "GCP-04", "GCP-05", "GCP-07", "GCP-09", "GCP-10", "GCP-13", "GCP-14"],
+    "narrowed": {
+      "GCP-09": "Redis Cluster psc_configs excluded because provider 8.0.0 schema has no max_items bound"
+    },
+    "fixtures": [
+      "fixtures/slice/google-cloud-run",
+      "fixtures/slice/google-pubsub",
+      "fixtures/slice/google-memorystore",
+      "fixtures/slice/gke",
+      "fixtures/slice/cloud-sql",
+      "fixtures/slice/google-secret-manager",
+      "fixtures/slice/google-cloud-monitoring"
+    ]
+  },
   "generated_from": {
     "provider_baseline_sha256": "sha256:d566ddc77c1e9ccdef69e16508c3e725bc37ab06116f9e28e73c3b1ad1e66a68",
     "catalog_sha256": "sha256:a91e35953e3ec9b9759f2fb18c294576f899b1ebdc9936c6887467e0beb25850",

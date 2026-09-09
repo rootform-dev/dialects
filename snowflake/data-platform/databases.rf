@@ -10,7 +10,6 @@ concept "schema" {
 
 rule "database" {
   match {
-    kind = "resource"
     type = "snowflake_database"
   }
 
@@ -24,7 +23,6 @@ rule "database" {
 
 rule "secondary-database" {
   match {
-    kind = "resource"
     type = "snowflake_secondary_database"
   }
 
@@ -43,7 +41,6 @@ rule "secondary-database" {
 
 rule "shared-database" {
   match {
-    kind = "resource"
     type = "snowflake_shared_database"
   }
 
@@ -62,7 +59,6 @@ rule "shared-database" {
 
 rule "schema" {
   match {
-    kind = "resource"
     type = "snowflake_schema"
   }
 
@@ -82,7 +78,6 @@ rule "schema" {
 
 rule "postgres-instance" {
   match {
-    kind = "resource"
     type = "snowflake_postgres_instance"
   }
 

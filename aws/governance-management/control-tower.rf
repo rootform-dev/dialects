@@ -6,7 +6,6 @@ concept "controltower-landing-zone" {
 
 rule "controltower-landing-zone" {
   match {
-    kind = "resource"
     type = "aws_controltower_landing_zone"
   }
 

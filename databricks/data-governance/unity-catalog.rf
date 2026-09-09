@@ -45,7 +45,6 @@ concept "unity-catalog-access-detail" {
 
 rule "unity-catalog-metastore" {
   match {
-    kind = "resource"
     type = "databricks_metastore"
   }
 
@@ -59,7 +58,6 @@ rule "unity-catalog-metastore" {
 
 rule "metastore-assignment" {
   match {
-    kind = "resource"
     type = "databricks_metastore_assignment"
   }
 
@@ -78,7 +76,6 @@ rule "metastore-assignment" {
 
 rule "metastore-data-access" {
   match {
-    kind = "resource"
     type = "databricks_metastore_data_access"
   }
 
@@ -108,7 +105,6 @@ rule "metastore-data-access" {
 
 rule "unity-catalog-catalog" {
   match {
-    kind = "resource"
     type = "databricks_catalog"
   }
 
@@ -143,7 +139,6 @@ rule "unity-catalog-catalog" {
 
 rule "unity-catalog-schema" {
   match {
-    kind = "resource"
     type = "databricks_schema"
   }
 
@@ -163,7 +158,6 @@ rule "unity-catalog-schema" {
 
 rule "external-location" {
   match {
-    kind = "resource"
     type = "databricks_external_location"
   }
 
@@ -193,7 +187,6 @@ rule "external-location" {
 
 rule "storage-credential" {
   match {
-    kind = "resource"
     type = "databricks_storage_credential"
   }
 
@@ -223,7 +216,6 @@ rule "storage-credential" {
 
 rule "service-credential" {
   match {
-    kind = "resource"
     type = "databricks_credential"
   }
 
@@ -248,7 +240,6 @@ rule "service-credential" {
 
 rule "unity-catalog-volume" {
   match {
-    kind = "resource"
     type = "databricks_volume"
   }
 
@@ -268,7 +259,6 @@ rule "unity-catalog-volume" {
 
 rule "catalog-workspace-binding" {
   match {
-    kind = "resource"
     type = "databricks_catalog_workspace_binding"
   }
 
@@ -277,7 +267,6 @@ rule "catalog-workspace-binding" {
 
 rule "system-schema" {
   match {
-    kind = "resource"
     type = "databricks_system_schema"
   }
 
@@ -286,7 +275,6 @@ rule "system-schema" {
 
 rule "unity-catalog-table" {
   match {
-    kind = "resource"
     type = "databricks_table"
   }
 
@@ -295,7 +283,6 @@ rule "unity-catalog-table" {
 
 rule "sql-table" {
   match {
-    kind = "resource"
     type = "databricks_sql_table"
   }
 
@@ -304,7 +291,6 @@ rule "sql-table" {
 
 rule "external-metadata" {
   match {
-    kind = "resource"
     type = "databricks_external_metadata"
   }
 
@@ -313,7 +299,6 @@ rule "external-metadata" {
 
 rule "data-classification-catalog-config" {
   match {
-    kind = "resource"
     type = "databricks_data_classification_catalog_config"
   }
 
@@ -322,7 +307,6 @@ rule "data-classification-catalog-config" {
 
 rule "tag-policy" {
   match {
-    kind = "resource"
     type = "databricks_tag_policy"
   }
 
@@ -331,7 +315,6 @@ rule "tag-policy" {
 
 rule "entity-tag-assignment" {
   match {
-    kind = "resource"
     type = "databricks_entity_tag_assignment"
   }
 
@@ -340,7 +323,6 @@ rule "entity-tag-assignment" {
 
 rule "workspace-entity-tag-assignment" {
   match {
-    kind = "resource"
     type = "databricks_workspace_entity_tag_assignment"
   }
 

@@ -6,7 +6,6 @@ concept "digital-twins-instance" {
 
 rule "digital-twins-instance" {
   match {
-    kind = "resource"
     type = "azurerm_digital_twins_instance"
   }
 

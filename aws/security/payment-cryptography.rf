@@ -6,7 +6,6 @@ concept "paymentcryptography-key" {
 
 rule "paymentcryptography-key" {
   match {
-    kind = "resource"
     type = "aws_paymentcryptography_key"
   }
 

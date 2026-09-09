@@ -5,7 +5,6 @@ concept "metrics-scrape-job" {
 
 rule "connections-metrics-endpoint-scrape-job" {
   match {
-    kind = "resource"
     type = "grafana_connections_metrics_endpoint_scrape_job"
   }
 

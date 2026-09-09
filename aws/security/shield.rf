@@ -6,7 +6,6 @@ concept "shield-protection-group" {
 
 rule "shield-protection-group" {
   match {
-    kind = "resource"
     type = "aws_shield_protection_group"
   }
 

@@ -15,7 +15,6 @@ concept "cloud-deploy-automation" {
 
 rule "cloud-deploy-pipeline" {
   match {
-    kind = "resource"
     type = "google_clouddeploy_delivery_pipeline"
   }
 
@@ -24,7 +23,6 @@ rule "cloud-deploy-pipeline" {
 
 rule "cloud-deploy-target" {
   match {
-    kind = "resource"
     type = "google_clouddeploy_target"
   }
 
@@ -33,7 +31,6 @@ rule "cloud-deploy-target" {
 
 rule "cloud-deploy-automation" {
   match {
-    kind = "resource"
     type = "google_clouddeploy_automation"
   }
 

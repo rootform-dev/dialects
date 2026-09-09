@@ -6,7 +6,6 @@ concept "video-indexer-account" {
 
 rule "video-indexer-account" {
   match {
-    kind = "resource"
     type = "azurerm_video_indexer_account"
   }
 

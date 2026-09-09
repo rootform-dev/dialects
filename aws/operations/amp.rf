@@ -11,7 +11,6 @@ concept "prometheus-workspace" {
 
 rule "prometheus-anomaly-detector" {
   match {
-    kind = "resource"
     type = "aws_prometheus_anomaly_detector"
   }
 
@@ -20,7 +19,6 @@ rule "prometheus-anomaly-detector" {
 
 rule "prometheus-workspace" {
   match {
-    kind = "resource"
     type = "aws_prometheus_workspace"
   }
 

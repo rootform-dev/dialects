@@ -6,7 +6,6 @@ concept "sql-server" {
 
 rule "sql-elastic-pool" {
   match {
-    kind = "resource"
     type = "azurerm_mssql_elasticpool"
   }
 
@@ -15,7 +14,6 @@ rule "sql-elastic-pool" {
 
 rule "sql-failover-group" {
   match {
-    kind = "resource"
     type = "azurerm_mssql_failover_group"
   }
 
@@ -24,7 +22,6 @@ rule "sql-failover-group" {
 
 rule "sql-managed-database" {
   match {
-    kind = "resource"
     type = "azurerm_mssql_managed_database"
   }
 
@@ -33,7 +30,6 @@ rule "sql-managed-database" {
 
 rule "sql-managed-instance" {
   match {
-    kind = "resource"
     type = "azurerm_mssql_managed_instance"
   }
 

@@ -10,7 +10,6 @@ concept "backup-configuration" {
 
 rule "cloud-backup-schedule" {
   match {
-    kind = "resource"
     type = "mongodbatlas_cloud_backup_schedule"
   }
 
@@ -35,7 +34,6 @@ rule "cloud-backup-schedule" {
 
 rule "cloud-backup-export-destination" {
   match {
-    kind = "resource"
     type = "mongodbatlas_cloud_backup_snapshot_export_bucket"
   }
 
@@ -65,7 +63,6 @@ rule "cloud-backup-export-destination" {
 
 rule "backup-compliance-policy" {
   match {
-    kind = "resource"
     type = "mongodbatlas_backup_compliance_policy"
   }
 

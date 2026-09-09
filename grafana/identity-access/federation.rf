@@ -5,7 +5,6 @@ concept "identity-configuration" {
 
 rule "scim-config" {
   match {
-    kind = "resource"
     type = "grafana_scim_config"
   }
 
@@ -14,7 +13,6 @@ rule "scim-config" {
 
 rule "sso-settings" {
   match {
-    kind = "resource"
     type = "grafana_sso_settings"
   }
 

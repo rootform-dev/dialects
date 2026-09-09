@@ -1,6 +1,5 @@
 rule "service-networking-connection" {
   match {
-    kind = "resource"
     type = "google_service_networking_connection"
   }
 
@@ -14,7 +13,6 @@ rule "service-networking-connection" {
 
 rule "private-services-access-range" {
   match {
-    kind  = "resource"
     type  = "google_compute_global_address"
     where = source.purpose == "VPC_PEERING" && source.address_type == "INTERNAL"
   }

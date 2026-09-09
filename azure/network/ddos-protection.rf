@@ -6,7 +6,6 @@ concept "ddos-protection-plan" {
 
 rule "ddos-protection-plan" {
   match {
-    kind = "resource"
     type = "azurerm_network_ddos_protection_plan"
   }
 

@@ -15,7 +15,6 @@ concept "compute-configuration" {
 
 rule "compute-cluster" {
   match {
-    kind = "resource"
     type = "databricks_cluster"
   }
 
@@ -44,7 +43,6 @@ rule "compute-cluster" {
 
 rule "instance-pool" {
   match {
-    kind = "resource"
     type = "databricks_instance_pool"
   }
 
@@ -58,7 +56,6 @@ rule "instance-pool" {
 
 rule "cluster-policy" {
   match {
-    kind = "resource"
     type = "databricks_cluster_policy"
   }
 
@@ -67,7 +64,6 @@ rule "cluster-policy" {
 
 rule "policy-info" {
   match {
-    kind = "resource"
     type = "databricks_policy_info"
   }
 
@@ -76,7 +72,6 @@ rule "policy-info" {
 
 rule "instance-profile" {
   match {
-    kind = "resource"
     type = "databricks_instance_profile"
   }
 
@@ -85,7 +80,6 @@ rule "instance-profile" {
 
 rule "cluster-library" {
   match {
-    kind = "resource"
     type = "databricks_library"
   }
 
@@ -99,7 +93,6 @@ rule "cluster-library" {
 
 rule "artifact-allowlist" {
   match {
-    kind = "resource"
     type = "databricks_artifact_allowlist"
   }
 
@@ -108,7 +101,6 @@ rule "artifact-allowlist" {
 
 rule "global-init-script" {
   match {
-    kind = "resource"
     type = "databricks_global_init_script"
   }
 
@@ -117,7 +109,6 @@ rule "global-init-script" {
 
 rule "workspace-base-environment" {
   match {
-    kind = "resource"
     type = "databricks_environments_workspace_base_environment"
   }
 
@@ -126,7 +117,6 @@ rule "workspace-base-environment" {
 
 rule "default-workspace-base-environment" {
   match {
-    kind = "resource"
     type = "databricks_environments_default_workspace_base_environment"
   }
 

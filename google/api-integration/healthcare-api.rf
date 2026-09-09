@@ -15,7 +15,6 @@ concept "healthcare-pipeline" {
 
 rule "healthcare-dataset" {
   match {
-    kind = "resource"
     type = "google_healthcare_dataset"
   }
 
@@ -24,7 +23,6 @@ rule "healthcare-dataset" {
 
 rule "healthcare-fhir-store" {
   match {
-    kind = "resource"
     type = "google_healthcare_fhir_store"
   }
 
@@ -39,7 +37,6 @@ rule "healthcare-fhir-store" {
 
 rule "healthcare-dicom-store" {
   match {
-    kind = "resource"
     type = "google_healthcare_dicom_store"
   }
 
@@ -54,7 +51,6 @@ rule "healthcare-dicom-store" {
 
 rule "healthcare-hl7v2-store" {
   match {
-    kind = "resource"
     type = "google_healthcare_hl7_v2_store"
   }
 
@@ -69,7 +65,6 @@ rule "healthcare-hl7v2-store" {
 
 rule "healthcare-consent-store" {
   match {
-    kind = "resource"
     type = "google_healthcare_consent_store"
   }
 
@@ -84,7 +79,6 @@ rule "healthcare-consent-store" {
 
 rule "healthcare-pipeline" {
   match {
-    kind = "resource"
     type = "google_healthcare_pipeline_job"
   }
 

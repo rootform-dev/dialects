@@ -15,7 +15,6 @@ concept "managed-kafka-connector" {
 
 rule "managed-kafka-cluster" {
   match {
-    kind = "resource"
     type = "google_managed_kafka_cluster"
   }
 
@@ -24,7 +23,6 @@ rule "managed-kafka-cluster" {
 
 rule "managed-kafka-topic" {
   match {
-    kind = "resource"
     type = "google_managed_kafka_topic"
   }
 
@@ -33,7 +31,6 @@ rule "managed-kafka-topic" {
 
 rule "managed-kafka-connect-cluster" {
   match {
-    kind = "resource"
     type = "google_managed_kafka_connect_cluster"
   }
 
@@ -42,7 +39,6 @@ rule "managed-kafka-connect-cluster" {
 
 rule "managed-kafka-connector" {
   match {
-    kind = "resource"
     type = "google_managed_kafka_connector"
   }
 

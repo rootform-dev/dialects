@@ -10,7 +10,6 @@ concept "beyondcorp-gateway-application" {
 
 rule "beyondcorp-security-gateway" {
   match {
-    kind = "resource"
     type = "google_beyondcorp_security_gateway"
   }
 
@@ -19,7 +18,6 @@ rule "beyondcorp-security-gateway" {
 
 rule "beyondcorp-gateway-application" {
   match {
-    kind = "resource"
     type = "google_beyondcorp_security_gateway_application"
   }
 

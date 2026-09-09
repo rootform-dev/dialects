@@ -5,7 +5,6 @@ concept "cloud-router" {
 
 rule "cloud-router" {
   match {
-    kind = "resource"
     type = "google_compute_router"
   }
 

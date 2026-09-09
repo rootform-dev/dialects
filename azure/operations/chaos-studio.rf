@@ -6,7 +6,6 @@ concept "chaos-experiment" {
 
 rule "chaos-studio-experiment" {
   match {
-    kind = "resource"
     type = "azurerm_chaos_studio_experiment"
   }
 

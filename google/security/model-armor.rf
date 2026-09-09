@@ -10,7 +10,6 @@ concept "model-armor-floor-setting" {
 
 rule "model-armor-template" {
   match {
-    kind = "resource"
     type = "google_model_armor_template"
   }
 
@@ -19,7 +18,6 @@ rule "model-armor-template" {
 
 rule "model-armor-floor-setting" {
   match {
-    kind = "resource"
     type = "google_model_armor_floorsetting"
   }
 

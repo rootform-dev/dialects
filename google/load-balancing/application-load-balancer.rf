@@ -1,6 +1,5 @@
 rule "application-load-balancer" {
   match {
-    kind = "resource"
     type = "google_compute_global_forwarding_rule"
   }
 
@@ -11,7 +10,6 @@ rule "application-load-balancer" {
       via = source.target
 
       match {
-        kind = "resource"
         type = "google_compute_target_https_proxy"
       }
     }
@@ -20,7 +18,6 @@ rule "application-load-balancer" {
       via = member.target-https-proxy.url_map
 
       match {
-        kind = "resource"
         type = "google_compute_url_map"
       }
     }
@@ -29,7 +26,6 @@ rule "application-load-balancer" {
       via = member.url-map.default_service
 
       match {
-        kind = "resource"
         type = "google_compute_backend_service"
       }
     }

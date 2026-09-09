@@ -21,7 +21,6 @@ concept "event-component" {
 
 rule "cloudwatch-event-connection" {
   match {
-    kind = "resource"
     type = "aws_cloudwatch_event_connection"
   }
 
@@ -30,7 +29,6 @@ rule "cloudwatch-event-connection" {
 
 rule "cloudwatch-event-endpoint" {
   match {
-    kind = "resource"
     type = "aws_cloudwatch_event_endpoint"
   }
 

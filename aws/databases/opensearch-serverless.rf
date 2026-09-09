@@ -11,7 +11,6 @@ concept "opensearchserverless-collection-group" {
 
 rule "opensearchserverless-collection" {
   match {
-    kind = "resource"
     type = "aws_opensearchserverless_collection"
   }
 
@@ -20,7 +19,6 @@ rule "opensearchserverless-collection" {
 
 rule "opensearchserverless-collection-group" {
   match {
-    kind = "resource"
     type = "aws_opensearchserverless_collection_group"
   }
 

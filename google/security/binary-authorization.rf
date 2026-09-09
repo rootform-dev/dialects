@@ -10,7 +10,6 @@ concept "binary-authorization-attestor" {
 
 rule "binary-authorization-policy" {
   match {
-    kind = "resource"
     type = "google_binary_authorization_policy"
   }
 
@@ -19,7 +18,6 @@ rule "binary-authorization-policy" {
 
 rule "binary-authorization-attestor" {
   match {
-    kind = "resource"
     type = "google_binary_authorization_attestor"
   }
 

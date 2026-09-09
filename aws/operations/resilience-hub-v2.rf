@@ -11,7 +11,6 @@ concept "resiliencehubv2-service-function" {
 
 rule "resiliencehubv2-service" {
   match {
-    kind = "resource"
     type = "aws_resiliencehubv2_service"
   }
 
@@ -20,7 +19,6 @@ rule "resiliencehubv2-service" {
 
 rule "resiliencehubv2-service-function" {
   match {
-    kind = "resource"
     type = "aws_resiliencehubv2_service_function"
   }
 

@@ -6,7 +6,6 @@ concept "lakeformation-resource" {
 
 rule "lakeformation-resource" {
   match {
-    kind = "resource"
     type = "aws_lakeformation_resource"
   }
 

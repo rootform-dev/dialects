@@ -1,6 +1,5 @@
 rule "organization-client" {
   match {
-    kind = "resource"
     type = "auth0_organization_client"
   }
 
@@ -19,7 +18,6 @@ rule "organization-client" {
 
 rule "organization-client-grant" {
   match {
-    kind = "resource"
     type = "auth0_organization_client_grant"
   }
 
@@ -52,7 +50,6 @@ rule "organization-client-lookup" {
 
 rule "organization-clients" {
   match {
-    kind = "resource"
     type = "auth0_organization_clients"
   }
 
@@ -66,7 +63,6 @@ rule "organization-clients" {
 
 rule "organization-connection" {
   match {
-    kind = "resource"
     type = "auth0_organization_connection"
   }
 
@@ -85,7 +81,6 @@ rule "organization-connection" {
 
 rule "organization-connections" {
   match {
-    kind = "resource"
     type = "auth0_organization_connections"
   }
 
@@ -99,7 +94,6 @@ rule "organization-connections" {
 
 rule "organization-discovery-domain" {
   match {
-    kind = "resource"
     type = "auth0_organization_discovery_domain"
   }
 
@@ -113,7 +107,6 @@ rule "organization-discovery-domain" {
 
 rule "organization-discovery-domains" {
   match {
-    kind = "resource"
     type = "auth0_organization_discovery_domains"
   }
 
