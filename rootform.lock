@@ -18,7 +18,7 @@
       "name": "azure",
       "version": "0.1.0",
       "digest": "sha256:a763b57620db538a0c2e9a5eb39b2ab0ac6176c8f874a336e9bc287c8a8d291c",
-      "presentation_digest": "sha256:3644b4aa3b17953a5a1e134a5e140a900275eaa8edf7c654946b3d53a378cb97"
+      "presentation_digest": "sha256:d371151afc2e502c5cfdfe4a57ae2fbd52221838e69f26089f21dce3bff0fdf9"
     },
     {
       "name": "cloudflare",
