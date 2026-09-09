@@ -148,3 +148,33 @@ test("Azure VNet peering keeps local containment distinct from remote connectivi
     expect(document.architecture.relations.some((fact) => fact.from === from)).toBe(false);
   }
 });
+
+test("Azure Application Gateway uses an owned WAF policy", () => {
+  const document = fixture("azure-load-balancing");
+  expect(document.architecture.contexts).toContainEqual(
+    expect.objectContaining({
+      from: "entity:azurerm_web_application_firewall_policy.edge",
+      to: "scope:azurerm_resource_group.edge",
+      dimension: "core/ownership",
+      provenance: [
+        expect.objectContaining({
+          rule: "azure/web-application-firewall-policy",
+          via: expect.stringContaining("resource_group_name"),
+        }),
+      ],
+    }),
+  );
+  expect(document.architecture.relations).toContainEqual(
+    expect.objectContaining({
+      from: "entity:azurerm_application_gateway.web",
+      to: "entity:azurerm_web_application_firewall_policy.edge",
+      predicate: "azure/uses-waf-policy",
+      provenance: [
+        expect.objectContaining({
+          rule: "azure/application-gateway",
+          via: expect.stringContaining("firewall_policy_id"),
+        }),
+      ],
+    }),
+  );
+});

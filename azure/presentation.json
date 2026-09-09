@@ -580,7 +580,8 @@
     "virtual-machine-scale-set": "generic/entity",
     "virtual-network-manager": "generic/scope",
     "virtual-wan": "generic/scope",
-    "vmware-private-cloud": "generic/scope"
+    "vmware-private-cloud": "generic/scope",
+    "web-application-firewall-policy": "azure/firewall"
   },
   "rule_labels": {
     "advanced-threat-protection": "Microsoft Defender for Cloud advanced threat protection",

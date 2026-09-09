@@ -2,13 +2,19 @@
   "format_version": "1",
   "showcase_delta": {
     "verified_date": "2026-09-09",
-    "relations_added": ["delivers-to", "observed-by", "peers-with", "subscribes-to"],
+    "relations_added": [
+      "delivers-to",
+      "observed-by",
+      "peers-with",
+      "subscribes-to",
+      "uses-waf-policy"
+    ],
     "contexts_added": ["core/network", "core/ownership", "core/runtime"],
     "contributions_asserted": [
       "private DNS link to zone and VNet",
       "NAT association to subnet and NAT gateway"
     ],
-    "implemented_candidates": 15,
+    "implemented_candidates": 17,
     "blocked_candidates": 1
   },
   "ownership_membership_sweep": {
@@ -33,8 +39,8 @@
   },
   "represented_rules": 424,
   "by_decision": {
-    "supported": 325,
-    "partial": 236,
+    "supported": 326,
+    "partial": 235,
     "intentionally-unrepresented": 1408,
     "unsupported": 1
   },

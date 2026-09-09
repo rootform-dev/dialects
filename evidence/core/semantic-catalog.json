@@ -2596,6 +2596,13 @@
           "via": "source.resource_group_name"
         },
         {
+          "emission": "emission:3654fbde15dbad24b3a70ca8019717c091a78a0620592f54b078f98f578cc6b6",
+          "rule": "azure/web-application-firewall-policy",
+          "from": "azure/web-application-firewall-policy",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
           "emission": "emission:6b61ac4106496574fcf36335c6bb98054253877adf5351e86bb2a774159e3d93",
           "rule": "azure/web-pubsub",
           "from": "azure/realtime-communication-service",

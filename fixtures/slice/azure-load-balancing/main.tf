@@ -61,14 +61,33 @@ resource "azurerm_lb_rule" "https" {
   backend_address_pool_ids       = [azurerm_lb_backend_address_pool.workers.id]
 }
 
+resource "azurerm_web_application_firewall_policy" "edge" {
+  name                = "edge"
+  location            = azurerm_resource_group.edge.location
+  resource_group_name = azurerm_resource_group.edge.name
+
+  policy_settings {
+    enabled = true
+    mode    = "Prevention"
+  }
+
+  managed_rules {
+    managed_rule_set {
+      type    = "OWASP"
+      version = "3.2"
+    }
+  }
+}
+
 resource "azurerm_application_gateway" "web" {
   name                = "web"
   location            = azurerm_resource_group.edge.location
   resource_group_name = azurerm_resource_group.edge.name
+  firewall_policy_id  = azurerm_web_application_firewall_policy.edge.id
 
   sku {
-    name     = "Standard_v2"
-    tier     = "Standard_v2"
+    name     = "WAF_v2"
+    tier     = "WAF_v2"
     capacity = 2
   }
 

@@ -139,6 +139,22 @@
       "fact": "core/runtime to azure/container-app-environment",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/container_app_job",
       "quote": "The ID of the Container App Environment in which to create the Container App Job."
+    },
+    {
+      "candidate": "AZ-27",
+      "rule": "azure/application-gateway",
+      "path": "firewall_policy_id",
+      "fact": "azure/uses-waf-policy to azure/web-application-firewall-policy",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/application_gateway",
+      "quote": "The ID of the Web Application Firewall Policy."
+    },
+    {
+      "candidate": "AZ-28",
+      "rule": "azure/web-application-firewall-policy",
+      "path": "resource_group_name",
+      "fact": "core/ownership to azure/resource-group",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/web_application_firewall_policy",
+      "quote": "The name of the resource group."
     }
   ],
   "ownership_membership_sweep": {

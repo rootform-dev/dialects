@@ -3369,7 +3369,7 @@
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_web_application_firewall_policy",
-      "official_source": "https://learn.microsoft.com/en-us/azure/virtual-network/"
+      "official_source": "https://learn.microsoft.com/en-us/azure/web-application-firewall/ag/policy-overview"
     },
     {
       "rule_id": "azure/web-pubsub",

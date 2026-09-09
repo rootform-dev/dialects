@@ -1080,6 +1080,13 @@
       "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure VMware Solution private cloud."
+    },
+    {
+      "name": "web-application-firewall-policy",
+      "family": "network",
+      "kind": "entity",
+      "identity": "azure/firewall",
+      "description": "A reusable Azure Web Application Firewall policy applied to Application Gateway traffic."
     }
   ],
   "rules": [
@@ -5267,7 +5274,7 @@
       "terraform_type": "azurerm_vpn_site"
     },
     {
-      "concept": "azure/firewall-policy",
+      "concept": "azure/web-application-firewall-policy",
       "family": "network",
       "identity": "azure/firewall",
       "label": "Azure Web Application Firewall policy",

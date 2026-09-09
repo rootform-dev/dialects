@@ -296,8 +296,8 @@
       "terraform_type": "azurerm_application_gateway",
       "provider": "azurerm",
       "concept": "core/load-balancer",
-      "source_paths": ["resource_group_name"],
-      "target_concepts": ["azure/resource-group"],
+      "source_paths": ["firewall_policy_id", "resource_group_name"],
+      "target_concepts": ["azure/resource-group", "azure/web-application-firewall-policy"],
       "target_paths": ["name"]
     },
     {
@@ -4178,9 +4178,9 @@
       "file": "dialects/azure/network/firewall.rf",
       "terraform_type": "azurerm_web_application_firewall_policy",
       "provider": "azurerm",
-      "concept": "azure/firewall-policy",
-      "source_paths": [],
-      "target_concepts": [],
+      "concept": "azure/web-application-firewall-policy",
+      "source_paths": ["resource_group_name"],
+      "target_concepts": ["azure/resource-group"],
       "target_paths": []
     },
     {

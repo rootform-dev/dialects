@@ -30,6 +30,7 @@
       "fixtures/snowflake-v2/scenarios",
       "fixtures/vault-v5/scenarios",
       "fixtures/slice/azure-event-grid",
+      "fixtures/slice/azure-load-balancing",
       "fixtures/slice/azure-network",
       "fixtures/slice/azure-observability",
       "fixtures/slice/azure-ownership-sweep"
@@ -50,6 +51,7 @@
       "fixtures/snowflake-v2/scenarios": "+2 core/ownership (API Management to resource group, blob container to storage account)",
       "fixtures/vault-v5/scenarios": "+1 core/ownership (blob container to storage account)",
       "fixtures/slice/azure-event-grid": "+8 core/ownership, +5 subscribes-to, +5 delivers-to from system topic event subscriptions",
+      "fixtures/slice/azure-load-balancing": "WAF policy gains resource-group ownership and Application Gateway emits one uses-waf-policy relation",
       "fixtures/slice/azure-network": "two reciprocal peerings each keep one local core/network context and emit one azure/peers-with relation; NAT Gateway public IP and prefix associations add five contributions",
       "fixtures/slice/azure-observability": "+1 core/ownership (Windows function app to resource group)",
       "fixtures/slice/azure-ownership-sweep": "resource-group ownership remains explicit while absent local and remote VNet paths close deterministically as source_absent"

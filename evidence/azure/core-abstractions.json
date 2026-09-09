@@ -3,7 +3,8 @@
   "showcase_relations": {
     "delivers-to": "A messaging/eventing source pushes messages or events to an explicitly referenced destination. Event Grid subscription to handler (AZ-08); Pub/Sub push subscription to Cloud Run service (GCP-05); Pub/Sub subscription to dead-letter topic (GCP-14).",
     "observed-by": "Source sends telemetry to an explicitly referenced observability resource.",
-    "peers-with": "A network peering belongs to its explicitly referenced local virtual network and connects to an explicitly referenced remote virtual network."
+    "peers-with": "A network peering belongs to its explicitly referenced local virtual network and connects to an explicitly referenced remote virtual network.",
+    "uses-waf-policy": "An Application Gateway uses an explicitly referenced Web Application Firewall policy."
   },
   "verified_date": "2026-09-09",
   "core_source_sha256": "sha256:1a39c40bc7521a4367b5b1f450504cd61f5dd351045dca10c3c862d6e854187d",
