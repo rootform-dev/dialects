@@ -617,13 +617,6 @@
           "via": "source.virtual_network_name"
         },
         {
-          "emission": "emission:551858e3ccad4436d450af7f369d6f47f5887c314a8eee42a8ef8792da63daed",
-          "rule": "azure/virtual-network-peering",
-          "from": "core/network-peering",
-          "to": "core/virtual-network",
-          "via": "source.remote_virtual_network_id"
-        },
-        {
           "emission": "emission:adf6369f08c050a82021bd244570e9679557ba905dcf95e2b0d985f77493cd7b",
           "rule": "azure/windows-web-app",
           "from": "azure/app-service",

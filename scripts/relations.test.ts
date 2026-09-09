@@ -9,6 +9,12 @@ type Architecture = {
     emissions: { id: string; rule: string; predicate?: string }[];
   };
   architecture: {
+    contexts: {
+      from: string;
+      to: string;
+      dimension: string;
+      provenance: { emission: string; rule: string; via: string }[];
+    }[];
     relations: {
       from: string;
       to: string;
@@ -92,4 +98,53 @@ test("empty optional route and unresolved route have different closure evidence"
         entry.emission === emission?.id,
     ),
   ).toBe(false);
+});
+
+test("Azure VNet peering keeps local containment distinct from remote connectivity", () => {
+  const document = fixture("azure-network");
+  const peerings = [
+    {
+      from: "entity:azurerm_virtual_network_peering.platform",
+      local: "scope:azurerm_virtual_network.platform",
+      remote: "scope:azurerm_virtual_network.remote",
+    },
+    {
+      from: "entity:azurerm_virtual_network_peering.remote_to_platform",
+      local: "scope:azurerm_virtual_network.remote",
+      remote: "scope:azurerm_virtual_network.platform",
+    },
+  ];
+
+  for (const peering of peerings) {
+    expect(document.architecture.contexts).toContainEqual(
+      expect.objectContaining({
+        from: peering.from,
+        to: peering.local,
+        dimension: "core/network",
+      }),
+    );
+    expect(document.architecture.relations).toContainEqual(
+      expect.objectContaining({
+        from: peering.from,
+        to: peering.remote,
+        predicate: "azure/peers-with",
+        provenance: [
+          expect.objectContaining({
+            rule: "azure/virtual-network-peering",
+            via: expect.stringContaining("remote_virtual_network_id"),
+          }),
+        ],
+      }),
+    );
+  }
+
+  for (const unresolved of ["literal", "unknown"]) {
+    const from = `entity:azurerm_virtual_network_peering.${unresolved}`;
+    expect(
+      document.architecture.contexts.some(
+        (fact) => fact.from === from && fact.dimension === "core/network",
+      ),
+    ).toBe(false);
+    expect(document.architecture.relations.some((fact) => fact.from === from)).toBe(false);
+  }
 });

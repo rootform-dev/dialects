@@ -37,8 +37,7 @@ rule "virtual-network-peering" {
     via = source.virtual_network_name
   }
 
-  context {
-    as  = context.core.network
+  relation "peers-with" {
     to  = concept.core.virtual-network
     via = source.remote_virtual_network_id
   }

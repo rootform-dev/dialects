@@ -2,7 +2,7 @@
   "format_version": "1",
   "showcase_delta": {
     "verified_date": "2026-09-09",
-    "relations_added": ["delivers-to", "observed-by", "subscribes-to"],
+    "relations_added": ["delivers-to", "observed-by", "peers-with", "subscribes-to"],
     "contexts_added": ["core/network", "core/ownership", "core/runtime"],
     "contributions_asserted": [
       "private DNS link to zone and VNet",

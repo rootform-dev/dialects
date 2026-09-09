@@ -63,9 +63,9 @@
       "candidate": "AZ-14",
       "rule": "azure/virtual-network-peering",
       "paths": ["virtual_network_name", "remote_virtual_network_id"],
-      "fact": "core/network to each virtual network",
+      "fact": "core/network to the local virtual network; azure/peers-with to the remote virtual network",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/virtual_network_peering",
-      "quote": "The full Azure resource ID of the remote virtual network."
+      "quote": "The name of the virtual network. The full Azure resource ID of the remote virtual network."
     },
     {
       "candidate": "AZ-15",

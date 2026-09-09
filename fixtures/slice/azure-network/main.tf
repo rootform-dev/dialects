@@ -42,6 +42,13 @@ resource "azurerm_virtual_network_peering" "platform" {
   remote_virtual_network_id = azurerm_virtual_network.remote.id
 }
 
+resource "azurerm_virtual_network_peering" "remote_to_platform" {
+  name                      = "remote-to-platform"
+  resource_group_name       = azurerm_resource_group.network.name
+  virtual_network_name      = azurerm_virtual_network.remote.name
+  remote_virtual_network_id = azurerm_virtual_network.platform.id
+}
+
 resource "azurerm_virtual_network_peering" "literal" {
   name                      = "literal"
   resource_group_name       = azurerm_resource_group.network.name

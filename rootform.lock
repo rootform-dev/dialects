@@ -19,8 +19,8 @@
     {
       "name": "azure",
       "version": "0.1.0",
-      "digest": "sha256:cae7bb2b5364e974fc301a7609da05fa5a0b785be1750df8581198bd5fb334ac",
-      "semantic_digest": "sha256:10768460668f4adf602aeac10f8dddb412547c1d1f165c435bef6d2f9cf42fa3",
+      "digest": "sha256:2fb0ad1994bf573e4ba94d6d2bb24c6ba09501094ee1c79e7610e6a77f74afac",
+      "semantic_digest": "sha256:bda4bed0f48cf6d07f92127ca4fbd707dc84921c993cc9a14c15bf8fa3d87222",
       "presentation_digest": "sha256:fcdfd261d0d52aca2f1b181303cee263285252f290805e63ef908c3ef894bd21"
     },
     {
