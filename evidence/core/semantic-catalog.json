@@ -2,7 +2,7 @@
   "format_version": "1",
   "generator": {
     "identity": "rootform 0.1.0",
-    "binary_sha256": "sha256:63d92aef7b808c0398bbc2f3db40ecf3eda8494c6141f875a6559d8e4dbed0a9",
+    "binary_sha256": "sha256:01c8e6dad5f5614b5ec0261872116d13ed275e2bba6d90215f513a369fc90cfa",
     "command": "bun scripts/catalog.ts"
   },
   "concepts": [
@@ -582,13 +582,6 @@
           "via": "source.virtual_network_subnet_id"
         },
         {
-          "emission": "emission:b506d527cc458751372809237d414978a851d7b850cb64c0d8ea2ced14390e27",
-          "rule": "azure/function-app-function",
-          "from": "core/serverless-function",
-          "to": "core/subnet",
-          "via": "source.virtual_network_subnet_id"
-        },
-        {
           "emission": "emission:f6dface6ae16ae6bdf094e0ddea607bd2f17cf88547a066b9aca367bcd0ef53b",
           "rule": "azure/linux-function-app",
           "from": "core/serverless-function",
@@ -1023,13 +1016,6 @@
         {
           "emission": "emission:b467c17a7ceb7b5cc6b8108d1d7e9277bdbb26e50911fd2c9f23cc547b6563f1",
           "rule": "azure/flex-consumption-function-app",
-          "from": "core/serverless-function",
-          "to": "azure/resource-group",
-          "via": "source.resource_group_name"
-        },
-        {
-          "emission": "emission:399ee1b3cdfc0e5a9248a3128d3250e1aac88bb7ba1fb8de58e3563d1143159c",
-          "rule": "azure/function-app-function",
           "from": "core/serverless-function",
           "to": "azure/resource-group",
           "via": "source.resource_group_name"
@@ -3331,13 +3317,6 @@
         {
           "emission": "emission:7892ce8d3f41952827821468bc96db4da882e6861a169b70477261eefe6d4c18",
           "rule": "azure/flex-consumption-function-app",
-          "from": "core/serverless-function",
-          "to": "azure/app-service-plan",
-          "via": "source.service_plan_id"
-        },
-        {
-          "emission": "emission:eef8f323cc7e8dd71bbae1b582d36550923ad58fdf462dc81ec89c03fc7de87f",
-          "rule": "azure/function-app-function",
           "from": "core/serverless-function",
           "to": "azure/app-service-plan",
           "via": "source.service_plan_id"
