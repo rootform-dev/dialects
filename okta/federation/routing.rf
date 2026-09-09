@@ -5,7 +5,6 @@ concept "federation-configuration" {
 
 rule "policy-rule-idp-discovery" {
   match {
-    kind = "resource"
     type = "okta_policy_rule_idp_discovery"
   }
 

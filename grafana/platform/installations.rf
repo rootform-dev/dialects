@@ -5,7 +5,6 @@ concept "platform-installation" {
 
 rule "apps-productactivation-appo11yconfig-v1alpha1" {
   match {
-    kind = "resource"
     type = "grafana_apps_productactivation_appo11yconfig_v1alpha1"
   }
 
@@ -14,7 +13,6 @@ rule "apps-productactivation-appo11yconfig-v1alpha1" {
 
 rule "apps-productactivation-dbo11yconfig-v1alpha1" {
   match {
-    kind = "resource"
     type = "grafana_apps_productactivation_dbo11yconfig_v1alpha1"
   }
 
@@ -23,7 +21,6 @@ rule "apps-productactivation-dbo11yconfig-v1alpha1" {
 
 rule "apps-productactivation-k8so11yconfig-v1alpha1" {
   match {
-    kind = "resource"
     type = "grafana_apps_productactivation_k8so11yconfig_v1alpha1"
   }
 
@@ -32,7 +29,6 @@ rule "apps-productactivation-k8so11yconfig-v1alpha1" {
 
 rule "apps-secret-keeper-activation-v1beta1" {
   match {
-    kind = "resource"
     type = "grafana_apps_secret_keeper_activation_v1beta1"
   }
 
@@ -41,7 +37,6 @@ rule "apps-secret-keeper-activation-v1beta1" {
 
 rule "cloud-plugin-installation" {
   match {
-    kind = "resource"
     type = "grafana_cloud_plugin_installation"
   }
 
@@ -55,7 +50,6 @@ rule "cloud-plugin-installation" {
 
 rule "k6-installation" {
   match {
-    kind = "resource"
     type = "grafana_k6_installation"
   }
 
@@ -69,7 +63,6 @@ rule "k6-installation" {
 
 rule "synthetic-monitoring-installation" {
   match {
-    kind = "resource"
     type = "grafana_synthetic_monitoring_installation"
   }
 

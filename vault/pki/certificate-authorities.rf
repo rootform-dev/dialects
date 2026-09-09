@@ -25,7 +25,6 @@ concept "pki-configuration" {
 
 rule "kmip-secret-ca-generated" {
   match {
-    kind = "resource"
     type = "vault_kmip_secret_ca_generated"
   }
 
@@ -40,7 +39,6 @@ rule "kmip-secret-ca-generated" {
 
 rule "kmip-secret-ca-imported" {
   match {
-    kind = "resource"
     type = "vault_kmip_secret_ca_imported"
   }
 
@@ -55,7 +53,6 @@ rule "kmip-secret-ca-imported" {
 
 rule "kmip-secret-listener" {
   match {
-    kind = "resource"
     type = "vault_kmip_secret_listener"
   }
 
@@ -70,7 +67,6 @@ rule "kmip-secret-listener" {
 
 rule "kmip-secret-role" {
   match {
-    kind = "resource"
     type = "vault_kmip_secret_role"
   }
 
@@ -79,7 +75,6 @@ rule "kmip-secret-role" {
 
 rule "kmip-secret-scope" {
   match {
-    kind = "resource"
     type = "vault_kmip_secret_scope"
   }
 
@@ -94,7 +89,6 @@ rule "kmip-secret-scope" {
 
 rule "pki-external-ca-secret-backend-role" {
   match {
-    kind = "resource"
     type = "vault_pki_external_ca_secret_backend_role"
   }
 
@@ -109,7 +103,6 @@ rule "pki-external-ca-secret-backend-role" {
 
 rule "pki-secret-backend-config-acme" {
   match {
-    kind = "resource"
     type = "vault_pki_secret_backend_config_acme"
   }
 
@@ -123,7 +116,6 @@ rule "pki-secret-backend-config-acme" {
 
 rule "pki-secret-backend-config-auto-tidy" {
   match {
-    kind = "resource"
     type = "vault_pki_secret_backend_config_auto_tidy"
   }
 
@@ -137,7 +129,6 @@ rule "pki-secret-backend-config-auto-tidy" {
 
 rule "pki-secret-backend-config-cluster" {
   match {
-    kind = "resource"
     type = "vault_pki_secret_backend_config_cluster"
   }
 
@@ -151,7 +142,6 @@ rule "pki-secret-backend-config-cluster" {
 
 rule "pki-secret-backend-config-cmpv2" {
   match {
-    kind = "resource"
     type = "vault_pki_secret_backend_config_cmpv2"
   }
 
@@ -165,7 +155,6 @@ rule "pki-secret-backend-config-cmpv2" {
 
 rule "pki-secret-backend-config-est" {
   match {
-    kind = "resource"
     type = "vault_pki_secret_backend_config_est"
   }
 
@@ -179,7 +168,6 @@ rule "pki-secret-backend-config-est" {
 
 rule "pki-secret-backend-config-issuers" {
   match {
-    kind = "resource"
     type = "vault_pki_secret_backend_config_issuers"
   }
 
@@ -193,7 +181,6 @@ rule "pki-secret-backend-config-issuers" {
 
 rule "pki-secret-backend-config-scep" {
   match {
-    kind = "resource"
     type = "vault_pki_secret_backend_config_scep"
   }
 
@@ -207,7 +194,6 @@ rule "pki-secret-backend-config-scep" {
 
 rule "pki-secret-backend-config-urls" {
   match {
-    kind = "resource"
     type = "vault_pki_secret_backend_config_urls"
   }
 
@@ -221,7 +207,6 @@ rule "pki-secret-backend-config-urls" {
 
 rule "pki-secret-backend-crl-config" {
   match {
-    kind = "resource"
     type = "vault_pki_secret_backend_crl_config"
   }
 
@@ -235,7 +220,6 @@ rule "pki-secret-backend-crl-config" {
 
 rule "pki-secret-backend-intermediate-set-signed" {
   match {
-    kind = "resource"
     type = "vault_pki_secret_backend_intermediate_set_signed"
   }
 
@@ -249,7 +233,6 @@ rule "pki-secret-backend-intermediate-set-signed" {
 
 rule "pki-secret-backend-issuer" {
   match {
-    kind = "resource"
     type = "vault_pki_secret_backend_issuer"
   }
 
@@ -264,7 +247,6 @@ rule "pki-secret-backend-issuer" {
 
 rule "pki-secret-backend-key" {
   match {
-    kind = "resource"
     type = "vault_pki_secret_backend_key"
   }
 
@@ -279,7 +261,6 @@ rule "pki-secret-backend-key" {
 
 rule "pki-secret-backend-role" {
   match {
-    kind = "resource"
     type = "vault_pki_secret_backend_role"
   }
 
@@ -293,7 +274,6 @@ rule "pki-secret-backend-role" {
 
 rule "pki-secret-backend-root-cert" {
   match {
-    kind = "resource"
     type = "vault_pki_secret_backend_root_cert"
   }
 
@@ -308,7 +288,6 @@ rule "pki-secret-backend-root-cert" {
 
 rule "ssh-secret-backend-ca" {
   match {
-    kind = "resource"
     type = "vault_ssh_secret_backend_ca"
   }
 

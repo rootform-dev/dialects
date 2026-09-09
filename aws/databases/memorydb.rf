@@ -6,7 +6,6 @@ concept "memorydb-multi-region-cluster" {
 
 rule "memorydb-cluster" {
   match {
-    kind = "resource"
     type = "aws_memorydb_cluster"
   }
 
@@ -15,7 +14,6 @@ rule "memorydb-cluster" {
 
 rule "memorydb-multi-region-cluster" {
   match {
-    kind = "resource"
     type = "aws_memorydb_multi_region_cluster"
   }
 

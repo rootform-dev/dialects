@@ -10,7 +10,6 @@ concept "app-engine-service-version" {
 
 rule "app-engine-application" {
   match {
-    kind = "resource"
     type = "google_app_engine_application"
   }
 
@@ -19,7 +18,6 @@ rule "app-engine-application" {
 
 rule "app-engine-standard-service-version" {
   match {
-    kind = "resource"
     type = "google_app_engine_standard_app_version"
   }
 
@@ -28,7 +26,6 @@ rule "app-engine-standard-service-version" {
 
 rule "app-engine-flexible-service-version" {
   match {
-    kind = "resource"
     type = "google_app_engine_flexible_app_version"
   }
 

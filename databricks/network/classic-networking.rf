@@ -20,7 +20,6 @@ concept "network-security-configuration" {
 
 rule "workspace-network-configuration" {
   match {
-    kind = "resource"
     type = "databricks_mws_networks"
   }
 
@@ -39,7 +38,6 @@ rule "workspace-network-configuration" {
 
 rule "vpc-endpoint-registration" {
   match {
-    kind = "resource"
     type = "databricks_mws_vpc_endpoint"
   }
 
@@ -58,7 +56,6 @@ rule "vpc-endpoint-registration" {
 
 rule "service-direct-endpoint" {
   match {
-    kind = "resource"
     type = "databricks_endpoint"
   }
 
@@ -82,7 +79,6 @@ rule "service-direct-endpoint" {
 
 rule "private-access-settings" {
   match {
-    kind = "resource"
     type = "databricks_mws_private_access_settings"
   }
 
@@ -91,7 +87,6 @@ rule "private-access-settings" {
 
 rule "account-network-policy" {
   match {
-    kind = "resource"
     type = "databricks_account_network_policy"
   }
 
@@ -100,7 +95,6 @@ rule "account-network-policy" {
 
 rule "ip-access-list" {
   match {
-    kind = "resource"
     type = "databricks_ip_access_list"
   }
 

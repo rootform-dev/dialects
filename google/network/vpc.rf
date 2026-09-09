@@ -1,6 +1,5 @@
 rule "vpc-network" {
   match {
-    kind = "resource"
     type = "google_compute_network"
   }
 
@@ -9,7 +8,6 @@ rule "vpc-network" {
 
 rule "vpc-subnetwork" {
   match {
-    kind = "resource"
     type = "google_compute_subnetwork"
   }
 

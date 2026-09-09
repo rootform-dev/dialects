@@ -6,7 +6,6 @@ concept "appstream-fleet" {
 
 rule "appstream-fleet" {
   match {
-    kind = "resource"
     type = "aws_appstream_fleet"
   }
 

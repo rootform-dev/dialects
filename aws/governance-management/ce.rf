@@ -6,7 +6,6 @@ concept "ce-anomaly-monitor" {
 
 rule "ce-anomaly-monitor" {
   match {
-    kind = "resource"
     type = "aws_ce_anomaly_monitor"
   }
 

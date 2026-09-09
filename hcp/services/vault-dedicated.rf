@@ -10,7 +10,6 @@ concept "vault-plugin" {
 
 rule "vault-cluster" {
   match {
-    kind = "resource"
     type = "hcp_vault_cluster"
   }
 
@@ -62,7 +61,6 @@ rule "vault-cluster-lookup" {
 
 rule "vault-plugin" {
   match {
-    kind = "resource"
     type = "hcp_vault_plugin"
   }
 

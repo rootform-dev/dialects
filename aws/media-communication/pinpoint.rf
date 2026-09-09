@@ -11,7 +11,6 @@ concept "pinpoint-component" {
 
 rule "pinpoint-app" {
   match {
-    kind = "resource"
     type = "aws_pinpoint_app"
   }
 

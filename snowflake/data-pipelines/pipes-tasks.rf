@@ -15,7 +15,6 @@ concept "stream-configuration" {
 
 rule "notification-integration" {
   match {
-    kind = "resource"
     type = "snowflake_notification_integration"
   }
 
@@ -59,7 +58,6 @@ rule "notification-integration" {
 
 rule "email-notification-integration" {
   match {
-    kind = "resource"
     type = "snowflake_email_notification_integration"
   }
 
@@ -68,7 +66,6 @@ rule "email-notification-integration" {
 
 rule "pipe" {
   match {
-    kind = "resource"
     type = "snowflake_pipe"
   }
 
@@ -98,7 +95,6 @@ rule "pipe" {
 
 rule "task" {
   match {
-    kind = "resource"
     type = "snowflake_task"
   }
 
@@ -139,7 +135,6 @@ rule "task" {
 
 rule "stream-on-table" {
   match {
-    kind = "resource"
     type = "snowflake_stream_on_table"
   }
 
@@ -153,7 +148,6 @@ rule "stream-on-table" {
 
 rule "stream-on-view" {
   match {
-    kind = "resource"
     type = "snowflake_stream_on_view"
   }
 
@@ -167,7 +161,6 @@ rule "stream-on-view" {
 
 rule "stream-on-external-table" {
   match {
-    kind = "resource"
     type = "snowflake_stream_on_external_table"
   }
 
@@ -181,7 +174,6 @@ rule "stream-on-external-table" {
 
 rule "stream-on-directory-table" {
   match {
-    kind = "resource"
     type = "snowflake_stream_on_directory_table"
   }
 

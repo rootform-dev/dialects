@@ -11,7 +11,6 @@ concept "synapse-workspace" {
 
 rule "synapse-spark-pool" {
   match {
-    kind = "resource"
     type = "azurerm_synapse_spark_pool"
   }
 
@@ -20,7 +19,6 @@ rule "synapse-spark-pool" {
 
 rule "synapse-sql-pool" {
   match {
-    kind = "resource"
     type = "azurerm_synapse_sql_pool"
   }
 
@@ -29,7 +27,6 @@ rule "synapse-sql-pool" {
 
 rule "synapse-workspace" {
   match {
-    kind = "resource"
     type = "azurerm_synapse_workspace"
   }
 

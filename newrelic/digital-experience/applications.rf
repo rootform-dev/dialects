@@ -19,7 +19,6 @@ rule "application-lookup" {
 
 rule "application-settings" {
   match {
-    kind = "resource"
     type = "newrelic_application_settings"
   }
 
@@ -28,7 +27,6 @@ rule "application-settings" {
 
 rule "browser-application" {
   match {
-    kind = "resource"
     type = "newrelic_browser_application"
   }
 
@@ -43,7 +41,6 @@ rule "browser-application" {
 
 rule "key-transaction" {
   match {
-    kind = "resource"
     type = "newrelic_key_transaction"
   }
 

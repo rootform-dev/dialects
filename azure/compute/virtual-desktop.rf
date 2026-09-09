@@ -16,7 +16,6 @@ concept "virtual-desktop-workspace" {
 
 rule "virtual-desktop-application" {
   match {
-    kind = "resource"
     type = "azurerm_virtual_desktop_application"
   }
 
@@ -25,7 +24,6 @@ rule "virtual-desktop-application" {
 
 rule "virtual-desktop-application-group" {
   match {
-    kind = "resource"
     type = "azurerm_virtual_desktop_application_group"
   }
 
@@ -34,7 +32,6 @@ rule "virtual-desktop-application-group" {
 
 rule "virtual-desktop-host-pool" {
   match {
-    kind = "resource"
     type = "azurerm_virtual_desktop_host_pool"
   }
 
@@ -43,7 +40,6 @@ rule "virtual-desktop-host-pool" {
 
 rule "virtual-desktop-scaling-plan" {
   match {
-    kind = "resource"
     type = "azurerm_virtual_desktop_scaling_plan"
   }
 
@@ -52,7 +48,6 @@ rule "virtual-desktop-scaling-plan" {
 
 rule "virtual-desktop-workspace" {
   match {
-    kind = "resource"
     type = "azurerm_virtual_desktop_workspace"
   }
 

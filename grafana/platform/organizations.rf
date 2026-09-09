@@ -1,6 +1,5 @@
 rule "organization" {
   match {
-    kind = "resource"
     type = "grafana_organization"
   }
 

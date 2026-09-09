@@ -20,7 +20,6 @@ concept "service-networking-configuration" {
 
 rule "certificate-authority" {
   match {
-    kind = "resource"
     type = "consul_certificate_authority"
   }
 
@@ -29,7 +28,6 @@ rule "certificate-authority" {
 
 rule "config-entry-jwt-provider-json" {
   match {
-    kind  = "resource"
     type  = "consul_config_entry"
     where = source.kind == "jwt-provider"
   }
@@ -49,7 +47,6 @@ rule "config-entry-jwt-provider-json-lookup" {
 
 rule "config-entry-mesh-json" {
   match {
-    kind  = "resource"
     type  = "consul_config_entry"
     where = source.kind == "mesh"
   }
@@ -69,7 +66,6 @@ rule "config-entry-mesh-json-lookup" {
 
 rule "config-entry-proxy-defaults-json" {
   match {
-    kind  = "resource"
     type  = "consul_config_entry"
     where = source.kind == "proxy-defaults"
   }
@@ -89,7 +85,6 @@ rule "config-entry-proxy-defaults-json-lookup" {
 
 rule "config-entry-service-defaults" {
   match {
-    kind = "resource"
     type = "consul_config_entry_service_defaults"
   }
 
@@ -103,7 +98,6 @@ rule "config-entry-service-defaults" {
 
 rule "config-entry-service-defaults-json" {
   match {
-    kind  = "resource"
     type  = "consul_config_entry"
     where = source.kind == "service-defaults"
   }

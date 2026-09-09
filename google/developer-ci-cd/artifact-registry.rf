@@ -5,7 +5,6 @@ concept "artifact-registry-repository" {
 
 rule "artifact-registry-repository" {
   match {
-    kind = "resource"
     type = "google_artifact_registry_repository"
   }
 

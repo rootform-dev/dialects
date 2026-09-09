@@ -1,6 +1,5 @@
 rule "memorystore-redis-instance" {
   match {
-    kind = "resource"
     type = "google_redis_instance"
   }
 
@@ -21,7 +20,6 @@ rule "memorystore-redis-instance" {
 
 rule "memorystore-redis-cluster" {
   match {
-    kind = "resource"
     type = "google_redis_cluster"
   }
 
@@ -36,7 +34,6 @@ rule "memorystore-redis-cluster" {
 
 rule "memorystore-memcached-instance" {
   match {
-    kind = "resource"
     type = "google_memcache_instance"
   }
 
@@ -57,7 +54,6 @@ rule "memorystore-memcached-instance" {
 
 rule "memorystore-instance" {
   match {
-    kind = "resource"
     type = "google_memorystore_instance"
   }
 

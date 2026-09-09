@@ -5,7 +5,6 @@ concept "identity-extension" {
 
 rule "action" {
   match {
-    kind = "resource"
     type = "auth0_action"
   }
 
@@ -23,7 +22,6 @@ rule "action-lookup" {
 
 rule "hook" {
   match {
-    kind = "resource"
     type = "auth0_hook"
   }
 
@@ -32,7 +30,6 @@ rule "hook" {
 
 rule "rule" {
   match {
-    kind = "resource"
     type = "auth0_rule"
   }
 

@@ -5,7 +5,6 @@ concept "event-trigger" {
 
 rule "event-trigger" {
   match {
-    kind = "resource"
     type = "mongodbatlas_event_trigger"
   }
 

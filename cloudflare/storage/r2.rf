@@ -10,7 +10,6 @@ concept "r2-configuration" {
 
 rule "r2-bucket" {
   match {
-    kind = "resource"
     type = "cloudflare_r2_bucket"
   }
 
@@ -19,7 +18,6 @@ rule "r2-bucket" {
 
 rule "r2-bucket-cors" {
   match {
-    kind = "resource"
     type = "cloudflare_r2_bucket_cors"
   }
 
@@ -32,7 +30,6 @@ rule "r2-bucket-cors" {
 }
 rule "r2-bucket-lifecycle" {
   match {
-    kind = "resource"
     type = "cloudflare_r2_bucket_lifecycle"
   }
 
@@ -46,7 +43,6 @@ rule "r2-bucket-lifecycle" {
 
 rule "r2-bucket-lock" {
   match {
-    kind = "resource"
     type = "cloudflare_r2_bucket_lock"
   }
 
@@ -60,7 +56,6 @@ rule "r2-bucket-lock" {
 
 rule "r2-bucket-sippy" {
   match {
-    kind = "resource"
     type = "cloudflare_r2_bucket_sippy"
   }
 
@@ -74,7 +69,6 @@ rule "r2-bucket-sippy" {
 
 rule "r2-bucket-event-notification" {
   match {
-    kind = "resource"
     type = "cloudflare_r2_bucket_event_notification"
   }
 
@@ -93,7 +87,6 @@ rule "r2-bucket-event-notification" {
 
 rule "r2-custom-domain" {
   match {
-    kind = "resource"
     type = "cloudflare_r2_custom_domain"
   }
 
@@ -113,7 +106,6 @@ rule "r2-custom-domain" {
 
 rule "r2-managed-domain" {
   match {
-    kind = "resource"
     type = "cloudflare_r2_managed_domain"
   }
 
@@ -127,7 +119,6 @@ rule "r2-managed-domain" {
 
 rule "r2-data-catalog" {
   match {
-    kind = "resource"
     type = "cloudflare_r2_data_catalog"
   }
 

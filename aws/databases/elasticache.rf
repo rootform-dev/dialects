@@ -6,7 +6,6 @@ concept "elasticache-global-replication-group" {
 
 rule "elasticache-cluster" {
   match {
-    kind = "resource"
     type = "aws_elasticache_cluster"
   }
 
@@ -15,7 +14,6 @@ rule "elasticache-cluster" {
 
 rule "elasticache-global-replication-group" {
   match {
-    kind = "resource"
     type = "aws_elasticache_global_replication_group"
   }
 
@@ -24,7 +22,6 @@ rule "elasticache-global-replication-group" {
 
 rule "elasticache-replication-group" {
   match {
-    kind = "resource"
     type = "aws_elasticache_replication_group"
   }
 

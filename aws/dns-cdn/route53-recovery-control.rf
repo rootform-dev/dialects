@@ -6,7 +6,6 @@ concept "route53recoverycontrolconfig-cluster" {
 
 rule "route53recoverycontrolconfig-cluster" {
   match {
-    kind = "resource"
     type = "aws_route53recoverycontrolconfig_cluster"
   }
 

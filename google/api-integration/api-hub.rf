@@ -5,7 +5,6 @@ concept "api-hub" {
 
 rule "api-hub" {
   match {
-    kind = "resource"
     type = "google_apihub_api_hub_instance"
   }
 

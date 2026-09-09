@@ -1,12 +1,12 @@
 rule "postgresql-flexible-server" {
   match {
-    kind = "resource"
     type = "azurerm_postgresql_flexible_server"
   }
 
   as = concept.core.managed-database
 
-  relation "private-reachability" {
+  relation {
+    as  = relation.core.private-reachability
     to  = concept.core.subnet
     via = source.delegated_subnet_id
   }
@@ -30,7 +30,6 @@ rule "postgresql-flexible-server" {
 
 rule "mssql-server" {
   match {
-    kind = "resource"
     type = "azurerm_mssql_server"
   }
 
@@ -50,7 +49,6 @@ rule "mssql-server" {
 
 rule "mssql-database" {
   match {
-    kind = "resource"
     type = "azurerm_mssql_database"
   }
 

@@ -6,7 +6,6 @@ concept "container-instance-group" {
 
 rule "container-instance-group" {
   match {
-    kind = "resource"
     type = "azurerm_container_group"
   }
 

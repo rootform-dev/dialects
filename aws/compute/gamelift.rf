@@ -16,7 +16,6 @@ concept "gamelift-game-session-queue" {
 
 rule "gamelift-fleet" {
   match {
-    kind = "resource"
     type = "aws_gamelift_fleet"
   }
 
@@ -25,7 +24,6 @@ rule "gamelift-fleet" {
 
 rule "gamelift-game-server-group" {
   match {
-    kind = "resource"
     type = "aws_gamelift_game_server_group"
   }
 
@@ -34,7 +32,6 @@ rule "gamelift-game-server-group" {
 
 rule "gamelift-game-session-queue" {
   match {
-    kind = "resource"
     type = "aws_gamelift_game_session_queue"
   }
 

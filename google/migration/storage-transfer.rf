@@ -10,7 +10,6 @@ concept "storage-transfer-agent-pool" {
 
 rule "storage-transfer-job" {
   match {
-    kind = "resource"
     type = "google_storage_transfer_job"
   }
 
@@ -19,7 +18,6 @@ rule "storage-transfer-job" {
 
 rule "storage-transfer-agent-pool" {
   match {
-    kind = "resource"
     type = "google_storage_transfer_agent_pool"
   }
 

@@ -10,7 +10,6 @@ concept "identity-access-configuration" {
 
 rule "identity-group" {
   match {
-    kind = "resource"
     type = "databricks_group"
   }
 
@@ -19,7 +18,6 @@ rule "identity-group" {
 
 rule "account-identity-group" {
   match {
-    kind = "resource"
     type = "databricks_account_iam_group_v2"
   }
 
@@ -28,7 +26,6 @@ rule "account-identity-group" {
 
 rule "workspace-identity-group" {
   match {
-    kind = "resource"
     type = "databricks_workspace_iam_group_v2"
   }
 
@@ -37,7 +34,6 @@ rule "workspace-identity-group" {
 
 rule "service-principal" {
   match {
-    kind = "resource"
     type = "databricks_service_principal"
   }
 
@@ -46,7 +42,6 @@ rule "service-principal" {
 
 rule "account-service-principal" {
   match {
-    kind = "resource"
     type = "databricks_account_iam_service_principal_v2"
   }
 
@@ -55,7 +50,6 @@ rule "account-service-principal" {
 
 rule "workspace-service-principal" {
   match {
-    kind = "resource"
     type = "databricks_workspace_iam_service_principal_v2"
   }
 
@@ -64,7 +58,6 @@ rule "workspace-service-principal" {
 
 rule "custom-app-integration" {
   match {
-    kind = "resource"
     type = "databricks_custom_app_integration"
   }
 
@@ -73,7 +66,6 @@ rule "custom-app-integration" {
 
 rule "account-federation-policy" {
   match {
-    kind = "resource"
     type = "databricks_account_federation_policy"
   }
 
@@ -82,7 +74,6 @@ rule "account-federation-policy" {
 
 rule "service-principal-federation-policy" {
   match {
-    kind = "resource"
     type = "databricks_service_principal_federation_policy"
   }
 
@@ -91,7 +82,6 @@ rule "service-principal-federation-policy" {
 
 rule "group-member" {
   match {
-    kind = "resource"
     type = "databricks_group_member"
   }
 
@@ -100,7 +90,6 @@ rule "group-member" {
 
 rule "group-role" {
   match {
-    kind = "resource"
     type = "databricks_group_role"
   }
 
@@ -109,7 +98,6 @@ rule "group-role" {
 
 rule "group-instance-profile" {
   match {
-    kind = "resource"
     type = "databricks_group_instance_profile"
   }
 
@@ -118,7 +106,6 @@ rule "group-instance-profile" {
 
 rule "service-principal-role" {
   match {
-    kind = "resource"
     type = "databricks_service_principal_role"
   }
 
@@ -127,7 +114,6 @@ rule "service-principal-role" {
 
 rule "user-role" {
   match {
-    kind = "resource"
     type = "databricks_user_role"
   }
 
@@ -136,7 +122,6 @@ rule "user-role" {
 
 rule "user-instance-profile" {
   match {
-    kind = "resource"
     type = "databricks_user_instance_profile"
   }
 
@@ -145,7 +130,6 @@ rule "user-instance-profile" {
 
 rule "entitlements" {
   match {
-    kind = "resource"
     type = "databricks_entitlements"
   }
 
@@ -154,7 +138,6 @@ rule "entitlements" {
 
 rule "permissions" {
   match {
-    kind = "resource"
     type = "databricks_permissions"
   }
 
@@ -163,7 +146,6 @@ rule "permissions" {
 
 rule "permission-assignment" {
   match {
-    kind = "resource"
     type = "databricks_permission_assignment"
   }
 
@@ -172,7 +154,6 @@ rule "permission-assignment" {
 
 rule "mws-permission-assignment" {
   match {
-    kind = "resource"
     type = "databricks_mws_permission_assignment"
   }
 
@@ -181,7 +162,6 @@ rule "mws-permission-assignment" {
 
 rule "grant" {
   match {
-    kind = "resource"
     type = "databricks_grant"
   }
 
@@ -190,7 +170,6 @@ rule "grant" {
 
 rule "grants" {
   match {
-    kind = "resource"
     type = "databricks_grants"
   }
 
@@ -199,7 +178,6 @@ rule "grants" {
 
 rule "access-control-rule-set" {
   match {
-    kind = "resource"
     type = "databricks_access_control_rule_set"
   }
 
@@ -208,7 +186,6 @@ rule "access-control-rule-set" {
 
 rule "account-group-member" {
   match {
-    kind = "resource"
     type = "databricks_account_iam_direct_group_member_v2"
   }
 
@@ -217,7 +194,6 @@ rule "account-group-member" {
 
 rule "workspace-group-member" {
   match {
-    kind = "resource"
     type = "databricks_workspace_iam_direct_group_member_v2"
   }
 
@@ -226,7 +202,6 @@ rule "workspace-group-member" {
 
 rule "account-workspace-assignment" {
   match {
-    kind = "resource"
     type = "databricks_account_iam_workspace_assignment_v2"
   }
 
@@ -235,7 +210,6 @@ rule "account-workspace-assignment" {
 
 rule "workspace-identity-assignment" {
   match {
-    kind = "resource"
     type = "databricks_workspace_iam_workspace_assignment_v2"
   }
 
@@ -244,7 +218,6 @@ rule "workspace-identity-assignment" {
 
 rule "workspace-identity-detail" {
   match {
-    kind = "resource"
     type = "databricks_workspace_iam_workspace_identity_detail_v2"
   }
 
@@ -253,7 +226,6 @@ rule "workspace-identity-detail" {
 
 rule "rfa-access-request-destinations" {
   match {
-    kind = "resource"
     type = "databricks_rfa_access_request_destinations"
   }
 

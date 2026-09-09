@@ -10,7 +10,6 @@ concept "online-serving-configuration" {
 
 rule "online-store" {
   match {
-    kind = "resource"
     type = "databricks_online_store"
   }
 
@@ -19,7 +18,6 @@ rule "online-store" {
 
 rule "online-table" {
   match {
-    kind = "resource"
     type = "databricks_online_table"
   }
 

@@ -10,7 +10,6 @@ concept "acl-auth-method" {
 
 rule "acl-auth-method" {
   match {
-    kind = "resource"
     type = "consul_acl_auth_method"
   }
 
@@ -40,7 +39,6 @@ rule "acl-auth-method-lookup" {
 
 rule "acl-binding-rule" {
   match {
-    kind = "resource"
     type = "consul_acl_binding_rule"
   }
 

@@ -6,7 +6,6 @@ concept "ecrpublic-repository" {
 
 rule "ecrpublic-repository" {
   match {
-    kind = "resource"
     type = "aws_ecrpublic_repository"
   }
 

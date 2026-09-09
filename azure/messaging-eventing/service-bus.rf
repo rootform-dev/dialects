@@ -1,7 +1,6 @@
 # Maintained directly from pinned provider evidence.
 rule "service-bus-namespace" {
   match {
-    kind = "resource"
     type = "azurerm_servicebus_namespace"
   }
 
@@ -16,7 +15,6 @@ rule "service-bus-namespace" {
 
 rule "service-bus-queue" {
   match {
-    kind = "resource"
     type = "azurerm_servicebus_queue"
   }
 
@@ -31,7 +29,6 @@ rule "service-bus-queue" {
 
 rule "service-bus-subscription" {
   match {
-    kind = "resource"
     type = "azurerm_servicebus_subscription"
   }
 
@@ -45,7 +42,6 @@ rule "service-bus-subscription" {
 
 rule "service-bus-subscription-rule" {
   match {
-    kind = "resource"
     type = "azurerm_servicebus_subscription_rule"
   }
 
@@ -54,7 +50,6 @@ rule "service-bus-subscription-rule" {
 
 rule "service-bus-topic" {
   match {
-    kind = "resource"
     type = "azurerm_servicebus_topic"
   }
 

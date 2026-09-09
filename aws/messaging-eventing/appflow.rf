@@ -6,7 +6,6 @@ concept "appflow-flow" {
 
 rule "appflow-flow" {
   match {
-    kind = "resource"
     type = "aws_appflow_flow"
   }
 

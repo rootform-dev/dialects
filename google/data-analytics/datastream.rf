@@ -5,7 +5,6 @@ concept "datastream-stream" {
 
 rule "datastream-stream" {
   match {
-    kind = "resource"
     type = "google_datastream_stream"
   }
 

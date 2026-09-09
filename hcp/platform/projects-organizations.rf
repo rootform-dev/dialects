@@ -19,7 +19,6 @@ rule "organization-lookup" {
 
 rule "project" {
   match {
-    kind = "resource"
     type = "hcp_project"
   }
 

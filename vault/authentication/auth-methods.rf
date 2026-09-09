@@ -15,7 +15,6 @@ concept "kubernetes-auth-integration" {
 
 rule "alicloud-auth-backend-role" {
   match {
-    kind = "resource"
     type = "vault_alicloud_auth_backend_role"
   }
 
@@ -29,7 +28,6 @@ rule "alicloud-auth-backend-role" {
 
 rule "approle-auth-backend-role" {
   match {
-    kind = "resource"
     type = "vault_approle_auth_backend_role"
   }
 
@@ -43,7 +41,6 @@ rule "approle-auth-backend-role" {
 
 rule "auth-backend" {
   match {
-    kind = "resource"
     type = "vault_auth_backend"
   }
 
@@ -58,7 +55,6 @@ rule "auth-backend" {
 
 rule "aws-auth-backend-cert" {
   match {
-    kind = "resource"
     type = "vault_aws_auth_backend_cert"
   }
 
@@ -72,7 +68,6 @@ rule "aws-auth-backend-cert" {
 
 rule "aws-auth-backend-client" {
   match {
-    kind = "resource"
     type = "vault_aws_auth_backend_client"
   }
 
@@ -86,7 +81,6 @@ rule "aws-auth-backend-client" {
 
 rule "aws-auth-backend-config-identity" {
   match {
-    kind = "resource"
     type = "vault_aws_auth_backend_config_identity"
   }
 
@@ -95,7 +89,6 @@ rule "aws-auth-backend-config-identity" {
 
 rule "aws-auth-backend-identity-whitelist" {
   match {
-    kind = "resource"
     type = "vault_aws_auth_backend_identity_whitelist"
   }
 
@@ -104,7 +97,6 @@ rule "aws-auth-backend-identity-whitelist" {
 
 rule "aws-auth-backend-role" {
   match {
-    kind = "resource"
     type = "vault_aws_auth_backend_role"
   }
 
@@ -118,7 +110,6 @@ rule "aws-auth-backend-role" {
 
 rule "aws-auth-backend-role-tag" {
   match {
-    kind = "resource"
     type = "vault_aws_auth_backend_role_tag"
   }
 
@@ -127,7 +118,6 @@ rule "aws-auth-backend-role-tag" {
 
 rule "aws-auth-backend-roletag-blacklist" {
   match {
-    kind = "resource"
     type = "vault_aws_auth_backend_roletag_blacklist"
   }
 
@@ -136,7 +126,6 @@ rule "aws-auth-backend-roletag-blacklist" {
 
 rule "aws-auth-backend-sts-role" {
   match {
-    kind = "resource"
     type = "vault_aws_auth_backend_sts_role"
   }
 
@@ -150,7 +139,6 @@ rule "aws-auth-backend-sts-role" {
 
 rule "azure-auth-backend-config" {
   match {
-    kind = "resource"
     type = "vault_azure_auth_backend_config"
   }
 
@@ -164,7 +152,6 @@ rule "azure-auth-backend-config" {
 
 rule "azure-auth-backend-role" {
   match {
-    kind = "resource"
     type = "vault_azure_auth_backend_role"
   }
 
@@ -178,7 +165,6 @@ rule "azure-auth-backend-role" {
 
 rule "cert-auth-backend-role" {
   match {
-    kind = "resource"
     type = "vault_cert_auth_backend_role"
   }
 
@@ -192,7 +178,6 @@ rule "cert-auth-backend-role" {
 
 rule "cf-auth-backend-config" {
   match {
-    kind = "resource"
     type = "vault_cf_auth_backend_config"
   }
 
@@ -206,7 +191,6 @@ rule "cf-auth-backend-config" {
 
 rule "cf-auth-backend-role" {
   match {
-    kind = "resource"
     type = "vault_cf_auth_backend_role"
   }
 
@@ -220,7 +204,6 @@ rule "cf-auth-backend-role" {
 
 rule "gcp-auth-backend" {
   match {
-    kind = "resource"
     type = "vault_gcp_auth_backend"
   }
 
@@ -240,7 +223,6 @@ rule "gcp-auth-backend" {
 
 rule "gcp-auth-backend-role" {
   match {
-    kind = "resource"
     type = "vault_gcp_auth_backend_role"
   }
 
@@ -254,7 +236,6 @@ rule "gcp-auth-backend-role" {
 
 rule "github-auth-backend" {
   match {
-    kind = "resource"
     type = "vault_github_auth_backend"
   }
 
@@ -269,7 +250,6 @@ rule "github-auth-backend" {
 
 rule "github-team" {
   match {
-    kind = "resource"
     type = "vault_github_team"
   }
 
@@ -283,7 +263,6 @@ rule "github-team" {
 
 rule "jwt-auth-backend" {
   match {
-    kind = "resource"
     type = "vault_jwt_auth_backend"
   }
 
@@ -298,7 +277,6 @@ rule "jwt-auth-backend" {
 
 rule "jwt-auth-backend-role" {
   match {
-    kind = "resource"
     type = "vault_jwt_auth_backend_role"
   }
 
@@ -312,7 +290,6 @@ rule "jwt-auth-backend-role" {
 
 rule "kerberos-auth-backend-config" {
   match {
-    kind = "resource"
     type = "vault_kerberos_auth_backend_config"
   }
 
@@ -326,7 +303,6 @@ rule "kerberos-auth-backend-config" {
 
 rule "kerberos-auth-backend-group" {
   match {
-    kind = "resource"
     type = "vault_kerberos_auth_backend_group"
   }
 
@@ -340,7 +316,6 @@ rule "kerberos-auth-backend-group" {
 
 rule "kerberos-auth-backend-ldap-config" {
   match {
-    kind = "resource"
     type = "vault_kerberos_auth_backend_ldap_config"
   }
 
@@ -349,7 +324,6 @@ rule "kerberos-auth-backend-ldap-config" {
 
 rule "kubernetes-auth-backend-config" {
   match {
-    kind = "resource"
     type = "vault_kubernetes_auth_backend_config"
   }
 
@@ -374,7 +348,6 @@ rule "kubernetes-auth-backend-config" {
 
 rule "kubernetes-auth-backend-role" {
   match {
-    kind = "resource"
     type = "vault_kubernetes_auth_backend_role"
   }
 
@@ -388,7 +361,6 @@ rule "kubernetes-auth-backend-role" {
 
 rule "ldap-auth-backend" {
   match {
-    kind = "resource"
     type = "vault_ldap_auth_backend"
   }
 
@@ -403,7 +375,6 @@ rule "ldap-auth-backend" {
 
 rule "ldap-auth-backend-group" {
   match {
-    kind = "resource"
     type = "vault_ldap_auth_backend_group"
   }
 
@@ -417,7 +388,6 @@ rule "ldap-auth-backend-group" {
 
 rule "oci-auth-backend" {
   match {
-    kind = "resource"
     type = "vault_oci_auth_backend"
   }
 
@@ -431,7 +401,6 @@ rule "oci-auth-backend" {
 
 rule "oci-auth-backend-role" {
   match {
-    kind = "resource"
     type = "vault_oci_auth_backend_role"
   }
 
@@ -445,7 +414,6 @@ rule "oci-auth-backend-role" {
 
 rule "okta-auth-backend" {
   match {
-    kind = "resource"
     type = "vault_okta_auth_backend"
   }
 
@@ -460,7 +428,6 @@ rule "okta-auth-backend" {
 
 rule "okta-auth-backend-group" {
   match {
-    kind = "resource"
     type = "vault_okta_auth_backend_group"
   }
 
@@ -474,7 +441,6 @@ rule "okta-auth-backend-group" {
 
 rule "radius-auth-backend" {
   match {
-    kind = "resource"
     type = "vault_radius_auth_backend"
   }
 
@@ -488,7 +454,6 @@ rule "radius-auth-backend" {
 
 rule "saml-auth-backend" {
   match {
-    kind = "resource"
     type = "vault_saml_auth_backend"
   }
 
@@ -503,7 +468,6 @@ rule "saml-auth-backend" {
 
 rule "saml-auth-backend-role" {
   match {
-    kind = "resource"
     type = "vault_saml_auth_backend_role"
   }
 
@@ -517,7 +481,6 @@ rule "saml-auth-backend-role" {
 
 rule "scep-auth-backend-role" {
   match {
-    kind = "resource"
     type = "vault_scep_auth_backend_role"
   }
 
@@ -531,7 +494,6 @@ rule "scep-auth-backend-role" {
 
 rule "spiffe-auth-backend-config" {
   match {
-    kind = "resource"
     type = "vault_spiffe_auth_backend_config"
   }
 
@@ -545,7 +507,6 @@ rule "spiffe-auth-backend-config" {
 
 rule "spiffe-auth-backend-role" {
   match {
-    kind = "resource"
     type = "vault_spiffe_auth_backend_role"
   }
 
@@ -559,7 +520,6 @@ rule "spiffe-auth-backend-role" {
 
 rule "token-auth-backend-role" {
   match {
-    kind = "resource"
     type = "vault_token_auth_backend_role"
   }
 

@@ -10,7 +10,6 @@ concept "sensitive-data-protection-template" {
 
 rule "sensitive-data-protection-discovery" {
   match {
-    kind = "resource"
     type = "google_data_loss_prevention_discovery_config"
   }
 
@@ -19,7 +18,6 @@ rule "sensitive-data-protection-discovery" {
 
 rule "sensitive-data-protection-job-trigger" {
   match {
-    kind = "resource"
     type = "google_data_loss_prevention_job_trigger"
   }
 
@@ -28,7 +26,6 @@ rule "sensitive-data-protection-job-trigger" {
 
 rule "sensitive-data-protection-deidentify-template" {
   match {
-    kind = "resource"
     type = "google_data_loss_prevention_deidentify_template"
   }
 
@@ -37,7 +34,6 @@ rule "sensitive-data-protection-deidentify-template" {
 
 rule "sensitive-data-protection-inspect-template" {
   match {
-    kind = "resource"
     type = "google_data_loss_prevention_inspect_template"
   }
 
@@ -46,7 +42,6 @@ rule "sensitive-data-protection-inspect-template" {
 
 rule "sensitive-data-protection-stored-info-type" {
   match {
-    kind = "resource"
     type = "google_data_loss_prevention_stored_info_type"
   }
 

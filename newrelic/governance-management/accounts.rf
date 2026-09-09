@@ -9,7 +9,6 @@ rule "account-lookup" {
 
 rule "account-management" {
   match {
-    kind = "resource"
     type = "newrelic_account_management"
   }
 

@@ -15,7 +15,6 @@ concept "network-binding" {
 
 rule "network-connectivity-configuration" {
   match {
-    kind = "resource"
     type = "databricks_mws_network_connectivity_config"
   }
 
@@ -24,7 +23,6 @@ rule "network-connectivity-configuration" {
 
 rule "network-connectivity-binding" {
   match {
-    kind = "resource"
     type = "databricks_mws_ncc_binding"
   }
 
@@ -43,7 +41,6 @@ rule "network-connectivity-binding" {
 
 rule "private-endpoint-rule" {
   match {
-    kind = "resource"
     type = "databricks_mws_ncc_private_endpoint_rule"
   }
 

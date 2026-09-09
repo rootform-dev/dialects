@@ -30,7 +30,6 @@ concept "dispatch-namespace" {
 
 rule "workers-script" {
   match {
-    kind = "resource"
     type = "cloudflare_workers_script"
   }
 
@@ -79,7 +78,6 @@ rule "workers-script" {
 
 rule "worker" {
   match {
-    kind = "resource"
     type = "cloudflare_worker"
   }
 
@@ -88,7 +86,6 @@ rule "worker" {
 
 rule "worker-version" {
   match {
-    kind = "resource"
     type = "cloudflare_worker_version"
   }
 
@@ -122,7 +119,6 @@ rule "worker-version" {
 
 rule "workers-deployment" {
   match {
-    kind = "resource"
     type = "cloudflare_workers_deployment"
   }
 
@@ -136,7 +132,6 @@ rule "workers-deployment" {
 
 rule "workers-route" {
   match {
-    kind = "resource"
     type = "cloudflare_workers_route"
   }
 
@@ -156,7 +151,6 @@ rule "workers-route" {
 
 rule "workers-custom-domain" {
   match {
-    kind = "resource"
     type = "cloudflare_workers_custom_domain"
   }
 
@@ -176,7 +170,6 @@ rule "workers-custom-domain" {
 
 rule "workers-script-subdomain" {
   match {
-    kind = "resource"
     type = "cloudflare_workers_script_subdomain"
   }
 
@@ -190,7 +183,6 @@ rule "workers-script-subdomain" {
 
 rule "workers-cron-trigger" {
   match {
-    kind = "resource"
     type = "cloudflare_workers_cron_trigger"
   }
 
@@ -204,7 +196,6 @@ rule "workers-cron-trigger" {
 
 rule "workers-dispatch-namespace" {
   match {
-    kind = "resource"
     type = "cloudflare_workers_for_platforms_dispatch_namespace"
   }
 
@@ -213,7 +204,6 @@ rule "workers-dispatch-namespace" {
 
 rule "workers-kv-namespace" {
   match {
-    kind = "resource"
     type = "cloudflare_workers_kv_namespace"
   }
 
@@ -222,7 +212,6 @@ rule "workers-kv-namespace" {
 
 rule "workers-kv" {
   match {
-    kind = "resource"
     type = "cloudflare_workers_kv"
   }
 

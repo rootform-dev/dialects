@@ -20,7 +20,6 @@ concept "dataproc-workflow-template" {
 
 rule "dataproc-cluster" {
   match {
-    kind = "resource"
     type = "google_dataproc_cluster"
   }
 
@@ -29,7 +28,6 @@ rule "dataproc-cluster" {
 
 rule "dataproc-batch" {
   match {
-    kind = "resource"
     type = "google_dataproc_batch"
   }
 
@@ -38,7 +36,6 @@ rule "dataproc-batch" {
 
 rule "dataproc-metastore" {
   match {
-    kind = "resource"
     type = "google_dataproc_metastore_service"
   }
 
@@ -47,7 +44,6 @@ rule "dataproc-metastore" {
 
 rule "dataproc-workflow-template" {
   match {
-    kind = "resource"
     type = "google_dataproc_workflow_template"
   }
 

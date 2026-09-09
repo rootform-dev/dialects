@@ -10,7 +10,6 @@ concept "dynamic-table" {
 
 rule "dynamic-table" {
   match {
-    kind = "resource"
     type = "snowflake_dynamic_table"
   }
 
@@ -31,7 +30,6 @@ rule "dynamic-table" {
 
 rule "external-table" {
   match {
-    kind = "resource"
     type = "snowflake_external_table"
   }
 
@@ -46,7 +44,6 @@ rule "external-table" {
 
 rule "hybrid-table" {
   match {
-    kind = "resource"
     type = "snowflake_hybrid_table"
   }
 
@@ -60,7 +57,6 @@ rule "hybrid-table" {
 
 rule "iceberg-table" {
   match {
-    kind = "resource"
     type = "snowflake_iceberg_table"
   }
 
@@ -75,7 +71,6 @@ rule "iceberg-table" {
 
 rule "iceberg-table-from-aws-glue" {
   match {
-    kind = "resource"
     type = "snowflake_iceberg_table_from_aws_glue"
   }
 
@@ -90,7 +85,6 @@ rule "iceberg-table-from-aws-glue" {
 
 rule "iceberg-table-from-delta-files" {
   match {
-    kind = "resource"
     type = "snowflake_iceberg_table_from_delta_files"
   }
 
@@ -105,7 +99,6 @@ rule "iceberg-table-from-delta-files" {
 
 rule "iceberg-table-from-files" {
   match {
-    kind = "resource"
     type = "snowflake_iceberg_table_from_files"
   }
 
@@ -120,7 +113,6 @@ rule "iceberg-table-from-files" {
 
 rule "iceberg-table-from-rest" {
   match {
-    kind = "resource"
     type = "snowflake_iceberg_table_from_rest"
   }
 
@@ -135,7 +127,6 @@ rule "iceberg-table-from-rest" {
 
 rule "semantic-view" {
   match {
-    kind = "resource"
     type = "snowflake_semantic_view"
   }
 

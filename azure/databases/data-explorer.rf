@@ -11,7 +11,6 @@ concept "data-explorer-database" {
 
 rule "data-explorer-cluster" {
   match {
-    kind = "resource"
     type = "azurerm_kusto_cluster"
   }
 
@@ -20,7 +19,6 @@ rule "data-explorer-cluster" {
 
 rule "data-explorer-database" {
   match {
-    kind = "resource"
     type = "azurerm_kusto_database"
   }
 
@@ -29,7 +27,6 @@ rule "data-explorer-database" {
 
 rule "data-explorer-event-grid-connection" {
   match {
-    kind = "resource"
     type = "azurerm_kusto_eventgrid_data_connection"
   }
 
@@ -38,7 +35,6 @@ rule "data-explorer-event-grid-connection" {
 
 rule "data-explorer-event-hubs-connection" {
   match {
-    kind = "resource"
     type = "azurerm_kusto_eventhub_data_connection"
   }
 

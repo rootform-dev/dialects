@@ -11,7 +11,6 @@ concept "health-data-workspace" {
 
 rule "health-data-dicom-service" {
   match {
-    kind = "resource"
     type = "azurerm_healthcare_dicom_service"
   }
 
@@ -20,7 +19,6 @@ rule "health-data-dicom-service" {
 
 rule "health-data-fhir-service" {
   match {
-    kind = "resource"
     type = "azurerm_healthcare_fhir_service"
   }
 
@@ -29,7 +27,6 @@ rule "health-data-fhir-service" {
 
 rule "health-data-medtech-service" {
   match {
-    kind = "resource"
     type = "azurerm_healthcare_medtech_service"
   }
 
@@ -38,7 +35,6 @@ rule "health-data-medtech-service" {
 
 rule "health-data-services-workspace" {
   match {
-    kind = "resource"
     type = "azurerm_healthcare_workspace"
   }
 
@@ -47,7 +43,6 @@ rule "health-data-services-workspace" {
 
 rule "healthcare-service" {
   match {
-    kind = "resource"
     type = "azurerm_healthcare_service"
   }
 

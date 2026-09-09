@@ -6,7 +6,6 @@ concept "load-test" {
 
 rule "load-test" {
   match {
-    kind = "resource"
     type = "azurerm_load_test"
   }
 

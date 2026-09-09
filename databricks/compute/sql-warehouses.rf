@@ -10,7 +10,6 @@ concept "sql-configuration" {
 
 rule "sql-warehouse" {
   match {
-    kind = "resource"
     type = "databricks_sql_endpoint"
   }
 
@@ -24,7 +23,6 @@ rule "sql-warehouse" {
 
 rule "sql-global-config" {
   match {
-    kind = "resource"
     type = "databricks_sql_global_config"
   }
 
@@ -33,7 +31,6 @@ rule "sql-global-config" {
 
 rule "sql-permissions" {
   match {
-    kind = "resource"
     type = "databricks_sql_permissions"
   }
 

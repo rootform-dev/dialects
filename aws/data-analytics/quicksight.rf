@@ -6,7 +6,6 @@ concept "quicksight-dashboard" {
 
 rule "quicksight-dashboard" {
   match {
-    kind = "resource"
     type = "aws_quicksight_dashboard"
   }
 

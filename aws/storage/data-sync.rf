@@ -31,7 +31,6 @@ concept "datasync-task" {
 
 rule "datasync-agent" {
   match {
-    kind = "resource"
     type = "aws_datasync_agent"
   }
 
@@ -40,7 +39,6 @@ rule "datasync-agent" {
 
 rule "datasync-location-fsx-lustre-file-system" {
   match {
-    kind = "resource"
     type = "aws_datasync_location_fsx_lustre_file_system"
   }
 
@@ -49,7 +47,6 @@ rule "datasync-location-fsx-lustre-file-system" {
 
 rule "datasync-location-fsx-ontap-file-system" {
   match {
-    kind = "resource"
     type = "aws_datasync_location_fsx_ontap_file_system"
   }
 
@@ -58,7 +55,6 @@ rule "datasync-location-fsx-ontap-file-system" {
 
 rule "datasync-location-fsx-openzfs-file-system" {
   match {
-    kind = "resource"
     type = "aws_datasync_location_fsx_openzfs_file_system"
   }
 
@@ -67,7 +63,6 @@ rule "datasync-location-fsx-openzfs-file-system" {
 
 rule "datasync-location-fsx-windows-file-system" {
   match {
-    kind = "resource"
     type = "aws_datasync_location_fsx_windows_file_system"
   }
 
@@ -76,7 +71,6 @@ rule "datasync-location-fsx-windows-file-system" {
 
 rule "datasync-task" {
   match {
-    kind = "resource"
     type = "aws_datasync_task"
   }
 

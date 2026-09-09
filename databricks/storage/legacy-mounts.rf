@@ -5,7 +5,6 @@ concept "legacy-storage-mount" {
 
 rule "aws-s3-mount" {
   match {
-    kind = "resource"
     type = "databricks_aws_s3_mount"
   }
 
@@ -14,7 +13,6 @@ rule "aws-s3-mount" {
 
 rule "azure-adls-gen1-mount" {
   match {
-    kind = "resource"
     type = "databricks_azure_adls_gen1_mount"
   }
 
@@ -23,7 +21,6 @@ rule "azure-adls-gen1-mount" {
 
 rule "azure-adls-gen2-mount" {
   match {
-    kind = "resource"
     type = "databricks_azure_adls_gen2_mount"
   }
 
@@ -32,7 +29,6 @@ rule "azure-adls-gen2-mount" {
 
 rule "azure-blob-mount" {
   match {
-    kind = "resource"
     type = "databricks_azure_blob_mount"
   }
 
@@ -41,7 +37,6 @@ rule "azure-blob-mount" {
 
 rule "mount" {
   match {
-    kind = "resource"
     type = "databricks_mount"
   }
 

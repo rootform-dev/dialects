@@ -11,7 +11,6 @@ concept "netapp-capacity-pool" {
 
 rule "netapp-account" {
   match {
-    kind = "resource"
     type = "azurerm_netapp_account"
   }
 
@@ -20,7 +19,6 @@ rule "netapp-account" {
 
 rule "netapp-capacity-pool" {
   match {
-    kind = "resource"
     type = "azurerm_netapp_pool"
   }
 
@@ -29,7 +27,6 @@ rule "netapp-capacity-pool" {
 
 rule "netapp-volume" {
   match {
-    kind = "resource"
     type = "azurerm_netapp_volume"
   }
 

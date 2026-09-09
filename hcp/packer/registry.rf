@@ -45,7 +45,6 @@ rule "packer-artifact-lookup" {
 
 rule "packer-bucket" {
   match {
-    kind = "resource"
     type = "hcp_packer_bucket"
   }
 
@@ -60,7 +59,6 @@ rule "packer-bucket" {
 
 rule "packer-bucket-iam-binding" {
   match {
-    kind = "resource"
     type = "hcp_packer_bucket_iam_binding"
   }
 
@@ -74,7 +72,6 @@ rule "packer-bucket-iam-binding" {
 
 rule "packer-bucket-iam-policy" {
   match {
-    kind = "resource"
     type = "hcp_packer_bucket_iam_policy"
   }
 
@@ -88,7 +85,6 @@ rule "packer-bucket-iam-policy" {
 
 rule "packer-channel" {
   match {
-    kind = "resource"
     type = "hcp_packer_channel"
   }
 
@@ -103,7 +99,6 @@ rule "packer-channel" {
 
 rule "packer-channel-assignment" {
   match {
-    kind = "resource"
     type = "hcp_packer_channel_assignment"
   }
 

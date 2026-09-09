@@ -5,7 +5,6 @@ concept "database-configuration" {
 
 rule "advanced-cluster" {
   match {
-    kind = "resource"
     type = "mongodbatlas_advanced_cluster"
   }
 
@@ -20,7 +19,6 @@ rule "advanced-cluster" {
 
 rule "cluster" {
   match {
-    kind = "resource"
     type = "mongodbatlas_cluster"
   }
 
@@ -35,7 +33,6 @@ rule "cluster" {
 
 rule "flex-cluster" {
   match {
-    kind = "resource"
     type = "mongodbatlas_flex_cluster"
   }
 
@@ -50,7 +47,6 @@ rule "flex-cluster" {
 
 rule "serverless-instance" {
   match {
-    kind = "resource"
     type = "mongodbatlas_serverless_instance"
   }
 
@@ -65,7 +61,6 @@ rule "serverless-instance" {
 
 rule "global-cluster-configuration" {
   match {
-    kind = "resource"
     type = "mongodbatlas_global_cluster_config"
   }
 
@@ -84,7 +79,6 @@ rule "global-cluster-configuration" {
 
 rule "maintenance-window" {
   match {
-    kind = "resource"
     type = "mongodbatlas_maintenance_window"
   }
 

@@ -1,6 +1,5 @@
 rule "workflow-automation" {
   match {
-    kind = "resource"
     type = "newrelic_workflow_automation"
   }
 

@@ -10,7 +10,6 @@ concept "identity-domain" {
 
 rule "custom-domain" {
   match {
-    kind = "resource"
     type = "auth0_custom_domain"
   }
 
@@ -19,7 +18,6 @@ rule "custom-domain" {
 
 rule "custom-domain-default" {
   match {
-    kind = "resource"
     type = "auth0_custom_domain_default"
   }
 
@@ -42,7 +40,6 @@ rule "custom-domain-lookup" {
 
 rule "custom-domain-verification" {
   match {
-    kind = "resource"
     type = "auth0_custom_domain_verification"
   }
 

@@ -10,7 +10,6 @@ concept "privileged-access-settings" {
 
 rule "privileged-access-entitlement" {
   match {
-    kind = "resource"
     type = "google_privileged_access_manager_entitlement"
   }
 
@@ -19,7 +18,6 @@ rule "privileged-access-entitlement" {
 
 rule "privileged-access-settings" {
   match {
-    kind = "resource"
     type = "google_privileged_access_manager_settings"
   }
 

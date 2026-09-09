@@ -6,7 +6,6 @@ concept "guardduty-detector" {
 
 rule "guardduty-detector" {
   match {
-    kind = "resource"
     type = "aws_guardduty_detector"
   }
 

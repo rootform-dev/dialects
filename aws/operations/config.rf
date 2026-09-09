@@ -6,7 +6,6 @@ concept "config-delivery-channel" {
 
 rule "config-delivery-channel" {
   match {
-    kind = "resource"
     type = "aws_config_delivery_channel"
   }
 

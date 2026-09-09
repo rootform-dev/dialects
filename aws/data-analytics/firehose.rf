@@ -6,7 +6,6 @@ concept "kinesis-firehose-delivery-stream" {
 
 rule "kinesis-firehose-delivery-stream" {
   match {
-    kind = "resource"
     type = "aws_kinesis_firehose_delivery_stream"
   }
 

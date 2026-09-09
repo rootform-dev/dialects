@@ -6,7 +6,6 @@ concept "event-stream" {
 
 rule "event-hub" {
   match {
-    kind = "resource"
     type = "azurerm_eventhub"
   }
 
@@ -15,7 +14,6 @@ rule "event-hub" {
 
 rule "event-hubs-cluster" {
   match {
-    kind = "resource"
     type = "azurerm_eventhub_cluster"
   }
 
@@ -24,7 +22,6 @@ rule "event-hubs-cluster" {
 
 rule "event-hubs-consumer-group" {
   match {
-    kind = "resource"
     type = "azurerm_eventhub_consumer_group"
   }
 
@@ -33,7 +30,6 @@ rule "event-hubs-consumer-group" {
 
 rule "event-hubs-namespace" {
   match {
-    kind = "resource"
     type = "azurerm_eventhub_namespace"
   }
 
@@ -42,7 +38,6 @@ rule "event-hubs-namespace" {
 
 rule "event-hubs-schema-group" {
   match {
-    kind = "resource"
     type = "azurerm_eventhub_namespace_schema_group"
   }
 

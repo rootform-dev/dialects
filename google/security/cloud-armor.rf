@@ -10,7 +10,6 @@ concept "cloud-armor-security-rule" {
 
 rule "cloud-armor-security-policy" {
   match {
-    kind = "resource"
     type = "google_compute_security_policy"
   }
 
@@ -19,7 +18,6 @@ rule "cloud-armor-security-policy" {
 
 rule "cloud-armor-security-rule" {
   match {
-    kind = "resource"
     type = "google_compute_security_policy_rule"
   }
 

@@ -5,7 +5,6 @@ concept "service-enablement" {
 
 rule "project-service-enablement" {
   match {
-    kind = "resource"
     type = "google_project_service"
   }
 

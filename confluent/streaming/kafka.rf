@@ -10,7 +10,6 @@ concept "kafka-configuration" {
 
 rule "kafka-cluster" {
   match {
-    kind = "resource"
     type = "confluent_kafka_cluster"
   }
 
@@ -36,7 +35,6 @@ rule "kafka-cluster" {
 
 rule "kafka-topic" {
   match {
-    kind = "resource"
     type = "confluent_kafka_topic"
   }
 
@@ -51,7 +49,6 @@ rule "kafka-topic" {
 
 rule "rtce-topic" {
   match {
-    kind = "resource"
     type = "confluent_rtce_topic"
   }
 
@@ -72,7 +69,6 @@ rule "rtce-topic" {
 
 rule "kafka-acl" {
   match {
-    kind = "resource"
     type = "confluent_kafka_acl"
   }
 
@@ -86,7 +82,6 @@ rule "kafka-acl" {
 
 rule "kafka-client-quota" {
   match {
-    kind = "resource"
     type = "confluent_kafka_client_quota"
   }
 
@@ -100,7 +95,6 @@ rule "kafka-client-quota" {
 
 rule "kafka-cluster-config" {
   match {
-    kind = "resource"
     type = "confluent_kafka_cluster_config"
   }
 

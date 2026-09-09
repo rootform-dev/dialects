@@ -25,7 +25,6 @@ concept "security-configuration" {
 
 rule "byok-key" {
   match {
-    kind = "resource"
     type = "confluent_byok_key"
   }
 
@@ -49,7 +48,6 @@ rule "byok-key" {
 
 rule "certificate-authority" {
   match {
-    kind = "resource"
     type = "confluent_certificate_authority"
   }
 
@@ -58,7 +56,6 @@ rule "certificate-authority" {
 
 rule "certificate-pool" {
   match {
-    kind = "resource"
     type = "confluent_certificate_pool"
   }
 
@@ -72,7 +69,6 @@ rule "certificate-pool" {
 
 rule "provider-integration" {
   match {
-    kind = "resource"
     type = "confluent_provider_integration"
   }
 
@@ -92,7 +88,6 @@ rule "provider-integration" {
 
 rule "provider-integration-authorization" {
   match {
-    kind = "resource"
     type = "confluent_provider_integration_authorization"
   }
 
@@ -106,7 +101,6 @@ rule "provider-integration-authorization" {
 
 rule "provider-integration-setup" {
   match {
-    kind = "resource"
     type = "confluent_provider_integration_setup"
   }
 

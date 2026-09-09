@@ -11,7 +11,6 @@ concept "sesv2-multi-region-endpoint" {
 
 rule "sesv2-dedicated-ip-pool" {
   match {
-    kind = "resource"
     type = "aws_sesv2_dedicated_ip_pool"
   }
 
@@ -20,7 +19,6 @@ rule "sesv2-dedicated-ip-pool" {
 
 rule "sesv2-multi-region-endpoint" {
   match {
-    kind = "resource"
     type = "aws_sesv2_multi_region_endpoint"
   }
 

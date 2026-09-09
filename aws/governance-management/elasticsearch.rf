@@ -6,7 +6,6 @@ concept "elasticsearch-domain" {
 
 rule "elasticsearch-domain" {
   match {
-    kind = "resource"
     type = "aws_elasticsearch_domain"
   }
 

@@ -1,6 +1,5 @@
 rule "appsync-graphql-api" {
   match {
-    kind = "resource"
     type = "aws_appsync_graphql_api"
   }
 
@@ -9,7 +8,6 @@ rule "appsync-graphql-api" {
 
 rule "appsync-datasource" {
   match {
-    kind = "resource"
     type = "aws_appsync_datasource"
   }
 
@@ -23,7 +21,6 @@ rule "appsync-datasource" {
 
 rule "appsync-function" {
   match {
-    kind = "resource"
     type = "aws_appsync_function"
   }
 
@@ -37,7 +34,6 @@ rule "appsync-function" {
 
 rule "appsync-resolver" {
   match {
-    kind = "resource"
     type = "aws_appsync_resolver"
   }
 

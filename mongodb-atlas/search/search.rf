@@ -10,7 +10,6 @@ concept "search-configuration" {
 
 rule "search-deployment" {
   match {
-    kind = "resource"
     type = "mongodbatlas_search_deployment"
   }
 
@@ -30,7 +29,6 @@ rule "search-deployment" {
 
 rule "search-index" {
   match {
-    kind = "resource"
     type = "mongodbatlas_search_index"
   }
 
@@ -44,7 +42,6 @@ rule "search-index" {
 
 rule "ai-model-rate-limit" {
   match {
-    kind = "resource"
     type = "mongodbatlas_ai_model_rate_limit"
   }
 

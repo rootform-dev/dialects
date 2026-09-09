@@ -6,7 +6,6 @@ concept "subscription" {
 
 rule "subscription" {
   match {
-    kind = "resource"
     type = "azurerm_subscription"
   }
 

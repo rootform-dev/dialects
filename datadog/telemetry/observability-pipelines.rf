@@ -5,7 +5,6 @@ concept "telemetry-pipeline" {
 
 rule "observability-pipeline" {
   match {
-    kind = "resource"
     type = "datadog_observability_pipeline"
   }
 

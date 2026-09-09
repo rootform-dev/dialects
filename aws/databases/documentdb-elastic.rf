@@ -6,7 +6,6 @@ concept "docdbelastic-cluster" {
 
 rule "docdbelastic-cluster" {
   match {
-    kind = "resource"
     type = "aws_docdbelastic_cluster"
   }
 

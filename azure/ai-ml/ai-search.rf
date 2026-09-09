@@ -6,7 +6,6 @@ concept "ai-search-service" {
 
 rule "ai-search-service" {
   match {
-    kind = "resource"
     type = "azurerm_search_service"
   }
 

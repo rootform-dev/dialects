@@ -11,7 +11,6 @@ concept "m2-environment" {
 
 rule "m2-application" {
   match {
-    kind = "resource"
     type = "aws_m2_application"
   }
 
@@ -20,7 +19,6 @@ rule "m2-application" {
 
 rule "m2-environment" {
   match {
-    kind = "resource"
     type = "aws_m2_environment"
   }
 

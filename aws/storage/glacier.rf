@@ -6,7 +6,6 @@ concept "glacier-vault" {
 
 rule "glacier-vault" {
   match {
-    kind = "resource"
     type = "aws_glacier_vault"
   }
 

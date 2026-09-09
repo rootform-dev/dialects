@@ -21,7 +21,6 @@ concept "cloudwatch-metric-stream" {
 
 rule "cloudwatch-composite-alarm" {
   match {
-    kind = "resource"
     type = "aws_cloudwatch_composite_alarm"
   }
 
@@ -30,7 +29,6 @@ rule "cloudwatch-composite-alarm" {
 
 rule "cloudwatch-dashboard" {
   match {
-    kind = "resource"
     type = "aws_cloudwatch_dashboard"
   }
 
@@ -39,7 +37,6 @@ rule "cloudwatch-dashboard" {
 
 rule "cloudwatch-metric-alarm" {
   match {
-    kind = "resource"
     type = "aws_cloudwatch_metric_alarm"
   }
 
@@ -48,7 +45,6 @@ rule "cloudwatch-metric-alarm" {
 
 rule "cloudwatch-metric-stream" {
   match {
-    kind = "resource"
     type = "aws_cloudwatch_metric_stream"
   }
 

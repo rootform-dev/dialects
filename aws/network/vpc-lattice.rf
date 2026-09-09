@@ -21,7 +21,6 @@ concept "vpclattice-target-group" {
 
 rule "vpclattice-resource-gateway" {
   match {
-    kind = "resource"
     type = "aws_vpclattice_resource_gateway"
   }
 
@@ -30,7 +29,6 @@ rule "vpclattice-resource-gateway" {
 
 rule "vpclattice-service" {
   match {
-    kind = "resource"
     type = "aws_vpclattice_service"
   }
 
@@ -39,7 +37,6 @@ rule "vpclattice-service" {
 
 rule "vpclattice-service-network" {
   match {
-    kind = "resource"
     type = "aws_vpclattice_service_network"
   }
 
@@ -48,7 +45,6 @@ rule "vpclattice-service-network" {
 
 rule "vpclattice-target-group" {
   match {
-    kind = "resource"
     type = "aws_vpclattice_target_group"
   }
 

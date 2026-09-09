@@ -15,7 +15,6 @@ concept "cloud-monitoring-slo" {
 
 rule "cloud-monitoring-alerting-policy" {
   match {
-    kind = "resource"
     type = "google_monitoring_alert_policy"
   }
 
@@ -30,7 +29,6 @@ rule "cloud-monitoring-alerting-policy" {
 
 rule "cloud-monitoring-service" {
   match {
-    kind = "resource"
     type = "google_monitoring_service"
   }
 
@@ -45,7 +43,6 @@ rule "cloud-monitoring-service" {
 
 rule "cloud-monitoring-slo" {
   match {
-    kind = "resource"
     type = "google_monitoring_slo"
   }
 

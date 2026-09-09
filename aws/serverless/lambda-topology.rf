@@ -1,6 +1,5 @@
 rule "lambda-function" {
   match {
-    kind = "resource"
     type = "aws_lambda_function"
   }
 

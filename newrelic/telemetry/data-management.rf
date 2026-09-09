@@ -5,7 +5,6 @@ concept "telemetry-processing-configuration" {
 
 rule "cardinality-management" {
   match {
-    kind = "resource"
     type = "newrelic_cardinality_management"
   }
 
@@ -14,7 +13,6 @@ rule "cardinality-management" {
 
 rule "data-partition-rule" {
   match {
-    kind = "resource"
     type = "newrelic_data_partition_rule"
   }
 
@@ -29,7 +27,6 @@ rule "data-partition-rule" {
 
 rule "events-to-metrics-rule" {
   match {
-    kind = "resource"
     type = "newrelic_events_to_metrics_rule"
   }
 
@@ -44,7 +41,6 @@ rule "events-to-metrics-rule" {
 
 rule "log-parsing-rule" {
   match {
-    kind = "resource"
     type = "newrelic_log_parsing_rule"
   }
 
@@ -59,7 +55,6 @@ rule "log-parsing-rule" {
 
 rule "metric-pruning-rule" {
   match {
-    kind = "resource"
     type = "newrelic_metric_pruning_rule"
   }
 
@@ -74,7 +69,6 @@ rule "metric-pruning-rule" {
 
 rule "nrql-drop-rule" {
   match {
-    kind = "resource"
     type = "newrelic_nrql_drop_rule"
   }
 
@@ -89,7 +83,6 @@ rule "nrql-drop-rule" {
 
 rule "obfuscation-expression" {
   match {
-    kind = "resource"
     type = "newrelic_obfuscation_expression"
   }
 
@@ -119,7 +112,6 @@ rule "obfuscation-expression-lookup" {
 
 rule "obfuscation-rule" {
   match {
-    kind = "resource"
     type = "newrelic_obfuscation_rule"
   }
 
@@ -134,7 +126,6 @@ rule "obfuscation-rule" {
 
 rule "pipeline-cloud-rule" {
   match {
-    kind = "resource"
     type = "newrelic_pipeline_cloud_rule"
   }
 

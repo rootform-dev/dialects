@@ -10,7 +10,6 @@ concept "cloud-kms-key-version" {
 
 rule "cloud-kms-key-ring" {
   match {
-    kind = "resource"
     type = "google_kms_key_ring"
   }
 
@@ -19,7 +18,6 @@ rule "cloud-kms-key-ring" {
 
 rule "cloud-kms-key" {
   match {
-    kind = "resource"
     type = "google_kms_crypto_key"
   }
 
@@ -34,7 +32,6 @@ rule "cloud-kms-key" {
 
 rule "cloud-kms-key-version" {
   match {
-    kind = "resource"
     type = "google_kms_crypto_key_version"
   }
 

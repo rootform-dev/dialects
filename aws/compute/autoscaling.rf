@@ -6,7 +6,6 @@ concept "autoscaling-group" {
 
 rule "autoscaling-group" {
   match {
-    kind = "resource"
     type = "aws_autoscaling_group"
   }
 

@@ -10,7 +10,6 @@ concept "user-credential" {
 
 rule "user" {
   match {
-    kind = "resource"
     type = "kestra_user"
   }
 
@@ -19,7 +18,6 @@ rule "user" {
 
 rule "user-password" {
   match {
-    kind = "resource"
     type = "kestra_user_password"
   }
 

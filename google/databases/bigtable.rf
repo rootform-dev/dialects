@@ -5,7 +5,6 @@ concept "bigtable-table" {
 
 rule "bigtable-instance" {
   match {
-    kind = "resource"
     type = "google_bigtable_instance"
   }
 
@@ -14,7 +13,6 @@ rule "bigtable-instance" {
 
 rule "bigtable-table" {
   match {
-    kind = "resource"
     type = "google_bigtable_table"
   }
 

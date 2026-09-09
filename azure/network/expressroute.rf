@@ -6,7 +6,6 @@ concept "expressroute-gateway" {
 
 rule "expressroute-circuit" {
   match {
-    kind = "resource"
     type = "azurerm_express_route_circuit"
   }
 
@@ -15,7 +14,6 @@ rule "expressroute-circuit" {
 
 rule "expressroute-gateway" {
   match {
-    kind = "resource"
     type = "azurerm_express_route_gateway"
   }
 
@@ -24,7 +22,6 @@ rule "expressroute-gateway" {
 
 rule "expressroute-port" {
   match {
-    kind = "resource"
     type = "azurerm_express_route_port"
   }
 

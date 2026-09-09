@@ -6,7 +6,6 @@ concept "lex-bot" {
 
 rule "lex-bot" {
   match {
-    kind = "resource"
     type = "aws_lex_bot"
   }
 

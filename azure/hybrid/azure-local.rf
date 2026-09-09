@@ -6,7 +6,6 @@ concept "azure-local-cluster" {
 
 rule "azure-local-cluster" {
   match {
-    kind = "resource"
     type = "azurerm_stack_hci_cluster"
   }
 

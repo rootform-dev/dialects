@@ -21,7 +21,6 @@ concept "storagegateway-tape-pool" {
 
 rule "storagegateway-cached-iscsi-volume" {
   match {
-    kind = "resource"
     type = "aws_storagegateway_cached_iscsi_volume"
   }
 
@@ -30,7 +29,6 @@ rule "storagegateway-cached-iscsi-volume" {
 
 rule "storagegateway-gateway" {
   match {
-    kind = "resource"
     type = "aws_storagegateway_gateway"
   }
 
@@ -39,7 +37,6 @@ rule "storagegateway-gateway" {
 
 rule "storagegateway-stored-iscsi-volume" {
   match {
-    kind = "resource"
     type = "aws_storagegateway_stored_iscsi_volume"
   }
 
@@ -48,7 +45,6 @@ rule "storagegateway-stored-iscsi-volume" {
 
 rule "storagegateway-tape-pool" {
   match {
-    kind = "resource"
     type = "aws_storagegateway_tape_pool"
   }
 

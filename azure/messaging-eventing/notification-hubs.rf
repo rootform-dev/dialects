@@ -11,7 +11,6 @@ concept "notification-namespace" {
 
 rule "notification-hub" {
   match {
-    kind = "resource"
     type = "azurerm_notification_hub"
   }
 
@@ -20,7 +19,6 @@ rule "notification-hub" {
 
 rule "notification-hubs-namespace" {
   match {
-    kind = "resource"
     type = "azurerm_notification_hub_namespace"
   }
 

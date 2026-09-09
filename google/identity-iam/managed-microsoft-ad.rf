@@ -10,7 +10,6 @@ concept "managed-microsoft-ad-peering" {
 
 rule "managed-microsoft-ad-domain" {
   match {
-    kind = "resource"
     type = "google_active_directory_domain"
   }
 
@@ -19,7 +18,6 @@ rule "managed-microsoft-ad-domain" {
 
 rule "managed-microsoft-ad-peering" {
   match {
-    kind = "resource"
     type = "google_active_directory_peering"
   }
 

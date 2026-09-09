@@ -16,7 +16,6 @@ concept "msk-topic" {
 
 rule "msk-cluster" {
   match {
-    kind = "resource"
     type = "aws_msk_cluster"
   }
 
@@ -25,7 +24,6 @@ rule "msk-cluster" {
 
 rule "msk-serverless-cluster" {
   match {
-    kind = "resource"
     type = "aws_msk_serverless_cluster"
   }
 
@@ -34,7 +32,6 @@ rule "msk-serverless-cluster" {
 
 rule "msk-topic" {
   match {
-    kind = "resource"
     type = "aws_msk_topic"
   }
 

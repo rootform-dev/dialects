@@ -6,7 +6,6 @@ concept "dataexchange-data-set" {
 
 rule "dataexchange-data-set" {
   match {
-    kind = "resource"
     type = "aws_dataexchange_data_set"
   }
 

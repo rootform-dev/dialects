@@ -6,7 +6,6 @@ concept "swf-domain" {
 
 rule "swf-domain" {
   match {
-    kind = "resource"
     type = "aws_swf_domain"
   }
 

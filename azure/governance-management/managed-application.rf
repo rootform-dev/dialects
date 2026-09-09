@@ -6,7 +6,6 @@ concept "managed-application" {
 
 rule "managed-application" {
   match {
-    kind = "resource"
     type = "azurerm_managed_application"
   }
 

@@ -1,6 +1,5 @@
 rule "aks-cluster" {
   match {
-    kind = "resource"
     type = "azurerm_kubernetes_cluster"
   }
 
@@ -31,7 +30,6 @@ rule "aks-cluster" {
 
 rule "aks-node-pool" {
   match {
-    kind = "resource"
     type = "azurerm_kubernetes_cluster_node_pool"
   }
 

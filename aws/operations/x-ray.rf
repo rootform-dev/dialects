@@ -6,7 +6,6 @@ concept "xray-group" {
 
 rule "xray-group" {
   match {
-    kind = "resource"
     type = "aws_xray_group"
   }
 

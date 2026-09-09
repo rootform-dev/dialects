@@ -1,7 +1,6 @@
 # Maintained directly from pinned provider evidence.
 rule "flex-consumption-function-app" {
   match {
-    kind = "resource"
     type = "azurerm_function_app_flex_consumption"
   }
 
@@ -28,7 +27,6 @@ rule "flex-consumption-function-app" {
 
 rule "function-app-function" {
   match {
-    kind = "resource"
     type = "azurerm_function_app_function"
   }
 
@@ -60,7 +58,6 @@ rule "function-app-function" {
 
 rule "linux-function-app" {
   match {
-    kind = "resource"
     type = "azurerm_linux_function_app"
   }
 
@@ -92,7 +89,6 @@ rule "linux-function-app" {
 
 rule "windows-function-app" {
   match {
-    kind = "resource"
     type = "azurerm_windows_function_app"
   }
 

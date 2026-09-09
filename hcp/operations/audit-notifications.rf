@@ -10,7 +10,6 @@ concept "notification-webhook" {
 
 rule "log-streaming-destination" {
   match {
-    kind = "resource"
     type = "hcp_log_streaming_destination"
   }
 
@@ -24,7 +23,6 @@ rule "log-streaming-destination" {
 
 rule "notifications-webhook" {
   match {
-    kind = "resource"
     type = "hcp_notifications_webhook"
   }
 

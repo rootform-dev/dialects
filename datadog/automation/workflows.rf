@@ -5,7 +5,6 @@ concept "automation-workflow" {
 
 rule "workflow-automation" {
   match {
-    kind = "resource"
     type = "datadog_workflow_automation"
   }
 

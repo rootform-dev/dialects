@@ -11,7 +11,6 @@ concept "dynamodb-global-table" {
 
 rule "dynamodb-global-table" {
   match {
-    kind = "resource"
     type = "aws_dynamodb_global_table"
   }
 
@@ -20,7 +19,6 @@ rule "dynamodb-global-table" {
 
 rule "dynamodb-table" {
   match {
-    kind = "resource"
     type = "aws_dynamodb_table"
   }
 

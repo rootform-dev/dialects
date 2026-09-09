@@ -15,7 +15,6 @@ concept "vault-agent" {
 
 rule "agent-registration" {
   match {
-    kind = "resource"
     type = "vault_agent_registration"
   }
 
@@ -30,7 +29,6 @@ rule "agent-registration" {
 
 rule "audit" {
   match {
-    kind = "resource"
     type = "vault_audit"
   }
 
@@ -45,7 +43,6 @@ rule "audit" {
 
 rule "audit-request-header" {
   match {
-    kind = "resource"
     type = "vault_audit_request_header"
   }
 
@@ -54,7 +51,6 @@ rule "audit-request-header" {
 
 rule "raft-autopilot" {
   match {
-    kind = "resource"
     type = "vault_raft_autopilot"
   }
 
@@ -63,7 +59,6 @@ rule "raft-autopilot" {
 
 rule "raft-snapshot-agent-config" {
   match {
-    kind = "resource"
     type = "vault_raft_snapshot_agent_config"
   }
 

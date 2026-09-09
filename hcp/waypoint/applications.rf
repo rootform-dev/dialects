@@ -30,7 +30,6 @@ concept "waypoint-template" {
 
 rule "waypoint-action" {
   match {
-    kind = "resource"
     type = "hcp_waypoint_action"
   }
 
@@ -48,7 +47,6 @@ rule "waypoint-action-lookup" {
 
 rule "waypoint-add-on" {
   match {
-    kind = "resource"
     type = "hcp_waypoint_add_on"
   }
 
@@ -73,7 +71,6 @@ rule "waypoint-add-on" {
 
 rule "waypoint-add-on-definition" {
   match {
-    kind = "resource"
     type = "hcp_waypoint_add_on_definition"
   }
 
@@ -128,7 +125,6 @@ rule "waypoint-add-on-lookup" {
 
 rule "waypoint-agent-group" {
   match {
-    kind = "resource"
     type = "hcp_waypoint_agent_group"
   }
 
@@ -158,7 +154,6 @@ rule "waypoint-agent-group-lookup" {
 
 rule "waypoint-application" {
   match {
-    kind = "resource"
     type = "hcp_waypoint_application"
   }
 
@@ -198,7 +193,6 @@ rule "waypoint-application-lookup" {
 
 rule "waypoint-template" {
   match {
-    kind = "resource"
     type = "hcp_waypoint_template"
   }
 
@@ -228,7 +222,6 @@ rule "waypoint-template-lookup" {
 
 rule "waypoint-tfc-config" {
   match {
-    kind = "resource"
     type = "hcp_waypoint_tfc_config"
   }
 

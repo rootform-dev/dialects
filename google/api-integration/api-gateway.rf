@@ -1,6 +1,5 @@
 rule "api-gateway" {
   match {
-    kind = "resource"
     type = "google_api_gateway_gateway"
   }
 

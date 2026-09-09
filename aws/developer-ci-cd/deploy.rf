@@ -6,7 +6,6 @@ concept "codedeploy-deployment-group" {
 
 rule "codedeploy-deployment-group" {
   match {
-    kind = "resource"
     type = "aws_codedeploy_deployment_group"
   }
 

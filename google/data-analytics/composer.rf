@@ -5,7 +5,6 @@ concept "composer-environment" {
 
 rule "composer-environment" {
   match {
-    kind = "resource"
     type = "google_composer_environment"
   }
 

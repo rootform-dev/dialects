@@ -6,7 +6,6 @@ concept "emrserverless-application" {
 
 rule "emrserverless-application" {
   match {
-    kind = "resource"
     type = "aws_emrserverless_application"
   }
 

@@ -6,7 +6,6 @@ concept "integration-account" {
 
 rule "logic-app-http-action" {
   match {
-    kind = "resource"
     type = "azurerm_logic_app_action_http"
   }
 
@@ -15,7 +14,6 @@ rule "logic-app-http-action" {
 
 rule "logic-app-integration-account" {
   match {
-    kind = "resource"
     type = "azurerm_logic_app_integration_account"
   }
 
@@ -24,7 +22,6 @@ rule "logic-app-integration-account" {
 
 rule "logic-app-recurrence-trigger" {
   match {
-    kind = "resource"
     type = "azurerm_logic_app_trigger_recurrence"
   }
 
@@ -33,7 +30,6 @@ rule "logic-app-recurrence-trigger" {
 
 rule "logic-app-standard" {
   match {
-    kind = "resource"
     type = "azurerm_logic_app_standard"
   }
 
@@ -42,7 +38,6 @@ rule "logic-app-standard" {
 
 rule "logic-app-workflow" {
   match {
-    kind = "resource"
     type = "azurerm_logic_app_workflow"
   }
 

@@ -1,6 +1,5 @@
 rule "firestore-database" {
   match {
-    kind = "resource"
     type = "google_firestore_database"
   }
 

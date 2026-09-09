@@ -5,7 +5,6 @@ concept "web-security-scan" {
 
 rule "web-security-scan" {
   match {
-    kind = "resource"
     type = "google_security_scanner_scan_config"
   }
 

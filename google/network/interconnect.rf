@@ -5,7 +5,6 @@ concept "interconnect-vlan-attachment" {
 
 rule "cloud-interconnect" {
   match {
-    kind = "resource"
     type = "google_compute_interconnect"
   }
 
@@ -14,7 +13,6 @@ rule "cloud-interconnect" {
 
 rule "interconnect-vlan-attachment" {
   match {
-    kind = "resource"
     type = "google_compute_interconnect_attachment"
   }
 

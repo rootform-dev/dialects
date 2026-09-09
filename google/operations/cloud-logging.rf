@@ -15,7 +15,6 @@ concept "cloud-logging-scope" {
 
 rule "cloud-logging-project-sink" {
   match {
-    kind = "resource"
     type = "google_logging_project_sink"
   }
 
@@ -24,7 +23,6 @@ rule "cloud-logging-project-sink" {
 
 rule "cloud-logging-folder-sink" {
   match {
-    kind = "resource"
     type = "google_logging_folder_sink"
   }
 
@@ -33,7 +31,6 @@ rule "cloud-logging-folder-sink" {
 
 rule "cloud-logging-organization-sink" {
   match {
-    kind = "resource"
     type = "google_logging_organization_sink"
   }
 
@@ -42,7 +39,6 @@ rule "cloud-logging-organization-sink" {
 
 rule "cloud-logging-billing-account-sink" {
   match {
-    kind = "resource"
     type = "google_logging_billing_account_sink"
   }
 
@@ -51,7 +47,6 @@ rule "cloud-logging-billing-account-sink" {
 
 rule "cloud-logging-project-bucket" {
   match {
-    kind = "resource"
     type = "google_logging_project_bucket_config"
   }
 
@@ -60,7 +55,6 @@ rule "cloud-logging-project-bucket" {
 
 rule "cloud-logging-folder-bucket" {
   match {
-    kind = "resource"
     type = "google_logging_folder_bucket_config"
   }
 
@@ -69,7 +63,6 @@ rule "cloud-logging-folder-bucket" {
 
 rule "cloud-logging-organization-bucket" {
   match {
-    kind = "resource"
     type = "google_logging_organization_bucket_config"
   }
 
@@ -78,7 +71,6 @@ rule "cloud-logging-organization-bucket" {
 
 rule "cloud-logging-billing-account-bucket" {
   match {
-    kind = "resource"
     type = "google_logging_billing_account_bucket_config"
   }
 
@@ -87,7 +79,6 @@ rule "cloud-logging-billing-account-bucket" {
 
 rule "cloud-logging-scope" {
   match {
-    kind = "resource"
     type = "google_logging_log_scope"
   }
 

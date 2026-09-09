@@ -6,7 +6,6 @@ concept "servicecatalogappregistry-application" {
 
 rule "servicecatalogappregistry-application" {
   match {
-    kind = "resource"
     type = "aws_servicecatalogappregistry_application"
   }
 

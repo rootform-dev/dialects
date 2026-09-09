@@ -6,7 +6,6 @@ concept "image-gallery" {
 
 rule "compute-gallery" {
   match {
-    kind = "resource"
     type = "azurerm_shared_image_gallery"
   }
 

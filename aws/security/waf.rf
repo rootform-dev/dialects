@@ -6,7 +6,6 @@ concept "waf-rule-group" {
 
 rule "waf-rule-group" {
   match {
-    kind = "resource"
     type = "aws_waf_rule_group"
   }
 

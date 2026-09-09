@@ -5,7 +5,6 @@ concept "cluster-link" {
 
 rule "cluster-link" {
   match {
-    kind = "resource"
     type = "confluent_cluster_link"
   }
 
@@ -34,7 +33,6 @@ rule "cluster-link" {
 
 rule "kafka-mirror-topic" {
   match {
-    kind = "resource"
     type = "confluent_kafka_mirror_topic"
   }
 

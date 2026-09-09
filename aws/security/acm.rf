@@ -6,7 +6,6 @@ concept "acm-certificate" {
 
 rule "acm-certificate" {
   match {
-    kind = "resource"
     type = "aws_acm_certificate"
   }
 

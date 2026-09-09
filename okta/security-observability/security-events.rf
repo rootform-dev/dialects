@@ -5,7 +5,6 @@ concept "security-events-provider" {
 
 rule "security-events-provider" {
   match {
-    kind = "resource"
     type = "okta_security_events_provider"
   }
 

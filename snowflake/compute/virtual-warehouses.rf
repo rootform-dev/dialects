@@ -5,7 +5,6 @@ concept "virtual-warehouse" {
 
 rule "warehouse" {
   match {
-    kind = "resource"
     type = "snowflake_warehouse"
   }
 
@@ -14,7 +13,6 @@ rule "warehouse" {
 
 rule "adaptive-warehouse" {
   match {
-    kind = "resource"
     type = "snowflake_warehouse_adaptive"
   }
 
@@ -23,7 +21,6 @@ rule "adaptive-warehouse" {
 
 rule "interactive-warehouse" {
   match {
-    kind = "resource"
     type = "snowflake_warehouse_interactive"
   }
 

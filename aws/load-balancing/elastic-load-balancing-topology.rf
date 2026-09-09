@@ -1,6 +1,5 @@
 rule "lb" {
   match {
-    kind = "resource"
     type = "aws_lb"
   }
 
@@ -9,7 +8,6 @@ rule "lb" {
 
 rule "lb-listener" {
   match {
-    kind = "resource"
     type = "aws_lb_listener"
   }
 
@@ -23,7 +21,6 @@ rule "lb-listener" {
 
 rule "lb-target-group" {
   match {
-    kind = "resource"
     type = "aws_lb_target_group"
   }
 
@@ -32,7 +29,6 @@ rule "lb-target-group" {
 
 rule "alb-target-group" {
   match {
-    kind = "resource"
     type = "aws_alb_target_group"
   }
 

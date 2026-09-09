@@ -6,7 +6,6 @@ concept "notifications-notification-hub" {
 
 rule "notifications-notification-hub" {
   match {
-    kind = "resource"
     type = "aws_notifications_notification_hub"
   }
 

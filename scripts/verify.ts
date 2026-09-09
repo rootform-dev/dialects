@@ -68,6 +68,18 @@ try {
   run([binary, "validate", "dialects", "."], environment);
   run([binary, "install", "dialects", "."], environment);
   run([binary, "verify", "dialects", "."], environment);
+  const catalog = JSON.parse(
+    run(["bun", "scripts/catalog.ts"], { ...environment, ROOTFORM_BIN: binary }),
+  ) as Record<string, unknown>;
+  const expectedCatalog = JSON.parse(
+    readFileSync(join(root, "evidence/core/semantic-catalog.json"), "utf8"),
+  ) as Record<string, unknown>;
+  // Executable provenance may differ between validated release builds.
+  delete catalog.generator;
+  delete expectedCatalog.generator;
+  if (JSON.stringify(catalog) !== JSON.stringify(expectedCatalog)) {
+    throw new Error("core vocabulary catalog differs from the compiled official dialects");
+  }
   const firstLayout = join(isolatedHome, "distribution-first");
   const secondLayout = join(isolatedHome, "distribution-second");
   run(

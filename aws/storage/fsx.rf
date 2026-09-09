@@ -11,7 +11,6 @@ concept "fsx-openzfs-volume" {
 
 rule "fsx-lustre-file-system" {
   match {
-    kind = "resource"
     type = "aws_fsx_lustre_file_system"
   }
 
@@ -20,7 +19,6 @@ rule "fsx-lustre-file-system" {
 
 rule "fsx-ontap-file-system" {
   match {
-    kind = "resource"
     type = "aws_fsx_ontap_file_system"
   }
 
@@ -29,7 +27,6 @@ rule "fsx-ontap-file-system" {
 
 rule "fsx-ontap-volume" {
   match {
-    kind = "resource"
     type = "aws_fsx_ontap_volume"
   }
 
@@ -38,7 +35,6 @@ rule "fsx-ontap-volume" {
 
 rule "fsx-openzfs-file-system" {
   match {
-    kind = "resource"
     type = "aws_fsx_openzfs_file_system"
   }
 
@@ -47,7 +43,6 @@ rule "fsx-openzfs-file-system" {
 
 rule "fsx-openzfs-volume" {
   match {
-    kind = "resource"
     type = "aws_fsx_openzfs_volume"
   }
 
@@ -56,7 +51,6 @@ rule "fsx-openzfs-volume" {
 
 rule "fsx-windows-file-system" {
   match {
-    kind = "resource"
     type = "aws_fsx_windows_file_system"
   }
 

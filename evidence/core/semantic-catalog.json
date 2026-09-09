@@ -1,0 +1,3626 @@
+{
+  "format_version": "1",
+  "generator": {
+    "identity": "rootform 0.1.0",
+    "binary_sha256": "sha256:63d92aef7b808c0398bbc2f3db40ecf3eda8494c6141f875a6559d8e4dbed0a9",
+    "command": "bun scripts/catalog.ts"
+  },
+  "concepts": [
+    {
+      "id": "core/ai-inference-endpoint",
+      "dialect": "core",
+      "name": "ai-inference-endpoint",
+      "kind": "entity",
+      "description": "A managed endpoint that serves model inference requests.",
+      "source": {
+        "path": "ai-ml/inference-endpoint.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/allocated-network-range",
+      "dialect": "core",
+      "name": "allocated-network-range",
+      "kind": "detail",
+      "description": "An allocated address range used by private service networking.",
+      "source": {
+        "path": "network/private-services-access.rf",
+        "line": 6
+      }
+    },
+    {
+      "id": "core/api-gateway",
+      "dialect": "core",
+      "name": "api-gateway",
+      "kind": "entity",
+      "description": "A managed gateway that exposes and governs APIs.",
+      "source": {
+        "path": "api-integration/api-gateway.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/backup-plan",
+      "dialect": "core",
+      "name": "backup-plan",
+      "kind": "entity",
+      "description": "A managed policy scheduling and retaining backups.",
+      "source": {
+        "path": "storage/backup.rf",
+        "line": 6
+      }
+    },
+    {
+      "id": "core/backup-vault",
+      "dialect": "core",
+      "name": "backup-vault",
+      "kind": "entity",
+      "description": "A managed vault storing protected recovery data.",
+      "source": {
+        "path": "storage/backup.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/block-storage-volume",
+      "dialect": "core",
+      "name": "block-storage-volume",
+      "kind": "entity",
+      "description": "A durable block-storage volume attachable to compute workloads.",
+      "source": {
+        "path": "compute/compute-instance.rf",
+        "line": 6
+      }
+    },
+    {
+      "id": "core/browser-observability-application",
+      "dialect": "core",
+      "name": "browser-observability-application",
+      "kind": "entity",
+      "description": "An application boundary instrumented for browser or frontend observability.",
+      "source": {
+        "path": "observability/digital-experience.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/cloud-observability-integration",
+      "dialect": "core",
+      "name": "cloud-observability-integration",
+      "kind": "entity",
+      "description": "A provider-neutral integration collecting telemetry and resource data from a cloud account, subscription, or project.",
+      "source": {
+        "path": "observability/cloud-integrations.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/compute-instance",
+      "dialect": "core",
+      "name": "compute-instance",
+      "kind": "entity",
+      "description": "A provisioned compute instance running a workload.",
+      "source": {
+        "path": "compute/compute-instance.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/dedicated-interconnect",
+      "dialect": "core",
+      "name": "dedicated-interconnect",
+      "kind": "entity",
+      "description": "A dedicated private connection between an external network and a cloud provider.",
+      "source": {
+        "path": "network/interconnect.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/dns-zone",
+      "dialect": "core",
+      "name": "dns-zone",
+      "kind": "scope",
+      "description": "A managed DNS namespace containing resource records.",
+      "source": {
+        "path": "dns-cdn/dns-zone.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/encryption-key",
+      "dialect": "core",
+      "name": "encryption-key",
+      "kind": "entity",
+      "description": "A managed key used for cryptographic operations.",
+      "source": {
+        "path": "security/secrets-encryption.rf",
+        "line": 6
+      }
+    },
+    {
+      "id": "core/identity-application",
+      "dialect": "core",
+      "name": "identity-application",
+      "kind": "entity",
+      "description": "An application or relying-party client registered with an identity platform.",
+      "source": {
+        "path": "identity-iam/identity-application.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/identity-group",
+      "dialect": "core",
+      "name": "identity-group",
+      "kind": "entity",
+      "description": "A managed group principal used to assign access collectively.",
+      "source": {
+        "path": "identity-iam/identity-group.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/kubernetes-cluster",
+      "dialect": "core",
+      "name": "kubernetes-cluster",
+      "kind": "entity",
+      "description": "A Kubernetes cluster providing a workload runtime.",
+      "source": {
+        "path": "containers/kubernetes.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/kubernetes-node-pool",
+      "dialect": "core",
+      "name": "kubernetes-node-pool",
+      "kind": "detail",
+      "description": "A node pool contributing compute capacity to a Kubernetes cluster.",
+      "source": {
+        "path": "containers/kubernetes.rf",
+        "line": 6
+      }
+    },
+    {
+      "id": "core/load-balancer",
+      "dialect": "core",
+      "name": "load-balancer",
+      "kind": "entity",
+      "description": "A load-balancing service composed from routing infrastructure.",
+      "source": {
+        "path": "load-balancing/load-balancer.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/managed-cache",
+      "dialect": "core",
+      "name": "managed-cache",
+      "kind": "entity",
+      "description": "A managed in-memory cache service.",
+      "source": {
+        "path": "databases/managed-cache.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/managed-database",
+      "dialect": "core",
+      "name": "managed-database",
+      "kind": "entity",
+      "description": "A managed database service.",
+      "source": {
+        "path": "databases/managed-database.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/managed-file-storage",
+      "dialect": "core",
+      "name": "managed-file-storage",
+      "kind": "entity",
+      "description": "A managed shared file-storage service.",
+      "source": {
+        "path": "storage/storage.rf",
+        "line": 6
+      }
+    },
+    {
+      "id": "core/managed-nat",
+      "dialect": "core",
+      "name": "managed-nat",
+      "kind": "entity",
+      "description": "A managed network address translation service.",
+      "source": {
+        "path": "network/connectivity.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/managed-secret",
+      "dialect": "core",
+      "name": "managed-secret",
+      "kind": "entity",
+      "description": "A managed secret identity whose sensitive value stays outside architecture output.",
+      "source": {
+        "path": "security/secrets-encryption.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/message-queue",
+      "dialect": "core",
+      "name": "message-queue",
+      "kind": "entity",
+      "description": "A managed queue buffering work or messages for asynchronous consumers.",
+      "source": {
+        "path": "messaging-eventing/messaging.rf",
+        "line": 11
+      }
+    },
+    {
+      "id": "core/message-subscription",
+      "dialect": "core",
+      "name": "message-subscription",
+      "kind": "entity",
+      "description": "A durable subscription consuming messages from a topic.",
+      "source": {
+        "path": "messaging-eventing/messaging.rf",
+        "line": 6
+      }
+    },
+    {
+      "id": "core/message-topic",
+      "dialect": "core",
+      "name": "message-topic",
+      "kind": "entity",
+      "description": "A messaging topic receiving messages from publishers.",
+      "source": {
+        "path": "messaging-eventing/messaging.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/network-peering",
+      "dialect": "core",
+      "name": "network-peering",
+      "kind": "entity",
+      "description": "A direct private connectivity agreement between virtual networks.",
+      "source": {
+        "path": "network/connectivity.rf",
+        "line": 6
+      }
+    },
+    {
+      "id": "core/object-storage-container",
+      "dialect": "core",
+      "name": "object-storage-container",
+      "kind": "entity",
+      "description": "A managed container holding objects in an object-storage service.",
+      "source": {
+        "path": "storage/storage.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/observability-tenant",
+      "dialect": "core",
+      "name": "observability-tenant",
+      "kind": "scope",
+      "description": "A provider-neutral account, organization, or stack boundary isolating observability data and configuration.",
+      "source": {
+        "path": "observability/tenancy.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/private-endpoint",
+      "dialect": "core",
+      "name": "private-endpoint",
+      "kind": "entity",
+      "description": "A private endpoint exposing a service inside a virtual network.",
+      "source": {
+        "path": "network/connectivity.rf",
+        "line": 11
+      }
+    },
+    {
+      "id": "core/serverless-function",
+      "dialect": "core",
+      "name": "serverless-function",
+      "kind": "entity",
+      "description": "A managed event-driven function runtime.",
+      "source": {
+        "path": "serverless/function.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/service-identity",
+      "dialect": "core",
+      "name": "service-identity",
+      "kind": "entity",
+      "description": "An identity used by services and access controls.",
+      "source": {
+        "path": "identity-iam/service-identity.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/service-identity-binding",
+      "dialect": "core",
+      "name": "service-identity-binding",
+      "kind": "detail",
+      "description": "An access-control binding that contributes to a service identity.",
+      "source": {
+        "path": "identity-iam/service-identity.rf",
+        "line": 6
+      }
+    },
+    {
+      "id": "core/service-networking-detail",
+      "dialect": "core",
+      "name": "service-networking-detail",
+      "kind": "detail",
+      "description": "A provider networking detail used to establish private service access.",
+      "source": {
+        "path": "network/private-services-access.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/service-objective",
+      "dialect": "core",
+      "name": "service-objective",
+      "kind": "detail",
+      "description": "A provider-neutral service level indicator or objective supporting architecture operations.",
+      "source": {
+        "path": "observability/service-objectives.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/subnet",
+      "dialect": "core",
+      "name": "subnet",
+      "kind": "scope",
+      "description": "A subnet that segments a virtual network.",
+      "source": {
+        "path": "network/virtual-network.rf",
+        "line": 6
+      }
+    },
+    {
+      "id": "core/synthetic-check",
+      "dialect": "core",
+      "name": "synthetic-check",
+      "kind": "detail",
+      "description": "A synthetic check supporting an observed target without owning target runtime.",
+      "source": {
+        "path": "observability/digital-experience.rf",
+        "line": 11
+      }
+    },
+    {
+      "id": "core/synthetic-execution-location",
+      "dialect": "core",
+      "name": "synthetic-execution-location",
+      "kind": "entity",
+      "description": "A public or private execution location running synthetic checks.",
+      "source": {
+        "path": "observability/digital-experience.rf",
+        "line": 6
+      }
+    },
+    {
+      "id": "core/virtual-network",
+      "dialect": "core",
+      "name": "virtual-network",
+      "kind": "scope",
+      "description": "A virtual network that provides connectivity and isolation.",
+      "source": {
+        "path": "network/virtual-network.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/vpn-connection",
+      "dialect": "core",
+      "name": "vpn-connection",
+      "kind": "entity",
+      "description": "A virtual private network connection between network endpoints.",
+      "source": {
+        "path": "network/connectivity.rf",
+        "line": 21
+      }
+    },
+    {
+      "id": "core/vpn-gateway",
+      "dialect": "core",
+      "name": "vpn-gateway",
+      "kind": "entity",
+      "description": "A managed gateway terminating virtual private network connections.",
+      "source": {
+        "path": "network/connectivity.rf",
+        "line": 16
+      }
+    },
+    {
+      "id": "core/workflow",
+      "dialect": "core",
+      "name": "workflow",
+      "kind": "entity",
+      "description": "A managed workflow coordinating steps and service calls.",
+      "source": {
+        "path": "orchestration/workflow.rf",
+        "line": 1
+      }
+    }
+  ],
+  "contexts": [
+    {
+      "id": "core/geography",
+      "dialect": "core",
+      "name": "geography",
+      "description": "Geographic placement.",
+      "producers": [],
+      "source": {
+        "path": "architecture/contexts.rf",
+        "line": 13
+      }
+    },
+    {
+      "id": "core/network",
+      "dialect": "core",
+      "name": "network",
+      "description": "Network placement or containment.",
+      "producers": [
+        {
+          "emission": "emission:97529134c3c9e231a6136143d0e23aec213dba13435f46123b8a3119878353b2",
+          "rule": "aws/ec2-transit-gateway-vpc-attachment",
+          "from": "aws/transit-gateway-attachment",
+          "to": "core/virtual-network",
+          "via": "source.vpc_id"
+        },
+        {
+          "emission": "emission:c6db9dec070bfc61907e2e6f3429fde7227b5758327847e4410d13811d7674cb",
+          "rule": "aws/instance",
+          "from": "core/compute-instance",
+          "to": "core/subnet",
+          "via": "source.subnet_id"
+        },
+        {
+          "emission": "emission:9c0b7314f9fe6c6f1e064d77bffd72ae74feeabdd01b0e1cbd9008cabd8dd5dc",
+          "rule": "aws/internet-gateway",
+          "from": "aws/internet-gateway",
+          "to": "core/virtual-network",
+          "via": "source.vpc_id"
+        },
+        {
+          "emission": "emission:e0aa2eea4c7b0c4472cb0003b39fc9f64204ba78c9f862f6c450c3f6d6abcab6",
+          "rule": "aws/nat-gateway",
+          "from": "core/managed-nat",
+          "to": "core/subnet",
+          "via": "source.subnet_id"
+        },
+        {
+          "emission": "emission:c3ec2c96616f685bad19a7c85f4ea78d325d6068873f6730e10bc42f8c3077b8",
+          "rule": "aws/network-acl",
+          "from": "aws/network-acl",
+          "to": "core/virtual-network",
+          "via": "source.vpc_id"
+        },
+        {
+          "emission": "emission:423fddcf69de12e4523d5096985868aedfb7979547a7212b56f4958782d28a74",
+          "rule": "aws/route-table",
+          "from": "aws/route-table",
+          "to": "core/virtual-network",
+          "via": "source.vpc_id"
+        },
+        {
+          "emission": "emission:f5fda55c94cbeb39c29266f8f29b03d57cc55fe7fe3a35e7792992e98ff26558",
+          "rule": "aws/security-group",
+          "from": "aws/security-group",
+          "to": "core/virtual-network",
+          "via": "source.vpc_id"
+        },
+        {
+          "emission": "emission:78791d8cbccb285722853e733c575404b7a20465fb60b7e95044b62bc1feb048",
+          "rule": "aws/subnet",
+          "from": "core/subnet",
+          "to": "core/virtual-network",
+          "via": "source.vpc_id"
+        },
+        {
+          "emission": "emission:1b2bf9a821f681cad04ece552b8910aef9d1dcfdf626039d22569d5658ecc5fc",
+          "rule": "aws/vpc-endpoint",
+          "from": "core/private-endpoint",
+          "to": "core/virtual-network",
+          "via": "source.vpc_id"
+        },
+        {
+          "emission": "emission:8496f78330995d2f4f97f2aa6545212f88c853cf163c019e7e09f5ba1e8c20b2",
+          "rule": "aws/vpn-connection",
+          "from": "core/vpn-connection",
+          "to": "aws/transit-gateway",
+          "via": "source.transit_gateway_id"
+        },
+        {
+          "emission": "emission:da49ce58f0bc8b6ffaae2f55a6a75c2f744ff864c613c4e956a093ff4f0d7eb2",
+          "rule": "aws/vpn-connection",
+          "from": "core/vpn-connection",
+          "to": "core/vpn-gateway",
+          "via": "source.vpn_gateway_id"
+        },
+        {
+          "emission": "emission:125b44e236d62dab2281172372a29090a583532df9489c03478c9275cdc98aea",
+          "rule": "aws/vpn-gateway",
+          "from": "core/vpn-gateway",
+          "to": "core/virtual-network",
+          "via": "source.vpc_id"
+        },
+        {
+          "emission": "emission:019739d6a410540aec2f3da13ffb5a909140b1060c7239bf462ed1cc22647138",
+          "rule": "azure/aks-cluster",
+          "from": "core/kubernetes-cluster",
+          "to": "core/subnet",
+          "via": "source.default_node_pool[0].vnet_subnet_id"
+        },
+        {
+          "emission": "emission:f9b5f2ce957fd415bc1fede39353386527eacb156781f910a5bf2d75b0eed971",
+          "rule": "azure/container-app-environment",
+          "from": "azure/container-app-environment",
+          "to": "core/subnet",
+          "via": "source.infrastructure_subnet_id"
+        },
+        {
+          "emission": "emission:7081e74b26c959b008cefd08f93af0ce67a5728ecadd60d888dbd111607ad8f1",
+          "rule": "azure/flex-consumption-function-app",
+          "from": "core/serverless-function",
+          "to": "core/subnet",
+          "via": "source.virtual_network_subnet_id"
+        },
+        {
+          "emission": "emission:b506d527cc458751372809237d414978a851d7b850cb64c0d8ea2ced14390e27",
+          "rule": "azure/function-app-function",
+          "from": "core/serverless-function",
+          "to": "core/subnet",
+          "via": "source.virtual_network_subnet_id"
+        },
+        {
+          "emission": "emission:f6dface6ae16ae6bdf094e0ddea607bd2f17cf88547a066b9aca367bcd0ef53b",
+          "rule": "azure/linux-function-app",
+          "from": "core/serverless-function",
+          "to": "core/subnet",
+          "via": "source.virtual_network_subnet_id"
+        },
+        {
+          "emission": "emission:cf1e50ed58ed2656ee5d501cbf5664624ad736cb6baf9e3462b30dc8f640faca",
+          "rule": "azure/linux-web-app",
+          "from": "azure/app-service",
+          "to": "core/subnet",
+          "via": "source.virtual_network_subnet_id"
+        },
+        {
+          "emission": "emission:bf29940081d0b1f80c18167d98e7e9e2093d556d1d18dd3536ea051a933ca2b6",
+          "rule": "azure/private-endpoint",
+          "from": "core/private-endpoint",
+          "to": "core/subnet",
+          "via": "source.subnet_id"
+        },
+        {
+          "emission": "emission:9c34bac3ddf6f676b98d7b0f492dff2602aff4c164e4c6052c52c063ea31aa22",
+          "rule": "azure/subnet",
+          "from": "core/subnet",
+          "to": "core/virtual-network",
+          "via": "source.virtual_network_name"
+        },
+        {
+          "emission": "emission:37a0e2c6a6fe9066ddaffaa845ab8ed42dde892e21384bf841a028969f807d7f",
+          "rule": "azure/virtual-network-peering",
+          "from": "core/network-peering",
+          "to": "core/virtual-network",
+          "via": "source.virtual_network_name"
+        },
+        {
+          "emission": "emission:551858e3ccad4436d450af7f369d6f47f5887c314a8eee42a8ef8792da63daed",
+          "rule": "azure/virtual-network-peering",
+          "from": "core/network-peering",
+          "to": "core/virtual-network",
+          "via": "source.remote_virtual_network_id"
+        },
+        {
+          "emission": "emission:adf6369f08c050a82021bd244570e9679557ba905dcf95e2b0d985f77493cd7b",
+          "rule": "azure/windows-web-app",
+          "from": "azure/app-service",
+          "to": "core/subnet",
+          "via": "source.virtual_network_subnet_id"
+        },
+        {
+          "emission": "emission:c8dba676bd107ab0c3d2a365c9387652e6ab52d8cbf9dc41f9882692719e23bc",
+          "rule": "cloudflare/cloudflare-tunnel-route",
+          "from": "cloudflare/tunnel-configuration",
+          "to": "core/virtual-network",
+          "via": "source.network"
+        },
+        {
+          "emission": "emission:a1646cc29bc13970686926c828a857658b46d39875a37dd6af5e6e79ecc0b171",
+          "rule": "cloudflare/magic-transit-site-acl",
+          "from": "cloudflare/network-route-configuration",
+          "to": "cloudflare/magic-transit-site",
+          "via": "source.site_id"
+        },
+        {
+          "emission": "emission:9fff98efdaa9e09ac11ee15d0eb832c5d126e0039c87e95aaeab9b22a2eaba4c",
+          "rule": "cloudflare/magic-transit-site-lan",
+          "from": "cloudflare/network-route-configuration",
+          "to": "cloudflare/magic-transit-site",
+          "via": "source.site_id"
+        },
+        {
+          "emission": "emission:95a82b55a31ab6dfc51ab929daf0676137cdd117fa3fe98fa47b87efabaf6700",
+          "rule": "cloudflare/magic-transit-site-wan",
+          "from": "cloudflare/network-route-configuration",
+          "to": "cloudflare/magic-transit-site",
+          "via": "source.site_id"
+        },
+        {
+          "emission": "emission:a82d7494623d52ba40b8f3138e47a83adaa66d394f5a6172db011e6cab458ee4",
+          "rule": "confluent/kafka-cluster",
+          "from": "confluent/kafka-cluster",
+          "to": "core/virtual-network",
+          "via": "source.network[0].id"
+        },
+        {
+          "emission": "emission:2a8ed746002fed0245aee07da76624a8f801f3c1bbe275f49ceaa17b0ffe2368",
+          "rule": "confluent/network-link-endpoint",
+          "from": "confluent/network-link-endpoint",
+          "to": "core/virtual-network",
+          "via": "source.network[0].id"
+        },
+        {
+          "emission": "emission:5756270bcd5e757708dc0464c4b295df6379f27f24e321d2145dfa4cf82f71f6",
+          "rule": "confluent/network-link-service",
+          "from": "confluent/network-link-service",
+          "to": "core/virtual-network",
+          "via": "source.network[0].id"
+        },
+        {
+          "emission": "emission:5f17e35b2f1b78102c83657e319bf59bbc32e598d0f080fd22e537d032d56abd",
+          "rule": "confluent/network-peering",
+          "from": "core/network-peering",
+          "to": "core/virtual-network",
+          "via": "source.network[0].id"
+        },
+        {
+          "emission": "emission:57b38be958d01b31b4e32c57d7bdacdafd4dfe9e3272e62830deabb2a7c0a16b",
+          "rule": "confluent/transit-gateway-attachment",
+          "from": "confluent/transit-gateway-attachment",
+          "to": "core/virtual-network",
+          "via": "source.network[0].id"
+        },
+        {
+          "emission": "emission:9b97c7822ee01a75ef5fb0e783aad028c1c8dbad8402806d2d85282ae83a8fdb",
+          "rule": "databricks/private-endpoint-rule",
+          "from": "databricks/private-endpoint-rule",
+          "to": "databricks/network-connectivity-configuration",
+          "via": "source.network_connectivity_config_id"
+        },
+        {
+          "emission": "emission:dedbb7a89a25fac68db67b8163d3d34c874ce38ed140cfba70b616f7d23493ec",
+          "rule": "google/classic-vpn-gateway",
+          "from": "core/vpn-gateway",
+          "to": "core/virtual-network",
+          "via": "source.network"
+        },
+        {
+          "emission": "emission:842ea6aaabb0fc32e87bda7e8f30733d15458a18a71fc9dacd6a0f0c1a5b6502",
+          "rule": "google/cloud-ids-endpoint",
+          "from": "google/cloud-ids-endpoint",
+          "to": "core/virtual-network",
+          "via": "source.network"
+        },
+        {
+          "emission": "emission:19b63cc7ffcd40f79e955cb43c8523a5bee607208335c325b1b38cda90d60288",
+          "rule": "google/cloud-router",
+          "from": "google/cloud-router",
+          "to": "core/virtual-network",
+          "via": "source.network"
+        },
+        {
+          "emission": "emission:ca4f48fc13c581146d4cd6ecc0647136e7b24fbbfdad1475b8ee547f949cdbf7",
+          "rule": "google/cloud-run-service",
+          "from": "google/cloud-run-service",
+          "to": "core/subnet",
+          "via": "source.template[0].vpc_access[0].network_interfaces[0].subnetwork"
+        },
+        {
+          "emission": "emission:c6403646ff92493d9038073a19806b2754cb1cdb681d8067aa1b46ccdf2fcc6a",
+          "rule": "google/cloud-run-service",
+          "from": "google/cloud-run-service",
+          "to": "core/virtual-network",
+          "via": "source.template[0].vpc_access[0].network_interfaces[0].network"
+        },
+        {
+          "emission": "emission:df818e0b65034b05752f8cf0483a9987bbebaddfcbd4bcb54a5471dd6c3b9ce2",
+          "rule": "google/gke-cluster",
+          "from": "core/kubernetes-cluster",
+          "to": "core/subnet",
+          "via": "source.subnetwork"
+        },
+        {
+          "emission": "emission:6212af6c2174b91849bcb4d469a491f06e0211ceae118597ba6a708ec2fa914f",
+          "rule": "google/gke-cluster",
+          "from": "core/kubernetes-cluster",
+          "to": "core/virtual-network",
+          "via": "source.network"
+        },
+        {
+          "emission": "emission:940d76af67f835f514acf3229e2d77b18598d8f8bbfe21b6f8d3b4dcf348a761",
+          "rule": "google/ha-vpn-gateway",
+          "from": "core/vpn-gateway",
+          "to": "core/virtual-network",
+          "via": "source.network"
+        },
+        {
+          "emission": "emission:25a589cfbae077cd3cd2844e902c9f63431c21135d8b7a15dd62e831d99522b8",
+          "rule": "google/memorystore-memcached-instance",
+          "from": "core/managed-cache",
+          "to": "core/virtual-network",
+          "via": "source.authorized_network"
+        },
+        {
+          "emission": "emission:0fc16883af635c50815aa1d7f593df5baaa386e0b0fd5d39f5338fcb9bea5ff0",
+          "rule": "google/memorystore-redis-instance",
+          "from": "core/managed-cache",
+          "to": "core/virtual-network",
+          "via": "source.authorized_network"
+        },
+        {
+          "emission": "emission:ebc2791eeef9822f1d5671135e7b1d6442b85c93bc2dd3d3a31015b67bfca0df",
+          "rule": "google/parallelstore-instance",
+          "from": "core/managed-file-storage",
+          "to": "core/virtual-network",
+          "via": "source.network"
+        },
+        {
+          "emission": "emission:0d152c82e8c3e2bf3c5966672b881a7b1347021da8fbd466964f9ca56df9c36a",
+          "rule": "google/private-service-connect-endpoint",
+          "from": "core/private-endpoint",
+          "to": "core/subnet",
+          "via": "source.subnetwork"
+        },
+        {
+          "emission": "emission:278bc66579f311a9decca3f28c709398548bdb0a27eae6d51721768e0944ac06",
+          "rule": "google/private-service-connect-endpoint",
+          "from": "core/private-endpoint",
+          "to": "core/virtual-network",
+          "via": "source.network"
+        },
+        {
+          "emission": "emission:3bfb64dc76d19b058e4210c4e0253e7f62eb291e69ad78185c7e3a4a0c6ebafe",
+          "rule": "google/serverless-vpc-access-connector",
+          "from": "google/serverless-vpc-access-connector",
+          "to": "core/subnet",
+          "via": "source.subnet[0].name"
+        },
+        {
+          "emission": "emission:7ed2d5f63b41ff3b7bb5420352343a6ae7ab70b4a6ea7e937e8c583834d349ed",
+          "rule": "google/serverless-vpc-access-connector",
+          "from": "google/serverless-vpc-access-connector",
+          "to": "core/virtual-network",
+          "via": "source.network"
+        },
+        {
+          "emission": "emission:3b0fbe6e7378f30190f2a42536be139e8d4c89faa415795bf2242c0b26753050",
+          "rule": "google/vpc-firewall-rule",
+          "from": "google/vpc-firewall-rule",
+          "to": "core/virtual-network",
+          "via": "source.network"
+        },
+        {
+          "emission": "emission:7e676dc38418c33bf360f16e8be3391d2bd67d674e1a098b4ba1ff62642fd93c",
+          "rule": "google/vpc-network-peering",
+          "from": "core/network-peering",
+          "to": "core/virtual-network",
+          "via": "source.network"
+        },
+        {
+          "emission": "emission:d6386effda48fcf4c4387e441b8af1f3a1e56d0a9dd6e5760853d9d6d12c91df",
+          "rule": "google/vpc-network-peering",
+          "from": "core/network-peering",
+          "to": "core/virtual-network",
+          "via": "source.peer_network"
+        },
+        {
+          "emission": "emission:e0b92d8f5aa4ae16cdc7c7827f884a2e49d6f734ee54469126238db05389d6ef",
+          "rule": "google/vpc-subnetwork",
+          "from": "core/subnet",
+          "to": "core/virtual-network",
+          "via": "source.network"
+        },
+        {
+          "emission": "emission:7ea4a01bcc4818ced9163f267e250a9e209e5e123d70622a8bf471633bbb5780",
+          "rule": "hcp/aws-network-peering",
+          "from": "core/network-peering",
+          "to": "core/virtual-network",
+          "via": "source.hvn_id"
+        },
+        {
+          "emission": "emission:c469933c881619a5c65bcbae1b8854a3493c9881fd514e58fada0a54bce3a479",
+          "rule": "hcp/aws-network-peering-lookup",
+          "from": "core/network-peering",
+          "to": "core/virtual-network",
+          "via": "source.hvn_id"
+        },
+        {
+          "emission": "emission:cb4413cd1c86c60b651f63ec12d53766c6196f8d389eb49f755180bcf52eaafb",
+          "rule": "hcp/aws-transit-gateway-attachment",
+          "from": "hcp/transit-gateway-attachment",
+          "to": "core/virtual-network",
+          "via": "source.hvn_id"
+        },
+        {
+          "emission": "emission:4c37ee63e9a4b9ed313703a99271ebc2a25de5ade6231d963376b85cfc1ff809",
+          "rule": "hcp/aws-transit-gateway-attachment-lookup",
+          "from": "hcp/transit-gateway-attachment",
+          "to": "core/virtual-network",
+          "via": "source.hvn_id"
+        },
+        {
+          "emission": "emission:fcefb12b6585b98e9a20dd57adc8762d5746c8c8b13780d11ccaea02ca16d133",
+          "rule": "hcp/azure-peering-connection",
+          "from": "core/network-peering",
+          "to": "core/virtual-network",
+          "via": "source.hvn_link"
+        },
+        {
+          "emission": "emission:1d77fb6a8d3c8c84b7c3738c82fa05fa94605b214d2200fd27a42ec20faf496a",
+          "rule": "hcp/azure-peering-connection-lookup",
+          "from": "core/network-peering",
+          "to": "core/virtual-network",
+          "via": "source.hvn_link"
+        },
+        {
+          "emission": "emission:967863990da528857467d1652df18d39de01f19e6113010f415a9fd29f69ae6d",
+          "rule": "hcp/consul-cluster",
+          "from": "hcp/consul-dedicated-cluster",
+          "to": "core/virtual-network",
+          "via": "source.hvn_id"
+        },
+        {
+          "emission": "emission:737a87ebc06693067b7c6c605a330d72cf5d7d8bc7f6163217e8f6728548fc2a",
+          "rule": "hcp/consul-cluster-lookup",
+          "from": "hcp/consul-dedicated-cluster",
+          "to": "core/virtual-network",
+          "via": "source.hvn_id"
+        },
+        {
+          "emission": "emission:ab27518ae08056b432b9ebb7c0aa52636fd5141609b1df310b1161cd5ffe9a56",
+          "rule": "hcp/dns-forwarding",
+          "from": "hcp/dns-forwarding",
+          "to": "core/virtual-network",
+          "via": "source.hvn_id"
+        },
+        {
+          "emission": "emission:a4369dab658964279c5f0c6a558228de6c3049ed0058a9a89a3777a84b7ade1a",
+          "rule": "hcp/dns-forwarding-lookup",
+          "from": "hcp/dns-forwarding",
+          "to": "core/virtual-network",
+          "via": "source.hvn_id"
+        },
+        {
+          "emission": "emission:baed0fd96246c3d3de71121ee62669eca7e2e94c0ceecaef44affb37cfa0c4ad",
+          "rule": "hcp/hvn-peering-connection",
+          "from": "core/network-peering",
+          "to": "core/virtual-network",
+          "via": "source.hvn_1"
+        },
+        {
+          "emission": "emission:e7d830b455a10c969cf54d723bd5f14d126c7e414acdbdc893f3cdd7153fa437",
+          "rule": "hcp/hvn-peering-connection-lookup",
+          "from": "core/network-peering",
+          "to": "core/virtual-network",
+          "via": "source.hvn_1"
+        },
+        {
+          "emission": "emission:d8205e0a449ebb319a37d21d0ebff236764de9a8434ff2d546c99b568dd86823",
+          "rule": "hcp/private-link",
+          "from": "hcp/private-link-service",
+          "to": "core/virtual-network",
+          "via": "source.hvn_id"
+        },
+        {
+          "emission": "emission:798fa03484d48d091204a779b296eac9a999a7a5e68b425daa1c59f2be501639",
+          "rule": "hcp/private-link-lookup",
+          "from": "hcp/private-link-service",
+          "to": "core/virtual-network",
+          "via": "source.hvn_id"
+        },
+        {
+          "emission": "emission:eb209d987a4c72bc4f020761ee0027af129303dcaa4b58478099c7abec5f4758",
+          "rule": "hcp/vault-cluster",
+          "from": "hcp/vault-dedicated-cluster",
+          "to": "core/virtual-network",
+          "via": "source.hvn_id"
+        },
+        {
+          "emission": "emission:3a956550565ee66e5a47828b55e5eef4fd036ef0c09fcdd34cd888762067176a",
+          "rule": "hcp/vault-cluster-lookup",
+          "from": "hcp/vault-dedicated-cluster",
+          "to": "core/virtual-network",
+          "via": "source.hvn_id"
+        }
+      ],
+      "source": {
+        "path": "architecture/contexts.rf",
+        "line": 1
+      }
+    },
+    {
+      "id": "core/ownership",
+      "dialect": "core",
+      "name": "ownership",
+      "description": "Administrative or lifecycle ownership.",
+      "producers": [
+        {
+          "emission": "emission:60310902bce136e35f822daf12512c608ab62c8d70a0e46bbe5ff0ae9a67bd12",
+          "rule": "azure/aks-cluster",
+          "from": "core/kubernetes-cluster",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:f0267cea808bdc3064b2931745a2c5083890e0f7ce9d4d6f32a85d5109a78fae",
+          "rule": "azure/app-service-environment",
+          "from": "azure/app-service-environment",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:c00d44e78f3ca409a3ebde0520e86fff019ac2591bb317e6c8355040064cb977",
+          "rule": "azure/app-service-plan",
+          "from": "azure/app-service-plan",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:9490d1d0709a041fd297b45b17fb580a6b864e4bef9fe0b6d3bce9efbdbc9755",
+          "rule": "azure/application-gateway",
+          "from": "core/load-balancer",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:ae38963eb1d56414c31eb7f5133b1851015c6d6218e3f5aa22ebc792bf5fa1de",
+          "rule": "azure/application-insights",
+          "from": "azure/application-insights",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:6df5516a22fbd2d2ac12017230b11f3624a8568f113c693993e4bd7620336e39",
+          "rule": "azure/container-app",
+          "from": "azure/container-app",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:53db043255c389f446db04685de9e266561cf207636111a49771e6a74151c1df",
+          "rule": "azure/container-app-environment",
+          "from": "azure/container-app-environment",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:b8687a1aa4cde3707815740bc6e6486b6c968500472f09869a125fa1218ec66a",
+          "rule": "azure/container-app-job",
+          "from": "azure/container-app-job",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:b467c17a7ceb7b5cc6b8108d1d7e9277bdbb26e50911fd2c9f23cc547b6563f1",
+          "rule": "azure/flex-consumption-function-app",
+          "from": "core/serverless-function",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:399ee1b3cdfc0e5a9248a3128d3250e1aac88bb7ba1fb8de58e3563d1143159c",
+          "rule": "azure/function-app-function",
+          "from": "core/serverless-function",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:64b63f6b26b1440f74dbc0812bb3f88f8eb9347f37b21991f0ab4a94cadfcb26",
+          "rule": "azure/linux-function-app",
+          "from": "core/serverless-function",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:bfa7e49b3974d9a71a10d48ac7ce30b2a0a2bd7aacd30236c898d423bfbc8ef0",
+          "rule": "azure/linux-virtual-machine",
+          "from": "core/compute-instance",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:441879ddef509d9604b67a6218b312fadc8a65ef0b30827f64aa1f7b9c125a0a",
+          "rule": "azure/linux-virtual-machine-scale-set",
+          "from": "azure/virtual-machine-scale-set",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:9729c3d13502a4e6664c4993c7db5269ac3f720e9c180ab040d61ffd493f35aa",
+          "rule": "azure/linux-web-app",
+          "from": "azure/app-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:f38e46abcb025fadd5162bf2d72cebb8147e1bdae239940973df76a60fc1c70d",
+          "rule": "azure/load-balancer",
+          "from": "core/load-balancer",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:3be294a475d18a708b86ba7ed75419c3a069dab19f15dce90a2000c578a3f68e",
+          "rule": "azure/log-analytics-cluster",
+          "from": "azure/log-analytics-workspace",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:4c16afac4b7e188f977b7520b7702ae19e87adf54a316800943f013fd04a8c22",
+          "rule": "azure/log-analytics-workspace",
+          "from": "azure/log-analytics-workspace",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:22d5db3f3d62741b8884c83d6b9e142e5ab88485655095019639b10d24b763f3",
+          "rule": "azure/monitor-workspace",
+          "from": "azure/monitor-workspace",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:af5eed07688793561291fbf25d3c474694df02d5f855e8c1d4ff5261c8a7678e",
+          "rule": "azure/mssql-database",
+          "from": "core/managed-database",
+          "to": "azure/sql-server",
+          "via": "source.server_id"
+        },
+        {
+          "emission": "emission:5894bd748dbb28498acd91b1eb3263591d82adbe10dfe99ba003d687af81d4bf",
+          "rule": "azure/mssql-server",
+          "from": "azure/sql-server",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:4123b76db0af4a853724cafa47a1a94f4e0d6edece8a78ee226e3ff2a04ae287",
+          "rule": "azure/orchestrated-virtual-machine-scale-set",
+          "from": "azure/virtual-machine-scale-set",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:eaa7acb6130c603ac7efc7c33ccb1724622c8a0592e9c14d48241a3c4c8c4b11",
+          "rule": "azure/postgresql-flexible-server",
+          "from": "core/managed-database",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:e9cd27a074392adc290294d21f2935d84193932f97f52dc53ad31d9825051cec",
+          "rule": "azure/private-dns-zone",
+          "from": "core/dns-zone",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:54bdf73a5bc7bfdcbe2877641226c8607bc6ff6dc0c3d5ccfabce75b2882ad2d",
+          "rule": "azure/private-endpoint",
+          "from": "core/private-endpoint",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:b8990fe6aff08226d7b67f2781940a09dba8baa9f15ab84151262feb32ed7bb5",
+          "rule": "azure/public-address",
+          "from": "azure/public-address",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:591f9db26ae028459929a6f0ab6dd33bac3ddc86fa512afd28fd3a4844e77303",
+          "rule": "azure/service-bus-namespace",
+          "from": "azure/messaging-namespace",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:6b0a69ecddcb80c20e45ca2b28dc17ca97177b0c8a8d0a0924bea035828b3a6a",
+          "rule": "azure/service-bus-queue",
+          "from": "core/message-queue",
+          "to": "azure/messaging-namespace",
+          "via": "source.namespace_id"
+        },
+        {
+          "emission": "emission:4093602cd75310d788937ebf226ab2e35abb8212afae583dcd16f33e61483373",
+          "rule": "azure/service-bus-topic",
+          "from": "core/message-topic",
+          "to": "azure/messaging-namespace",
+          "via": "source.namespace_id"
+        },
+        {
+          "emission": "emission:7915dff1c161aa4f66a73b4ba83bc6741f0e085e015fa8afcceb7e8e01ddfb54",
+          "rule": "azure/storage-account",
+          "from": "azure/storage-account",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:5faa665804f90d8a41755a7eedfa89fbf73c613b2838202dcde8a86a067e0af9",
+          "rule": "azure/subnet",
+          "from": "core/subnet",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:5438cc18cfa50fe20b18dc5de92d60d2ea4802b09a86a2864125edd6b7986b76",
+          "rule": "azure/user-assigned-managed-identity",
+          "from": "core/service-identity",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:589cfe53aca898b36112199997b05fd05ce3e9b74e6766d3ea42eeeb8e423583",
+          "rule": "azure/virtual-machine",
+          "from": "core/compute-instance",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:e30dfa1a64229861ee21b5dd304af3aca165d8341c2bb8a2cad7a26377569abc",
+          "rule": "azure/virtual-machine-scale-set",
+          "from": "azure/virtual-machine-scale-set",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:c28f5d6e6daebcc05fd6cdb9eeadd2645fd0b7871ac6709988d52c88dcecd75d",
+          "rule": "azure/virtual-network",
+          "from": "core/virtual-network",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:dd1bf2e0c42ee678c4b306b62e3b0dd398682b590b61a9b98ce3ac4a6115bef6",
+          "rule": "azure/windows-virtual-machine",
+          "from": "core/compute-instance",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:030cefca598f5573d471c94af09ca2fd5d5c43cf11bce4fc3444d82be0002d50",
+          "rule": "azure/windows-virtual-machine-scale-set",
+          "from": "azure/virtual-machine-scale-set",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:cb3baf60f1c33029fb9c93137166632762c53613da7f99dcae717fad78fd2832",
+          "rule": "azure/windows-web-app",
+          "from": "azure/app-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:d0170696911e4df787abcd0d8413e44dfbed0a816278e9730b4adf306a80f728",
+          "rule": "cloudflare/custom-hostname",
+          "from": "cloudflare/custom-hostname",
+          "to": "core/dns-zone",
+          "via": "source.zone_id"
+        },
+        {
+          "emission": "emission:09e5da355630889de4e9f9cf36fb520fe2258eea0f060eb506d06e0a43151f8c",
+          "rule": "cloudflare/custom-hostname-fallback-origin",
+          "from": "cloudflare/saas-fallback-origin",
+          "to": "core/dns-zone",
+          "via": "source.zone_id"
+        },
+        {
+          "emission": "emission:fc594591272179fe070f3ac591170681911b77ec91ab3be6a37e34ff159ccedf",
+          "rule": "cloudflare/load-balancer",
+          "from": "core/load-balancer",
+          "to": "core/dns-zone",
+          "via": "source.zone_id"
+        },
+        {
+          "emission": "emission:5538eacc3a7381bbf5788bd79b35762a1e0bb061d39412fd9c104ea523fab5bb",
+          "rule": "cloudflare/proxied-dns-record",
+          "from": "cloudflare/edge-route",
+          "to": "core/dns-zone",
+          "via": "source.zone_id"
+        },
+        {
+          "emission": "emission:4b8eabedf9bee642c44afb40ddd4126882ac81435d0d9f4d76df7fce8f037434",
+          "rule": "cloudflare/r2-custom-domain",
+          "from": "cloudflare/r2-configuration",
+          "to": "core/dns-zone",
+          "via": "source.zone_id"
+        },
+        {
+          "emission": "emission:f657afe8cdbda9e93be05b05127c8ec7501c260569d11e501e854f5479e766b8",
+          "rule": "cloudflare/regional-hostname",
+          "from": "cloudflare/edge-route",
+          "to": "core/dns-zone",
+          "via": "source.zone_id"
+        },
+        {
+          "emission": "emission:f44c4df3e83a02bbe52060fede9e8506245f045c214bcb0741bb6e96be1ae015",
+          "rule": "cloudflare/secrets-store-secret",
+          "from": "core/managed-secret",
+          "to": "cloudflare/secrets-store",
+          "via": "source.store_id"
+        },
+        {
+          "emission": "emission:9aa5f98462b44298bd3f201e49ad92fe8331d2e7be365b52d8dbcb98afe72497",
+          "rule": "cloudflare/spectrum-application",
+          "from": "cloudflare/spectrum-application",
+          "to": "core/dns-zone",
+          "via": "source.zone_id"
+        },
+        {
+          "emission": "emission:d00e3a4b7356559822ee60466180f06f2c1b6ba9c962859f82e3cc0d592da10d",
+          "rule": "cloudflare/waiting-room",
+          "from": "cloudflare/waiting-room",
+          "to": "core/dns-zone",
+          "via": "source.zone_id"
+        },
+        {
+          "emission": "emission:b95b8b20a700d66a42a1e1270fac1251b1a30f737eebbb7cb26c19fb3d408d52",
+          "rule": "cloudflare/web3-hostname",
+          "from": "cloudflare/web3-hostname",
+          "to": "core/dns-zone",
+          "via": "source.zone_id"
+        },
+        {
+          "emission": "emission:64d992626982f1c86f674e8d443cdbdf9689fbabbfbe85c9197f93f0a60f3846",
+          "rule": "cloudflare/workers-custom-domain",
+          "from": "cloudflare/edge-route",
+          "to": "core/dns-zone",
+          "via": "source.zone_id"
+        },
+        {
+          "emission": "emission:ed19818d65c2ad644ed5c8c48a152a0dc6287654d6c5b240150fb80cdb7677d2",
+          "rule": "cloudflare/workers-route",
+          "from": "cloudflare/worker-route",
+          "to": "core/dns-zone",
+          "via": "source.zone_id"
+        },
+        {
+          "emission": "emission:60cbc7d8377ed19e0da80a9c350e139a565e500df68f6b5fbf8a63839913cb9a",
+          "rule": "confluent/catalog-integration",
+          "from": "confluent/catalog-integration",
+          "to": "confluent/environment",
+          "via": "source.environment[0].id"
+        },
+        {
+          "emission": "emission:64c75d38a0fc1eacca8015e44cc30bb49ef1fd5c34c539a749dd435a9dcd7530",
+          "rule": "confluent/connect-artifact",
+          "from": "confluent/connector-artifact",
+          "to": "confluent/environment",
+          "via": "source.environment[0].id"
+        },
+        {
+          "emission": "emission:acbcc1845d1d55d1f2b275587af5f98287c7c788396aca167e5540afac9a8dbe",
+          "rule": "confluent/connector",
+          "from": "confluent/connector",
+          "to": "confluent/environment",
+          "via": "source.environment[0].id"
+        },
+        {
+          "emission": "emission:abaf374fe84f366d8e78037fb11797dc2e8d4ec9bf77e0d1488a83a2520c2f33",
+          "rule": "confluent/custom-connector-plugin-version",
+          "from": "confluent/connector-artifact",
+          "to": "confluent/environment",
+          "via": "source.environment[0].id"
+        },
+        {
+          "emission": "emission:6d4e368912a7810e76b6a630b7d3b51cdbd6fb4930f3d85d95ee35834a27feb0",
+          "rule": "confluent/flink-artifact",
+          "from": "confluent/flink-artifact",
+          "to": "confluent/environment",
+          "via": "source.environment[0].id"
+        },
+        {
+          "emission": "emission:eb7fdbf0e43a7242b10189b2c276f6b98a5e087216e8f7e3c6c0aabb5664e98e",
+          "rule": "confluent/flink-compute-pool",
+          "from": "confluent/flink-compute-pool",
+          "to": "confluent/environment",
+          "via": "source.environment[0].id"
+        },
+        {
+          "emission": "emission:6f77e89cc90cee3a5d1a0c724e62548a15c48c691e9680383eadaaabd659bd73",
+          "rule": "confluent/flink-connection",
+          "from": "confluent/flink-connection",
+          "to": "confluent/environment",
+          "via": "source.environment[0].id"
+        },
+        {
+          "emission": "emission:76c112201217c63b9a319c58fd05fa0950669213d5b966f910bff843b3ec46ec",
+          "rule": "confluent/gateway",
+          "from": "confluent/network-gateway",
+          "to": "confluent/environment",
+          "via": "source.environment[0].id"
+        },
+        {
+          "emission": "emission:1be7dd40130fb631abe374571e22ada436fe7ae63458d25c6a11623df856d771",
+          "rule": "confluent/kafka-cluster",
+          "from": "confluent/kafka-cluster",
+          "to": "confluent/environment",
+          "via": "source.environment[0].id"
+        },
+        {
+          "emission": "emission:0010cd792006ea9bbc11e6953e0a603db8a6a009e6f447b5d6ead881cd2c9bef",
+          "rule": "confluent/ksqldb-cluster",
+          "from": "confluent/ksqldb-cluster",
+          "to": "confluent/environment",
+          "via": "source.environment[0].id"
+        },
+        {
+          "emission": "emission:57d1122437ba3d3ba12962b4df25387f3f18df3ddad88a8a574ec87a4f3ce026",
+          "rule": "confluent/network",
+          "from": "core/virtual-network",
+          "to": "confluent/environment",
+          "via": "source.environment[0].id"
+        },
+        {
+          "emission": "emission:f0cf6dc80771a284bd594a9af426405ca9580fb768ec253c2140b7bdcb92ff65",
+          "rule": "confluent/private-link-attachment",
+          "from": "confluent/private-link-attachment",
+          "to": "confluent/environment",
+          "via": "source.environment[0].id"
+        },
+        {
+          "emission": "emission:4178f55ef9e9b5162dc6ad6a1b3aa00ada46e60d8e1e02119b3cea32b4a4ee2f",
+          "rule": "confluent/provider-integration",
+          "from": "confluent/provider-integration",
+          "to": "confluent/environment",
+          "via": "source.environment[0].id"
+        },
+        {
+          "emission": "emission:25966f1d480b98a535342d602e374bcf0bc626883bdbd2e8446f9e5313a3dfa0",
+          "rule": "confluent/provider-integration-setup",
+          "from": "confluent/security-configuration",
+          "to": "confluent/environment",
+          "via": "source.environment[0].id"
+        },
+        {
+          "emission": "emission:1e3493267a8c76a2f65efe4e7c60a7f9ca3f2171b3466b3d0ebde91eac96500a",
+          "rule": "confluent/rtce-topic",
+          "from": "core/message-topic",
+          "to": "confluent/environment",
+          "via": "source.environment[0].id"
+        },
+        {
+          "emission": "emission:95427f2d825f129035ec9d115c13d8b7adc64a02bf32625b811bd511389f5162",
+          "rule": "confluent/schema-registry",
+          "from": "confluent/schema-registry",
+          "to": "confluent/environment",
+          "via": "source.environment[0].id"
+        },
+        {
+          "emission": "emission:03af6357aaa1301b741bb4ac657788616664ab1c5c9dc9da87be95b221ea4896",
+          "rule": "confluent/tableflow-topic",
+          "from": "confluent/tableflow-topic",
+          "to": "confluent/environment",
+          "via": "source.environment[0].id"
+        },
+        {
+          "emission": "emission:cf5316135003bc2f0a8ae7b3f579fe63960b00e8638eddfabeb44e3f578da45b",
+          "rule": "consul/acl-auth-method",
+          "from": "consul/acl-auth-method",
+          "to": "consul/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:8f67f3fa0fabd012cb66b63f09ee07f188efecde7146196fc44f53ec0e325884",
+          "rule": "consul/acl-auth-method-lookup",
+          "from": "consul/acl-auth-method",
+          "to": "consul/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:4d551cb856e806bc46b193776fc1900ae81b50eb02033c47543fb58535e69cf3",
+          "rule": "consul/namespace",
+          "from": "consul/namespace",
+          "to": "consul/admin-partition",
+          "via": "source.partition"
+        },
+        {
+          "emission": "emission:0db1d73f93decda25251e217ee945173176f2be42b6a030c570dd6d2cdd34962",
+          "rule": "consul/service",
+          "from": "consul/consul-service",
+          "to": "consul/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:16856afd4af0bfe8c0a22da580c09c57f18c282bc4e2facc2705f751bf852e82",
+          "rule": "databricks/external-location",
+          "from": "databricks/external-location",
+          "to": "databricks/unity-catalog-metastore",
+          "via": "source.metastore_id"
+        },
+        {
+          "emission": "emission:473f7112e1753b8e396ce12e914488f6e9dd2d985b794e4136b3cddbc46e57d0",
+          "rule": "databricks/lakebase-branch",
+          "from": "databricks/lakebase-branch",
+          "to": "databricks/lakebase-project",
+          "via": "source.parent"
+        },
+        {
+          "emission": "emission:ae3c468a80a7b5d042f9b447024719418894f2f9b19526351a4e15634c673ce7",
+          "rule": "databricks/lakebase-database",
+          "from": "core/managed-database",
+          "to": "databricks/lakebase-branch",
+          "via": "source.parent"
+        },
+        {
+          "emission": "emission:ff8377799c35b8d10a0317bf0fc4b9d8e7ba2c4b64bdb6954940e398a2ac9dac",
+          "rule": "databricks/lakehouse-federation-connection",
+          "from": "databricks/lakehouse-federation-connection",
+          "to": "databricks/unity-catalog-metastore",
+          "via": "source.metastore_id"
+        },
+        {
+          "emission": "emission:7b1b3508bf84adc7286ca5e49c3591046e1e804b3b08ca51a729b841e2e1ceab",
+          "rule": "databricks/metastore-data-access",
+          "from": "databricks/storage-credential",
+          "to": "databricks/unity-catalog-metastore",
+          "via": "source.metastore_id"
+        },
+        {
+          "emission": "emission:c0af51b049db0fabc6d2d185fa7ea943a6719bf380273162d408daea644e5a6a",
+          "rule": "databricks/registered-model",
+          "from": "databricks/registered-model",
+          "to": "databricks/unity-catalog-schema",
+          "via": "source.schema_name"
+        },
+        {
+          "emission": "emission:e9683c51e846049209b14febba06d9ada778f30a1c31ad9d6babf250a1bddbfe",
+          "rule": "databricks/service-credential",
+          "from": "databricks/service-credential",
+          "to": "databricks/unity-catalog-metastore",
+          "via": "source.metastore_id"
+        },
+        {
+          "emission": "emission:0523a146f8c46a41d9ba20f326af80d88719a48d39cb432ae12b8c26eb88762e",
+          "rule": "databricks/storage-credential",
+          "from": "databricks/storage-credential",
+          "to": "databricks/unity-catalog-metastore",
+          "via": "source.metastore_id"
+        },
+        {
+          "emission": "emission:fbea46b2f4d2108c7122d5d956ad47f502982757b3b3dce03d8fbb9c19204ac6",
+          "rule": "databricks/unity-catalog-catalog",
+          "from": "databricks/unity-catalog-catalog",
+          "to": "databricks/unity-catalog-metastore",
+          "via": "source.metastore_id"
+        },
+        {
+          "emission": "emission:ecc0e993fa3b39bb11eb3c2ba5471ebce0fcc1fa23bfddb324ce94293b47166c",
+          "rule": "databricks/unity-catalog-schema",
+          "from": "databricks/unity-catalog-schema",
+          "to": "databricks/unity-catalog-catalog",
+          "via": "source.catalog_name"
+        },
+        {
+          "emission": "emission:41b9f979806f68c8d14093d32af5ad03e2dabfafaee3d1b9cc70429e652ee951",
+          "rule": "databricks/unity-catalog-volume",
+          "from": "databricks/unity-catalog-volume",
+          "to": "databricks/unity-catalog-schema",
+          "via": "source.schema_name"
+        },
+        {
+          "emission": "emission:000c828e5196f51fb3851c89d128adba2a65b2aff404b19390b7b292568c1a50",
+          "rule": "google/bigquery-table",
+          "from": "google/bigquery-table",
+          "to": "google/bigquery-dataset",
+          "via": "source.dataset_id"
+        },
+        {
+          "emission": "emission:2bad71866f4a30523ad58719981caafbfbad09cd60073a10064574648210317b",
+          "rule": "google/cloud-kms-key",
+          "from": "core/encryption-key",
+          "to": "google/cloud-kms-key-ring",
+          "via": "source.key_ring"
+        },
+        {
+          "emission": "emission:4cf9b5629e2c033d0d723f76c048021967a99cd46a9324a15ac80106ec648611",
+          "rule": "google/cloud-monitoring-alerting-policy",
+          "from": "google/cloud-monitoring-alerting-policy",
+          "to": "google/google-cloud-project",
+          "via": "source.project"
+        },
+        {
+          "emission": "emission:c7c319a76596cd7fd79bc6f84db5a02262de12c1191c344f91b36bfb3780e8a3",
+          "rule": "google/cloud-monitoring-service",
+          "from": "google/cloud-monitoring-service",
+          "to": "google/google-cloud-project",
+          "via": "source.project"
+        },
+        {
+          "emission": "emission:a36a300b209ff3263096434fb2d9dcda4ccabb1bf0b44497a327a26070c9d339",
+          "rule": "google/cloud-monitoring-slo",
+          "from": "google/cloud-monitoring-slo",
+          "to": "google/google-cloud-project",
+          "via": "source.project"
+        },
+        {
+          "emission": "emission:fdc93e41e031aeed5bb30e3146cbf5ba9f0a4df54fb6416a10babf0dffba1762",
+          "rule": "google/cloud-nat",
+          "from": "core/managed-nat",
+          "to": "google/cloud-router",
+          "via": "source.router"
+        },
+        {
+          "emission": "emission:bfd32bfa21cbed7cae6d44a24262f1ae60b91a067b69e81cbf8018dedd2f5e47",
+          "rule": "google/cloud-run-job",
+          "from": "google/cloud-run-job",
+          "to": "google/google-cloud-project",
+          "via": "source.project"
+        },
+        {
+          "emission": "emission:bdc389ea698631edee8784c83c40de1cea0c139ee5aecfa39653a28e60da85bb",
+          "rule": "google/cloud-run-service",
+          "from": "google/cloud-run-service",
+          "to": "google/google-cloud-project",
+          "via": "source.project"
+        },
+        {
+          "emission": "emission:ace9789ed67ba4511c700f7f9fbc83856d5e4ffab72d1f2e45176ba7d0a06367",
+          "rule": "google/cloud-run-service-v1",
+          "from": "google/cloud-run-service",
+          "to": "google/google-cloud-project",
+          "via": "source.project"
+        },
+        {
+          "emission": "emission:4609d5c0f58175e6dfacd2f5f4c104084ef8b94222447a75e90c61a9f21918e5",
+          "rule": "google/cloud-run-worker-pool",
+          "from": "google/cloud-run-service",
+          "to": "google/google-cloud-project",
+          "via": "source.project"
+        },
+        {
+          "emission": "emission:111649c53fae937f33df0303d4909ab849d0940bcecd34c689e4e75f74f542bd",
+          "rule": "google/cloud-sql-instance",
+          "from": "core/managed-database",
+          "to": "google/google-cloud-project",
+          "via": "source.project"
+        },
+        {
+          "emission": "emission:28a50fec4d8aae2138e91dee63a47df870805e87d64721086da41374b7055fd9",
+          "rule": "google/dataplex-zone",
+          "from": "google/dataplex-zone",
+          "to": "google/dataplex-lake",
+          "via": "source.lake"
+        },
+        {
+          "emission": "emission:34261e008be93eb6699a80df8e219ab631bca89509cd8736739b03e667809204",
+          "rule": "google/gke-cluster",
+          "from": "core/kubernetes-cluster",
+          "to": "google/google-cloud-project",
+          "via": "source.project"
+        },
+        {
+          "emission": "emission:e8582392f7b0499f719acfa7da47dfe5347612a246771e0c0029910fe8823502",
+          "rule": "google/healthcare-consent-store",
+          "from": "google/healthcare-store",
+          "to": "google/healthcare-dataset",
+          "via": "source.dataset"
+        },
+        {
+          "emission": "emission:00825664cd3532d595c64cfd102594048695ce9bfb08d884b79da55a92870e31",
+          "rule": "google/healthcare-dicom-store",
+          "from": "google/healthcare-store",
+          "to": "google/healthcare-dataset",
+          "via": "source.dataset"
+        },
+        {
+          "emission": "emission:bfc9a941e25711231eb840a07ae94c8fa5853b88096836b8c88fd3b44399b064",
+          "rule": "google/healthcare-fhir-store",
+          "from": "google/healthcare-store",
+          "to": "google/healthcare-dataset",
+          "via": "source.dataset"
+        },
+        {
+          "emission": "emission:539438c4c3e9a659b830fb473b7156acacfadeee9abd1d26aabcf5efa5d6d3fd",
+          "rule": "google/healthcare-hl7v2-store",
+          "from": "google/healthcare-store",
+          "to": "google/healthcare-dataset",
+          "via": "source.dataset"
+        },
+        {
+          "emission": "emission:4ce530d5ddb35bb9f03fbac264ca6e79e3583d5edb228365278aa499a911d70d",
+          "rule": "google/iam-service-account",
+          "from": "core/service-identity",
+          "to": "google/google-cloud-project",
+          "via": "source.project"
+        },
+        {
+          "emission": "emission:0bddb3928308f9e9ed8a15ee94c01f3695932e1b8b59fce593a83baa4623c6a3",
+          "rule": "google/memorystore-instance",
+          "from": "core/managed-cache",
+          "to": "google/google-cloud-project",
+          "via": "source.project"
+        },
+        {
+          "emission": "emission:6ba27d43be318da8173c44bb366cd2c17fccf8509e721ac21b599be0e8253113",
+          "rule": "google/memorystore-memcached-instance",
+          "from": "core/managed-cache",
+          "to": "google/google-cloud-project",
+          "via": "source.project"
+        },
+        {
+          "emission": "emission:bfff3cce38ccd22d0b0668a5d28a78865c001facc65e8227c4ea57f792f082cf",
+          "rule": "google/memorystore-redis-cluster",
+          "from": "core/managed-cache",
+          "to": "google/google-cloud-project",
+          "via": "source.project"
+        },
+        {
+          "emission": "emission:675e6c7f25580dbfe07358c1d61116e49d6924bb1f51e65c048b49ab988503fe",
+          "rule": "google/memorystore-redis-instance",
+          "from": "core/managed-cache",
+          "to": "google/google-cloud-project",
+          "via": "source.project"
+        },
+        {
+          "emission": "emission:d547b1ba0519b1725de89d65556929ce0585034d98b44eed0e0fb6c91f5a80bf",
+          "rule": "google/netapp-volume",
+          "from": "core/managed-file-storage",
+          "to": "google/netapp-storage-pool",
+          "via": "source.storage_pool"
+        },
+        {
+          "emission": "emission:99beb7d752e1eecaf56d6f787db9addf95f43652eef4bdfceb804f2d19916112",
+          "rule": "google/private-certificate-authority",
+          "from": "google/private-certificate-authority",
+          "to": "google/private-ca-pool",
+          "via": "source.pool"
+        },
+        {
+          "emission": "emission:2325c967d3d109134e37f5d9177f18f791eb342d08ea8560c342aee86e489204",
+          "rule": "google/pubsub-subscription",
+          "from": "core/message-subscription",
+          "to": "google/google-cloud-project",
+          "via": "source.project"
+        },
+        {
+          "emission": "emission:75e46ee8b9027ee3b501b7e7d920a4bb648a9a6ea5c7eabb5bd08eb21fe1013e",
+          "rule": "google/pubsub-topic",
+          "from": "core/message-topic",
+          "to": "google/google-cloud-project",
+          "via": "source.project"
+        },
+        {
+          "emission": "emission:8a1d1b80f76598d6d6f572842cc4485d20f2acf8ce338a4f37fc08a350846516",
+          "rule": "google/secret-manager-regional-secret",
+          "from": "core/managed-secret",
+          "to": "google/google-cloud-project",
+          "via": "source.project"
+        },
+        {
+          "emission": "emission:4a8f9e84f7ab10f61bfcbd4918f83b990f968ace193d546b7a9778408fda4580",
+          "rule": "google/secret-manager-secret",
+          "from": "core/managed-secret",
+          "to": "google/google-cloud-project",
+          "via": "source.project"
+        },
+        {
+          "emission": "emission:9d733289c2aa31f0710866ddc5c6a4cdcc46ad5efa56303364a38ad5a128292e",
+          "rule": "grafana/cloud-private-data-source-connect-network",
+          "from": "grafana/private-data-source-connect-network",
+          "to": "core/observability-tenant",
+          "via": "source.stack_identifier"
+        },
+        {
+          "emission": "emission:6b7cfd643dc8a7e623f70bbb14358718fcdd942f433918b1d647bb1116a58260",
+          "rule": "grafana/cloud-provider-aws-account",
+          "from": "core/cloud-observability-integration",
+          "to": "core/observability-tenant",
+          "via": "source.stack_id"
+        },
+        {
+          "emission": "emission:bc2b04148376a13bc9be2a1e7b64673b5f7ce3b2ea7dab1f8a6dfa27390ad67c",
+          "rule": "grafana/cloud-provider-aws-account-lookup",
+          "from": "core/cloud-observability-integration",
+          "to": "core/observability-tenant",
+          "via": "source.stack_id"
+        },
+        {
+          "emission": "emission:d4cce63a801f2302064256066595ae35afb873356571963c2e51e2a41f50c9eb",
+          "rule": "grafana/cloud-provider-aws-cloudwatch-scrape-job",
+          "from": "grafana/cloud-integration-configuration",
+          "to": "core/observability-tenant",
+          "via": "source.stack_id"
+        },
+        {
+          "emission": "emission:57eec239b494439c9b483df813e41ec990d99e4e2775bf8a08b8aaed879a55e1",
+          "rule": "grafana/cloud-provider-aws-cloudwatch-scrape-job-lookup",
+          "from": "grafana/cloud-integration-configuration",
+          "to": "core/observability-tenant",
+          "via": "source.stack_id"
+        },
+        {
+          "emission": "emission:355815ecff79e8a915073ef0b0dbda78b76da007b6787fedddc01ec6653f23a2",
+          "rule": "grafana/cloud-provider-aws-resource-metadata-scrape-job",
+          "from": "grafana/cloud-integration-configuration",
+          "to": "core/observability-tenant",
+          "via": "source.stack_id"
+        },
+        {
+          "emission": "emission:fee09662302e014d8cd6dd4981ff989f7d728ecba91f444ace48fd14dcf1fba2",
+          "rule": "grafana/cloud-provider-azure-credential",
+          "from": "core/cloud-observability-integration",
+          "to": "core/observability-tenant",
+          "via": "source.stack_id"
+        },
+        {
+          "emission": "emission:944da1420428c2af2ec73dc7b5bc27f4f3fe6c83116ce1585d98d1b6ed8af990",
+          "rule": "grafana/cloud-provider-azure-credential-lookup",
+          "from": "core/cloud-observability-integration",
+          "to": "core/observability-tenant",
+          "via": "source.stack_id"
+        },
+        {
+          "emission": "emission:7649f650753c2ac6a28a100d921e5e3d35dd591aa32a53b9b00fc0a378645c60",
+          "rule": "grafana/connections-metrics-endpoint-scrape-job",
+          "from": "grafana/metrics-scrape-job",
+          "to": "core/observability-tenant",
+          "via": "source.stack_id"
+        },
+        {
+          "emission": "emission:60ef48566820568bd4ca0dbffed431e3ff38b0c28292400121cb4a0934b00ca5",
+          "rule": "grafana/connections-metrics-endpoint-scrape-job-lookup",
+          "from": "grafana/metrics-scrape-job",
+          "to": "core/observability-tenant",
+          "via": "source.stack_id"
+        },
+        {
+          "emission": "emission:a135ebecc671a6d383521585ffe49ea97176e8e0966024827c8b349ec1779823",
+          "rule": "grafana/data-source",
+          "from": "grafana/data-source",
+          "to": "core/observability-tenant",
+          "via": "source.org_id"
+        },
+        {
+          "emission": "emission:9d55936983e402223bb4f76d3ee2c745b35b1a243c3884014f0da2a5178bb2e6",
+          "rule": "grafana/data-source-lookup",
+          "from": "grafana/data-source",
+          "to": "core/observability-tenant",
+          "via": "source.org_id"
+        },
+        {
+          "emission": "emission:126d7ffd939d0c158ea57ef42d4f76b958254d2cadc0154da2cea0f5ae688005",
+          "rule": "grafana/frontend-o11y-app",
+          "from": "core/browser-observability-application",
+          "to": "core/observability-tenant",
+          "via": "source.stack_id"
+        },
+        {
+          "emission": "emission:f14b9f10289c2d3b7c1570eba97d5392dd54f8e6384479f0053a287827927edf",
+          "rule": "grafana/frontend-o11y-app-lookup",
+          "from": "core/browser-observability-application",
+          "to": "core/observability-tenant",
+          "via": "source.stack_id"
+        },
+        {
+          "emission": "emission:09e4ed0b1c9134b6212f9584fb993b84911f90f80ff693f4123685bd0d3a352c",
+          "rule": "hcp/aws-network-peering",
+          "from": "core/network-peering",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:098bd80c4c48e1755144f62eb17f5a36f4961ec6418e891fa5f296b41df786a6",
+          "rule": "hcp/aws-network-peering-lookup",
+          "from": "core/network-peering",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:00d1e8f70d40e0dbf40da10b3c109ed24be6bba3b227dcce8140b45b21b0ca18",
+          "rule": "hcp/aws-transit-gateway-attachment",
+          "from": "hcp/transit-gateway-attachment",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:37ecd9b182cc0ed580b80d6c9a2d9831bfb8862ca774a5e44cb4ed637ddbb652",
+          "rule": "hcp/aws-transit-gateway-attachment-lookup",
+          "from": "hcp/transit-gateway-attachment",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:d79426917601147afb42b22a015748bc2f335124a5d3b27d5437f20c87dafca5",
+          "rule": "hcp/azure-peering-connection",
+          "from": "core/network-peering",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:81879b1a176f7b35ceca42ec2aef73d8667e341e901358d07abd6672e8a63bfa",
+          "rule": "hcp/azure-peering-connection-lookup",
+          "from": "core/network-peering",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:6d114cfbf70718851e9824f30671e0e809b6fba32612c9a0f397071577833cca",
+          "rule": "hcp/boundary-cluster",
+          "from": "hcp/boundary-cluster",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:27925fb9b9fc890a2b1b4825bbe5f287f12c4adddcd5744a3108cadcaf8d70a9",
+          "rule": "hcp/boundary-cluster-lookup",
+          "from": "hcp/boundary-cluster",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:c0146f23cf0de37820ae4e195bdb4a21f9ca01084165526e9edd0444946b3176",
+          "rule": "hcp/consul-cluster",
+          "from": "hcp/consul-dedicated-cluster",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:ae3066adf5c142066e7d46fd8bddbf1fa2563f9bf6dda3a2cf4e300ae942a688",
+          "rule": "hcp/consul-cluster-lookup",
+          "from": "hcp/consul-dedicated-cluster",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:d2b314464b2ac5f8b75c730a7c76bc48faeba8fe807bee5a9eca180a50b5c818",
+          "rule": "hcp/dns-forwarding",
+          "from": "hcp/dns-forwarding",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:8b8192709bbf265bd0acee3b966df71387bd990558f036f50e1734b965606792",
+          "rule": "hcp/dns-forwarding-lookup",
+          "from": "hcp/dns-forwarding",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:ed62a2fb85f7f565ebb7a7a3a2641af533d7865b5ff8b09e80b10598af43e40d",
+          "rule": "hcp/hvn",
+          "from": "core/virtual-network",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:fcdca781f0b64ccc078536bd3c016358da0c988cb986e6e2f9bdf30b8e298132",
+          "rule": "hcp/hvn-lookup",
+          "from": "core/virtual-network",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:de68b48caa79340a5b284c7b3f977f49b6c8bf3613bc41ded5e7cee9add02c3f",
+          "rule": "hcp/hvn-peering-connection",
+          "from": "core/network-peering",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:3c0accef796aa28dee5164b649c7e7932a2e5119814795ed2aa0ba8e0302ddc2",
+          "rule": "hcp/hvn-peering-connection-lookup",
+          "from": "core/network-peering",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:5397fbad656246afaf4343ac311aaecb9f01856b7efaf579eb960040627781bf",
+          "rule": "hcp/notifications-webhook",
+          "from": "hcp/notification-webhook",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:b9bdcbff652cd8003a130199517288ca30d92156323d670193b74bbfc82b53a1",
+          "rule": "hcp/packer-artifact-lookup",
+          "from": "hcp/packer-artifact",
+          "to": "hcp/packer-bucket",
+          "via": "source.bucket_name"
+        },
+        {
+          "emission": "emission:85d0621f451dbb81360a0567f642b0a8639f3ae84c488af7ab670a91a4370292",
+          "rule": "hcp/packer-bucket",
+          "from": "hcp/packer-bucket",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:61515d442c16812dff43ac63f20365e049e32680914d6d0e9550fbb335e1f109",
+          "rule": "hcp/packer-channel",
+          "from": "hcp/packer-channel",
+          "to": "hcp/packer-bucket",
+          "via": "source.bucket_name"
+        },
+        {
+          "emission": "emission:02d5e34eaf8c9aa4849f0fc9164e26016ad62ac4b695ca66e2b405613e0403ff",
+          "rule": "hcp/packer-version-lookup",
+          "from": "hcp/packer-version",
+          "to": "hcp/packer-bucket",
+          "via": "source.bucket_name"
+        },
+        {
+          "emission": "emission:75a0f7e40167b1db31c37e94d5026e808f820fb122e5d8da83c6c9035f4baf45",
+          "rule": "hcp/private-link",
+          "from": "hcp/private-link-service",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:7d8dddd48b1bdb0222d675c302aa1d6a72e4b591a5df5e4e44b288398ebd105a",
+          "rule": "hcp/private-link-lookup",
+          "from": "hcp/private-link-service",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:13303a3204f7065d63ffad2e5c798bbe02800b709f0d9ee3ac59e73801a15461",
+          "rule": "hcp/vault-cluster",
+          "from": "hcp/vault-dedicated-cluster",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:512df6db5ba30c0733f7a8be7d2c7a7f495948cb0ba436e0a6e0dabf7aae8b0f",
+          "rule": "hcp/vault-cluster-lookup",
+          "from": "hcp/vault-dedicated-cluster",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:de286ec06a0326dc3ec3140e914d96fcc268e1508a35afdc2425ac687ee338a5",
+          "rule": "hcp/vault-plugin",
+          "from": "hcp/vault-plugin",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:2455bff0a4b2553c3b0b826cd3733974133a869f638dd992fa6caab6c33320f1",
+          "rule": "hcp/vault-plugin-lookup",
+          "from": "hcp/vault-plugin",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:46755d992542a59a40a76b1d9c05848f89f7dbb211d44c921d788dfcd6f9bfb5",
+          "rule": "hcp/vault-radar-integration-jira-connection",
+          "from": "hcp/vault-radar-integration",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:eebeb39d36bac51972de36422ae862522cd3dba3e372626ce216ccf8e64db4db",
+          "rule": "hcp/vault-radar-integration-slack-connection",
+          "from": "hcp/vault-radar-integration",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:5e93bab53407bf9ab2b811e53b36bbb7ed9a856cba9308770acc908bca9fc5db",
+          "rule": "hcp/vault-radar-secret-manager-vault-dedicated",
+          "from": "hcp/vault-radar-secret-manager",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:5ac821c2a79a60f1dedf09e5aa0a5eabf7025818bba6309dfe1af89be623d1bf",
+          "rule": "hcp/vault-radar-source-github-cloud",
+          "from": "hcp/vault-radar-source",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:b395db3940764e4fa2e1e7dd0c89b624973bdbd9b62a8900d173c081eca85330",
+          "rule": "hcp/vault-radar-source-github-enterprise",
+          "from": "hcp/vault-radar-source",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:f6213daf0865b60d7e9ed5351e58596d5f63541dcd6a1ffdbe454feef2299db2",
+          "rule": "hcp/vault-secrets-app",
+          "from": "hcp/vault-secrets-application",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:3a80a81f3f60ec43d3d01d939d33099bb1839c2fa93cae892001c505aeda2d6c",
+          "rule": "hcp/vault-secrets-app-lookup",
+          "from": "hcp/vault-secrets-application",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:f1cdb74c9fbc7390f320fd57d4326f4472ee50c072adc6904c128b5dd02fdb52",
+          "rule": "hcp/vault-secrets-dynamic-secret",
+          "from": "core/managed-secret",
+          "to": "hcp/vault-secrets-application",
+          "via": "source.app_name"
+        },
+        {
+          "emission": "emission:c76bed0efa0b40d002bc734bee285773fe0a9ce0dd4c936a3fa76ad917286cd9",
+          "rule": "hcp/vault-secrets-integration",
+          "from": "hcp/vault-secrets-integration",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:da0a2363e133e729eb25644fbb2ae1c02ba7143dbade2f4892fb1a996afcdfc3",
+          "rule": "hcp/vault-secrets-integration-aws",
+          "from": "hcp/vault-secrets-integration",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:9a168e8d82ccfe90fa2fe5ef4a14fb30bd77e04879d53f9293234732f154e790",
+          "rule": "hcp/vault-secrets-integration-azure",
+          "from": "hcp/vault-secrets-integration",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:047412842afce3287aa41bc2b97a1bd1d146bb81b5d1b51d3fc9239ea287c88b",
+          "rule": "hcp/vault-secrets-integration-confluent",
+          "from": "hcp/vault-secrets-integration",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:0f07f9831022bfe936a63da2953a4983d720b834fbad6e339f646c08ae6942cc",
+          "rule": "hcp/vault-secrets-integration-gcp",
+          "from": "hcp/vault-secrets-integration",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:33454e133922393768d5ba7da65858f53fea1438dc84526c6364637946febf9e",
+          "rule": "hcp/vault-secrets-integration-mongodbatlas",
+          "from": "hcp/vault-secrets-integration",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:f772f5873dab08248991ff73ed17aa55c2933e44b434bfb824182cc5747dd6cc",
+          "rule": "hcp/vault-secrets-integration-twilio",
+          "from": "hcp/vault-secrets-integration",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:392f7bbf7917067b582d89cb2b5329d6602124a6cf54fed6a6602d5cba1ce8e6",
+          "rule": "hcp/vault-secrets-rotating-secret",
+          "from": "core/managed-secret",
+          "to": "hcp/vault-secrets-application",
+          "via": "source.app_name"
+        },
+        {
+          "emission": "emission:f58eaa0e117f217505d415a51cd88bff085eebb28a0fa6be5b5e14a88160ceb5",
+          "rule": "hcp/vault-secrets-secret",
+          "from": "core/managed-secret",
+          "to": "hcp/vault-secrets-application",
+          "via": "source.app_name"
+        },
+        {
+          "emission": "emission:6e8412f0c83f97d2e2f3d3849ae207c7baa7f015e36e3bea20f0c809ac6f2540",
+          "rule": "hcp/vault-secrets-sync",
+          "from": "hcp/vault-secrets-sync",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:d0ba4aeab881a7518ba97ee851a3d6e77711c7ea2808c40d9917b4794bd2e684",
+          "rule": "hcp/waypoint-add-on",
+          "from": "hcp/waypoint-add-on",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:e48c6865a21a97ed31605d0b3d6f179a58efe7cebac59f3b48d1fed2f337cb0f",
+          "rule": "hcp/waypoint-add-on-definition",
+          "from": "hcp/waypoint-add-on-definition",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:bfc0469b48d656c392a962f04cd9dc4110e02030ca351860fae55b1f2d2b0483",
+          "rule": "hcp/waypoint-add-on-definition-lookup",
+          "from": "hcp/waypoint-add-on-definition",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:01ca00f77829bac388926c95f059edbfa76a158e25a38cba79e1ee33083d4fa4",
+          "rule": "hcp/waypoint-add-on-lookup",
+          "from": "hcp/waypoint-add-on",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:c41079b167dd247c7f5c7cd236ecae97306c56268b9f6c41ba89ff088a0fd6ec",
+          "rule": "hcp/waypoint-agent-group",
+          "from": "hcp/waypoint-agent-group",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:c5bec48768c97dff5a55084b9b92ffdc3e5f0afa3acc40950c68386deb033136",
+          "rule": "hcp/waypoint-agent-group-lookup",
+          "from": "hcp/waypoint-agent-group",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:743ab5d36053d66c746606c9b77dad8bc91fec8613831c7bea582ae448c3c263",
+          "rule": "hcp/waypoint-application",
+          "from": "hcp/waypoint-application",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:4dba8a3ba01a287f9e861e49514aed90c4fb1070ad92f514ae76e7c635083276",
+          "rule": "hcp/waypoint-application-lookup",
+          "from": "hcp/waypoint-application",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:65674914e2bbbdf13052a213eaed45a1fd434bd4f9ec5ae9e63cdd788bbccc28",
+          "rule": "hcp/waypoint-template",
+          "from": "hcp/waypoint-template",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:8aab9edc20dbc1f22e907db7f7790eb3d4d1bd8fc265fe73093365e7860197e1",
+          "rule": "hcp/waypoint-template-lookup",
+          "from": "hcp/waypoint-template",
+          "to": "hcp/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:5b131d04a898ffe9cb6d5419a7a0fe9ef44b8dc160010e51b2227d08055bde6f",
+          "rule": "kestra/flow",
+          "from": "kestra/flow",
+          "to": "kestra/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:4e53e91f53ebd15b43e2a82f954809ff381bb9da85aa33190582ab006648dc01",
+          "rule": "kestra/group",
+          "from": "core/identity-group",
+          "to": "kestra/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:e6c0f44bdf172be2d10dae0d4e22ee676d9e51b35935dade75de8d63a4d5d581",
+          "rule": "kestra/role",
+          "from": "kestra/access-role",
+          "to": "kestra/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:4a7fe9a0aa40b59ec5235cd7b357af3b5fbfc1a0ed216b30ee24bde8ceccd608",
+          "rule": "kubernetes/kubernetes-daemon-set",
+          "from": "kubernetes/daemon-set",
+          "to": "kubernetes/namespace",
+          "via": "source.metadata[0].namespace"
+        },
+        {
+          "emission": "emission:25830de8ee723830d235f390074054500e9cc36648db1b49d551c67be9ec9c79",
+          "rule": "kubernetes/kubernetes-deployment",
+          "from": "kubernetes/deployment",
+          "to": "kubernetes/namespace",
+          "via": "source.metadata[0].namespace"
+        },
+        {
+          "emission": "emission:a84a4e25d1105a3c90c03c8163ec6e21cfd02ffdca277165be7da1651a31d623",
+          "rule": "kubernetes/kubernetes-horizontal-pod-autoscaler",
+          "from": "kubernetes/horizontal-pod-autoscaler",
+          "to": "kubernetes/namespace",
+          "via": "source.metadata[0].namespace"
+        },
+        {
+          "emission": "emission:4187a9e81731996c4414bd5a87116c9e058668ba32e295cab463464e41c6a310",
+          "rule": "kubernetes/kubernetes-ingress",
+          "from": "kubernetes/ingress",
+          "to": "kubernetes/namespace",
+          "via": "source.metadata[0].namespace"
+        },
+        {
+          "emission": "emission:6625290202fe0beb6dc8d570cfd9abf8d1fca46993ac09288a8225ace350deb0",
+          "rule": "kubernetes/kubernetes-network-policy",
+          "from": "kubernetes/network-policy",
+          "to": "kubernetes/namespace",
+          "via": "source.metadata[0].namespace"
+        },
+        {
+          "emission": "emission:317707ae39339b96213b56e5a060f65627d528dc56b315f72520267167091b4e",
+          "rule": "kubernetes/kubernetes-persistent-volume-claim",
+          "from": "kubernetes/persistent-volume-claim",
+          "to": "kubernetes/namespace",
+          "via": "source.metadata[0].namespace"
+        },
+        {
+          "emission": "emission:b353d2cb657545f5af0147e711037900b1d2350931a70487b79a7e6e81b3e00e",
+          "rule": "kubernetes/kubernetes-service",
+          "from": "kubernetes/service",
+          "to": "kubernetes/namespace",
+          "via": "source.metadata[0].namespace"
+        },
+        {
+          "emission": "emission:8c75c792f4a18b793bcb8791c5853a4e453bb606bc1871a1a9f9d09c433c0e52",
+          "rule": "kubernetes/kubernetes-service-account",
+          "from": "kubernetes/service-account",
+          "to": "kubernetes/namespace",
+          "via": "source.metadata[0].namespace"
+        },
+        {
+          "emission": "emission:65ac54dfca959d98ac69aa53cbe2adcfdc45b74b59ca89508e8ce25b0c120873",
+          "rule": "kubernetes/kubernetes-stateful-set",
+          "from": "kubernetes/stateful-set",
+          "to": "kubernetes/namespace",
+          "via": "source.metadata[0].namespace"
+        },
+        {
+          "emission": "emission:187cceb7826f5d43c0f18835a2bb38d968edf6422960ae38daaecf1d95b06c57",
+          "rule": "mongodb-atlas/advanced-cluster",
+          "from": "core/managed-database",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:2e4eb6a68313e561ea1a9d8b8c4e64654301e3a72d7e691a35b7cf092ac63f10",
+          "rule": "mongodb-atlas/cloud-backup-export-destination",
+          "from": "mongodb-atlas/backup-export-destination",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:bf2d4c645e480d9d11a720f2da83a1116b811ed3fdf00a8d92b1b00f06131edf",
+          "rule": "mongodb-atlas/cloud-backup-schedule",
+          "from": "core/backup-plan",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:afbd77098b619ed0ef59fbe97d3ed665c0cdd82985a35e9f8138f4091d92cc49",
+          "rule": "mongodb-atlas/cloud-provider-access-authorization",
+          "from": "mongodb-atlas/cloud-provider-authorization",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:8cd28482799a6f9ed44673f8e87dbb09a39447efa040e262a120ee73a2607c27",
+          "rule": "mongodb-atlas/cloud-provider-access-setup",
+          "from": "mongodb-atlas/cloud-provider-access",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:53dfbd61e50b4c03be2724b2c5a187b34ddde3266b133d86e5dbcbcc522d840c",
+          "rule": "mongodb-atlas/cluster",
+          "from": "core/managed-database",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:ee93e0d3459a9aa27133a1266064d2dab57f2405e8538e3f64e92e6bf962c176",
+          "rule": "mongodb-atlas/data-service-private-endpoint",
+          "from": "mongodb-atlas/data-service-private-endpoint",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:6b337568162724d35c05738462c8c5b7de1dbf2026aec7f35b6fa532090d1658",
+          "rule": "mongodb-atlas/encryption-at-rest",
+          "from": "mongodb-atlas/customer-key-management",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:d0703abaa2f6a6f299504c70614f42fe2f05ce8483b5ddb1a775944ea882cb7c",
+          "rule": "mongodb-atlas/encryption-private-endpoint",
+          "from": "core/private-endpoint",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:d556f281b5b479358a97050149b47ccc8dfae4a3424c233fd4bd135e83159e6a",
+          "rule": "mongodb-atlas/event-trigger",
+          "from": "mongodb-atlas/event-trigger",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:0fb28253adb91cbef99cb933bd45290fbc62ba101e29552d9b078c2ef489f809",
+          "rule": "mongodb-atlas/federated-database-instance",
+          "from": "mongodb-atlas/federated-database-instance",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:539d69825b2312db9fc3ee3fe206aaaac94e72686b1b51669a809c05ec57851a",
+          "rule": "mongodb-atlas/flex-cluster",
+          "from": "core/managed-database",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:1fc8d2a5f6fece14e20e91d93c2b5ec50f749044cbf317b9d09cc1b02171355f",
+          "rule": "mongodb-atlas/ldap-configuration",
+          "from": "mongodb-atlas/identity-provider",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:46943ffb5d32b81aca6e7b45ca7bcf5b142526462543b0ff419fa3fc352c0ee6",
+          "rule": "mongodb-atlas/log-integration",
+          "from": "mongodb-atlas/log-integration",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:a1cf30b9669da954990103ca4a43ab2ac0b4bf9a338db1b991a40aa54ff9f3ab",
+          "rule": "mongodb-atlas/metric-integration",
+          "from": "mongodb-atlas/metric-integration",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:bc699fd6a3e3390b6332e1737c709bd1a72b5d92e025d996e24f53d8c6b21a66",
+          "rule": "mongodb-atlas/network-container",
+          "from": "core/virtual-network",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:c6de4514dd4ca5c6745514651e8d3623aadb93b670d24216a2ecf42990699b7c",
+          "rule": "mongodb-atlas/network-peering",
+          "from": "core/network-peering",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:af561b3cbefe7a29469567017ba688dc142e5dbb6632b63671161fea0a9a5633",
+          "rule": "mongodb-atlas/online-archive",
+          "from": "mongodb-atlas/online-archive",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:d1dd10ac0c3227064885c24185250b88170d0b19415d0314455517bf4575e2a2",
+          "rule": "mongodb-atlas/organization-service-account",
+          "from": "core/service-identity",
+          "to": "mongodb-atlas/organization",
+          "via": "source.org_id"
+        },
+        {
+          "emission": "emission:ed1a573efe6ccd4a3ae155010e532478c4344667af8827d9e184ac0c8f86a0ea",
+          "rule": "mongodb-atlas/private-endpoint-registration",
+          "from": "mongodb-atlas/private-endpoint-registration",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:9dbe5c7572490ff94859fd7b6a110b13c0cbfe979205dd885401f4a06e666598",
+          "rule": "mongodb-atlas/private-endpoint-service",
+          "from": "mongodb-atlas/private-endpoint-service",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:9681b4b9ced066f57814c449512edba8edf7260ae6d4824c5c453a548ead31e2",
+          "rule": "mongodb-atlas/project",
+          "from": "mongodb-atlas/project",
+          "to": "mongodb-atlas/organization",
+          "via": "source.org_id"
+        },
+        {
+          "emission": "emission:ecb3d21877893649bec31b8c3562f79d6ab7fe6db4b3a2ca6e1114940ddebfff",
+          "rule": "mongodb-atlas/project-service-account",
+          "from": "core/service-identity",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:1a6e02d03fd471a6bba6bde5dc818b7a58523a1d3ba2242040d7ed4e9dc5dd6e",
+          "rule": "mongodb-atlas/push-based-log-export",
+          "from": "mongodb-atlas/log-integration",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:41d3eb6ed678e78c98b092aa2014765ff8300dd37599cf1729f0fefaa6650ea3",
+          "rule": "mongodb-atlas/search-deployment",
+          "from": "mongodb-atlas/search-deployment",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:e64a13b55e1c70d0ebaf581fc5fb4fc97f21fa55bec7a7e991b77a6df2a9866a",
+          "rule": "mongodb-atlas/serverless-instance",
+          "from": "core/managed-database",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:56e267af94779f820fbab1ece2a932cbc75b839511088bb2aa887aae5b469405",
+          "rule": "mongodb-atlas/stream-connection",
+          "from": "mongodb-atlas/stream-connection",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:82455cc926877a8ef703b7da423d4ccefcf4bcf5b187e0d5efb6d151d34ece64",
+          "rule": "mongodb-atlas/stream-instance",
+          "from": "mongodb-atlas/stream-processing-workspace",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:535374e07021ea207ec58d71b95b9de7f082e9cf1f927083f1a7ad0b5cc4517b",
+          "rule": "mongodb-atlas/stream-private-endpoint",
+          "from": "core/private-endpoint",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:fcdf850f0f69e58a998393a2d3e7a404f67385e0cea6176e64aa0a159abdb84a",
+          "rule": "mongodb-atlas/stream-processor",
+          "from": "mongodb-atlas/stream-processor",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:85834dfca70dff2a3a81635dba503d35ddeba56f29d5865343af61c4d4e0c380",
+          "rule": "mongodb-atlas/stream-workspace",
+          "from": "mongodb-atlas/stream-processing-workspace",
+          "to": "mongodb-atlas/project",
+          "via": "source.project_id"
+        },
+        {
+          "emission": "emission:fe33dfdbc5f11d2ec452db2c46cc959a3b06908826ffc60996f80a0715f6fe6f",
+          "rule": "mongodb-atlas/team",
+          "from": "core/identity-group",
+          "to": "mongodb-atlas/organization",
+          "via": "source.org_id"
+        },
+        {
+          "emission": "emission:6ea5d7a03adaa1a6d38f70887ead0278a7e12c286a1d968af843061b17db7bde",
+          "rule": "newrelic/aws-connection",
+          "from": "newrelic/aws-connection",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:2c83c3c048af10ee8248af0445d4cd4a483041c765a1ad6a57363b3ee0047f81",
+          "rule": "newrelic/browser-application",
+          "from": "core/browser-observability-application",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:562e213e0f827893b38ac8665e1cd1f8cb43a79725cd86f2933fac2f9c377332",
+          "rule": "newrelic/cloud-account-lookup",
+          "from": "core/cloud-observability-integration",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:d0217b37dcdccf08511a7ecfd1bc12a6822f35f21f0ad7232d4ff06c4a7dc4ba",
+          "rule": "newrelic/cloud-aws-eu-sovereign-integrations",
+          "from": "newrelic/cloud-integration-configuration",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:cc7290f651fcfbabfee8bb4c5c02b91f4bc4a625d42272a361f149c4d5529af9",
+          "rule": "newrelic/cloud-aws-eu-sovereign-link-account",
+          "from": "core/cloud-observability-integration",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:00fe90bfc4ca988ad1a73c4e50cbef4bfa7d0053764c77867b484e09ff61e69c",
+          "rule": "newrelic/cloud-aws-govcloud-integrations",
+          "from": "newrelic/cloud-integration-configuration",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:34df62a5ab7d66980508d00da2b37853f7b24e5e155873e15fb7e6180bfa9096",
+          "rule": "newrelic/cloud-aws-govcloud-link-account",
+          "from": "core/cloud-observability-integration",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:6c3d89b025448f2e7e71eeecf2e56a12b0af42d7d16503d9108974dfb0c581f0",
+          "rule": "newrelic/cloud-aws-integrations",
+          "from": "newrelic/cloud-integration-configuration",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:9a6d44cb381dc5f107319f65a45abbf31b685d71711930a255085f6a038a3531",
+          "rule": "newrelic/cloud-aws-link-account",
+          "from": "core/cloud-observability-integration",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:3e999f74f58a689f7d46cf82976e26ccd0fd941492225e35be9fcec4d978e304",
+          "rule": "newrelic/cloud-azure-integrations",
+          "from": "newrelic/cloud-integration-configuration",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:a13e609a4db23c88dd54a5e92eb058493928bff135e9ceddddaaf5c0c58bf4c5",
+          "rule": "newrelic/cloud-azure-link-account",
+          "from": "core/cloud-observability-integration",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:ad36509193f0ccf0f365b11e8730c0f1c108c5624a78a2038d1d8d49e548add6",
+          "rule": "newrelic/cloud-gcp-dm-integrations",
+          "from": "newrelic/cloud-integration-configuration",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:23d586802a93f5e19f4ccafc384d2f2ab4d20665e16286c38efd779c258eef1a",
+          "rule": "newrelic/cloud-gcp-integrations",
+          "from": "newrelic/cloud-integration-configuration",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:d63f85118682ec8f9ec8a0e8efbfe973424c1cd6ebf406926488cb5112b13735",
+          "rule": "newrelic/cloud-gcp-link-account",
+          "from": "core/cloud-observability-integration",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:4f2a2d8c79b5ca0971a094fe01e73a002191b95a1636f554f8c89507fd886984",
+          "rule": "newrelic/cloud-oci-link-account",
+          "from": "core/cloud-observability-integration",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:20c37ccbebae2b413f5cdad041958b403cf8835e646313342ba26d5831c33610",
+          "rule": "newrelic/data-partition-rule",
+          "from": "newrelic/telemetry-processing-configuration",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:fc813acc51be005d598b12ff82decc8b04aca0f0d7e593615428325d052e874f",
+          "rule": "newrelic/events-to-metrics-rule",
+          "from": "newrelic/telemetry-processing-configuration",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:4fcdaabd28ab7ee219765294198ce95e4fc6744b941897d9a6aee82c25832107",
+          "rule": "newrelic/federated-logs-partition",
+          "from": "newrelic/federated-logs-partition",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:1e35ac207b75cb85ea3993261730d5e25155b457e40ab5b0dbd3647010ce9d8e",
+          "rule": "newrelic/federated-logs-setup",
+          "from": "newrelic/federated-logs-setup",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:31bcd08a1a6ec317d46859b067a095a468bbd82eb5ccb0576a049254eba4eeef",
+          "rule": "newrelic/log-parsing-rule",
+          "from": "newrelic/telemetry-processing-configuration",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:abade5467e652f7fa11068b09d8c39f2a7ee15fc3093e5ffea18a3b151dee20f",
+          "rule": "newrelic/metric-pruning-rule",
+          "from": "newrelic/telemetry-processing-configuration",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:a46ad24c05198e23849757f4b384284383414aadb0a4d44ead60a47b01ff8182",
+          "rule": "newrelic/nrql-drop-rule",
+          "from": "newrelic/telemetry-processing-configuration",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:85204d0eac2f7c3e65c2bf8158ce56f031c942a3f0ecf441886fbbeaccf0121c",
+          "rule": "newrelic/obfuscation-expression",
+          "from": "newrelic/telemetry-processing-configuration",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:456cf5a227fed889f40aa4a94a82e2621abab414eb8eec01ce91a8f8f5f2561e",
+          "rule": "newrelic/obfuscation-expression-lookup",
+          "from": "newrelic/telemetry-processing-configuration",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:f669b9d5a04be7809f35ddd7506cb38df84549755698c25357273c0b5a84c838",
+          "rule": "newrelic/obfuscation-rule",
+          "from": "newrelic/telemetry-processing-configuration",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:b9be534c6ecdedf72985c477fb1e74810b1e634c4480b719a2a65b3f359bb486",
+          "rule": "newrelic/pipeline-cloud-rule",
+          "from": "newrelic/telemetry-processing-configuration",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:23a6995c16a810e265a3ec5d6aaa46c7fb9f21dc08a57fb114e29643e9fe8238",
+          "rule": "newrelic/synthetics-broken-links-monitor",
+          "from": "core/synthetic-check",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:73dfe15d7645e147a3a99bfaed2d9dd5312d823d414d8c12321de0c1ad9fd176",
+          "rule": "newrelic/synthetics-cert-check-monitor",
+          "from": "core/synthetic-check",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:55e51e6f205b6df40f28e298aa334f3d925fcf6522175527eeb62edbe07dac1e",
+          "rule": "newrelic/synthetics-monitor",
+          "from": "core/synthetic-check",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:f123f215f25b07a1f4ae6daefe0cd9ada63190841bf78721f1a2086e4ccb68dd",
+          "rule": "newrelic/synthetics-private-location",
+          "from": "core/synthetic-execution-location",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:1cd06225266452e0fd5bb66439a1ab1d8e3a81381865fb1ccc875285862824e2",
+          "rule": "newrelic/synthetics-private-location-lookup",
+          "from": "core/synthetic-execution-location",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:9fff1c41a462f7e910a9d769a76c9c4103b4532992a501eb056b8bf8f340c80f",
+          "rule": "newrelic/synthetics-script-monitor",
+          "from": "core/synthetic-check",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:6b5dac979fa00afeab28b3143877e551076081abc025cc3a4a806110f1bf2d39",
+          "rule": "newrelic/synthetics-step-monitor",
+          "from": "core/synthetic-check",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:acfae03e2ade040a3df8612e07dce7566cfffbd9964b1061e0074c3a20c34d36",
+          "rule": "newrelic/workload",
+          "from": "newrelic/observability-workload",
+          "to": "core/observability-tenant",
+          "via": "source.account_id"
+        },
+        {
+          "emission": "emission:52507c61ba73056a14205fb79779c93983eb146319ddf1a910c2224a6f11278d",
+          "rule": "snowflake/alert",
+          "from": "snowflake/alert",
+          "to": "snowflake/schema",
+          "via": "source.schema"
+        },
+        {
+          "emission": "emission:354f7b676440c0f7fa9f9c8f2645fc3f61b56e6b9ce42e1c51b2d46604586281",
+          "rule": "snowflake/cortex-agent",
+          "from": "snowflake/cortex-agent",
+          "to": "snowflake/schema",
+          "via": "source.schema"
+        },
+        {
+          "emission": "emission:bc16e9b8eaf5198c17d7008966a65dad939a83ea1fdae087fa326a55bc1ec012",
+          "rule": "snowflake/cortex-search-service",
+          "from": "snowflake/cortex-search-service",
+          "to": "snowflake/schema",
+          "via": "source.schema"
+        },
+        {
+          "emission": "emission:ffbdb825a2701d939057bfacd74b5780617cc2ceb082edb3535423d5c732db0c",
+          "rule": "snowflake/dynamic-table",
+          "from": "snowflake/dynamic-table",
+          "to": "snowflake/schema",
+          "via": "source.schema"
+        },
+        {
+          "emission": "emission:eb1502e217e2803ea22cc6e0bfa18e1afcfdc8773e0714e868989431d66d9386",
+          "rule": "snowflake/external-azure-stage",
+          "from": "snowflake/stage",
+          "to": "snowflake/schema",
+          "via": "source.schema"
+        },
+        {
+          "emission": "emission:56bcdf37342fe478c8c4cbdfe4b51848ac576053d2b4f03c2a95d187db4144af",
+          "rule": "snowflake/external-function",
+          "from": "snowflake/external-function",
+          "to": "snowflake/schema",
+          "via": "source.schema"
+        },
+        {
+          "emission": "emission:1f49777dd90ef8b2fe87961a6612e282c2c54dc63d0927b02826bd8fd12056ab",
+          "rule": "snowflake/external-gcs-stage",
+          "from": "snowflake/stage",
+          "to": "snowflake/schema",
+          "via": "source.schema"
+        },
+        {
+          "emission": "emission:62b274669d4968d514a68ff7da1bc0d4321aaa4783c8d56c3eac9f29e35af1b3",
+          "rule": "snowflake/external-s3-compatible-stage",
+          "from": "snowflake/stage",
+          "to": "snowflake/schema",
+          "via": "source.schema"
+        },
+        {
+          "emission": "emission:f3a3f43be3fe563b9896bfddd0157e1aa6c77603d3d92b3ea0c1d072bad8e788",
+          "rule": "snowflake/external-s3-stage",
+          "from": "snowflake/stage",
+          "to": "snowflake/schema",
+          "via": "source.schema"
+        },
+        {
+          "emission": "emission:cf0735a4ed44eec49945627fc2403a46fb0ef19664491f3f03c0a81a118b74cd",
+          "rule": "snowflake/git-repository",
+          "from": "snowflake/git-repository",
+          "to": "snowflake/schema",
+          "via": "source.schema"
+        },
+        {
+          "emission": "emission:9b26c286c0c748ea38530a35f0342325171ed663ad941f87d0882c7e94d33eeb",
+          "rule": "snowflake/image-repository",
+          "from": "snowflake/image-repository",
+          "to": "snowflake/schema",
+          "via": "source.schema"
+        },
+        {
+          "emission": "emission:0499591ebfb5e51dcfa163e3867e0b4471ffcee9a7a1bd75103812ca866484fd",
+          "rule": "snowflake/internal-stage",
+          "from": "snowflake/stage",
+          "to": "snowflake/schema",
+          "via": "source.schema"
+        },
+        {
+          "emission": "emission:4a6f620bf28b7d541de742a4725489132895510d28c1f62213d989cbd111543c",
+          "rule": "snowflake/job-service",
+          "from": "snowflake/container-service",
+          "to": "snowflake/schema",
+          "via": "source.schema"
+        },
+        {
+          "emission": "emission:358fec26df07b48ad844a3e15ab7cc99345ba6c5f11ddce9e83022916e4b572c",
+          "rule": "snowflake/mcp-server",
+          "from": "snowflake/mcp-server",
+          "to": "snowflake/schema",
+          "via": "source.schema"
+        },
+        {
+          "emission": "emission:8932d60066a50a185d54d2219461a9edbaf3f835dd5cd1cf7972d0a7a2bdfe09",
+          "rule": "snowflake/notebook",
+          "from": "snowflake/application",
+          "to": "snowflake/schema",
+          "via": "source.schema"
+        },
+        {
+          "emission": "emission:b7c0d49c11b840a838e4498c55b372139a77320982f63fa497827af0e0972d0f",
+          "rule": "snowflake/pipe",
+          "from": "snowflake/data-pipe",
+          "to": "snowflake/schema",
+          "via": "source.schema"
+        },
+        {
+          "emission": "emission:e87f8728e07b761ced86619fc8a1f0945090d130e44c8e15474e027535225d81",
+          "rule": "snowflake/schema",
+          "from": "snowflake/schema",
+          "to": "snowflake/database",
+          "via": "source.database"
+        },
+        {
+          "emission": "emission:64b3f1c120f7b8005f59da1c3201cd4e2f7c60c3045982c05855e55cd9fd4228",
+          "rule": "snowflake/service",
+          "from": "snowflake/container-service",
+          "to": "snowflake/schema",
+          "via": "source.schema"
+        },
+        {
+          "emission": "emission:ed015b1e4e883e271a9c27b26b11dc78ef49fb7c8626243f5b8aa16bfdb9052e",
+          "rule": "snowflake/stage",
+          "from": "snowflake/stage",
+          "to": "snowflake/schema",
+          "via": "source.schema"
+        },
+        {
+          "emission": "emission:ad41bb9532427e62ed59183686dcd7fac5d361cdd6b1fa0c9b314bf72724c804",
+          "rule": "snowflake/streamlit",
+          "from": "snowflake/application",
+          "to": "snowflake/schema",
+          "via": "source.schema"
+        },
+        {
+          "emission": "emission:ccf21375dab2b99b3f0d97af9682aadf85136cdefd4ebe876691190190213720",
+          "rule": "snowflake/task",
+          "from": "core/workflow",
+          "to": "snowflake/schema",
+          "via": "source.schema"
+        },
+        {
+          "emission": "emission:7176938b0ed689952b9d12164e2daa91da9aaa485d354df76d44c548dc8b3087",
+          "rule": "vault/ad-secret-backend",
+          "from": "vault/secrets-engine",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:0f06b3cd01a2937b634089742a4a873c3acc08d57dba69b2a1dd9f1f3457511d",
+          "rule": "vault/agent-registration",
+          "from": "vault/vault-agent",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:d697559448becbb3258d1abe805d5d9ffce79d6fbbf8c7328af3e5c503f56895",
+          "rule": "vault/alicloud-secret-backend",
+          "from": "vault/secrets-engine",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:9675869a86f95a61d6c4106bd61ce1e3d73e64a1636675e617dcf995c5c6f6b0",
+          "rule": "vault/audit",
+          "from": "vault/audit-device",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:695370e88bed52bbb5c8f32b0959a11a90c88feb41af1f167b5fa47eff878cc6",
+          "rule": "vault/auth-backend",
+          "from": "vault/auth-method",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:f73577034172bf5482d1630e0bdb862fb3128d998a8ebb7e35a2255be4d0011e",
+          "rule": "vault/aws-secret-backend",
+          "from": "vault/secrets-engine",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:d8543916a899c0eab5c3b87172e0918fdf717bba09bc0300147c4e7b56aab4cf",
+          "rule": "vault/azure-secret-backend",
+          "from": "vault/secrets-engine",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:1672a20a229628774c6e9ad2cf2e829d68c0501bbbc4ced7ce1d84888fa09e63",
+          "rule": "vault/consul-secret-backend",
+          "from": "vault/secrets-engine",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:f62494811b6b95123b689e68a2e21212647b1872e185459ab39faa40cf5b77a8",
+          "rule": "vault/database-secrets-mount",
+          "from": "vault/secrets-engine",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:66f291d7e0249f6ca6e6576a8d444b4ef6cfed6eca5fe86566b68fb3bd563dde",
+          "rule": "vault/gcp-auth-backend",
+          "from": "vault/auth-method",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:f1cb32bf48395ccf3b3557bf10428e33a727f214ccb3eb931174f029fdd5037d",
+          "rule": "vault/gcp-secret-backend",
+          "from": "vault/secrets-engine",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:96e9ab982483d6c2c6c5bb100b958366cd500a742d1823e5c989b80a7a1d4cf4",
+          "rule": "vault/gcpkms-secret-backend",
+          "from": "vault/secrets-engine",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:dd05f5d8652df3745d169429b36fd924b11c2f8734fb33d119316ef7b51301db",
+          "rule": "vault/gcpkms-secret-backend-key",
+          "from": "core/encryption-key",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:b55afd5803b78a65d05dd57eb16dbdae25cf642a83373aa288da6e4f43aa2464",
+          "rule": "vault/github-auth-backend",
+          "from": "vault/auth-method",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:35e1d63c273bb1d0191fe2ed77d2b6db3552a02ffe62fd146a2b0097ca93262b",
+          "rule": "vault/identity-entity",
+          "from": "vault/identity-entity",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:45942f9b5cba4174468ec745cd55a3b201ea0a16c3e2b75cd633b766f5ee84bc",
+          "rule": "vault/identity-group",
+          "from": "core/identity-group",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:1625cab687f0e34e9f1e3a623b6f3ce9e9b8a156ddc774c4b3d42060e64d99d5",
+          "rule": "vault/identity-oidc-client",
+          "from": "core/identity-application",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:ab0a326587a1c9389858d3c9220899351e3cfdf67e73a2bc3ab2a6926828ed5e",
+          "rule": "vault/identity-oidc-key",
+          "from": "core/encryption-key",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:d7be40f98648409654919350c0d96fe97dfbc2d13190da3f2c801a90a5c8ec2a",
+          "rule": "vault/identity-oidc-provider",
+          "from": "vault/oidc-provider",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:b03a71d61e177b9fc098c4e7d7075ac7d007afdec5b30bcfab0988125485f140",
+          "rule": "vault/jwt-auth-backend",
+          "from": "vault/auth-method",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:2a483fcd2f724d038068f0cfe093f8e009dba487b9cf00ad1734c2c48ccc5892",
+          "rule": "vault/keymgmt-aws-kms",
+          "from": "vault/key-management-integration",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:23674580354be47efe1ed79ab533822b4adfa64e16660d2fc74525a30583832d",
+          "rule": "vault/keymgmt-azure-kms",
+          "from": "vault/key-management-integration",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:349ee722495d95dc6441052c30c34b285e7deb4b167feaa386a7dfce6f524473",
+          "rule": "vault/keymgmt-gcp-kms",
+          "from": "vault/key-management-integration",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:585797d51312edcbf28938c749aceb22d6745b552eafef27a0d3825fe6347073",
+          "rule": "vault/keymgmt-key",
+          "from": "core/encryption-key",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:12f3103cae2dd728962a1d91836399cae696210ac66d96473ae697006a03ecaf",
+          "rule": "vault/kmip-secret-backend",
+          "from": "vault/secrets-engine",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:46455deb3d84fe96e37a2da7742124ba74b15e187e58c3a5053986b4ee2bca36",
+          "rule": "vault/kmip-secret-ca-generated",
+          "from": "vault/certificate-authority",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:c7ea4fe1386e141812cb9d16414414a67897fdf0d961a7c4fd0ec3d36beb357a",
+          "rule": "vault/kmip-secret-ca-imported",
+          "from": "vault/certificate-authority",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:5cce385049babcaf60309f1bcaabbf3da0755ab882090ada5af8a7c0880c3c4d",
+          "rule": "vault/kmip-secret-listener",
+          "from": "vault/kmip-listener",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:c97c7cfc25164bd764399df7251f5feffa7fb18c8e4e3042ab749bf82614f0fa",
+          "rule": "vault/kmip-secret-scope",
+          "from": "vault/kmip-scope",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:979a505c5818048ce6b9e5ec2a744cd45e9580b235466d22c518216f344d71d4",
+          "rule": "vault/kubernetes-auth-backend-config",
+          "from": "vault/kubernetes-auth-integration",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:0417e7a8a377568256626991f7c95bb22ad2e7ae6c39288e03c73a1b9ea02ae6",
+          "rule": "vault/kubernetes-secret-backend",
+          "from": "vault/secrets-engine",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:70b33a1f2a63da0f863d8618426b172bfbb9d3cb9044b67461d18bbdb6a33b67",
+          "rule": "vault/ldap-auth-backend",
+          "from": "vault/auth-method",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:188d69eeb0439831a1a54aa3a738526a5856a1cadf0f0bca819979673f66e917",
+          "rule": "vault/ldap-secret-backend",
+          "from": "vault/secrets-engine",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:def4197c84767ddc013d6c62cb0130b117db982104c5bd60e4f58fd59d2d1059",
+          "rule": "vault/mongodbatlas-secret-backend",
+          "from": "vault/secrets-engine",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:cdb28c5a4978d16f34035b3cad9844ab3dee6719e561bd1e709821f783eeddd5",
+          "rule": "vault/mount",
+          "from": "vault/secrets-engine",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:ea1ca2e9be301d5565af4b051bccbd0860d7714a3ba97793741cb8dce000fe9a",
+          "rule": "vault/namespace",
+          "from": "vault/namespace",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:1e690c954aa68793eade6da59f1d593f771844b92e0f0de49ad891af4c7ec66f",
+          "rule": "vault/nomad-secret-backend",
+          "from": "vault/secrets-engine",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:444c9cbe6a562eec9ce04abb021085082ac4f8bb7e5a77f6c77cd305a807b24b",
+          "rule": "vault/okta-auth-backend",
+          "from": "vault/auth-method",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:95d4a91877768ff98d2d4b30e45ee29d04305c91bdfaaa2d998c1b30575a66b3",
+          "rule": "vault/pki-external-ca-secret-backend-role",
+          "from": "vault/external-ca-integration",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:cede654193f43bc3e451d708ac50987263c0e69171d82421f85702c8f8ab189f",
+          "rule": "vault/pki-secret-backend-issuer",
+          "from": "vault/certificate-authority",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:ab1c5eff0e68f075091ef6c91d5894433c345e1dbb219f3794540b73e64010a8",
+          "rule": "vault/pki-secret-backend-key",
+          "from": "core/encryption-key",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:56a26530e9e89047b2a33b5301354935d33b7397fbe93fec998f4f3182666ecc",
+          "rule": "vault/pki-secret-backend-root-cert",
+          "from": "vault/certificate-authority",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:03cb7ba29dce1275b0514ba71e4a7a1fb2c0d0108572bbc4720390d10a5d4dde",
+          "rule": "vault/plugin-runtime",
+          "from": "vault/plugin-runtime",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:544b8b02f813fdcae9732ad7ae79b2fdc9702ca986fdacd6ff33592bf185ddde",
+          "rule": "vault/rabbitmq-secret-backend",
+          "from": "vault/secrets-engine",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:dd4f81e7bbc1001d81f71833e7073cd04208e829a83e473906f6c9db7bd73b23",
+          "rule": "vault/raft-snapshot-agent-config",
+          "from": "core/backup-plan",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:44804ccff11773a095cadf2535ee8d8e8db8d643bb8f31506a7b0028dfc7df22",
+          "rule": "vault/saml-auth-backend",
+          "from": "vault/auth-method",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:3e2b8773c44ef8f26e5317cfd0bfa5a9512763e4b9d8eb406a0c5a27f31c8b68",
+          "rule": "vault/secrets-sync-aws-destination",
+          "from": "vault/secret-sync-destination",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:0c905fbe0f568215e4cf5e90a4d256d800eeb766f82e68c12559883f2ceaa675",
+          "rule": "vault/secrets-sync-azure-destination",
+          "from": "vault/secret-sync-destination",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:01e7d96a8fc8795080bb51497aa9234e4513a09e757a5ee0e79911fbfd894bd9",
+          "rule": "vault/secrets-sync-gcp-destination",
+          "from": "vault/secret-sync-destination",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:9fb68df393d211a88ef5f7ec083b3931189417db6f08fd94009a4502e232e541",
+          "rule": "vault/secrets-sync-gh-destination",
+          "from": "vault/secret-sync-destination",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:d0c19ce50a60d546913582a79d26dfdfc8463a77800ca01ea95a8fa766616edd",
+          "rule": "vault/secrets-sync-github-apps",
+          "from": "vault/secret-sync-destination",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:7d8a47b01adbaa24fc5fecfb3fc2ccae8b36f3334ce1605eb6ac6c1e128e6261",
+          "rule": "vault/secrets-sync-vercel-destination",
+          "from": "vault/secret-sync-destination",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:3db56833420d52ffa36cced790a92ebeba43d600c9de90607d6ad6fc14e4da26",
+          "rule": "vault/ssh-secret-backend-ca",
+          "from": "vault/certificate-authority",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:26f66a1a40bd20bb6204d4a56aa45e1f7e28157143b059aa07d2024c77d8ffec",
+          "rule": "vault/terraform-cloud-secret-backend",
+          "from": "vault/secrets-engine",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:d1f73cf3e567bc455141d2900a0f1be7fcdb0ccf4d3031f1721b327d0946c5a3",
+          "rule": "vault/transform-transformation",
+          "from": "vault/data-transformation",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        },
+        {
+          "emission": "emission:d16ade9433a4464a4369389b25457ce98103f6b781d4794fdc2942c585f9c49e",
+          "rule": "vault/transit-secret-backend-key",
+          "from": "core/encryption-key",
+          "to": "vault/namespace",
+          "via": "source.namespace"
+        }
+      ],
+      "source": {
+        "path": "architecture/contexts.rf",
+        "line": 9
+      }
+    },
+    {
+      "id": "core/runtime",
+      "dialect": "core",
+      "name": "runtime",
+      "description": "Runtime placement or execution scope.",
+      "producers": [
+        {
+          "emission": "emission:7f7d9b057d101aa6f21dbf698d7053933c4cd2b89c2036d3e10a3832134a2951",
+          "rule": "aws/ecs-service",
+          "from": "aws/ecs-service",
+          "to": "aws/ecs-cluster",
+          "via": "source.cluster"
+        },
+        {
+          "emission": "emission:f5d28e5b50586734182ca0f3e0bc82dfa1aed4de06ba9d659ed1e8c81cdc5837",
+          "rule": "azure/container-app",
+          "from": "azure/container-app",
+          "to": "azure/container-app-environment",
+          "via": "source.container_app_environment_id"
+        },
+        {
+          "emission": "emission:192ed7c52852f52c357af9eecd2ae7320c8f13a5213f47567673d37d1ba3a6bb",
+          "rule": "azure/container-app-job",
+          "from": "azure/container-app-job",
+          "to": "azure/container-app-environment",
+          "via": "source.container_app_environment_id"
+        },
+        {
+          "emission": "emission:7892ce8d3f41952827821468bc96db4da882e6861a169b70477261eefe6d4c18",
+          "rule": "azure/flex-consumption-function-app",
+          "from": "core/serverless-function",
+          "to": "azure/app-service-plan",
+          "via": "source.service_plan_id"
+        },
+        {
+          "emission": "emission:eef8f323cc7e8dd71bbae1b582d36550923ad58fdf462dc81ec89c03fc7de87f",
+          "rule": "azure/function-app-function",
+          "from": "core/serverless-function",
+          "to": "azure/app-service-plan",
+          "via": "source.service_plan_id"
+        },
+        {
+          "emission": "emission:7e29b0832ecf89979a0d5fbd10619530a15e36877793fc637cf066ce1e4834c1",
+          "rule": "azure/linux-function-app",
+          "from": "core/serverless-function",
+          "to": "azure/app-service-plan",
+          "via": "source.service_plan_id"
+        },
+        {
+          "emission": "emission:7f763361600e0700acc247060b5c8b9800dc363b6777bcb88650368ba5df5a3d",
+          "rule": "azure/linux-web-app",
+          "from": "azure/app-service",
+          "to": "azure/app-service-plan",
+          "via": "source.service_plan_id"
+        },
+        {
+          "emission": "emission:b3399a0752cc4b0508cfe0c33122ff5092db6b1e2d7d3344bae8cf3bd3cdc40c",
+          "rule": "azure/windows-web-app",
+          "from": "azure/app-service",
+          "to": "azure/app-service-plan",
+          "via": "source.service_plan_id"
+        },
+        {
+          "emission": "emission:0aec6a286934fa6b2de2b772f6cea1d7e222bfbc1dc5572dcb1a8be129b3ea6f",
+          "rule": "confluent/catalog-integration",
+          "from": "confluent/catalog-integration",
+          "to": "confluent/kafka-cluster",
+          "via": "source.kafka_cluster[0].id"
+        },
+        {
+          "emission": "emission:3e64c33ce7cc61a1ae6302035fa950e3a71e868cdff5e1880d7023c5be4fccc9",
+          "rule": "confluent/connector",
+          "from": "confluent/connector",
+          "to": "confluent/kafka-cluster",
+          "via": "source.kafka_cluster[0].id"
+        },
+        {
+          "emission": "emission:d0ecb5cd1dd6ed28faff9e320a03bff52f75fc73633cdf76001f628e5dbf21f3",
+          "rule": "confluent/flink-connection",
+          "from": "confluent/flink-connection",
+          "to": "confluent/flink-compute-pool",
+          "via": "source.compute_pool[0].id"
+        },
+        {
+          "emission": "emission:2cc398ac1c5494224123626d435caa71e2f895faebeeed1f1a596a1a4d99d81e",
+          "rule": "confluent/flink-materialized-table",
+          "from": "confluent/flink-materialized-table",
+          "to": "confluent/flink-compute-pool",
+          "via": "source.compute_pool[0].id"
+        },
+        {
+          "emission": "emission:c49d84f97d69d83b8f5eb793a36cab6ff58b2af83f14ea04622c442523a43926",
+          "rule": "confluent/kafka-mirror-topic",
+          "from": "core/message-topic",
+          "to": "confluent/kafka-cluster",
+          "via": "source.kafka_cluster[0].id"
+        },
+        {
+          "emission": "emission:c188f2628e08d9c5584a93ccbe7a3d8924f7c43372dd3dc3a3bcdf33eb7377fa",
+          "rule": "confluent/kafka-topic",
+          "from": "core/message-topic",
+          "to": "confluent/kafka-cluster",
+          "via": "source.kafka_cluster[0].id"
+        },
+        {
+          "emission": "emission:af4942d47cc5bf7f3cd424f346ea4bd1a2b8c9ba186ac2c1dc00c4f62f15d6c2",
+          "rule": "confluent/ksqldb-cluster",
+          "from": "confluent/ksqldb-cluster",
+          "to": "confluent/kafka-cluster",
+          "via": "source.kafka_cluster[0].id"
+        },
+        {
+          "emission": "emission:380ec239d856ea25a76c8a4b905ffc2a8d3e5a0451d646945514b37dd21faeb5",
+          "rule": "confluent/rtce-topic",
+          "from": "core/message-topic",
+          "to": "confluent/kafka-cluster",
+          "via": "source.kafka_cluster[0].id"
+        },
+        {
+          "emission": "emission:ebc898cce609e657df1ed3bc50d034dd932fe661da35e9bb9ecef7507887196b",
+          "rule": "confluent/tableflow-topic",
+          "from": "confluent/tableflow-topic",
+          "to": "confluent/kafka-cluster",
+          "via": "source.kafka_cluster[0].id"
+        },
+        {
+          "emission": "emission:29c64b28b32a488cb591c4760a37988846ffee4f908a086f8e5b7d1c733fccf4",
+          "rule": "consul/service",
+          "from": "consul/consul-service",
+          "to": "consul/consul-node",
+          "via": "source.node"
+        },
+        {
+          "emission": "emission:df8d778f530b75eb0ed5007b82070273aaacf474ecf84228b07dd653ae5d7b9a",
+          "rule": "databricks/lakebase-data-api",
+          "from": "databricks/lakebase-data-api",
+          "to": "databricks/lakebase-project",
+          "via": "source.parent"
+        },
+        {
+          "emission": "emission:d0c58c3af3327c897d2bd1dfa42851b708330a604be1e786d7793b0f43a8ab9b",
+          "rule": "databricks/lakebase-endpoint",
+          "from": "databricks/lakebase-endpoint",
+          "to": "databricks/lakebase-branch",
+          "via": "source.parent"
+        },
+        {
+          "emission": "emission:27138da10d2dc7b558a236d58322ae68c07f9c5a51020a181e20cfe98ea7fa52",
+          "rule": "kubernetes/kubernetes-daemon-set",
+          "from": "kubernetes/daemon-set",
+          "to": "core/kubernetes-cluster",
+          "via": "provider.host"
+        },
+        {
+          "emission": "emission:32320179d93287e455a7c5eea5cf25887333ece696ecf98043c50d0bdbccc59f",
+          "rule": "kubernetes/kubernetes-deployment",
+          "from": "kubernetes/deployment",
+          "to": "core/kubernetes-cluster",
+          "via": "provider.host"
+        },
+        {
+          "emission": "emission:46eb6182224f89809bf3eca17e49b1db5e43999b281f6c5d9a072387c24cc35a",
+          "rule": "kubernetes/kubernetes-ingress",
+          "from": "kubernetes/ingress",
+          "to": "core/kubernetes-cluster",
+          "via": "provider.host"
+        },
+        {
+          "emission": "emission:a44cf20d4ce7d349a79dc2882ad2d1c2eb9a696f916c090ced85412b4eabd8b2",
+          "rule": "kubernetes/kubernetes-namespace",
+          "from": "kubernetes/namespace",
+          "to": "core/kubernetes-cluster",
+          "via": "provider.host"
+        },
+        {
+          "emission": "emission:ac101864e3c91154e58ba06ed64f7e948f8fb184efe5fad363e8bf7c4070564d",
+          "rule": "kubernetes/kubernetes-network-policy",
+          "from": "kubernetes/network-policy",
+          "to": "core/kubernetes-cluster",
+          "via": "provider.host"
+        },
+        {
+          "emission": "emission:7de061c228f2c6bfe38604d0c83bb1b468f43b9b2b5d61d90fe0670c8295f110",
+          "rule": "kubernetes/kubernetes-service",
+          "from": "kubernetes/service",
+          "to": "core/kubernetes-cluster",
+          "via": "provider.host"
+        },
+        {
+          "emission": "emission:ba7ce2b670c6deeaac05d8a76a075dd383f46dca48dd3975ee0456f397f689da",
+          "rule": "kubernetes/kubernetes-service-account",
+          "from": "kubernetes/service-account",
+          "to": "core/kubernetes-cluster",
+          "via": "provider.host"
+        },
+        {
+          "emission": "emission:6ed19ce84a26083ff5c41284c88332028c2c0f09bf255267e6374962d5876827",
+          "rule": "kubernetes/kubernetes-stateful-set",
+          "from": "kubernetes/stateful-set",
+          "to": "core/kubernetes-cluster",
+          "via": "provider.host"
+        },
+        {
+          "emission": "emission:19b3bd14e92793cc134759cdaf74f432cacfc52048b5fe6cb54c5c93c8e92b67",
+          "rule": "mongodb-atlas/stream-connection",
+          "from": "mongodb-atlas/stream-connection",
+          "to": "mongodb-atlas/stream-processing-workspace",
+          "via": "source.instance_name"
+        },
+        {
+          "emission": "emission:8d1f4440017e9b985da7a4625df2eab2b5be1950bb5e61a3f0d894ae7785861d",
+          "rule": "mongodb-atlas/stream-connection",
+          "from": "mongodb-atlas/stream-connection",
+          "to": "mongodb-atlas/stream-processing-workspace",
+          "via": "source.workspace_name"
+        },
+        {
+          "emission": "emission:5cd08f4abb0ecb99060c37487c221b988c82044cf33a8fe6b6431aa90bb71e34",
+          "rule": "mongodb-atlas/stream-processor",
+          "from": "mongodb-atlas/stream-processor",
+          "to": "mongodb-atlas/stream-processing-workspace",
+          "via": "source.workspace_name"
+        },
+        {
+          "emission": "emission:daa8ba1273bf2e078b4ad7c56ac7086e9bc40607cb9977dab7358e0266e57a85",
+          "rule": "mongodb-atlas/stream-processor",
+          "from": "mongodb-atlas/stream-processor",
+          "to": "mongodb-atlas/stream-processing-workspace",
+          "via": "source.instance_name"
+        },
+        {
+          "emission": "emission:9f630cc440e6bc9e51b33326a05da74c270764d0037192b2b088dd57c1ef42b9",
+          "rule": "snowflake/alert",
+          "from": "snowflake/alert",
+          "to": "snowflake/virtual-warehouse",
+          "via": "source.warehouse"
+        },
+        {
+          "emission": "emission:12b08b2118d2e6183815e536ee0bc2f832a182f91c96634652d7528a77d19ad0",
+          "rule": "snowflake/cortex-search-service",
+          "from": "snowflake/cortex-search-service",
+          "to": "snowflake/virtual-warehouse",
+          "via": "source.warehouse"
+        },
+        {
+          "emission": "emission:19176d536ae009769a392674fefcb81ef91e09639f01a99b396b05a1187d8c27",
+          "rule": "snowflake/dynamic-table",
+          "from": "snowflake/dynamic-table",
+          "to": "snowflake/virtual-warehouse",
+          "via": "source.warehouse"
+        },
+        {
+          "emission": "emission:43cfeb33c12fa9808bd8184f1606773bf4ba870a6d35ce3573ff29280cec03ed",
+          "rule": "snowflake/job-service",
+          "from": "snowflake/container-service",
+          "to": "snowflake/compute-pool",
+          "via": "source.compute_pool"
+        },
+        {
+          "emission": "emission:ac0bde5323dada64d50242b4a1b713210c7597bce50b886dce235771d0d40071",
+          "rule": "snowflake/notebook",
+          "from": "snowflake/application",
+          "to": "snowflake/virtual-warehouse",
+          "via": "source.query_warehouse"
+        },
+        {
+          "emission": "emission:5c6b395b62dc65b0b5ab2b30e161bd9b8da65698605ac81cad9d79404a02aea3",
+          "rule": "snowflake/service",
+          "from": "snowflake/container-service",
+          "to": "snowflake/compute-pool",
+          "via": "source.compute_pool"
+        },
+        {
+          "emission": "emission:c26089c150d218f948e42b2b3c06efaed7c241b02dfc77704de935a0620d0011",
+          "rule": "snowflake/streamlit",
+          "from": "snowflake/application",
+          "to": "snowflake/virtual-warehouse",
+          "via": "source.query_warehouse"
+        },
+        {
+          "emission": "emission:f3ab464a0346d6c0db4f36a7daccf0ad5b5aed33f5e5917e29a090ce91d26874",
+          "rule": "snowflake/task",
+          "from": "core/workflow",
+          "to": "snowflake/virtual-warehouse",
+          "via": "source.warehouse"
+        }
+      ],
+      "source": {
+        "path": "architecture/contexts.rf",
+        "line": 5
+      }
+    }
+  ],
+  "relations": [
+    {
+      "id": "core/private-reachability",
+      "dialect": "core",
+      "name": "private-reachability",
+      "description": "Private network reachability between an architecture component and a network boundary.",
+      "shared": true,
+      "producers": [
+        {
+          "emission": "emission:a48e8c7066588037f35d7d137dd2c3ede49ad300c2cedd72c5e1cfa89bc8845e",
+          "rule": "azure/postgresql-flexible-server",
+          "from": "core/managed-database",
+          "to": "core/subnet",
+          "via": "source.delegated_subnet_id"
+        },
+        {
+          "emission": "emission:a0e8b774af21e7a84224ec0bb7677a067b937420a0bbd3d0fc022a181483019d",
+          "rule": "google/cloud-sql-instance",
+          "from": "core/managed-database",
+          "to": "core/virtual-network",
+          "via": "source.settings[0].ip_configuration[0].private_network"
+        }
+      ],
+      "source": {
+        "path": "architecture/relations.rf",
+        "line": 1
+      }
+    }
+  ]
+}

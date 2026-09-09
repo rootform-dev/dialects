@@ -15,7 +15,6 @@ concept "biglake-table" {
 
 rule "biglake-catalog" {
   match {
-    kind = "resource"
     type = "google_biglake_catalog"
   }
 
@@ -24,7 +23,6 @@ rule "biglake-catalog" {
 
 rule "biglake-database" {
   match {
-    kind = "resource"
     type = "google_biglake_database"
   }
 
@@ -33,7 +31,6 @@ rule "biglake-database" {
 
 rule "biglake-table" {
   match {
-    kind = "resource"
     type = "google_biglake_table"
   }
 
@@ -42,7 +39,6 @@ rule "biglake-table" {
 
 rule "biglake-hive-catalog" {
   match {
-    kind = "resource"
     type = "google_biglake_hive_catalog"
   }
 
@@ -51,7 +47,6 @@ rule "biglake-hive-catalog" {
 
 rule "biglake-hive-database" {
   match {
-    kind = "resource"
     type = "google_biglake_hive_database"
   }
 
@@ -60,7 +55,6 @@ rule "biglake-hive-database" {
 
 rule "biglake-hive-table" {
   match {
-    kind = "resource"
     type = "google_biglake_hive_table"
   }
 
@@ -69,7 +63,6 @@ rule "biglake-hive-table" {
 
 rule "biglake-iceberg-catalog" {
   match {
-    kind = "resource"
     type = "google_biglake_iceberg_catalog"
   }
 
@@ -78,7 +71,6 @@ rule "biglake-iceberg-catalog" {
 
 rule "biglake-iceberg-namespace" {
   match {
-    kind = "resource"
     type = "google_biglake_iceberg_namespace"
   }
 
@@ -87,7 +79,6 @@ rule "biglake-iceberg-namespace" {
 
 rule "biglake-iceberg-table" {
   match {
-    kind = "resource"
     type = "google_biglake_iceberg_table"
   }
 

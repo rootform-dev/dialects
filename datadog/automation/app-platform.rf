@@ -10,7 +10,6 @@ concept "automation-application" {
 
 rule "app-builder-app" {
   match {
-    kind = "resource"
     type = "datadog_app_builder_app"
   }
 
@@ -28,7 +27,6 @@ rule "app-builder-app-lookup" {
 
 rule "datastore" {
   match {
-    kind = "resource"
     type = "datadog_datastore"
   }
 
@@ -37,7 +35,6 @@ rule "datastore" {
 
 rule "datastore-item" {
   match {
-    kind = "resource"
     type = "datadog_datastore_item"
   }
 

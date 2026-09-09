@@ -5,7 +5,6 @@ concept "data-loss-prevention-configuration" {
 
 rule "dlp-custom-profile" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_dlp_custom_profile"
   }
 
@@ -14,7 +13,6 @@ rule "dlp-custom-profile" {
 
 rule "dlp-predefined-profile" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_dlp_predefined_profile"
   }
 
@@ -23,7 +21,6 @@ rule "dlp-predefined-profile" {
 
 rule "dlp-dataset" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_dlp_dataset"
   }
 
@@ -32,7 +29,6 @@ rule "dlp-dataset" {
 
 rule "dlp-integration-entry" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_dlp_integration_entry"
   }
 
@@ -41,7 +37,6 @@ rule "dlp-integration-entry" {
 
 rule "dlp-settings" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_dlp_settings"
   }
 

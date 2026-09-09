@@ -1,6 +1,5 @@
 rule "s3-bucket" {
   match {
-    kind = "resource"
     type = "aws_s3_bucket"
   }
 
@@ -9,7 +8,6 @@ rule "s3-bucket" {
 
 rule "s3-bucket-versioning" {
   match {
-    kind = "resource"
     type = "aws_s3_bucket_versioning"
   }
 
@@ -23,7 +21,6 @@ rule "s3-bucket-versioning" {
 
 rule "s3-bucket-server-side-encryption-configuration" {
   match {
-    kind = "resource"
     type = "aws_s3_bucket_server_side_encryption_configuration"
   }
 

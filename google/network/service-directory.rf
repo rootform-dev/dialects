@@ -15,7 +15,6 @@ concept "service-directory-endpoint" {
 
 rule "service-directory-namespace" {
   match {
-    kind = "resource"
     type = "google_service_directory_namespace"
   }
 
@@ -24,7 +23,6 @@ rule "service-directory-namespace" {
 
 rule "service-directory-service" {
   match {
-    kind = "resource"
     type = "google_service_directory_service"
   }
 
@@ -33,7 +31,6 @@ rule "service-directory-service" {
 
 rule "service-directory-endpoint" {
   match {
-    kind = "resource"
     type = "google_service_directory_endpoint"
   }
 

@@ -6,7 +6,6 @@ concept "evidently-project" {
 
 rule "evidently-project" {
   match {
-    kind = "resource"
     type = "aws_evidently_project"
   }
 

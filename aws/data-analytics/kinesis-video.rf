@@ -6,7 +6,6 @@ concept "kinesis-video-stream" {
 
 rule "kinesis-video-stream" {
   match {
-    kind = "resource"
     type = "aws_kinesis_video_stream"
   }
 

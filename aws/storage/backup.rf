@@ -6,7 +6,6 @@ concept "backup-logically-air-gapped-vault" {
 
 rule "backup-logically-air-gapped-vault" {
   match {
-    kind = "resource"
     type = "aws_backup_logically_air_gapped_vault"
   }
 
@@ -15,7 +14,6 @@ rule "backup-logically-air-gapped-vault" {
 
 rule "backup-plan" {
   match {
-    kind = "resource"
     type = "aws_backup_plan"
   }
 
@@ -24,7 +22,6 @@ rule "backup-plan" {
 
 rule "backup-vault" {
   match {
-    kind = "resource"
     type = "aws_backup_vault"
   }
 

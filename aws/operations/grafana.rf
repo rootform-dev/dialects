@@ -6,7 +6,6 @@ concept "grafana-workspace" {
 
 rule "grafana-workspace" {
   match {
-    kind = "resource"
     type = "aws_grafana_workspace"
   }
 

@@ -1,6 +1,5 @@
 rule "frontend-o11y-app" {
   match {
-    kind = "resource"
     type = "grafana_frontend_o11y_app"
   }
 

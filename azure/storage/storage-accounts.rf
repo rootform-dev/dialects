@@ -1,6 +1,5 @@
 rule "storage-account" {
   match {
-    kind = "resource"
     type = "azurerm_storage_account"
   }
 

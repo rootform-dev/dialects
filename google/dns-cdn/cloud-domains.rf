@@ -5,7 +5,6 @@ concept "cloud-domains-registration" {
 
 rule "cloud-domains-registration" {
   match {
-    kind = "resource"
     type = "google_clouddomains_registration"
   }
 

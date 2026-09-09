@@ -1,7 +1,6 @@
 # Maintained directly from pinned provider evidence.
 rule "dev-test-linux-virtual-machine" {
   match {
-    kind = "resource"
     type = "azurerm_dev_test_linux_virtual_machine"
   }
 
@@ -10,7 +9,6 @@ rule "dev-test-linux-virtual-machine" {
 
 rule "dev-test-windows-virtual-machine" {
   match {
-    kind = "resource"
     type = "azurerm_dev_test_windows_virtual_machine"
   }
 
@@ -19,7 +17,6 @@ rule "dev-test-windows-virtual-machine" {
 
 rule "linux-virtual-machine" {
   match {
-    kind = "resource"
     type = "azurerm_linux_virtual_machine"
   }
 
@@ -34,7 +31,6 @@ rule "linux-virtual-machine" {
 
 rule "system-center-virtual-machine" {
   match {
-    kind = "resource"
     type = "azurerm_system_center_virtual_machine_manager_virtual_machine_instance"
   }
 
@@ -43,7 +39,6 @@ rule "system-center-virtual-machine" {
 
 rule "virtual-machine" {
   match {
-    kind = "resource"
     type = "azurerm_virtual_machine"
   }
 
@@ -58,7 +53,6 @@ rule "virtual-machine" {
 
 rule "windows-virtual-machine" {
   match {
-    kind = "resource"
     type = "azurerm_windows_virtual_machine"
   }
 

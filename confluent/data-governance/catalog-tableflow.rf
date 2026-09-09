@@ -10,7 +10,6 @@ concept "tableflow-topic" {
 
 rule "catalog-integration" {
   match {
-    kind = "resource"
     type = "confluent_catalog_integration"
   }
 
@@ -36,7 +35,6 @@ rule "catalog-integration" {
 
 rule "tableflow-topic" {
   match {
-    kind = "resource"
     type = "confluent_tableflow_topic"
   }
 

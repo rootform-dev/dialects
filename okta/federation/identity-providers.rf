@@ -5,7 +5,6 @@ concept "external-identity-provider" {
 
 rule "idp-oidc" {
   match {
-    kind = "resource"
     type = "okta_idp_oidc"
   }
 
@@ -23,7 +22,6 @@ rule "idp-oidc-lookup" {
 
 rule "idp-saml" {
   match {
-    kind = "resource"
     type = "okta_idp_saml"
   }
 
@@ -41,7 +39,6 @@ rule "idp-saml-lookup" {
 
 rule "idp-social" {
   match {
-    kind = "resource"
     type = "okta_idp_social"
   }
 

@@ -20,7 +20,6 @@ concept "ai-search-instance" {
 
 rule "ai-gateway" {
   match {
-    kind = "resource"
     type = "cloudflare_ai_gateway"
   }
 
@@ -29,7 +28,6 @@ rule "ai-gateway" {
 
 rule "ai-gateway-dynamic-routing" {
   match {
-    kind = "resource"
     type = "cloudflare_ai_gateway_dynamic_routing"
   }
 
@@ -43,7 +41,6 @@ rule "ai-gateway-dynamic-routing" {
 
 rule "ai-search-namespace" {
   match {
-    kind = "resource"
     type = "cloudflare_ai_search_namespace"
   }
 
@@ -52,7 +49,6 @@ rule "ai-search-namespace" {
 
 rule "ai-search-instance" {
   match {
-    kind = "resource"
     type = "cloudflare_ai_search_instance"
   }
 

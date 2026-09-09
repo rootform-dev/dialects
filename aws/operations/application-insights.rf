@@ -6,7 +6,6 @@ concept "applicationinsights-application" {
 
 rule "applicationinsights-application" {
   match {
-    kind = "resource"
     type = "aws_applicationinsights_application"
   }
 

@@ -21,7 +21,6 @@ concept "iot-update-service" {
 
 rule "digital-twins-event-grid-endpoint" {
   match {
-    kind = "resource"
     type = "azurerm_digital_twins_endpoint_eventgrid"
   }
 
@@ -30,7 +29,6 @@ rule "digital-twins-event-grid-endpoint" {
 
 rule "iot-hub" {
   match {
-    kind = "resource"
     type = "azurerm_iothub"
   }
 
@@ -39,7 +37,6 @@ rule "iot-hub" {
 
 rule "iot-hub-device-provisioning-service" {
   match {
-    kind = "resource"
     type = "azurerm_iothub_dps"
   }
 
@@ -48,7 +45,6 @@ rule "iot-hub-device-provisioning-service" {
 
 rule "iot-hub-device-update-account" {
   match {
-    kind = "resource"
     type = "azurerm_iothub_device_update_account"
   }
 
@@ -57,7 +53,6 @@ rule "iot-hub-device-update-account" {
 
 rule "iot-hub-device-update-instance" {
   match {
-    kind = "resource"
     type = "azurerm_iothub_device_update_instance"
   }
 
@@ -66,7 +61,6 @@ rule "iot-hub-device-update-instance" {
 
 rule "iot-hub-event-hubs-endpoint" {
   match {
-    kind = "resource"
     type = "azurerm_iothub_endpoint_eventhub"
   }
 
@@ -75,7 +69,6 @@ rule "iot-hub-event-hubs-endpoint" {
 
 rule "iot-hub-service-bus-queue-endpoint" {
   match {
-    kind = "resource"
     type = "azurerm_iothub_endpoint_servicebus_queue"
   }
 
@@ -84,7 +77,6 @@ rule "iot-hub-service-bus-queue-endpoint" {
 
 rule "iot-hub-storage-endpoint" {
   match {
-    kind = "resource"
     type = "azurerm_iothub_endpoint_storage_container"
   }
 

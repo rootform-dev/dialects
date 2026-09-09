@@ -10,7 +10,6 @@ concept "consul-dedicated-cluster" {
 
 rule "consul-cluster" {
   match {
-    kind = "resource"
     type = "hcp_consul_cluster"
   }
 
@@ -62,7 +61,6 @@ rule "consul-cluster-lookup" {
 
 rule "consul-snapshot" {
   match {
-    kind = "resource"
     type = "hcp_consul_snapshot"
   }
 

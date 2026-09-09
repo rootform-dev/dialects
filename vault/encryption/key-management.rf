@@ -15,7 +15,6 @@ concept "key-management-integration" {
 
 rule "gcpkms-secret-backend-key" {
   match {
-    kind = "resource"
     type = "vault_gcpkms_secret_backend_key"
   }
 
@@ -30,7 +29,6 @@ rule "gcpkms-secret-backend-key" {
 
 rule "keymgmt-aws-kms" {
   match {
-    kind = "resource"
     type = "vault_keymgmt_aws_kms"
   }
 
@@ -45,7 +43,6 @@ rule "keymgmt-aws-kms" {
 
 rule "keymgmt-azure-kms" {
   match {
-    kind = "resource"
     type = "vault_keymgmt_azure_kms"
   }
 
@@ -60,7 +57,6 @@ rule "keymgmt-azure-kms" {
 
 rule "keymgmt-distribute-key" {
   match {
-    kind = "resource"
     type = "vault_keymgmt_distribute_key"
   }
 
@@ -79,7 +75,6 @@ rule "keymgmt-distribute-key" {
 
 rule "keymgmt-gcp-kms" {
   match {
-    kind = "resource"
     type = "vault_keymgmt_gcp_kms"
   }
 
@@ -94,7 +89,6 @@ rule "keymgmt-gcp-kms" {
 
 rule "keymgmt-key" {
   match {
-    kind = "resource"
     type = "vault_keymgmt_key"
   }
 
@@ -109,7 +103,6 @@ rule "keymgmt-key" {
 
 rule "keymgmt-replicate-key" {
   match {
-    kind = "resource"
     type = "vault_keymgmt_replicate_key"
   }
 
@@ -118,7 +111,6 @@ rule "keymgmt-replicate-key" {
 
 rule "managed-keys" {
   match {
-    kind = "resource"
     type = "vault_managed_keys"
   }
 
@@ -127,7 +119,6 @@ rule "managed-keys" {
 
 rule "transform-alphabet" {
   match {
-    kind = "resource"
     type = "vault_transform_alphabet"
   }
 
@@ -136,7 +127,6 @@ rule "transform-alphabet" {
 
 rule "transform-key-configuration" {
   match {
-    kind = "resource"
     type = "vault_transform_key_configuration"
   }
 
@@ -145,7 +135,6 @@ rule "transform-key-configuration" {
 
 rule "transform-role" {
   match {
-    kind = "resource"
     type = "vault_transform_role"
   }
 
@@ -154,7 +143,6 @@ rule "transform-role" {
 
 rule "transform-template" {
   match {
-    kind = "resource"
     type = "vault_transform_template"
   }
 
@@ -163,7 +151,6 @@ rule "transform-template" {
 
 rule "transform-transformation" {
   match {
-    kind = "resource"
     type = "vault_transform_transformation"
   }
 
@@ -178,7 +165,6 @@ rule "transform-transformation" {
 
 rule "transit-secret-backend-key" {
   match {
-    kind = "resource"
     type = "vault_transit_secret_backend_key"
   }
 
@@ -193,7 +179,6 @@ rule "transit-secret-backend-key" {
 
 rule "transit-secret-cache-config" {
   match {
-    kind = "resource"
     type = "vault_transit_secret_cache_config"
   }
 

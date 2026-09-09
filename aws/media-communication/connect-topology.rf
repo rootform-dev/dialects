@@ -1,6 +1,5 @@
 rule "connect-contact-flow" {
   match {
-    kind = "resource"
     type = "aws_connect_contact_flow"
   }
 
@@ -14,7 +13,6 @@ rule "connect-contact-flow" {
 
 rule "connect-queue" {
   match {
-    kind = "resource"
     type = "aws_connect_queue"
   }
 
@@ -28,7 +26,6 @@ rule "connect-queue" {
 
 rule "connect-routing-profile" {
   match {
-    kind = "resource"
     type = "aws_connect_routing_profile"
   }
 
@@ -42,7 +39,6 @@ rule "connect-routing-profile" {
 
 rule "connect-security-profile" {
   match {
-    kind = "resource"
     type = "aws_connect_security_profile"
   }
 
@@ -56,7 +52,6 @@ rule "connect-security-profile" {
 
 rule "connect-user-hierarchy-group" {
   match {
-    kind = "resource"
     type = "aws_connect_user_hierarchy_group"
   }
 

@@ -5,7 +5,6 @@ concept "identity-log-stream" {
 
 rule "log-stream" {
   match {
-    kind = "resource"
     type = "auth0_log_stream"
   }
 

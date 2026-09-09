@@ -11,7 +11,6 @@ concept "dx-hosted-connection" {
 
 rule "dx-connection" {
   match {
-    kind = "resource"
     type = "aws_dx_connection"
   }
 
@@ -20,7 +19,6 @@ rule "dx-connection" {
 
 rule "dx-gateway" {
   match {
-    kind = "resource"
     type = "aws_dx_gateway"
   }
 
@@ -29,7 +27,6 @@ rule "dx-gateway" {
 
 rule "dx-hosted-connection" {
   match {
-    kind = "resource"
     type = "aws_dx_hosted_connection"
   }
 

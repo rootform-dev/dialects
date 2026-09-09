@@ -6,7 +6,6 @@ concept "workspacesweb-trust-store" {
 
 rule "workspacesweb-trust-store" {
   match {
-    kind = "resource"
     type = "aws_workspacesweb_trust_store"
   }
 

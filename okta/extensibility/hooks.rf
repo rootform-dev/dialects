@@ -10,7 +10,6 @@ concept "identity-event-extension" {
 
 rule "event-hook" {
   match {
-    kind = "resource"
     type = "okta_event_hook"
   }
 
@@ -19,7 +18,6 @@ rule "event-hook" {
 
 rule "event-hook-verification" {
   match {
-    kind = "resource"
     type = "okta_event_hook_verification"
   }
 
@@ -33,7 +31,6 @@ rule "event-hook-verification" {
 
 rule "hook-key" {
   match {
-    kind = "resource"
     type = "okta_hook_key"
   }
 
@@ -51,7 +48,6 @@ rule "hook-key-lookup" {
 
 rule "inline-hook" {
   match {
-    kind = "resource"
     type = "okta_inline_hook"
   }
 

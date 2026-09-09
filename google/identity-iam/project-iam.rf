@@ -1,6 +1,5 @@
 rule "project-iam-member" {
   match {
-    kind = "resource"
     type = "google_project_iam_member"
   }
 
@@ -19,7 +18,6 @@ rule "project-iam-member" {
 
 rule "project-iam-binding" {
   match {
-    kind = "resource"
     type = "google_project_iam_binding"
   }
 
@@ -38,7 +36,6 @@ rule "project-iam-binding" {
 
 rule "project-iam-policy" {
   match {
-    kind = "resource"
     type = "google_project_iam_policy"
   }
 

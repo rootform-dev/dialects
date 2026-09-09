@@ -10,7 +10,6 @@ concept "workload-identity-provider" {
 
 rule "group" {
   match {
-    kind = "resource"
     type = "hcp_group"
   }
 
@@ -19,7 +18,6 @@ rule "group" {
 
 rule "group-iam-binding" {
   match {
-    kind = "resource"
     type = "hcp_group_iam_binding"
   }
 
@@ -33,7 +31,6 @@ rule "group-iam-binding" {
 
 rule "group-iam-policy" {
   match {
-    kind = "resource"
     type = "hcp_group_iam_policy"
   }
 
@@ -56,7 +53,6 @@ rule "group-lookup" {
 
 rule "group-members" {
   match {
-    kind = "resource"
     type = "hcp_group_members"
   }
 
@@ -70,7 +66,6 @@ rule "group-members" {
 
 rule "iam-workload-identity-provider" {
   match {
-    kind = "resource"
     type = "hcp_iam_workload_identity_provider"
   }
 
@@ -84,7 +79,6 @@ rule "iam-workload-identity-provider" {
 
 rule "organization-iam-binding" {
   match {
-    kind = "resource"
     type = "hcp_organization_iam_binding"
   }
 
@@ -93,7 +87,6 @@ rule "organization-iam-binding" {
 
 rule "organization-iam-policy" {
   match {
-    kind = "resource"
     type = "hcp_organization_iam_policy"
   }
 
@@ -102,7 +95,6 @@ rule "organization-iam-policy" {
 
 rule "project-iam-binding" {
   match {
-    kind = "resource"
     type = "hcp_project_iam_binding"
   }
 
@@ -116,7 +108,6 @@ rule "project-iam-binding" {
 
 rule "project-iam-policy" {
   match {
-    kind = "resource"
     type = "hcp_project_iam_policy"
   }
 
@@ -130,7 +121,6 @@ rule "project-iam-policy" {
 
 rule "resource-control-policy" {
   match {
-    kind = "resource"
     type = "hcp_resource_control_policy"
   }
 
@@ -144,7 +134,6 @@ rule "resource-control-policy" {
 
 rule "service-principal" {
   match {
-    kind = "resource"
     type = "hcp_service_principal"
   }
 

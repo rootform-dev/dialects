@@ -1,6 +1,5 @@
 rule "api-service-integration" {
   match {
-    kind = "resource"
     type = "okta_api_service_integration"
   }
 
@@ -18,7 +17,6 @@ rule "api-service-integration-lookup" {
 
 rule "app-auto-login" {
   match {
-    kind = "resource"
     type = "okta_app_auto_login"
   }
 
@@ -27,7 +25,6 @@ rule "app-auto-login" {
 
 rule "app-basic-auth" {
   match {
-    kind = "resource"
     type = "okta_app_basic_auth"
   }
 
@@ -36,7 +33,6 @@ rule "app-basic-auth" {
 
 rule "app-bookmark" {
   match {
-    kind = "resource"
     type = "okta_app_bookmark"
   }
 
@@ -54,7 +50,6 @@ rule "app-lookup" {
 
 rule "app-oauth" {
   match {
-    kind = "resource"
     type = "okta_app_oauth"
   }
 
@@ -72,7 +67,6 @@ rule "app-oauth-lookup" {
 
 rule "app-saml" {
   match {
-    kind = "resource"
     type = "okta_app_saml"
   }
 
@@ -95,7 +89,6 @@ rule "app-saml-lookup" {
 
 rule "app-secure-password-store" {
   match {
-    kind = "resource"
     type = "okta_app_secure_password_store"
   }
 
@@ -104,7 +97,6 @@ rule "app-secure-password-store" {
 
 rule "app-shared-credentials" {
   match {
-    kind = "resource"
     type = "okta_app_shared_credentials"
   }
 
@@ -113,7 +105,6 @@ rule "app-shared-credentials" {
 
 rule "app-swa" {
   match {
-    kind = "resource"
     type = "okta_app_swa"
   }
 
@@ -122,7 +113,6 @@ rule "app-swa" {
 
 rule "app-three-field" {
   match {
-    kind = "resource"
     type = "okta_app_three_field"
   }
 

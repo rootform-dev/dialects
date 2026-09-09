@@ -6,7 +6,6 @@ concept "bastion-host" {
 
 rule "bastion-host" {
   match {
-    kind = "resource"
     type = "azurerm_bastion_host"
   }
 

@@ -5,7 +5,6 @@ concept "cloud-ids-endpoint" {
 
 rule "cloud-ids-endpoint" {
   match {
-    kind = "resource"
     type = "google_cloud_ids_endpoint"
   }
 

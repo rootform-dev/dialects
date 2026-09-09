@@ -10,7 +10,6 @@ concept "cloud-run-job" {
 
 rule "cloud-run-service" {
   match {
-    kind = "resource"
     type = "google_cloud_run_v2_service"
   }
 
@@ -47,7 +46,6 @@ rule "cloud-run-service" {
 
 rule "cloud-run-job" {
   match {
-    kind = "resource"
     type = "google_cloud_run_v2_job"
   }
 
@@ -62,7 +60,6 @@ rule "cloud-run-job" {
 
 rule "cloud-run-service-v1" {
   match {
-    kind = "resource"
     type = "google_cloud_run_service"
   }
 
@@ -77,7 +74,6 @@ rule "cloud-run-service-v1" {
 
 rule "cloud-run-worker-pool" {
   match {
-    kind = "resource"
     type = "google_cloud_run_v2_worker_pool"
   }
 

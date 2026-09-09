@@ -11,7 +11,6 @@ concept "machine-learning-workspace" {
 
 rule "ai-foundry" {
   match {
-    kind = "resource"
     type = "azurerm_ai_foundry"
   }
 
@@ -20,7 +19,6 @@ rule "ai-foundry" {
 
 rule "ai-foundry-project" {
   match {
-    kind = "resource"
     type = "azurerm_ai_foundry_project"
   }
 
@@ -29,7 +27,6 @@ rule "ai-foundry-project" {
 
 rule "ai-services-project" {
   match {
-    kind = "resource"
     type = "azurerm_cognitive_account_project"
   }
 
@@ -38,7 +35,6 @@ rule "ai-services-project" {
 
 rule "machine-learning-workspace" {
   match {
-    kind = "resource"
     type = "azurerm_machine_learning_workspace"
   }
 

@@ -11,7 +11,6 @@ concept "comprehend-entity-recognizer" {
 
 rule "comprehend-document-classifier" {
   match {
-    kind = "resource"
     type = "aws_comprehend_document_classifier"
   }
 
@@ -20,7 +19,6 @@ rule "comprehend-document-classifier" {
 
 rule "comprehend-entity-recognizer" {
   match {
-    kind = "resource"
     type = "aws_comprehend_entity_recognizer"
   }
 

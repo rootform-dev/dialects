@@ -6,7 +6,6 @@ concept "virtual-network-manager" {
 
 rule "virtual-network-manager" {
   match {
-    kind = "resource"
     type = "azurerm_network_manager"
   }
 
@@ -15,7 +14,6 @@ rule "virtual-network-manager" {
 
 rule "virtual-network-peering" {
   match {
-    kind = "resource"
     type = "azurerm_virtual_network_peering"
   }
 

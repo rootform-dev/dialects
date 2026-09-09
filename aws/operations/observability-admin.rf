@@ -21,7 +21,6 @@ concept "observabilityadmin-telemetry-rule-for-organization" {
 
 rule "observabilityadmin-centralization-rule-for-organization" {
   match {
-    kind = "resource"
     type = "aws_observabilityadmin_centralization_rule_for_organization"
   }
 
@@ -30,7 +29,6 @@ rule "observabilityadmin-centralization-rule-for-organization" {
 
 rule "observabilityadmin-telemetry-evaluation-for-organization" {
   match {
-    kind = "resource"
     type = "aws_observabilityadmin_telemetry_evaluation_for_organization"
   }
 
@@ -39,7 +37,6 @@ rule "observabilityadmin-telemetry-evaluation-for-organization" {
 
 rule "observabilityadmin-telemetry-pipeline" {
   match {
-    kind = "resource"
     type = "aws_observabilityadmin_telemetry_pipeline"
   }
 
@@ -48,7 +45,6 @@ rule "observabilityadmin-telemetry-pipeline" {
 
 rule "observabilityadmin-telemetry-rule-for-organization" {
   match {
-    kind = "resource"
     type = "aws_observabilityadmin_telemetry_rule_for_organization"
   }
 

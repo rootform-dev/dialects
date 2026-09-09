@@ -11,7 +11,6 @@ concept "connect-instance" {
 
 rule "connect-instance" {
   match {
-    kind = "resource"
     type = "aws_connect_instance"
   }
 

@@ -1,7 +1,6 @@
 # Maintained directly from pinned provider evidence.
 rule "subnet-nat-gateway-association" {
   match {
-    kind = "resource"
     type = "azurerm_subnet_nat_gateway_association"
   }
 
@@ -20,7 +19,6 @@ rule "subnet-nat-gateway-association" {
 
 rule "subnet-network-security-group-association" {
   match {
-    kind = "resource"
     type = "azurerm_subnet_network_security_group_association"
   }
 

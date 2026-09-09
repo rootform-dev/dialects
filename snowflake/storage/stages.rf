@@ -5,7 +5,6 @@ concept "stage" {
 
 rule "stage" {
   match {
-    kind = "resource"
     type = "snowflake_stage"
   }
 
@@ -30,7 +29,6 @@ rule "stage" {
 
 rule "external-azure-stage" {
   match {
-    kind = "resource"
     type = "snowflake_stage_external_azure"
   }
 
@@ -60,7 +58,6 @@ rule "external-azure-stage" {
 
 rule "external-gcs-stage" {
   match {
-    kind = "resource"
     type = "snowflake_stage_external_gcs"
   }
 
@@ -95,7 +92,6 @@ rule "external-gcs-stage" {
 
 rule "external-s3-stage" {
   match {
-    kind = "resource"
     type = "snowflake_stage_external_s3"
   }
 
@@ -135,7 +131,6 @@ rule "external-s3-stage" {
 
 rule "external-s3-compatible-stage" {
   match {
-    kind = "resource"
     type = "snowflake_stage_external_s3_compatible"
   }
 
@@ -155,7 +150,6 @@ rule "external-s3-compatible-stage" {
 
 rule "internal-stage" {
   match {
-    kind = "resource"
     type = "snowflake_stage_internal"
   }
 

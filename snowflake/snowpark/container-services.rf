@@ -15,7 +15,6 @@ concept "container-service" {
 
 rule "compute-pool" {
   match {
-    kind = "resource"
     type = "snowflake_compute_pool"
   }
 
@@ -24,7 +23,6 @@ rule "compute-pool" {
 
 rule "image-repository" {
   match {
-    kind = "resource"
     type = "snowflake_image_repository"
   }
 
@@ -39,7 +37,6 @@ rule "image-repository" {
 
 rule "service" {
   match {
-    kind = "resource"
     type = "snowflake_service"
   }
 
@@ -75,7 +72,6 @@ rule "service" {
 
 rule "job-service" {
   match {
-    kind = "resource"
     type = "snowflake_job_service"
   }
 

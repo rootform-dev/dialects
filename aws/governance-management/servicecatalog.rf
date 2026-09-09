@@ -16,7 +16,6 @@ concept "servicecatalog-provisioned-product" {
 
 rule "servicecatalog-portfolio" {
   match {
-    kind = "resource"
     type = "aws_servicecatalog_portfolio"
   }
 
@@ -25,7 +24,6 @@ rule "servicecatalog-portfolio" {
 
 rule "servicecatalog-product" {
   match {
-    kind = "resource"
     type = "aws_servicecatalog_product"
   }
 
@@ -34,7 +32,6 @@ rule "servicecatalog-product" {
 
 rule "servicecatalog-provisioned-product" {
   match {
-    kind = "resource"
     type = "aws_servicecatalog_provisioned_product"
   }
 

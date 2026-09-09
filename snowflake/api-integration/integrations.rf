@@ -20,7 +20,6 @@ concept "git-repository" {
 
 rule "api-integration" {
   match {
-    kind = "resource"
     type = "snowflake_api_integration"
   }
 
@@ -39,7 +38,6 @@ rule "api-integration" {
 
 rule "amazon-api-gateway-integration" {
   match {
-    kind = "resource"
     type = "snowflake_api_integration_amazon_api_gateway"
   }
 
@@ -58,7 +56,6 @@ rule "amazon-api-gateway-integration" {
 
 rule "azure-api-management-integration" {
   match {
-    kind = "resource"
     type = "snowflake_api_integration_azure_api_management"
   }
 
@@ -72,7 +69,6 @@ rule "azure-api-management-integration" {
 
 rule "google-cloud-api-gateway-integration" {
   match {
-    kind = "resource"
     type = "snowflake_api_integration_google_cloud_api_gateway"
   }
 
@@ -86,7 +82,6 @@ rule "google-cloud-api-gateway-integration" {
 
 rule "external-mcp-dynamic-client-integration" {
   match {
-    kind = "resource"
     type = "snowflake_api_integration_external_mcp_dynamic_client"
   }
 
@@ -95,7 +90,6 @@ rule "external-mcp-dynamic-client-integration" {
 
 rule "external-mcp-oauth2-integration" {
   match {
-    kind = "resource"
     type = "snowflake_api_integration_external_mcp_oauth2"
   }
 
@@ -104,7 +98,6 @@ rule "external-mcp-oauth2-integration" {
 
 rule "github-app-repository-integration" {
   match {
-    kind = "resource"
     type = "snowflake_api_integration_git_repository_github_app"
   }
 
@@ -113,7 +106,6 @@ rule "github-app-repository-integration" {
 
 rule "oauth2-repository-integration" {
   match {
-    kind = "resource"
     type = "snowflake_api_integration_git_repository_oauth2"
   }
 
@@ -122,7 +114,6 @@ rule "oauth2-repository-integration" {
 
 rule "private-link-repository-integration" {
   match {
-    kind = "resource"
     type = "snowflake_api_integration_git_repository_private_link"
   }
 
@@ -131,7 +122,6 @@ rule "private-link-repository-integration" {
 
 rule "token-repository-integration" {
   match {
-    kind = "resource"
     type = "snowflake_api_integration_git_repository_token"
   }
 
@@ -140,7 +130,6 @@ rule "token-repository-integration" {
 
 rule "external-access-integration" {
   match {
-    kind = "resource"
     type = "snowflake_external_access_integration"
   }
 
@@ -154,7 +143,6 @@ rule "external-access-integration" {
 
 rule "external-function" {
   match {
-    kind = "resource"
     type = "snowflake_external_function"
   }
 
@@ -174,7 +162,6 @@ rule "external-function" {
 
 rule "git-repository" {
   match {
-    kind = "resource"
     type = "snowflake_git_repository"
   }
 

@@ -6,7 +6,6 @@ concept "signer-signing-profile" {
 
 rule "signer-signing-profile" {
   match {
-    kind = "resource"
     type = "aws_signer_signing_profile"
   }
 

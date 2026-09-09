@@ -6,7 +6,6 @@ concept "management-group" {
 
 rule "management-group" {
   match {
-    kind = "resource"
     type = "azurerm_management_group"
   }
 

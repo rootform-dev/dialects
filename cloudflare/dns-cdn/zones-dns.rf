@@ -50,7 +50,6 @@ concept "dns-transfer-configuration" {
 
 rule "zone" {
   match {
-    kind = "resource"
     type = "cloudflare_zone"
   }
 
@@ -59,7 +58,6 @@ rule "zone" {
 
 rule "proxied-dns-record" {
   match {
-    kind  = "resource"
     type  = "cloudflare_dns_record"
     where = source.proxied == true
   }
@@ -80,7 +78,6 @@ rule "proxied-dns-record" {
 
 rule "dns-record" {
   match {
-    kind  = "resource"
     type  = "cloudflare_dns_record"
     where = source.proxied != true
   }
@@ -95,7 +92,6 @@ rule "dns-record" {
 
 rule "zone-dnssec" {
   match {
-    kind = "resource"
     type = "cloudflare_zone_dnssec"
   }
 
@@ -109,7 +105,6 @@ rule "zone-dnssec" {
 
 rule "zone-setting" {
   match {
-    kind = "resource"
     type = "cloudflare_zone_setting"
   }
 
@@ -123,7 +118,6 @@ rule "zone-setting" {
 
 rule "zone-dns-settings" {
   match {
-    kind = "resource"
     type = "cloudflare_zone_dns_settings"
   }
 
@@ -137,7 +131,6 @@ rule "zone-dns-settings" {
 
 rule "zone-hold" {
   match {
-    kind = "resource"
     type = "cloudflare_zone_hold"
   }
 
@@ -151,7 +144,6 @@ rule "zone-hold" {
 
 rule "dns-firewall" {
   match {
-    kind = "resource"
     type = "cloudflare_dns_firewall"
   }
 
@@ -160,7 +152,6 @@ rule "dns-firewall" {
 
 rule "custom-hostname" {
   match {
-    kind = "resource"
     type = "cloudflare_custom_hostname"
   }
 
@@ -175,7 +166,6 @@ rule "custom-hostname" {
 
 rule "custom-hostname-fallback-origin" {
   match {
-    kind = "resource"
     type = "cloudflare_custom_hostname_fallback_origin"
   }
 
@@ -195,7 +185,6 @@ rule "custom-hostname-fallback-origin" {
 
 rule "web3-hostname" {
   match {
-    kind = "resource"
     type = "cloudflare_web3_hostname"
   }
 
@@ -210,7 +199,6 @@ rule "web3-hostname" {
 
 rule "account-dns-internal-view" {
   match {
-    kind = "resource"
     type = "cloudflare_account_dns_settings_internal_view"
   }
 
@@ -224,7 +212,6 @@ rule "account-dns-internal-view" {
 
 rule "regional-hostname" {
   match {
-    kind = "resource"
     type = "cloudflare_regional_hostname"
   }
 
@@ -239,7 +226,6 @@ rule "regional-hostname" {
 
 rule "dns-transfer-peer" {
   match {
-    kind = "resource"
     type = "cloudflare_dns_zone_transfers_peer"
   }
 
@@ -248,7 +234,6 @@ rule "dns-transfer-peer" {
 
 rule "dns-transfer-incoming" {
   match {
-    kind = "resource"
     type = "cloudflare_dns_zone_transfers_incoming"
   }
 
@@ -267,7 +252,6 @@ rule "dns-transfer-incoming" {
 
 rule "dns-transfer-outgoing" {
   match {
-    kind = "resource"
     type = "cloudflare_dns_zone_transfers_outgoing"
   }
 
@@ -286,7 +270,6 @@ rule "dns-transfer-outgoing" {
 
 rule "dns-transfer-acl" {
   match {
-    kind = "resource"
     type = "cloudflare_dns_zone_transfers_acl"
   }
 
@@ -295,7 +278,6 @@ rule "dns-transfer-acl" {
 
 rule "dns-transfer-tsig" {
   match {
-    kind = "resource"
     type = "cloudflare_dns_zone_transfers_tsig"
   }
 

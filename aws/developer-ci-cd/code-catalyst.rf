@@ -16,7 +16,6 @@ concept "codecatalyst-source-repository" {
 
 rule "codecatalyst-dev-environment" {
   match {
-    kind = "resource"
     type = "aws_codecatalyst_dev_environment"
   }
 
@@ -25,7 +24,6 @@ rule "codecatalyst-dev-environment" {
 
 rule "codecatalyst-project" {
   match {
-    kind = "resource"
     type = "aws_codecatalyst_project"
   }
 
@@ -34,7 +32,6 @@ rule "codecatalyst-project" {
 
 rule "codecatalyst-source-repository" {
   match {
-    kind = "resource"
     type = "aws_codecatalyst_source_repository"
   }
 

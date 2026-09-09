@@ -5,7 +5,6 @@ concept "operations-configuration" {
 
 rule "autopilot-config" {
   match {
-    kind = "resource"
     type = "consul_autopilot_config"
   }
 
@@ -14,7 +13,6 @@ rule "autopilot-config" {
 
 rule "config-entry-control-plane-request-limit-json" {
   match {
-    kind  = "resource"
     type  = "consul_config_entry"
     where = source.kind == "control-plane-request-limit"
   }

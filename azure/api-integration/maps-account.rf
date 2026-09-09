@@ -6,7 +6,6 @@ concept "maps-account" {
 
 rule "maps-account" {
   match {
-    kind = "resource"
     type = "azurerm_maps_account"
   }
 

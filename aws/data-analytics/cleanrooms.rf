@@ -6,7 +6,6 @@ concept "cleanrooms-configured-table" {
 
 rule "cleanrooms-configured-table" {
   match {
-    kind = "resource"
     type = "aws_cleanrooms_configured_table"
   }
 

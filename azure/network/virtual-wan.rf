@@ -6,7 +6,6 @@ concept "virtual-wan" {
 
 rule "virtual-wan" {
   match {
-    kind = "resource"
     type = "azurerm_virtual_wan"
   }
 

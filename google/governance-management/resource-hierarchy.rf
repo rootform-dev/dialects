@@ -10,7 +10,6 @@ concept "google-cloud-folder" {
 
 rule "google-cloud-project" {
   match {
-    kind = "resource"
     type = "google_project"
   }
 
@@ -19,7 +18,6 @@ rule "google-cloud-project" {
 
 rule "google-cloud-folder" {
   match {
-    kind = "resource"
     type = "google_folder"
   }
 

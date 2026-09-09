@@ -51,7 +51,6 @@ concept "sagemaker-project" {
 
 rule "sagemaker-code-repository" {
   match {
-    kind = "resource"
     type = "aws_sagemaker_code_repository"
   }
 
@@ -60,7 +59,6 @@ rule "sagemaker-code-repository" {
 
 rule "sagemaker-device-fleet" {
   match {
-    kind = "resource"
     type = "aws_sagemaker_device_fleet"
   }
 
@@ -69,7 +67,6 @@ rule "sagemaker-device-fleet" {
 
 rule "sagemaker-domain" {
   match {
-    kind = "resource"
     type = "aws_sagemaker_domain"
   }
 
@@ -78,7 +75,6 @@ rule "sagemaker-domain" {
 
 rule "sagemaker-endpoint" {
   match {
-    kind = "resource"
     type = "aws_sagemaker_endpoint"
   }
 
@@ -87,7 +83,6 @@ rule "sagemaker-endpoint" {
 
 rule "sagemaker-feature-group" {
   match {
-    kind = "resource"
     type = "aws_sagemaker_feature_group"
   }
 
@@ -96,7 +91,6 @@ rule "sagemaker-feature-group" {
 
 rule "sagemaker-hub" {
   match {
-    kind = "resource"
     type = "aws_sagemaker_hub"
   }
 
@@ -105,7 +99,6 @@ rule "sagemaker-hub" {
 
 rule "sagemaker-model" {
   match {
-    kind = "resource"
     type = "aws_sagemaker_model"
   }
 
@@ -114,7 +107,6 @@ rule "sagemaker-model" {
 
 rule "sagemaker-model-package-group" {
   match {
-    kind = "resource"
     type = "aws_sagemaker_model_package_group"
   }
 
@@ -123,7 +115,6 @@ rule "sagemaker-model-package-group" {
 
 rule "sagemaker-notebook-instance" {
   match {
-    kind = "resource"
     type = "aws_sagemaker_notebook_instance"
   }
 
@@ -132,7 +123,6 @@ rule "sagemaker-notebook-instance" {
 
 rule "sagemaker-pipeline" {
   match {
-    kind = "resource"
     type = "aws_sagemaker_pipeline"
   }
 
@@ -141,7 +131,6 @@ rule "sagemaker-pipeline" {
 
 rule "sagemaker-project" {
   match {
-    kind = "resource"
     type = "aws_sagemaker_project"
   }
 

@@ -20,7 +20,6 @@ concept "fleet-membership" {
 
 rule "fleet" {
   match {
-    kind = "resource"
     type = "newrelic_fleet"
   }
 
@@ -29,7 +28,6 @@ rule "fleet" {
 
 rule "fleet-configuration" {
   match {
-    kind = "resource"
     type = "newrelic_fleet_configuration"
   }
 
@@ -47,7 +45,6 @@ rule "fleet-configuration-lookup" {
 
 rule "fleet-deployment" {
   match {
-    kind = "resource"
     type = "newrelic_fleet_deployment"
   }
 
@@ -61,7 +58,6 @@ rule "fleet-deployment" {
 
 rule "fleet-members" {
   match {
-    kind = "resource"
     type = "newrelic_fleet_members"
   }
 

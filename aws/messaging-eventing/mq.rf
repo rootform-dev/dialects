@@ -6,7 +6,6 @@ concept "mq-broker" {
 
 rule "mq-broker" {
   match {
-    kind = "resource"
     type = "aws_mq_broker"
   }
 

@@ -10,7 +10,6 @@ concept "workload-identity-pool" {
 
 rule "workforce-identity-pool" {
   match {
-    kind = "resource"
     type = "google_iam_workforce_pool"
   }
 
@@ -19,7 +18,6 @@ rule "workforce-identity-pool" {
 
 rule "workload-identity-pool" {
   match {
-    kind = "resource"
     type = "google_iam_workload_identity_pool"
   }
 

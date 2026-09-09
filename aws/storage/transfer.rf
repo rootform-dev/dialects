@@ -16,7 +16,6 @@ concept "transfer-workflow" {
 
 rule "transfer-connector" {
   match {
-    kind = "resource"
     type = "aws_transfer_connector"
   }
 
@@ -25,7 +24,6 @@ rule "transfer-connector" {
 
 rule "transfer-server" {
   match {
-    kind = "resource"
     type = "aws_transfer_server"
   }
 
@@ -34,7 +32,6 @@ rule "transfer-server" {
 
 rule "transfer-workflow" {
   match {
-    kind = "resource"
     type = "aws_transfer_workflow"
   }
 

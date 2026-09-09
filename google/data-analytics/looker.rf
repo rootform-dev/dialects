@@ -5,7 +5,6 @@ concept "looker-instance" {
 
 rule "looker-instance" {
   match {
-    kind = "resource"
     type = "google_looker_instance"
   }
 

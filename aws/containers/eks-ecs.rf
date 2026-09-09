@@ -1,6 +1,5 @@
 rule "eks-cluster" {
   match {
-    kind = "resource"
     type = "aws_eks_cluster"
   }
 
@@ -9,7 +8,6 @@ rule "eks-cluster" {
 
 rule "eks-node-group" {
   match {
-    kind = "resource"
     type = "aws_eks_node_group"
   }
 
@@ -28,7 +26,6 @@ rule "eks-node-group" {
 
 rule "eks-fargate-profile" {
   match {
-    kind = "resource"
     type = "aws_eks_fargate_profile"
   }
 
@@ -47,7 +44,6 @@ rule "eks-fargate-profile" {
 
 rule "ecs-cluster" {
   match {
-    kind = "resource"
     type = "aws_ecs_cluster"
   }
 
@@ -56,7 +52,6 @@ rule "ecs-cluster" {
 
 rule "ecs-service" {
   match {
-    kind = "resource"
     type = "aws_ecs_service"
   }
 

@@ -36,7 +36,6 @@ concept "glue-workflow" {
 
 rule "glue-catalog" {
   match {
-    kind = "resource"
     type = "aws_glue_catalog"
   }
 
@@ -45,7 +44,6 @@ rule "glue-catalog" {
 
 rule "glue-catalog-database" {
   match {
-    kind = "resource"
     type = "aws_glue_catalog_database"
   }
 
@@ -54,7 +52,6 @@ rule "glue-catalog-database" {
 
 rule "glue-catalog-table" {
   match {
-    kind = "resource"
     type = "aws_glue_catalog_table"
   }
 
@@ -63,7 +60,6 @@ rule "glue-catalog-table" {
 
 rule "glue-connection" {
   match {
-    kind = "resource"
     type = "aws_glue_connection"
   }
 
@@ -72,7 +68,6 @@ rule "glue-connection" {
 
 rule "glue-dev-endpoint" {
   match {
-    kind = "resource"
     type = "aws_glue_dev_endpoint"
   }
 
@@ -81,7 +76,6 @@ rule "glue-dev-endpoint" {
 
 rule "glue-job" {
   match {
-    kind = "resource"
     type = "aws_glue_job"
   }
 
@@ -90,7 +84,6 @@ rule "glue-job" {
 
 rule "glue-workflow" {
   match {
-    kind = "resource"
     type = "aws_glue_workflow"
   }
 

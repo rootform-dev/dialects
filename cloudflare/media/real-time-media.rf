@@ -25,7 +25,6 @@ concept "stream-configuration" {
 
 rule "calls-sfu-app" {
   match {
-    kind = "resource"
     type = "cloudflare_calls_sfu_app"
   }
 
@@ -34,7 +33,6 @@ rule "calls-sfu-app" {
 
 rule "calls-turn-app" {
   match {
-    kind = "resource"
     type = "cloudflare_calls_turn_app"
   }
 
@@ -43,7 +41,6 @@ rule "calls-turn-app" {
 
 rule "moq-relay" {
   match {
-    kind = "resource"
     type = "cloudflare_moq_relay"
   }
 
@@ -52,7 +49,6 @@ rule "moq-relay" {
 
 rule "stream-live-input" {
   match {
-    kind = "resource"
     type = "cloudflare_stream_live_input"
   }
 
@@ -61,7 +57,6 @@ rule "stream-live-input" {
 
 rule "stream-webhook" {
   match {
-    kind = "resource"
     type = "cloudflare_stream_webhook"
   }
 

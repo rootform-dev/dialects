@@ -11,7 +11,6 @@ concept "dev-center-project" {
 
 rule "dev-center" {
   match {
-    kind = "resource"
     type = "azurerm_dev_center"
   }
 
@@ -20,7 +19,6 @@ rule "dev-center" {
 
 rule "dev-center-project" {
   match {
-    kind = "resource"
     type = "azurerm_dev_center_project"
   }
 

@@ -10,7 +10,6 @@ concept "identity-tenant" {
 
 rule "org-configuration" {
   match {
-    kind = "resource"
     type = "okta_org_configuration"
   }
 
@@ -28,7 +27,6 @@ rule "org-metadata-lookup" {
 
 rule "realm" {
   match {
-    kind = "resource"
     type = "okta_realm"
   }
 
@@ -37,7 +35,6 @@ rule "realm" {
 
 rule "realm-assignment" {
   match {
-    kind = "resource"
     type = "okta_realm_assignment"
   }
 

@@ -6,7 +6,6 @@ concept "ssoadmin-application" {
 
 rule "ssoadmin-application" {
   match {
-    kind = "resource"
     type = "aws_ssoadmin_application"
   }
 

@@ -10,7 +10,6 @@ concept "gke-fleet-membership" {
 
 rule "edge-container-cluster" {
   match {
-    kind = "resource"
     type = "google_edgecontainer_cluster"
   }
 
@@ -19,7 +18,6 @@ rule "edge-container-cluster" {
 
 rule "edge-container-node-pool" {
   match {
-    kind = "resource"
     type = "google_edgecontainer_node_pool"
   }
 
@@ -28,7 +26,6 @@ rule "edge-container-node-pool" {
 
 rule "bare-metal-gdc-cluster" {
   match {
-    kind = "resource"
     type = "google_gkeonprem_bare_metal_cluster"
   }
 
@@ -37,7 +34,6 @@ rule "bare-metal-gdc-cluster" {
 
 rule "bare-metal-gdc-admin-cluster" {
   match {
-    kind = "resource"
     type = "google_gkeonprem_bare_metal_admin_cluster"
   }
 
@@ -46,7 +42,6 @@ rule "bare-metal-gdc-admin-cluster" {
 
 rule "bare-metal-gdc-node-pool" {
   match {
-    kind = "resource"
     type = "google_gkeonprem_bare_metal_node_pool"
   }
 
@@ -55,7 +50,6 @@ rule "bare-metal-gdc-node-pool" {
 
 rule "vmware-gdc-cluster" {
   match {
-    kind = "resource"
     type = "google_gkeonprem_vmware_cluster"
   }
 
@@ -64,7 +58,6 @@ rule "vmware-gdc-cluster" {
 
 rule "vmware-gdc-admin-cluster" {
   match {
-    kind = "resource"
     type = "google_gkeonprem_vmware_admin_cluster"
   }
 
@@ -73,7 +66,6 @@ rule "vmware-gdc-admin-cluster" {
 
 rule "vmware-gdc-node-pool" {
   match {
-    kind = "resource"
     type = "google_gkeonprem_vmware_node_pool"
   }
 
@@ -82,7 +74,6 @@ rule "vmware-gdc-node-pool" {
 
 rule "gke-fleet" {
   match {
-    kind = "resource"
     type = "google_gke_hub_fleet"
   }
 
@@ -91,7 +82,6 @@ rule "gke-fleet" {
 
 rule "gke-fleet-membership" {
   match {
-    kind = "resource"
     type = "google_gke_hub_membership"
   }
 

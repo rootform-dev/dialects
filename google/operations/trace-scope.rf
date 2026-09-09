@@ -5,7 +5,6 @@ concept "cloud-trace-scope" {
 
 rule "cloud-trace-scope" {
   match {
-    kind = "resource"
     type = "google_observability_trace_scope"
   }
 

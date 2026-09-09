@@ -15,7 +15,6 @@ concept "cx-agent-studio-configuration" {
 
 rule "cx-agent-studio-app" {
   match {
-    kind = "resource"
     type = "google_ces_app"
   }
 
@@ -24,7 +23,6 @@ rule "cx-agent-studio-app" {
 
 rule "cx-agent-studio-agent" {
   match {
-    kind = "resource"
     type = "google_ces_agent"
   }
 
@@ -33,7 +31,6 @@ rule "cx-agent-studio-agent" {
 
 rule "cx-agent-studio-root-agent-association" {
   match {
-    kind = "resource"
     type = "google_ces_app_root_agent_association"
   }
 
@@ -42,7 +39,6 @@ rule "cx-agent-studio-root-agent-association" {
 
 rule "cx-agent-studio-app-version" {
   match {
-    kind = "resource"
     type = "google_ces_app_version"
   }
 
@@ -51,7 +47,6 @@ rule "cx-agent-studio-app-version" {
 
 rule "cx-agent-studio-deployment" {
   match {
-    kind = "resource"
     type = "google_ces_deployment"
   }
 
@@ -60,7 +55,6 @@ rule "cx-agent-studio-deployment" {
 
 rule "cx-agent-studio-evaluation" {
   match {
-    kind = "resource"
     type = "google_ces_evaluation"
   }
 
@@ -69,7 +63,6 @@ rule "cx-agent-studio-evaluation" {
 
 rule "cx-agent-studio-example" {
   match {
-    kind = "resource"
     type = "google_ces_example"
   }
 
@@ -78,7 +71,6 @@ rule "cx-agent-studio-example" {
 
 rule "cx-agent-studio-guardrail" {
   match {
-    kind = "resource"
     type = "google_ces_guardrail"
   }
 
@@ -87,7 +79,6 @@ rule "cx-agent-studio-guardrail" {
 
 rule "cx-agent-studio-security-settings" {
   match {
-    kind = "resource"
     type = "google_ces_security_settings"
   }
 
@@ -96,7 +87,6 @@ rule "cx-agent-studio-security-settings" {
 
 rule "cx-agent-studio-tool" {
   match {
-    kind = "resource"
     type = "google_ces_tool"
   }
 
@@ -105,7 +95,6 @@ rule "cx-agent-studio-tool" {
 
 rule "cx-agent-studio-toolset" {
   match {
-    kind = "resource"
     type = "google_ces_toolset"
   }
 

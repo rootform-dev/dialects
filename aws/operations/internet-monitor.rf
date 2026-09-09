@@ -6,7 +6,6 @@ concept "internetmonitor-monitor" {
 
 rule "internetmonitor-monitor" {
   match {
-    kind = "resource"
     type = "aws_internetmonitor_monitor"
   }
 

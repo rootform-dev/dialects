@@ -6,7 +6,6 @@ concept "efs-access-point" {
 
 rule "efs-access-point" {
   match {
-    kind = "resource"
     type = "aws_efs_access_point"
   }
 
@@ -15,7 +14,6 @@ rule "efs-access-point" {
 
 rule "efs-file-system" {
   match {
-    kind = "resource"
     type = "aws_efs_file_system"
   }
 

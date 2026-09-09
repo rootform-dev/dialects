@@ -11,7 +11,6 @@ concept "chimesdkvoice-voice-profile-domain" {
 
 rule "chimesdkvoice-sip-media-application" {
   match {
-    kind = "resource"
     type = "aws_chimesdkvoice_sip_media_application"
   }
 
@@ -20,7 +19,6 @@ rule "chimesdkvoice-sip-media-application" {
 
 rule "chimesdkvoice-voice-profile-domain" {
   match {
-    kind = "resource"
     type = "aws_chimesdkvoice_voice_profile_domain"
   }
 

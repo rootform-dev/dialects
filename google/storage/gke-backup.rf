@@ -10,7 +10,6 @@ concept "gke-backup-channel" {
 
 rule "gke-backup-plan" {
   match {
-    kind = "resource"
     type = "google_gke_backup_backup_plan"
   }
 
@@ -19,7 +18,6 @@ rule "gke-backup-plan" {
 
 rule "gke-restore-plan" {
   match {
-    kind = "resource"
     type = "google_gke_backup_restore_plan"
   }
 
@@ -28,7 +26,6 @@ rule "gke-restore-plan" {
 
 rule "gke-backup-channel" {
   match {
-    kind = "resource"
     type = "google_gke_backup_backup_channel"
   }
 
@@ -37,7 +34,6 @@ rule "gke-backup-channel" {
 
 rule "gke-restore-channel" {
   match {
-    kind = "resource"
     type = "google_gke_backup_restore_channel"
   }
 

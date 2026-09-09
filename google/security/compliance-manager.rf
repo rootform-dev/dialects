@@ -10,7 +10,6 @@ concept "compliance-manager-configuration" {
 
 rule "compliance-manager-framework" {
   match {
-    kind = "resource"
     type = "google_cloud_security_compliance_framework"
   }
 
@@ -19,7 +18,6 @@ rule "compliance-manager-framework" {
 
 rule "compliance-manager-cloud-control" {
   match {
-    kind = "resource"
     type = "google_cloud_security_compliance_cloud_control"
   }
 
@@ -28,7 +26,6 @@ rule "compliance-manager-cloud-control" {
 
 rule "compliance-manager-framework-deployment" {
   match {
-    kind = "resource"
     type = "google_cloud_security_compliance_framework_deployment"
   }
 

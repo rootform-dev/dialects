@@ -5,7 +5,6 @@ concept "spanner-database" {
 
 rule "spanner-instance" {
   match {
-    kind = "resource"
     type = "google_spanner_instance"
   }
 
@@ -14,7 +13,6 @@ rule "spanner-instance" {
 
 rule "spanner-database" {
   match {
-    kind = "resource"
     type = "google_spanner_database"
   }
 

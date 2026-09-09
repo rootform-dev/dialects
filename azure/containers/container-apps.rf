@@ -16,7 +16,6 @@ concept "container-app-job" {
 
 rule "container-app" {
   match {
-    kind = "resource"
     type = "azurerm_container_app"
   }
 
@@ -37,7 +36,6 @@ rule "container-app" {
 
 rule "container-app-environment" {
   match {
-    kind = "resource"
     type = "azurerm_container_app_environment"
   }
 
@@ -63,7 +61,6 @@ rule "container-app-environment" {
 
 rule "container-app-job" {
   match {
-    kind = "resource"
     type = "azurerm_container_app_job"
   }
 

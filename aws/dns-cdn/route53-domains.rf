@@ -11,7 +11,6 @@ concept "route53domains-registered-domain" {
 
 rule "route53domains-domain" {
   match {
-    kind = "resource"
     type = "aws_route53domains_domain"
   }
 
@@ -20,7 +19,6 @@ rule "route53domains-domain" {
 
 rule "route53domains-registered-domain" {
   match {
-    kind = "resource"
     type = "aws_route53domains_registered_domain"
   }
 

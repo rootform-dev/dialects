@@ -1,6 +1,5 @@
 rule "hvn" {
   match {
-    kind = "resource"
     type = "hcp_hvn"
   }
 

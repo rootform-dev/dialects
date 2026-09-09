@@ -1,6 +1,5 @@
 rule "globalaccelerator-accelerator" {
   match {
-    kind = "resource"
     type = "aws_globalaccelerator_accelerator"
   }
 
@@ -9,7 +8,6 @@ rule "globalaccelerator-accelerator" {
 
 rule "globalaccelerator-listener" {
   match {
-    kind = "resource"
     type = "aws_globalaccelerator_listener"
   }
 
@@ -23,7 +21,6 @@ rule "globalaccelerator-listener" {
 
 rule "globalaccelerator-endpoint-group" {
   match {
-    kind = "resource"
     type = "aws_globalaccelerator_endpoint_group"
   }
 
@@ -32,7 +29,6 @@ rule "globalaccelerator-endpoint-group" {
 
 rule "globalaccelerator-custom-routing-accelerator" {
   match {
-    kind = "resource"
     type = "aws_globalaccelerator_custom_routing_accelerator"
   }
 
@@ -41,7 +37,6 @@ rule "globalaccelerator-custom-routing-accelerator" {
 
 rule "globalaccelerator-custom-routing-listener" {
   match {
-    kind = "resource"
     type = "aws_globalaccelerator_custom_routing_listener"
   }
 
@@ -55,7 +50,6 @@ rule "globalaccelerator-custom-routing-listener" {
 
 rule "globalaccelerator-custom-routing-endpoint-group" {
   match {
-    kind = "resource"
     type = "aws_globalaccelerator_custom_routing_endpoint_group"
   }
 

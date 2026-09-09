@@ -5,7 +5,6 @@ concept "extension-configuration" {
 
 rule "action-module" {
   match {
-    kind = "resource"
     type = "auth0_action_module"
   }
 
@@ -23,7 +22,6 @@ rule "action-module-lookup" {
 
 rule "trigger-action" {
   match {
-    kind = "resource"
     type = "auth0_trigger_action"
   }
 
@@ -37,7 +35,6 @@ rule "trigger-action" {
 
 rule "trigger-actions" {
   match {
-    kind = "resource"
     type = "auth0_trigger_actions"
   }
 

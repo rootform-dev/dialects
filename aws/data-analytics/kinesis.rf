@@ -6,7 +6,6 @@ concept "kinesis-stream" {
 
 rule "kinesis-stream" {
   match {
-    kind = "resource"
     type = "aws_kinesis_stream"
   }
 

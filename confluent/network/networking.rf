@@ -35,7 +35,6 @@ concept "network-configuration" {
 
 rule "network" {
   match {
-    kind = "resource"
     type = "confluent_network"
   }
 
@@ -50,7 +49,6 @@ rule "network" {
 
 rule "gateway" {
   match {
-    kind = "resource"
     type = "confluent_gateway"
   }
 
@@ -65,7 +63,6 @@ rule "gateway" {
 
 rule "access-point" {
   match {
-    kind = "resource"
     type = "confluent_access_point"
   }
 
@@ -94,7 +91,6 @@ rule "access-point" {
 
 rule "network-peering" {
   match {
-    kind = "resource"
     type = "confluent_peering"
   }
 
@@ -124,7 +120,6 @@ rule "network-peering" {
 
 rule "private-link-access" {
   match {
-    kind = "resource"
     type = "confluent_private_link_access"
   }
 
@@ -138,7 +133,6 @@ rule "private-link-access" {
 
 rule "private-link-attachment" {
   match {
-    kind = "resource"
     type = "confluent_private_link_attachment"
   }
 
@@ -153,7 +147,6 @@ rule "private-link-attachment" {
 
 rule "private-link-attachment-connection" {
   match {
-    kind = "resource"
     type = "confluent_private_link_attachment_connection"
   }
 
@@ -182,7 +175,6 @@ rule "private-link-attachment-connection" {
 
 rule "network-link-service" {
   match {
-    kind = "resource"
     type = "confluent_network_link_service"
   }
 
@@ -197,7 +189,6 @@ rule "network-link-service" {
 
 rule "network-link-endpoint" {
   match {
-    kind = "resource"
     type = "confluent_network_link_endpoint"
   }
 
@@ -217,7 +208,6 @@ rule "network-link-endpoint" {
 
 rule "transit-gateway-attachment" {
   match {
-    kind = "resource"
     type = "confluent_transit_gateway_attachment"
   }
 
@@ -232,7 +222,6 @@ rule "transit-gateway-attachment" {
 
 rule "dns-forwarder" {
   match {
-    kind = "resource"
     type = "confluent_dns_forwarder"
   }
 
@@ -246,7 +235,6 @@ rule "dns-forwarder" {
 
 rule "dns-record" {
   match {
-    kind = "resource"
     type = "confluent_dns_record"
   }
 

@@ -16,7 +16,6 @@ concept "batch-pool" {
 
 rule "batch-account" {
   match {
-    kind = "resource"
     type = "azurerm_batch_account"
   }
 
@@ -25,7 +24,6 @@ rule "batch-account" {
 
 rule "batch-application" {
   match {
-    kind = "resource"
     type = "azurerm_batch_application"
   }
 
@@ -34,7 +32,6 @@ rule "batch-application" {
 
 rule "batch-job" {
   match {
-    kind = "resource"
     type = "azurerm_batch_job"
   }
 
@@ -43,7 +40,6 @@ rule "batch-job" {
 
 rule "batch-pool" {
   match {
-    kind = "resource"
     type = "azurerm_batch_pool"
   }
 

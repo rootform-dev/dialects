@@ -10,7 +10,6 @@ concept "service-perimeter" {
 
 rule "access-context-policy" {
   match {
-    kind = "resource"
     type = "google_access_context_manager_access_policy"
   }
 
@@ -19,7 +18,6 @@ rule "access-context-policy" {
 
 rule "service-perimeter" {
   match {
-    kind = "resource"
     type = "google_access_context_manager_service_perimeter"
   }
 

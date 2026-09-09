@@ -20,7 +20,6 @@ concept "network-monitor" {
 
 rule "logpush-job" {
   match {
-    kind = "resource"
     type = "cloudflare_logpush_job"
   }
 
@@ -29,7 +28,6 @@ rule "logpush-job" {
 
 rule "web-analytics-site" {
   match {
-    kind = "resource"
     type = "cloudflare_web_analytics_site"
   }
 
@@ -38,7 +36,6 @@ rule "web-analytics-site" {
 
 rule "web-analytics-rule" {
   match {
-    kind = "resource"
     type = "cloudflare_web_analytics_rule"
   }
 
@@ -47,7 +44,6 @@ rule "web-analytics-rule" {
 
 rule "network-monitoring" {
   match {
-    kind = "resource"
     type = "cloudflare_magic_network_monitoring_configuration"
   }
 
@@ -56,7 +52,6 @@ rule "network-monitoring" {
 
 rule "network-monitoring-rule" {
   match {
-    kind = "resource"
     type = "cloudflare_magic_network_monitoring_rule"
   }
 
@@ -65,7 +60,6 @@ rule "network-monitoring-rule" {
 
 rule "notification-policy" {
   match {
-    kind = "resource"
     type = "cloudflare_notification_policy"
   }
 
@@ -74,7 +68,6 @@ rule "notification-policy" {
 
 rule "notification-webhook" {
   match {
-    kind = "resource"
     type = "cloudflare_notification_policy_webhooks"
   }
 
@@ -83,7 +76,6 @@ rule "notification-webhook" {
 
 rule "dex-test" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_dex_test"
   }
 
@@ -92,7 +84,6 @@ rule "dex-test" {
 
 rule "dex-rule" {
   match {
-    kind = "resource"
     type = "cloudflare_zero_trust_dex_rule"
   }
 
@@ -101,7 +92,6 @@ rule "dex-rule" {
 
 rule "logpull-retention" {
   match {
-    kind = "resource"
     type = "cloudflare_logpull_retention"
   }
 

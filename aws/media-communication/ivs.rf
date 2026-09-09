@@ -6,7 +6,6 @@ concept "ivs-channel" {
 
 rule "ivs-channel" {
   match {
-    kind = "resource"
     type = "aws_ivs_channel"
   }
 

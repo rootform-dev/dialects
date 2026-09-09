@@ -5,7 +5,6 @@ concept "firebase-data-connect-service" {
 
 rule "firebase-realtime-database" {
   match {
-    kind = "resource"
     type = "google_firebase_database_instance"
   }
 
@@ -14,7 +13,6 @@ rule "firebase-realtime-database" {
 
 rule "firebase-data-connect-service" {
   match {
-    kind = "resource"
     type = "google_firebase_data_connect_service"
   }
 

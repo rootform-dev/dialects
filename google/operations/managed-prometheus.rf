@@ -5,7 +5,6 @@ concept "managed-prometheus-project-link" {
 
 rule "managed-prometheus-project-link" {
   match {
-    kind = "resource"
     type = "google_monitoring_monitored_project"
   }
 

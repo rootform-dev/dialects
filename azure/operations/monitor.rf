@@ -21,7 +21,6 @@ concept "network-watcher" {
 
 rule "application-insights" {
   match {
-    kind = "resource"
     type = "azurerm_application_insights"
   }
 
@@ -41,7 +40,6 @@ rule "application-insights" {
 
 rule "application-insights-web-test" {
   match {
-    kind = "resource"
     type = "azurerm_application_insights_standard_web_test"
   }
 
@@ -50,7 +48,6 @@ rule "application-insights-web-test" {
 
 rule "log-analytics-cluster" {
   match {
-    kind = "resource"
     type = "azurerm_log_analytics_cluster"
   }
 
@@ -65,7 +62,6 @@ rule "log-analytics-cluster" {
 
 rule "log-analytics-workspace" {
   match {
-    kind = "resource"
     type = "azurerm_log_analytics_workspace"
   }
 
@@ -80,7 +76,6 @@ rule "log-analytics-workspace" {
 
 rule "monitor-action-group" {
   match {
-    kind = "resource"
     type = "azurerm_monitor_action_group"
   }
 
@@ -89,7 +84,6 @@ rule "monitor-action-group" {
 
 rule "monitor-data-collection-endpoint" {
   match {
-    kind = "resource"
     type = "azurerm_monitor_data_collection_endpoint"
   }
 
@@ -98,7 +92,6 @@ rule "monitor-data-collection-endpoint" {
 
 rule "monitor-diagnostic-setting" {
   match {
-    kind = "resource"
     type = "azurerm_monitor_diagnostic_setting"
   }
 
@@ -107,7 +100,6 @@ rule "monitor-diagnostic-setting" {
 
 rule "monitor-metric-alert" {
   match {
-    kind = "resource"
     type = "azurerm_monitor_metric_alert"
   }
 
@@ -116,7 +108,6 @@ rule "monitor-metric-alert" {
 
 rule "monitor-scheduled-query-alert" {
   match {
-    kind = "resource"
     type = "azurerm_monitor_scheduled_query_rules_alert_v2"
   }
 
@@ -125,7 +116,6 @@ rule "monitor-scheduled-query-alert" {
 
 rule "monitor-workspace" {
   match {
-    kind = "resource"
     type = "azurerm_monitor_workspace"
   }
 
@@ -140,7 +130,6 @@ rule "monitor-workspace" {
 
 rule "network-watcher" {
   match {
-    kind = "resource"
     type = "azurerm_network_watcher"
   }
 

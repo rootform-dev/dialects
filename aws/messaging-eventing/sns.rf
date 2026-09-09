@@ -6,7 +6,6 @@ concept "sns-platform-application" {
 
 rule "sns-platform-application" {
   match {
-    kind = "resource"
     type = "aws_sns_platform_application"
   }
 

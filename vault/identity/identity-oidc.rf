@@ -15,7 +15,6 @@ concept "oidc-provider" {
 
 rule "identity-entity" {
   match {
-    kind = "resource"
     type = "vault_identity_entity"
   }
 
@@ -30,7 +29,6 @@ rule "identity-entity" {
 
 rule "identity-entity-alias" {
   match {
-    kind = "resource"
     type = "vault_identity_entity_alias"
   }
 
@@ -39,7 +37,6 @@ rule "identity-entity-alias" {
 
 rule "identity-entity-policies" {
   match {
-    kind = "resource"
     type = "vault_identity_entity_policies"
   }
 
@@ -48,7 +45,6 @@ rule "identity-entity-policies" {
 
 rule "identity-group" {
   match {
-    kind = "resource"
     type = "vault_identity_group"
   }
 
@@ -63,7 +59,6 @@ rule "identity-group" {
 
 rule "identity-group-alias" {
   match {
-    kind = "resource"
     type = "vault_identity_group_alias"
   }
 
@@ -72,7 +67,6 @@ rule "identity-group-alias" {
 
 rule "identity-group-member-entity-ids" {
   match {
-    kind = "resource"
     type = "vault_identity_group_member_entity_ids"
   }
 
@@ -81,7 +75,6 @@ rule "identity-group-member-entity-ids" {
 
 rule "identity-group-member-group-ids" {
   match {
-    kind = "resource"
     type = "vault_identity_group_member_group_ids"
   }
 
@@ -90,7 +83,6 @@ rule "identity-group-member-group-ids" {
 
 rule "identity-group-policies" {
   match {
-    kind = "resource"
     type = "vault_identity_group_policies"
   }
 
@@ -99,7 +91,6 @@ rule "identity-group-policies" {
 
 rule "identity-mfa-duo" {
   match {
-    kind = "resource"
     type = "vault_identity_mfa_duo"
   }
 
@@ -108,7 +99,6 @@ rule "identity-mfa-duo" {
 
 rule "identity-mfa-login-enforcement" {
   match {
-    kind = "resource"
     type = "vault_identity_mfa_login_enforcement"
   }
 
@@ -117,7 +107,6 @@ rule "identity-mfa-login-enforcement" {
 
 rule "identity-mfa-okta" {
   match {
-    kind = "resource"
     type = "vault_identity_mfa_okta"
   }
 
@@ -126,7 +115,6 @@ rule "identity-mfa-okta" {
 
 rule "identity-mfa-pingid" {
   match {
-    kind = "resource"
     type = "vault_identity_mfa_pingid"
   }
 
@@ -135,7 +123,6 @@ rule "identity-mfa-pingid" {
 
 rule "identity-mfa-totp" {
   match {
-    kind = "resource"
     type = "vault_identity_mfa_totp"
   }
 
@@ -144,7 +131,6 @@ rule "identity-mfa-totp" {
 
 rule "identity-oidc" {
   match {
-    kind = "resource"
     type = "vault_identity_oidc"
   }
 
@@ -153,7 +139,6 @@ rule "identity-oidc" {
 
 rule "identity-oidc-assignment" {
   match {
-    kind = "resource"
     type = "vault_identity_oidc_assignment"
   }
 
@@ -162,7 +147,6 @@ rule "identity-oidc-assignment" {
 
 rule "identity-oidc-client" {
   match {
-    kind = "resource"
     type = "vault_identity_oidc_client"
   }
 
@@ -182,7 +166,6 @@ rule "identity-oidc-client" {
 
 rule "identity-oidc-key" {
   match {
-    kind = "resource"
     type = "vault_identity_oidc_key"
   }
 
@@ -197,7 +180,6 @@ rule "identity-oidc-key" {
 
 rule "identity-oidc-key-allowed-client-id" {
   match {
-    kind = "resource"
     type = "vault_identity_oidc_key_allowed_client_id"
   }
 
@@ -206,7 +188,6 @@ rule "identity-oidc-key-allowed-client-id" {
 
 rule "identity-oidc-provider" {
   match {
-    kind = "resource"
     type = "vault_identity_oidc_provider"
   }
 
@@ -221,7 +202,6 @@ rule "identity-oidc-provider" {
 
 rule "identity-oidc-role" {
   match {
-    kind = "resource"
     type = "vault_identity_oidc_role"
   }
 
@@ -230,7 +210,6 @@ rule "identity-oidc-role" {
 
 rule "identity-oidc-scope" {
   match {
-    kind = "resource"
     type = "vault_identity_oidc_scope"
   }
 
@@ -239,7 +218,6 @@ rule "identity-oidc-scope" {
 
 rule "mfa-duo" {
   match {
-    kind = "resource"
     type = "vault_mfa_duo"
   }
 
@@ -248,7 +226,6 @@ rule "mfa-duo" {
 
 rule "mfa-okta" {
   match {
-    kind = "resource"
     type = "vault_mfa_okta"
   }
 
@@ -257,7 +234,6 @@ rule "mfa-okta" {
 
 rule "mfa-pingid" {
   match {
-    kind = "resource"
     type = "vault_mfa_pingid"
   }
 
@@ -266,7 +242,6 @@ rule "mfa-pingid" {
 
 rule "mfa-totp" {
   match {
-    kind = "resource"
     type = "vault_mfa_totp"
   }
 
@@ -275,7 +250,6 @@ rule "mfa-totp" {
 
 rule "oauth-resource-server-config-profile" {
   match {
-    kind = "resource"
     type = "vault_oauth_resource_server_config_profile"
   }
 

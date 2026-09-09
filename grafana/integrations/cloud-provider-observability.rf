@@ -5,7 +5,6 @@ concept "cloud-integration-configuration" {
 
 rule "cloud-integration" {
   match {
-    kind = "resource"
     type = "grafana_cloud_integration"
   }
 
@@ -14,7 +13,6 @@ rule "cloud-integration" {
 
 rule "cloud-provider-aws-account" {
   match {
-    kind = "resource"
     type = "grafana_cloud_provider_aws_account"
   }
 
@@ -54,7 +52,6 @@ rule "cloud-provider-aws-account-lookup" {
 
 rule "cloud-provider-aws-cloudwatch-scrape-job" {
   match {
-    kind = "resource"
     type = "grafana_cloud_provider_aws_cloudwatch_scrape_job"
   }
 
@@ -94,7 +91,6 @@ rule "cloud-provider-aws-cloudwatch-scrape-job-lookup" {
 
 rule "cloud-provider-aws-resource-metadata-scrape-job" {
   match {
-    kind = "resource"
     type = "grafana_cloud_provider_aws_resource_metadata_scrape_job"
   }
 
@@ -114,7 +110,6 @@ rule "cloud-provider-aws-resource-metadata-scrape-job" {
 
 rule "cloud-provider-azure-credential" {
   match {
-    kind = "resource"
     type = "grafana_cloud_provider_azure_credential"
   }
 

@@ -6,7 +6,6 @@ concept "keyspaces-table" {
 
 rule "keyspaces-table" {
   match {
-    kind = "resource"
     type = "aws_keyspaces_table"
   }
 

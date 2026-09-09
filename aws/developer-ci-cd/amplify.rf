@@ -6,7 +6,6 @@ concept "amplify-backend-environment" {
 
 rule "amplify-backend-environment" {
   match {
-    kind = "resource"
     type = "aws_amplify_backend_environment"
   }
 

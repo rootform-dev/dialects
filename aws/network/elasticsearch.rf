@@ -6,7 +6,6 @@ concept "elasticsearch-vpc-endpoint" {
 
 rule "elasticsearch-vpc-endpoint" {
   match {
-    kind = "resource"
     type = "aws_elasticsearch_vpc_endpoint"
   }
 

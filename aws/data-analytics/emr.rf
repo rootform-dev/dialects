@@ -11,7 +11,6 @@ concept "emr-cluster-component" {
 
 rule "emr-cluster" {
   match {
-    kind = "resource"
     type = "aws_emr_cluster"
   }
 

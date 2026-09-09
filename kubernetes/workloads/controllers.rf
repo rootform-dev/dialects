@@ -15,7 +15,6 @@ concept "daemon-set" {
 
 rule "kubernetes-deployment" {
   match {
-    kind = "resource"
     type = "kubernetes_deployment_v1"
   }
 
@@ -46,7 +45,6 @@ rule "kubernetes-deployment" {
 
 rule "kubernetes-stateful-set" {
   match {
-    kind = "resource"
     type = "kubernetes_stateful_set_v1"
   }
 
@@ -77,7 +75,6 @@ rule "kubernetes-stateful-set" {
 
 rule "kubernetes-daemon-set" {
   match {
-    kind = "resource"
     type = "kubernetes_daemon_set_v1"
   }
 

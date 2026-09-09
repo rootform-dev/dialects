@@ -1,6 +1,5 @@
 rule "dynamodb-global-secondary-index" {
   match {
-    kind = "resource"
     type = "aws_dynamodb_global_secondary_index"
   }
 

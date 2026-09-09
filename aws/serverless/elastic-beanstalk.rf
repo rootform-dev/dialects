@@ -11,7 +11,6 @@ concept "elastic-beanstalk-environment" {
 
 rule "elastic-beanstalk-application" {
   match {
-    kind = "resource"
     type = "aws_elastic_beanstalk_application"
   }
 
@@ -20,7 +19,6 @@ rule "elastic-beanstalk-application" {
 
 rule "elastic-beanstalk-environment" {
   match {
-    kind = "resource"
     type = "aws_elastic_beanstalk_environment"
   }
 

@@ -5,7 +5,6 @@ concept "recaptcha-enterprise-key" {
 
 rule "recaptcha-enterprise-key" {
   match {
-    kind = "resource"
     type = "google_recaptcha_enterprise_key"
   }
 

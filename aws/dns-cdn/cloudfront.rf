@@ -31,7 +31,6 @@ concept "cloudfront-multitenant-distribution" {
 
 rule "cloudfront-connection-function" {
   match {
-    kind = "resource"
     type = "aws_cloudfront_connection_function"
   }
 
@@ -40,7 +39,6 @@ rule "cloudfront-connection-function" {
 
 rule "cloudfront-connection-group" {
   match {
-    kind = "resource"
     type = "aws_cloudfront_connection_group"
   }
 
@@ -49,7 +47,6 @@ rule "cloudfront-connection-group" {
 
 rule "cloudfront-function" {
   match {
-    kind = "resource"
     type = "aws_cloudfront_function"
   }
 
@@ -58,7 +55,6 @@ rule "cloudfront-function" {
 
 rule "cloudfront-key-value-store" {
   match {
-    kind = "resource"
     type = "aws_cloudfront_key_value_store"
   }
 
@@ -67,7 +63,6 @@ rule "cloudfront-key-value-store" {
 
 rule "cloudfront-multitenant-distribution" {
   match {
-    kind = "resource"
     type = "aws_cloudfront_multitenant_distribution"
   }
 

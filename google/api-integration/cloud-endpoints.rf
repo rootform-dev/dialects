@@ -1,6 +1,5 @@
 rule "cloud-endpoints-service" {
   match {
-    kind = "resource"
     type = "google_endpoints_service"
   }
 

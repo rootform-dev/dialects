@@ -6,7 +6,6 @@ concept "resourceexplorer2-index" {
 
 rule "resourceexplorer2-index" {
   match {
-    kind = "resource"
     type = "aws_resourceexplorer2_index"
   }
 

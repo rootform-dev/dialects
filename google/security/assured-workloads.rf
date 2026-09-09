@@ -5,7 +5,6 @@ concept "assured-workloads-boundary" {
 
 rule "assured-workloads-boundary" {
   match {
-    kind = "resource"
     type = "google_assured_workloads_workload"
   }
 

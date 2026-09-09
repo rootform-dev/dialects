@@ -1,6 +1,5 @@
 rule "athena-workgroup" {
   match {
-    kind = "resource"
     type = "aws_athena_workgroup"
   }
 

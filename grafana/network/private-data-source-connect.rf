@@ -5,7 +5,6 @@ concept "private-data-source-connect-network" {
 
 rule "cloud-private-data-source-connect-network" {
   match {
-    kind = "resource"
     type = "grafana_cloud_private_data_source_connect_network"
   }
 

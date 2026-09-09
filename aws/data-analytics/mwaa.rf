@@ -6,7 +6,6 @@ concept "mwaa-environment" {
 
 rule "mwaa-environment" {
   match {
-    kind = "resource"
     type = "aws_mwaa_environment"
   }
 

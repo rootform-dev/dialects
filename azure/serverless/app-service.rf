@@ -16,7 +16,6 @@ concept "app-service-plan" {
 
 rule "app-service-environment" {
   match {
-    kind = "resource"
     type = "azurerm_app_service_environment_v3"
   }
 
@@ -31,7 +30,6 @@ rule "app-service-environment" {
 
 rule "app-service-plan" {
   match {
-    kind = "resource"
     type = "azurerm_service_plan"
   }
 
@@ -46,7 +44,6 @@ rule "app-service-plan" {
 
 rule "linux-web-app" {
   match {
-    kind = "resource"
     type = "azurerm_linux_web_app"
   }
 
@@ -78,7 +75,6 @@ rule "linux-web-app" {
 
 rule "windows-web-app" {
   match {
-    kind = "resource"
     type = "azurerm_windows_web_app"
   }
 

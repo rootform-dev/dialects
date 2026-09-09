@@ -10,7 +10,6 @@ concept "orchestration-configuration" {
 
 rule "lakeflow-job" {
   match {
-    kind = "resource"
     type = "databricks_job"
   }
 
@@ -24,7 +23,6 @@ rule "lakeflow-job" {
 
 rule "lakeflow-pipeline" {
   match {
-    kind = "resource"
     type = "databricks_pipeline"
   }
 

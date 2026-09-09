@@ -10,7 +10,6 @@ concept "agent-registry-binding" {
 
 rule "agent-registry-service" {
   match {
-    kind = "resource"
     type = "google_agent_registry_service"
   }
 
@@ -19,7 +18,6 @@ rule "agent-registry-service" {
 
 rule "agent-registry-binding" {
   match {
-    kind = "resource"
     type = "google_agent_registry_binding"
   }
 

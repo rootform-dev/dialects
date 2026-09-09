@@ -25,7 +25,6 @@ concept "email-security-configuration" {
 
 rule "spectrum-application" {
   match {
-    kind = "resource"
     type = "cloudflare_spectrum_application"
   }
 
@@ -45,7 +44,6 @@ rule "spectrum-application" {
 
 rule "waiting-room" {
   match {
-    kind = "resource"
     type = "cloudflare_waiting_room"
   }
 
@@ -60,7 +58,6 @@ rule "waiting-room" {
 
 rule "email-routing-settings" {
   match {
-    kind = "resource"
     type = "cloudflare_email_routing_settings"
   }
 
@@ -74,7 +71,6 @@ rule "email-routing-settings" {
 
 rule "email-routing-rule" {
   match {
-    kind = "resource"
     type = "cloudflare_email_routing_rule"
   }
 
@@ -88,7 +84,6 @@ rule "email-routing-rule" {
 
 rule "email-routing-catch-all" {
   match {
-    kind = "resource"
     type = "cloudflare_email_routing_catch_all"
   }
 
@@ -102,7 +97,6 @@ rule "email-routing-catch-all" {
 
 rule "waiting-room-event" {
   match {
-    kind = "resource"
     type = "cloudflare_waiting_room_event"
   }
 
@@ -121,7 +115,6 @@ rule "waiting-room-event" {
 
 rule "waiting-room-rules" {
   match {
-    kind = "resource"
     type = "cloudflare_waiting_room_rules"
   }
 
@@ -140,7 +133,6 @@ rule "waiting-room-rules" {
 
 rule "waiting-room-settings" {
   match {
-    kind = "resource"
     type = "cloudflare_waiting_room_settings"
   }
 
@@ -154,7 +146,6 @@ rule "waiting-room-settings" {
 
 rule "email-security-block-sender" {
   match {
-    kind = "resource"
     type = "cloudflare_email_security_block_sender"
   }
 
@@ -163,7 +154,6 @@ rule "email-security-block-sender" {
 
 rule "email-security-impersonation-registry" {
   match {
-    kind = "resource"
     type = "cloudflare_email_security_impersonation_registry"
   }
 
@@ -172,7 +162,6 @@ rule "email-security-impersonation-registry" {
 
 rule "email-security-trusted-domains" {
   match {
-    kind = "resource"
     type = "cloudflare_email_security_trusted_domains"
   }
 

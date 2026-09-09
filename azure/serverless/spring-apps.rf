@@ -6,7 +6,6 @@ concept "spring-apps-service" {
 
 rule "spring-apps-gateway" {
   match {
-    kind = "resource"
     type = "azurerm_spring_cloud_gateway"
   }
 
@@ -15,7 +14,6 @@ rule "spring-apps-gateway" {
 
 rule "spring-apps-service" {
   match {
-    kind = "resource"
     type = "azurerm_spring_cloud_service"
   }
 

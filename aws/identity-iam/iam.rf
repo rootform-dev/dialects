@@ -6,7 +6,6 @@ concept "instance-profile" {
 
 rule "iam-group" {
   match {
-    kind = "resource"
     type = "aws_iam_group"
   }
 

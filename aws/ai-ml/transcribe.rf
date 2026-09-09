@@ -6,7 +6,6 @@ concept "transcribe-language-model" {
 
 rule "transcribe-language-model" {
   match {
-    kind = "resource"
     type = "aws_transcribe_language_model"
   }
 

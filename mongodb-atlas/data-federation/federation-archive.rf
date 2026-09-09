@@ -15,7 +15,6 @@ concept "federation-configuration" {
 
 rule "federated-database-instance" {
   match {
-    kind = "resource"
     type = "mongodbatlas_federated_database_instance"
   }
 
@@ -50,7 +49,6 @@ rule "federated-database-instance" {
 
 rule "online-archive" {
   match {
-    kind = "resource"
     type = "mongodbatlas_online_archive"
   }
 
@@ -70,7 +68,6 @@ rule "online-archive" {
 
 rule "federated-query-limit" {
   match {
-    kind = "resource"
     type = "mongodbatlas_federated_query_limit"
   }
 

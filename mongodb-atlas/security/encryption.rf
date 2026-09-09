@@ -10,7 +10,6 @@ concept "security-configuration" {
 
 rule "encryption-at-rest" {
   match {
-    kind = "resource"
     type = "mongodbatlas_encryption_at_rest"
   }
 
@@ -55,7 +54,6 @@ rule "encryption-at-rest" {
 
 rule "encryption-private-endpoint" {
   match {
-    kind = "resource"
     type = "mongodbatlas_encryption_at_rest_private_endpoint"
   }
 
@@ -70,7 +68,6 @@ rule "encryption-private-endpoint" {
 
 rule "auditing" {
   match {
-    kind = "resource"
     type = "mongodbatlas_auditing"
   }
 

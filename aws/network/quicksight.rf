@@ -6,7 +6,6 @@ concept "quicksight-vpc-connection" {
 
 rule "quicksight-vpc-connection" {
   match {
-    kind = "resource"
     type = "aws_quicksight_vpc_connection"
   }
 

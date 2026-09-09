@@ -5,7 +5,6 @@ concept "gateway-configuration" {
 
 rule "config-entry-api-gateway-json" {
   match {
-    kind  = "resource"
     type  = "consul_config_entry"
     where = source.kind == "api-gateway"
   }
@@ -25,7 +24,6 @@ rule "config-entry-api-gateway-json-lookup" {
 
 rule "config-entry-file-system-certificate-json" {
   match {
-    kind  = "resource"
     type  = "consul_config_entry"
     where = source.kind == "file-system-certificate"
   }
@@ -45,7 +43,6 @@ rule "config-entry-file-system-certificate-json-lookup" {
 
 rule "config-entry-http-route-json" {
   match {
-    kind  = "resource"
     type  = "consul_config_entry"
     where = source.kind == "http-route"
   }
@@ -65,7 +62,6 @@ rule "config-entry-http-route-json-lookup" {
 
 rule "config-entry-inline-certificate-json" {
   match {
-    kind  = "resource"
     type  = "consul_config_entry"
     where = source.kind == "inline-certificate"
   }
@@ -85,7 +81,6 @@ rule "config-entry-inline-certificate-json-lookup" {
 
 rule "config-entry-tcp-route-json" {
   match {
-    kind  = "resource"
     type  = "consul_config_entry"
     where = source.kind == "tcp-route"
   }

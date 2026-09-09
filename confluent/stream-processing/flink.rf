@@ -25,7 +25,6 @@ concept "flink-configuration" {
 
 rule "flink-compute-pool" {
   match {
-    kind = "resource"
     type = "confluent_flink_compute_pool"
   }
 
@@ -40,7 +39,6 @@ rule "flink-compute-pool" {
 
 rule "flink-compute-pool-config" {
   match {
-    kind = "resource"
     type = "confluent_flink_compute_pool_config"
   }
 
@@ -49,7 +47,6 @@ rule "flink-compute-pool-config" {
 
 rule "flink-connection" {
   match {
-    kind = "resource"
     type = "confluent_flink_connection"
   }
 
@@ -75,7 +72,6 @@ rule "flink-connection" {
 
 rule "flink-materialized-table" {
   match {
-    kind = "resource"
     type = "confluent_flink_materialized_table"
   }
 
@@ -100,7 +96,6 @@ rule "flink-materialized-table" {
 
 rule "flink-statement" {
   match {
-    kind = "resource"
     type = "confluent_flink_statement"
   }
 
@@ -114,7 +109,6 @@ rule "flink-statement" {
 
 rule "flink-artifact" {
   match {
-    kind = "resource"
     type = "confluent_flink_artifact"
   }
 

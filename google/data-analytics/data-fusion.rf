@@ -5,7 +5,6 @@ concept "data-fusion-instance" {
 
 rule "data-fusion-instance" {
   match {
-    kind = "resource"
     type = "google_data_fusion_instance"
   }
 

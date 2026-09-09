@@ -6,7 +6,6 @@ concept "cosmos-account" {
 
 rule "cosmos-account" {
   match {
-    kind = "resource"
     type = "azurerm_cosmosdb_account"
   }
 
@@ -15,7 +14,6 @@ rule "cosmos-account" {
 
 rule "cosmos-cassandra-cluster" {
   match {
-    kind = "resource"
     type = "azurerm_cosmosdb_cassandra_cluster"
   }
 
@@ -24,7 +22,6 @@ rule "cosmos-cassandra-cluster" {
 
 rule "cosmos-cassandra-keyspace" {
   match {
-    kind = "resource"
     type = "azurerm_cosmosdb_cassandra_keyspace"
   }
 
@@ -33,7 +30,6 @@ rule "cosmos-cassandra-keyspace" {
 
 rule "cosmos-cassandra-table" {
   match {
-    kind = "resource"
     type = "azurerm_cosmosdb_cassandra_table"
   }
 
@@ -42,7 +38,6 @@ rule "cosmos-cassandra-table" {
 
 rule "cosmos-dedicated-gateway" {
   match {
-    kind = "resource"
     type = "azurerm_cosmosdb_sql_dedicated_gateway"
   }
 
@@ -51,7 +46,6 @@ rule "cosmos-dedicated-gateway" {
 
 rule "cosmos-gremlin-database" {
   match {
-    kind = "resource"
     type = "azurerm_cosmosdb_gremlin_database"
   }
 
@@ -60,7 +54,6 @@ rule "cosmos-gremlin-database" {
 
 rule "cosmos-gremlin-graph" {
   match {
-    kind = "resource"
     type = "azurerm_cosmosdb_gremlin_graph"
   }
 
@@ -69,7 +62,6 @@ rule "cosmos-gremlin-graph" {
 
 rule "cosmos-mongo-collection" {
   match {
-    kind = "resource"
     type = "azurerm_cosmosdb_mongo_collection"
   }
 
@@ -78,7 +70,6 @@ rule "cosmos-mongo-collection" {
 
 rule "cosmos-mongo-database" {
   match {
-    kind = "resource"
     type = "azurerm_cosmosdb_mongo_database"
   }
 
@@ -87,7 +78,6 @@ rule "cosmos-mongo-database" {
 
 rule "cosmos-postgresql-cluster" {
   match {
-    kind = "resource"
     type = "azurerm_cosmosdb_postgresql_cluster"
   }
 
@@ -96,7 +86,6 @@ rule "cosmos-postgresql-cluster" {
 
 rule "cosmos-sql-container" {
   match {
-    kind = "resource"
     type = "azurerm_cosmosdb_sql_container"
   }
 
@@ -105,7 +94,6 @@ rule "cosmos-sql-container" {
 
 rule "cosmos-sql-database" {
   match {
-    kind = "resource"
     type = "azurerm_cosmosdb_sql_database"
   }
 

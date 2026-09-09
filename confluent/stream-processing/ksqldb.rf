@@ -5,7 +5,6 @@ concept "ksqldb-cluster" {
 
 rule "ksqldb-cluster" {
   match {
-    kind = "resource"
     type = "confluent_ksql_cluster"
   }
 

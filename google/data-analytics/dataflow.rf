@@ -5,7 +5,6 @@ concept "dataflow-job" {
 
 rule "dataflow-job" {
   match {
-    kind = "resource"
     type = "google_dataflow_job"
   }
 
@@ -14,7 +13,6 @@ rule "dataflow-job" {
 
 rule "dataflow-flex-template-job" {
   match {
-    kind = "resource"
     type = "google_dataflow_flex_template_job"
   }
 

@@ -10,7 +10,6 @@ concept "database-migration-connection" {
 
 rule "database-migration-job" {
   match {
-    kind = "resource"
     type = "google_database_migration_service_migration_job"
   }
 
@@ -19,7 +18,6 @@ rule "database-migration-job" {
 
 rule "database-migration-connection-profile" {
   match {
-    kind = "resource"
     type = "google_database_migration_service_connection_profile"
   }
 
@@ -28,7 +26,6 @@ rule "database-migration-connection-profile" {
 
 rule "database-migration-private-connection" {
   match {
-    kind = "resource"
     type = "google_database_migration_service_private_connection"
   }
 

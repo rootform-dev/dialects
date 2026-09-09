@@ -11,7 +11,6 @@ concept "s3tables-table-bucket" {
 
 rule "s3tables-table" {
   match {
-    kind = "resource"
     type = "aws_s3tables_table"
   }
 
@@ -20,7 +19,6 @@ rule "s3tables-table" {
 
 rule "s3tables-table-bucket" {
   match {
-    kind = "resource"
     type = "aws_s3tables_table_bucket"
   }
 

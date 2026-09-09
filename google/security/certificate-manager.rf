@@ -10,7 +10,6 @@ concept "managed-certificate" {
 
 rule "certificate-map" {
   match {
-    kind = "resource"
     type = "google_certificate_manager_certificate_map"
   }
 
@@ -19,7 +18,6 @@ rule "certificate-map" {
 
 rule "certificate-manager-certificate" {
   match {
-    kind = "resource"
     type = "google_certificate_manager_certificate"
   }
 

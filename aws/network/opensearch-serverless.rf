@@ -6,7 +6,6 @@ concept "opensearchserverless-vpc-endpoint" {
 
 rule "opensearchserverless-vpc-endpoint" {
   match {
-    kind = "resource"
     type = "aws_opensearchserverless_vpc_endpoint"
   }
 
