@@ -1,0 +1,13 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-09-09",
+  "provider": {
+    "source": "registry.terraform.io/hashicorp/kubernetes",
+    "version": "2.38.0"
+  },
+  "coverage": "partial",
+  "scope": "Showcase additions plus directly touched Deployment, StatefulSet, ServiceAccount, HPA, Namespace, and NetworkPolicy rules.",
+  "implemented_candidates": ["K8S-04", "K8S-07", "K8S-08"],
+  "blocked_candidates": ["K8S-01", "K8S-02", "K8S-03", "K8S-05", "K8S-06"],
+  "claim_excluded": "No exhaustive Kubernetes provider coverage claim."
+}

@@ -37,6 +37,11 @@ rule "kubernetes-deployment" {
       strategy = "exact"
     }
   }
+
+  relation "runs-as" {
+    to  = concept.service-account
+    via = source.spec[0].template[0].spec[0].service_account_name
+  }
 }
 
 rule "kubernetes-stateful-set" {
@@ -62,6 +67,11 @@ rule "kubernetes-stateful-set" {
       by       = target.metadata[0].name
       strategy = "exact"
     }
+  }
+
+  relation "runs-as" {
+    to  = concept.service-account
+    via = source.spec[0].template[0].spec[0].service_account_name
   }
 }
 

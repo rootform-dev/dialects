@@ -1,5 +1,9 @@
 {
   "format_version": "1",
+  "showcase_relations": {
+    "delivers-to": "A messaging/eventing source pushes messages or events to an explicitly referenced destination. Event Grid subscription to handler (AZ-08); Pub/Sub push subscription to Cloud Run service (GCP-05); Pub/Sub subscription to dead-letter topic (GCP-14).",
+    "observed-by": "Source sends telemetry to an explicitly referenced observability resource."
+  },
   "verified_date": "2026-08-29",
   "core_source_sha256": "sha256:1a39c40bc7521a4367b5b1f450504cd61f5dd351045dca10c3c862d6e854187d",
   "policy": {

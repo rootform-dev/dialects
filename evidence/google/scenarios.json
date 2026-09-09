@@ -1,5 +1,25 @@
 {
   "format_version": "1",
+  "showcase_toolchain": {
+    "identity": "rootform 0.1.1, local engine build",
+    "binary_sha256": "sha256:9a53cb412297748664247cb6f2f3943d977cebfc46335816e38cceaeb0643993",
+    "lock_command": "$ROOTFORM_BIN lock dialects .",
+    "golden_command": "DIALECTS_ROOT=$(pwd)\nGOLDEN_WORKDIR=${GOLDEN_WORKDIR:?}\nexport ROOTFORM_HOME=$GOLDEN_WORKDIR/home\nmkdir -p $GOLDEN_WORKDIR/vendor-$(date +%s); V=$(ls -d $GOLDEN_WORKDIR/vendor-* | tail -1)\nfor d in $(python3 -c \"import json;print(' '.join(x['name'] for x in json.load(open('$DIALECTS_ROOT/dialects.json'))['dialects']))\"); do cp -R $DIALECTS_ROOT/$d $V/$d; done\nmkdir -p $GOLDEN_WORKDIR/fx/<name>/.rootform && cp $DIALECTS_ROOT/fixtures/slice/<name>/*.tf $GOLDEN_WORKDIR/fx/<name>/ && cp -R $V $GOLDEN_WORKDIR/fx/<name>/.rootform/dialects\ncd $GOLDEN_WORKDIR && { $ROOTFORM_BIN build fx/<name> --offline --no-input; printf '\\n'; } > $DIALECTS_ROOT/fixtures/slice/<name>/architecture.golden",
+    "golden_generator": "Regenerated goldens record generator.version 0.1.1; rootform test accepts that candidate version while dialect versions remain 0.1.0.",
+    "test_commands": [
+      "$ROOTFORM_BIN test ./fixtures --run slice/google --format json",
+      "$ROOTFORM_BIN test ./fixtures --run slice/cloud-sql --format json",
+      "$ROOTFORM_BIN test ./fixtures --run slice/gke --format json"
+    ]
+  },
+  "showcase_negative_assertions": [
+    "google-cloud-run literal and unknown references produce no routes-to, runs-as, or ownership facts",
+    "google-cloud-run provider-default project produces no ownership fact",
+    "google-pubsub literal and unknown endpoints and dead-letter topics produce no delivers-to facts",
+    "google-pubsub literal, unknown, and provider-default projects produce no ownership facts",
+    "google-memorystore literal and unknown networks produce no network facts",
+    "google-memorystore literal, unknown, and provider-default projects produce no ownership facts"
+  ],
   "scenarios": [
     {
       "id": "vpc-subnet-gke",

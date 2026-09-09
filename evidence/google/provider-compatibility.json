@@ -1,5 +1,17 @@
 {
   "format_version": "1",
+  "showcase_semantics": {
+    "verified_version": "8.0.0",
+    "schema_sha256": "sha256:e7b20e0e21683f191033c09dbc6cca77df2a8fc0f3b62604490ff8d8a06dccf8",
+    "bounded_blocks": {
+      "google_cloud_run_v2_service.template": 1,
+      "google_cloud_run_v2_service.template.vpc_access": 1,
+      "google_vpc_access_connector.subnet": 1,
+      "google_pubsub_subscription.push_config": 1,
+      "google_pubsub_subscription.dead_letter_policy": 1
+    },
+    "unbounded_blocks": ["google_redis_cluster.psc_configs"]
+  },
   "dialect": {
     "name": "google",
     "version": "0.1.0"

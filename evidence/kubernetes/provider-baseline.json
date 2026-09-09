@@ -1,0 +1,15 @@
+{
+  "format_version": "1",
+  "provider": {
+    "source": "registry.terraform.io/hashicorp/kubernetes",
+    "version": "2.38.0"
+  },
+  "schema": {
+    "client": "Terraform provider schema RPC",
+    "command": "TF_CLI_CONFIG_FILE=<empty-config> terraform providers schema -json",
+    "sha256": "sha256:26adeadda7a25eaba5d6d4517770605a43f72f930bb216d32cd96549ba7eb38f"
+  },
+  "dialect_constraint": ">= 2.0.0, < 3.0.0",
+  "coverage": "partial: showcase rules and directly touched existing rules",
+  "verified_date": "2026-09-09"
+}

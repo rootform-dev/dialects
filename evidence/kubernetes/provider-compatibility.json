@@ -1,0 +1,29 @@
+{
+  "format_version": "1",
+  "provider": "registry.terraform.io/hashicorp/kubernetes",
+  "pinned_version": "2.38.0",
+  "dialect_constraint": ">= 2.0.0, < 3.0.0",
+  "result": "partial-showcase-validation",
+  "entries": [
+    {
+      "rule_id": "kubernetes/kubernetes-deployment",
+      "terraform_type": "kubernetes_deployment_v1",
+      "paths": ["metadata[0].namespace", "spec[0].template[0].spec[0].service_account_name"]
+    },
+    {
+      "rule_id": "kubernetes/kubernetes-stateful-set",
+      "terraform_type": "kubernetes_stateful_set_v1",
+      "paths": ["metadata[0].namespace", "spec[0].template[0].spec[0].service_account_name"]
+    },
+    {
+      "rule_id": "kubernetes/kubernetes-network-policy",
+      "terraform_type": "kubernetes_network_policy_v1",
+      "paths": ["metadata[0].namespace", "provider.host"]
+    },
+    {
+      "rule_id": "kubernetes/kubernetes-namespace",
+      "terraform_type": "kubernetes_namespace_v1",
+      "paths": ["provider.host"]
+    }
+  ]
+}

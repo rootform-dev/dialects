@@ -1,5 +1,23 @@
 {
   "format_version": "1",
+  "showcase_toolchain": {
+    "identity": "rootform 0.1.1, local engine build",
+    "binary_sha256": "sha256:9a53cb412297748664247cb6f2f3943d977cebfc46335816e38cceaeb0643993",
+    "lock_command": "$ROOTFORM_BIN lock dialects .",
+    "golden_command": "DIALECTS_ROOT=$(pwd)\nGOLDEN_WORKDIR=${GOLDEN_WORKDIR:?}\nexport ROOTFORM_HOME=$GOLDEN_WORKDIR/home\nmkdir -p $GOLDEN_WORKDIR/vendor-$(date +%s); V=$(ls -d $GOLDEN_WORKDIR/vendor-* | tail -1)\nfor d in $(python3 -c \"import json;print(' '.join(x['name'] for x in json.load(open('$DIALECTS_ROOT/dialects.json'))['dialects']))\"); do cp -R $DIALECTS_ROOT/$d $V/$d; done\nmkdir -p $GOLDEN_WORKDIR/fx/<name>/.rootform && cp $DIALECTS_ROOT/fixtures/slice/<name>/*.tf $GOLDEN_WORKDIR/fx/<name>/ && cp -R $V $GOLDEN_WORKDIR/fx/<name>/.rootform/dialects\ncd $GOLDEN_WORKDIR && { $ROOTFORM_BIN build fx/<name> --offline --no-input; printf '\\n'; } > $DIALECTS_ROOT/fixtures/slice/<name>/architecture.golden",
+    "golden_generator": "Regenerated goldens record generator.version 0.1.1; rootform test accepts that candidate version while dialect versions remain 0.1.0.",
+    "test_command": "$ROOTFORM_BIN test ./fixtures --run slice/azure --format json"
+  },
+  "showcase_negative_assertions": [
+    "AKS literal and unknown workspace IDs produce no observed-by relation",
+    "Service Bus literal and unknown namespace/topic IDs produce no ownership or subscribes-to fact",
+    "Event Grid literal and unknown handler IDs produce no delivers-to relation",
+    "Web workload literal and unknown references produce no ownership, network, runtime, or observed-by fact",
+    "Container Apps literal and unknown references produce no ownership, network, runtime, or observed-by fact",
+    "Compute literal and unknown resource-group names produce no ownership context",
+    "VNet peering literal and unknown references produce no network context",
+    "NAT association unknown references produce no contribution"
+  ],
   "scenarios": [
     {
       "id": "release-family-coverage",

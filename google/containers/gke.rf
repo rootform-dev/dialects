@@ -17,6 +17,12 @@ rule "gke-cluster" {
     to  = concept.core.subnet
     via = source.subnetwork
   }
+
+  context {
+    as  = context.core.ownership
+    to  = concept.google-cloud-project
+    via = source.project
+  }
 }
 
 rule "gke-node-pool" {

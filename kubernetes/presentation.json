@@ -5,6 +5,7 @@
     "kubernetes-deployment": "kubernetes/deployment",
     "kubernetes-ingress": "kubernetes/ingress",
     "kubernetes-namespace": "kubernetes/namespace",
+    "kubernetes-network-policy": "kubernetes/network-policy",
     "kubernetes-service": "kubernetes/service",
     "kubernetes-service-account": "kubernetes/service-account",
     "kubernetes-stateful-set": "kubernetes/stateful-set"
@@ -14,6 +15,7 @@
     "deployment": "kubernetes/deployment",
     "ingress": "kubernetes/ingress",
     "namespace": "kubernetes/namespace",
+    "network-policy": "kubernetes/network-policy",
     "service": "kubernetes/service",
     "service-account": "kubernetes/service-account",
     "stateful-set": "kubernetes/stateful-set"

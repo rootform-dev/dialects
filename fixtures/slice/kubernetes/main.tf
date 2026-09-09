@@ -16,6 +16,14 @@ provider "google" {
   region  = "us-central1"
 }
 
+variable "unknown_service_account_name" {
+  type = string
+}
+
+variable "unknown_namespace" {
+  type = string
+}
+
 resource "google_compute_network" "vpc" {
   name = "demo-vpc"
 }
@@ -46,6 +54,20 @@ resource "kubernetes_service_account_v1" "app" {
   }
 }
 
+resource "kubernetes_service_account_v1" "duplicate_a" {
+  metadata {
+    name      = "duplicate"
+    namespace = kubernetes_namespace_v1.app.metadata[0].name
+  }
+}
+
+resource "kubernetes_service_account_v1" "duplicate_b" {
+  metadata {
+    name      = "duplicate"
+    namespace = kubernetes_namespace_v1.app.metadata[0].name
+  }
+}
+
 resource "kubernetes_deployment_v1" "app" {
   metadata {
     name      = "app"
@@ -69,6 +91,8 @@ resource "kubernetes_deployment_v1" "app" {
       }
 
       spec {
+        service_account_name = kubernetes_service_account_v1.app.metadata[0].name
+
         container {
           name  = "app"
           image = "registry.example.com/app:0.1.0"
@@ -101,6 +125,8 @@ resource "kubernetes_stateful_set_v1" "db" {
       }
 
       spec {
+        service_account_name = kubernetes_service_account_v1.app.metadata[0].name
+
         container {
           name  = "db"
           image = "registry.example.com/db:0.1.0"
@@ -216,5 +242,142 @@ resource "kubernetes_horizontal_pod_autoscaler_v1" "app" {
 
     min_replicas = 1
     max_replicas = 5
+  }
+}
+
+resource "kubernetes_deployment_v1" "literal_service_account" {
+  metadata {
+    name      = "literal-service-account"
+    namespace = kubernetes_namespace_v1.app.metadata[0].name
+  }
+
+  spec {
+    selector {
+      match_labels = { app = "literal-service-account" }
+    }
+
+    template {
+      metadata {
+        labels = { app = "literal-service-account" }
+      }
+
+      spec {
+        service_account_name = "app"
+        container {
+          name  = "app"
+          image = "registry.example.com/app:0.1.0"
+        }
+      }
+    }
+  }
+}
+
+resource "kubernetes_deployment_v1" "unknown_service_account" {
+  metadata {
+    name      = "unknown-service-account"
+    namespace = kubernetes_namespace_v1.app.metadata[0].name
+  }
+
+  spec {
+    selector {
+      match_labels = { app = "unknown-service-account" }
+    }
+
+    template {
+      metadata {
+        labels = { app = "unknown-service-account" }
+      }
+
+      spec {
+        service_account_name = var.unknown_service_account_name
+        container {
+          name  = "app"
+          image = "registry.example.com/app:0.1.0"
+        }
+      }
+    }
+  }
+}
+
+resource "kubernetes_deployment_v1" "ambiguous_service_account" {
+  metadata {
+    name      = "ambiguous-service-account"
+    namespace = kubernetes_namespace_v1.app.metadata[0].name
+  }
+
+  spec {
+    selector {
+      match_labels = { app = "ambiguous-service-account" }
+    }
+
+    template {
+      metadata {
+        labels = { app = "ambiguous-service-account" }
+      }
+
+      spec {
+        service_account_name = "duplicate"
+        container {
+          name  = "app"
+          image = "registry.example.com/app:0.1.0"
+        }
+      }
+    }
+  }
+}
+
+resource "kubernetes_namespace_v1" "duplicate_a" {
+  metadata { name = "duplicate" }
+}
+
+resource "kubernetes_namespace_v1" "duplicate_b" {
+  metadata { name = "duplicate" }
+}
+
+resource "kubernetes_network_policy_v1" "app" {
+  metadata {
+    name      = "app"
+    namespace = kubernetes_namespace_v1.app.metadata[0].name
+  }
+
+  spec {
+    pod_selector {}
+    policy_types = ["Ingress"]
+  }
+}
+
+resource "kubernetes_network_policy_v1" "literal" {
+  metadata {
+    name      = "literal"
+    namespace = "app"
+  }
+
+  spec {
+    pod_selector {}
+    policy_types = ["Ingress"]
+  }
+}
+
+resource "kubernetes_network_policy_v1" "unknown" {
+  metadata {
+    name      = "unknown"
+    namespace = var.unknown_namespace
+  }
+
+  spec {
+    pod_selector {}
+    policy_types = ["Ingress"]
+  }
+}
+
+resource "kubernetes_network_policy_v1" "ambiguous" {
+  metadata {
+    name      = "ambiguous"
+    namespace = "duplicate"
+  }
+
+  spec {
+    pod_selector {}
+    policy_types = ["Ingress"]
   }
 }

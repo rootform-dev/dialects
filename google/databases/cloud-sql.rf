@@ -10,4 +10,10 @@ rule "cloud-sql-instance" {
     to  = concept.core.virtual-network
     via = source.settings[0].ip_configuration[0].private_network
   }
+
+  context {
+    as  = context.core.ownership
+    to  = concept.google-cloud-project
+    via = source.project
+  }
 }

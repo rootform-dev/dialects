@@ -1,5 +1,13 @@
 {
   "format_version": "1",
+  "showcase_delta": {
+    "verified_date": "2026-09-09",
+    "relations_added": ["delivers-to", "observed-by", "subscribes-to"],
+    "contexts_added": ["core/network", "core/ownership", "core/runtime"],
+    "contributions_asserted": ["private DNS link to zone and VNet", "NAT association to subnet and NAT gateway"],
+    "implemented_candidates": 15,
+    "blocked_candidates": 1
+  },
   "matrix_sha256": "sha256:831f73d982a020a8b6b746ac98689c5b8cb5fce42f4de1b77722e87571eb85ce",
   "total_rows": 1970,
   "by_inventory": {

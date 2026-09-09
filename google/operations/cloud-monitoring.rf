@@ -20,6 +20,12 @@ rule "cloud-monitoring-alerting-policy" {
   }
 
   as = concept.cloud-monitoring-alerting-policy
+
+  context {
+    as  = context.core.ownership
+    to  = concept.google-cloud-project
+    via = source.project
+  }
 }
 
 rule "cloud-monitoring-service" {
@@ -29,6 +35,12 @@ rule "cloud-monitoring-service" {
   }
 
   as = concept.cloud-monitoring-service
+
+  context {
+    as  = context.core.ownership
+    to  = concept.google-cloud-project
+    via = source.project
+  }
 }
 
 rule "cloud-monitoring-slo" {
@@ -42,5 +54,11 @@ rule "cloud-monitoring-slo" {
   contribution {
     to  = concept.cloud-monitoring-service
     via = source.service
+  }
+
+  context {
+    as  = context.core.ownership
+    to  = concept.google-cloud-project
+    via = source.project
   }
 }

@@ -1,0 +1,38 @@
+{
+  "format_version": "1",
+  "toolchain": {
+    "identity": "rootform 0.1.1, local engine build",
+    "binary_sha256": "sha256:9a53cb412297748664247cb6f2f3943d977cebfc46335816e38cceaeb0643993",
+    "lock_command": "$ROOTFORM_BIN lock dialects .",
+    "golden_command": "DIALECTS_ROOT=$(pwd)\nGOLDEN_WORKDIR=${GOLDEN_WORKDIR:?}\nexport ROOTFORM_HOME=$GOLDEN_WORKDIR/home\nmkdir -p $GOLDEN_WORKDIR/vendor-$(date +%s); V=$(ls -d $GOLDEN_WORKDIR/vendor-* | tail -1)\nfor d in $(python3 -c \"import json;print(' '.join(x['name'] for x in json.load(open('$DIALECTS_ROOT/dialects.json'))['dialects']))\"); do cp -R $DIALECTS_ROOT/$d $V/$d; done\nmkdir -p $GOLDEN_WORKDIR/fx/<name>/.rootform && cp $DIALECTS_ROOT/fixtures/slice/<name>/*.tf $GOLDEN_WORKDIR/fx/<name>/ && cp -R $V $GOLDEN_WORKDIR/fx/<name>/.rootform/dialects\ncd $GOLDEN_WORKDIR && { $ROOTFORM_BIN build fx/<name> --offline --no-input; printf '\\n'; } > $DIALECTS_ROOT/fixtures/slice/<name>/architecture.golden",
+    "fixture_command": "ROOTFORM_HOME=${FRESH_ROOTFORM_HOME:?} $ROOTFORM_BIN test ./fixtures --run slice/kubernetes --format json",
+    "golden_generator": "Regenerated goldens record generator.version 0.1.1; rootform test accepts that candidate version while dialect versions remain 0.1.0.",
+    "verification_command": "ROOTFORM_BIN=$ROOTFORM_BIN bun scripts/verify.ts --rootform-version 0.1.1"
+  },
+  "scenarios": [
+    {
+      "id": "kubernetes-showcase-semantics",
+      "fixture": "fixtures/slice/kubernetes",
+      "required_rules": [
+        "kubernetes/kubernetes-deployment",
+        "kubernetes/kubernetes-stateful-set",
+        "kubernetes/kubernetes-network-policy",
+        "kubernetes/kubernetes-namespace"
+      ],
+      "minimum": {
+        "runs_as_relations": 2,
+        "network_policy_ownership_contexts": 1,
+        "network_policy_runtime_contexts": 4,
+        "namespace_runtime_contexts": 3
+      },
+      "negative_assertions": [
+        "literal_service_account has no runs-as relation",
+        "unknown_service_account has no runs-as relation",
+        "ambiguous_service_account has no runs-as relation",
+        "literal network policy has no ownership context",
+        "unknown network policy has no ownership context",
+        "ambiguous network policy has no ownership context"
+      ]
+    }
+  ]
+}

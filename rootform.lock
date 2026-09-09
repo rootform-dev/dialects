@@ -17,7 +17,7 @@
     {
       "name": "azure",
       "version": "0.1.0",
-      "digest": "sha256:a763b57620db538a0c2e9a5eb39b2ab0ac6176c8f874a336e9bc287c8a8d291c",
+      "digest": "sha256:36d37a4f9d263249225dac3e9226492391ea1330b16f9a6b07e567368d39d64d",
       "presentation_digest": "sha256:d371151afc2e502c5cfdfe4a57ae2fbd52221838e69f26089f21dce3bff0fdf9"
     },
     {
@@ -59,7 +59,7 @@
     {
       "name": "google",
       "version": "0.1.0",
-      "digest": "sha256:bf487398f5f36b6cfea69c32a916446814955c97eb2027cb0d82ed7cebc9fce3",
+      "digest": "sha256:718c16c2a426e4247f55b1831eff5e7b7d58767904b9a3a2fa5fd067acdb2f63",
       "presentation_digest": "sha256:caf31531224f2f5c63548c94733b2a32059ffef1604c22f10012b6990bcb944e"
     },
     {
@@ -83,8 +83,8 @@
     {
       "name": "kubernetes",
       "version": "0.1.0",
-      "digest": "sha256:1f0584dc88d9219ac60ff4a22261489220ec21d017be4fff4195e544ece3b99c",
-      "presentation_digest": "sha256:0f8be0c5ddaa1708018206d08f49c17e31390a15551823562598bab2a323d829"
+      "digest": "sha256:9cf31ad295fd663f5ef98d17cf45a366f183d30c8b7cec7f8048e672334b5454",
+      "presentation_digest": "sha256:d1ce9b767e71c58abc5d69aaa1d9e52ebf6e1d86edc60d2e8eeb23b6fb7edc6e"
     },
     {
       "name": "mongodb-atlas",

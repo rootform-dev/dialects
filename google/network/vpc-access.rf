@@ -16,4 +16,10 @@ rule "serverless-vpc-access-connector" {
     to  = concept.core.virtual-network
     via = source.network
   }
+
+  context {
+    as  = context.core.network
+    to  = concept.core.subnet
+    via = source.subnet[0].name
+  }
 }

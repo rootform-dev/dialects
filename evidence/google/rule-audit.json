@@ -1,5 +1,69 @@
 {
   "format_version": "1",
+  "showcase_semantics": [
+    {
+      "candidate": "GCP-01",
+      "rule": "google/cloud-run-service",
+      "path": "template[0].vpc_access[0].connector",
+      "fact": "routes-to google/serverless-vpc-access-connector",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/google/8.0.0/docs/resources/cloud_run_v2_service",
+      "quote": "VPC Access configuration to use for this Task.",
+      "schema_bounds": ["template max_items=1", "template.vpc_access max_items=1"]
+    },
+    {
+      "candidate": "GCP-02",
+      "rule": "google/serverless-vpc-access-connector",
+      "path": "subnet[0].name",
+      "fact": "core/network to core/subnet",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/google/8.0.0/docs/resources/vpc_access_connector",
+      "quote": "Subnet name (relative, not fully qualified).",
+      "schema_bounds": ["subnet max_items=1"]
+    },
+    {
+      "candidate": "GCP-05",
+      "rule": "google/pubsub-subscription",
+      "path": "push_config[0].push_endpoint",
+      "fact": "delivers-to google/cloud-run-service",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/google/8.0.0/docs/resources/pubsub_subscription",
+      "quote": "A URL locating the endpoint to which messages should be pushed.",
+      "schema_bounds": ["push_config max_items=1"]
+    },
+    {
+      "candidate": "GCP-09",
+      "rules": ["google/memorystore-redis-instance", "google/memorystore-memcached-instance"],
+      "path": "authorized_network",
+      "fact": "core/network to core/virtual-network",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/google/8.0.0/docs/resources/redis_instance",
+      "quote": "The full name of the Google Compute Engine network to which the instance is connected.",
+      "excluded_path": "google_redis_cluster.psc_configs[0].network: psc_configs has no max_items bound"
+    },
+    {
+      "candidate": "GCP-10",
+      "rule": "google/cloud-run-service",
+      "path": "template[0].service_account",
+      "fact": "runs-as core/service-identity",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/google/8.0.0/docs/resources/cloud_run_v2_service",
+      "quote": "The service account represents the identity of the running revision.",
+      "schema_bounds": ["template max_items=1"]
+    },
+    {
+      "candidate": "GCP-13",
+      "rules": ["google/cloud-run-service", "google/cloud-sql-instance", "google/pubsub-topic", "google/pubsub-subscription", "google/gke-cluster", "google/memorystore-redis-instance", "google/memorystore-redis-cluster", "google/memorystore-memcached-instance", "google/memorystore-instance", "google/secret-manager-secret", "google/secret-manager-regional-secret", "google/iam-service-account", "google/cloud-monitoring-alerting-policy", "google/cloud-monitoring-service", "google/cloud-monitoring-slo"],
+      "path": "project",
+      "fact": "core/ownership to google/google-cloud-project",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/google/8.0.0/docs/resources/cloud_run_v2_service",
+      "quote": "The ID of the project in which the resource belongs."
+    },
+    {
+      "candidate": "GCP-14",
+      "rule": "google/pubsub-subscription",
+      "path": "dead_letter_policy[0].dead_letter_topic",
+      "fact": "delivers-to core/message-topic",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/google/8.0.0/docs/resources/pubsub_subscription",
+      "quote": "The name of the topic to which dead letter messages should be published.",
+      "schema_bounds": ["dead_letter_policy max_items=1"]
+    }
+  ],
   "verified_date": "2026-08-29",
   "prior_dialect_version": "0.5.0",
   "current_dialect_version": "0.1.0",

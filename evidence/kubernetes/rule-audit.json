@@ -1,0 +1,60 @@
+{
+  "format_version": "1",
+  "baseline": "hashicorp/kubernetes@2.38.0",
+  "entries": [
+    {
+      "rule_id": "kubernetes/kubernetes-deployment",
+      "terraform_type": "kubernetes_deployment_v1",
+      "fact": "runs-as",
+      "source_path": "spec[0].template[0].spec[0].service_account_name",
+      "target_concept": "kubernetes/service-account",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/kubernetes/2.38.0/docs/resources/deployment_v1",
+      "quote": "ServiceAccountName is the name of the ServiceAccount to use to run this pod.",
+      "schema_bounds": [
+        "spec max_items=1",
+        "spec.template max_items=1",
+        "spec.template.spec max_items=1"
+      ]
+    },
+    {
+      "rule_id": "kubernetes/kubernetes-stateful-set",
+      "terraform_type": "kubernetes_stateful_set_v1",
+      "fact": "runs-as",
+      "source_path": "spec[0].template[0].spec[0].service_account_name",
+      "target_concept": "kubernetes/service-account",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/kubernetes/2.38.0/docs/resources/stateful_set_v1",
+      "quote": "ServiceAccountName is the name of the ServiceAccount to use to run this pod.",
+      "schema_bounds": [
+        "spec max_items=1",
+        "spec.template max_items=1",
+        "spec.template.spec max_items=1"
+      ]
+    },
+    {
+      "rule_id": "kubernetes/kubernetes-network-policy",
+      "terraform_type": "kubernetes_network_policy_v1",
+      "facts": ["core/ownership", "core/runtime"],
+      "source_paths": ["metadata[0].namespace", "provider.host"],
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/kubernetes/2.38.0/docs/resources/network_policy_v1",
+      "quote": "Namespace defines the space within which name of the network policy must be unique.",
+      "schema_bounds": ["metadata max_items=1"]
+    },
+    {
+      "rule_id": "kubernetes/kubernetes-namespace",
+      "terraform_type": "kubernetes_namespace_v1",
+      "fact": "core/runtime",
+      "source_path": "provider.host",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/kubernetes/2.38.0/docs",
+      "quote": "The hostname (in form of URI) of Kubernetes master."
+    },
+    {
+      "candidate": "K8S-06",
+      "terraform_type": "kubernetes_horizontal_pod_autoscaler_v1",
+      "source_path": "spec[0].scale_target_ref[0].name",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/kubernetes/2.38.0/docs/resources/horizontal_pod_autoscaler_v1",
+      "quote": "Reference to scaled resource.",
+      "schema_bounds": ["spec max_items=1", "spec.scale_target_ref max_items=1"],
+      "decision": "blocked: target concept depends on scale_target_ref.kind"
+    }
+  ]
+}

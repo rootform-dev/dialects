@@ -22,6 +22,11 @@ rule "aks-cluster" {
       strategy = "exact"
     }
   }
+
+  relation "observed-by" {
+    to  = concept.log-analytics-workspace
+    via = source.oms_agent[0].log_analytics_workspace_id
+  }
 }
 
 rule "aks-node-pool" {

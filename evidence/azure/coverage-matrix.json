@@ -1,5 +1,21 @@
 {
   "format_version": "1",
+  "showcase_semantics": {
+    "policy": "direct reference only; literal equivalents intentionally unresolved",
+    "implemented": ["AZ-02", "AZ-06", "AZ-07", "AZ-08", "AZ-10", "AZ-11", "AZ-14", "AZ-15", "AZ-16", "AZ-17", "AZ-18", "AZ-19", "AZ-20", "AZ-23", "AZ-24"],
+    "blocked": {
+      "AZ-01": "one source path can target many concepts; current fact resolution hard-fails mismatched target concepts"
+    },
+    "fixtures": [
+      "fixtures/slice/azure-aks",
+      "fixtures/slice/azure-network",
+      "fixtures/slice/azure-service-bus",
+      "fixtures/slice/azure-event-grid",
+      "fixtures/slice/azure-observability",
+      "fixtures/slice/azure-container-apps",
+      "fixtures/slice/azure-compute-ownership"
+    ]
+  },
   "method": {
     "inventory": "exhaustive",
     "semantic_research": "targeted-deep-research-for-candidates-and-composition-members",
