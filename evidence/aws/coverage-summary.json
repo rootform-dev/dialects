@@ -1,6 +1,5 @@
 {
   "format_version": "1",
-  "matrix_sha256": "sha256:f982f78b94fd6bc4de0276e8c2bd2f1943d6b554df9371447903975d6543b439",
   "total_rows": 3380,
   "by_inventory": {
     "provider_constructs": 3127,

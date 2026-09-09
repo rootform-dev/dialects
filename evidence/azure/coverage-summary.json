@@ -20,7 +20,6 @@
     "rules_added": 7,
     "refused_candidates": 3
   },
-  "matrix_sha256": "sha256:831f73d982a020a8b6b746ac98689c5b8cb5fce42f4de1b77722e87571eb85ce",
   "total_rows": 1970,
   "by_inventory": {
     "provider_constructs": 1773,

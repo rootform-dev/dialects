@@ -8,7 +8,6 @@
     "implemented_candidates": 9,
     "narrowed_candidates": 1
   },
-  "matrix_sha256": "sha256:88e9a5348ab54ed9d506d294ce047490d504dda161b2f2db2da0044ce45d1738",
   "total_rows": 3055,
   "by_inventory": {
     "provider_constructs": 2950,
