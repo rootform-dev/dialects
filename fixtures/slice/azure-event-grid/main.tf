@@ -67,3 +67,63 @@ resource "azurerm_eventgrid_event_subscription" "unknown" {
   scope                = azurerm_resource_group.platform.id
   service_bus_queue_id = var.unknown_id
 }
+
+resource "azurerm_eventgrid_system_topic" "storage" {
+  name                = "storage"
+  resource_group_name = azurerm_resource_group.platform.name
+  location            = azurerm_resource_group.platform.location
+  source_resource_id  = azurerm_storage_account.handler.id
+  topic_type          = "Microsoft.Storage.StorageAccounts"
+}
+
+resource "azurerm_eventgrid_system_topic_event_subscription" "eventhub" {
+  name                = "eventhub"
+  system_topic        = azurerm_eventgrid_system_topic.storage.name
+  resource_group_name = azurerm_resource_group.platform.name
+  eventhub_id         = azurerm_eventhub.handler.id
+}
+
+resource "azurerm_eventgrid_system_topic_event_subscription" "queue" {
+  name                 = "queue"
+  system_topic         = azurerm_eventgrid_system_topic.storage.name
+  resource_group_name  = azurerm_resource_group.platform.name
+  service_bus_queue_id = azurerm_servicebus_queue.handler.id
+}
+
+resource "azurerm_eventgrid_system_topic_event_subscription" "topic" {
+  name                 = "topic"
+  system_topic         = azurerm_eventgrid_system_topic.storage.name
+  resource_group_name  = azurerm_resource_group.platform.name
+  service_bus_topic_id = azurerm_servicebus_topic.handler.id
+}
+
+resource "azurerm_eventgrid_system_topic_event_subscription" "function" {
+  name                = "function"
+  system_topic        = azurerm_eventgrid_system_topic.storage.name
+  resource_group_name = azurerm_resource_group.platform.name
+  azure_function_endpoint { function_id = azurerm_linux_function_app.handler.id }
+}
+
+resource "azurerm_eventgrid_system_topic_event_subscription" "storage" {
+  name                = "storage"
+  system_topic        = azurerm_eventgrid_system_topic.storage.name
+  resource_group_name = azurerm_resource_group.platform.name
+  storage_queue_endpoint {
+    storage_account_id = azurerm_storage_account.handler.id
+    queue_name         = "events"
+  }
+}
+
+resource "azurerm_eventgrid_system_topic_event_subscription" "literal" {
+  name                = "literal"
+  system_topic        = "storage"
+  resource_group_name = azurerm_resource_group.platform.name
+  eventhub_id         = "/subscriptions/example/eventhubs/handler"
+}
+
+resource "azurerm_eventgrid_system_topic_event_subscription" "unknown" {
+  name                 = "unknown"
+  system_topic         = var.unknown_id
+  resource_group_name  = azurerm_resource_group.platform.name
+  service_bus_queue_id = var.unknown_id
+}

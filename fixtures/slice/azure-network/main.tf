@@ -82,3 +82,38 @@ resource "azurerm_private_dns_zone_virtual_network_link" "platform" {
   private_dns_zone_id = azurerm_private_dns_zone.internal.id
   virtual_network_id  = azurerm_virtual_network.platform.id
 }
+
+resource "azurerm_public_ip" "egress" {
+  name                = "egress"
+  location            = azurerm_resource_group.network.location
+  resource_group_name = azurerm_resource_group.network.name
+  allocation_method   = "Static"
+  sku                 = "Standard"
+}
+
+resource "azurerm_public_ip_prefix" "egress" {
+  name                = "egress"
+  location            = azurerm_resource_group.network.location
+  resource_group_name = azurerm_resource_group.network.name
+  prefix_length       = 30
+}
+
+resource "azurerm_nat_gateway_public_ip_association" "egress" {
+  nat_gateway_id       = azurerm_nat_gateway.egress.id
+  public_ip_address_id = azurerm_public_ip.egress.id
+}
+
+resource "azurerm_nat_gateway_public_ip_prefix_association" "egress" {
+  nat_gateway_id      = azurerm_nat_gateway.egress.id
+  public_ip_prefix_id = azurerm_public_ip_prefix.egress.id
+}
+
+resource "azurerm_nat_gateway_public_ip_association" "unknown" {
+  nat_gateway_id       = var.unknown_id
+  public_ip_address_id = var.unknown_id
+}
+
+resource "azurerm_nat_gateway_public_ip_prefix_association" "unknown" {
+  nat_gateway_id      = azurerm_nat_gateway.egress.id
+  public_ip_prefix_id = var.unknown_id
+}

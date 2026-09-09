@@ -18,6 +18,49 @@
     "VNet peering literal and unknown references produce no network context",
     "NAT association unknown references produce no contribution"
   ],
+  "ownership_membership_sweep": {
+    "toolchain": "rootform 0.1.1, local engine build, binary sha256:9a53cb412297748664247cb6f2f3943d977cebfc46335816e38cceaeb0643993; same lock_command and golden_command as showcase_toolchain, with fixtures/slice/<name> generalized to fixtures/<path> for non-slice fixtures",
+    "regenerated_goldens": [
+      "fixtures/confluent-v2/scenarios",
+      "fixtures/databricks-v1/scenarios",
+      "fixtures/mongodb-atlas-v2/scenarios",
+      "fixtures/snowflake-v2/scenarios",
+      "fixtures/vault-v5/scenarios",
+      "fixtures/slice/azure-event-grid",
+      "fixtures/slice/azure-network",
+      "fixtures/slice/azure-observability"
+    ],
+    "new_fixtures": [
+      "fixtures/slice/azure-ownership-sweep",
+      "fixtures/slice/azure-storage-members",
+      "fixtures/slice/azure-security-members",
+      "fixtures/slice/azure-cosmos-members",
+      "fixtures/slice/azure-dns-members",
+      "fixtures/slice/azure-monitor-members",
+      "fixtures/slice/azure-messaging-members"
+    ],
+    "regenerated_golden_delta": {
+      "fixtures/confluent-v2/scenarios": "one TRAVERSAL_UNRESOLVED warning: literal key_vault_id now audited by azure/key-vault-key ownership",
+      "fixtures/databricks-v1/scenarios": "+1 core/ownership (blob container to storage account)",
+      "fixtures/mongodb-atlas-v2/scenarios": "+3 core/ownership (key vault to resource group, key to vault, blob container to storage account)",
+      "fixtures/snowflake-v2/scenarios": "+2 core/ownership (API Management to resource group, blob container to storage account)",
+      "fixtures/vault-v5/scenarios": "+1 core/ownership (blob container to storage account)",
+      "fixtures/slice/azure-event-grid": "+8 core/ownership, +5 subscribes-to, +5 delivers-to from system topic event subscriptions",
+      "fixtures/slice/azure-network": "+6 core/ownership, +5 contributions from NAT Gateway public IP and prefix associations",
+      "fixtures/slice/azure-observability": "+1 core/ownership (Windows function app to resource group)"
+    },
+    "negative_assertions": [
+      "azure-ownership-sweep: literal and unknown resource_group_name produce no core/ownership (189 contexts for 189 direct references, 2 TRAVERSAL_UNRESOLVED warnings)",
+      "azure-storage-members: literal storage_account_id, unknown storage_account_id, and unknown storage_container_id produce no ownership or contribution",
+      "azure-security-members: literal key_vault_id and unknown key_vault_id (key, certificate) produce no ownership or contribution",
+      "azure-cosmos-members: literal account_name, unknown database_name, and unknown cosmosdb_account_id produce no ownership or contribution",
+      "azure-dns-members: literal zone_name and unknown private_dns_zone_id produce no contribution",
+      "azure-monitor-members: literal workspace_resource_id and unknown log_analytics_workspace_id produce no contribution",
+      "azure-messaging-members: literal namespace_id, unknown domain_name, and literal eventhub_name produce no ownership or contribution",
+      "azure-network: unknown nat_gateway_id and public_ip_address_id produce no contribution; unknown public_ip_prefix_id produces only the NAT gateway contribution",
+      "azure-event-grid: literal system_topic and eventhub_id, unknown system_topic and service_bus_queue_id produce no subscribes-to or delivers-to relation"
+    ]
+  },
   "scenarios": [
     {
       "id": "release-family-coverage",

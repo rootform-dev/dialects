@@ -63,6 +63,48 @@ rule "log-analytics-cluster" {
   }
 }
 
+rule "log-analytics-data-export-rule" {
+  match {
+    kind = "resource"
+    type = "azurerm_log_analytics_data_export_rule"
+  }
+
+  as = concept.operations-detail
+
+  contribution {
+    to  = concept.log-analytics-workspace
+    via = source.workspace_resource_id
+  }
+}
+
+rule "log-analytics-saved-search" {
+  match {
+    kind = "resource"
+    type = "azurerm_log_analytics_saved_search"
+  }
+
+  as = concept.operations-detail
+
+  contribution {
+    to  = concept.log-analytics-workspace
+    via = source.log_analytics_workspace_id
+  }
+}
+
+rule "log-analytics-solution" {
+  match {
+    kind = "resource"
+    type = "azurerm_log_analytics_solution"
+  }
+
+  as = concept.operations-detail
+
+  contribution {
+    to  = concept.log-analytics-workspace
+    via = source.workspace_resource_id
+  }
+}
+
 rule "log-analytics-workspace" {
   match {
     kind = "resource"
@@ -75,6 +117,20 @@ rule "log-analytics-workspace" {
     as  = context.core.ownership
     to  = concept.resource-group
     via = source.resource_group_name
+  }
+}
+
+rule "log-analytics-workspace-table" {
+  match {
+    kind = "resource"
+    type = "azurerm_log_analytics_workspace_table"
+  }
+
+  as = concept.operations-detail
+
+  contribution {
+    to  = concept.log-analytics-workspace
+    via = source.workspace_id
   }
 }
 
@@ -145,4 +201,10 @@ rule "network-watcher" {
   }
 
   as = concept.network-watcher
+
+  context {
+    as  = context.core.ownership
+    to  = concept.resource-group
+    via = source.resource_group_name
+  }
 }
