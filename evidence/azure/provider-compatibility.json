@@ -12,7 +12,25 @@
       "azurerm_linux_web_app.site_config": 1,
       "azurerm_windows_web_app.site_config": 1,
       "azurerm_linux_function_app.site_config": 1,
-      "azurerm_windows_function_app.site_config": 1
+      "azurerm_windows_function_app.site_config": 1,
+      "azurerm_eventgrid_system_topic_event_subscription.azure_function_endpoint": 1,
+      "azurerm_eventgrid_system_topic_event_subscription.storage_queue_endpoint": 1
+    }
+  },
+  "ownership_membership_sweep": {
+    "verified_version": "5.3.0",
+    "schema_sha256": "sha256:9079f910d43a4ad678d942bb50d77707124f97f55c561d168cd408d3b68a9371",
+    "verified_attribute_paths": 241,
+    "path_audit": "evidence/azure/rule-audit.json#ownership_membership_sweep",
+    "bounded_blocks": {
+      "azurerm_eventgrid_system_topic_event_subscription.azure_function_endpoint": 1,
+      "azurerm_eventgrid_system_topic_event_subscription.storage_queue_endpoint": 1
+    },
+    "unbounded_blocks_refused": {
+      "azurerm_application_gateway.gateway_ip_configuration": 2
+    },
+    "dropped_paths": {
+      "azurerm_storage_share_directory.storage_share_id": "attribute absent in 5.3.0 (only storage_share_url exists); no contribution"
     }
   },
   "dialect": {
@@ -278,8 +296,8 @@
       "terraform_type": "azurerm_application_gateway",
       "provider": "azurerm",
       "concept": "core/load-balancer",
-      "source_paths": ["resource_group_name"],
-      "target_concepts": ["azure/resource-group"],
+      "source_paths": ["firewall_policy_id", "resource_group_name"],
+      "target_concepts": ["azure/resource-group", "azure/web-application-firewall-policy"],
       "target_paths": ["name"]
     },
     {
@@ -4160,9 +4178,9 @@
       "file": "dialects/azure/network/firewall.rf",
       "terraform_type": "azurerm_web_application_firewall_policy",
       "provider": "azurerm",
-      "concept": "azure/firewall-policy",
-      "source_paths": [],
-      "target_concepts": [],
+      "concept": "azure/web-application-firewall-policy",
+      "source_paths": ["resource_group_name"],
+      "target_concepts": ["azure/resource-group"],
       "target_paths": []
     },
     {

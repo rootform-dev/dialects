@@ -2,9 +2,9 @@
   "format_version": "1",
   "showcase_semantics": {
     "policy": "direct reference only; literal equivalents intentionally unresolved",
-    "implemented": ["AZ-02", "AZ-06", "AZ-07", "AZ-08", "AZ-10", "AZ-11", "AZ-14", "AZ-15", "AZ-16", "AZ-17", "AZ-18", "AZ-19", "AZ-20", "AZ-23", "AZ-24"],
+    "implemented": ["AZ-02", "AZ-06", "AZ-07", "AZ-08", "AZ-10", "AZ-11", "AZ-14", "AZ-15", "AZ-16", "AZ-17", "AZ-18", "AZ-19", "AZ-20", "AZ-23", "AZ-24", "AZ-27", "AZ-28", "AZ-29", "AZ-30"],
     "blocked": {
-      "AZ-01": "one source path can target many concepts; current fact resolution hard-fails mismatched target concepts"
+      "AZ-01": "scope is exact but polymorphic; v1 requires one exact target concept and valid non-topic scopes would emit FACT_CONCEPT_MISMATCH"
     },
     "fixtures": [
       "fixtures/slice/azure-aks",
@@ -13,7 +13,43 @@
       "fixtures/slice/azure-event-grid",
       "fixtures/slice/azure-observability",
       "fixtures/slice/azure-container-apps",
-      "fixtures/slice/azure-compute-ownership"
+      "fixtures/slice/azure-compute-ownership",
+      "fixtures/slice/azure-load-balancing"
+    ]
+  },
+  "ownership_membership_sweep": {
+    "policy": "direct reference only; literal equivalents intentionally unresolved",
+    "verified_date": "2026-09-10",
+    "resource_group_ownership_rules": 188,
+    "scope_membership_rules": 17,
+    "detail_contribution_rules": 29,
+    "structural_topic_concepts": ["azure/event-grid-topic", "azure/service-bus-topic"],
+    "new_rules": [
+      "azure/event-grid-domain-topic",
+      "azure/log-analytics-data-export-rule",
+      "azure/log-analytics-saved-search",
+      "azure/log-analytics-solution",
+      "azure/log-analytics-workspace-table",
+      "azure/nat-gateway-public-ip-association",
+      "azure/nat-gateway-public-ip-prefix-association"
+    ],
+    "system_topic_event_subscription_relations": 6,
+    "refused": {
+      "azurerm_eventgrid_event_subscription.scope": "exact polymorphic target cannot be narrowed to one concept in v1 without FACT_CONCEPT_MISMATCH on other valid scopes",
+      "azurerm_servicebus_subscription.topic_id -> namespace": "direct topic ownership implemented; direct namespace edge refused because topic_id references topic and chain already reaches namespace",
+      "azurerm_application_gateway.gateway_ip_configuration[*].subnet_id": "block is bounded to max_items=2, not 1; no fixed index is admissible"
+    },
+    "fixtures": [
+      "fixtures/slice/azure-ownership-sweep",
+      "fixtures/slice/azure-storage-members",
+      "fixtures/slice/azure-security-members",
+      "fixtures/slice/azure-cosmos-members",
+      "fixtures/slice/azure-dns-members",
+      "fixtures/slice/azure-monitor-members",
+      "fixtures/slice/azure-messaging-members",
+      "fixtures/slice/azure-service-bus",
+      "fixtures/slice/azure-network",
+      "fixtures/slice/azure-event-grid"
     ]
   },
   "method": {
@@ -10397,9 +10433,14 @@
       "declaration_outcome": "unsupported",
       "reason_code": "data-source-not-architecture-owner",
       "architectural_role": "read-only lookup",
+      "concept": "core/message-topic",
+      "rules": [
+        "azure/event-grid-domain-topic"
+      ],
       "evidence_refs": [
         "family:messaging-eventing",
-        "provider-baseline"
+        "provider-baseline",
+        "rule:azure/event-grid-domain-topic"
       ]
     },
     {
@@ -11652,9 +11693,14 @@
       "declaration_outcome": "unsupported",
       "reason_code": "data-source-not-architecture-owner",
       "architectural_role": "read-only lookup",
+      "concept": "azure/operations-detail",
+      "rules": [
+        "azure/log-analytics-workspace-table"
+      ],
       "evidence_refs": [
         "family:operations",
-        "provider-baseline"
+        "provider-baseline",
+        "rule:azure/log-analytics-workspace-table"
       ]
     },
     {
@@ -15354,7 +15400,7 @@
       "declaration_outcome": "unsupported",
       "reason_code": "data-source-not-architecture-owner",
       "architectural_role": "read-only lookup",
-      "concept": "azure/firewall-policy",
+      "concept": "azure/web-application-firewall-policy",
       "rules": [
         "azure/web-application-firewall-policy"
       ],
@@ -22227,13 +22273,18 @@
       "provider": "azurerm",
       "identity": "azurerm_eventgrid_domain_topic",
       "family": "messaging-eventing",
-      "decision": "intentionally-unrepresented",
-      "declaration_outcome": "unsupported",
-      "reason_code": "reviewed-no-independent-architecture-value",
-      "architectural_role": "reviewed supporting or administrative surface without independent architecture identity",
+      "decision": "supported",
+      "declaration_outcome": "represented",
+      "reason_code": "implemented-semantic-rule",
+      "architectural_role": "architecture representation",
+      "concept": "core/message-topic",
+      "rules": [
+        "azure/event-grid-domain-topic"
+      ],
       "evidence_refs": [
         "family:messaging-eventing",
-        "provider-baseline"
+        "provider-baseline",
+        "rule:azure/event-grid-domain-topic"
       ]
     },
     {
@@ -24911,13 +24962,18 @@
       "provider": "azurerm",
       "identity": "azurerm_log_analytics_data_export_rule",
       "family": "operations",
-      "decision": "intentionally-unrepresented",
-      "declaration_outcome": "unsupported",
-      "reason_code": "configuration-or-helper",
-      "architectural_role": "service configuration or helper",
+      "decision": "partial",
+      "declaration_outcome": "represented",
+      "reason_code": "implemented-detail-rule",
+      "architectural_role": "supporting architecture detail",
+      "concept": "azure/operations-detail",
+      "rules": [
+        "azure/log-analytics-data-export-rule"
+      ],
       "evidence_refs": [
         "family:operations",
-        "provider-baseline"
+        "provider-baseline",
+        "rule:azure/log-analytics-data-export-rule"
       ]
     },
     {
@@ -25023,13 +25079,18 @@
       "provider": "azurerm",
       "identity": "azurerm_log_analytics_saved_search",
       "family": "operations",
-      "decision": "intentionally-unrepresented",
-      "declaration_outcome": "unsupported",
-      "reason_code": "reviewed-no-independent-architecture-value",
-      "architectural_role": "reviewed supporting or administrative surface without independent architecture identity",
+      "decision": "partial",
+      "declaration_outcome": "represented",
+      "reason_code": "implemented-detail-rule",
+      "architectural_role": "supporting architecture detail",
+      "concept": "azure/operations-detail",
+      "rules": [
+        "azure/log-analytics-saved-search"
+      ],
       "evidence_refs": [
         "family:operations",
-        "provider-baseline"
+        "provider-baseline",
+        "rule:azure/log-analytics-saved-search"
       ]
     },
     {
@@ -25039,13 +25100,18 @@
       "provider": "azurerm",
       "identity": "azurerm_log_analytics_solution",
       "family": "operations",
-      "decision": "intentionally-unrepresented",
-      "declaration_outcome": "unsupported",
-      "reason_code": "reviewed-no-independent-architecture-value",
-      "architectural_role": "reviewed supporting or administrative surface without independent architecture identity",
+      "decision": "partial",
+      "declaration_outcome": "represented",
+      "reason_code": "implemented-detail-rule",
+      "architectural_role": "supporting architecture detail",
+      "concept": "azure/operations-detail",
+      "rules": [
+        "azure/log-analytics-solution"
+      ],
       "evidence_refs": [
         "family:operations",
-        "provider-baseline"
+        "provider-baseline",
+        "rule:azure/log-analytics-solution"
       ]
     },
     {
@@ -25092,13 +25158,18 @@
       "provider": "azurerm",
       "identity": "azurerm_log_analytics_workspace_table",
       "family": "operations",
-      "decision": "intentionally-unrepresented",
-      "declaration_outcome": "unsupported",
-      "reason_code": "configuration-or-helper",
-      "architectural_role": "service configuration or helper",
+      "decision": "partial",
+      "declaration_outcome": "represented",
+      "reason_code": "implemented-detail-rule",
+      "architectural_role": "supporting architecture detail",
+      "concept": "azure/operations-detail",
+      "rules": [
+        "azure/log-analytics-workspace-table"
+      ],
       "evidence_refs": [
         "family:operations",
-        "provider-baseline"
+        "provider-baseline",
+        "rule:azure/log-analytics-workspace-table"
       ]
     },
     {
@@ -27107,13 +27178,18 @@
       "provider": "azurerm",
       "identity": "azurerm_nat_gateway_public_ip_association",
       "family": "network",
-      "decision": "intentionally-unrepresented",
-      "declaration_outcome": "unsupported",
-      "reason_code": "configuration-or-helper",
-      "architectural_role": "service configuration or helper",
+      "decision": "partial",
+      "declaration_outcome": "represented",
+      "reason_code": "implemented-detail-rule",
+      "architectural_role": "supporting architecture detail",
+      "concept": "azure/network-policy-detail",
+      "rules": [
+        "azure/nat-gateway-public-ip-association"
+      ],
       "evidence_refs": [
         "family:network",
-        "provider-baseline"
+        "provider-baseline",
+        "rule:azure/nat-gateway-public-ip-association"
       ]
     },
     {
@@ -27123,13 +27199,18 @@
       "provider": "azurerm",
       "identity": "azurerm_nat_gateway_public_ip_prefix_association",
       "family": "network",
-      "decision": "intentionally-unrepresented",
-      "declaration_outcome": "unsupported",
-      "reason_code": "configuration-or-helper",
-      "architectural_role": "service configuration or helper",
+      "decision": "partial",
+      "declaration_outcome": "represented",
+      "reason_code": "implemented-detail-rule",
+      "architectural_role": "supporting architecture detail",
+      "concept": "azure/network-policy-detail",
+      "rules": [
+        "azure/nat-gateway-public-ip-prefix-association"
+      ],
       "evidence_refs": [
         "family:network",
-        "provider-baseline"
+        "provider-baseline",
+        "rule:azure/nat-gateway-public-ip-prefix-association"
       ]
     },
     {
@@ -34834,11 +34915,11 @@
       "provider": "azurerm",
       "identity": "azurerm_web_application_firewall_policy",
       "family": "network",
-      "decision": "partial",
+      "decision": "supported",
       "declaration_outcome": "represented",
-      "reason_code": "implemented-detail-rule",
-      "architectural_role": "supporting architecture detail",
-      "concept": "azure/firewall-policy",
+      "reason_code": "implemented-semantic-rule",
+      "architectural_role": "architecture representation",
+      "concept": "azure/web-application-firewall-policy",
       "rules": [
         "azure/web-application-firewall-policy"
       ],
@@ -38169,7 +38250,7 @@
       "decision": "intentionally-unrepresented",
       "reason_code": "resource-identity-protocol-metadata",
       "architectural_role": "provider protocol metadata",
-      "concept": "azure/firewall-policy",
+      "concept": "azure/web-application-firewall-policy",
       "rules": [
         "azure/web-application-firewall-policy"
       ],

@@ -15,6 +15,7 @@ rule "load-balancer" {
       strategy = "exact"
     }
   }
+
 }
 
 rule "application-gateway" {
@@ -33,6 +34,11 @@ rule "application-gateway" {
       by       = target.name
       strategy = "exact"
     }
+  }
+
+  relation "uses-waf-policy" {
+    to  = concept.web-application-firewall-policy
+    via = source.firewall_policy_id
   }
 }
 

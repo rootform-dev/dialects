@@ -1,8 +1,8 @@
 {
   "format_version": "1",
   "generator": {
-    "identity": "rootform 0.1.0",
-    "binary_sha256": "sha256:01c8e6dad5f5614b5ec0261872116d13ed275e2bba6d90215f513a369fc90cfa",
+    "identity": "rootform 0.1.1",
+    "binary_sha256": "sha256:08f7b492b3a3379b267791f9009487850045ec87942417e1eab2eac03e6b6502",
     "command": "bun scripts/catalog.ts"
   },
   "concepts": [
@@ -164,8 +164,8 @@
       "id": "core/kubernetes-cluster",
       "dialect": "core",
       "name": "kubernetes-cluster",
-      "kind": "entity",
-      "description": "A Kubernetes cluster providing a workload runtime.",
+      "kind": "scope",
+      "description": "A Kubernetes cluster forming a workload runtime boundary for its namespaced resources.",
       "source": {
         "path": "containers/kubernetes.rf",
         "line": 1
@@ -617,13 +617,6 @@
           "via": "source.virtual_network_name"
         },
         {
-          "emission": "emission:551858e3ccad4436d450af7f369d6f47f5887c314a8eee42a8ef8792da63daed",
-          "rule": "azure/virtual-network-peering",
-          "from": "core/network-peering",
-          "to": "core/virtual-network",
-          "via": "source.remote_virtual_network_id"
-        },
-        {
           "emission": "emission:adf6369f08c050a82021bd244570e9679557ba905dcf95e2b0d985f77493cd7b",
           "rule": "azure/windows-web-app",
           "from": "azure/app-service",
@@ -958,9 +951,58 @@
       "description": "Administrative or lifecycle ownership.",
       "producers": [
         {
+          "emission": "emission:9a55c1e90220f834036893ad9f029d1fd2aae9eda8ea11178f2adbf28ed35138",
+          "rule": "azure/ai-foundry",
+          "from": "azure/ai-foundry",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:7d30b6332d6dee9a35c092d76d934952e0c83a1e81910bb475d352eb39401695",
+          "rule": "azure/ai-search-service",
+          "from": "azure/ai-search-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:4bb16a919b623f9464fd98c80b61b9320f42bed89b06644f0d12d7c567d8ea7a",
+          "rule": "azure/ai-services-account",
+          "from": "azure/ai-service-account",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
           "emission": "emission:60310902bce136e35f822daf12512c608ab62c8d70a0e46bbe5ff0ae9a67bd12",
           "rule": "azure/aks-cluster",
           "from": "core/kubernetes-cluster",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:b504d63155780fb494be5f52ad16ce623fc7fd569f1a7401ba20a5d1fe127141",
+          "rule": "azure/analysis-services-server",
+          "from": "azure/analytics-cluster",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:ff745d6c594439fa9b0a20e4cc8db1f6175e04f0c6b0266395cabc86734f0b48",
+          "rule": "azure/api-management",
+          "from": "core/api-gateway",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:f691e6b494398e57ab7313853e1010dbd395c0acd070cfe88b5fd277d2ebdacc",
+          "rule": "azure/api-management-standalone-gateway",
+          "from": "core/api-gateway",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:bc6f9f95f302e77377db45b2ed50f4c848928c9bc0a32e1deb49406d79d2298d",
+          "rule": "azure/app-configuration",
+          "from": "azure/app-configuration",
           "to": "azure/resource-group",
           "via": "source.resource_group_name"
         },
@@ -993,6 +1035,216 @@
           "via": "source.resource_group_name"
         },
         {
+          "emission": "emission:6dfebc98505f19ce96dbf00c8faa088ff6b93c2b3cb5dc6dc3c5b73ab132605d",
+          "rule": "azure/application-load-balancer",
+          "from": "core/load-balancer",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:6eb1cf64ffb7d49c9abbd9fa91593b7154d873b554efaf6b30eb2ba95759a9ea",
+          "rule": "azure/arc-custom-location",
+          "from": "azure/custom-location",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:786f62fcb39ceae1b1fc48c5c1063a3e16d90338fd3a3eb33af18afed6885c33",
+          "rule": "azure/arc-enabled-server",
+          "from": "azure/arc-enabled-server",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:a5fbd17d8f0c5cce209587526aa6b935bebd542e05a4ac0bc189fdec82d9a3f8",
+          "rule": "azure/arc-kubernetes-cluster",
+          "from": "core/kubernetes-cluster",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:354820cc9196dceda87dd7f2f19e96a8df541fbc5d2f12daba31f61a58edee33",
+          "rule": "azure/arc-private-link-scope",
+          "from": "azure/private-link-scope",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:0db5076742842794c6612dfaf869ec2c6809787dace531d78ca467fed99fd63b",
+          "rule": "azure/arc-provisioned-kubernetes-cluster",
+          "from": "core/kubernetes-cluster",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:e2f65859d962c9be6f604ba972c26a637f19c60708ce3364521eca0b700905bf",
+          "rule": "azure/arc-resource-bridge",
+          "from": "azure/arc-resource-bridge",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:f92f626c2e0e6a9011ba370b22282417771e87dbbb28a7145ad1cac790ae43c5",
+          "rule": "azure/attestation-provider",
+          "from": "azure/attestation-provider",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:b51f9e3cb838548213291e05b37434aca000b8cd45ed09d424c40e23ed42a17c",
+          "rule": "azure/automatic-kubernetes-cluster",
+          "from": "core/kubernetes-cluster",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:8ab4b2316a2b03bbe0311a015d707210332117d76ab184239f67fe2156f204a5",
+          "rule": "azure/automation-account",
+          "from": "azure/automation-account",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:ecdac4dd7171c2ec4786ad70ce540a7dc86c174aac95d20c6ed80861395be5ff",
+          "rule": "azure/automation-runbook",
+          "from": "core/workflow",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:d32f37ffa14722e0f410502a18999f76e88af6cf95f1ff612863e0550311b691",
+          "rule": "azure/azure-bot",
+          "from": "azure/bot-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:4607ac493de69eacb9d9a35ed483c2dd9007441bc85e35ab0364df81c036a685",
+          "rule": "azure/azure-cache-for-redis",
+          "from": "core/managed-cache",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:037615cd14a1c9d4e864c89972d0721ef6c98b105fdb0253e12c5615a101a3b8",
+          "rule": "azure/azure-files-share",
+          "from": "core/managed-file-storage",
+          "to": "azure/storage-account",
+          "via": "source.storage_account_id"
+        },
+        {
+          "emission": "emission:87baf0f39fe35736e6ecdfa1a028ff7a621e8c3eaec48df8560f9dcbba3a348a",
+          "rule": "azure/azure-firewall",
+          "from": "azure/azure-firewall",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:ed81d04838cbaa96a7395b20cd5a6735d728641af152124c8abffd1b3d35fa51",
+          "rule": "azure/azure-local-cluster",
+          "from": "azure/azure-local-cluster",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:3b165d1e498423cd156e3bc75b4c44b55a4cabf924968340bb6c512768d2cedc",
+          "rule": "azure/azure-managed-redis",
+          "from": "core/managed-cache",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:4685fb01ac38a9db6eef826877dc0a3c78ff0776e02a726bff765e8f7584ed90",
+          "rule": "azure/bastion-host",
+          "from": "azure/bastion-host",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:4aa6bf767cdbcb57bd7ae4b557764d41208de5d4fc1aeca12412c86361d3fd88",
+          "rule": "azure/batch-account",
+          "from": "azure/batch-account",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:773031810e1e7ca87f6a4d33dbded1c41e7a160ef228d9483273068b493538f2",
+          "rule": "azure/blob-container",
+          "from": "core/object-storage-container",
+          "to": "azure/storage-account",
+          "via": "source.storage_account_id"
+        },
+        {
+          "emission": "emission:0cde03502a24a5fda9fd3866f4a6388ba9ef5f9724a716715e04ba726cda0579",
+          "rule": "azure/bot-channels-registration",
+          "from": "azure/bot-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:6ac385ce24ec6fe2da7d2febce40cd613dc96490da6da9c5acd7e7c89d695298",
+          "rule": "azure/bot-web-app",
+          "from": "azure/bot-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:edc73775732e3f16fba0d12e285607044ba4376ee998d80482ba6d7136841b5f",
+          "rule": "azure/cdn-endpoint",
+          "from": "azure/content-delivery-profile",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:9558e43909d50b0d4501222b8211e51759a3bbe788c39ce16e22c4b9cdcf78f8",
+          "rule": "azure/cdn-profile",
+          "from": "azure/content-delivery-profile",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:530be11786c9555c4e16717b7b3cc154eb30cca07b952b0f7a948d8077423ce3",
+          "rule": "azure/chaos-studio-experiment",
+          "from": "azure/chaos-experiment",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:89570b0d78c1f11640c7d6f4e0093035787f17fe567e33a942b987e265f87567",
+          "rule": "azure/classic-front-door",
+          "from": "azure/front-door-profile",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:e39b0cf10b9e65d5de9435f743a280ecb59331fac823320c679f66f0b043d339",
+          "rule": "azure/communication-service",
+          "from": "azure/communication-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:be343f616292252ef2492792709b224816a02e95d84f0fb340d41d0c01c8c52f",
+          "rule": "azure/compute-gallery",
+          "from": "azure/image-gallery",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:3434e60b2bff32e671e821eb16e7a341ce37498a5cccedf4b3e04e3b97dc2c86",
+          "rule": "azure/compute-image",
+          "from": "azure/compute-image",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:e80a717d2847fc82dbfca9c3c058b1e8b9578169b38fe863c2fd1f46f87b419b",
+          "rule": "azure/confidential-ledger",
+          "from": "azure/confidential-ledger",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
           "emission": "emission:6df5516a22fbd2d2ac12017230b11f3624a8568f113c693993e4bd7620336e39",
           "rule": "azure/container-app",
           "from": "azure/container-app",
@@ -1014,9 +1266,527 @@
           "via": "source.resource_group_name"
         },
         {
+          "emission": "emission:83ae911599cdcf3f632e8d1336f52d1c04e609529f2671ccebf488a4e930faab",
+          "rule": "azure/container-instance-group",
+          "from": "azure/container-instance-group",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:966704a9bb69a12f7d371a72cbd9c5c330680b0387bd09cd47a73f28f784db27",
+          "rule": "azure/container-registry",
+          "from": "azure/container-registry",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:7edc0bc723a220673bbf9ba34c65ea97660469dc7f7879c7c071df72357753db",
+          "rule": "azure/cosmos-account",
+          "from": "azure/cosmos-account",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:44522004e9b34a14c7b86699c4167d514cc72a9ab2d320d7eaafda71daeb9db6",
+          "rule": "azure/cosmos-cassandra-cluster",
+          "from": "core/managed-database",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:a1eb7f28b18d6e35f602fa3c7368a771cbf478008b7a50e09565a0e1390bf3b9",
+          "rule": "azure/cosmos-cassandra-keyspace",
+          "from": "core/managed-database",
+          "to": "azure/cosmos-account",
+          "via": "source.account_name"
+        },
+        {
+          "emission": "emission:fe247790f770e938cf99d3fce0be1218d71fa37b371cdd3ada7bb3ece065689a",
+          "rule": "azure/cosmos-gremlin-database",
+          "from": "core/managed-database",
+          "to": "azure/cosmos-account",
+          "via": "source.account_name"
+        },
+        {
+          "emission": "emission:2d84ed87fcce4c748dc63f7e68df7c706bd0b26d89ec3c1f06e6d3f96a7b6626",
+          "rule": "azure/cosmos-mongo-database",
+          "from": "core/managed-database",
+          "to": "azure/cosmos-account",
+          "via": "source.account_name"
+        },
+        {
+          "emission": "emission:bcec1c6a3e3d5080607aa5c67a468cc8af15e4bde63e3202be7a16aeac6a05a3",
+          "rule": "azure/cosmos-postgresql-cluster",
+          "from": "core/managed-database",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:a3899950092f6440ada295b0a6610d08205cd74ea05c1c7f8a34541a3e3cffc4",
+          "rule": "azure/cosmos-sql-database",
+          "from": "core/managed-database",
+          "to": "azure/cosmos-account",
+          "via": "source.account_name"
+        },
+        {
+          "emission": "emission:b6408100ddd315bccaf435d6d06390b63d0b6cfd2a2dd269813cf1b4a68a1e42",
+          "rule": "azure/custom-ip-prefix",
+          "from": "azure/public-address",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:8d04675ff95a8e2d1165bce4106081ae6138375773cc912a1e4e9d75bd2e27e5",
+          "rule": "azure/data-box-edge-device",
+          "from": "azure/migration-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:2fbd09336553d6673f67fadf3ba227be9bc274b96d484327c6c5b1ba8802b849",
+          "rule": "azure/data-explorer-cluster",
+          "from": "azure/data-explorer-cluster",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:32d040afacc7292e8b5b6335f3e5d4577aeb8259ecac456d732a817aa845301e",
+          "rule": "azure/data-factory",
+          "from": "azure/data-factory",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:ef237e349b43b242ccc3beaa66d037db5c7418b8844afa60ca18fa96f0e49b03",
+          "rule": "azure/data-lake-filesystem",
+          "from": "core/object-storage-container",
+          "to": "azure/storage-account",
+          "via": "source.storage_account_id"
+        },
+        {
+          "emission": "emission:960c1b51e5a910db91735b47e2e671c799aba3d0279b5ccf639b987274ff0ee1",
+          "rule": "azure/data-protection-backup-vault",
+          "from": "core/backup-vault",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:14c1060496754341ca25477d5bf93f7c46f165f2f455915131a452f548f26fc1",
+          "rule": "azure/data-share-account",
+          "from": "azure/data-share-account",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:77c6739fdf856cda0a85096b8eecf7d4c7a42a5de400e6cd260504a71c1953a3",
+          "rule": "azure/database-migration-project",
+          "from": "azure/migration-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:c2d5d0afc62fd969ced24e327a0c52de41ec2a837635228e91d8e18d2d93fdce",
+          "rule": "azure/database-migration-service",
+          "from": "azure/migration-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:daa5eb414bfad48579130c22b44063554cac29df7065873fce3b3015f5a9ed8c",
+          "rule": "azure/databricks-virtual-network-peering",
+          "from": "core/network-peering",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:9a6c9aa5ca032d9326b8b72a62d5959bef571afcce4a6b142e2f07a811bdac7c",
+          "rule": "azure/databricks-workspace",
+          "from": "azure/databricks-workspace",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:a3549e4108842ac7c173dd5701868d21da54475a71d45808d4c7442283e0fbe0",
+          "rule": "azure/datadog-monitor",
+          "from": "azure/third-party-monitor",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:dbf36beb690190fd7492c443e097edf6960b56325f40aad0a8e85dfd4c536530",
+          "rule": "azure/ddos-protection-plan",
+          "from": "azure/ddos-protection-plan",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:23a099aa9738400dec4df4570ab646a5a1ffe21fae283b9aaafc83caab8a505b",
+          "rule": "azure/dedicated-hardware-security-module",
+          "from": "azure/managed-hsm",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:19e8d780a54f996d8c1bc5b8dd58be84f20b54ee627f4c5600fecc7eea369c45",
+          "rule": "azure/dedicated-host-group",
+          "from": "azure/dedicated-host-group",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:661eb6c83b75efa6bdd16cb94635b4eae006cdb72d52c2662500111301eb2f6d",
+          "rule": "azure/dev-center",
+          "from": "azure/dev-center",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:ee610575bd10159b105ba919f6e90e4bbc4e1b0f4490c2944d36b8d4906f9ed5",
+          "rule": "azure/dev-center-project",
+          "from": "azure/dev-center-project",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:b8db2788180bdb6f223eae5cf159d888361094cb9089fa2b62f666f18e5f64e5",
+          "rule": "azure/dev-test-lab",
+          "from": "azure/developer-environment",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:42a4b2b9a550753e4e7448cd40a5537d5f854d4561da3864f54f10e40c6f8237",
+          "rule": "azure/dev-test-linux-virtual-machine",
+          "from": "core/compute-instance",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:84ded9b20fc410916fed0cd0fe4e42bd4b03763f6483ec2df304442676f26c74",
+          "rule": "azure/dev-test-windows-virtual-machine",
+          "from": "core/compute-instance",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:0e288d65237e1b8d957af07f7a27cebff92ee2494e2b1e0ec2c0d82f0f7e08a2",
+          "rule": "azure/digital-twins-instance",
+          "from": "azure/digital-twins-instance",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:0b083e20cb2edf8467f982243acaa9cf8e68cee1422b9369783bc21160d092b7",
+          "rule": "azure/disk-snapshot",
+          "from": "azure/disk-snapshot",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:71f516527c85f528b43dfee339b3502595935d680de69767490b907f249e536a",
+          "rule": "azure/dns-zone",
+          "from": "core/dns-zone",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:8fe63193aa0dd65addbf1a1f0cb5163032bf08afd83f94862b22993221e92f61",
+          "rule": "azure/dynatrace-monitor",
+          "from": "azure/third-party-monitor",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:51da80b1e6e4ce65fa2323088b5ea79b2ba3bd7777fdd9034f8f8378b636259c",
+          "rule": "azure/elastic-cloud",
+          "from": "azure/third-party-monitor",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:9e92467c61adb45bd8516e2b72dec24f8acbe835a92fb890a4a384ea6c265b9d",
+          "rule": "azure/elastic-san",
+          "from": "azure/elastic-san",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:710320c874637a3d8dc8a547813aaffb3a47a0f5d7bb0130eb2b04cd81cf633c",
+          "rule": "azure/email-communication-service",
+          "from": "azure/email-communication-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:57c4f60a52a5ebbb8106a79e8c17efb085abccca098d15a239ca3ac024cffc5c",
+          "rule": "azure/entra-domain-services",
+          "from": "azure/entra-domain-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:6b8cec4990fcb31456146b918be50a843f7754d62dd64686b5867da2995e8244",
+          "rule": "azure/entra-external-id-directory",
+          "from": "azure/entra-directory",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:4d32c281ead744918192923ded7ffbfdc315d216a00d1e414c7284fa13f45f9c",
+          "rule": "azure/event-grid-domain",
+          "from": "azure/event-grid-domain",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:7fe434a6390d43e9927b6505fbf9b7257f96a7684c16859b07c2f0ece58bf158",
+          "rule": "azure/event-grid-domain-topic",
+          "from": "azure/event-grid-topic",
+          "to": "azure/event-grid-domain",
+          "via": "source.domain_name"
+        },
+        {
+          "emission": "emission:333373bd2093fd086e943fc3bfaf7c7061fed7885b52bade3951ee40684c8cac",
+          "rule": "azure/event-grid-namespace",
+          "from": "azure/event-grid-domain",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:fa36461d5632c18e842210fda8e6d3a04b2629fd6d698cc7b6979bc9ea1da82a",
+          "rule": "azure/event-grid-namespace-topic",
+          "from": "core/message-topic",
+          "to": "azure/event-grid-domain",
+          "via": "source.eventgrid_namespace_id"
+        },
+        {
+          "emission": "emission:4451ac27fc90ce9fc7df48a464100ee09117a7e7293a5044316fb6c63ace508d",
+          "rule": "azure/event-grid-partner-namespace",
+          "from": "azure/event-grid-domain",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:140695509a5374462c7feb7cf6ab00076e9fd5e722d6a881bc6598d04d5e548e",
+          "rule": "azure/event-grid-system-topic",
+          "from": "azure/event-grid-topic",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:d1efe036d9f473e08da49cf5095d63b9a782469f75823c586425bfabaea51b8c",
+          "rule": "azure/event-grid-system-topic-subscription",
+          "from": "core/message-subscription",
+          "to": "azure/event-grid-topic",
+          "via": "source.system_topic"
+        },
+        {
+          "emission": "emission:55074d2898bd8af887981dc78568798996647b5c39425344986966348384e0d2",
+          "rule": "azure/event-grid-topic",
+          "from": "azure/event-grid-topic",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:6734f4b161ac2b00c9cc408c1dc333581d276b14f4273746ce6bc5117d0329e9",
+          "rule": "azure/event-hub",
+          "from": "azure/event-stream",
+          "to": "azure/messaging-namespace",
+          "via": "source.namespace_id"
+        },
+        {
+          "emission": "emission:d4f73a0563151c18200d5f7d0dbb73d679570828448e19151ea3c866ac179e42",
+          "rule": "azure/event-hubs-cluster",
+          "from": "azure/event-stream",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:9082a25fce13e05e993c29cc607287a16cec0b8659a6587fee4a596888d95983",
+          "rule": "azure/event-hubs-namespace",
+          "from": "azure/messaging-namespace",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:437e48f6b1f58cbde099fb5040a31e54bce084dd9cc07db3417968dfa21eb57e",
+          "rule": "azure/expressroute-circuit",
+          "from": "core/dedicated-interconnect",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:d5188ea32c65014ec27108ea0b81ea43c70e03f83a05185220b7014a6684851f",
+          "rule": "azure/expressroute-gateway",
+          "from": "azure/expressroute-gateway",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:9d3dc01f05f6d13b4087cb902add17d69d2fc2773b0ab48d7725e1001223da55",
+          "rule": "azure/expressroute-port",
+          "from": "core/dedicated-interconnect",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:b9be10a7fc3a5334e1ec15d9a1d56d779f799cbc3cbb9ed5174d1761788e3017",
+          "rule": "azure/fabric-capacity",
+          "from": "azure/analytics-cluster",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:28f6863131f40d83edd6eb4c5f888c501c8a2f96fadb670e8f3dd3d8ac3cae14",
+          "rule": "azure/file-share-backup-policy",
+          "from": "core/backup-plan",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
           "emission": "emission:b467c17a7ceb7b5cc6b8108d1d7e9277bdbb26e50911fd2c9f23cc547b6563f1",
           "rule": "azure/flex-consumption-function-app",
           "from": "core/serverless-function",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:71d636c9536a2e7bda081303218eff49e9bd05558d095201bf885ae4a089af83",
+          "rule": "azure/fluid-relay",
+          "from": "azure/realtime-communication-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:3b451b5436360db33a5621557be440fbe40cf5a4ff63352832a3f84e95caf875",
+          "rule": "azure/front-door-profile",
+          "from": "azure/front-door-profile",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:b7c1fc45a03e53391619e54a063c5291aacf9ef083152fb2cd0a0c84bb34a258",
+          "rule": "azure/graph-data-connect-account",
+          "from": "azure/graph-data-connect-account",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:1cfa116fbc58998ea70a4af5030ba71f3a294f025bf05d088d250b75c6e1f993",
+          "rule": "azure/hdinsight-hadoop-cluster",
+          "from": "azure/analytics-cluster",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:1c1c5e6c20b695d9b6c71749148346106e9ce213ce0ab42fdfbf309bcc4fafb1",
+          "rule": "azure/hdinsight-hbase-cluster",
+          "from": "azure/analytics-cluster",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:bb33382ace0770cd0d26ddd6d982696c82c68c1efcfa781102dbe83276a056cc",
+          "rule": "azure/hdinsight-interactive-query-cluster",
+          "from": "azure/analytics-cluster",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:b019c3685b3ea532be1d12a7ffb4a8e4aab5d0c2792934012459cf9b731bb2ae",
+          "rule": "azure/hdinsight-kafka-cluster",
+          "from": "azure/analytics-cluster",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:90ab9c821ffb3e053538a36e6704b6446e33fae7bdd8dab9d60872d2c9b3ca7a",
+          "rule": "azure/hdinsight-spark-cluster",
+          "from": "azure/analytics-cluster",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:d2cbc2351c4b7e3b52b0ca5e32492e5acebcd45666df17765803eff6632b09f9",
+          "rule": "azure/health-bot",
+          "from": "azure/bot-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:ce37cdaeb77a6811ae1d692913cd57a30de6cd38b8b5371b9f78a60888599d2c",
+          "rule": "azure/health-data-fhir-service",
+          "from": "azure/health-data-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:f566b4a313419ab30c1a6d3a9f6b0fabacad8b3f10df9fa60fee6e6f76100a50",
+          "rule": "azure/health-data-services-workspace",
+          "from": "azure/health-data-workspace",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:2f7054606efeb0067168f26fc39a20a5a45a321bd79dc3ef148e18f1d7f1b8a4",
+          "rule": "azure/healthcare-service",
+          "from": "azure/health-data-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:e1f0e4875cdf8ee6b26a3b2dbe0ab234e2b7acfaa716f8d3aae332f259fdaa2c",
+          "rule": "azure/iot-central-application",
+          "from": "azure/iot-central-application",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:fbd398fc003ffa7651163e1a0c789156eb5121257e2b5eaf66cfa0748d0ab176",
+          "rule": "azure/iot-hub",
+          "from": "azure/iot-hub",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:72082a11d421938f4938711b5335b296445288170a6a1d3f5ba185af13f350fe",
+          "rule": "azure/iot-hub-device-provisioning-service",
+          "from": "azure/iot-provisioning-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:1df2dce22c246062571d2686b694d04bf54f1a671a91c9d32feb13f6ee10f541",
+          "rule": "azure/iot-hub-device-update-account",
+          "from": "azure/iot-update-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:33e729357e80270a34105b4fed6c55d1ccb9b869f98b968cdf345a8f9d2b1961",
+          "rule": "azure/key-vault",
+          "from": "azure/key-vault",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:04d0464d82b917211530edb06d3faf903a4fa94da3192565a9c2e96fe340531b",
+          "rule": "azure/key-vault-key",
+          "from": "core/encryption-key",
+          "to": "azure/key-vault",
+          "via": "source.key_vault_id"
+        },
+        {
+          "emission": "emission:7bac7a8e0b53785d8d2dbcc354541eebdbcbb172096ab4a371d38f698574c965",
+          "rule": "azure/key-vault-secret",
+          "from": "core/managed-secret",
+          "to": "azure/key-vault",
+          "via": "source.key_vault_id"
+        },
+        {
+          "emission": "emission:b16b8907b6f905048f898554068ad38a41dc24290b43737b9af617a412e76be9",
+          "rule": "azure/kubernetes-fleet",
+          "from": "azure/kubernetes-fleet",
           "to": "azure/resource-group",
           "via": "source.resource_group_name"
         },
@@ -1056,6 +1826,20 @@
           "via": "source.resource_group_name"
         },
         {
+          "emission": "emission:6d108f66f3e2299e8987809f463b6a46a727eb4161cc2e6dfc098253f96a38fa",
+          "rule": "azure/load-test",
+          "from": "azure/load-test",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:cb4e18ccfe3b2a032f947be6f5de9c1bb0da01ebd435b946a1019b957fbf700c",
+          "rule": "azure/local-network-gateway",
+          "from": "azure/local-network-gateway",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
           "emission": "emission:3be294a475d18a708b86ba7ed75419c3a069dab19f15dce90a2000c578a3f68e",
           "rule": "azure/log-analytics-cluster",
           "from": "azure/log-analytics-workspace",
@@ -1066,6 +1850,118 @@
           "emission": "emission:4c16afac4b7e188f977b7520b7702ae19e87adf54a316800943f013fd04a8c22",
           "rule": "azure/log-analytics-workspace",
           "from": "azure/log-analytics-workspace",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:be3db5e1bd6bd66a08ca92ff47f2d427f8abdbb8484a429c321f2284460fcc38",
+          "rule": "azure/logic-app-integration-account",
+          "from": "azure/integration-account",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:1d92c8322a6a8feecae83cec3d1a05ebcc22daf29764d7d25bf7c144680fd6e0",
+          "rule": "azure/logic-app-standard",
+          "from": "core/workflow",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:43079490d5bbc14ccf0f820515fdd26b09cc8f758a30f54189acac1e87c96373",
+          "rule": "azure/logic-app-workflow",
+          "from": "core/workflow",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:0ac0f89f1d11f368ea1ee75e31c44cde8b40e30d7913c5f411d6324cd059d561",
+          "rule": "azure/machine-learning-workspace",
+          "from": "azure/machine-learning-workspace",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:6a38b72ea6f7393c4cf9e5a3fb9adb70bd4373a17cbddc4d88b9c7b15316ee8e",
+          "rule": "azure/maintenance-configuration",
+          "from": "azure/maintenance-configuration",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:8c3f30386e960dd4878446c8b1cc75a6911a504df29181c3b9f79f3005430fed",
+          "rule": "azure/managed-application",
+          "from": "azure/managed-application",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:e5f43133a6ecdce7b8fdf2b4137a9fd88b8b026160fda843b5112c627e252835",
+          "rule": "azure/managed-devops-pool",
+          "from": "azure/developer-environment",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:3bcc70a2fb922da9da7cc3458bad61bb52df6595040416d22511d8857ef2160f",
+          "rule": "azure/managed-disk",
+          "from": "core/block-storage-volume",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:437d52c03f4b7e5bfaa284e756fec3f66d5099adb00b625e3559d748e841aea2",
+          "rule": "azure/managed-grafana",
+          "from": "azure/managed-grafana",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:ae4ba2e4c33746cb3566e76725ec6747c28f4dfa205d034b61743a336b2d7f51",
+          "rule": "azure/managed-hsm",
+          "from": "azure/managed-hsm",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:e07be8f5bf3767c0c599227c82fabc35f04008f50b2cfef675ab9c5aa9eb55ee",
+          "rule": "azure/managed-hsm-key",
+          "from": "core/encryption-key",
+          "to": "azure/managed-hsm",
+          "via": "source.managed_hsm_id"
+        },
+        {
+          "emission": "emission:c412b17779e534d912fae7dde3e489d09f54e01801d21e07b9ecd58e5b40b716",
+          "rule": "azure/managed-lustre-file-system",
+          "from": "core/managed-file-storage",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:1123f50045229b97cdfc5aa38ab7489018a3b5f9aa296709e85ba55c6605ae48",
+          "rule": "azure/managed-service-fabric-cluster",
+          "from": "azure/service-fabric-cluster",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:514c195230c8ce0167724a2180d09b410000a2ad22f9ed2ef427f71523fb1a78",
+          "rule": "azure/maps-account",
+          "from": "azure/maps-account",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:daae1e621e532f3e483aa5ae49195c9cfb4764ee5f4803239971403aa4e98b77",
+          "rule": "azure/mongo-cluster",
+          "from": "core/managed-database",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:71d7a724ab6185d1f0eb9207b2e90c0c8bc25ae2fd19b3c95fabb5fe49d6b899",
+          "rule": "azure/monitor-private-link-scope",
+          "from": "azure/private-link-scope",
           "to": "azure/resource-group",
           "via": "source.resource_group_name"
         },
@@ -1091,6 +1987,146 @@
           "via": "source.resource_group_name"
         },
         {
+          "emission": "emission:ead0c2fe48ebe459f0c8914d54bb62f8703a0728360d2653884f6ada77479cb4",
+          "rule": "azure/mysql-database",
+          "from": "core/managed-database",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:00da099b569ce400f83f78c639db4c8780066051e1ba82a720550e5a28b610e5",
+          "rule": "azure/mysql-flexible-server",
+          "from": "core/managed-database",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:e3d589086af32862a4547df04cee500d08f594c7ce022afe7e77e381694bdf0d",
+          "rule": "azure/nat-gateway",
+          "from": "core/managed-nat",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:65834a98975fe2eec27664b6617a2f60b819f21581abf8534bdc32141d5b7fd0",
+          "rule": "azure/netapp-account",
+          "from": "azure/netapp-account",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:3d80849c86025fb6eb694e5dedbd0010caafd40e6c577532e7c8d1452a8f5bbe",
+          "rule": "azure/netapp-backup-policy",
+          "from": "core/backup-plan",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:c28878aafe3001a2d6d32f98a6b2de00e4c7b70a38f40b5d97e5eaefad6f86fe",
+          "rule": "azure/netapp-backup-vault",
+          "from": "core/backup-vault",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:38bd73e575703ce39df06b749da61c1b6b0c2e03b2b66d9b56a46d1f1cd39b60",
+          "rule": "azure/netapp-capacity-pool",
+          "from": "azure/netapp-capacity-pool",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:0831fabab665fa76c9fdfc8c08740e6bd848eef19bf629d45f8da235a5cea1be",
+          "rule": "azure/netapp-volume",
+          "from": "core/managed-file-storage",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:47aa9b060530eae48c8963f522eaca526b9119b876ce6e01894a9e30865ebde1",
+          "rule": "azure/network-function-traffic-collector",
+          "from": "azure/network-function-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:eb439d0b9969063a14d17f94f9e76bc2f0b85650acbe240cb40c90a2daef6863",
+          "rule": "azure/network-security-group",
+          "from": "azure/network-security-group",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:e98bf5c33d6c105c48c41939ed68a57ffda9ffa03bf74d81909ed7fdffa37b90",
+          "rule": "azure/network-security-perimeter",
+          "from": "azure/network-security-perimeter",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:d344bcfcdb5fd2204eb0dd196d0eb785617a732ac6846ae27ce40fd94bfa54ca",
+          "rule": "azure/network-watcher",
+          "from": "azure/network-watcher",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:d325a255094d9a4be3f66c63e987219c4cd472ed62c2f51d588c621e7f18041a",
+          "rule": "azure/new-relic-monitor",
+          "from": "azure/third-party-monitor",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:1d640f12fb73924b5fc56f21a31ac9de76a644b816d613cd2b85d89d89001420",
+          "rule": "azure/nginx-deployment",
+          "from": "azure/hybrid-platform",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:9f01e13220c5d8a65c22f1645b4b5d0429769df60b6d9287daa9741105181b43",
+          "rule": "azure/notification-hub",
+          "from": "azure/notification-hub",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:a9008780ca51b7683432112f446bc5d7e0290d2d3acda40c59f3650aed6fbdf7",
+          "rule": "azure/notification-hubs-namespace",
+          "from": "azure/notification-namespace",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:3f855c6a7a5346d6167eb2be864d0c6a45e38542289a41ecbd5f5b6c2ec7cdd5",
+          "rule": "azure/oracle-autonomous-database",
+          "from": "core/managed-database",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:c1d182596a75857bb688099af9a8ddc963388d91679dcc013ea76bbb79b56394",
+          "rule": "azure/oracle-cloud-vm-cluster",
+          "from": "azure/hybrid-platform",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:53bf45d2dcb34d3908934613e74ab8c9ff828abe002e9e043ee5ac9195c8f5f8",
+          "rule": "azure/oracle-exadata-infrastructure",
+          "from": "azure/hybrid-platform",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:ee421b6138cbc56e3f3182af91fc6cb9d61bb5a2a112ec15c83bf48c6705da4c",
+          "rule": "azure/oracle-resource-anchor",
+          "from": "azure/hybrid-platform",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
           "emission": "emission:4123b76db0af4a853724cafa47a1a94f4e0d6edece8a78ee226e3ff2a04ae287",
           "rule": "azure/orchestrated-virtual-machine-scale-set",
           "from": "azure/virtual-machine-scale-set",
@@ -1098,9 +2134,44 @@
           "via": "source.resource_group_name"
         },
         {
+          "emission": "emission:c1f438cd1290aa4983fb27dbcd187e4e7324f2f025e3f51dc5ef4c4788ae09a3",
+          "rule": "azure/palo-alto-firewall",
+          "from": "azure/hybrid-platform",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:cdba26ee3efb56283639336919e1a32308aea18827568813bfe7919a71b5bfd0",
+          "rule": "azure/playwright-workspace",
+          "from": "azure/developer-environment",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:7ab3ed6515864b576cc9b770192e6ce0be9c82db8362397e3e63d291fc8d9c8a",
+          "rule": "azure/point-to-site-vpn-gateway",
+          "from": "core/vpn-gateway",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
           "emission": "emission:eaa7acb6130c603ac7efc7c33ccb1724622c8a0592e9c14d48241a3c4c8c4b11",
           "rule": "azure/postgresql-flexible-server",
           "from": "core/managed-database",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:420c86969097eb7924e1b1cf55761ce588148d5aeeb6949e2d1f7508107c1191",
+          "rule": "azure/power-bi-embedded-capacity",
+          "from": "azure/analytics-cluster",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:ec792b12086fafb4f0017a846c44adfc9343d341a4fcd628fa8ddc592b82daa6",
+          "rule": "azure/private-dns-resolver",
+          "from": "azure/private-dns-resolver",
           "to": "azure/resource-group",
           "via": "source.resource_group_name"
         },
@@ -1119,9 +2190,107 @@
           "via": "source.resource_group_name"
         },
         {
+          "emission": "emission:e8f9f51279317332511a96ff055ef9104a3a8e7adf526fc49cda19beeab8101d",
+          "rule": "azure/private-link-service",
+          "from": "azure/private-link-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
           "emission": "emission:b8990fe6aff08226d7b67f2781940a09dba8baa9f15ab84151262feb32ed7bb5",
           "rule": "azure/public-address",
           "from": "azure/public-address",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:4a3514d4f2d88b28559513f9c76ed1ff63959fdd1074f9553d8465e21dc4596b",
+          "rule": "azure/public-ip-prefix",
+          "from": "azure/public-address",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:a1e2127510d11bfbe1432876fc29a863992004b9b1c155b1aeabc5b4079bb589",
+          "rule": "azure/purview-account",
+          "from": "azure/purview-account",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:8fc61eb934eaef4644fd4a76977e98a4c7fd221edb4d8c7207bcaad2eb95f635",
+          "rule": "azure/queue-storage-queue",
+          "from": "core/message-queue",
+          "to": "azure/storage-account",
+          "via": "source.storage_account_id"
+        },
+        {
+          "emission": "emission:b8361448edc20f03dbcdea9867920eb98756140b64b4fb5cc4aec85165137e95",
+          "rule": "azure/qumulo-file-system",
+          "from": "core/managed-file-storage",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:6e339495715439298fd71201f25fe44ca577de2c59724725e512e581a9521c99",
+          "rule": "azure/recovery-services-vault",
+          "from": "core/backup-vault",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:bf44a2af5db339f3641f6d1777f06fbf35a112fa20e830bd32a969457f7c25bb",
+          "rule": "azure/red-hat-openshift-cluster",
+          "from": "core/kubernetes-cluster",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:e28f3ae72e81be816df32941b7b23672cbfc0e1463981474ad0d0514f0d1d473",
+          "rule": "azure/relay-hybrid-connection",
+          "from": "azure/relay-connection",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:766ef60b869bf4d2b628c579b33c6fab9fead3bf6620f569646bd0b8ec9ec957",
+          "rule": "azure/relay-namespace",
+          "from": "azure/relay-namespace",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:db66e4dc775da9ccc716bcf329d9cf37afbac8999e4b615efa3f8a3accfc6c93",
+          "rule": "azure/route-server",
+          "from": "azure/route-table",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:5b19574f9fde516fcd8f2aa0360b30b4b9bdcdcf0653144e3f1ee07f81b4b3c5",
+          "rule": "azure/route-table",
+          "from": "azure/route-table",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:eb0931442c5f5c2cbbe67e150fb0e4c2c3ae1043a14c6db5352a11011b198d24",
+          "rule": "azure/sap-discovery-virtual-instance",
+          "from": "azure/hybrid-platform",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:cbbb63634b0ebff83622336c70cd0113903b6057d05652081b12ed7b4a9e2974",
+          "rule": "azure/sap-single-node-virtual-instance",
+          "from": "azure/hybrid-platform",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:f2ebdd630cb3f31bf8803c2119683b320177710e23f3f29c3012c41fa8ffec6c",
+          "rule": "azure/sap-three-tier-virtual-instance",
+          "from": "azure/hybrid-platform",
           "to": "azure/resource-group",
           "via": "source.resource_group_name"
         },
@@ -1140,16 +2309,121 @@
           "via": "source.namespace_id"
         },
         {
+          "emission": "emission:748e98905c1982b15e79745043d0f5cc3716b68cb109301746ed2734cc6c5921",
+          "rule": "azure/service-bus-subscription",
+          "from": "core/message-subscription",
+          "to": "azure/service-bus-topic",
+          "via": "source.topic_id"
+        },
+        {
           "emission": "emission:4093602cd75310d788937ebf226ab2e35abb8212afae583dcd16f33e61483373",
           "rule": "azure/service-bus-topic",
-          "from": "core/message-topic",
+          "from": "azure/service-bus-topic",
           "to": "azure/messaging-namespace",
           "via": "source.namespace_id"
+        },
+        {
+          "emission": "emission:d6af55096e1f8845f19b0862f9e12dd08e2ff0682b08c2d1b16f19ec92a448b9",
+          "rule": "azure/service-fabric-cluster",
+          "from": "azure/service-fabric-cluster",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:84e216bc581064cb6bd2a4e3047b53b40b4460e5f8076abb3c6debe44d01a2fe",
+          "rule": "azure/shared-image",
+          "from": "azure/compute-image",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:e724dcf39ef46cd2e6650b571b6f78e464522a74709b0e93083fed1dd09b0923",
+          "rule": "azure/signalr-service",
+          "from": "azure/realtime-communication-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:c1e03f9992b17b3d8e4ef57e16ddf6c8b1c59c08c51fe90ecc8b39e9fb9c48b7",
+          "rule": "azure/site-recovery-fabric",
+          "from": "azure/site-recovery-fabric",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:0273c4c92d207e1f5275af0334b8dc5795e360b13bd7c977e70f1f474d845523",
+          "rule": "azure/site-recovery-protection-container",
+          "from": "azure/site-recovery-fabric",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:b90e8e063d3a2fc30271a16a207d5469c8fcfdb200c6cce01ca84d44fd610deb",
+          "rule": "azure/spring-app",
+          "from": "azure/spring-app",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:1e1f0f391458690db2e9ec527a55cc3c188baf506da08827333ccb8ceb6d626b",
+          "rule": "azure/spring-apps-service",
+          "from": "azure/spring-apps-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:5b153b8e881e857b352c48a2bd7f2103788001e17d8417689ac9f4e51d9998a0",
+          "rule": "azure/sql-managed-instance",
+          "from": "core/managed-database",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:e626857ee1cfb1ecf6bfc3673ee5bf3a05290bf5ac847c9975d5e30a5a6a8e54",
+          "rule": "azure/stack-hci-virtual-hard-disk",
+          "from": "core/block-storage-volume",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:4507be5eaa7531c1c963ac54712e18bdb489f4f25d6d705b3ffa470e40ddb8d2",
+          "rule": "azure/static-web-app",
+          "from": "azure/static-web-app",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
         },
         {
           "emission": "emission:7915dff1c161aa4f66a73b4ba83bc6741f0e085e015fa8afcceb7e8e01ddfb54",
           "rule": "azure/storage-account",
           "from": "azure/storage-account",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:27e9e057153687afc2b55d75a941f729b9fa14507b5b1c35ab9bb56b8cd2f65a",
+          "rule": "azure/storage-mover",
+          "from": "azure/migration-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:4b9509db49999549259dafefbc34a36f177feb392deba324663b91b36e4a6d43",
+          "rule": "azure/storage-sync-service",
+          "from": "azure/storage-sync-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:e13ba0cead0bb87d6d4386c9ba875d2a773ce56b9765d0eda59005de47069065",
+          "rule": "azure/stream-analytics-cluster",
+          "from": "azure/analytics-cluster",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:0799ac0174bad93ef4205831af4f3fe07e560f43c22d1dc266df3eefcadc6c4a",
+          "rule": "azure/stream-analytics-job",
+          "from": "azure/stream-analytics-job",
           "to": "azure/resource-group",
           "via": "source.resource_group_name"
         },
@@ -1161,6 +2435,48 @@
           "via": "source.resource_group_name"
         },
         {
+          "emission": "emission:8113ddaa087be6a7549277176e365003a687430cd2d9aa5f0a0aa0823a3585f0",
+          "rule": "azure/synapse-private-link-hub",
+          "from": "azure/private-link-scope",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:efc791371a1cd323c5cdcdbbb8b91da1a110a8308bbb04616ef0d8dd2a14d41f",
+          "rule": "azure/synapse-workspace",
+          "from": "azure/synapse-workspace",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:dec4fac47d53b9c7402b976ef1442b76fab1b81810c2f3f71b54fa1ca25ee1ec",
+          "rule": "azure/system-center-vmm-server",
+          "from": "azure/hybrid-platform",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:29352ed5c86dbac411b2362ebc7a49c9568539d59ef733fd41736043223425e3",
+          "rule": "azure/table-storage-table",
+          "from": "azure/table-storage-table",
+          "to": "azure/storage-account",
+          "via": "source.storage_account_id"
+        },
+        {
+          "emission": "emission:c0e964e7f2f746d274cc5f55bec8c75ba1d429f9c4465a168c100d06b2f20c7a",
+          "rule": "azure/traffic-manager-profile",
+          "from": "azure/traffic-manager-profile",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:62dfab85553ffc0f699558f82ea823e8cb639b6ad01339fafed8769d107c4702",
+          "rule": "azure/trusted-signing-account",
+          "from": "azure/trusted-signing-account",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
           "emission": "emission:5438cc18cfa50fe20b18dc5de92d60d2ea4802b09a86a2864125edd6b7986b76",
           "rule": "azure/user-assigned-managed-identity",
           "from": "core/service-identity",
@@ -1168,9 +2484,51 @@
           "via": "source.resource_group_name"
         },
         {
+          "emission": "emission:08bca4ab794e9fcac7070b3875709553e6ebd33b69e280fdb6f98539b0067824",
+          "rule": "azure/video-indexer-account",
+          "from": "azure/video-indexer-account",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:a9b9c0868fcfdd257e13cd2e0775ec1d5dc3e6f6ce04f6f8990c9add56204772",
+          "rule": "azure/virtual-desktop-application-group",
+          "from": "azure/virtual-desktop-application-group",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:ebaab7b119337e912c7bf117fbcabbce83f7d0e7290463512ccecba8e96d7df1",
+          "rule": "azure/virtual-desktop-host-pool",
+          "from": "azure/virtual-desktop-host-pool",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:630c0f972d3e1a4836d23b64e21c19f6bad2014c8237a68202827eff2ebc5572",
+          "rule": "azure/virtual-desktop-workspace",
+          "from": "azure/virtual-desktop-workspace",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:f828a595183178f2c3f1019685f5f2b518831aca3a313d68909a8ad85253fe52",
+          "rule": "azure/virtual-hub",
+          "from": "azure/virtual-hub",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
           "emission": "emission:589cfe53aca898b36112199997b05fd05ce3e9b74e6766d3ea42eeeb8e423583",
           "rule": "azure/virtual-machine",
           "from": "core/compute-instance",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:49fa68af20829a87ad4d6a16bfba7d797c768ad1ce543830687f0d51cb0b9402",
+          "rule": "azure/virtual-machine-backup-policy",
+          "from": "core/backup-plan",
           "to": "azure/resource-group",
           "via": "source.resource_group_name"
         },
@@ -1185,6 +2543,83 @@
           "emission": "emission:c28f5d6e6daebcc05fd6cdb9eeadd2645fd0b7871ac6709988d52c88dcecd75d",
           "rule": "azure/virtual-network",
           "from": "core/virtual-network",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:8e1fbfe0b3dc772fcbf8fb0aa3547c15984b0c01c2e7cf5b38e239c59a975458",
+          "rule": "azure/virtual-network-gateway",
+          "from": "core/vpn-gateway",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:0877f4dc1e38d7d5c42f2ef17d887dae57c619f3939a688eb1ce17a8468cd823",
+          "rule": "azure/virtual-network-gateway-connection",
+          "from": "core/vpn-connection",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:1661021f781ffad2f5d1d91b6a80c5445914ebffff58056462133f38e78a2587",
+          "rule": "azure/virtual-network-manager",
+          "from": "azure/virtual-network-manager",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:f233432c512f25174e58954add9e968d61a5ca71ad0c5b592d53cc18ce9e0c84",
+          "rule": "azure/virtual-network-peering",
+          "from": "core/network-peering",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:8b92e77b701b97fa69ccbd56bddb3e4f5b39b6e2002640c46fdb265e985fd85e",
+          "rule": "azure/virtual-wan",
+          "from": "azure/virtual-wan",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:1b4ace1f538e23e04b4579aab40cb66babd6e41fa12be3a338cd4915973f0632",
+          "rule": "azure/vmware-private-cloud",
+          "from": "azure/vmware-private-cloud",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:5ed0ff5a545671dbdec49ef5f2914d2b24acf623bf55cc648899f38b425d376d",
+          "rule": "azure/vpn-gateway",
+          "from": "core/vpn-gateway",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:f12b0119008560a0037a5a3d9e6e826e2fa50d1dfad36a50c7a7af8150ab555c",
+          "rule": "azure/vpn-site",
+          "from": "azure/local-network-gateway",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:3654fbde15dbad24b3a70ca8019717c091a78a0620592f54b078f98f578cc6b6",
+          "rule": "azure/web-application-firewall-policy",
+          "from": "azure/web-application-firewall-policy",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:6b61ac4106496574fcf36335c6bb98054253877adf5351e86bb2a774159e3d93",
+          "rule": "azure/web-pubsub",
+          "from": "azure/realtime-communication-service",
+          "to": "azure/resource-group",
+          "via": "source.resource_group_name"
+        },
+        {
+          "emission": "emission:485180fc13837797fecd3c5675d9d9501228b45b606df148de21bb5b5bb713fd",
+          "rule": "azure/windows-function-app",
+          "from": "core/serverless-function",
           "to": "azure/resource-group",
           "via": "source.resource_group_name"
         },

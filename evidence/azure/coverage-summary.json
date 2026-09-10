@@ -1,14 +1,32 @@
 {
   "format_version": "1",
   "showcase_delta": {
-    "verified_date": "2026-09-09",
-    "relations_added": ["delivers-to", "observed-by", "subscribes-to"],
+    "verified_date": "2026-09-10",
+    "relations_added": [
+      "delivers-to",
+      "observed-by",
+      "peers-with",
+      "subscribes-to",
+      "uses-waf-policy"
+    ],
     "contexts_added": ["core/network", "core/ownership", "core/runtime"],
-    "contributions_asserted": ["private DNS link to zone and VNet", "NAT association to subnet and NAT gateway"],
-    "implemented_candidates": 15,
+    "contributions_asserted": [
+      "private DNS link to zone and VNet",
+      "NAT association to subnet and NAT gateway"
+    ],
+    "implemented_candidates": 19,
     "blocked_candidates": 1
   },
-  "matrix_sha256": "sha256:831f73d982a020a8b6b746ac98689c5b8cb5fce42f4de1b77722e87571eb85ce",
+  "ownership_membership_sweep": {
+    "verified_date": "2026-09-10",
+    "resource_group_ownership_contexts_added": 188,
+    "scope_membership_contexts_added": 17,
+    "detail_contributions_added": 31,
+    "structural_topic_concepts_added": 2,
+    "system_topic_event_subscription_relations_added": 6,
+    "rules_added": 7,
+    "refused_candidates": 3
+  },
   "total_rows": 1970,
   "by_inventory": {
     "provider_constructs": 1773,
@@ -20,18 +38,18 @@
     "azuread": 74,
     "azurerm": 1679
   },
-  "represented_rules": 417,
+  "represented_rules": 424,
   "by_decision": {
-    "supported": 324,
-    "partial": 230,
-    "intentionally-unrepresented": 1415,
+    "supported": 326,
+    "partial": 235,
+    "intentionally-unrepresented": 1408,
     "unsupported": 1
   },
   "by_declaration_outcome": {
-    "represented": 418,
+    "represented": 425,
     "supporting": 0,
     "filtered": 0,
-    "unsupported": 1170,
+    "unsupported": 1163,
     "failed": 0,
     "not-applicable": 382
   },

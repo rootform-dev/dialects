@@ -1080,6 +1080,13 @@
       "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure VMware Solution private cloud."
+    },
+    {
+      "name": "web-application-firewall-policy",
+      "family": "network",
+      "kind": "entity",
+      "identity": "azure/firewall",
+      "description": "A reusable Azure Web Application Firewall policy applied to Application Gateway traffic."
     }
   ],
   "rules": [
@@ -2745,6 +2752,16 @@
       "terraform_type": "azurerm_eventgrid_domain"
     },
     {
+      "concept": "core/message-topic",
+      "family": "messaging-eventing",
+      "identity": "azure/event-grid",
+      "label": "Azure Event Grid domain topic",
+      "mode": "authored",
+      "provider": "azurerm",
+      "rule": "event-grid-domain-topic",
+      "terraform_type": "azurerm_eventgrid_domain_topic"
+    },
+    {
       "concept": "core/message-subscription",
       "family": "messaging-eventing",
       "identity": "azure/event-grid",
@@ -3426,6 +3443,36 @@
       "terraform_type": "azurerm_log_analytics_cluster"
     },
     {
+      "concept": "azure/operations-detail",
+      "family": "operations",
+      "identity": "azure/monitor",
+      "label": "Azure Log Analytics data export rule",
+      "mode": "authored",
+      "provider": "azurerm",
+      "rule": "log-analytics-data-export-rule",
+      "terraform_type": "azurerm_log_analytics_data_export_rule"
+    },
+    {
+      "concept": "azure/operations-detail",
+      "family": "operations",
+      "identity": "azure/monitor",
+      "label": "Azure Log Analytics saved search",
+      "mode": "authored",
+      "provider": "azurerm",
+      "rule": "log-analytics-saved-search",
+      "terraform_type": "azurerm_log_analytics_saved_search"
+    },
+    {
+      "concept": "azure/operations-detail",
+      "family": "operations",
+      "identity": "azure/monitor",
+      "label": "Azure Log Analytics solution",
+      "mode": "authored",
+      "provider": "azurerm",
+      "rule": "log-analytics-solution",
+      "terraform_type": "azurerm_log_analytics_solution"
+    },
+    {
       "concept": "azure/log-analytics-workspace",
       "family": "operations",
       "identity": "azure/monitor",
@@ -3434,6 +3481,16 @@
       "provider": "azurerm",
       "rule": "log-analytics-workspace",
       "terraform_type": "azurerm_log_analytics_workspace"
+    },
+    {
+      "concept": "azure/operations-detail",
+      "family": "operations",
+      "identity": "azure/monitor",
+      "label": "Azure Log Analytics workspace table",
+      "mode": "authored",
+      "provider": "azurerm",
+      "rule": "log-analytics-workspace-table",
+      "terraform_type": "azurerm_log_analytics_workspace_table"
     },
     {
       "concept": "azure/api-management-detail",
@@ -3774,6 +3831,26 @@
       "provider": "azurerm",
       "rule": "nat-gateway",
       "terraform_type": "azurerm_nat_gateway"
+    },
+    {
+      "concept": "azure/network-policy-detail",
+      "family": "network",
+      "identity": "generic/network",
+      "label": "NAT Gateway public IP address association",
+      "mode": "authored",
+      "provider": "azurerm",
+      "rule": "nat-gateway-public-ip-association",
+      "terraform_type": "azurerm_nat_gateway_public_ip_association"
+    },
+    {
+      "concept": "azure/network-policy-detail",
+      "family": "network",
+      "identity": "generic/network",
+      "label": "NAT Gateway public IP prefix association",
+      "mode": "authored",
+      "provider": "azurerm",
+      "rule": "nat-gateway-public-ip-prefix-association",
+      "terraform_type": "azurerm_nat_gateway_public_ip_prefix_association"
     },
     {
       "concept": "azure/netapp-account",
@@ -5197,7 +5274,7 @@
       "terraform_type": "azurerm_vpn_site"
     },
     {
-      "concept": "azure/firewall-policy",
+      "concept": "azure/web-application-firewall-policy",
       "family": "network",
       "identity": "azure/firewall",
       "label": "Azure Web Application Firewall policy",

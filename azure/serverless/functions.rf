@@ -70,4 +70,10 @@ rule "windows-function-app" {
   }
 
   as = concept.core.serverless-function
+
+  context {
+    as  = context.core.ownership
+    to  = concept.resource-group
+    via = source.resource_group_name
+  }
 }

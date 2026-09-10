@@ -8,3 +8,13 @@ concept "messaging-namespace" {
   kind        = scope
   description = "An Azure messaging namespace owning queues, topics, or event streams."
 }
+
+concept "service-bus-topic" {
+  kind        = scope
+  description = "An Azure Service Bus topic owning durable subscriptions."
+}
+
+concept "event-grid-topic" {
+  kind        = scope
+  description = "An Azure Event Grid custom, domain, or system topic owning event subscriptions."
+}

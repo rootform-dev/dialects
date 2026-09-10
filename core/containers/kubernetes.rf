@@ -1,6 +1,6 @@
 concept "kubernetes-cluster" {
-  kind        = entity
-  description = "A Kubernetes cluster providing a workload runtime."
+  kind        = scope
+  description = "A Kubernetes cluster forming a workload runtime boundary for its namespaced resources."
 }
 
 concept "kubernetes-node-pool" {
