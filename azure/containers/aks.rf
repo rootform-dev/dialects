@@ -35,6 +35,12 @@ rule "aks-node-pool" {
 
   as = concept.core.kubernetes-node-pool
 
+  context {
+    as  = context.core.network
+    to  = concept.core.subnet
+    via = source.vnet_subnet_id
+  }
+
   contribution {
     to  = concept.core.kubernetes-cluster
     via = source.kubernetes_cluster_id

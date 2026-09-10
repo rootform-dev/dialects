@@ -7,7 +7,9 @@
       "path": "private_service_connection[0].private_connection_resource_id",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/private_endpoint",
       "quote": "The ID of the Private Link Enabled Remote Resource which this Private Endpoint should be connected to.",
-      "schema_bounds": ["private_service_connection max_items=1"],
+      "schema_bounds": [
+        "private_service_connection max_items=1"
+      ],
       "decision": "blocked: multi-concept target requires soft concept filtering"
     },
     {
@@ -20,7 +22,10 @@
     },
     {
       "candidate": "AZ-07",
-      "rules": ["azure/service-bus-queue", "azure/service-bus-topic"],
+      "rules": [
+        "azure/service-bus-queue",
+        "azure/service-bus-topic"
+      ],
       "path": "namespace_id",
       "fact": "core/ownership to azure/messaging-namespace",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/servicebus_queue",
@@ -39,16 +44,24 @@
       "fact": "delivers-to explicit handler",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/eventgrid_event_subscription",
       "quote": "Specifies the ID of the Function where the Event Subscription will receive events.",
-      "schema_bounds": ["azure_function_endpoint max_items=1", "storage_queue_endpoint max_items=1"]
+      "schema_bounds": [
+        "azure_function_endpoint max_items=1",
+        "storage_queue_endpoint max_items=1"
+      ]
     },
     {
       "candidate": "AZ-10",
-      "rules": ["azure/linux-function-app", "azure/windows-function-app"],
+      "rules": [
+        "azure/linux-function-app",
+        "azure/windows-function-app"
+      ],
       "path": "site_config[0].application_insights_connection_string",
       "fact": "observed-by azure/application-insights",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/linux_function_app",
       "quote": "The Connection String for linking the Linux Function App to Application Insights.",
-      "schema_bounds": ["site_config max_items=1 for both function app resource types"]
+      "schema_bounds": [
+        "site_config max_items=1 for both function app resource types"
+      ]
     },
     {
       "candidate": "AZ-11",
@@ -57,12 +70,17 @@
       "fact": "observed-by azure/log-analytics-workspace",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/kubernetes_cluster",
       "quote": "The ID of the Log Analytics Workspace which the OMS Agent should send data to.",
-      "schema_bounds": ["oms_agent max_items=1"]
+      "schema_bounds": [
+        "oms_agent max_items=1"
+      ]
     },
     {
       "candidate": "AZ-14",
       "rule": "azure/virtual-network-peering",
-      "paths": ["virtual_network_name", "remote_virtual_network_id"],
+      "paths": [
+        "virtual_network_name",
+        "remote_virtual_network_id"
+      ],
       "fact": "core/network to the local virtual network; azure/peers-with to the remote virtual network",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/virtual_network_peering",
       "quote": "The name of the virtual network. The full Azure resource ID of the remote virtual network."
@@ -70,7 +88,10 @@
     {
       "candidate": "AZ-15",
       "rule": "azure/subnet-nat-gateway-association",
-      "paths": ["subnet_id", "nat_gateway_id"],
+      "paths": [
+        "subnet_id",
+        "nat_gateway_id"
+      ],
       "fact": "contributes to subnet and managed NAT",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/subnet_nat_gateway_association",
       "quote": "The ID of the NAT Gateway which should be associated with the Subnet."
@@ -134,7 +155,10 @@
     },
     {
       "candidate": "AZ-24",
-      "rules": ["azure/container-app", "azure/container-app-job"],
+      "rules": [
+        "azure/container-app",
+        "azure/container-app-job"
+      ],
       "path": "container_app_environment_id",
       "fact": "core/runtime to azure/container-app-environment",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/container_app_job",
@@ -158,8 +182,14 @@
     },
     {
       "candidate": "AZ-29",
-      "rules": ["azure/service-bus-topic", "azure/service-bus-subscription"],
-      "paths": ["namespace_id", "topic_id"],
+      "rules": [
+        "azure/service-bus-topic",
+        "azure/service-bus-subscription"
+      ],
+      "paths": [
+        "namespace_id",
+        "topic_id"
+      ],
       "fact": "namespace -> service-bus-topic -> subscription ownership chain",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/servicebus_subscription",
       "normative_url": "https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions",
@@ -173,7 +203,11 @@
         "azure/event-grid-system-topic",
         "azure/event-grid-system-topic-subscription"
       ],
-      "paths": ["domain_name", "resource_group_name", "system_topic"],
+      "paths": [
+        "domain_name",
+        "resource_group_name",
+        "system_topic"
+      ],
       "fact": "custom, domain, and system topics are scopes; system topic subscription owns exact system topic",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/eventgrid_system_topic_event_subscription",
       "normative_urls": [
@@ -182,6 +216,51 @@
         "https://learn.microsoft.com/en-us/azure/event-grid/concepts"
       ],
       "quote": "The System Topic where the Event Subscription should be created in."
+    },
+    {
+      "candidate": "AZ-31",
+      "rule": "azure/postgresql-flexible-server",
+      "path": "delegated_subnet_id",
+      "fact": "core/network placement in the delegated subnet",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/postgresql_flexible_server",
+      "normative_urls": [
+        "https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/concepts-networking-private"
+      ],
+      "quote": "The ID of the virtual network subnet to create the PostgreSQL Flexible Server. The provided subnet should not have any other resource deployed in it and this subnet should be delegated to the PostgreSQL Flexible Server."
+    },
+    {
+      "candidate": "AZ-32",
+      "rule": "azure/aks-node-pool",
+      "path": "vnet_subnet_id",
+      "fact": "core/network placement of node pool nodes in the exact subnet",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/kubernetes_cluster_node_pool",
+      "normative_urls": [
+        "https://learn.microsoft.com/en-us/azure/aks/concepts-network-cni-overview"
+      ],
+      "quote": "The ID of the Subnet where this Node Pool should exist."
+    },
+    {
+      "candidate": "AZ-33",
+      "rule": "azure/application-gateway",
+      "path": "gateway_ip_configuration[0].subnet_id",
+      "fact": "core/network placement in the dedicated gateway subnet",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/application_gateway",
+      "normative_urls": [
+        "https://learn.microsoft.com/en-us/azure/application-gateway/configuration-infrastructure"
+      ],
+      "quote": "The ID of the Subnet which the Application Gateway should be connected to."
+    },
+    {
+      "candidate": "AZ-34",
+      "rule": "azure/load-balancer",
+      "path": "frontend_ip_configuration[*].subnet_id",
+      "fact": "core/network placement of an internal load balancer frontend",
+      "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/lb",
+      "quote": "The ID of the Subnet which should be associated with the IP Configuration.",
+      "schema_bounds": [
+        "frontend_ip_configuration is a repeated block with no max_items"
+      ],
+      "decision": "blocked: a load balancer may declare public and private frontends in any order, so no single index yields a determinate placement"
     }
   ],
   "ownership_membership_sweep": {
@@ -2622,7 +2701,9 @@
         "path": "gateway_ip_configuration[*].subnet_id",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/application_gateway",
         "quote": "The ID of the Subnet which the Application Gateway should be connected to.",
-        "schema_bounds": ["gateway_ip_configuration max_items=2"],
+        "schema_bounds": [
+          "gateway_ip_configuration max_items=2"
+        ],
         "decision": "no fact: block is not bounded to one item, so no fixed index is admissible"
       }
     ]
@@ -2647,7 +2728,9 @@
       "prior_concept": "core/kubernetes-cluster",
       "current_concept": "core/kubernetes-cluster",
       "decision": "retained",
-      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "changes": [
+        "retained after exact provider, terminology, and semantic audit"
+      ],
       "verified_paths": [
         {
           "path": "$resource",
@@ -2675,7 +2758,11 @@
           "status": "attribute"
         }
       ],
-      "evidence_refs": ["provider-baseline", "provider-compatibility", "rule:azure/aks-cluster"]
+      "evidence_refs": [
+        "provider-baseline",
+        "provider-compatibility",
+        "rule:azure/aks-cluster"
+      ]
     },
     {
       "rule_id": "azure/aks-node-pool",
@@ -2684,8 +2771,10 @@
       "official_label": "AKS node pool",
       "prior_concept": "core/kubernetes-node-pool",
       "current_concept": "core/kubernetes-node-pool",
-      "decision": "retained",
-      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "decision": "modified",
+      "changes": [
+        "placed node pool nodes in the exact subnet declared by vnet_subnet_id"
+      ],
       "verified_paths": [
         {
           "path": "$resource",
@@ -2693,12 +2782,21 @@
           "status": "present"
         },
         {
+          "path": "vnet_subnet_id",
+          "role": "source",
+          "status": "attribute"
+        },
+        {
           "path": "kubernetes_cluster_id",
           "role": "source",
           "status": "attribute"
         }
       ],
-      "evidence_refs": ["provider-baseline", "provider-compatibility", "rule:azure/aks-node-pool"]
+      "evidence_refs": [
+        "provider-baseline",
+        "provider-compatibility",
+        "rule:azure/aks-node-pool"
+      ]
     },
     {
       "rule_id": "azure/application-gateway",
@@ -2707,13 +2805,20 @@
       "official_label": "Azure Application Gateway",
       "prior_concept": "core/load-balancer",
       "current_concept": "core/load-balancer",
-      "decision": "retained",
-      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "decision": "modified",
+      "changes": [
+        "placed the gateway in the dedicated subnet declared by gateway_ip_configuration"
+      ],
       "verified_paths": [
         {
           "path": "$resource",
           "role": "source",
           "status": "present"
+        },
+        {
+          "path": "gateway_ip_configuration[0].subnet_id",
+          "role": "source",
+          "status": "attribute"
         },
         {
           "path": "resource_group_name",
@@ -2740,7 +2845,9 @@
       "prior_concept": "core/load-balancer",
       "current_concept": "core/load-balancer",
       "decision": "retained",
-      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "changes": [
+        "retained after exact provider, terminology, and semantic audit"
+      ],
       "verified_paths": [
         {
           "path": "$resource",
@@ -2758,7 +2865,11 @@
           "status": "attribute"
         }
       ],
-      "evidence_refs": ["provider-baseline", "provider-compatibility", "rule:azure/load-balancer"]
+      "evidence_refs": [
+        "provider-baseline",
+        "provider-compatibility",
+        "rule:azure/load-balancer"
+      ]
     },
     {
       "rule_id": "azure/load-balancer-backend-pool",
@@ -2768,7 +2879,9 @@
       "prior_concept": "azure/load-balancer-component",
       "current_concept": "azure/load-balancer-component",
       "decision": "retained",
-      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "changes": [
+        "retained after exact provider, terminology, and semantic audit"
+      ],
       "verified_paths": [
         {
           "path": "$resource",
@@ -2795,7 +2908,9 @@
       "prior_concept": "azure/load-balancer-component",
       "current_concept": "azure/load-balancer-component",
       "decision": "retained",
-      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "changes": [
+        "retained after exact provider, terminology, and semantic audit"
+      ],
       "verified_paths": [
         {
           "path": "$resource",
@@ -2838,7 +2953,11 @@
           "status": "attribute"
         }
       ],
-      "evidence_refs": ["provider-baseline", "provider-compatibility", "rule:azure/mssql-database"]
+      "evidence_refs": [
+        "provider-baseline",
+        "provider-compatibility",
+        "rule:azure/mssql-database"
+      ]
     },
     {
       "rule_id": "azure/mssql-server",
@@ -2868,7 +2987,11 @@
           "status": "attribute"
         }
       ],
-      "evidence_refs": ["provider-baseline", "provider-compatibility", "rule:azure/mssql-server"]
+      "evidence_refs": [
+        "provider-baseline",
+        "provider-compatibility",
+        "rule:azure/mssql-server"
+      ]
     },
     {
       "rule_id": "azure/postgresql-flexible-server",
@@ -2878,7 +3001,10 @@
       "prior_concept": "core/managed-database",
       "current_concept": "core/managed-database",
       "decision": "modified",
-      "changes": ["reused core DNS zone identity for private name resolution"],
+      "changes": [
+        "reused core DNS zone identity for private name resolution",
+        "stated delegated subnet injection as placement instead of reachability"
+      ],
       "verified_paths": [
         {
           "path": "$resource",
@@ -2930,7 +3056,9 @@
       "prior_concept": "azure/private-dns-zone",
       "current_concept": "core/dns-zone",
       "decision": "modified",
-      "changes": ["reused core DNS zone identity and removed duplicated Azure concept"],
+      "changes": [
+        "reused core DNS zone identity and removed duplicated Azure concept"
+      ],
       "verified_paths": [
         {
           "path": "$resource",
@@ -2962,7 +3090,9 @@
       "prior_concept": "azure/private-network-link",
       "current_concept": "azure/private-network-link",
       "decision": "retained",
-      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "changes": [
+        "retained after exact provider, terminology, and semantic audit"
+      ],
       "verified_paths": [
         {
           "path": "$resource",
@@ -2994,7 +3124,9 @@
       "prior_concept": "core/private-endpoint",
       "current_concept": "core/private-endpoint",
       "decision": "retained",
-      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "changes": [
+        "retained after exact provider, terminology, and semantic audit"
+      ],
       "verified_paths": [
         {
           "path": "$resource",
@@ -3036,7 +3168,9 @@
       "prior_concept": "azure/public-address",
       "current_concept": "azure/public-address",
       "decision": "retained",
-      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "changes": [
+        "retained after exact provider, terminology, and semantic audit"
+      ],
       "verified_paths": [
         {
           "path": "$resource",
@@ -3054,7 +3188,11 @@
           "status": "attribute"
         }
       ],
-      "evidence_refs": ["provider-baseline", "provider-compatibility", "rule:azure/public-address"]
+      "evidence_refs": [
+        "provider-baseline",
+        "provider-compatibility",
+        "rule:azure/public-address"
+      ]
     },
     {
       "rule_id": "azure/resource-group",
@@ -3064,7 +3202,9 @@
       "prior_concept": "azure/resource-group",
       "current_concept": "azure/resource-group",
       "decision": "retained",
-      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "changes": [
+        "retained after exact provider, terminology, and semantic audit"
+      ],
       "verified_paths": [
         {
           "path": "$resource",
@@ -3072,7 +3212,11 @@
           "status": "present"
         }
       ],
-      "evidence_refs": ["provider-baseline", "provider-compatibility", "rule:azure/resource-group"]
+      "evidence_refs": [
+        "provider-baseline",
+        "provider-compatibility",
+        "rule:azure/resource-group"
+      ]
     },
     {
       "rule_id": "azure/storage-account",
@@ -3082,7 +3226,9 @@
       "prior_concept": "azure/storage-account",
       "current_concept": "azure/storage-account",
       "decision": "retained",
-      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "changes": [
+        "retained after exact provider, terminology, and semantic audit"
+      ],
       "verified_paths": [
         {
           "path": "$resource",
@@ -3100,7 +3246,11 @@
           "status": "attribute"
         }
       ],
-      "evidence_refs": ["provider-baseline", "provider-compatibility", "rule:azure/storage-account"]
+      "evidence_refs": [
+        "provider-baseline",
+        "provider-compatibility",
+        "rule:azure/storage-account"
+      ]
     },
     {
       "rule_id": "azure/subnet",
@@ -3110,7 +3260,9 @@
       "prior_concept": "core/subnet",
       "current_concept": "core/subnet",
       "decision": "retained",
-      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "changes": [
+        "retained after exact provider, terminology, and semantic audit"
+      ],
       "verified_paths": [
         {
           "path": "$resource",
@@ -3138,7 +3290,11 @@
           "status": "attribute"
         }
       ],
-      "evidence_refs": ["provider-baseline", "provider-compatibility", "rule:azure/subnet"]
+      "evidence_refs": [
+        "provider-baseline",
+        "provider-compatibility",
+        "rule:azure/subnet"
+      ]
     },
     {
       "rule_id": "azure/user-assigned-managed-identity",
@@ -3148,7 +3304,9 @@
       "prior_concept": "core/service-identity",
       "current_concept": "core/service-identity",
       "decision": "retained",
-      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "changes": [
+        "retained after exact provider, terminology, and semantic audit"
+      ],
       "verified_paths": [
         {
           "path": "$resource",
@@ -3180,7 +3338,9 @@
       "prior_concept": "core/virtual-network",
       "current_concept": "core/virtual-network",
       "decision": "retained",
-      "changes": ["retained after exact provider, terminology, and semantic audit"],
+      "changes": [
+        "retained after exact provider, terminology, and semantic audit"
+      ],
       "verified_paths": [
         {
           "path": "$resource",
@@ -3198,7 +3358,11 @@
           "status": "attribute"
         }
       ],
-      "evidence_refs": ["provider-baseline", "provider-compatibility", "rule:azure/virtual-network"]
+      "evidence_refs": [
+        "provider-baseline",
+        "provider-compatibility",
+        "rule:azure/virtual-network"
+      ]
     }
   ]
 }

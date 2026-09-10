@@ -5,8 +5,8 @@ rule "postgresql-flexible-server" {
 
   as = concept.core.managed-database
 
-  relation {
-    as  = relation.core.private-reachability
+  context {
+    as  = context.core.network
     to  = concept.core.subnet
     via = source.delegated_subnet_id
   }
