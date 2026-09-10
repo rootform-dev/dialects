@@ -21,4 +21,10 @@ rule "serverless-vpc-access-connector" {
     to  = concept.core.subnet
     via = source.subnet[0].name
   }
+
+  context {
+    as  = context.core.ownership
+    to  = concept.google-cloud-project
+    via = source.project
+  }
 }

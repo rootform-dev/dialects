@@ -25,6 +25,12 @@ rule "vpc-firewall-rule" {
     to  = concept.core.virtual-network
     via = source.network
   }
+
+  context {
+    as  = context.core.ownership
+    to  = concept.google-cloud-project
+    via = source.project
+  }
 }
 
 rule "hierarchical-firewall-policy" {

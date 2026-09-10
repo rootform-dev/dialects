@@ -15,4 +15,10 @@ rule "cloud-router" {
     to  = concept.core.virtual-network
     via = source.network
   }
+
+  context {
+    as  = context.core.ownership
+    to  = concept.google-cloud-project
+    via = source.project
+  }
 }

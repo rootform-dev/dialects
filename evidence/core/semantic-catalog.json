@@ -3016,6 +3016,13 @@
           "via": "source.router"
         },
         {
+          "emission": "emission:f6d869390263588f79b857eee1b8bd8679fc2095f75a885ac05de260e3dbe08b",
+          "rule": "google/cloud-router",
+          "from": "google/cloud-router",
+          "to": "google/google-cloud-project",
+          "via": "source.project"
+        },
+        {
           "emission": "emission:bfd32bfa21cbed7cae6d44a24262f1ae60b91a067b69e81cbf8018dedd2f5e47",
           "rule": "google/cloud-run-job",
           "from": "google/cloud-run-job",
@@ -3166,6 +3173,34 @@
           "emission": "emission:4a8f9e84f7ab10f61bfcbd4918f83b990f968ace193d546b7a9778408fda4580",
           "rule": "google/secret-manager-secret",
           "from": "core/managed-secret",
+          "to": "google/google-cloud-project",
+          "via": "source.project"
+        },
+        {
+          "emission": "emission:fbf7ed4c2fee47ec55c10f90a6d6a68c916ffc25b8fe591b4e2175fcc7f3d16d",
+          "rule": "google/serverless-vpc-access-connector",
+          "from": "google/serverless-vpc-access-connector",
+          "to": "google/google-cloud-project",
+          "via": "source.project"
+        },
+        {
+          "emission": "emission:6f4b173dd88ee901f90ae8b03c0f3e3329a8fd6672592e7b5d8ef87dd58e26aa",
+          "rule": "google/vpc-firewall-rule",
+          "from": "google/vpc-firewall-rule",
+          "to": "google/google-cloud-project",
+          "via": "source.project"
+        },
+        {
+          "emission": "emission:ec2e921c1d6b0d0a17e140b7a596ff39ddc3125a25a25ef52e71d0e8ec8efcd9",
+          "rule": "google/vpc-network",
+          "from": "core/virtual-network",
+          "to": "google/google-cloud-project",
+          "via": "source.project"
+        },
+        {
+          "emission": "emission:67312acf422a6291f42824d9e525b8429d612d00b2d93d703a69ba13a9c42605",
+          "rule": "google/vpc-subnetwork",
+          "from": "core/subnet",
           "to": "google/google-cloud-project",
           "via": "source.project"
         },
