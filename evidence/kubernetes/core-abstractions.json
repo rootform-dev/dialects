@@ -1,5 +1,44 @@
 {
   "format_version": "1",
+  "verified_date": "2026-09-10",
+  "cluster_kind_decision": {
+    "concept": "core/kubernetes-cluster",
+    "kind": "scope",
+    "semantic_fact": "A Kubernetes cluster is the runtime boundary containing namespaces and their namespaced workloads; managed-cluster resources represent that same boundary.",
+    "provider_rules": [
+      "aws/eks-cluster",
+      "azure/aks-cluster",
+      "azure/arc-kubernetes-cluster",
+      "google/gke-cluster",
+      "google/gke-attached-cluster"
+    ],
+    "normative_evidence": [
+      {
+        "url": "https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/",
+        "fact": "Namespaces isolate groups of resources within one cluster and provide scope for names."
+      },
+      {
+        "url": "https://registry.terraform.io/providers/hashicorp/kubernetes/2.38.0/docs",
+        "fact": "The Kubernetes provider host identifies the Kubernetes API used to manage its associated resources."
+      },
+      {
+        "url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/kubernetes_cluster",
+        "fact": "The Azure managed-cluster resource exports the Kubernetes host consumed by the Kubernetes provider."
+      },
+      {
+        "url": "https://registry.terraform.io/providers/hashicorp/google/8.0.0/docs/resources/container_cluster",
+        "fact": "The Google managed-cluster resource exports the Kubernetes control-plane endpoint."
+      },
+      {
+        "url": "https://registry.terraform.io/providers/hashicorp/aws/6.62.0/docs/resources/eks_cluster",
+        "fact": "The EKS resource represents a managed Kubernetes cluster and exports its endpoint."
+      },
+      {
+        "url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/arc_kubernetes_cluster",
+        "fact": "The Azure Arc resource represents a connected Kubernetes cluster."
+      }
+    ]
+  },
   "contexts_reused": ["core/ownership", "core/runtime"],
   "concepts_reused": ["core/kubernetes-cluster"],
   "provider_concepts": [

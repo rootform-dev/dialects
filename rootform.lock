@@ -47,8 +47,8 @@
     {
       "name": "core",
       "version": "0.1.0",
-      "digest": "sha256:64a0ffe85a143eca51f1425a9af19207e3201e5df9a4d65346ea0c8635587643",
-      "semantic_digest": "sha256:a93f2c9cba7974c504d7513c7b9a009b94eaaa71950aa3fdac7c7d4da6f50275",
+      "digest": "sha256:532a7d2ebff484592cfb673c9824d54597242ae9a965f8f920e548000757d902",
+      "semantic_digest": "sha256:3e4c44d79c444172c817c4c6fca07d74052bed59e09fb9ccc02bd3c6354dee6e",
       "presentation_digest": "sha256:6250b078276b44c2db9361c26c6c92351d26f49de7ac6daf22c9859cd2f962c8"
     },
     {

@@ -2,7 +2,7 @@
   "format_version": "1",
   "generator": {
     "identity": "rootform 0.1.1",
-    "binary_sha256": "sha256:72bca979c8a38e60887072c0363808453d86600f248801fb94019a2874ae71d8",
+    "binary_sha256": "sha256:08f7b492b3a3379b267791f9009487850045ec87942417e1eab2eac03e6b6502",
     "command": "bun scripts/catalog.ts"
   },
   "concepts": [
@@ -164,8 +164,8 @@
       "id": "core/kubernetes-cluster",
       "dialect": "core",
       "name": "kubernetes-cluster",
-      "kind": "entity",
-      "description": "A Kubernetes cluster providing a workload runtime.",
+      "kind": "scope",
+      "description": "A Kubernetes cluster forming a workload runtime boundary for its namespaced resources.",
       "source": {
         "path": "containers/kubernetes.rf",
         "line": 1

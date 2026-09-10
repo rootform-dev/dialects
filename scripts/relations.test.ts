@@ -9,6 +9,7 @@ type Architecture = {
     emissions: { id: string; rule: string; predicate?: string }[];
   };
   architecture: {
+    entities: { id: string; concept: string }[];
     scopes: { id: string; concept: string }[];
     contexts: {
       from: string;
@@ -32,6 +33,23 @@ function fixture(name: string): Architecture {
     readFileSync(join(root, "fixtures/slice", name, "architecture.golden"), "utf8"),
   ) as Architecture;
 }
+
+test("Kubernetes clusters are runtime scopes across managed and hybrid providers", () => {
+  const cases = [
+    ["azure-aks", "scope:azurerm_kubernetes_cluster.workloads"],
+    ["gke", "scope:google_container_cluster.cluster"],
+    ["eks", "scope:aws_eks_cluster.workloads"],
+    ["azure-ownership-sweep", "scope:azurerm_arc_kubernetes_cluster.owned"],
+  ] as const;
+
+  for (const [name, id] of cases) {
+    const document = fixture(name);
+    expect(document.architecture.scopes).toContainEqual(
+      expect.objectContaining({ id, concept: "core/kubernetes-cluster" }),
+    );
+    expect(document.architecture.entities.some((entity) => entity.id === id)).toBe(false);
+  }
+});
 
 test("shared reachability preserves its owner and distinct Google/Azure producers", () => {
   const catalog = JSON.parse(
