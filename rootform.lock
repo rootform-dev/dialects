@@ -68,8 +68,8 @@
     {
       "name": "google",
       "version": "0.1.0",
-      "digest": "sha256:adb746d3b54f6fc4c12c9acedb140752530d1a660e530b70548faa319fc00b0b",
-      "semantic_digest": "sha256:c0e755e574192d3e136a8dbc7c133c9bc6a2462af65f0f8fded4270c80b8f29d",
+      "digest": "sha256:6ebb8424c37950d2296a6c8e914b54b0d83a4cbae2aab9cb95896c69311c2886",
+      "semantic_digest": "sha256:aeb69414223a497339a30c7b8140b1917c63a7bf93333573ed0806e99b352e5c",
       "presentation_digest": "sha256:caf31531224f2f5c63548c94733b2a32059ffef1604c22f10012b6990bcb944e"
     },
     {

@@ -4,6 +4,12 @@ rule "vpc-network" {
   }
 
   as = concept.core.virtual-network
+
+  context {
+    as  = context.core.ownership
+    to  = concept.google-cloud-project
+    via = source.project
+  }
 }
 
 rule "vpc-subnetwork" {
@@ -17,5 +23,11 @@ rule "vpc-subnetwork" {
     as  = context.core.network
     to  = concept.core.virtual-network
     via = source.network
+  }
+
+  context {
+    as  = context.core.ownership
+    to  = concept.google-cloud-project
+    via = source.project
   }
 }
