@@ -34,6 +34,24 @@ resource "azurerm_subnet" "private_services" {
   virtual_network_name = azurerm_virtual_network.spoke.name
 }
 
+resource "azurerm_subnet" "aks_user" {
+  name                 = "aks-user"
+  resource_group_name  = azurerm_resource_group.platform.name
+  virtual_network_name = azurerm_virtual_network.spoke.name
+}
+
+resource "azurerm_subnet" "postgres" {
+  name                 = "postgres"
+  resource_group_name  = azurerm_resource_group.platform.name
+  virtual_network_name = azurerm_virtual_network.spoke.name
+}
+
+resource "azurerm_subnet" "ingress" {
+  name                 = "ingress"
+  resource_group_name  = azurerm_resource_group.platform.name
+  virtual_network_name = azurerm_virtual_network.spoke.name
+}
+
 resource "azurerm_virtual_network_peering" "hub_to_spoke" {
   name                      = "hub-to-spoke"
   resource_group_name       = azurerm_resource_group.platform.name
@@ -64,6 +82,18 @@ resource "azurerm_kubernetes_cluster" "workloads" {
     name           = "system"
     vnet_subnet_id = azurerm_subnet.aks.id
   }
+}
+
+resource "azurerm_kubernetes_cluster_node_pool" "apps" {
+  name                  = "apps"
+  kubernetes_cluster_id = azurerm_kubernetes_cluster.workloads.id
+  vnet_subnet_id        = azurerm_subnet.aks_user.id
+}
+
+resource "azurerm_postgresql_flexible_server" "records" {
+  name                = "records"
+  resource_group_name = azurerm_resource_group.platform.name
+  delegated_subnet_id = azurerm_subnet.postgres.id
 }
 
 resource "azurerm_service_plan" "apps" {
@@ -130,6 +160,11 @@ resource "azurerm_private_endpoint" "storage" {
 resource "azurerm_application_gateway" "ingress" {
   name                = "ingress"
   resource_group_name = azurerm_resource_group.platform.name
+
+  gateway_ip_configuration {
+    name      = "gateway-ip"
+    subnet_id = azurerm_subnet.ingress.id
+  }
 }
 
 resource "azurerm_cdn_frontdoor_profile" "global" {

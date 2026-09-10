@@ -51,7 +51,7 @@ test("Kubernetes clusters are runtime scopes across managed and hybrid providers
   }
 });
 
-test("shared reachability preserves its owner and distinct Google/Azure producers", () => {
+test("shared reachability keeps its core owner and its Google producer", () => {
   const catalog = JSON.parse(
     readFileSync(join(root, "evidence/core/semantic-catalog.json"), "utf8"),
   );
@@ -59,20 +59,37 @@ test("shared reachability preserves its owner and distinct Google/Azure producer
   expect(catalog.relations[0]).toMatchObject({ id: "core/private-reachability", shared: true });
   expect(catalog.relations[0].producers).toEqual([
     expect.objectContaining({
-      rule: "azure/postgresql-flexible-server",
-      from: "core/managed-database",
-      to: "core/subnet",
-    }),
-    expect.objectContaining({
       rule: "google/cloud-sql-instance",
       from: "core/managed-database",
       to: "core/virtual-network",
+      via: "source.settings[0].ip_configuration[0].private_network",
     }),
   ]);
-  for (const name of ["cloud-sql", "azure-database"]) {
-    const relations = fixture(name).architecture.relations;
-    expect(relations.some((fact) => fact.predicate === "core/private-reachability")).toBe(true);
-  }
+  expect(
+    fixture("cloud-sql").architecture.relations.some(
+      (fact) => fact.predicate === "core/private-reachability",
+    ),
+  ).toBe(true);
+});
+
+test("Azure delegated subnet injection is placement, not reachability", () => {
+  const document = fixture("azure-database");
+  expect(
+    document.architecture.relations.some((fact) => fact.predicate === "core/private-reachability"),
+  ).toBe(false);
+  expect(document.architecture.contexts).toContainEqual(
+    expect.objectContaining({
+      from: "entity:azurerm_postgresql_flexible_server.records",
+      to: "scope:azurerm_subnet.database",
+      dimension: "core/network",
+      provenance: expect.arrayContaining([
+        expect.objectContaining({
+          rule: "azure/postgresql-flexible-server",
+          via: "resolution:azurerm_postgresql_flexible_server.records:delegated_subnet_id:azurerm_subnet.database",
+        }),
+      ]),
+    }),
+  );
 });
 
 test("local Google route fact retains emission and resolution provenance", () => {

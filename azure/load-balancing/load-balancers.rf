@@ -15,7 +15,6 @@ rule "load-balancer" {
       strategy = "exact"
     }
   }
-
 }
 
 rule "application-gateway" {
@@ -24,6 +23,12 @@ rule "application-gateway" {
   }
 
   as = concept.core.load-balancer
+
+  context {
+    as  = context.core.network
+    to  = concept.core.subnet
+    via = source.gateway_ip_configuration[0].subnet_id
+  }
 
   context {
     as  = context.core.ownership

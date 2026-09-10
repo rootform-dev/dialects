@@ -568,6 +568,20 @@
           "via": "source.default_node_pool[0].vnet_subnet_id"
         },
         {
+          "emission": "emission:e6158dc870a99311f7e7dc3df928a21d7c619c78067b4de3103e3381604ef25a",
+          "rule": "azure/aks-node-pool",
+          "from": "core/kubernetes-node-pool",
+          "to": "core/subnet",
+          "via": "source.vnet_subnet_id"
+        },
+        {
+          "emission": "emission:27d120d37e636c10adfa3063d1356e185804ac7d8ccb7bb51bcdd1cf65e93051",
+          "rule": "azure/application-gateway",
+          "from": "core/load-balancer",
+          "to": "core/subnet",
+          "via": "source.gateway_ip_configuration[0].subnet_id"
+        },
+        {
           "emission": "emission:f9b5f2ce957fd415bc1fede39353386527eacb156781f910a5bf2d75b0eed971",
           "rule": "azure/container-app-environment",
           "from": "azure/container-app-environment",
@@ -594,6 +608,13 @@
           "from": "azure/app-service",
           "to": "core/subnet",
           "via": "source.virtual_network_subnet_id"
+        },
+        {
+          "emission": "emission:f991b21fa704c88541941c26fe38ffc55bbd1b5a05e0c74d7a3172162075daf2",
+          "rule": "azure/postgresql-flexible-server",
+          "from": "core/managed-database",
+          "to": "core/subnet",
+          "via": "source.delegated_subnet_id"
         },
         {
           "emission": "emission:bf29940081d0b1f80c18167d98e7e9e2093d556d1d18dd3536ea051a933ca2b6",
@@ -5016,13 +5037,6 @@
       "description": "Private network reachability between an architecture component and a network boundary.",
       "shared": true,
       "producers": [
-        {
-          "emission": "emission:a48e8c7066588037f35d7d137dd2c3ede49ad300c2cedd72c5e1cfa89bc8845e",
-          "rule": "azure/postgresql-flexible-server",
-          "from": "core/managed-database",
-          "to": "core/subnet",
-          "via": "source.delegated_subnet_id"
-        },
         {
           "emission": "emission:a0e8b774af21e7a84224ec0bb7677a067b937420a0bbd3d0fc022a181483019d",
           "rule": "google/cloud-sql-instance",
