@@ -7,13 +7,13 @@
     "forbidden_generation": "no humanization of Terraform type, rule id, or concept id"
   },
   "required_terms": {
-    "aks-cluster": "Azure Kubernetes Service (AKS) cluster",
-    "virtual-network": "Azure Virtual Network",
-    "blob-container": "Azure Blob Storage container",
-    "mssql-database": "Azure SQL Database",
-    "cosmos-account": "Azure Cosmos DB account",
-    "linux-function-app": "Azure Functions Linux function app",
-    "key-vault": "Azure Key Vault"
+    "aks-cluster": "AKS cluster",
+    "virtual-network": "VNet",
+    "blob-container": "Blob Storage container",
+    "mssql-database": "SQL Database",
+    "cosmos-account": "Cosmos DB account",
+    "linux-function-app": "Function App",
+    "key-vault": "Key Vault"
   },
   "entries": [
     {
@@ -42,7 +42,7 @@
     },
     {
       "rule_id": "azure/ai-model-deployment",
-      "label": "Azure AI model deployment",
+      "label": "AI model deployment",
       "family": "ai-ml",
       "provider": "azurerm",
       "terraform_type": "azurerm_cognitive_deployment",
@@ -50,7 +50,7 @@
     },
     {
       "rule_id": "azure/ai-search-service",
-      "label": "Azure AI Search service",
+      "label": "AI Search service",
       "family": "ai-ml",
       "provider": "azurerm",
       "terraform_type": "azurerm_search_service",
@@ -58,7 +58,7 @@
     },
     {
       "rule_id": "azure/ai-services-account",
-      "label": "Azure AI services account",
+      "label": "AI services account",
       "family": "ai-ml",
       "provider": "azurerm",
       "terraform_type": "azurerm_cognitive_account",
@@ -66,7 +66,7 @@
     },
     {
       "rule_id": "azure/ai-services-project",
-      "label": "Azure AI services project",
+      "label": "AI services project",
       "family": "ai-ml",
       "provider": "azurerm",
       "terraform_type": "azurerm_cognitive_account_project",
@@ -74,7 +74,7 @@
     },
     {
       "rule_id": "azure/aks-cluster",
-      "label": "Azure Kubernetes Service (AKS) cluster",
+      "label": "AKS cluster",
       "family": "containers",
       "provider": "azurerm",
       "terraform_type": "azurerm_kubernetes_cluster",
@@ -90,7 +90,7 @@
     },
     {
       "rule_id": "azure/analysis-services-server",
-      "label": "Azure Analysis Services server",
+      "label": "Analysis Services server",
       "family": "data-analytics",
       "provider": "azurerm",
       "terraform_type": "azurerm_analysis_services_server",
@@ -98,7 +98,7 @@
     },
     {
       "rule_id": "azure/api-connection",
-      "label": "Azure API connection",
+      "label": "API connection",
       "family": "api-integration",
       "provider": "azurerm",
       "terraform_type": "azurerm_api_connection",
@@ -106,7 +106,7 @@
     },
     {
       "rule_id": "azure/api-management",
-      "label": "Azure API Management service",
+      "label": "API Management service",
       "family": "api-integration",
       "provider": "azurerm",
       "terraform_type": "azurerm_api_management",
@@ -114,7 +114,7 @@
     },
     {
       "rule_id": "azure/api-management-api",
-      "label": "Azure API Management API",
+      "label": "API Management API",
       "family": "api-integration",
       "provider": "azurerm",
       "terraform_type": "azurerm_api_management_api",
@@ -122,7 +122,7 @@
     },
     {
       "rule_id": "azure/api-management-backend",
-      "label": "Azure API Management backend",
+      "label": "API Management backend",
       "family": "api-integration",
       "provider": "azurerm",
       "terraform_type": "azurerm_api_management_backend",
@@ -130,7 +130,7 @@
     },
     {
       "rule_id": "azure/api-management-gateway",
-      "label": "Azure API Management self-hosted gateway",
+      "label": "API Management self-hosted gateway",
       "family": "api-integration",
       "provider": "azurerm",
       "terraform_type": "azurerm_api_management_gateway",
@@ -138,7 +138,7 @@
     },
     {
       "rule_id": "azure/api-management-policy",
-      "label": "Azure API Management policy",
+      "label": "API Management policy",
       "family": "api-integration",
       "provider": "azurerm",
       "terraform_type": "azurerm_api_management_policy",
@@ -146,7 +146,7 @@
     },
     {
       "rule_id": "azure/api-management-product",
-      "label": "Azure API Management product",
+      "label": "API Management product",
       "family": "api-integration",
       "provider": "azurerm",
       "terraform_type": "azurerm_api_management_product",
@@ -154,7 +154,7 @@
     },
     {
       "rule_id": "azure/api-management-standalone-gateway",
-      "label": "Azure API Management standalone gateway",
+      "label": "API Management standalone gateway",
       "family": "api-integration",
       "provider": "azurerm",
       "terraform_type": "azurerm_api_management_standalone_gateway",
@@ -162,7 +162,7 @@
     },
     {
       "rule_id": "azure/api-management-workspace",
-      "label": "Azure API Management workspace",
+      "label": "API Management workspace",
       "family": "api-integration",
       "provider": "azurerm",
       "terraform_type": "azurerm_api_management_workspace",
@@ -170,7 +170,7 @@
     },
     {
       "rule_id": "azure/app-configuration",
-      "label": "Azure App Configuration store",
+      "label": "App Configuration store",
       "family": "api-integration",
       "provider": "azurerm",
       "terraform_type": "azurerm_app_configuration",
@@ -178,7 +178,7 @@
     },
     {
       "rule_id": "azure/app-service-connection",
-      "label": "Azure App Service connection",
+      "label": "App Service connection",
       "family": "api-integration",
       "provider": "azurerm",
       "terraform_type": "azurerm_app_service_connection",
@@ -186,7 +186,7 @@
     },
     {
       "rule_id": "azure/app-service-environment",
-      "label": "Azure App Service Environment v3",
+      "label": "App Service Environment v3",
       "family": "serverless",
       "provider": "azurerm",
       "terraform_type": "azurerm_app_service_environment_v3",
@@ -194,7 +194,7 @@
     },
     {
       "rule_id": "azure/app-service-plan",
-      "label": "Azure App Service plan",
+      "label": "App Service plan",
       "family": "serverless",
       "provider": "azurerm",
       "terraform_type": "azurerm_service_plan",
@@ -202,7 +202,7 @@
     },
     {
       "rule_id": "azure/application-gateway",
-      "label": "Azure Application Gateway",
+      "label": "Application Gateway",
       "family": "load-balancing",
       "provider": "azurerm",
       "terraform_type": "azurerm_application_gateway",
@@ -210,7 +210,7 @@
     },
     {
       "rule_id": "azure/application-insights",
-      "label": "Azure Monitor Application Insights",
+      "label": "Application Insights",
       "family": "operations",
       "provider": "azurerm",
       "terraform_type": "azurerm_application_insights",
@@ -226,7 +226,7 @@
     },
     {
       "rule_id": "azure/application-load-balancer",
-      "label": "Azure Application Load Balancer",
+      "label": "Application Load Balancer",
       "family": "load-balancing",
       "provider": "azurerm",
       "terraform_type": "azurerm_application_load_balancer",
@@ -234,7 +234,7 @@
     },
     {
       "rule_id": "azure/application-load-balancer-frontend",
-      "label": "Azure Application Load Balancer frontend",
+      "label": "Application Load Balancer frontend",
       "family": "load-balancing",
       "provider": "azurerm",
       "terraform_type": "azurerm_application_load_balancer_frontend",
@@ -242,7 +242,7 @@
     },
     {
       "rule_id": "azure/application-security-group",
-      "label": "Azure Application Security Group",
+      "label": "Application Security Group",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_application_security_group",
@@ -306,7 +306,7 @@
     },
     {
       "rule_id": "azure/automatic-kubernetes-cluster",
-      "label": "Azure Kubernetes Service automatic cluster",
+      "label": "AKS Automatic cluster",
       "family": "containers",
       "provider": "azurerm",
       "terraform_type": "azurerm_kubernetes_automatic_cluster",
@@ -314,7 +314,7 @@
     },
     {
       "rule_id": "azure/automation-account",
-      "label": "Azure Automation account",
+      "label": "Automation account",
       "family": "operations",
       "provider": "azurerm",
       "terraform_type": "azurerm_automation_account",
@@ -322,7 +322,7 @@
     },
     {
       "rule_id": "azure/automation-runbook",
-      "label": "Azure Automation runbook",
+      "label": "Automation runbook",
       "family": "operations",
       "provider": "azurerm",
       "terraform_type": "azurerm_automation_runbook",
@@ -330,7 +330,7 @@
     },
     {
       "rule_id": "azure/automation-schedule",
-      "label": "Azure Automation schedule",
+      "label": "Automation schedule",
       "family": "operations",
       "provider": "azurerm",
       "terraform_type": "azurerm_automation_schedule",
@@ -338,7 +338,7 @@
     },
     {
       "rule_id": "azure/availability-set",
-      "label": "Azure availability set",
+      "label": "Availability set",
       "family": "compute",
       "provider": "azurerm",
       "terraform_type": "azurerm_availability_set",
@@ -435,7 +435,7 @@
     },
     {
       "rule_id": "azure/batch-account",
-      "label": "Azure Batch account",
+      "label": "Batch account",
       "family": "compute",
       "provider": "azurerm",
       "terraform_type": "azurerm_batch_account",
@@ -443,7 +443,7 @@
     },
     {
       "rule_id": "azure/batch-application",
-      "label": "Azure Batch application",
+      "label": "Batch application",
       "family": "compute",
       "provider": "azurerm",
       "terraform_type": "azurerm_batch_application",
@@ -451,7 +451,7 @@
     },
     {
       "rule_id": "azure/batch-job",
-      "label": "Azure Batch job",
+      "label": "Batch job",
       "family": "compute",
       "provider": "azurerm",
       "terraform_type": "azurerm_batch_job",
@@ -459,7 +459,7 @@
     },
     {
       "rule_id": "azure/batch-pool",
-      "label": "Azure Batch pool",
+      "label": "Batch pool",
       "family": "compute",
       "provider": "azurerm",
       "terraform_type": "azurerm_batch_pool",
@@ -467,7 +467,7 @@
     },
     {
       "rule_id": "azure/blob-container",
-      "label": "Azure Blob Storage container",
+      "label": "Blob Storage container",
       "family": "storage",
       "provider": "azurerm",
       "terraform_type": "azurerm_storage_container",
@@ -475,7 +475,7 @@
     },
     {
       "rule_id": "azure/bot-channels-registration",
-      "label": "Azure Bot Channels Registration",
+      "label": "Bot Channels Registration",
       "family": "ai-ml",
       "provider": "azurerm",
       "terraform_type": "azurerm_bot_channels_registration",
@@ -491,7 +491,7 @@
     },
     {
       "rule_id": "azure/capacity-reservation",
-      "label": "Azure capacity reservation",
+      "label": "Capacity reservation",
       "family": "compute",
       "provider": "azurerm",
       "terraform_type": "azurerm_capacity_reservation",
@@ -499,7 +499,7 @@
     },
     {
       "rule_id": "azure/capacity-reservation-group",
-      "label": "Azure capacity reservation group",
+      "label": "Capacity reservation group",
       "family": "compute",
       "provider": "azurerm",
       "terraform_type": "azurerm_capacity_reservation_group",
@@ -507,7 +507,7 @@
     },
     {
       "rule_id": "azure/cdn-endpoint",
-      "label": "Azure Content Delivery Network endpoint",
+      "label": "Content Delivery Network endpoint",
       "family": "dns-cdn",
       "provider": "azurerm",
       "terraform_type": "azurerm_cdn_endpoint",
@@ -515,7 +515,7 @@
     },
     {
       "rule_id": "azure/cdn-profile",
-      "label": "Azure Content Delivery Network profile",
+      "label": "Content Delivery Network profile",
       "family": "dns-cdn",
       "provider": "azurerm",
       "terraform_type": "azurerm_cdn_profile",
@@ -547,7 +547,7 @@
     },
     {
       "rule_id": "azure/compute-gallery",
-      "label": "Azure Compute Gallery",
+      "label": "Compute Gallery",
       "family": "storage",
       "provider": "azurerm",
       "terraform_type": "azurerm_shared_image_gallery",
@@ -555,7 +555,7 @@
     },
     {
       "rule_id": "azure/compute-image",
-      "label": "Azure compute image",
+      "label": "Compute image",
       "family": "compute",
       "provider": "azurerm",
       "terraform_type": "azurerm_image",
@@ -563,7 +563,7 @@
     },
     {
       "rule_id": "azure/confidential-ledger",
-      "label": "Azure confidential ledger",
+      "label": "Confidential ledger",
       "family": "security",
       "provider": "azurerm",
       "terraform_type": "azurerm_confidential_ledger",
@@ -571,7 +571,7 @@
     },
     {
       "rule_id": "azure/connected-container-registry",
-      "label": "connected Azure Container Registry",
+      "label": "Connected Azure Container Registry",
       "family": "containers",
       "provider": "azurerm",
       "terraform_type": "azurerm_container_connected_registry",
@@ -579,7 +579,7 @@
     },
     {
       "rule_id": "azure/container-app",
-      "label": "Azure Container Apps app",
+      "label": "Container App",
       "family": "containers",
       "provider": "azurerm",
       "terraform_type": "azurerm_container_app",
@@ -587,7 +587,7 @@
     },
     {
       "rule_id": "azure/container-app-environment",
-      "label": "Azure Container Apps environment",
+      "label": "Container Apps Environment",
       "family": "containers",
       "provider": "azurerm",
       "terraform_type": "azurerm_container_app_environment",
@@ -595,7 +595,7 @@
     },
     {
       "rule_id": "azure/container-app-job",
-      "label": "Azure Container Apps job",
+      "label": "Container Apps job",
       "family": "containers",
       "provider": "azurerm",
       "terraform_type": "azurerm_container_app_job",
@@ -603,7 +603,7 @@
     },
     {
       "rule_id": "azure/container-instance-group",
-      "label": "Azure Container Instances container group",
+      "label": "Container Instances container group",
       "family": "containers",
       "provider": "azurerm",
       "terraform_type": "azurerm_container_group",
@@ -611,7 +611,7 @@
     },
     {
       "rule_id": "azure/container-registry",
-      "label": "Azure Container Registry",
+      "label": "Container Registry",
       "family": "containers",
       "provider": "azurerm",
       "terraform_type": "azurerm_container_registry",
@@ -619,7 +619,7 @@
     },
     {
       "rule_id": "azure/cosmos-account",
-      "label": "Azure Cosmos DB account",
+      "label": "Cosmos DB account",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_cosmosdb_account",
@@ -635,7 +635,7 @@
     },
     {
       "rule_id": "azure/cosmos-cassandra-keyspace",
-      "label": "Azure Cosmos DB for Apache Cassandra keyspace",
+      "label": "Cosmos DB for Apache Cassandra keyspace",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_cosmosdb_cassandra_keyspace",
@@ -643,7 +643,7 @@
     },
     {
       "rule_id": "azure/cosmos-cassandra-table",
-      "label": "Azure Cosmos DB for Apache Cassandra table",
+      "label": "Cosmos DB for Apache Cassandra table",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_cosmosdb_cassandra_table",
@@ -651,7 +651,7 @@
     },
     {
       "rule_id": "azure/cosmos-dedicated-gateway",
-      "label": "Azure Cosmos DB dedicated gateway",
+      "label": "Cosmos DB dedicated gateway",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_cosmosdb_sql_dedicated_gateway",
@@ -659,7 +659,7 @@
     },
     {
       "rule_id": "azure/cosmos-gremlin-database",
-      "label": "Azure Cosmos DB for Apache Gremlin database",
+      "label": "Cosmos DB for Apache Gremlin database",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_cosmosdb_gremlin_database",
@@ -667,7 +667,7 @@
     },
     {
       "rule_id": "azure/cosmos-gremlin-graph",
-      "label": "Azure Cosmos DB for Apache Gremlin graph",
+      "label": "Cosmos DB for Apache Gremlin graph",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_cosmosdb_gremlin_graph",
@@ -675,7 +675,7 @@
     },
     {
       "rule_id": "azure/cosmos-mongo-collection",
-      "label": "Azure Cosmos DB for MongoDB collection",
+      "label": "Cosmos DB for MongoDB collection",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_cosmosdb_mongo_collection",
@@ -683,7 +683,7 @@
     },
     {
       "rule_id": "azure/cosmos-mongo-database",
-      "label": "Azure Cosmos DB for MongoDB database",
+      "label": "Cosmos DB for MongoDB database",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_cosmosdb_mongo_database",
@@ -691,7 +691,7 @@
     },
     {
       "rule_id": "azure/cosmos-postgresql-cluster",
-      "label": "Azure Cosmos DB for PostgreSQL cluster",
+      "label": "Cosmos DB for PostgreSQL cluster",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_cosmosdb_postgresql_cluster",
@@ -699,7 +699,7 @@
     },
     {
       "rule_id": "azure/cosmos-sql-container",
-      "label": "Azure Cosmos DB for NoSQL container",
+      "label": "Cosmos DB for NoSQL container",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_cosmosdb_sql_container",
@@ -707,7 +707,7 @@
     },
     {
       "rule_id": "azure/cosmos-sql-database",
-      "label": "Azure Cosmos DB for NoSQL database",
+      "label": "Cosmos DB for NoSQL database",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_cosmosdb_sql_database",
@@ -715,7 +715,7 @@
     },
     {
       "rule_id": "azure/custom-ip-prefix",
-      "label": "Azure custom IP prefix",
+      "label": "Custom IP prefix",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_custom_ip_prefix",
@@ -731,7 +731,7 @@
     },
     {
       "rule_id": "azure/data-explorer-cluster",
-      "label": "Azure Data Explorer cluster",
+      "label": "Data Explorer cluster",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_kusto_cluster",
@@ -739,7 +739,7 @@
     },
     {
       "rule_id": "azure/data-explorer-database",
-      "label": "Azure Data Explorer database",
+      "label": "Data Explorer database",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_kusto_database",
@@ -747,7 +747,7 @@
     },
     {
       "rule_id": "azure/data-explorer-event-grid-connection",
-      "label": "Azure Data Explorer Event Grid data connection",
+      "label": "Data Explorer Event Grid data connection",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_kusto_eventgrid_data_connection",
@@ -755,7 +755,7 @@
     },
     {
       "rule_id": "azure/data-explorer-event-hubs-connection",
-      "label": "Azure Data Explorer Event Hubs data connection",
+      "label": "Data Explorer Event Hubs data connection",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_kusto_eventhub_data_connection",
@@ -851,7 +851,7 @@
     },
     {
       "rule_id": "azure/data-lake-filesystem",
-      "label": "Azure Data Lake Storage Gen2 filesystem",
+      "label": "Data Lake Storage Gen2 filesystem",
       "family": "storage",
       "provider": "azurerm",
       "terraform_type": "azurerm_storage_data_lake_gen2_filesystem",
@@ -859,7 +859,7 @@
     },
     {
       "rule_id": "azure/data-lake-path",
-      "label": "Azure Data Lake Storage Gen2 path",
+      "label": "Data Lake Storage Gen2 path",
       "family": "storage",
       "provider": "azurerm",
       "terraform_type": "azurerm_storage_data_lake_gen2_path",
@@ -875,7 +875,7 @@
     },
     {
       "rule_id": "azure/data-protection-blob-backup-policy",
-      "label": "Azure Blob Storage backup policy",
+      "label": "Blob Storage backup policy",
       "family": "storage",
       "provider": "azurerm",
       "terraform_type": "azurerm_data_protection_backup_policy_blob_storage",
@@ -883,7 +883,7 @@
     },
     {
       "rule_id": "azure/data-protection-disk-backup-policy",
-      "label": "Azure Disk Backup policy",
+      "label": "Disk Backup policy",
       "family": "storage",
       "provider": "azurerm",
       "terraform_type": "azurerm_data_protection_backup_policy_disk",
@@ -907,7 +907,7 @@
     },
     {
       "rule_id": "azure/database-migration-project",
-      "label": "Azure Database Migration project",
+      "label": "Database Migration project",
       "family": "migration",
       "provider": "azurerm",
       "terraform_type": "azurerm_database_migration_project",
@@ -915,7 +915,7 @@
     },
     {
       "rule_id": "azure/database-migration-service",
-      "label": "Azure Database Migration Service",
+      "label": "Database Migration Service",
       "family": "migration",
       "provider": "azurerm",
       "terraform_type": "azurerm_database_migration_service",
@@ -947,7 +947,7 @@
     },
     {
       "rule_id": "azure/ddos-protection-plan",
-      "label": "Azure DDoS Protection plan",
+      "label": "DDoS Protection plan",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_network_ddos_protection_plan",
@@ -955,7 +955,7 @@
     },
     {
       "rule_id": "azure/dedicated-hardware-security-module",
-      "label": "Azure Dedicated HSM",
+      "label": "Dedicated HSM",
       "family": "security",
       "provider": "azurerm",
       "terraform_type": "azurerm_dedicated_hardware_security_module",
@@ -963,7 +963,7 @@
     },
     {
       "rule_id": "azure/dedicated-host",
-      "label": "Azure Dedicated Host",
+      "label": "Dedicated Host",
       "family": "compute",
       "provider": "azurerm",
       "terraform_type": "azurerm_dedicated_host",
@@ -971,7 +971,7 @@
     },
     {
       "rule_id": "azure/dedicated-host-group",
-      "label": "Azure Dedicated Host group",
+      "label": "Dedicated Host group",
       "family": "compute",
       "provider": "azurerm",
       "terraform_type": "azurerm_dedicated_host_group",
@@ -1019,7 +1019,7 @@
     },
     {
       "rule_id": "azure/dev-test-lab",
-      "label": "Azure DevTest Labs lab",
+      "label": "DevTest Labs lab",
       "family": "developer-ci-cd",
       "provider": "azurerm",
       "terraform_type": "azurerm_dev_test_lab",
@@ -1027,7 +1027,7 @@
     },
     {
       "rule_id": "azure/dev-test-linux-virtual-machine",
-      "label": "Azure DevTest Labs Linux virtual machine",
+      "label": "DevTest Labs Linux virtual machine",
       "family": "compute",
       "provider": "azurerm",
       "terraform_type": "azurerm_dev_test_linux_virtual_machine",
@@ -1035,7 +1035,7 @@
     },
     {
       "rule_id": "azure/dev-test-windows-virtual-machine",
-      "label": "Azure DevTest Labs Windows virtual machine",
+      "label": "DevTest Labs Windows virtual machine",
       "family": "compute",
       "provider": "azurerm",
       "terraform_type": "azurerm_dev_test_windows_virtual_machine",
@@ -1059,7 +1059,7 @@
     },
     {
       "rule_id": "azure/disk-snapshot",
-      "label": "Azure managed disk snapshot",
+      "label": "Managed disk snapshot",
       "family": "compute",
       "provider": "azurerm",
       "terraform_type": "azurerm_snapshot",
@@ -1067,7 +1067,7 @@
     },
     {
       "rule_id": "azure/dns-a-record",
-      "label": "Azure DNS A record",
+      "label": "DNS A record",
       "family": "dns-cdn",
       "provider": "azurerm",
       "terraform_type": "azurerm_dns_a_record",
@@ -1075,7 +1075,7 @@
     },
     {
       "rule_id": "azure/dns-aaaa-record",
-      "label": "Azure DNS AAAA record",
+      "label": "DNS AAAA record",
       "family": "dns-cdn",
       "provider": "azurerm",
       "terraform_type": "azurerm_dns_aaaa_record",
@@ -1083,7 +1083,7 @@
     },
     {
       "rule_id": "azure/dns-cname-record",
-      "label": "Azure DNS CNAME record",
+      "label": "DNS CNAME record",
       "family": "dns-cdn",
       "provider": "azurerm",
       "terraform_type": "azurerm_dns_cname_record",
@@ -1091,7 +1091,7 @@
     },
     {
       "rule_id": "azure/dns-mx-record",
-      "label": "Azure DNS MX record",
+      "label": "DNS MX record",
       "family": "dns-cdn",
       "provider": "azurerm",
       "terraform_type": "azurerm_dns_mx_record",
@@ -1099,7 +1099,7 @@
     },
     {
       "rule_id": "azure/dns-ns-record",
-      "label": "Azure DNS NS record",
+      "label": "DNS NS record",
       "family": "dns-cdn",
       "provider": "azurerm",
       "terraform_type": "azurerm_dns_ns_record",
@@ -1107,7 +1107,7 @@
     },
     {
       "rule_id": "azure/dns-ptr-record",
-      "label": "Azure DNS PTR record",
+      "label": "DNS PTR record",
       "family": "dns-cdn",
       "provider": "azurerm",
       "terraform_type": "azurerm_dns_ptr_record",
@@ -1115,7 +1115,7 @@
     },
     {
       "rule_id": "azure/dns-srv-record",
-      "label": "Azure DNS SRV record",
+      "label": "DNS SRV record",
       "family": "dns-cdn",
       "provider": "azurerm",
       "terraform_type": "azurerm_dns_srv_record",
@@ -1123,7 +1123,7 @@
     },
     {
       "rule_id": "azure/dns-txt-record",
-      "label": "Azure DNS TXT record",
+      "label": "DNS TXT record",
       "family": "dns-cdn",
       "provider": "azurerm",
       "terraform_type": "azurerm_dns_txt_record",
@@ -1131,7 +1131,7 @@
     },
     {
       "rule_id": "azure/dns-zone",
-      "label": "Azure DNS zone",
+      "label": "DNS zone",
       "family": "dns-cdn",
       "provider": "azurerm",
       "terraform_type": "azurerm_dns_zone",
@@ -1339,7 +1339,7 @@
     },
     {
       "rule_id": "azure/event-grid-domain",
-      "label": "Azure Event Grid domain",
+      "label": "Event Grid domain",
       "family": "messaging-eventing",
       "provider": "azurerm",
       "terraform_type": "azurerm_eventgrid_domain",
@@ -1347,7 +1347,7 @@
     },
     {
       "rule_id": "azure/event-grid-domain-topic",
-      "label": "Azure Event Grid domain topic",
+      "label": "Event Grid domain topic",
       "family": "messaging-eventing",
       "provider": "azurerm",
       "terraform_type": "azurerm_eventgrid_domain_topic",
@@ -1355,7 +1355,7 @@
     },
     {
       "rule_id": "azure/event-grid-event-subscription",
-      "label": "Azure Event Grid event subscription",
+      "label": "Event Grid subscription",
       "family": "messaging-eventing",
       "provider": "azurerm",
       "terraform_type": "azurerm_eventgrid_event_subscription",
@@ -1363,7 +1363,7 @@
     },
     {
       "rule_id": "azure/event-grid-namespace",
-      "label": "Azure Event Grid namespace",
+      "label": "Event Grid namespace",
       "family": "messaging-eventing",
       "provider": "azurerm",
       "terraform_type": "azurerm_eventgrid_namespace",
@@ -1371,7 +1371,7 @@
     },
     {
       "rule_id": "azure/event-grid-namespace-topic",
-      "label": "Azure Event Grid namespace topic",
+      "label": "Event Grid namespace topic",
       "family": "messaging-eventing",
       "provider": "azurerm",
       "terraform_type": "azurerm_eventgrid_namespace_topic",
@@ -1379,7 +1379,7 @@
     },
     {
       "rule_id": "azure/event-grid-partner-namespace",
-      "label": "Azure Event Grid partner namespace",
+      "label": "Event Grid partner namespace",
       "family": "messaging-eventing",
       "provider": "azurerm",
       "terraform_type": "azurerm_eventgrid_partner_namespace",
@@ -1387,7 +1387,7 @@
     },
     {
       "rule_id": "azure/event-grid-system-topic",
-      "label": "Azure Event Grid system topic",
+      "label": "Event Grid system topic",
       "family": "messaging-eventing",
       "provider": "azurerm",
       "terraform_type": "azurerm_eventgrid_system_topic",
@@ -1395,7 +1395,7 @@
     },
     {
       "rule_id": "azure/event-grid-system-topic-subscription",
-      "label": "Azure Event Grid system topic event subscription",
+      "label": "System topic subscription",
       "family": "messaging-eventing",
       "provider": "azurerm",
       "terraform_type": "azurerm_eventgrid_system_topic_event_subscription",
@@ -1403,7 +1403,7 @@
     },
     {
       "rule_id": "azure/event-grid-topic",
-      "label": "Azure Event Grid custom topic",
+      "label": "Event Grid custom topic",
       "family": "messaging-eventing",
       "provider": "azurerm",
       "terraform_type": "azurerm_eventgrid_topic",
@@ -1411,7 +1411,7 @@
     },
     {
       "rule_id": "azure/event-hub",
-      "label": "Azure Event Hubs event hub",
+      "label": "Event Hubs event hub",
       "family": "messaging-eventing",
       "provider": "azurerm",
       "terraform_type": "azurerm_eventhub",
@@ -1419,7 +1419,7 @@
     },
     {
       "rule_id": "azure/event-hubs-cluster",
-      "label": "Azure Event Hubs Dedicated cluster",
+      "label": "Event Hubs Dedicated cluster",
       "family": "messaging-eventing",
       "provider": "azurerm",
       "terraform_type": "azurerm_eventhub_cluster",
@@ -1427,7 +1427,7 @@
     },
     {
       "rule_id": "azure/event-hubs-consumer-group",
-      "label": "Azure Event Hubs consumer group",
+      "label": "Event Hubs consumer group",
       "family": "messaging-eventing",
       "provider": "azurerm",
       "terraform_type": "azurerm_eventhub_consumer_group",
@@ -1435,7 +1435,7 @@
     },
     {
       "rule_id": "azure/event-hubs-namespace",
-      "label": "Azure Event Hubs namespace",
+      "label": "Event Hubs namespace",
       "family": "messaging-eventing",
       "provider": "azurerm",
       "terraform_type": "azurerm_eventhub_namespace",
@@ -1443,7 +1443,7 @@
     },
     {
       "rule_id": "azure/event-hubs-schema-group",
-      "label": "Azure Event Hubs schema group",
+      "label": "Event Hubs schema group",
       "family": "messaging-eventing",
       "provider": "azurerm",
       "terraform_type": "azurerm_eventhub_namespace_schema_group",
@@ -1451,7 +1451,7 @@
     },
     {
       "rule_id": "azure/expressroute-circuit",
-      "label": "Azure ExpressRoute circuit",
+      "label": "ExpressRoute circuit",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_express_route_circuit",
@@ -1459,7 +1459,7 @@
     },
     {
       "rule_id": "azure/expressroute-gateway",
-      "label": "Azure ExpressRoute gateway",
+      "label": "ExpressRoute gateway",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_express_route_gateway",
@@ -1467,7 +1467,7 @@
     },
     {
       "rule_id": "azure/expressroute-port",
-      "label": "Azure ExpressRoute Direct port",
+      "label": "ExpressRoute Direct port",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_express_route_port",
@@ -1483,7 +1483,7 @@
     },
     {
       "rule_id": "azure/federated-identity-credential",
-      "label": "federated identity credential",
+      "label": "Federated identity credential",
       "family": "identity-iam",
       "provider": "azurerm",
       "terraform_type": "azurerm_federated_identity_credential",
@@ -1499,7 +1499,7 @@
     },
     {
       "rule_id": "azure/flex-consumption-function-app",
-      "label": "Azure Functions Flex Consumption app",
+      "label": "Functions Flex Consumption app",
       "family": "serverless",
       "provider": "azurerm",
       "terraform_type": "azurerm_function_app_flex_consumption",
@@ -1507,7 +1507,7 @@
     },
     {
       "rule_id": "azure/fluid-relay",
-      "label": "Azure Fluid Relay service",
+      "label": "Fluid Relay service",
       "family": "communication",
       "provider": "azurerm",
       "terraform_type": "azurerm_fluid_relay_server",
@@ -1555,7 +1555,7 @@
     },
     {
       "rule_id": "azure/function-app-function",
-      "label": "Azure Functions function",
+      "label": "Functions function",
       "family": "serverless",
       "provider": "azurerm",
       "terraform_type": "azurerm_function_app_function",
@@ -1571,7 +1571,7 @@
     },
     {
       "rule_id": "azure/hdinsight-hadoop-cluster",
-      "label": "Azure HDInsight Hadoop cluster",
+      "label": "HDInsight Hadoop cluster",
       "family": "data-analytics",
       "provider": "azurerm",
       "terraform_type": "azurerm_hdinsight_hadoop_cluster",
@@ -1579,7 +1579,7 @@
     },
     {
       "rule_id": "azure/hdinsight-hbase-cluster",
-      "label": "Azure HDInsight Apache HBase cluster",
+      "label": "HDInsight Apache HBase cluster",
       "family": "data-analytics",
       "provider": "azurerm",
       "terraform_type": "azurerm_hdinsight_hbase_cluster",
@@ -1587,7 +1587,7 @@
     },
     {
       "rule_id": "azure/hdinsight-interactive-query-cluster",
-      "label": "Azure HDInsight Interactive Query cluster",
+      "label": "HDInsight Interactive Query cluster",
       "family": "data-analytics",
       "provider": "azurerm",
       "terraform_type": "azurerm_hdinsight_interactive_query_cluster",
@@ -1595,7 +1595,7 @@
     },
     {
       "rule_id": "azure/hdinsight-kafka-cluster",
-      "label": "Azure HDInsight Apache Kafka cluster",
+      "label": "HDInsight Apache Kafka cluster",
       "family": "data-analytics",
       "provider": "azurerm",
       "terraform_type": "azurerm_hdinsight_kafka_cluster",
@@ -1603,7 +1603,7 @@
     },
     {
       "rule_id": "azure/hdinsight-spark-cluster",
-      "label": "Azure HDInsight Apache Spark cluster",
+      "label": "HDInsight Apache Spark cluster",
       "family": "data-analytics",
       "provider": "azurerm",
       "terraform_type": "azurerm_hdinsight_spark_cluster",
@@ -1611,7 +1611,7 @@
     },
     {
       "rule_id": "azure/health-bot",
-      "label": "Azure Health Bot",
+      "label": "Health Bot",
       "family": "ai-ml",
       "provider": "azurerm",
       "terraform_type": "azurerm_healthbot",
@@ -1651,7 +1651,7 @@
     },
     {
       "rule_id": "azure/healthcare-service",
-      "label": "Azure API for FHIR service",
+      "label": "Azure API for FHIR",
       "family": "data-analytics",
       "provider": "azurerm",
       "terraform_type": "azurerm_healthcare_service",
@@ -1659,7 +1659,7 @@
     },
     {
       "rule_id": "azure/horizondb-cluster",
-      "label": "Azure HorizonDB cluster",
+      "label": "HorizonDB cluster",
       "family": "databases",
       "provider": "azapi",
       "terraform_type": "azapi_resource",
@@ -1668,7 +1668,7 @@
     },
     {
       "rule_id": "azure/iot-central-application",
-      "label": "Azure IoT Central application",
+      "label": "IoT Central application",
       "family": "iot",
       "provider": "azurerm",
       "terraform_type": "azurerm_iotcentral_application",
@@ -1676,7 +1676,7 @@
     },
     {
       "rule_id": "azure/iot-hub",
-      "label": "Azure IoT Hub",
+      "label": "IoT Hub",
       "family": "iot",
       "provider": "azurerm",
       "terraform_type": "azurerm_iothub",
@@ -1684,7 +1684,7 @@
     },
     {
       "rule_id": "azure/iot-hub-device-provisioning-service",
-      "label": "Azure IoT Hub Device Provisioning Service",
+      "label": "IoT Hub Device Provisioning Service",
       "family": "iot",
       "provider": "azurerm",
       "terraform_type": "azurerm_iothub_dps",
@@ -1708,7 +1708,7 @@
     },
     {
       "rule_id": "azure/iot-hub-event-hubs-endpoint",
-      "label": "Azure IoT Hub Event Hubs endpoint",
+      "label": "IoT Hub Event Hubs endpoint",
       "family": "iot",
       "provider": "azurerm",
       "terraform_type": "azurerm_iothub_endpoint_eventhub",
@@ -1716,7 +1716,7 @@
     },
     {
       "rule_id": "azure/iot-hub-service-bus-queue-endpoint",
-      "label": "Azure IoT Hub Service Bus queue endpoint",
+      "label": "IoT Hub Service Bus queue endpoint",
       "family": "iot",
       "provider": "azurerm",
       "terraform_type": "azurerm_iothub_endpoint_servicebus_queue",
@@ -1724,7 +1724,7 @@
     },
     {
       "rule_id": "azure/iot-hub-storage-endpoint",
-      "label": "Azure IoT Hub Storage container endpoint",
+      "label": "IoT Hub Storage container endpoint",
       "family": "iot",
       "provider": "azurerm",
       "terraform_type": "azurerm_iothub_endpoint_storage_container",
@@ -1732,7 +1732,7 @@
     },
     {
       "rule_id": "azure/ip-group",
-      "label": "Azure IP Group",
+      "label": "IP Group",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_ip_group",
@@ -1740,7 +1740,7 @@
     },
     {
       "rule_id": "azure/key-vault",
-      "label": "Azure Key Vault",
+      "label": "Key Vault",
       "family": "security",
       "provider": "azurerm",
       "terraform_type": "azurerm_key_vault",
@@ -1748,7 +1748,7 @@
     },
     {
       "rule_id": "azure/key-vault-access-policy",
-      "label": "Azure Key Vault access policy",
+      "label": "Key Vault access policy",
       "family": "security",
       "provider": "azurerm",
       "terraform_type": "azurerm_key_vault_access_policy",
@@ -1756,7 +1756,7 @@
     },
     {
       "rule_id": "azure/key-vault-certificate",
-      "label": "Azure Key Vault certificate",
+      "label": "Key Vault certificate",
       "family": "security",
       "provider": "azurerm",
       "terraform_type": "azurerm_key_vault_certificate",
@@ -1764,7 +1764,7 @@
     },
     {
       "rule_id": "azure/key-vault-key",
-      "label": "Azure Key Vault key",
+      "label": "Key Vault key",
       "family": "security",
       "provider": "azurerm",
       "terraform_type": "azurerm_key_vault_key",
@@ -1772,7 +1772,7 @@
     },
     {
       "rule_id": "azure/key-vault-secret",
-      "label": "Azure Key Vault secret",
+      "label": "Key Vault secret",
       "family": "security",
       "provider": "azurerm",
       "terraform_type": "azurerm_key_vault_secret",
@@ -1796,7 +1796,7 @@
     },
     {
       "rule_id": "azure/linux-function-app",
-      "label": "Azure Functions Linux function app",
+      "label": "Function App",
       "family": "serverless",
       "provider": "azurerm",
       "terraform_type": "azurerm_linux_function_app",
@@ -1820,7 +1820,7 @@
     },
     {
       "rule_id": "azure/linux-web-app",
-      "label": "Azure App Service Linux web app",
+      "label": "App Service Linux web app",
       "family": "serverless",
       "provider": "azurerm",
       "terraform_type": "azurerm_linux_web_app",
@@ -1828,7 +1828,7 @@
     },
     {
       "rule_id": "azure/load-balancer",
-      "label": "Azure Load Balancer",
+      "label": "Load Balancer",
       "family": "load-balancing",
       "provider": "azurerm",
       "terraform_type": "azurerm_lb",
@@ -1836,7 +1836,7 @@
     },
     {
       "rule_id": "azure/load-balancer-backend-pool",
-      "label": "Azure Load Balancer backend pool",
+      "label": "Load Balancer backend pool",
       "family": "load-balancing",
       "provider": "azurerm",
       "terraform_type": "azurerm_lb_backend_address_pool",
@@ -1844,7 +1844,7 @@
     },
     {
       "rule_id": "azure/load-balancer-nat-rule",
-      "label": "Azure Load Balancer inbound NAT rule",
+      "label": "Load Balancer inbound NAT rule",
       "family": "load-balancing",
       "provider": "azurerm",
       "terraform_type": "azurerm_lb_nat_rule",
@@ -1852,7 +1852,7 @@
     },
     {
       "rule_id": "azure/load-balancer-outbound-rule",
-      "label": "Azure Load Balancer outbound rule",
+      "label": "Load Balancer outbound rule",
       "family": "load-balancing",
       "provider": "azurerm",
       "terraform_type": "azurerm_lb_outbound_rule",
@@ -1860,7 +1860,7 @@
     },
     {
       "rule_id": "azure/load-balancer-probe",
-      "label": "Azure Load Balancer health probe",
+      "label": "Load Balancer health probe",
       "family": "load-balancing",
       "provider": "azurerm",
       "terraform_type": "azurerm_lb_probe",
@@ -1868,7 +1868,7 @@
     },
     {
       "rule_id": "azure/load-balancer-rule",
-      "label": "Azure Load Balancer rule",
+      "label": "Load Balancer rule",
       "family": "load-balancing",
       "provider": "azurerm",
       "terraform_type": "azurerm_lb_rule",
@@ -1884,7 +1884,7 @@
     },
     {
       "rule_id": "azure/local-network-gateway",
-      "label": "Azure local network gateway",
+      "label": "Local network gateway",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_local_network_gateway",
@@ -1892,7 +1892,7 @@
     },
     {
       "rule_id": "azure/log-analytics-cluster",
-      "label": "Azure Log Analytics dedicated cluster",
+      "label": "Log Analytics dedicated cluster",
       "family": "operations",
       "provider": "azurerm",
       "terraform_type": "azurerm_log_analytics_cluster",
@@ -1900,7 +1900,7 @@
     },
     {
       "rule_id": "azure/log-analytics-data-export-rule",
-      "label": "Azure Log Analytics data export rule",
+      "label": "Log Analytics data export rule",
       "family": "operations",
       "provider": "azurerm",
       "terraform_type": "azurerm_log_analytics_data_export_rule",
@@ -1908,7 +1908,7 @@
     },
     {
       "rule_id": "azure/log-analytics-saved-search",
-      "label": "Azure Log Analytics saved search",
+      "label": "Log Analytics saved search",
       "family": "operations",
       "provider": "azurerm",
       "terraform_type": "azurerm_log_analytics_saved_search",
@@ -1916,7 +1916,7 @@
     },
     {
       "rule_id": "azure/log-analytics-solution",
-      "label": "Azure Log Analytics solution",
+      "label": "Log Analytics solution",
       "family": "operations",
       "provider": "azurerm",
       "terraform_type": "azurerm_log_analytics_solution",
@@ -1924,7 +1924,7 @@
     },
     {
       "rule_id": "azure/log-analytics-workspace",
-      "label": "Azure Log Analytics workspace",
+      "label": "Log Analytics workspace",
       "family": "operations",
       "provider": "azurerm",
       "terraform_type": "azurerm_log_analytics_workspace",
@@ -1932,7 +1932,7 @@
     },
     {
       "rule_id": "azure/log-analytics-workspace-table",
-      "label": "Azure Log Analytics workspace table",
+      "label": "Log Analytics workspace table",
       "family": "operations",
       "provider": "azurerm",
       "terraform_type": "azurerm_log_analytics_workspace_table",
@@ -1940,7 +1940,7 @@
     },
     {
       "rule_id": "azure/logic-app-http-action",
-      "label": "Azure Logic Apps HTTP action",
+      "label": "Logic Apps HTTP action",
       "family": "api-integration",
       "provider": "azurerm",
       "terraform_type": "azurerm_logic_app_action_http",
@@ -1948,7 +1948,7 @@
     },
     {
       "rule_id": "azure/logic-app-integration-account",
-      "label": "Azure Logic Apps integration account",
+      "label": "Logic Apps integration account",
       "family": "api-integration",
       "provider": "azurerm",
       "terraform_type": "azurerm_logic_app_integration_account",
@@ -1956,7 +1956,7 @@
     },
     {
       "rule_id": "azure/logic-app-recurrence-trigger",
-      "label": "Azure Logic Apps recurrence trigger",
+      "label": "Logic Apps recurrence trigger",
       "family": "api-integration",
       "provider": "azurerm",
       "terraform_type": "azurerm_logic_app_trigger_recurrence",
@@ -1964,7 +1964,7 @@
     },
     {
       "rule_id": "azure/logic-app-standard",
-      "label": "Azure Logic Apps Standard workflow app",
+      "label": "Logic Apps Standard workflow app",
       "family": "api-integration",
       "provider": "azurerm",
       "terraform_type": "azurerm_logic_app_standard",
@@ -1972,7 +1972,7 @@
     },
     {
       "rule_id": "azure/logic-app-workflow",
-      "label": "Azure Logic Apps Consumption workflow",
+      "label": "Logic Apps Consumption workflow",
       "family": "api-integration",
       "provider": "azurerm",
       "terraform_type": "azurerm_logic_app_workflow",
@@ -2012,7 +2012,7 @@
     },
     {
       "rule_id": "azure/maintenance-configuration",
-      "label": "Azure maintenance configuration",
+      "label": "Maintenance configuration",
       "family": "operations",
       "provider": "azurerm",
       "terraform_type": "azurerm_maintenance_configuration",
@@ -2020,7 +2020,7 @@
     },
     {
       "rule_id": "azure/managed-application",
-      "label": "Azure Managed Application",
+      "label": "Managed Application",
       "family": "governance-management",
       "provider": "azurerm",
       "terraform_type": "azurerm_managed_application",
@@ -2036,7 +2036,7 @@
     },
     {
       "rule_id": "azure/managed-disk",
-      "label": "Azure managed disk",
+      "label": "Managed disk",
       "family": "compute",
       "provider": "azurerm",
       "terraform_type": "azurerm_managed_disk",
@@ -2052,7 +2052,7 @@
     },
     {
       "rule_id": "azure/managed-hsm",
-      "label": "Azure Key Vault Managed HSM",
+      "label": "Key Vault Managed HSM",
       "family": "security",
       "provider": "azurerm",
       "terraform_type": "azurerm_key_vault_managed_hardware_security_module",
@@ -2060,7 +2060,7 @@
     },
     {
       "rule_id": "azure/managed-hsm-key",
-      "label": "Azure Managed HSM key",
+      "label": "Managed HSM key",
       "family": "security",
       "provider": "azurerm",
       "terraform_type": "azurerm_key_vault_managed_hardware_security_module_key",
@@ -2068,7 +2068,7 @@
     },
     {
       "rule_id": "azure/managed-lustre-file-system",
-      "label": "Azure Managed Lustre file system",
+      "label": "Managed Lustre file system",
       "family": "storage",
       "provider": "azurerm",
       "terraform_type": "azurerm_managed_lustre_file_system",
@@ -2084,7 +2084,7 @@
     },
     {
       "rule_id": "azure/managed-service-fabric-cluster",
-      "label": "Azure Service Fabric managed cluster",
+      "label": "Service Fabric managed cluster",
       "family": "containers",
       "provider": "azurerm",
       "terraform_type": "azurerm_service_fabric_managed_cluster",
@@ -2092,7 +2092,7 @@
     },
     {
       "rule_id": "azure/management-group",
-      "label": "Azure management group",
+      "label": "Management group",
       "family": "governance-management",
       "provider": "azurerm",
       "terraform_type": "azurerm_management_group",
@@ -2100,7 +2100,7 @@
     },
     {
       "rule_id": "azure/maps-account",
-      "label": "Azure Maps account",
+      "label": "Maps account",
       "family": "api-integration",
       "provider": "azurerm",
       "terraform_type": "azurerm_maps_account",
@@ -2108,7 +2108,7 @@
     },
     {
       "rule_id": "azure/mongo-cluster",
-      "label": "Azure DocumentDB cluster",
+      "label": "DocumentDB cluster",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_mongo_cluster",
@@ -2172,7 +2172,7 @@
     },
     {
       "rule_id": "azure/mssql-database",
-      "label": "Azure SQL Database",
+      "label": "SQL Database",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_mssql_database",
@@ -2180,7 +2180,7 @@
     },
     {
       "rule_id": "azure/mssql-server",
-      "label": "Azure SQL logical server",
+      "label": "SQL logical server",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_mssql_server",
@@ -2188,7 +2188,7 @@
     },
     {
       "rule_id": "azure/mysql-database",
-      "label": "Azure Database for MySQL database",
+      "label": "MySQL database",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_mysql_flexible_database",
@@ -2196,7 +2196,7 @@
     },
     {
       "rule_id": "azure/mysql-flexible-server",
-      "label": "Azure Database for MySQL flexible server",
+      "label": "MySQL flexible server",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_mysql_flexible_server",
@@ -2204,7 +2204,7 @@
     },
     {
       "rule_id": "azure/nat-gateway",
-      "label": "Azure NAT Gateway",
+      "label": "NAT Gateway",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_nat_gateway",
@@ -2212,7 +2212,7 @@
     },
     {
       "rule_id": "azure/nat-gateway-public-ip-association",
-      "label": "NAT Gateway public IP address association",
+      "label": "NAT Gateway public IP association",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_nat_gateway_public_ip_association",
@@ -2268,7 +2268,7 @@
     },
     {
       "rule_id": "azure/network-function-traffic-collector",
-      "label": "Azure Traffic Collector",
+      "label": "Traffic Collector",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_network_function_azure_traffic_collector",
@@ -2276,7 +2276,7 @@
     },
     {
       "rule_id": "azure/network-interface",
-      "label": "Azure network interface",
+      "label": "Network interface",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_network_interface",
@@ -2284,7 +2284,7 @@
     },
     {
       "rule_id": "azure/network-manager-ipam-pool",
-      "label": "Azure Virtual Network Manager IP address management pool",
+      "label": "Virtual Network Manager IP address management pool",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_network_manager_ipam_pool",
@@ -2292,7 +2292,7 @@
     },
     {
       "rule_id": "azure/network-security-group",
-      "label": "Azure Network Security Group",
+      "label": "Network Security Group",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_network_security_group",
@@ -2300,7 +2300,7 @@
     },
     {
       "rule_id": "azure/network-security-perimeter",
-      "label": "Azure Network Security Perimeter",
+      "label": "Network Security Perimeter",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_network_security_perimeter",
@@ -2308,7 +2308,7 @@
     },
     {
       "rule_id": "azure/network-security-rule",
-      "label": "Azure Network Security Group rule",
+      "label": "Network Security Group rule",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_network_security_rule",
@@ -2316,7 +2316,7 @@
     },
     {
       "rule_id": "azure/network-watcher",
-      "label": "Azure Network Watcher",
+      "label": "Network Watcher",
       "family": "operations",
       "provider": "azurerm",
       "terraform_type": "azurerm_network_watcher",
@@ -2324,7 +2324,7 @@
     },
     {
       "rule_id": "azure/network-watcher-flow-log",
-      "label": "Azure Network Watcher flow log",
+      "label": "Network Watcher flow log",
       "family": "operations",
       "provider": "azurerm",
       "terraform_type": "azurerm_network_watcher_flow_log",
@@ -2348,7 +2348,7 @@
     },
     {
       "rule_id": "azure/notification-hub",
-      "label": "Azure Notification Hub",
+      "label": "Notification Hub",
       "family": "messaging-eventing",
       "provider": "azurerm",
       "terraform_type": "azurerm_notification_hub",
@@ -2356,7 +2356,7 @@
     },
     {
       "rule_id": "azure/notification-hubs-namespace",
-      "label": "Azure Notification Hubs namespace",
+      "label": "Notification Hubs namespace",
       "family": "messaging-eventing",
       "provider": "azurerm",
       "terraform_type": "azurerm_notification_hub_namespace",
@@ -2396,7 +2396,7 @@
     },
     {
       "rule_id": "azure/orchestrated-virtual-machine-scale-set",
-      "label": "orchestrated Virtual Machine Scale Set",
+      "label": "Orchestrated Virtual Machine Scale Set",
       "family": "compute",
       "provider": "azurerm",
       "terraform_type": "azurerm_orchestrated_virtual_machine_scale_set",
@@ -2420,7 +2420,7 @@
     },
     {
       "rule_id": "azure/point-to-site-vpn-gateway",
-      "label": "Azure point-to-site VPN gateway",
+      "label": "Point-to-site VPN gateway",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_point_to_site_vpn_gateway",
@@ -2444,7 +2444,7 @@
     },
     {
       "rule_id": "azure/portal-dashboard",
-      "label": "Azure portal dashboard",
+      "label": "Portal dashboard",
       "family": "operations",
       "provider": "azurerm",
       "terraform_type": "azurerm_portal_dashboard",
@@ -2452,7 +2452,7 @@
     },
     {
       "rule_id": "azure/postgresql-backup",
-      "label": "Azure Database for PostgreSQL backup",
+      "label": "PostgreSQL backup",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_postgresql_flexible_server_backup",
@@ -2460,7 +2460,7 @@
     },
     {
       "rule_id": "azure/postgresql-database",
-      "label": "Azure Database for PostgreSQL database",
+      "label": "PostgreSQL database",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_postgresql_flexible_server_database",
@@ -2468,7 +2468,7 @@
     },
     {
       "rule_id": "azure/postgresql-flexible-server",
-      "label": "Azure Database for PostgreSQL flexible server",
+      "label": "PostgreSQL flexible server",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_postgresql_flexible_server",
@@ -2484,7 +2484,7 @@
     },
     {
       "rule_id": "azure/private-dns-a-record",
-      "label": "Azure Private DNS A record",
+      "label": "Private DNS A record",
       "family": "dns-cdn",
       "provider": "azurerm",
       "terraform_type": "azurerm_private_dns_a_record",
@@ -2492,7 +2492,7 @@
     },
     {
       "rule_id": "azure/private-dns-cname-record",
-      "label": "Azure Private DNS CNAME record",
+      "label": "Private DNS CNAME record",
       "family": "dns-cdn",
       "provider": "azurerm",
       "terraform_type": "azurerm_private_dns_cname_record",
@@ -2500,7 +2500,7 @@
     },
     {
       "rule_id": "azure/private-dns-forwarding-ruleset",
-      "label": "Azure DNS forwarding ruleset",
+      "label": "DNS forwarding ruleset",
       "family": "dns-cdn",
       "provider": "azurerm",
       "terraform_type": "azurerm_private_dns_resolver_dns_forwarding_ruleset",
@@ -2508,7 +2508,7 @@
     },
     {
       "rule_id": "azure/private-dns-inbound-endpoint",
-      "label": "Azure DNS Private Resolver inbound endpoint",
+      "label": "DNS Private Resolver inbound endpoint",
       "family": "dns-cdn",
       "provider": "azurerm",
       "terraform_type": "azurerm_private_dns_resolver_inbound_endpoint",
@@ -2516,7 +2516,7 @@
     },
     {
       "rule_id": "azure/private-dns-outbound-endpoint",
-      "label": "Azure DNS Private Resolver outbound endpoint",
+      "label": "DNS Private Resolver outbound endpoint",
       "family": "dns-cdn",
       "provider": "azurerm",
       "terraform_type": "azurerm_private_dns_resolver_outbound_endpoint",
@@ -2524,7 +2524,7 @@
     },
     {
       "rule_id": "azure/private-dns-resolver",
-      "label": "Azure DNS Private Resolver",
+      "label": "DNS Private Resolver",
       "family": "dns-cdn",
       "provider": "azurerm",
       "terraform_type": "azurerm_private_dns_resolver",
@@ -2532,7 +2532,7 @@
     },
     {
       "rule_id": "azure/private-dns-zone",
-      "label": "Azure Private DNS zone",
+      "label": "Private DNS zone",
       "family": "dns-cdn",
       "provider": "azurerm",
       "terraform_type": "azurerm_private_dns_zone",
@@ -2540,7 +2540,7 @@
     },
     {
       "rule_id": "azure/private-dns-zone-vnet-link",
-      "label": "Azure Private DNS virtual network link",
+      "label": "Private DNS virtual network link",
       "family": "dns-cdn",
       "provider": "azurerm",
       "terraform_type": "azurerm_private_dns_zone_virtual_network_link",
@@ -2548,7 +2548,7 @@
     },
     {
       "rule_id": "azure/private-endpoint",
-      "label": "Azure Private Endpoint",
+      "label": "Private Endpoint",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_private_endpoint",
@@ -2556,7 +2556,7 @@
     },
     {
       "rule_id": "azure/private-link-service",
-      "label": "Azure Private Link service",
+      "label": "Private Link service",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_private_link_service",
@@ -2564,7 +2564,7 @@
     },
     {
       "rule_id": "azure/proximity-placement-group",
-      "label": "Azure proximity placement group",
+      "label": "Proximity placement group",
       "family": "compute",
       "provider": "azurerm",
       "terraform_type": "azurerm_proximity_placement_group",
@@ -2572,7 +2572,7 @@
     },
     {
       "rule_id": "azure/public-address",
-      "label": "Azure Public IP address",
+      "label": "Public IP address",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_public_ip",
@@ -2580,7 +2580,7 @@
     },
     {
       "rule_id": "azure/public-ip-prefix",
-      "label": "Azure Public IP prefix",
+      "label": "Public IP prefix",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_public_ip_prefix",
@@ -2596,7 +2596,7 @@
     },
     {
       "rule_id": "azure/queue-storage-queue",
-      "label": "Azure Queue Storage queue",
+      "label": "Queue Storage queue",
       "family": "storage",
       "provider": "azurerm",
       "terraform_type": "azurerm_storage_queue",
@@ -2612,7 +2612,7 @@
     },
     {
       "rule_id": "azure/recovery-services-vault",
-      "label": "Azure Recovery Services vault",
+      "label": "Recovery Services vault",
       "family": "migration",
       "provider": "azurerm",
       "terraform_type": "azurerm_recovery_services_vault",
@@ -2620,7 +2620,7 @@
     },
     {
       "rule_id": "azure/red-hat-openshift-cluster",
-      "label": "Azure Red Hat OpenShift cluster",
+      "label": "Red Hat OpenShift cluster",
       "family": "containers",
       "provider": "azurerm",
       "terraform_type": "azurerm_redhat_openshift_cluster",
@@ -2628,7 +2628,7 @@
     },
     {
       "rule_id": "azure/relay-hybrid-connection",
-      "label": "Azure Relay Hybrid Connection",
+      "label": "Relay Hybrid Connection",
       "family": "messaging-eventing",
       "provider": "azurerm",
       "terraform_type": "azurerm_relay_hybrid_connection",
@@ -2636,7 +2636,7 @@
     },
     {
       "rule_id": "azure/relay-namespace",
-      "label": "Azure Relay namespace",
+      "label": "Relay namespace",
       "family": "messaging-eventing",
       "provider": "azurerm",
       "terraform_type": "azurerm_relay_namespace",
@@ -2644,7 +2644,7 @@
     },
     {
       "rule_id": "azure/resource-group",
-      "label": "Azure Resource Group",
+      "label": "Resource Group",
       "family": "governance-management",
       "provider": "azurerm",
       "terraform_type": "azurerm_resource_group",
@@ -2660,7 +2660,7 @@
     },
     {
       "rule_id": "azure/role-assignment",
-      "label": "Azure role assignment",
+      "label": "Role assignment",
       "family": "governance-management",
       "provider": "azurerm",
       "terraform_type": "azurerm_role_assignment",
@@ -2668,7 +2668,7 @@
     },
     {
       "rule_id": "azure/role-definition",
-      "label": "Azure custom role definition",
+      "label": "Custom role definition",
       "family": "governance-management",
       "provider": "azurerm",
       "terraform_type": "azurerm_role_definition",
@@ -2676,7 +2676,7 @@
     },
     {
       "rule_id": "azure/route",
-      "label": "Azure user-defined route",
+      "label": "User-defined route",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_route",
@@ -2684,7 +2684,7 @@
     },
     {
       "rule_id": "azure/route-server",
-      "label": "Azure Route Server",
+      "label": "Route Server",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_route_server",
@@ -2692,7 +2692,7 @@
     },
     {
       "rule_id": "azure/route-table",
-      "label": "Azure route table",
+      "label": "Route table",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_route_table",
@@ -2772,7 +2772,7 @@
     },
     {
       "rule_id": "azure/service-bus-namespace",
-      "label": "Azure Service Bus namespace",
+      "label": "Service Bus namespace",
       "family": "messaging-eventing",
       "provider": "azurerm",
       "terraform_type": "azurerm_servicebus_namespace",
@@ -2780,7 +2780,7 @@
     },
     {
       "rule_id": "azure/service-bus-queue",
-      "label": "Azure Service Bus queue",
+      "label": "Service Bus queue",
       "family": "messaging-eventing",
       "provider": "azurerm",
       "terraform_type": "azurerm_servicebus_queue",
@@ -2788,7 +2788,7 @@
     },
     {
       "rule_id": "azure/service-bus-subscription",
-      "label": "Azure Service Bus topic subscription",
+      "label": "Service Bus subscription",
       "family": "messaging-eventing",
       "provider": "azurerm",
       "terraform_type": "azurerm_servicebus_subscription",
@@ -2796,7 +2796,7 @@
     },
     {
       "rule_id": "azure/service-bus-subscription-rule",
-      "label": "Azure Service Bus subscription rule",
+      "label": "Service Bus subscription rule",
       "family": "messaging-eventing",
       "provider": "azurerm",
       "terraform_type": "azurerm_servicebus_subscription_rule",
@@ -2804,7 +2804,7 @@
     },
     {
       "rule_id": "azure/service-bus-topic",
-      "label": "Azure Service Bus topic",
+      "label": "Service Bus topic",
       "family": "messaging-eventing",
       "provider": "azurerm",
       "terraform_type": "azurerm_servicebus_topic",
@@ -2812,7 +2812,7 @@
     },
     {
       "rule_id": "azure/service-fabric-cluster",
-      "label": "Azure Service Fabric cluster",
+      "label": "Service Fabric cluster",
       "family": "containers",
       "provider": "azurerm",
       "terraform_type": "azurerm_service_fabric_cluster",
@@ -2820,7 +2820,7 @@
     },
     {
       "rule_id": "azure/shared-image",
-      "label": "Azure Compute Gallery image definition",
+      "label": "Compute Gallery image definition",
       "family": "compute",
       "provider": "azurerm",
       "terraform_type": "azurerm_shared_image",
@@ -2828,7 +2828,7 @@
     },
     {
       "rule_id": "azure/signalr-service",
-      "label": "Azure SignalR Service",
+      "label": "SignalR Service",
       "family": "communication",
       "provider": "azurerm",
       "terraform_type": "azurerm_signalr_service",
@@ -2892,7 +2892,7 @@
     },
     {
       "rule_id": "azure/sql-elastic-pool",
-      "label": "Azure SQL elastic pool",
+      "label": "SQL elastic pool",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_mssql_elasticpool",
@@ -2900,7 +2900,7 @@
     },
     {
       "rule_id": "azure/sql-failover-group",
-      "label": "Azure SQL failover group",
+      "label": "SQL failover group",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_mssql_failover_group",
@@ -2908,7 +2908,7 @@
     },
     {
       "rule_id": "azure/sql-managed-database",
-      "label": "Azure SQL Managed Instance database",
+      "label": "SQL Managed Instance database",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_mssql_managed_database",
@@ -2916,7 +2916,7 @@
     },
     {
       "rule_id": "azure/sql-managed-instance",
-      "label": "Azure SQL Managed Instance",
+      "label": "SQL Managed Instance",
       "family": "databases",
       "provider": "azurerm",
       "terraform_type": "azurerm_mssql_managed_instance",
@@ -2924,7 +2924,7 @@
     },
     {
       "rule_id": "azure/sre-agent",
-      "label": "Azure SRE Agent",
+      "label": "SRE Agent",
       "family": "ai-ml",
       "provider": "azapi",
       "terraform_type": "azapi_resource",
@@ -2941,7 +2941,7 @@
     },
     {
       "rule_id": "azure/static-web-app",
-      "label": "Azure Static Web Apps site",
+      "label": "Static Web Apps site",
       "family": "serverless",
       "provider": "azurerm",
       "terraform_type": "azurerm_static_web_app",
@@ -2949,7 +2949,7 @@
     },
     {
       "rule_id": "azure/storage-account",
-      "label": "Azure Storage account",
+      "label": "Storage account",
       "family": "storage",
       "provider": "azurerm",
       "terraform_type": "azurerm_storage_account",
@@ -2957,7 +2957,7 @@
     },
     {
       "rule_id": "azure/storage-blob",
-      "label": "Azure Blob Storage blob",
+      "label": "Blob Storage blob",
       "family": "storage",
       "provider": "azurerm",
       "terraform_type": "azurerm_storage_blob",
@@ -2965,7 +2965,7 @@
     },
     {
       "rule_id": "azure/storage-encryption-scope",
-      "label": "Azure Storage encryption scope",
+      "label": "Storage encryption scope",
       "family": "storage",
       "provider": "azurerm",
       "terraform_type": "azurerm_storage_encryption_scope",
@@ -2973,7 +2973,7 @@
     },
     {
       "rule_id": "azure/storage-management-policy",
-      "label": "Azure Storage lifecycle management policy",
+      "label": "Storage lifecycle management policy",
       "family": "storage",
       "provider": "azurerm",
       "terraform_type": "azurerm_storage_management_policy",
@@ -2981,7 +2981,7 @@
     },
     {
       "rule_id": "azure/storage-mover",
-      "label": "Azure Storage Mover",
+      "label": "Storage Mover",
       "family": "migration",
       "provider": "azurerm",
       "terraform_type": "azurerm_storage_mover",
@@ -3005,7 +3005,7 @@
     },
     {
       "rule_id": "azure/storage-sync-service",
-      "label": "Azure File Sync service",
+      "label": "File Sync service",
       "family": "storage",
       "provider": "azurerm",
       "terraform_type": "azurerm_storage_sync",
@@ -3013,7 +3013,7 @@
     },
     {
       "rule_id": "azure/storage-table-entity",
-      "label": "Azure Table Storage entity",
+      "label": "Table Storage entity",
       "family": "storage",
       "provider": "azurerm",
       "terraform_type": "azurerm_storage_table_entity",
@@ -3021,7 +3021,7 @@
     },
     {
       "rule_id": "azure/stream-analytics-blob-output",
-      "label": "Azure Stream Analytics Blob Storage output",
+      "label": "Stream Analytics Blob Storage output",
       "family": "data-analytics",
       "provider": "azurerm",
       "terraform_type": "azurerm_stream_analytics_output_blob",
@@ -3029,7 +3029,7 @@
     },
     {
       "rule_id": "azure/stream-analytics-cluster",
-      "label": "Azure Stream Analytics cluster",
+      "label": "Stream Analytics cluster",
       "family": "data-analytics",
       "provider": "azurerm",
       "terraform_type": "azurerm_stream_analytics_cluster",
@@ -3037,7 +3037,7 @@
     },
     {
       "rule_id": "azure/stream-analytics-event-hubs-input",
-      "label": "Azure Stream Analytics Event Hubs input",
+      "label": "Stream Analytics Event Hubs input",
       "family": "data-analytics",
       "provider": "azurerm",
       "terraform_type": "azurerm_stream_analytics_stream_input_eventhub_v2",
@@ -3045,7 +3045,7 @@
     },
     {
       "rule_id": "azure/stream-analytics-job",
-      "label": "Azure Stream Analytics job",
+      "label": "Stream Analytics job",
       "family": "data-analytics",
       "provider": "azurerm",
       "terraform_type": "azurerm_stream_analytics_job",
@@ -3053,7 +3053,7 @@
     },
     {
       "rule_id": "azure/subnet",
-      "label": "subnet",
+      "label": "Subnet",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_subnet",
@@ -3061,7 +3061,7 @@
     },
     {
       "rule_id": "azure/subnet-nat-gateway-association",
-      "label": "subnet NAT Gateway association",
+      "label": "Subnet NAT Gateway association",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_subnet_nat_gateway_association",
@@ -3069,7 +3069,7 @@
     },
     {
       "rule_id": "azure/subnet-network-security-group-association",
-      "label": "subnet Network Security Group association",
+      "label": "Subnet Network Security Group association",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_subnet_network_security_group_association",
@@ -3077,7 +3077,7 @@
     },
     {
       "rule_id": "azure/subnet-route-table-association",
-      "label": "subnet route table association",
+      "label": "Subnet route table association",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_subnet_route_table_association",
@@ -3085,7 +3085,7 @@
     },
     {
       "rule_id": "azure/subscription",
-      "label": "Azure subscription",
+      "label": "Subscription",
       "family": "governance-management",
       "provider": "azurerm",
       "terraform_type": "azurerm_subscription",
@@ -3101,7 +3101,7 @@
     },
     {
       "rule_id": "azure/synapse-spark-pool",
-      "label": "Azure Synapse Apache Spark pool",
+      "label": "Synapse Apache Spark pool",
       "family": "data-analytics",
       "provider": "azurerm",
       "terraform_type": "azurerm_synapse_spark_pool",
@@ -3109,7 +3109,7 @@
     },
     {
       "rule_id": "azure/synapse-sql-pool",
-      "label": "Azure Synapse dedicated SQL pool",
+      "label": "Synapse dedicated SQL pool",
       "family": "data-analytics",
       "provider": "azurerm",
       "terraform_type": "azurerm_synapse_sql_pool",
@@ -3141,7 +3141,7 @@
     },
     {
       "rule_id": "azure/table-storage-table",
-      "label": "Azure Table Storage table",
+      "label": "Table Storage table",
       "family": "storage",
       "provider": "azurerm",
       "terraform_type": "azurerm_storage_table",
@@ -3149,7 +3149,7 @@
     },
     {
       "rule_id": "azure/traffic-manager-azure-endpoint",
-      "label": "Azure Traffic Manager Azure endpoint",
+      "label": "Traffic Manager Azure endpoint",
       "family": "load-balancing",
       "provider": "azurerm",
       "terraform_type": "azurerm_traffic_manager_azure_endpoint",
@@ -3157,7 +3157,7 @@
     },
     {
       "rule_id": "azure/traffic-manager-profile",
-      "label": "Azure Traffic Manager profile",
+      "label": "Traffic Manager profile",
       "family": "load-balancing",
       "provider": "azurerm",
       "terraform_type": "azurerm_traffic_manager_profile",
@@ -3165,7 +3165,7 @@
     },
     {
       "rule_id": "azure/trusted-signing-account",
-      "label": "Azure Artifact Signing account",
+      "label": "Artifact Signing account",
       "family": "security",
       "provider": "azurerm",
       "terraform_type": "azurerm_trusted_signing_account",
@@ -3173,7 +3173,7 @@
     },
     {
       "rule_id": "azure/user-assigned-managed-identity",
-      "label": "user-assigned managed identity",
+      "label": "User-assigned identity",
       "family": "identity-iam",
       "provider": "azurerm",
       "terraform_type": "azurerm_user_assigned_identity",
@@ -3181,7 +3181,7 @@
     },
     {
       "rule_id": "azure/video-indexer-account",
-      "label": "Azure AI Video Indexer account",
+      "label": "AI Video Indexer account",
       "family": "ai-ml",
       "provider": "azurerm",
       "terraform_type": "azurerm_video_indexer_account",
@@ -3229,7 +3229,7 @@
     },
     {
       "rule_id": "azure/virtual-hub",
-      "label": "Azure Virtual WAN hub",
+      "label": "Virtual WAN hub",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_virtual_hub",
@@ -3237,7 +3237,7 @@
     },
     {
       "rule_id": "azure/virtual-hub-routing-intent",
-      "label": "Azure Virtual WAN hub routing intent",
+      "label": "Virtual WAN hub routing intent",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_virtual_hub_routing_intent",
@@ -3245,7 +3245,7 @@
     },
     {
       "rule_id": "azure/virtual-machine",
-      "label": "Azure virtual machine",
+      "label": "Virtual machine",
       "family": "compute",
       "provider": "azurerm",
       "terraform_type": "azurerm_virtual_machine",
@@ -3253,7 +3253,7 @@
     },
     {
       "rule_id": "azure/virtual-machine-backup-policy",
-      "label": "Azure virtual machine backup policy",
+      "label": "Virtual machine backup policy",
       "family": "migration",
       "provider": "azurerm",
       "terraform_type": "azurerm_backup_policy_vm",
@@ -3261,7 +3261,7 @@
     },
     {
       "rule_id": "azure/virtual-machine-restore-point",
-      "label": "Azure virtual machine restore point",
+      "label": "Virtual machine restore point",
       "family": "compute",
       "provider": "azurerm",
       "terraform_type": "azurerm_virtual_machine_restore_point",
@@ -3277,7 +3277,7 @@
     },
     {
       "rule_id": "azure/virtual-network",
-      "label": "Azure Virtual Network",
+      "label": "VNet",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_virtual_network",
@@ -3285,7 +3285,7 @@
     },
     {
       "rule_id": "azure/virtual-network-gateway",
-      "label": "Azure VPN Gateway",
+      "label": "VPN Gateway",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_virtual_network_gateway",
@@ -3293,7 +3293,7 @@
     },
     {
       "rule_id": "azure/virtual-network-gateway-connection",
-      "label": "Azure VPN Gateway connection",
+      "label": "VPN Gateway connection",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_virtual_network_gateway_connection",
@@ -3301,7 +3301,7 @@
     },
     {
       "rule_id": "azure/virtual-network-manager",
-      "label": "Azure Virtual Network Manager",
+      "label": "Virtual Network Manager",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_network_manager",
@@ -3309,7 +3309,7 @@
     },
     {
       "rule_id": "azure/virtual-network-peering",
-      "label": "Azure Virtual Network peering",
+      "label": "Virtual Network peering",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_virtual_network_peering",
@@ -3317,7 +3317,7 @@
     },
     {
       "rule_id": "azure/virtual-wan",
-      "label": "Azure Virtual WAN",
+      "label": "Virtual WAN",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_virtual_wan",
@@ -3341,7 +3341,7 @@
     },
     {
       "rule_id": "azure/vpn-gateway",
-      "label": "Azure Virtual WAN VPN gateway",
+      "label": "Virtual WAN VPN gateway",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_vpn_gateway",
@@ -3349,7 +3349,7 @@
     },
     {
       "rule_id": "azure/vpn-gateway-connection",
-      "label": "Azure Virtual WAN VPN connection",
+      "label": "Virtual WAN VPN connection",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_vpn_gateway_connection",
@@ -3357,7 +3357,7 @@
     },
     {
       "rule_id": "azure/vpn-site",
-      "label": "Azure Virtual WAN VPN site",
+      "label": "Virtual WAN VPN site",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_vpn_site",
@@ -3365,7 +3365,7 @@
     },
     {
       "rule_id": "azure/web-application-firewall-policy",
-      "label": "Azure Web Application Firewall policy",
+      "label": "WAF policy",
       "family": "network",
       "provider": "azurerm",
       "terraform_type": "azurerm_web_application_firewall_policy",
@@ -3381,7 +3381,7 @@
     },
     {
       "rule_id": "azure/windows-function-app",
-      "label": "Azure Functions Windows function app",
+      "label": "Function App",
       "family": "serverless",
       "provider": "azurerm",
       "terraform_type": "azurerm_windows_function_app",
@@ -3405,7 +3405,7 @@
     },
     {
       "rule_id": "azure/windows-web-app",
-      "label": "Azure App Service Windows web app",
+      "label": "App Service Windows web app",
       "family": "serverless",
       "provider": "azurerm",
       "terraform_type": "azurerm_windows_web_app",
