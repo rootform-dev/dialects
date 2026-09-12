@@ -21,7 +21,7 @@
       "version": "0.1.0",
       "digest": "sha256:074719eca0db066f7a7cee2ce117f260024929a07a6b2dbfa8aee3a457689a59",
       "semantic_digest": "sha256:f44c042c8194926c1cf08bfca0a20222e391a1f17ecbf3440a320f5cce1e0652",
-      "presentation_digest": "sha256:a24a0a650490cfbcd4a319c22fdf891a567786a6ac728086f864b20bbb0615dc"
+      "presentation_digest": "sha256:7db76eb5376bbb73ad6b725e8620f007ce60d2532583a0a6158646e75e627cf7"
     },
     {
       "name": "cloudflare",
