@@ -2,16 +2,23 @@
   "format_version": "1",
   "showcase_delta": {
     "verified_date": "2026-09-09",
-    "relations_added": ["routes-to", "delivers-to", "runs-as"],
-    "contexts_added": ["core/network", "core/ownership"],
+    "relations_added": [
+      "routes-to",
+      "delivers-to",
+      "runs-as"
+    ],
+    "contexts_added": [
+      "rf.context.network",
+      "google.context.ownership"
+    ],
     "coverage": "targeted additions within existing exhaustive provider inventory",
     "implemented_candidates": 9,
     "narrowed_candidates": 1
   },
   "total_rows": 3055,
   "by_inventory": {
-    "provider_constructs": 2950,
-    "catalog_products": 105
+    "catalog-product": 105,
+    "provider-construct": 2950
   },
   "provider_surfaces": {
     "managed-resource": 1459,
@@ -26,18 +33,9 @@
     "beta_only": 247
   },
   "by_decision": {
-    "supported": 300,
-    "partial": 124,
-    "intentionally-unrepresented": 2131,
-    "unsupported": 500
-  },
-  "by_declaration_outcome": {
-    "represented": 265,
-    "supporting": 87,
-    "filtered": 0,
-    "unsupported": 1606,
-    "failed": 0,
-    "not-applicable": 1097
+    "rule-present": 300,
+    "partial-rule": 124,
+    "no-rule": 0
   },
   "by_family": {
     "compute": 89,
@@ -61,10 +59,10 @@
     "governance-management": 307
   },
   "catalog": {
-    "supported": 70,
-    "partial": 2,
-    "intentionally_unrepresented": 8,
-    "unsupported": 0,
-    "no_provider_surface": 25
-  }
+    "rule-present": 70,
+    "partial-rule": 2,
+    "no-rule": 33,
+    "no-provider-surface": 25
+  },
+  "rules_with_rows": 0
 }

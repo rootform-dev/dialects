@@ -3,7 +3,7 @@ rule "service-level-objective" {
     type = "datadog_service_level_objective"
   }
 
-  as = concept.core.service-objective
+  as = concept.service-objective
 }
 
 rule "service-level-objective-lookup" {
@@ -12,5 +12,5 @@ rule "service-level-objective-lookup" {
     type = "datadog_service_level_objective"
   }
 
-  as = concept.core.service-objective
+  as = concept.service-objective
 }

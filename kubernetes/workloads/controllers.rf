@@ -1,15 +1,12 @@
 concept "deployment" {
-  kind        = entity
   description = "A declaratively managed set of replica pods."
 }
 
 concept "stateful-set" {
-  kind        = entity
   description = "A stateful workload whose pods keep stable identity and storage."
 }
 
 concept "daemon-set" {
-  kind        = entity
   description = "A pod scheduler runs on every selected node."
 }
 
@@ -21,13 +18,13 @@ rule "kubernetes-deployment" {
   as = concept.deployment
 
   context {
-    as  = context.core.runtime
-    to  = concept.core.kubernetes-cluster
+    as  = rf.context.runtime
+    to  = rf.concept.kubernetes-cluster
     via = provider.host
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.metadata[0].namespace
 
@@ -51,13 +48,13 @@ rule "kubernetes-stateful-set" {
   as = concept.stateful-set
 
   context {
-    as  = context.core.runtime
-    to  = concept.core.kubernetes-cluster
+    as  = rf.context.runtime
+    to  = rf.concept.kubernetes-cluster
     via = provider.host
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.metadata[0].namespace
 
@@ -81,13 +78,13 @@ rule "kubernetes-daemon-set" {
   as = concept.daemon-set
 
   context {
-    as  = context.core.runtime
-    to  = concept.core.kubernetes-cluster
+    as  = rf.context.runtime
+    to  = rf.concept.kubernetes-cluster
     via = provider.host
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.metadata[0].namespace
 

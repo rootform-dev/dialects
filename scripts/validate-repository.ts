@@ -8,12 +8,6 @@ type Inventory = {
   dialects: Array<{ name: string; version: string }>;
 };
 
-type DialectLock = {
-  entries?: unknown;
-  format_version?: unknown;
-  unsupported_providers?: unknown;
-};
-
 type Toolchain = {
   format_version: string;
   repository: string;
@@ -27,8 +21,12 @@ const forbiddenText =
   /(?:\/Users\/|\/home\/[A-Za-z0-9._-]+\/|[A-Za-z]:\\Users\\|BEGIN (?:RSA|OPENSSH|EC|DSA) PRIVATE KEY|github_pat_|ghp_)/u;
 const privateImplementationReference =
   /(?:^|[/ "'`])(?:specs\/[0-9]{3}-|testdata\/architecture\/|docs\/adr\/[0-9]{3}-|packages\/renderer\/|web\/src\/)|\b(?:SPEC|ADR)-[0-9]{3}\b|\baccepted_adr\b/u;
+const qualifiedRuleReference =
+  /(?<![A-Za-z0-9_.-])([a-z][a-z0-9]*(?:-[a-z0-9]+)*[.]rule[.][a-z][a-z0-9]*(?:-[a-z0-9]+)*)(?![A-Za-z0-9_.-])/gu;
+// prior_rule_id records the pre-migration identity of an audited Rule. Audits
+// with disposition removed or corrected intentionally reference ids that no
+// longer exist; the field is provenance, not a live semantic reference.
 const evidenceNames = new Set([
-  "core-abstractions.json",
   "coverage-matrix.json",
   "coverage-summary.json",
   "icon-license-spike.md",
@@ -37,6 +35,7 @@ const evidenceNames = new Set([
   "provider-compatibility.json",
   "provider-source-inventory.json",
   "provider-surfaces-spike.md",
+  "rf-vocabulary-bindings.json",
   "rule-audit.json",
   "scenarios.json",
   "semantic-catalog.json",
@@ -86,25 +85,254 @@ function validatePublicEvidenceReferences(value: unknown, source: string): void 
   }
 }
 
-export function validateDialectLock(value: unknown, inventory: Inventory): void {
+export function validateLock(value: unknown): void {
   if (!isRecord(value)) throw new Error("rootform.lock must be an object");
-  const lock = value as DialectLock;
-  if (
-    lock.format_version !== "1" ||
-    !Array.isArray(lock.unsupported_providers) ||
-    lock.unsupported_providers.length !== 0 ||
-    !Array.isArray(lock.entries)
-  ) {
-    throw new Error("rootform.lock must use format 1 with an empty unsupported provider set");
+  const expectedKeys = [
+    "dialects",
+    "excluded_owners",
+    "format_version",
+    "policy_packs",
+    "replacements",
+  ];
+  if (Object.keys(value).sort().join("\n") !== expectedKeys.join("\n")) {
+    throw new Error("rootform.lock must contain only project selection fields");
   }
-  const actual = lock.entries.map((entry) => {
-    if (!isRecord(entry) || typeof entry.name !== "string" || typeof entry.version !== "string") {
-      throw new Error("rootform.lock contains an invalid dialect identity");
+  const lock = value as Record<string, unknown>;
+  if (lock.format_version !== "1") {
+    throw new Error("rootform.lock must use format version 1");
+  }
+  for (const field of ["dialects", "policy_packs", "excluded_owners", "replacements"]) {
+    if (!Array.isArray(lock[field]) || lock[field].length !== 0) {
+      throw new Error(`rootform.lock ${field} must be an empty selection`);
     }
-    return { name: entry.name, version: entry.version };
-  });
-  if (JSON.stringify(actual) !== JSON.stringify(inventory.dialects)) {
-    throw new Error("rootform.lock dialect identities do not match dialects.json");
+  }
+}
+
+type RfBlock = { kind: "concept" | "rule"; name: string; text: string };
+
+// MirrorPairCandidate is a resource rule that only reclassifies its own type
+// into a local concept: static match, no where, no emission, and a concept used
+// nowhere else in the dialect. The corpus prunes these pairs; the repository
+// gate rejects any reappearance.
+export type MirrorPairCandidate = {
+  dialect: string;
+  rule: string;
+  type: string | null;
+  file: string;
+};
+
+function parseRfBlocks(text: string): RfBlock[] {
+  const blocks: RfBlock[] = [];
+  const lines = text.split("\n");
+  for (let index = 0; index < lines.length; ) {
+    const line = lines[index] ?? "";
+    const match = /^(concept|rule)\s+"([^"]+)"\s*\{/u.exec(line);
+    if (match === null) {
+      index += 1;
+      continue;
+    }
+    const kind = match[1] as "concept" | "rule";
+    const name = match[2] ?? "";
+    let depth = 0;
+    let end = index;
+    for (; end < lines.length; end += 1) {
+      const stripped = (lines[end] ?? "").replace(/"[^"]*"/gu, '""');
+      depth += (stripped.match(/\{/gu) ?? []).length - (stripped.match(/\}/gu) ?? []).length;
+      if (depth <= 0) {
+        end += 1;
+        break;
+      }
+    }
+    blocks.push({ kind, name, text: lines.slice(index, end).join("\n") });
+    index = end;
+  }
+  return blocks;
+}
+
+function mirrorRuleInfo(text: string): {
+  type: string | null;
+  data: boolean;
+  emissions: boolean;
+  where: boolean;
+  asLocal: string | null;
+  asRf: string | null;
+  matchExtra: string[];
+} {
+  const info = {
+    type: null as string | null,
+    data: false,
+    emissions: false,
+    where: false,
+    asLocal: null as string | null,
+    asRf: null as string | null,
+    matchExtra: [] as string[],
+  };
+  const matchHead = /\bmatch\s*\{/u.exec(text);
+  if (matchHead !== null) {
+    const start = (matchHead.index ?? 0) + matchHead[0].length;
+    let depth = 1;
+    let cursor = start;
+    for (; cursor < text.length && depth > 0; cursor += 1) {
+      if (text[cursor] === "{") depth += 1;
+      else if (text[cursor] === "}") depth -= 1;
+    }
+    const matchBody = text.slice(start, cursor - 1);
+    const typeMatch = /type\s*=\s*"([^"]+)"/u.exec(matchBody);
+    if (typeMatch !== null) info.type = typeMatch[1] ?? null;
+    if (/kind\s*=\s*"data"/u.test(matchBody)) info.data = true;
+    info.matchExtra = [...matchBody.matchAll(/^\s*([a-z_]+)\s*=/gmu)]
+      .map((entry) => entry[1] ?? "")
+      .filter((field) => field !== "type" && field !== "kind");
+  }
+  const localAs = /^\s*as\s*=\s*concept\.([\w-]+)\s*$/mu.exec(text);
+  const sharedAs = /^\s*as\s*=\s*rf\.concept\.([\w-]+)\s*$/mu.exec(text);
+  if (localAs !== null) info.asLocal = localAs[1] ?? null;
+  if (sharedAs !== null) info.asRf = sharedAs[1] ?? null;
+  info.emissions = /^\s*(?:composition|context|relation|contribution|emission)\b/gmu.test(text);
+  info.where = /\bwhere\b/u.test(text);
+  return info;
+}
+
+export function declaredRuleIds(inventory: Inventory): Set<string> {
+  const ids = new Set<string>();
+  for (const { name } of inventory.dialects) {
+    for (const path of filesBelow(name).filter((candidate) => candidate.endsWith(".rf"))) {
+      const body = readFileSync(join(root, path), "utf8");
+      for (const match of body.matchAll(/^rule\s+"([^"]+)"/gmu)) {
+        ids.add(`${name}.rule.${match[1] ?? ""}`);
+      }
+    }
+  }
+  return ids;
+}
+
+export type UndeclaredRuleReference = { file: string; path: string; ref: string };
+
+// Collect every qualified owner.rule.name string under documentary schemas
+// that is not declared in the official dialect sources. Values of documentary
+// provenance keys (prior_rule_id) are audit history and are skipped.
+export function collectUndeclaredRuleReferences(
+  value: unknown,
+  file: string,
+  jsonPath: string,
+  declared: ReadonlySet<string>,
+  out: UndeclaredRuleReference[],
+): void {
+  if (typeof value === "string") {
+    for (const match of value.matchAll(qualifiedRuleReference)) {
+      const ref = match[1] ?? "";
+      if (!declared.has(ref)) out.push({ file, path: jsonPath, ref });
+    }
+    return;
+  }
+  if (Array.isArray(value)) {
+    for (const [index, entry] of value.entries()) {
+      collectUndeclaredRuleReferences(entry, file, `${jsonPath}[${index}]`, declared, out);
+    }
+    return;
+  }
+  if (isRecord(value)) {
+    for (const [key, entry] of Object.entries(value)) {
+      if (
+        key === "prior_rule_id" &&
+        (value.disposition === "removed" || value.disposition === "corrected")
+      ) {
+        continue;
+      }
+      const childPath = jsonPath === "$" ? `$.${key}` : `${jsonPath}.${key}`;
+      collectUndeclaredRuleReferences(entry, file, childPath, declared, out);
+    }
+  }
+}
+
+export function undeclaredRuleReferences(inventory: Inventory): UndeclaredRuleReference[] {
+  const declared = declaredRuleIds(inventory);
+  const out: UndeclaredRuleReference[] = [];
+  for (const path of filesBelow(root)) {
+    if (!path.startsWith("evidence/")) continue;
+    const body = readFileSync(join(root, path), "utf8");
+    if (path.endsWith(".json")) {
+      collectUndeclaredRuleReferences(JSON.parse(body) as unknown, path, "$", declared, out);
+    } else {
+      const lines = body.split("\n");
+      for (const [index, line] of lines.entries()) {
+        for (const match of line.matchAll(qualifiedRuleReference)) {
+          const ref = match[1] ?? "";
+          if (!declared.has(ref)) out.push({ file: path, path: `line ${index + 1}`, ref });
+        }
+      }
+    }
+  }
+  return out;
+}
+
+function conceptReferenceCount(contents: string[], concept: string): number {
+  const escaped = concept.replace(/[\\^$.*+?()[\]{}|]/gu, "\\$&");
+  const pattern = new RegExp(`(?<![A-Za-z0-9-]\\.)concept\\.${escaped}\\b`, "gu");
+  let count = 0;
+  for (const content of contents) {
+    count += (content.match(pattern) ?? []).length;
+  }
+  return count;
+}
+
+export function mirrorPairCandidates(): MirrorPairCandidate[] {
+  const inventory = JSON.parse(readFileSync(join(root, "dialects.json"), "utf8")) as Inventory;
+  const candidates: MirrorPairCandidate[] = [];
+  for (const { name: dialect } of inventory.dialects) {
+    const rfPaths = filesBelow(dialect).filter((path) => path.endsWith(".rf"));
+    const contents = rfPaths.map((path) => ({
+      path,
+      text: readFileSync(join(root, path), "utf8"),
+    }));
+    const blocks = contents.flatMap((file) =>
+      parseRfBlocks(file.text).map((block) => ({ ...block, file: file.path })),
+    );
+    const conceptNames = [
+      ...new Set(blocks.filter((b) => b.kind === "concept").map((b) => b.name)),
+    ];
+    const allText = contents.map((file) => file.text);
+    const referenceCount = new Map(
+      conceptNames.map((name) => [name, conceptReferenceCount(allText, name)]),
+    );
+    for (const block of blocks.filter((b) => b.kind === "rule")) {
+      const info = mirrorRuleInfo(block.text);
+      if (info.data || info.where || info.emissions) continue;
+      if (info.type === null || info.matchExtra.length > 0) continue;
+      if (info.asRf !== null || info.asLocal === null) continue;
+      if (referenceCount.get(info.asLocal) !== 1) continue;
+      candidates.push({ dialect, rule: block.name, type: info.type, file: block.file });
+    }
+  }
+  return candidates;
+}
+
+export function validatePresentationManifests(): void {
+  const inventory = JSON.parse(readFileSync(join(root, "dialects.json"), "utf8")) as Inventory;
+  for (const { name } of inventory.dialects) {
+    const value = JSON.parse(readFileSync(join(root, name, "presentation.json"), "utf8")) as Record<
+      string,
+      unknown
+    >;
+    const resources = value.resources;
+    const labels = value.resource_labels;
+    if (resources === undefined && labels === undefined) continue;
+    if (!isRecord(resources) || !isRecord(labels)) {
+      throw new Error(`presentation manifests must pair resources with resource_labels: ${name}`);
+    }
+    const resourceKeys = Object.keys(resources);
+    const labelKeys = Object.keys(labels).sort();
+    if (JSON.stringify(labelKeys) !== JSON.stringify([...resourceKeys].sort())) {
+      throw new Error(`presentation resources and resource_labels must share keys: ${name}`);
+    }
+    for (const key of resourceKeys) {
+      if (!key.startsWith("resource/")) {
+        throw new Error(`presentation resource key must start with resource/: ${name}: ${key}`);
+      }
+      if (typeof resources[key] !== "string" || typeof labels[key] !== "string") {
+        throw new Error(`presentation resource entries must be strings: ${name}: ${key}`);
+      }
+    }
   }
 }
 
@@ -113,7 +341,7 @@ export function validateRepository(): void {
   if (inventory.format_version !== "1" || inventory.dialects.length === 0) {
     throw new Error("dialects.json must contain format version 1 and at least one dialect");
   }
-  validateDialectLock(JSON.parse(readFileSync(join(root, "rootform.lock"), "utf8")), inventory);
+  validateLock(JSON.parse(readFileSync(join(root, "rootform.lock"), "utf8")));
 
   const expected = inventory.dialects.map(({ name }) => name);
   const allowedTopLevel = new Set([
@@ -206,12 +434,28 @@ export function validateRepository(): void {
     JSON.parse(readFileSync(join(root, name, "presentation.json"), "utf8"));
   }
 
+  const mirrors = mirrorPairCandidates();
+  if (mirrors.length > 0) {
+    const sample = mirrors
+      .slice(0, 5)
+      .map((candidate) => `${candidate.dialect}/${candidate.rule} (${candidate.type})`)
+      .join(", ");
+    throw new Error(`${mirrors.length} redundant resource-mirror pair(s) remain: ${sample}`);
+  }
+  validatePresentationManifests();
+
+  const danglingRules = undeclaredRuleReferences(inventory);
+  if (danglingRules.length > 0) {
+    const sample = danglingRules
+      .slice(0, 5)
+      .map((hit) => `${hit.file}: ${hit.path} = ${hit.ref}`)
+      .join("; ");
+    throw new Error(`${danglingRules.length} undeclared rule reference(s) in evidence: ${sample}`);
+  }
+
   const workflowPaths = files.filter((path) => path.startsWith(".github/workflows/"));
-  if (
-    JSON.stringify(workflowPaths) !==
-    JSON.stringify([".github/workflows/ci.yml", ".github/workflows/publish.yml"])
-  ) {
-    throw new Error("workflow inventory is invalid");
+  if (JSON.stringify(workflowPaths) !== JSON.stringify([".github/workflows/ci.yml"])) {
+    throw new Error("workflow inventory must contain only the source validation workflow");
   }
   for (const path of workflowPaths) {
     const workflow = readFileSync(join(root, path), "utf8");
@@ -224,19 +468,6 @@ export function validateRepository(): void {
     if (/pull_request_target\s*:|permissions:\s*write-all/u.test(workflow)) {
       throw new Error("workflow uses a forbidden privilege surface");
     }
-  }
-  const publication = readFileSync(join(root, ".github/workflows/publish.yml"), "utf8");
-  if (
-    !publication.includes("workflow_dispatch:") ||
-    !publication.includes("packages: write") ||
-    publication.includes("ROOTFORM_CONTENTS_READ_TOKEN") ||
-    !publication.includes("name: publish official dialects") ||
-    (publication.match(/= public/gmu)?.length ?? 0) !== 2 ||
-    publication.includes("= private") ||
-    publication.includes("visibility public") ||
-    publication.includes("PATCH /orgs/rootform-dev/packages")
-  ) {
-    throw new Error("publication workflow boundary is invalid");
   }
 }
 

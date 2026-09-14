@@ -1,5 +1,4 @@
 concept "discovery-chain-configuration" {
-  kind        = detail
   description = "A resolver, router, splitter, or prepared-query detail for service discovery."
 }
 

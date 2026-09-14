@@ -5,9 +5,14 @@
   "rows": [
     {
       "candidate": "K8S-04",
-      "constructs": ["kubernetes_deployment_v1", "kubernetes_stateful_set_v1"],
-      "decision": "supported",
-      "facts": ["runs-as"],
+      "constructs": [
+        "kubernetes_deployment_v1",
+        "kubernetes_stateful_set_v1"
+      ],
+      "decision": "rule-present",
+      "facts": [
+        "runs-as"
+      ],
       "fixture": "fixtures/slice/kubernetes"
     },
     {
@@ -19,15 +24,20 @@
     {
       "candidate": "K8S-07",
       "construct": "kubernetes_network_policy_v1",
-      "decision": "supported",
-      "facts": ["core/ownership", "core/runtime"],
+      "decision": "rule-present",
+      "facts": [
+        "kubernetes.context.ownership",
+        "rf.context.runtime"
+      ],
       "fixture": "fixtures/slice/kubernetes"
     },
     {
       "candidate": "K8S-08",
       "construct": "kubernetes_namespace_v1",
       "decision": "retained-and-asserted",
-      "facts": ["core/runtime"],
+      "facts": [
+        "rf.context.runtime"
+      ],
       "fixture": "fixtures/slice/kubernetes"
     }
   ]

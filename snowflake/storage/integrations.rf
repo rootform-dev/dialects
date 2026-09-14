@@ -1,15 +1,12 @@
 concept "storage-integration" {
-  kind        = entity
   description = "A Snowflake storage integration delegating access to external cloud object storage."
 }
 
 concept "external-volume" {
-  kind        = entity
   description = "A Snowflake external volume containing one or more cloud storage locations."
 }
 
 concept "catalog-integration" {
-  kind        = entity
   description = "A Snowflake catalog integration connecting Iceberg metadata to an external catalog."
 }
 
@@ -21,19 +18,15 @@ rule "storage-integration" {
   as = concept.storage-integration
 
   relation "authorizes-object-storage" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.storage_allowed_locations[0]
   }
 
   relation "authorizes-object-storage" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.storage_allowed_locations[1]
   }
 
-  relation "assumes-cloud-identity" {
-    to  = concept.core.service-identity
-    via = source.storage_aws_role_arn
-  }
 }
 
 rule "aws-storage-integration" {
@@ -44,19 +37,15 @@ rule "aws-storage-integration" {
   as = concept.storage-integration
 
   relation "authorizes-object-storage" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.storage_allowed_locations[0]
   }
 
   relation "authorizes-object-storage" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.storage_allowed_locations[1]
   }
 
-  relation "assumes-cloud-identity" {
-    to  = concept.core.service-identity
-    via = source.storage_aws_role_arn
-  }
 }
 
 rule "azure-storage-integration" {
@@ -67,12 +56,12 @@ rule "azure-storage-integration" {
   as = concept.storage-integration
 
   relation "authorizes-object-storage" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.storage_allowed_locations[0]
   }
 
   relation "authorizes-object-storage" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.storage_allowed_locations[1]
   }
 }
@@ -85,12 +74,12 @@ rule "gcs-storage-integration" {
   as = concept.storage-integration
 
   relation "authorizes-object-storage" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.storage_allowed_locations[0]
   }
 
   relation "authorizes-object-storage" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.storage_allowed_locations[1]
   }
 }
@@ -103,22 +92,17 @@ rule "external-volume" {
   as = concept.external-volume
 
   relation "uses-object-storage" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.storage_location[0].storage_base_url
   }
 
   relation "uses-object-storage" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.storage_location[1].storage_base_url
   }
 
-  relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
-    via = source.storage_location[0].storage_aws_role_arn
-  }
-
   relation "uses-encryption-key" {
-    to  = concept.core.encryption-key
+    to  = concept.encryption-key
     via = source.storage_location[0].encryption_kms_key_id
   }
 }
@@ -130,10 +114,6 @@ rule "aws-glue-catalog-integration" {
 
   as = concept.catalog-integration
 
-  relation "assumes-cloud-identity" {
-    to  = concept.core.service-identity
-    via = source.glue_aws_role_arn
-  }
 }
 
 rule "iceberg-rest-catalog-integration" {
@@ -143,10 +123,6 @@ rule "iceberg-rest-catalog-integration" {
 
   as = concept.catalog-integration
 
-  relation "assumes-cloud-identity" {
-    to  = concept.core.service-identity
-    via = source.sigv4_rest_authentication[0].sigv4_iam_role
-  }
 }
 
 rule "object-storage-catalog-integration" {

@@ -1,6 +1,5 @@
 # Maintained directly from pinned provider evidence.
 concept "managed-grafana" {
-  kind        = entity
   description = "An Azure Managed Grafana workspace."
 }
 
@@ -12,7 +11,7 @@ rule "managed-grafana" {
   as = concept.managed-grafana
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

@@ -1,4 +1,0 @@
-concept "load-balancer" {
-  kind        = entity
-  description = "A load-balancing service composed from routing infrastructure."
-}

@@ -1,10 +1,8 @@
 concept "performance-test" {
-  kind        = detail
   description = "A k6 test definition supporting a performance-testing project."
 }
 
 concept "performance-testing-project" {
-  kind        = entity
   description = "A Grafana Cloud k6 project grouping performance and load tests."
 }
 

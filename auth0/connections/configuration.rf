@@ -1,5 +1,4 @@
 concept "connection-configuration" {
-  kind        = detail
   description = "Client enablement, SCIM, keys, or synchronization supporting an Auth0 Connection."
 }
 
@@ -16,7 +15,7 @@ rule "connection-client" {
   }
 
   contribution {
-    to  = concept.core.identity-application
+    to  = concept.identity-application
     via = source.client_id
   }
 }

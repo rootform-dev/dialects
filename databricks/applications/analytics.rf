@@ -1,12 +1,7 @@
 concept "analytics-artifact" {
-  kind        = detail
   description = "A dashboard, query, alert, visualization, or widget presented through Databricks analytics."
 }
 
-concept "notification-destination" {
-  kind        = entity
-  description = "A managed destination receiving Databricks operational or analytics notifications."
-}
 
 rule "dashboard" {
   match {
@@ -48,13 +43,6 @@ rule "sql-alert" {
   as = concept.analytics-artifact
 }
 
-rule "notification-destination" {
-  match {
-    type = "databricks_notification_destination"
-  }
-
-  as = concept.notification-destination
-}
 
 rule "query" {
   match {

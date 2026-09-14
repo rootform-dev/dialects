@@ -1,20 +1,8 @@
-concept "database-migration-job" {
-  kind        = entity
-  description = "A Database Migration Service job moving a database to Google Cloud."
-}
 
 concept "database-migration-connection" {
-  kind        = detail
   description = "A source, destination, or private connection used by Database Migration Service."
 }
 
-rule "database-migration-job" {
-  match {
-    type = "google_database_migration_service_migration_job"
-  }
-
-  as = concept.database-migration-job
-}
 
 rule "database-migration-connection-profile" {
   match {

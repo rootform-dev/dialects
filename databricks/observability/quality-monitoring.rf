@@ -1,12 +1,7 @@
 concept "quality-monitor" {
-  kind        = entity
   description = "A Databricks monitor evaluating data or model quality over time."
 }
 
-concept "monitoring-configuration" {
-  kind        = detail
-  description = "A refresh or configuration supporting Databricks quality monitoring."
-}
 
 rule "data-quality-monitor" {
   match {
@@ -38,12 +33,4 @@ rule "quality-monitor-v2" {
   }
 
   as = concept.quality-monitor
-}
-
-rule "data-quality-refresh" {
-  match {
-    type = "databricks_data_quality_refresh"
-  }
-
-  as = concept.monitoring-configuration
 }

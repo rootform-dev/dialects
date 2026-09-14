@@ -15,7 +15,7 @@
   "semantic_sources_sha256": "sha256:e17853ccb7cf73150889cb2f58c56ce3fab154f65c6b611ccf48dfe825341a5a",
   "rules": [
     {
-      "rule_id": "grafana/agento11y-collection",
+      "rule_id": "grafana.rule.agento11y-collection",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_agento11y_collection",
       "file": "dialects/grafana/ai-ml/agent-observability.rf",
@@ -25,7 +25,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/agento11y-evaluation-rule",
+      "rule_id": "grafana.rule.agento11y-evaluation-rule",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_agento11y_evaluation_rule",
       "file": "dialects/grafana/ai-ml/agent-observability.rf",
@@ -35,7 +35,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/agento11y-evaluator",
+      "rule_id": "grafana.rule.agento11y-evaluator",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_agento11y_evaluator",
       "file": "dialects/grafana/ai-ml/agent-observability.rf",
@@ -45,7 +45,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/agento11y-hook-rule",
+      "rule_id": "grafana.rule.agento11y-hook-rule",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_agento11y_hook_rule",
       "file": "dialects/grafana/ai-ml/agent-observability.rf",
@@ -55,7 +55,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/agento11y-rule-action",
+      "rule_id": "grafana.rule.agento11y-rule-action",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_agento11y_rule_action",
       "file": "dialects/grafana/ai-ml/agent-observability.rf",
@@ -65,7 +65,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/apps-productactivation-appo11yconfig-v1alpha1",
+      "rule_id": "grafana.rule.apps-productactivation-appo11yconfig-v1alpha1",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_apps_productactivation_appo11yconfig_v1alpha1",
       "file": "dialects/grafana/platform/installations.rf",
@@ -75,7 +75,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/apps-productactivation-dbo11yconfig-v1alpha1",
+      "rule_id": "grafana.rule.apps-productactivation-dbo11yconfig-v1alpha1",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_apps_productactivation_dbo11yconfig_v1alpha1",
       "file": "dialects/grafana/platform/installations.rf",
@@ -85,7 +85,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/apps-productactivation-k8so11yconfig-v1alpha1",
+      "rule_id": "grafana.rule.apps-productactivation-k8so11yconfig-v1alpha1",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_apps_productactivation_k8so11yconfig_v1alpha1",
       "file": "dialects/grafana/platform/installations.rf",
@@ -95,7 +95,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/apps-provisioning-connection-v0alpha1",
+      "rule_id": "grafana.rule.apps-provisioning-connection-v0alpha1",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_apps_provisioning_connection_v0alpha1",
       "file": "dialects/grafana/platform-automation/git-sync.rf",
@@ -105,7 +105,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/apps-provisioning-repository-v0alpha1",
+      "rule_id": "grafana.rule.apps-provisioning-repository-v0alpha1",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_apps_provisioning_repository_v0alpha1",
       "file": "dialects/grafana/platform-automation/git-sync.rf",
@@ -121,7 +121,7 @@
       ]
     },
     {
-      "rule_id": "grafana/apps-secret-keeper-activation-v1beta1",
+      "rule_id": "grafana.rule.apps-secret-keeper-activation-v1beta1",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_apps_secret_keeper_activation_v1beta1",
       "file": "dialects/grafana/platform/installations.rf",
@@ -131,33 +131,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/apps-secret-keeper-v1beta1",
-      "construct_kind": "managed_resource",
-      "resource_type": "grafana_apps_secret_keeper_v1beta1",
-      "file": "dialects/grafana/security/secrets-management.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/apps_secret_keeper_v1beta1",
-      "paths": [
-        {
-          "path": "spec[0].aws[0].assume_role[0].assume_role_arn",
-          "sensitive": false,
-          "write_only": false
-        }
-      ]
-    },
-    {
-      "rule_id": "grafana/apps-secret-securevalue-v1beta1",
-      "construct_kind": "managed_resource",
-      "resource_type": "grafana_apps_secret_securevalue_v1beta1",
-      "file": "dialects/grafana/security/secrets-management.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/apps_secret_securevalue_v1beta1",
-      "paths": []
-    },
-    {
-      "rule_id": "grafana/asserts-custom-model-rules",
+      "rule_id": "grafana.rule.asserts-custom-model-rules",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_asserts_custom_model_rules",
       "file": "dialects/grafana/service-management/knowledge-graph.rf",
@@ -167,7 +141,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/asserts-log-config",
+      "rule_id": "grafana.rule.asserts-log-config",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_asserts_log_config",
       "file": "dialects/grafana/service-management/knowledge-graph.rf",
@@ -183,7 +157,7 @@
       ]
     },
     {
-      "rule_id": "grafana/asserts-notification-alerts-config",
+      "rule_id": "grafana.rule.asserts-notification-alerts-config",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_asserts_notification_alerts_config",
       "file": "dialects/grafana/service-management/knowledge-graph.rf",
@@ -193,7 +167,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/asserts-profile-config",
+      "rule_id": "grafana.rule.asserts-profile-config",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_asserts_profile_config",
       "file": "dialects/grafana/service-management/knowledge-graph.rf",
@@ -209,7 +183,7 @@
       ]
     },
     {
-      "rule_id": "grafana/asserts-prom-rule-file",
+      "rule_id": "grafana.rule.asserts-prom-rule-file",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_asserts_prom_rule_file",
       "file": "dialects/grafana/service-management/knowledge-graph.rf",
@@ -219,7 +193,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/asserts-stack",
+      "rule_id": "grafana.rule.asserts-stack",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_asserts_stack",
       "file": "dialects/grafana/service-management/knowledge-graph.rf",
@@ -229,7 +203,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/asserts-suppressed-assertions-config",
+      "rule_id": "grafana.rule.asserts-suppressed-assertions-config",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_asserts_suppressed_assertions_config",
       "file": "dialects/grafana/service-management/knowledge-graph.rf",
@@ -239,7 +213,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/asserts-thresholds",
+      "rule_id": "grafana.rule.asserts-thresholds",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_asserts_thresholds",
       "file": "dialects/grafana/service-management/knowledge-graph.rf",
@@ -249,7 +223,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/asserts-trace-config",
+      "rule_id": "grafana.rule.asserts-trace-config",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_asserts_trace_config",
       "file": "dialects/grafana/service-management/knowledge-graph.rf",
@@ -265,17 +239,7 @@
       ]
     },
     {
-      "rule_id": "grafana/assistant-mcp-server",
-      "construct_kind": "managed_resource",
-      "resource_type": "grafana_assistant_mcp_server",
-      "file": "dialects/grafana/ai-ml/assistant.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/assistant_mcp_server",
-      "paths": []
-    },
-    {
-      "rule_id": "grafana/cloud-integration",
+      "rule_id": "grafana.rule.cloud-integration",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_cloud_integration",
       "file": "dialects/grafana/integrations/cloud-provider-observability.rf",
@@ -285,7 +249,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/cloud-plugin-installation",
+      "rule_id": "grafana.rule.cloud-plugin-installation",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_cloud_plugin_installation",
       "file": "dialects/grafana/platform/installations.rf",
@@ -301,7 +265,7 @@
       ]
     },
     {
-      "rule_id": "grafana/cloud-private-data-source-connect-network",
+      "rule_id": "grafana.rule.cloud-private-data-source-connect-network",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_cloud_private_data_source_connect_network",
       "file": "dialects/grafana/network/private-data-source-connect.rf",
@@ -317,7 +281,7 @@
       ]
     },
     {
-      "rule_id": "grafana/cloud-provider-aws-account",
+      "rule_id": "grafana.rule.cloud-provider-aws-account",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_cloud_provider_aws_account",
       "file": "dialects/grafana/integrations/cloud-provider-observability.rf",
@@ -338,7 +302,7 @@
       ]
     },
     {
-      "rule_id": "grafana/cloud-provider-aws-account-lookup",
+      "rule_id": "grafana.rule.cloud-provider-aws-account-lookup",
       "construct_kind": "data_source",
       "resource_type": "grafana_cloud_provider_aws_account",
       "file": "dialects/grafana/integrations/cloud-provider-observability.rf",
@@ -359,7 +323,7 @@
       ]
     },
     {
-      "rule_id": "grafana/cloud-provider-aws-cloudwatch-scrape-job",
+      "rule_id": "grafana.rule.cloud-provider-aws-cloudwatch-scrape-job",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_cloud_provider_aws_cloudwatch_scrape_job",
       "file": "dialects/grafana/integrations/cloud-provider-observability.rf",
@@ -380,7 +344,7 @@
       ]
     },
     {
-      "rule_id": "grafana/cloud-provider-aws-cloudwatch-scrape-job-lookup",
+      "rule_id": "grafana.rule.cloud-provider-aws-cloudwatch-scrape-job-lookup",
       "construct_kind": "data_source",
       "resource_type": "grafana_cloud_provider_aws_cloudwatch_scrape_job",
       "file": "dialects/grafana/integrations/cloud-provider-observability.rf",
@@ -401,7 +365,7 @@
       ]
     },
     {
-      "rule_id": "grafana/cloud-provider-aws-resource-metadata-scrape-job",
+      "rule_id": "grafana.rule.cloud-provider-aws-resource-metadata-scrape-job",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_cloud_provider_aws_resource_metadata_scrape_job",
       "file": "dialects/grafana/integrations/cloud-provider-observability.rf",
@@ -422,7 +386,7 @@
       ]
     },
     {
-      "rule_id": "grafana/cloud-provider-azure-credential",
+      "rule_id": "grafana.rule.cloud-provider-azure-credential",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_cloud_provider_azure_credential",
       "file": "dialects/grafana/integrations/cloud-provider-observability.rf",
@@ -443,7 +407,7 @@
       ]
     },
     {
-      "rule_id": "grafana/cloud-provider-azure-credential-lookup",
+      "rule_id": "grafana.rule.cloud-provider-azure-credential-lookup",
       "construct_kind": "data_source",
       "resource_type": "grafana_cloud_provider_azure_credential",
       "file": "dialects/grafana/integrations/cloud-provider-observability.rf",
@@ -464,7 +428,7 @@
       ]
     },
     {
-      "rule_id": "grafana/cloud-stack",
+      "rule_id": "grafana.rule.cloud-stack",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_cloud_stack",
       "file": "dialects/grafana/platform/cloud-stacks.rf",
@@ -474,7 +438,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/cloud-stack-lookup",
+      "rule_id": "grafana.rule.cloud-stack-lookup",
       "construct_kind": "data_source",
       "resource_type": "grafana_cloud_stack",
       "file": "dialects/grafana/platform/cloud-stacks.rf",
@@ -484,7 +448,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/connections-metrics-endpoint-scrape-job",
+      "rule_id": "grafana.rule.connections-metrics-endpoint-scrape-job",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_connections_metrics_endpoint_scrape_job",
       "file": "dialects/grafana/telemetry/metrics-endpoints.rf",
@@ -500,7 +464,7 @@
       ]
     },
     {
-      "rule_id": "grafana/connections-metrics-endpoint-scrape-job-lookup",
+      "rule_id": "grafana.rule.connections-metrics-endpoint-scrape-job-lookup",
       "construct_kind": "data_source",
       "resource_type": "grafana_connections_metrics_endpoint_scrape_job",
       "file": "dialects/grafana/telemetry/metrics-endpoints.rf",
@@ -516,7 +480,7 @@
       ]
     },
     {
-      "rule_id": "grafana/data-source",
+      "rule_id": "grafana.rule.data-source",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_data_source",
       "file": "dialects/grafana/telemetry/data-sources.rf",
@@ -537,7 +501,7 @@
       ]
     },
     {
-      "rule_id": "grafana/data-source-lookup",
+      "rule_id": "grafana.rule.data-source-lookup",
       "construct_kind": "data_source",
       "resource_type": "grafana_data_source",
       "file": "dialects/grafana/telemetry/data-sources.rf",
@@ -558,7 +522,7 @@
       ]
     },
     {
-      "rule_id": "grafana/fleet-management-collector",
+      "rule_id": "grafana.rule.fleet-management-collector",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_fleet_management_collector",
       "file": "dialects/grafana/telemetry/fleet-management.rf",
@@ -568,7 +532,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/fleet-management-collector-lookup",
+      "rule_id": "grafana.rule.fleet-management-collector-lookup",
       "construct_kind": "data_source",
       "resource_type": "grafana_fleet_management_collector",
       "file": "dialects/grafana/telemetry/fleet-management.rf",
@@ -578,17 +542,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/fleet-management-pipeline",
-      "construct_kind": "managed_resource",
-      "resource_type": "grafana_fleet_management_pipeline",
-      "file": "dialects/grafana/telemetry/fleet-management.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/fleet_management_pipeline",
-      "paths": []
-    },
-    {
-      "rule_id": "grafana/frontend-o11y-app",
+      "rule_id": "grafana.rule.frontend-o11y-app",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_frontend_o11y_app",
       "file": "dialects/grafana/digital-experience/frontend-observability.rf",
@@ -604,7 +558,7 @@
       ]
     },
     {
-      "rule_id": "grafana/frontend-o11y-app-lookup",
+      "rule_id": "grafana.rule.frontend-o11y-app-lookup",
       "construct_kind": "data_source",
       "resource_type": "grafana_frontend_o11y_app",
       "file": "dialects/grafana/digital-experience/frontend-observability.rf",
@@ -620,7 +574,7 @@
       ]
     },
     {
-      "rule_id": "grafana/k6-installation",
+      "rule_id": "grafana.rule.k6-installation",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_k6_installation",
       "file": "dialects/grafana/platform/installations.rf",
@@ -636,7 +590,7 @@
       ]
     },
     {
-      "rule_id": "grafana/k6-load-test",
+      "rule_id": "grafana.rule.k6-load-test",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_k6_load_test",
       "file": "dialects/grafana/performance-testing/k6.rf",
@@ -652,7 +606,7 @@
       ]
     },
     {
-      "rule_id": "grafana/k6-load-test-lookup",
+      "rule_id": "grafana.rule.k6-load-test-lookup",
       "construct_kind": "data_source",
       "resource_type": "grafana_k6_load_test",
       "file": "dialects/grafana/performance-testing/k6.rf",
@@ -668,7 +622,7 @@
       ]
     },
     {
-      "rule_id": "grafana/k6-project",
+      "rule_id": "grafana.rule.k6-project",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_k6_project",
       "file": "dialects/grafana/performance-testing/k6.rf",
@@ -678,7 +632,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/k6-project-lookup",
+      "rule_id": "grafana.rule.k6-project-lookup",
       "construct_kind": "data_source",
       "resource_type": "grafana_k6_project",
       "file": "dialects/grafana/performance-testing/k6.rf",
@@ -688,7 +642,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/machine-learning-alert",
+      "rule_id": "grafana.rule.machine-learning-alert",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_machine_learning_alert",
       "file": "dialects/grafana/ai-ml/machine-learning.rf",
@@ -698,7 +652,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/machine-learning-job",
+      "rule_id": "grafana.rule.machine-learning-job",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_machine_learning_job",
       "file": "dialects/grafana/ai-ml/machine-learning.rf",
@@ -708,7 +662,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/machine-learning-outlier-detector",
+      "rule_id": "grafana.rule.machine-learning-outlier-detector",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_machine_learning_outlier_detector",
       "file": "dialects/grafana/ai-ml/machine-learning.rf",
@@ -718,7 +672,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/oncall-integration",
+      "rule_id": "grafana.rule.oncall-integration",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_oncall_integration",
       "file": "dialects/grafana/incident-response/oncall.rf",
@@ -728,7 +682,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/oncall-integration-lookup",
+      "rule_id": "grafana.rule.oncall-integration-lookup",
       "construct_kind": "data_source",
       "resource_type": "grafana_oncall_integration",
       "file": "dialects/grafana/incident-response/oncall.rf",
@@ -738,7 +692,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/oncall-route",
+      "rule_id": "grafana.rule.oncall-route",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_oncall_route",
       "file": "dialects/grafana/incident-response/oncall.rf",
@@ -754,7 +708,7 @@
       ]
     },
     {
-      "rule_id": "grafana/organization",
+      "rule_id": "grafana.rule.organization",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_organization",
       "file": "dialects/grafana/platform/organizations.rf",
@@ -764,7 +718,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/organization-lookup",
+      "rule_id": "grafana.rule.organization-lookup",
       "construct_kind": "data_source",
       "resource_type": "grafana_organization",
       "file": "dialects/grafana/platform/organizations.rf",
@@ -774,7 +728,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/scim-config",
+      "rule_id": "grafana.rule.scim-config",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_scim_config",
       "file": "dialects/grafana/identity-access/federation.rf",
@@ -784,17 +738,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/slo",
-      "construct_kind": "managed_resource",
-      "resource_type": "grafana_slo",
-      "file": "dialects/grafana/service-management/service-objectives.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/slo",
-      "paths": []
-    },
-    {
-      "rule_id": "grafana/sso-settings",
+      "rule_id": "grafana.rule.sso-settings",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_sso_settings",
       "file": "dialects/grafana/identity-access/federation.rf",
@@ -804,7 +748,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/synthetic-monitoring-check",
+      "rule_id": "grafana.rule.synthetic-monitoring-check",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_synthetic_monitoring_check",
       "file": "dialects/grafana/digital-experience/synthetic-monitoring.rf",
@@ -820,7 +764,7 @@
       ]
     },
     {
-      "rule_id": "grafana/synthetic-monitoring-installation",
+      "rule_id": "grafana.rule.synthetic-monitoring-installation",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_synthetic_monitoring_installation",
       "file": "dialects/grafana/platform/installations.rf",
@@ -836,7 +780,7 @@
       ]
     },
     {
-      "rule_id": "grafana/synthetic-monitoring-probe",
+      "rule_id": "grafana.rule.synthetic-monitoring-probe",
       "construct_kind": "managed_resource",
       "resource_type": "grafana_synthetic_monitoring_probe",
       "file": "dialects/grafana/digital-experience/synthetic-monitoring.rf",
@@ -846,7 +790,7 @@
       "paths": []
     },
     {
-      "rule_id": "grafana/synthetic-monitoring-probe-lookup",
+      "rule_id": "grafana.rule.synthetic-monitoring-probe-lookup",
       "construct_kind": "data_source",
       "resource_type": "grafana_synthetic_monitoring_probe",
       "file": "dialects/grafana/digital-experience/synthetic-monitoring.rf",

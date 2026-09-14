@@ -1,5 +1,4 @@
 concept "identity-log-stream" {
-  kind        = entity
   description = "An Okta System Log stream delivering security events to an external destination."
 }
 

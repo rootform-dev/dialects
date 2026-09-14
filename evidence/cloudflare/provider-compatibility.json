@@ -15,7 +15,7 @@
   "semantic_sources_sha256": "sha256:6c9f1fd7cb7d7eee1ef4f1e3fd462640523825f0522c64eee3b2bf66af288bfe",
   "rules": [
     {
-      "rule_id": "cloudflare/access-ai-controls-mcp-portal",
+      "rule_id": "cloudflare.rule.access-ai-controls-mcp-portal",
       "resource_type": "cloudflare_zero_trust_access_ai_controls_mcp_portal",
       "paths": [],
       "file": "dialects/cloudflare/security/access.rf",
@@ -24,7 +24,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_access_ai_controls_mcp_portal.md"
     },
     {
-      "rule_id": "cloudflare/access-ai-controls-mcp-server",
+      "rule_id": "cloudflare.rule.access-ai-controls-mcp-server",
       "resource_type": "cloudflare_zero_trust_access_ai_controls_mcp_server",
       "paths": [],
       "file": "dialects/cloudflare/security/access.rf",
@@ -33,7 +33,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_access_ai_controls_mcp_server.md"
     },
     {
-      "rule_id": "cloudflare/access-application",
+      "rule_id": "cloudflare.rule.access-application",
       "resource_type": "cloudflare_zero_trust_access_application",
       "paths": [
         "destinations[0].worker_id",
@@ -48,16 +48,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_access_application.md"
     },
     {
-      "rule_id": "cloudflare/access-group",
-      "resource_type": "cloudflare_zero_trust_access_group",
-      "paths": [],
-      "file": "dialects/cloudflare/security/access.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_access_group.md"
-    },
-    {
-      "rule_id": "cloudflare/access-identity-provider",
+      "rule_id": "cloudflare.rule.access-identity-provider",
       "resource_type": "cloudflare_zero_trust_access_identity_provider",
       "paths": [],
       "file": "dialects/cloudflare/security/access.rf",
@@ -66,25 +57,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_access_identity_provider.md"
     },
     {
-      "rule_id": "cloudflare/access-infrastructure-target",
-      "resource_type": "cloudflare_zero_trust_access_infrastructure_target",
-      "paths": [],
-      "file": "dialects/cloudflare/security/access.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_access_infrastructure_target.md"
-    },
-    {
-      "rule_id": "cloudflare/access-policy",
-      "resource_type": "cloudflare_zero_trust_access_policy",
-      "paths": [],
-      "file": "dialects/cloudflare/security/access.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_access_policy.md"
-    },
-    {
-      "rule_id": "cloudflare/access-service-token",
+      "rule_id": "cloudflare.rule.access-service-token",
       "resource_type": "cloudflare_zero_trust_access_service_token",
       "paths": [],
       "file": "dialects/cloudflare/security/access.rf",
@@ -93,7 +66,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_access_service_token.md"
     },
     {
-      "rule_id": "cloudflare/account",
+      "rule_id": "cloudflare.rule.account",
       "resource_type": "cloudflare_account",
       "paths": [],
       "file": "dialects/cloudflare/governance-management/accounts-sharing.rf",
@@ -102,34 +75,29 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/account.md"
     },
     {
-      "rule_id": "cloudflare/account-dns-internal-view",
+      "rule_id": "cloudflare.rule.account-dns-internal-view",
       "resource_type": "cloudflare_account_dns_settings_internal_view",
-      "paths": ["zones"],
+      "paths": [
+        "zones"
+      ],
       "file": "dialects/cloudflare/dns-cdn/zones-dns.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/account_dns_settings_internal_view.md"
     },
     {
-      "rule_id": "cloudflare/account-dns-settings",
+      "rule_id": "cloudflare.rule.account-dns-settings",
       "resource_type": "cloudflare_account_dns_settings",
-      "paths": ["account_id"],
+      "paths": [
+        "account_id"
+      ],
       "file": "dialects/cloudflare/governance-management/accounts-sharing.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/account_dns_settings.md"
     },
     {
-      "rule_id": "cloudflare/address-map",
-      "resource_type": "cloudflare_address_map",
-      "paths": [],
-      "file": "dialects/cloudflare/network/cloudflare-wan.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/address_map.md"
-    },
-    {
-      "rule_id": "cloudflare/ai-gateway",
+      "rule_id": "cloudflare.rule.ai-gateway",
       "resource_type": "cloudflare_ai_gateway",
       "paths": [],
       "file": "dialects/cloudflare/ai-ml/ai-platform.rf",
@@ -138,223 +106,216 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/ai_gateway.md"
     },
     {
-      "rule_id": "cloudflare/ai-gateway-dynamic-routing",
+      "rule_id": "cloudflare.rule.ai-gateway-dynamic-routing",
       "resource_type": "cloudflare_ai_gateway_dynamic_routing",
-      "paths": ["gateway_id"],
+      "paths": [
+        "gateway_id"
+      ],
       "file": "dialects/cloudflare/ai-ml/ai-platform.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/ai_gateway_dynamic_routing.md"
     },
     {
-      "rule_id": "cloudflare/ai-search-instance",
-      "resource_type": "cloudflare_ai_search_instance",
-      "paths": [],
-      "file": "dialects/cloudflare/ai-ml/ai-platform.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/ai_search_instance.md"
-    },
-    {
-      "rule_id": "cloudflare/ai-search-namespace",
-      "resource_type": "cloudflare_ai_search_namespace",
-      "paths": [],
-      "file": "dialects/cloudflare/ai-ml/ai-platform.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/ai_search_namespace.md"
-    },
-    {
-      "rule_id": "cloudflare/api-shield",
+      "rule_id": "cloudflare.rule.api-shield",
       "resource_type": "cloudflare_api_shield",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/application-security.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/api_shield.md"
     },
     {
-      "rule_id": "cloudflare/api-shield-discovery-operation",
+      "rule_id": "cloudflare.rule.api-shield-discovery-operation",
       "resource_type": "cloudflare_api_shield_discovery_operation",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/application-security.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/api_shield_discovery_operation.md"
     },
     {
-      "rule_id": "cloudflare/api-shield-operation",
+      "rule_id": "cloudflare.rule.api-shield-operation",
       "resource_type": "cloudflare_api_shield_operation",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/application-security.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/api_shield_operation.md"
     },
     {
-      "rule_id": "cloudflare/api-shield-operation-schema-validation",
+      "rule_id": "cloudflare.rule.api-shield-operation-schema-validation",
       "resource_type": "cloudflare_api_shield_operation_schema_validation_settings",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/application-security.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/api_shield_operation_schema_validation_settings.md"
     },
     {
-      "rule_id": "cloudflare/api-shield-schema",
+      "rule_id": "cloudflare.rule.api-shield-schema",
       "resource_type": "cloudflare_api_shield_schema",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/application-security.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/api_shield_schema.md"
     },
     {
-      "rule_id": "cloudflare/api-shield-schema-validation",
+      "rule_id": "cloudflare.rule.api-shield-schema-validation",
       "resource_type": "cloudflare_api_shield_schema_validation_settings",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/application-security.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/api_shield_schema_validation_settings.md"
     },
     {
-      "rule_id": "cloudflare/argo-smart-routing",
+      "rule_id": "cloudflare.rule.argo-smart-routing",
       "resource_type": "cloudflare_argo_smart_routing",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/edge-delivery.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/argo_smart_routing.md"
     },
     {
-      "rule_id": "cloudflare/argo-tiered-caching",
+      "rule_id": "cloudflare.rule.argo-tiered-caching",
       "resource_type": "cloudflare_argo_tiered_caching",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/edge-delivery.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/argo_tiered_caching.md"
     },
     {
-      "rule_id": "cloudflare/authenticated-origin-pulls",
+      "rule_id": "cloudflare.rule.authenticated-origin-pulls",
       "resource_type": "cloudflare_authenticated_origin_pulls",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/tls-certificates.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/authenticated_origin_pulls.md"
     },
     {
-      "rule_id": "cloudflare/authenticated-origin-pulls-certificate",
+      "rule_id": "cloudflare.rule.authenticated-origin-pulls-certificate",
       "resource_type": "cloudflare_authenticated_origin_pulls_certificate",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/tls-certificates.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/authenticated_origin_pulls_certificate.md"
     },
     {
-      "rule_id": "cloudflare/authenticated-origin-pulls-hostname-certificate",
+      "rule_id": "cloudflare.rule.authenticated-origin-pulls-hostname-certificate",
       "resource_type": "cloudflare_authenticated_origin_pulls_hostname_certificate",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/tls-certificates.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/authenticated_origin_pulls_hostname_certificate.md"
     },
     {
-      "rule_id": "cloudflare/authenticated-origin-pulls-settings",
+      "rule_id": "cloudflare.rule.authenticated-origin-pulls-settings",
       "resource_type": "cloudflare_authenticated_origin_pulls_settings",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/tls-certificates.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/authenticated_origin_pulls_settings.md"
     },
     {
-      "rule_id": "cloudflare/bot-management",
+      "rule_id": "cloudflare.rule.bot-management",
       "resource_type": "cloudflare_bot_management",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/application-security.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/bot_management.md"
     },
     {
-      "rule_id": "cloudflare/byo-ip-prefix",
-      "resource_type": "cloudflare_byo_ip_prefix",
-      "paths": [],
-      "file": "dialects/cloudflare/network/cloudflare-wan.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/byo_ip_prefix.md"
-    },
-    {
-      "rule_id": "cloudflare/calls-sfu-app",
-      "resource_type": "cloudflare_calls_sfu_app",
-      "paths": [],
-      "file": "dialects/cloudflare/media/real-time-media.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/calls_sfu_app.md"
-    },
-    {
-      "rule_id": "cloudflare/calls-turn-app",
-      "resource_type": "cloudflare_calls_turn_app",
-      "paths": [],
-      "file": "dialects/cloudflare/media/real-time-media.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/calls_turn_app.md"
-    },
-    {
-      "rule_id": "cloudflare/certificate-authority-hostname-associations",
+      "rule_id": "cloudflare.rule.certificate-authority-hostname-associations",
       "resource_type": "cloudflare_certificate_authorities_hostname_associations",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/tls-certificates.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/certificate_authorities_hostname_associations.md"
     },
     {
-      "rule_id": "cloudflare/certificate-pack",
+      "rule_id": "cloudflare.rule.certificate-pack",
       "resource_type": "cloudflare_certificate_pack",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/tls-certificates.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/certificate_pack.md"
     },
     {
-      "rule_id": "cloudflare/certificate-transparency-alerting",
+      "rule_id": "cloudflare.rule.certificate-transparency-alerting",
       "resource_type": "cloudflare_ct_alerting",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/tls-certificates.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/ct_alerting.md"
     },
     {
-      "rule_id": "cloudflare/client-certificate",
+      "rule_id": "cloudflare.rule.client-certificate",
       "resource_type": "cloudflare_client_certificate",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/tls-certificates.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/client_certificate.md"
     },
     {
-      "rule_id": "cloudflare/cloud-connector-rules",
+      "rule_id": "cloudflare.rule.cloud-connector-rules",
       "resource_type": "cloudflare_cloud_connector_rules",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/network/cloudflare-wan.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/cloud_connector_rules.md"
     },
     {
-      "rule_id": "cloudflare/cloudflare-tunnel",
+      "rule_id": "cloudflare.rule.cloudflare-tunnel",
       "resource_type": "cloudflare_zero_trust_tunnel_cloudflared",
       "paths": [],
       "file": "dialects/cloudflare/network/cloudflare-tunnel.rf",
@@ -363,115 +324,131 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_tunnel_cloudflared.md"
     },
     {
-      "rule_id": "cloudflare/cloudflare-tunnel-config",
+      "rule_id": "cloudflare.rule.cloudflare-tunnel-config",
       "resource_type": "cloudflare_zero_trust_tunnel_cloudflared_config",
-      "paths": ["tunnel_id"],
+      "paths": [
+        "tunnel_id"
+      ],
       "file": "dialects/cloudflare/network/cloudflare-tunnel.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_tunnel_cloudflared_config.md"
     },
     {
-      "rule_id": "cloudflare/cloudflare-tunnel-hostname-route",
+      "rule_id": "cloudflare.rule.cloudflare-tunnel-hostname-route",
       "resource_type": "cloudflare_zero_trust_network_hostname_route",
-      "paths": ["tunnel_id"],
+      "paths": [
+        "tunnel_id"
+      ],
       "file": "dialects/cloudflare/network/cloudflare-tunnel.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_network_hostname_route.md"
     },
     {
-      "rule_id": "cloudflare/cloudflare-tunnel-route",
+      "rule_id": "cloudflare.rule.cloudflare-tunnel-route",
       "resource_type": "cloudflare_zero_trust_tunnel_cloudflared_route",
-      "paths": ["network", "tunnel_id"],
+      "paths": [
+        "network",
+        "tunnel_id"
+      ],
       "file": "dialects/cloudflare/network/cloudflare-tunnel.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_tunnel_cloudflared_route.md"
     },
     {
-      "rule_id": "cloudflare/cloudflare-tunnel-virtual-network",
-      "resource_type": "cloudflare_zero_trust_tunnel_cloudflared_virtual_network",
-      "paths": [],
-      "file": "dialects/cloudflare/network/cloudflare-tunnel.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_tunnel_cloudflared_virtual_network.md"
-    },
-    {
-      "rule_id": "cloudflare/connectivity-directory-service",
+      "rule_id": "cloudflare.rule.connectivity-directory-service",
       "resource_type": "cloudflare_connectivity_directory_service",
-      "paths": ["host.network.tunnel_id", "host.resolver_network.tunnel_id"],
+      "paths": [
+        "host.network.tunnel_id",
+        "host.resolver_network.tunnel_id"
+      ],
       "file": "dialects/cloudflare/network/cloudflare-tunnel.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/connectivity_directory_service.md"
     },
     {
-      "rule_id": "cloudflare/content-scanning",
+      "rule_id": "cloudflare.rule.content-scanning",
       "resource_type": "cloudflare_content_scanning",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/application-security.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/content_scanning.md"
     },
     {
-      "rule_id": "cloudflare/content-scanning-expression",
+      "rule_id": "cloudflare.rule.content-scanning-expression",
       "resource_type": "cloudflare_content_scanning_expression",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/application-security.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/content_scanning_expression.md"
     },
     {
-      "rule_id": "cloudflare/custom-csr",
+      "rule_id": "cloudflare.rule.custom-csr",
       "resource_type": "cloudflare_custom_csr",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/tls-certificates.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/custom_csr.md"
     },
     {
-      "rule_id": "cloudflare/custom-hostname",
+      "rule_id": "cloudflare.rule.custom-hostname",
       "resource_type": "cloudflare_custom_hostname",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/zones-dns.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/custom_hostname.md"
     },
     {
-      "rule_id": "cloudflare/custom-hostname-fallback-origin",
+      "rule_id": "cloudflare.rule.custom-hostname-fallback-origin",
       "resource_type": "cloudflare_custom_hostname_fallback_origin",
-      "paths": ["origin", "zone_id"],
+      "paths": [
+        "origin",
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/zones-dns.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/custom_hostname_fallback_origin.md"
     },
     {
-      "rule_id": "cloudflare/custom-origin-trust-store",
+      "rule_id": "cloudflare.rule.custom-origin-trust-store",
       "resource_type": "cloudflare_custom_origin_trust_store",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/tls-certificates.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/custom_origin_trust_store.md"
     },
     {
-      "rule_id": "cloudflare/custom-ssl",
+      "rule_id": "cloudflare.rule.custom-ssl",
       "resource_type": "cloudflare_custom_ssl",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/tls-certificates.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/custom_ssl.md"
     },
     {
-      "rule_id": "cloudflare/d1-database",
+      "rule_id": "cloudflare.rule.d1-database",
       "resource_type": "cloudflare_d1_database",
       "paths": [],
       "file": "dialects/cloudflare/databases/d1-hyperdrive.rf",
@@ -480,7 +457,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/d1_database.md"
     },
     {
-      "rule_id": "cloudflare/device-custom-profile",
+      "rule_id": "cloudflare.rule.device-custom-profile",
       "resource_type": "cloudflare_zero_trust_device_custom_profile",
       "paths": [],
       "file": "dialects/cloudflare/security/device-posture.rf",
@@ -489,7 +466,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_device_custom_profile.md"
     },
     {
-      "rule_id": "cloudflare/device-default-profile",
+      "rule_id": "cloudflare.rule.device-default-profile",
       "resource_type": "cloudflare_zero_trust_device_default_profile",
       "paths": [],
       "file": "dialects/cloudflare/security/device-posture.rf",
@@ -498,7 +475,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_device_default_profile.md"
     },
     {
-      "rule_id": "cloudflare/device-deployment-group",
+      "rule_id": "cloudflare.rule.device-deployment-group",
       "resource_type": "cloudflare_zero_trust_device_deployment_groups",
       "paths": [],
       "file": "dialects/cloudflare/security/device-posture.rf",
@@ -507,7 +484,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_device_deployment_groups.md"
     },
     {
-      "rule_id": "cloudflare/device-ip-profile",
+      "rule_id": "cloudflare.rule.device-ip-profile",
       "resource_type": "cloudflare_zero_trust_device_ip_profile",
       "paths": [],
       "file": "dialects/cloudflare/security/device-posture.rf",
@@ -516,7 +493,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_device_ip_profile.md"
     },
     {
-      "rule_id": "cloudflare/device-managed-network",
+      "rule_id": "cloudflare.rule.device-managed-network",
       "resource_type": "cloudflare_zero_trust_device_managed_networks",
       "paths": [],
       "file": "dialects/cloudflare/security/device-posture.rf",
@@ -525,7 +502,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_device_managed_networks.md"
     },
     {
-      "rule_id": "cloudflare/device-posture-integration",
+      "rule_id": "cloudflare.rule.device-posture-integration",
       "resource_type": "cloudflare_zero_trust_device_posture_integration",
       "paths": [],
       "file": "dialects/cloudflare/security/device-posture.rf",
@@ -534,7 +511,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_device_posture_integration.md"
     },
     {
-      "rule_id": "cloudflare/device-posture-rule",
+      "rule_id": "cloudflare.rule.device-posture-rule",
       "resource_type": "cloudflare_zero_trust_device_posture_rule",
       "paths": [],
       "file": "dialects/cloudflare/security/device-posture.rf",
@@ -543,7 +520,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_device_posture_rule.md"
     },
     {
-      "rule_id": "cloudflare/device-settings",
+      "rule_id": "cloudflare.rule.device-settings",
       "resource_type": "cloudflare_zero_trust_device_settings",
       "paths": [],
       "file": "dialects/cloudflare/security/device-posture.rf",
@@ -552,7 +529,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_device_settings.md"
     },
     {
-      "rule_id": "cloudflare/device-subnet",
+      "rule_id": "cloudflare.rule.device-subnet",
       "resource_type": "cloudflare_zero_trust_device_subnet",
       "paths": [],
       "file": "dialects/cloudflare/security/device-posture.rf",
@@ -561,7 +538,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_device_subnet.md"
     },
     {
-      "rule_id": "cloudflare/dex-rule",
+      "rule_id": "cloudflare.rule.dex-rule",
       "resource_type": "cloudflare_zero_trust_dex_rule",
       "paths": [],
       "file": "dialects/cloudflare/observability/observability.rf",
@@ -570,7 +547,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_dex_rule.md"
     },
     {
-      "rule_id": "cloudflare/dex-test",
+      "rule_id": "cloudflare.rule.dex-test",
       "resource_type": "cloudflare_zero_trust_dex_test",
       "paths": [],
       "file": "dialects/cloudflare/observability/observability.rf",
@@ -579,7 +556,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_dex_test.md"
     },
     {
-      "rule_id": "cloudflare/dlp-custom-profile",
+      "rule_id": "cloudflare.rule.dlp-custom-profile",
       "resource_type": "cloudflare_zero_trust_dlp_custom_profile",
       "paths": [],
       "file": "dialects/cloudflare/security/data-loss-prevention.rf",
@@ -588,7 +565,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_dlp_custom_profile.md"
     },
     {
-      "rule_id": "cloudflare/dlp-dataset",
+      "rule_id": "cloudflare.rule.dlp-dataset",
       "resource_type": "cloudflare_zero_trust_dlp_dataset",
       "paths": [],
       "file": "dialects/cloudflare/security/data-loss-prevention.rf",
@@ -597,7 +574,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_dlp_dataset.md"
     },
     {
-      "rule_id": "cloudflare/dlp-integration-entry",
+      "rule_id": "cloudflare.rule.dlp-integration-entry",
       "resource_type": "cloudflare_zero_trust_dlp_integration_entry",
       "paths": [],
       "file": "dialects/cloudflare/security/data-loss-prevention.rf",
@@ -606,7 +583,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_dlp_integration_entry.md"
     },
     {
-      "rule_id": "cloudflare/dlp-predefined-profile",
+      "rule_id": "cloudflare.rule.dlp-predefined-profile",
       "resource_type": "cloudflare_zero_trust_dlp_predefined_profile",
       "paths": [],
       "file": "dialects/cloudflare/security/data-loss-prevention.rf",
@@ -615,7 +592,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_dlp_predefined_profile.md"
     },
     {
-      "rule_id": "cloudflare/dlp-settings",
+      "rule_id": "cloudflare.rule.dlp-settings",
       "resource_type": "cloudflare_zero_trust_dlp_settings",
       "paths": [],
       "file": "dialects/cloudflare/security/data-loss-prevention.rf",
@@ -624,25 +601,19 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_dlp_settings.md"
     },
     {
-      "rule_id": "cloudflare/dns-firewall",
-      "resource_type": "cloudflare_dns_firewall",
-      "paths": [],
-      "file": "dialects/cloudflare/dns-cdn/zones-dns.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/dns_firewall.md"
-    },
-    {
-      "rule_id": "cloudflare/dns-record",
+      "rule_id": "cloudflare.rule.dns-record",
       "resource_type": "cloudflare_dns_record",
-      "paths": ["proxied", "zone_id"],
+      "paths": [
+        "proxied",
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/zones-dns.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/dns_record.md"
     },
     {
-      "rule_id": "cloudflare/dns-transfer-acl",
+      "rule_id": "cloudflare.rule.dns-transfer-acl",
       "resource_type": "cloudflare_dns_zone_transfers_acl",
       "paths": [],
       "file": "dialects/cloudflare/dns-cdn/zones-dns.rf",
@@ -651,25 +622,31 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/dns_zone_transfers_acl.md"
     },
     {
-      "rule_id": "cloudflare/dns-transfer-incoming",
+      "rule_id": "cloudflare.rule.dns-transfer-incoming",
       "resource_type": "cloudflare_dns_zone_transfers_incoming",
-      "paths": ["peers", "zone_id"],
+      "paths": [
+        "peers",
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/zones-dns.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/dns_zone_transfers_incoming.md"
     },
     {
-      "rule_id": "cloudflare/dns-transfer-outgoing",
+      "rule_id": "cloudflare.rule.dns-transfer-outgoing",
       "resource_type": "cloudflare_dns_zone_transfers_outgoing",
-      "paths": ["peers", "zone_id"],
+      "paths": [
+        "peers",
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/zones-dns.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/dns_zone_transfers_outgoing.md"
     },
     {
-      "rule_id": "cloudflare/dns-transfer-peer",
+      "rule_id": "cloudflare.rule.dns-transfer-peer",
       "resource_type": "cloudflare_dns_zone_transfers_peer",
       "paths": [],
       "file": "dialects/cloudflare/dns-cdn/zones-dns.rf",
@@ -678,7 +655,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/dns_zone_transfers_peer.md"
     },
     {
-      "rule_id": "cloudflare/dns-transfer-tsig",
+      "rule_id": "cloudflare.rule.dns-transfer-tsig",
       "resource_type": "cloudflare_dns_zone_transfers_tsig",
       "paths": [],
       "file": "dialects/cloudflare/dns-cdn/zones-dns.rf",
@@ -687,34 +664,40 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/dns_zone_transfers_tsig.md"
     },
     {
-      "rule_id": "cloudflare/email-routing-catch-all",
+      "rule_id": "cloudflare.rule.email-routing-catch-all",
       "resource_type": "cloudflare_email_routing_catch_all",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/edge-applications/edge-services.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/email_routing_catch_all.md"
     },
     {
-      "rule_id": "cloudflare/email-routing-rule",
+      "rule_id": "cloudflare.rule.email-routing-rule",
       "resource_type": "cloudflare_email_routing_rule",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/edge-applications/edge-services.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/email_routing_rule.md"
     },
     {
-      "rule_id": "cloudflare/email-routing-settings",
+      "rule_id": "cloudflare.rule.email-routing-settings",
       "resource_type": "cloudflare_email_routing_settings",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/edge-applications/edge-services.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/email_routing_settings.md"
     },
     {
-      "rule_id": "cloudflare/email-security-block-sender",
+      "rule_id": "cloudflare.rule.email-security-block-sender",
       "resource_type": "cloudflare_email_security_block_sender",
       "paths": [],
       "file": "dialects/cloudflare/edge-applications/edge-services.rf",
@@ -723,7 +706,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/email_security_block_sender.md"
     },
     {
-      "rule_id": "cloudflare/email-security-impersonation-registry",
+      "rule_id": "cloudflare.rule.email-security-impersonation-registry",
       "resource_type": "cloudflare_email_security_impersonation_registry",
       "paths": [],
       "file": "dialects/cloudflare/edge-applications/edge-services.rf",
@@ -732,7 +715,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/email_security_impersonation_registry.md"
     },
     {
-      "rule_id": "cloudflare/email-security-trusted-domains",
+      "rule_id": "cloudflare.rule.email-security-trusted-domains",
       "resource_type": "cloudflare_email_security_trusted_domains",
       "paths": [],
       "file": "dialects/cloudflare/edge-applications/edge-services.rf",
@@ -741,16 +724,18 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/email_security_trusted_domains.md"
     },
     {
-      "rule_id": "cloudflare/firewall-rule",
+      "rule_id": "cloudflare.rule.firewall-rule",
       "resource_type": "cloudflare_firewall_rule",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/application-security.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/firewall_rule.md"
     },
     {
-      "rule_id": "cloudflare/flagship-app",
+      "rule_id": "cloudflare.rule.flagship-app",
       "resource_type": "cloudflare_flagship_app",
       "paths": [],
       "file": "dialects/cloudflare/governance-management/accounts-sharing.rf",
@@ -759,16 +744,18 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/flagship_app.md"
     },
     {
-      "rule_id": "cloudflare/flagship-flag",
+      "rule_id": "cloudflare.rule.flagship-flag",
       "resource_type": "cloudflare_flagship_flag",
-      "paths": ["app_id"],
+      "paths": [
+        "app_id"
+      ],
       "file": "dialects/cloudflare/governance-management/accounts-sharing.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/flagship_flag.md"
     },
     {
-      "rule_id": "cloudflare/gateway-logging",
+      "rule_id": "cloudflare.rule.gateway-logging",
       "resource_type": "cloudflare_zero_trust_gateway_logging",
       "paths": [],
       "file": "dialects/cloudflare/security/access.rf",
@@ -777,25 +764,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_gateway_logging.md"
     },
     {
-      "rule_id": "cloudflare/gateway-policy",
-      "resource_type": "cloudflare_zero_trust_gateway_policy",
-      "paths": [],
-      "file": "dialects/cloudflare/security/access.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_gateway_policy.md"
-    },
-    {
-      "rule_id": "cloudflare/gateway-proxy-endpoint",
-      "resource_type": "cloudflare_zero_trust_gateway_proxy_endpoint",
-      "paths": [],
-      "file": "dialects/cloudflare/security/access.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_gateway_proxy_endpoint.md"
-    },
-    {
-      "rule_id": "cloudflare/gateway-settings",
+      "rule_id": "cloudflare.rule.gateway-settings",
       "resource_type": "cloudflare_zero_trust_gateway_settings",
       "paths": [],
       "file": "dialects/cloudflare/security/access.rf",
@@ -804,16 +773,18 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_gateway_settings.md"
     },
     {
-      "rule_id": "cloudflare/google-tag-gateway",
+      "rule_id": "cloudflare.rule.google-tag-gateway",
       "resource_type": "cloudflare_google_tag_gateway",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/edge-delivery.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/google_tag_gateway.md"
     },
     {
-      "rule_id": "cloudflare/healthcheck",
+      "rule_id": "cloudflare.rule.healthcheck",
       "resource_type": "cloudflare_healthcheck",
       "paths": [],
       "file": "dialects/cloudflare/load-balancing/load-balancing.rf",
@@ -822,43 +793,54 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/healthcheck.md"
     },
     {
-      "rule_id": "cloudflare/hostname-tls-setting",
+      "rule_id": "cloudflare.rule.hostname-tls-setting",
       "resource_type": "cloudflare_hostname_tls_setting",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/tls-certificates.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/hostname_tls_setting.md"
     },
     {
-      "rule_id": "cloudflare/hyperdrive-config",
+      "rule_id": "cloudflare.rule.hyperdrive-config",
       "resource_type": "cloudflare_hyperdrive_config",
-      "paths": ["origin.host", "origin.service_id"],
+      "paths": [
+        "origin.host",
+        "origin.service_id"
+      ],
       "file": "dialects/cloudflare/databases/d1-hyperdrive.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/hyperdrive_config.md"
     },
     {
-      "rule_id": "cloudflare/keyless-certificate",
+      "rule_id": "cloudflare.rule.keyless-certificate",
       "resource_type": "cloudflare_keyless_certificate",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/tls-certificates.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/keyless_certificate.md"
     },
     {
-      "rule_id": "cloudflare/load-balancer",
+      "rule_id": "cloudflare.rule.load-balancer",
       "resource_type": "cloudflare_load_balancer",
-      "paths": ["default_pools", "fallback_pool", "zone_id"],
+      "paths": [
+        "default_pools",
+        "fallback_pool",
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/load-balancing/load-balancing.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/load_balancer.md"
     },
     {
-      "rule_id": "cloudflare/load-balancer-monitor",
+      "rule_id": "cloudflare.rule.load-balancer-monitor",
       "resource_type": "cloudflare_load_balancer_monitor",
       "paths": [],
       "file": "dialects/cloudflare/load-balancing/load-balancing.rf",
@@ -867,7 +849,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/load_balancer_monitor.md"
     },
     {
-      "rule_id": "cloudflare/load-balancer-monitor-group",
+      "rule_id": "cloudflare.rule.load-balancer-monitor-group",
       "resource_type": "cloudflare_load_balancer_monitor_group",
       "paths": [],
       "file": "dialects/cloudflare/load-balancing/load-balancing.rf",
@@ -876,7 +858,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/load_balancer_monitor_group.md"
     },
     {
-      "rule_id": "cloudflare/load-balancer-pool",
+      "rule_id": "cloudflare.rule.load-balancer-pool",
       "resource_type": "cloudflare_load_balancer_pool",
       "paths": [
         "origins[0].address",
@@ -890,7 +872,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/load_balancer_pool.md"
     },
     {
-      "rule_id": "cloudflare/logpull-retention",
+      "rule_id": "cloudflare.rule.logpull-retention",
       "resource_type": "cloudflare_logpull_retention",
       "paths": [],
       "file": "dialects/cloudflare/observability/observability.rf",
@@ -899,16 +881,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/logpull_retention.md"
     },
     {
-      "rule_id": "cloudflare/logpush-job",
-      "resource_type": "cloudflare_logpush_job",
-      "paths": [],
-      "file": "dialects/cloudflare/observability/observability.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/logpush_job.md"
-    },
-    {
-      "rule_id": "cloudflare/magic-transit-cf1-site",
+      "rule_id": "cloudflare.rule.magic-transit-cf1-site",
       "resource_type": "cloudflare_magic_transit_cf1_site",
       "paths": [],
       "file": "dialects/cloudflare/network/cloudflare-wan.rf",
@@ -917,16 +890,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/magic_transit_cf1_site.md"
     },
     {
-      "rule_id": "cloudflare/magic-transit-connector",
-      "resource_type": "cloudflare_magic_transit_connector",
-      "paths": [],
-      "file": "dialects/cloudflare/network/cloudflare-wan.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/magic_transit_connector.md"
-    },
-    {
-      "rule_id": "cloudflare/magic-transit-site",
+      "rule_id": "cloudflare.rule.magic-transit-site",
       "resource_type": "cloudflare_magic_transit_site",
       "paths": [],
       "file": "dialects/cloudflare/network/cloudflare-wan.rf",
@@ -935,52 +899,51 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/magic_transit_site.md"
     },
     {
-      "rule_id": "cloudflare/magic-transit-site-acl",
+      "rule_id": "cloudflare.rule.magic-transit-site-acl",
       "resource_type": "cloudflare_magic_transit_site_acl",
-      "paths": ["site_id"],
+      "paths": [
+        "site_id"
+      ],
       "file": "dialects/cloudflare/network/cloudflare-wan.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/magic_transit_site_acl.md"
     },
     {
-      "rule_id": "cloudflare/magic-transit-site-lan",
+      "rule_id": "cloudflare.rule.magic-transit-site-lan",
       "resource_type": "cloudflare_magic_transit_site_lan",
-      "paths": ["site_id"],
+      "paths": [
+        "site_id"
+      ],
       "file": "dialects/cloudflare/network/cloudflare-wan.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/magic_transit_site_lan.md"
     },
     {
-      "rule_id": "cloudflare/magic-transit-site-wan",
+      "rule_id": "cloudflare.rule.magic-transit-site-wan",
       "resource_type": "cloudflare_magic_transit_site_wan",
-      "paths": ["site_id"],
+      "paths": [
+        "site_id"
+      ],
       "file": "dialects/cloudflare/network/cloudflare-wan.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/magic_transit_site_wan.md"
     },
     {
-      "rule_id": "cloudflare/magic-wan-gre-tunnel",
-      "resource_type": "cloudflare_magic_wan_gre_tunnel",
-      "paths": [],
-      "file": "dialects/cloudflare/network/cloudflare-wan.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/magic_wan_gre_tunnel.md"
-    },
-    {
-      "rule_id": "cloudflare/magic-wan-ipsec-tunnel",
+      "rule_id": "cloudflare.rule.magic-wan-ipsec-tunnel",
       "resource_type": "cloudflare_magic_wan_ipsec_tunnel",
-      "paths": ["customer_endpoint"],
+      "paths": [
+        "customer_endpoint"
+      ],
       "file": "dialects/cloudflare/network/cloudflare-wan.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/magic_wan_ipsec_tunnel.md"
     },
     {
-      "rule_id": "cloudflare/magic-wan-static-route",
+      "rule_id": "cloudflare.rule.magic-wan-static-route",
       "resource_type": "cloudflare_magic_wan_static_route",
       "paths": [],
       "file": "dialects/cloudflare/network/cloudflare-wan.rf",
@@ -989,25 +952,18 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/magic_wan_static_route.md"
     },
     {
-      "rule_id": "cloudflare/managed-transforms",
+      "rule_id": "cloudflare.rule.managed-transforms",
       "resource_type": "cloudflare_managed_transforms",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/edge-delivery.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/managed_transforms.md"
     },
     {
-      "rule_id": "cloudflare/moq-relay",
-      "resource_type": "cloudflare_moq_relay",
-      "paths": [],
-      "file": "dialects/cloudflare/media/real-time-media.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/moq_relay.md"
-    },
-    {
-      "rule_id": "cloudflare/mtls-certificate",
+      "rule_id": "cloudflare.rule.mtls-certificate",
       "resource_type": "cloudflare_mtls_certificate",
       "paths": [],
       "file": "dialects/cloudflare/security/tls-certificates.rf",
@@ -1016,7 +972,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/mtls_certificate.md"
     },
     {
-      "rule_id": "cloudflare/network-monitoring",
+      "rule_id": "cloudflare.rule.network-monitoring",
       "resource_type": "cloudflare_magic_network_monitoring_configuration",
       "paths": [],
       "file": "dialects/cloudflare/observability/observability.rf",
@@ -1025,7 +981,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/magic_network_monitoring_configuration.md"
     },
     {
-      "rule_id": "cloudflare/network-monitoring-rule",
+      "rule_id": "cloudflare.rule.network-monitoring-rule",
       "resource_type": "cloudflare_magic_network_monitoring_rule",
       "paths": [],
       "file": "dialects/cloudflare/observability/observability.rf",
@@ -1034,7 +990,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/magic_network_monitoring_rule.md"
     },
     {
-      "rule_id": "cloudflare/notification-policy",
+      "rule_id": "cloudflare.rule.notification-policy",
       "resource_type": "cloudflare_notification_policy",
       "paths": [],
       "file": "dialects/cloudflare/observability/observability.rf",
@@ -1043,7 +999,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/notification_policy.md"
     },
     {
-      "rule_id": "cloudflare/notification-webhook",
+      "rule_id": "cloudflare.rule.notification-webhook",
       "resource_type": "cloudflare_notification_policy_webhooks",
       "paths": [],
       "file": "dialects/cloudflare/observability/observability.rf",
@@ -1052,7 +1008,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/notification_policy_webhooks.md"
     },
     {
-      "rule_id": "cloudflare/oauth-client",
+      "rule_id": "cloudflare.rule.oauth-client",
       "resource_type": "cloudflare_oauth_client",
       "paths": [],
       "file": "dialects/cloudflare/identity-iam/identities-secrets.rf",
@@ -1061,16 +1017,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/oauth_client.md"
     },
     {
-      "rule_id": "cloudflare/organization",
-      "resource_type": "cloudflare_organization",
-      "paths": [],
-      "file": "dialects/cloudflare/governance-management/accounts-sharing.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/organization.md"
-    },
-    {
-      "rule_id": "cloudflare/origin-ca-certificate",
+      "rule_id": "cloudflare.rule.origin-ca-certificate",
       "resource_type": "cloudflare_origin_ca_certificate",
       "paths": [],
       "file": "dialects/cloudflare/security/tls-certificates.rf",
@@ -1079,52 +1026,62 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/origin_ca_certificate.md"
     },
     {
-      "rule_id": "cloudflare/origin-cloud-region",
+      "rule_id": "cloudflare.rule.origin-cloud-region",
       "resource_type": "cloudflare_origin_cloud_region",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/edge-delivery.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/origin_cloud_region.md"
     },
     {
-      "rule_id": "cloudflare/origin-tls-compliance-modes",
+      "rule_id": "cloudflare.rule.origin-tls-compliance-modes",
       "resource_type": "cloudflare_origin_tls_compliance_modes",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/tls-certificates.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/origin_tls_compliance_modes.md"
     },
     {
-      "rule_id": "cloudflare/page-rule",
+      "rule_id": "cloudflare.rule.page-rule",
       "resource_type": "cloudflare_page_rule",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/edge-delivery.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/page_rule.md"
     },
     {
-      "rule_id": "cloudflare/page-shield-policy",
+      "rule_id": "cloudflare.rule.page-shield-policy",
       "resource_type": "cloudflare_page_shield_policy",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/application-security.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/page_shield_policy.md"
     },
     {
-      "rule_id": "cloudflare/pages-domain",
+      "rule_id": "cloudflare.rule.pages-domain",
       "resource_type": "cloudflare_pages_domain",
-      "paths": ["project_name"],
+      "paths": [
+        "project_name"
+      ],
       "file": "dialects/cloudflare/serverless/pages-workflows.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/pages_domain.md"
     },
     {
-      "rule_id": "cloudflare/pages-project",
+      "rule_id": "cloudflare.rule.pages-project",
       "resource_type": "cloudflare_pages_project",
       "paths": [],
       "file": "dialects/cloudflare/serverless/pages-workflows.rf",
@@ -1133,52 +1090,31 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/pages_project.md"
     },
     {
-      "rule_id": "cloudflare/pipeline",
-      "resource_type": "cloudflare_pipeline",
-      "paths": [],
-      "file": "dialects/cloudflare/serverless/pages-workflows.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/pipeline.md"
-    },
-    {
-      "rule_id": "cloudflare/pipeline-sink",
-      "resource_type": "cloudflare_pipeline_sink",
-      "paths": [],
-      "file": "dialects/cloudflare/serverless/pages-workflows.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/pipeline_sink.md"
-    },
-    {
-      "rule_id": "cloudflare/pipeline-stream",
-      "resource_type": "cloudflare_pipeline_stream",
-      "paths": [],
-      "file": "dialects/cloudflare/serverless/pages-workflows.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/pipeline_stream.md"
-    },
-    {
-      "rule_id": "cloudflare/precursor",
+      "rule_id": "cloudflare.rule.precursor",
       "resource_type": "cloudflare_precursor",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/application-security.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/precursor.md"
     },
     {
-      "rule_id": "cloudflare/proxied-dns-record",
+      "rule_id": "cloudflare.rule.proxied-dns-record",
       "resource_type": "cloudflare_dns_record",
-      "paths": ["content", "proxied", "zone_id"],
+      "paths": [
+        "content",
+        "proxied",
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/zones-dns.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/dns_record.md"
     },
     {
-      "rule_id": "cloudflare/queue",
+      "rule_id": "cloudflare.rule.queue",
       "resource_type": "cloudflare_queue",
       "paths": [],
       "file": "dialects/cloudflare/messaging-eventing/queues.rf",
@@ -1187,16 +1123,19 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/queue.md"
     },
     {
-      "rule_id": "cloudflare/queue-consumer",
+      "rule_id": "cloudflare.rule.queue-consumer",
       "resource_type": "cloudflare_queue_consumer",
-      "paths": ["queue_id", "script_name"],
+      "paths": [
+        "queue_id",
+        "script_name"
+      ],
       "file": "dialects/cloudflare/messaging-eventing/queues.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/queue_consumer.md"
     },
     {
-      "rule_id": "cloudflare/r2-bucket",
+      "rule_id": "cloudflare.rule.r2-bucket",
       "resource_type": "cloudflare_r2_bucket",
       "paths": [],
       "file": "dialects/cloudflare/storage/r2.rf",
@@ -1205,115 +1144,130 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/r2_bucket.md"
     },
     {
-      "rule_id": "cloudflare/r2-bucket-cors",
+      "rule_id": "cloudflare.rule.r2-bucket-cors",
       "resource_type": "cloudflare_r2_bucket_cors",
-      "paths": ["bucket_name"],
+      "paths": [
+        "bucket_name"
+      ],
       "file": "dialects/cloudflare/storage/r2.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/r2_bucket_cors.md"
     },
     {
-      "rule_id": "cloudflare/r2-bucket-event-notification",
+      "rule_id": "cloudflare.rule.r2-bucket-event-notification",
       "resource_type": "cloudflare_r2_bucket_event_notification",
-      "paths": ["bucket_name", "queue_id"],
+      "paths": [
+        "bucket_name",
+        "queue_id"
+      ],
       "file": "dialects/cloudflare/storage/r2.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/r2_bucket_event_notification.md"
     },
     {
-      "rule_id": "cloudflare/r2-bucket-lifecycle",
+      "rule_id": "cloudflare.rule.r2-bucket-lifecycle",
       "resource_type": "cloudflare_r2_bucket_lifecycle",
-      "paths": ["bucket_name"],
+      "paths": [
+        "bucket_name"
+      ],
       "file": "dialects/cloudflare/storage/r2.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/r2_bucket_lifecycle.md"
     },
     {
-      "rule_id": "cloudflare/r2-bucket-lock",
+      "rule_id": "cloudflare.rule.r2-bucket-lock",
       "resource_type": "cloudflare_r2_bucket_lock",
-      "paths": ["bucket_name"],
+      "paths": [
+        "bucket_name"
+      ],
       "file": "dialects/cloudflare/storage/r2.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/r2_bucket_lock.md"
     },
     {
-      "rule_id": "cloudflare/r2-bucket-sippy",
+      "rule_id": "cloudflare.rule.r2-bucket-sippy",
       "resource_type": "cloudflare_r2_bucket_sippy",
-      "paths": ["bucket_name"],
+      "paths": [
+        "bucket_name"
+      ],
       "file": "dialects/cloudflare/storage/r2.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/r2_bucket_sippy.md"
     },
     {
-      "rule_id": "cloudflare/r2-custom-domain",
+      "rule_id": "cloudflare.rule.r2-custom-domain",
       "resource_type": "cloudflare_r2_custom_domain",
-      "paths": ["bucket_name", "zone_id"],
+      "paths": [
+        "bucket_name",
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/storage/r2.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/r2_custom_domain.md"
     },
     {
-      "rule_id": "cloudflare/r2-data-catalog",
+      "rule_id": "cloudflare.rule.r2-data-catalog",
       "resource_type": "cloudflare_r2_data_catalog",
-      "paths": ["bucket_name"],
+      "paths": [
+        "bucket_name"
+      ],
       "file": "dialects/cloudflare/storage/r2.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/r2_data_catalog.md"
     },
     {
-      "rule_id": "cloudflare/r2-managed-domain",
+      "rule_id": "cloudflare.rule.r2-managed-domain",
       "resource_type": "cloudflare_r2_managed_domain",
-      "paths": ["bucket_name"],
+      "paths": [
+        "bucket_name"
+      ],
       "file": "dialects/cloudflare/storage/r2.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/r2_managed_domain.md"
     },
     {
-      "rule_id": "cloudflare/rate-limit",
+      "rule_id": "cloudflare.rule.rate-limit",
       "resource_type": "cloudflare_rate_limit",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/application-security.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/rate_limit.md"
     },
     {
-      "rule_id": "cloudflare/regional-hostname",
+      "rule_id": "cloudflare.rule.regional-hostname",
       "resource_type": "cloudflare_regional_hostname",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/zones-dns.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/regional_hostname.md"
     },
     {
-      "rule_id": "cloudflare/regional-tiered-cache",
+      "rule_id": "cloudflare.rule.regional-tiered-cache",
       "resource_type": "cloudflare_regional_tiered_cache",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/edge-delivery.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/regional_tiered_cache.md"
     },
     {
-      "rule_id": "cloudflare/resource-share",
-      "resource_type": "cloudflare_share",
-      "paths": [],
-      "file": "dialects/cloudflare/governance-management/accounts-sharing.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/share.md"
-    },
-    {
-      "rule_id": "cloudflare/risk-scoring-integration",
+      "rule_id": "cloudflare.rule.risk-scoring-integration",
       "resource_type": "cloudflare_zero_trust_risk_scoring_integration",
       "paths": [],
       "file": "dialects/cloudflare/security/access.rf",
@@ -1322,43 +1276,51 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_risk_scoring_integration.md"
     },
     {
-      "rule_id": "cloudflare/ruleset",
+      "rule_id": "cloudflare.rule.ruleset",
       "resource_type": "cloudflare_ruleset",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/application-security.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/ruleset.md"
     },
     {
-      "rule_id": "cloudflare/schema-validation-operation-settings",
+      "rule_id": "cloudflare.rule.schema-validation-operation-settings",
       "resource_type": "cloudflare_schema_validation_operation_settings",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/application-security.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/schema_validation_operation_settings.md"
     },
     {
-      "rule_id": "cloudflare/schema-validation-schemas",
+      "rule_id": "cloudflare.rule.schema-validation-schemas",
       "resource_type": "cloudflare_schema_validation_schemas",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/application-security.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/schema_validation_schemas.md"
     },
     {
-      "rule_id": "cloudflare/schema-validation-settings",
+      "rule_id": "cloudflare.rule.schema-validation-settings",
       "resource_type": "cloudflare_schema_validation_settings",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/application-security.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/schema_validation_settings.md"
     },
     {
-      "rule_id": "cloudflare/secrets-store",
+      "rule_id": "cloudflare.rule.secrets-store",
       "resource_type": "cloudflare_secrets_store",
       "paths": [],
       "file": "dialects/cloudflare/identity-iam/identities-secrets.rf",
@@ -1367,52 +1329,63 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/secrets_store.md"
     },
     {
-      "rule_id": "cloudflare/secrets-store-secret",
+      "rule_id": "cloudflare.rule.secrets-store-secret",
       "resource_type": "cloudflare_secrets_store_secret",
-      "paths": ["store_id"],
+      "paths": [
+        "store_id"
+      ],
       "file": "dialects/cloudflare/identity-iam/identities-secrets.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/secrets_store_secret.md"
     },
     {
-      "rule_id": "cloudflare/snippet",
+      "rule_id": "cloudflare.rule.snippet",
       "resource_type": "cloudflare_snippet",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/edge-delivery.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/snippet.md"
     },
     {
-      "rule_id": "cloudflare/snippet-rules",
+      "rule_id": "cloudflare.rule.snippet-rules",
       "resource_type": "cloudflare_snippet_rules",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/edge-delivery.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/snippet_rules.md"
     },
     {
-      "rule_id": "cloudflare/snippets",
+      "rule_id": "cloudflare.rule.snippets",
       "resource_type": "cloudflare_snippets",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/edge-delivery.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/snippets.md"
     },
     {
-      "rule_id": "cloudflare/spectrum-application",
+      "rule_id": "cloudflare.rule.spectrum-application",
       "resource_type": "cloudflare_spectrum_application",
-      "paths": ["origin_direct", "zone_id"],
+      "paths": [
+        "origin_direct",
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/edge-applications/edge-services.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/spectrum_application.md"
     },
     {
-      "rule_id": "cloudflare/sso-connector",
+      "rule_id": "cloudflare.rule.sso-connector",
       "resource_type": "cloudflare_sso_connector",
       "paths": [],
       "file": "dialects/cloudflare/identity-iam/identities-secrets.rf",
@@ -1421,142 +1394,119 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/sso_connector.md"
     },
     {
-      "rule_id": "cloudflare/stream-live-input",
-      "resource_type": "cloudflare_stream_live_input",
-      "paths": [],
-      "file": "dialects/cloudflare/media/real-time-media.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/stream_live_input.md"
-    },
-    {
-      "rule_id": "cloudflare/stream-webhook",
-      "resource_type": "cloudflare_stream_webhook",
-      "paths": [],
-      "file": "dialects/cloudflare/media/real-time-media.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/stream_webhook.md"
-    },
-    {
-      "rule_id": "cloudflare/tiered-cache",
+      "rule_id": "cloudflare.rule.tiered-cache",
       "resource_type": "cloudflare_tiered_cache",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/edge-delivery.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/tiered_cache.md"
     },
     {
-      "rule_id": "cloudflare/token-validation-config",
+      "rule_id": "cloudflare.rule.token-validation-config",
       "resource_type": "cloudflare_token_validation_config",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/application-security.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/token_validation_config.md"
     },
     {
-      "rule_id": "cloudflare/total-tls",
+      "rule_id": "cloudflare.rule.total-tls",
       "resource_type": "cloudflare_total_tls",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/tls-certificates.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/total_tls.md"
     },
     {
-      "rule_id": "cloudflare/turnstile-widget",
-      "resource_type": "cloudflare_turnstile_widget",
-      "paths": [],
-      "file": "dialects/cloudflare/security/application-security.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/turnstile_widget.md"
-    },
-    {
-      "rule_id": "cloudflare/universal-ssl-setting",
+      "rule_id": "cloudflare.rule.universal-ssl-setting",
       "resource_type": "cloudflare_universal_ssl_setting",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/tls-certificates.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/universal_ssl_setting.md"
     },
     {
-      "rule_id": "cloudflare/url-normalization-settings",
+      "rule_id": "cloudflare.rule.url-normalization-settings",
       "resource_type": "cloudflare_url_normalization_settings",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/edge-delivery.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/url_normalization_settings.md"
     },
     {
-      "rule_id": "cloudflare/user-agent-blocking-rule",
+      "rule_id": "cloudflare.rule.user-agent-blocking-rule",
       "resource_type": "cloudflare_user_agent_blocking_rule",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/application-security.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/user_agent_blocking_rule.md"
     },
     {
-      "rule_id": "cloudflare/user-group",
-      "resource_type": "cloudflare_user_group",
-      "paths": [],
-      "file": "dialects/cloudflare/identity-iam/identities-secrets.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/user_group.md"
-    },
-    {
-      "rule_id": "cloudflare/vulnerability-scanner-target",
-      "resource_type": "cloudflare_vulnerability_scanner_target_environment",
-      "paths": [],
-      "file": "dialects/cloudflare/security/application-security.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/vulnerability_scanner_target_environment.md"
-    },
-    {
-      "rule_id": "cloudflare/waiting-room",
+      "rule_id": "cloudflare.rule.waiting-room",
       "resource_type": "cloudflare_waiting_room",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/edge-applications/edge-services.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/waiting_room.md"
     },
     {
-      "rule_id": "cloudflare/waiting-room-event",
+      "rule_id": "cloudflare.rule.waiting-room-event",
       "resource_type": "cloudflare_waiting_room_event",
-      "paths": ["waiting_room_id", "zone_id"],
+      "paths": [
+        "waiting_room_id",
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/edge-applications/edge-services.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/waiting_room_event.md"
     },
     {
-      "rule_id": "cloudflare/waiting-room-rules",
+      "rule_id": "cloudflare.rule.waiting-room-rules",
       "resource_type": "cloudflare_waiting_room_rules",
-      "paths": ["waiting_room_id", "zone_id"],
+      "paths": [
+        "waiting_room_id",
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/edge-applications/edge-services.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/waiting_room_rules.md"
     },
     {
-      "rule_id": "cloudflare/waiting-room-settings",
+      "rule_id": "cloudflare.rule.waiting-room-settings",
       "resource_type": "cloudflare_waiting_room_settings",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/edge-applications/edge-services.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/waiting_room_settings.md"
     },
     {
-      "rule_id": "cloudflare/warp-connector",
+      "rule_id": "cloudflare.rule.warp-connector",
       "resource_type": "cloudflare_zero_trust_tunnel_warp_connector",
       "paths": [],
       "file": "dialects/cloudflare/network/cloudflare-tunnel.rf",
@@ -1565,16 +1515,18 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_tunnel_warp_connector.md"
     },
     {
-      "rule_id": "cloudflare/warp-connector-config",
+      "rule_id": "cloudflare.rule.warp-connector-config",
       "resource_type": "cloudflare_zero_trust_tunnel_warp_connector_config",
-      "paths": ["tunnel_id"],
+      "paths": [
+        "tunnel_id"
+      ],
       "file": "dialects/cloudflare/network/cloudflare-tunnel.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_tunnel_warp_connector_config.md"
     },
     {
-      "rule_id": "cloudflare/web-analytics-rule",
+      "rule_id": "cloudflare.rule.web-analytics-rule",
       "resource_type": "cloudflare_web_analytics_rule",
       "paths": [],
       "file": "dialects/cloudflare/observability/observability.rf",
@@ -1583,25 +1535,18 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/web_analytics_rule.md"
     },
     {
-      "rule_id": "cloudflare/web-analytics-site",
-      "resource_type": "cloudflare_web_analytics_site",
-      "paths": [],
-      "file": "dialects/cloudflare/observability/observability.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/web_analytics_site.md"
-    },
-    {
-      "rule_id": "cloudflare/web3-hostname",
+      "rule_id": "cloudflare.rule.web3-hostname",
       "resource_type": "cloudflare_web3_hostname",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/zones-dns.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/web3_hostname.md"
     },
     {
-      "rule_id": "cloudflare/worker",
+      "rule_id": "cloudflare.rule.worker",
       "resource_type": "cloudflare_worker",
       "paths": [],
       "file": "dialects/cloudflare/serverless/workers.rf",
@@ -1610,7 +1555,7 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/worker.md"
     },
     {
-      "rule_id": "cloudflare/worker-version",
+      "rule_id": "cloudflare.rule.worker-version",
       "resource_type": "cloudflare_worker_version",
       "paths": [
         "bindings[0].bucket_name",
@@ -1625,52 +1570,52 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/worker_version.md"
     },
     {
-      "rule_id": "cloudflare/workers-cron-trigger",
+      "rule_id": "cloudflare.rule.workers-cron-trigger",
       "resource_type": "cloudflare_workers_cron_trigger",
-      "paths": ["script_name"],
+      "paths": [
+        "script_name"
+      ],
       "file": "dialects/cloudflare/serverless/workers.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/workers_cron_trigger.md"
     },
     {
-      "rule_id": "cloudflare/workers-custom-domain",
+      "rule_id": "cloudflare.rule.workers-custom-domain",
       "resource_type": "cloudflare_workers_custom_domain",
-      "paths": ["service", "zone_id"],
+      "paths": [
+        "service",
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/serverless/workers.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/workers_custom_domain.md"
     },
     {
-      "rule_id": "cloudflare/workers-deployment",
+      "rule_id": "cloudflare.rule.workers-deployment",
       "resource_type": "cloudflare_workers_deployment",
-      "paths": ["script_name"],
+      "paths": [
+        "script_name"
+      ],
       "file": "dialects/cloudflare/serverless/workers.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/workers_deployment.md"
     },
     {
-      "rule_id": "cloudflare/workers-dispatch-namespace",
-      "resource_type": "cloudflare_workers_for_platforms_dispatch_namespace",
-      "paths": [],
-      "file": "dialects/cloudflare/serverless/workers.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/workers_for_platforms_dispatch_namespace.md"
-    },
-    {
-      "rule_id": "cloudflare/workers-kv",
+      "rule_id": "cloudflare.rule.workers-kv",
       "resource_type": "cloudflare_workers_kv",
-      "paths": ["namespace_id"],
+      "paths": [
+        "namespace_id"
+      ],
       "file": "dialects/cloudflare/serverless/workers.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/workers_kv.md"
     },
     {
-      "rule_id": "cloudflare/workers-kv-namespace",
+      "rule_id": "cloudflare.rule.workers-kv-namespace",
       "resource_type": "cloudflare_workers_kv_namespace",
       "paths": [],
       "file": "dialects/cloudflare/serverless/workers.rf",
@@ -1679,16 +1624,19 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/workers_kv_namespace.md"
     },
     {
-      "rule_id": "cloudflare/workers-route",
+      "rule_id": "cloudflare.rule.workers-route",
       "resource_type": "cloudflare_workers_route",
-      "paths": ["script", "zone_id"],
+      "paths": [
+        "script",
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/serverless/workers.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/workers_route.md"
     },
     {
-      "rule_id": "cloudflare/workers-script",
+      "rule_id": "cloudflare.rule.workers-script",
       "resource_type": "cloudflare_workers_script",
       "paths": [
         "bindings[0].bucket_name",
@@ -1706,43 +1654,18 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/workers_script.md"
     },
     {
-      "rule_id": "cloudflare/workers-script-subdomain",
+      "rule_id": "cloudflare.rule.workers-script-subdomain",
       "resource_type": "cloudflare_workers_script_subdomain",
-      "paths": ["script_name"],
+      "paths": [
+        "script_name"
+      ],
       "file": "dialects/cloudflare/serverless/workers.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/workers_script_subdomain.md"
     },
     {
-      "rule_id": "cloudflare/workflow",
-      "resource_type": "cloudflare_workflow",
-      "paths": [],
-      "file": "dialects/cloudflare/serverless/pages-workflows.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/workflow.md"
-    },
-    {
-      "rule_id": "cloudflare/zero-trust-dns-location",
-      "resource_type": "cloudflare_zero_trust_dns_location",
-      "paths": [],
-      "file": "dialects/cloudflare/security/access.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_dns_location.md"
-    },
-    {
-      "rule_id": "cloudflare/zero-trust-organization",
-      "resource_type": "cloudflare_zero_trust_organization",
-      "paths": [],
-      "file": "dialects/cloudflare/security/access.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zero_trust_organization.md"
-    },
-    {
-      "rule_id": "cloudflare/zone",
+      "rule_id": "cloudflare.rule.zone",
       "resource_type": "cloudflare_zone",
       "paths": [],
       "file": "dialects/cloudflare/dns-cdn/zones-dns.rf",
@@ -1751,72 +1674,88 @@
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zone.md"
     },
     {
-      "rule_id": "cloudflare/zone-auto-origin-tls-kex",
+      "rule_id": "cloudflare.rule.zone-auto-origin-tls-kex",
       "resource_type": "cloudflare_zone_auto_origin_tls_kex",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/tls-certificates.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zone_auto_origin_tls_kex.md"
     },
     {
-      "rule_id": "cloudflare/zone-cache-reserve",
+      "rule_id": "cloudflare.rule.zone-cache-reserve",
       "resource_type": "cloudflare_zone_cache_reserve",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/edge-delivery.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zone_cache_reserve.md"
     },
     {
-      "rule_id": "cloudflare/zone-cache-variants",
+      "rule_id": "cloudflare.rule.zone-cache-variants",
       "resource_type": "cloudflare_zone_cache_variants",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/edge-delivery.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zone_cache_variants.md"
     },
     {
-      "rule_id": "cloudflare/zone-dns-settings",
+      "rule_id": "cloudflare.rule.zone-dns-settings",
       "resource_type": "cloudflare_zone_dns_settings",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/zones-dns.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zone_dns_settings.md"
     },
     {
-      "rule_id": "cloudflare/zone-dnssec",
+      "rule_id": "cloudflare.rule.zone-dnssec",
       "resource_type": "cloudflare_zone_dnssec",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/zones-dns.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zone_dnssec.md"
     },
     {
-      "rule_id": "cloudflare/zone-hold",
+      "rule_id": "cloudflare.rule.zone-hold",
       "resource_type": "cloudflare_zone_hold",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/zones-dns.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zone_hold.md"
     },
     {
-      "rule_id": "cloudflare/zone-lockdown",
+      "rule_id": "cloudflare.rule.zone-lockdown",
       "resource_type": "cloudflare_zone_lockdown",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/security/application-security.rf",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://github.com/cloudflare/terraform-provider-cloudflare/blob/v5.24.0/docs/resources/zone_lockdown.md"
     },
     {
-      "rule_id": "cloudflare/zone-setting",
+      "rule_id": "cloudflare.rule.zone-setting",
       "resource_type": "cloudflare_zone_setting",
-      "paths": ["zone_id"],
+      "paths": [
+        "zone_id"
+      ],
       "file": "dialects/cloudflare/dns-cdn/zones-dns.rf",
       "schema_verified": true,
       "meaning_verified": true,

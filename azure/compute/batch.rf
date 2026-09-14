@@ -1,16 +1,10 @@
 # Maintained directly from pinned provider evidence.
 concept "batch-account" {
-  kind        = scope
   description = "An Azure Batch account owning pools, jobs, and applications."
 }
 
-concept "batch-job" {
-  kind        = entity
-  description = "An Azure Batch job coordinating parallel compute tasks."
-}
 
 concept "batch-pool" {
-  kind        = detail
   description = "A pool providing compute capacity to Azure Batch."
 }
 
@@ -22,7 +16,7 @@ rule "batch-account" {
   as = concept.batch-account
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -36,13 +30,6 @@ rule "batch-application" {
   as = concept.batch-pool
 }
 
-rule "batch-job" {
-  match {
-    type = "azurerm_batch_job"
-  }
-
-  as = concept.batch-job
-}
 
 rule "batch-pool" {
   match {

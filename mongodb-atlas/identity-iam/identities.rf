@@ -1,20 +1,16 @@
 concept "cloud-provider-access" {
-  kind        = entity
   description = "A MongoDB Atlas project integration prepared to access a customer cloud provider."
 }
 
 concept "cloud-provider-authorization" {
-  kind        = entity
   description = "An authorized customer cloud identity that MongoDB Atlas can assume or use."
 }
 
 concept "identity-provider" {
-  kind        = entity
   description = "An external identity provider integrated with MongoDB Atlas."
 }
 
 concept "identity-configuration" {
-  kind        = detail
   description = "An identity, role, assignment, credential boundary, or access setting supporting Atlas."
 }
 
@@ -26,13 +22,13 @@ rule "cloud-provider-access-setup" {
   as = concept.cloud-provider-access
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
 
   relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.azure_config[0].service_principal_id
   }
 }
@@ -45,18 +41,13 @@ rule "cloud-provider-access-authorization" {
   as = concept.cloud-provider-authorization
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
 
   relation "authorizes-cloud-identity" {
-    to  = concept.core.service-identity
-    via = source.aws[0].iam_assumed_role_arn
-  }
-
-  relation "authorizes-cloud-identity" {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.azure[0].service_principal_id
   }
 
@@ -71,10 +62,10 @@ rule "project-service-account" {
     type = "mongodbatlas_project_service_account"
   }
 
-  as = concept.core.service-identity
+  as = rf.concept.service-identity
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -85,10 +76,10 @@ rule "organization-service-account" {
     type = "mongodbatlas_service_account"
   }
 
-  as = concept.core.service-identity
+  as = rf.concept.service-identity
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.organization
     via = source.org_id
   }
@@ -99,10 +90,10 @@ rule "team" {
     type = "mongodbatlas_team"
   }
 
-  as = concept.core.identity-group
+  as = concept.identity-group
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.organization
     via = source.org_id
   }
@@ -124,7 +115,7 @@ rule "ldap-configuration" {
   as = concept.identity-provider
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -182,7 +173,7 @@ rule "cloud-user-team-assignment" {
   }
 
   contribution {
-    to  = concept.core.identity-group
+    to  = concept.identity-group
     via = source.team_id
   }
 }
@@ -247,7 +238,7 @@ rule "project-service-account-access-list" {
   as = concept.identity-configuration
 
   contribution {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.client_id
   }
 
@@ -265,7 +256,7 @@ rule "organization-service-account-access-list" {
   as = concept.identity-configuration
 
   contribution {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.client_id
   }
 
@@ -283,7 +274,7 @@ rule "service-account-project-assignment" {
   as = concept.identity-configuration
 
   contribution {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.client_id
   }
 
@@ -301,7 +292,7 @@ rule "team-project-assignment" {
   as = concept.identity-configuration
 
   contribution {
-    to  = concept.core.identity-group
+    to  = concept.identity-group
     via = source.team_id
   }
 

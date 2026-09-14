@@ -1,10 +1,8 @@
 concept "admin-partition" {
-  kind        = scope
   description = "A Consul Enterprise administrative and communication boundary."
 }
 
 concept "namespace" {
-  kind        = scope
   description = "A Consul Enterprise tenant boundary within an admin partition."
 }
 
@@ -24,7 +22,7 @@ rule "namespace" {
   as = concept.namespace
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.admin-partition
     via = source.partition
   }

@@ -1,5 +1,4 @@
 concept "observability-workload" {
-  kind        = scope
   description = "A New Relic operational view grouping related observed entities for health and incident triage."
 }
 
@@ -11,8 +10,8 @@ rule "workload" {
   as = concept.observability-workload
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.account_id
   }
 }

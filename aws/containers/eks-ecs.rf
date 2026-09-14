@@ -3,7 +3,7 @@ rule "eks-cluster" {
     type = "aws_eks_cluster"
   }
 
-  as = concept.core.kubernetes-cluster
+  as = rf.concept.kubernetes-cluster
 }
 
 rule "eks-node-group" {
@@ -11,10 +11,10 @@ rule "eks-node-group" {
     type = "aws_eks_node_group"
   }
 
-  as = concept.core.kubernetes-node-pool
+  as = concept.kubernetes-node-pool
 
   contribution {
-    to  = concept.core.kubernetes-cluster
+    to  = rf.concept.kubernetes-cluster
     via = source.cluster_name
 
     match {
@@ -32,7 +32,7 @@ rule "eks-fargate-profile" {
   as = concept.eks-compute-profile
 
   contribution {
-    to  = concept.core.kubernetes-cluster
+    to  = rf.concept.kubernetes-cluster
     via = source.cluster_name
 
     match {
@@ -58,7 +58,7 @@ rule "ecs-service" {
   as = concept.ecs-service
 
   context {
-    as  = context.core.runtime
+    as  = rf.context.runtime
     to  = concept.ecs-cluster
     via = source.cluster
   }

@@ -3,7 +3,7 @@ rule "organization" {
     type = "grafana_organization"
   }
 
-  as = concept.core.observability-tenant
+  as = concept.observability-tenant
 }
 
 rule "organization-lookup" {
@@ -12,5 +12,5 @@ rule "organization-lookup" {
     type = "grafana_organization"
   }
 
-  as = concept.core.observability-tenant
+  as = concept.observability-tenant
 }

@@ -1,6 +1,5 @@
 # Maintained directly from pinned provider evidence.
 concept "confidential-ledger" {
-  kind        = entity
   description = "An Azure confidential ledger providing tamper-evident storage."
 }
 
@@ -12,7 +11,7 @@ rule "confidential-ledger" {
   as = concept.confidential-ledger
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

@@ -4,7 +4,7 @@ rule "elastic-san-volume" {
     type = "azurerm_elastic_san_volume"
   }
 
-  as = concept.core.block-storage-volume
+  as = concept.block-storage-volume
 }
 
 rule "managed-disk" {
@@ -12,10 +12,10 @@ rule "managed-disk" {
     type = "azurerm_managed_disk"
   }
 
-  as = concept.core.block-storage-volume
+  as = concept.block-storage-volume
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -26,10 +26,10 @@ rule "stack-hci-virtual-hard-disk" {
     type = "azurerm_stack_hci_virtual_hard_disk"
   }
 
-  as = concept.core.block-storage-volume
+  as = concept.block-storage-volume
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

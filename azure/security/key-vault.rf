@@ -1,6 +1,5 @@
 # Maintained directly from pinned provider evidence.
 concept "key-vault" {
-  kind        = scope
   description = "An Azure Key Vault security boundary for keys, secrets, and certificates."
 }
 
@@ -12,7 +11,7 @@ rule "key-vault" {
   as = concept.key-vault
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -49,10 +48,10 @@ rule "key-vault-key" {
     type = "azurerm_key_vault_key"
   }
 
-  as = concept.core.encryption-key
+  as = concept.encryption-key
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.key-vault
     via = source.key_vault_id
   }
@@ -63,10 +62,10 @@ rule "key-vault-secret" {
     type = "azurerm_key_vault_secret"
   }
 
-  as = concept.core.managed-secret
+  as = concept.managed-secret
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.key-vault
     via = source.key_vault_id
   }
@@ -80,7 +79,7 @@ rule "managed-hsm" {
   as = concept.managed-hsm
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -91,10 +90,10 @@ rule "managed-hsm-key" {
     type = "azurerm_key_vault_managed_hardware_security_module_key"
   }
 
-  as = concept.core.encryption-key
+  as = concept.encryption-key
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.managed-hsm
     via = source.managed_hsm_id
   }

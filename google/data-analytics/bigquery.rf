@@ -1,10 +1,8 @@
 concept "bigquery-dataset" {
-  kind        = scope
   description = "A BigQuery dataset that organizes tables and their access boundary."
 }
 
 concept "bigquery-table" {
-  kind        = entity
   description = "A table managed inside a BigQuery dataset."
 }
 
@@ -24,7 +22,7 @@ rule "bigquery-table" {
   as = concept.bigquery-table
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.bigquery-dataset
     via = source.dataset_id
 

@@ -1,6 +1,5 @@
 # Maintained directly from pinned provider evidence.
 concept "iot-central-application" {
-  kind        = entity
   description = "An Azure IoT Central application."
 }
 
@@ -12,7 +11,7 @@ rule "iot-central-application" {
   as = concept.iot-central-application
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

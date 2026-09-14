@@ -1,15 +1,12 @@
 concept "log-integration" {
-  kind        = entity
   description = "A MongoDB Atlas integration exporting project logs to an external observability or storage service."
 }
 
 concept "metric-integration" {
-  kind        = entity
   description = "A MongoDB Atlas integration exporting project metrics to an external observability service."
 }
 
 concept "observability-configuration" {
-  kind        = detail
   description = "An alert or third-party notification configuration supporting Atlas observability."
 }
 
@@ -21,23 +18,23 @@ rule "log-integration" {
   as = concept.log-integration
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
 
   relation "exports-to-storage" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.bucket_name
   }
 
   relation "exports-to-storage" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.storage_container_name
   }
 
   relation "uses-key" {
-    to  = concept.core.encryption-key
+    to  = concept.encryption-key
     via = source.kms_key
   }
 
@@ -60,13 +57,13 @@ rule "push-based-log-export" {
   as = concept.log-integration
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
 
   relation "exports-to-storage" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.bucket_name
   }
 
@@ -84,7 +81,7 @@ rule "metric-integration" {
   as = concept.metric-integration
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }

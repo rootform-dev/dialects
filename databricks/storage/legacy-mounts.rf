@@ -1,5 +1,4 @@
 concept "legacy-storage-mount" {
-  kind        = detail
   description = "A legacy DBFS mount configuration linking Databricks to cloud object storage."
 }
 

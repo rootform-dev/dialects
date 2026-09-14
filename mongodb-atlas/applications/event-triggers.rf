@@ -1,5 +1,4 @@
 concept "event-trigger" {
-  kind        = entity
   description = "A MongoDB Atlas App Services trigger responding to a database, schedule, or authentication event."
 }
 
@@ -11,7 +10,7 @@ rule "event-trigger" {
   as = concept.event-trigger
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }

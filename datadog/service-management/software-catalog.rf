@@ -1,5 +1,4 @@
 concept "catalog-definition" {
-  kind        = detail
   description = "An opaque service or entity definition supporting Datadog Software Catalog."
 }
 

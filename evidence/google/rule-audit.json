@@ -3,116 +3,160 @@
   "showcase_semantics": [
     {
       "candidate": "GCP-01",
-      "rule": "google/cloud-run-service",
+      "rule": "google.rule.cloud-run-service",
       "path": "template[0].vpc_access[0].connector",
-      "fact": "routes-to google/serverless-vpc-access-connector",
+      "fact": "routes-to google.rule.serverless-vpc-access-connector",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/google/8.0.0/docs/resources/cloud_run_v2_service",
       "quote": "VPC Access configuration to use for this Task.",
-      "schema_bounds": ["template max_items=1", "template.vpc_access max_items=1"]
+      "schema_bounds": [
+        "template max_items=1",
+        "template.vpc_access max_items=1"
+      ]
     },
     {
       "candidate": "GCP-02",
-      "rule": "google/serverless-vpc-access-connector",
+      "rule": "google.rule.serverless-vpc-access-connector",
       "path": "subnet[0].name",
-      "fact": "core/network to core/subnet",
+      "fact": "rf.context.network to rf.concept.subnet",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/google/8.0.0/docs/resources/vpc_access_connector",
       "quote": "Subnet name (relative, not fully qualified).",
-      "schema_bounds": ["subnet max_items=1"]
+      "schema_bounds": [
+        "subnet max_items=1"
+      ]
     },
     {
       "candidate": "GCP-05",
-      "rule": "google/pubsub-subscription",
+      "rule": "google.rule.pubsub-subscription",
       "path": "push_config[0].push_endpoint",
-      "fact": "delivers-to google/cloud-run-service",
+      "fact": "delivers-to google.rule.cloud-run-service",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/google/8.0.0/docs/resources/pubsub_subscription",
       "quote": "A URL locating the endpoint to which messages should be pushed.",
-      "schema_bounds": ["push_config max_items=1"]
+      "schema_bounds": [
+        "push_config max_items=1"
+      ]
     },
     {
       "candidate": "GCP-09",
-      "rules": ["google/memorystore-redis-instance", "google/memorystore-memcached-instance"],
+      "rules": [
+        "google.rule.memorystore-redis-instance",
+        "google.rule.memorystore-memcached-instance"
+      ],
       "path": "authorized_network",
-      "fact": "core/network to core/virtual-network",
+      "fact": "rf.context.network to rf.concept.virtual-network",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/google/8.0.0/docs/resources/redis_instance",
       "quote": "The full name of the Google Compute Engine network to which the instance is connected.",
       "excluded_path": "google_redis_cluster.psc_configs[0].network: psc_configs has no max_items bound"
     },
     {
       "candidate": "GCP-10",
-      "rule": "google/cloud-run-service",
+      "rule": "google.rule.cloud-run-service",
       "path": "template[0].service_account",
-      "fact": "runs-as core/service-identity",
+      "fact": "runs-as rf.concept.service-identity",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/google/8.0.0/docs/resources/cloud_run_v2_service",
       "quote": "The service account represents the identity of the running revision.",
-      "schema_bounds": ["template max_items=1"]
+      "schema_bounds": [
+        "template max_items=1"
+      ]
     },
     {
       "candidate": "GCP-13",
-      "rules": ["google/cloud-run-service", "google/cloud-sql-instance", "google/pubsub-topic", "google/pubsub-subscription", "google/gke-cluster", "google/memorystore-redis-instance", "google/memorystore-redis-cluster", "google/memorystore-memcached-instance", "google/memorystore-instance", "google/secret-manager-secret", "google/secret-manager-regional-secret", "google/iam-service-account", "google/cloud-monitoring-alerting-policy", "google/cloud-monitoring-service", "google/cloud-monitoring-slo"],
+      "rules": [
+        "google.rule.cloud-run-service",
+        "google.rule.cloud-sql-instance",
+        "google.rule.pubsub-topic",
+        "google.rule.pubsub-subscription",
+        "google.rule.gke-cluster",
+        "google.rule.memorystore-redis-instance",
+        "google.rule.memorystore-redis-cluster",
+        "google.rule.memorystore-memcached-instance",
+        "google.rule.memorystore-instance",
+        "google.rule.secret-manager-secret",
+        "google.rule.secret-manager-regional-secret",
+        "google.rule.iam-service-account",
+        "google.rule.cloud-monitoring-alerting-policy",
+        "google.rule.cloud-monitoring-service",
+        "google.rule.cloud-monitoring-slo"
+      ],
       "path": "project",
-      "fact": "core/ownership to google/google-cloud-project",
+      "fact": "google.context.ownership to google.rule.google-cloud-project",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/google/8.0.0/docs/resources/cloud_run_v2_service",
       "quote": "The ID of the project in which the resource belongs."
     },
     {
       "candidate": "GCP-14",
-      "rule": "google/pubsub-subscription",
+      "rule": "google.rule.pubsub-subscription",
       "path": "dead_letter_policy[0].dead_letter_topic",
-      "fact": "delivers-to core/message-topic",
+      "fact": "delivers-to google.concept.message-topic",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/google/8.0.0/docs/resources/pubsub_subscription",
       "quote": "The name of the topic to which dead letter messages should be published.",
-      "schema_bounds": ["dead_letter_policy max_items=1"]
+      "schema_bounds": [
+        "dead_letter_policy max_items=1"
+      ]
     },
     {
       "candidate": "GCP-15",
-      "rule": "google/vpc-network",
+      "rule": "google.rule.vpc-network",
       "path": "project",
-      "fact": "core/ownership to google/google-cloud-project",
+      "fact": "google.context.ownership to google.rule.google-cloud-project",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/google/8.0.0/docs/resources/compute_network",
       "quote": "The ID of the project in which the resource belongs. If it is not provided, the provider project is used.",
-      "schema_bounds": ["project is a scalar argument"]
+      "schema_bounds": [
+        "project is a scalar argument"
+      ]
     },
     {
       "candidate": "GCP-16",
-      "rule": "google/vpc-subnetwork",
+      "rule": "google.rule.vpc-subnetwork",
       "path": "project",
-      "fact": "core/ownership to google/google-cloud-project",
+      "fact": "google.context.ownership to google.rule.google-cloud-project",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/google/8.0.0/docs/resources/compute_subnetwork",
       "quote": "The ID of the project in which the resource belongs. If it is not provided, the provider project is used.",
-      "schema_bounds": ["project is a scalar argument"]
+      "schema_bounds": [
+        "project is a scalar argument"
+      ]
     },
     {
       "candidate": "GCP-17",
-      "rule": "google/cloud-router",
+      "rule": "google.rule.cloud-router",
       "path": "project",
-      "fact": "core/ownership to google/google-cloud-project",
+      "fact": "google.context.ownership to google.rule.google-cloud-project",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/google/8.0.0/docs/resources/compute_router",
       "quote": "The ID of the project in which the resource belongs. If it is not provided, the provider project is used.",
-      "schema_bounds": ["project is a scalar argument"]
+      "schema_bounds": [
+        "project is a scalar argument"
+      ]
     },
     {
       "candidate": "GCP-18",
-      "rule": "google/vpc-firewall-rule",
+      "rule": "google.rule.vpc-firewall-rule",
       "path": "project",
-      "fact": "core/ownership to google/google-cloud-project",
+      "fact": "google.context.ownership to google.rule.google-cloud-project",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/google/8.0.0/docs/resources/compute_firewall",
       "quote": "The ID of the project in which the resource belongs. If it is not provided, the provider project is used.",
-      "schema_bounds": ["project is a scalar argument"]
+      "schema_bounds": [
+        "project is a scalar argument"
+      ]
     },
     {
       "candidate": "GCP-19",
-      "rule": "google/serverless-vpc-access-connector",
+      "rule": "google.rule.serverless-vpc-access-connector",
       "path": "project",
-      "fact": "core/ownership to google/google-cloud-project",
+      "fact": "google.context.ownership to google.rule.google-cloud-project",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/google/8.0.0/docs/resources/vpc_access_connector",
       "quote": "The ID of the project in which the resource belongs. If it is not provided, the provider project is used.",
-      "schema_bounds": ["project is a scalar argument"]
+      "schema_bounds": [
+        "project is a scalar argument"
+      ]
     },
     {
       "candidate": "GCP-20",
-      "rules": ["google/private-services-access-range", "google/service-networking-connection", "google/cloud-nat"],
+      "rules": [
+        "google.rule.private-services-access-range",
+        "google.rule.service-networking-connection",
+        "google.rule.cloud-nat"
+      ],
       "path": "project",
-      "fact": "core/ownership to google/google-cloud-project",
+      "fact": "google.context.ownership to google.rule.google-cloud-project",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/google/8.0.0/docs/resources/compute_global_address",
       "quote": "The ID of the project in which the resource belongs. If it is not provided, the provider project is used.",
       "decision": "declined: the range and the connection contribute to the virtual network rather than standing as nodes, and cloud-nat already owns to its cloud-router"
@@ -122,335 +166,350 @@
   "prior_dialect_version": "0.5.0",
   "current_dialect_version": "0.1.0",
   "prior_rule_count": 27,
-  "current_rule_count": 350,
+  "current_rule_count": 218,
   "reason_codes": {
     "retained-verified": "Provider v8 surface and existing architectural role remain verified.",
     "absent-provider-surface": "Matched Terraform type is absent from both provider v8 inventories.",
     "consolidated-load-balancer-topology": "One topology-proven Application Load Balancer rule replaces default-sensitive duplicate rules.",
     "helper-not-architecture-entity": "Standalone load-balancing helper is not an independent architecture entity.",
     "iam-collection-multiplicity-corrected": "IAM binding now contributes to every exactly resolved member.",
-    "shared-vpc-project-role-not-network-scope": "Shared VPC host and service project roles are not VPC network scopes."
+    "shared-vpc-project-role-not-network-scope": "Shared VPC host and service project roles are not VPC network scopes.",
+    "resource-mirror-pruned": "Match-only rule that only reclassified its own type into a local concept; pruned by the resource-mirror gate."
   },
   "entries": [
     {
-      "prior_rule_id": "google/bigquery-dataset",
+      "prior_rule_id": "google.rule.bigquery-dataset",
       "terraform_type": "google_bigquery_dataset",
       "baseline_surface": "stable-and-beta",
       "disposition": "retained",
-      "current_rules": ["google/bigquery-dataset"],
+      "current_rules": [
+        "google.rule.bigquery-dataset"
+      ],
       "coverage_decision": "supported",
-      "declaration_outcome": "represented",
       "reason_code": "retained-verified",
       "evidence_url": "https://cloud.google.com/bigquery/docs/datasets-intro",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ExistingRuleAudit"
     },
     {
-      "prior_rule_id": "google/bigquery-dataset-access",
+      "prior_rule_id": "google.rule.bigquery-dataset-access",
       "terraform_type": "google_bigquery_dataset_access",
       "baseline_surface": "stable-and-beta",
       "disposition": "retained",
-      "current_rules": ["google/bigquery-dataset-access"],
+      "current_rules": [
+        "google.rule.bigquery-dataset-access"
+      ],
       "coverage_decision": "supported",
-      "declaration_outcome": "supporting",
       "reason_code": "retained-verified",
       "evidence_url": "https://cloud.google.com/bigquery/docs/control-access-to-resources-iam",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ExistingRuleAudit"
     },
     {
-      "prior_rule_id": "google/bigquery-model",
+      "prior_rule_id": "google.rule.bigquery-model",
       "terraform_type": "google_bigquery_model",
       "baseline_surface": "absent",
       "disposition": "removed",
       "current_rules": [],
-      "coverage_decision": "intentionally-unrepresented",
+      "coverage_decision": "no-rule",
       "reason_code": "absent-provider-surface",
       "evidence_url": "https://cloud.google.com/bigquery/docs/bqml-introduction",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ExistingRuleAudit"
     },
     {
-      "prior_rule_id": "google/bigquery-table",
+      "prior_rule_id": "google.rule.bigquery-table",
       "terraform_type": "google_bigquery_table",
       "baseline_surface": "stable-and-beta",
       "disposition": "retained",
-      "current_rules": ["google/bigquery-table"],
+      "current_rules": [
+        "google.rule.bigquery-table"
+      ],
       "coverage_decision": "supported",
-      "declaration_outcome": "represented",
       "reason_code": "retained-verified",
       "evidence_url": "https://cloud.google.com/bigquery/docs/tables-intro",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ExistingRuleAudit"
     },
     {
-      "prior_rule_id": "google/bigquery-table-iam-member",
+      "prior_rule_id": "google.rule.bigquery-table-iam-member",
       "terraform_type": "google_bigquery_table_iam_member",
       "baseline_surface": "stable-and-beta",
       "disposition": "retained",
-      "current_rules": ["google/bigquery-table-iam-member"],
+      "current_rules": [
+        "google.rule.bigquery-table-iam-member"
+      ],
       "coverage_decision": "supported",
-      "declaration_outcome": "supporting",
       "reason_code": "retained-verified",
       "evidence_url": "https://cloud.google.com/bigquery/docs/control-access-to-resources-iam",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ExistingRuleAudit"
     },
     {
-      "prior_rule_id": "google/classic-application-load-balancer",
+      "prior_rule_id": "google.rule.classic-application-load-balancer",
       "terraform_type": "google_compute_global_forwarding_rule",
       "baseline_surface": "stable-and-beta",
       "disposition": "corrected",
-      "current_rules": ["google/application-load-balancer"],
+      "current_rules": [
+        "google.rule.application-load-balancer"
+      ],
       "coverage_decision": "partial",
-      "declaration_outcome": "represented",
       "reason_code": "consolidated-load-balancer-topology",
       "evidence_url": "https://cloud.google.com/load-balancing/docs/load-balancing-overview",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8LoadBalancing"
     },
     {
-      "prior_rule_id": "google/cloud-sql-instance",
+      "prior_rule_id": "google.rule.cloud-sql-instance",
       "terraform_type": "google_sql_database_instance",
       "baseline_surface": "stable-and-beta",
       "disposition": "retained",
-      "current_rules": ["google/cloud-sql-instance"],
+      "current_rules": [
+        "google.rule.cloud-sql-instance"
+      ],
       "coverage_decision": "partial",
-      "declaration_outcome": "represented",
       "reason_code": "retained-verified",
       "evidence_url": "https://cloud.google.com/sql/docs/mysql/private-ip",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ExistingRuleAudit"
     },
     {
-      "prior_rule_id": "google/cloud-storage-bucket",
+      "prior_rule_id": "google.rule.cloud-storage-bucket",
       "terraform_type": "google_storage_bucket",
       "baseline_surface": "stable-and-beta",
       "disposition": "retained",
-      "current_rules": ["google/cloud-storage-bucket"],
+      "current_rules": [
+        "google.rule.cloud-storage-bucket"
+      ],
       "coverage_decision": "supported",
-      "declaration_outcome": "represented",
       "reason_code": "retained-verified",
       "evidence_url": "https://cloud.google.com/storage/docs/buckets",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ExistingRuleAudit"
     },
     {
-      "prior_rule_id": "google/cloud-storage-bucket-iam-member",
+      "prior_rule_id": "google.rule.cloud-storage-bucket-iam-member",
       "terraform_type": "google_storage_bucket_iam_member",
       "baseline_surface": "stable-and-beta",
       "disposition": "retained",
-      "current_rules": ["google/cloud-storage-bucket-iam-member"],
+      "current_rules": [
+        "google.rule.cloud-storage-bucket-iam-member"
+      ],
       "coverage_decision": "supported",
-      "declaration_outcome": "supporting",
       "reason_code": "retained-verified",
       "evidence_url": "https://cloud.google.com/storage/docs/access-control/iam",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ExistingRuleAudit"
     },
     {
-      "prior_rule_id": "google/compute-health-check",
+      "prior_rule_id": "google.rule.compute-health-check",
       "terraform_type": "google_compute_health_check",
       "baseline_surface": "stable-and-beta",
       "disposition": "removed",
       "current_rules": [],
-      "coverage_decision": "intentionally-unrepresented",
-      "declaration_outcome": "unsupported",
+      "coverage_decision": "no-rule",
       "reason_code": "helper-not-architecture-entity",
       "evidence_url": "https://cloud.google.com/load-balancing/docs/health-check-concepts",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ExistingRuleAudit"
     },
     {
-      "prior_rule_id": "google/gke-cluster",
+      "prior_rule_id": "google.rule.gke-cluster",
       "terraform_type": "google_container_cluster",
       "baseline_surface": "stable-and-beta",
       "disposition": "retained",
-      "current_rules": ["google/gke-cluster"],
+      "current_rules": [
+        "google.rule.gke-cluster"
+      ],
       "coverage_decision": "supported",
-      "declaration_outcome": "represented",
       "reason_code": "retained-verified",
       "evidence_url": "https://cloud.google.com/kubernetes-engine/docs",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ExistingRuleAudit"
     },
     {
-      "prior_rule_id": "google/gke-node-pool",
+      "prior_rule_id": "google.rule.gke-node-pool",
       "terraform_type": "google_container_node_pool",
       "baseline_surface": "stable-and-beta",
       "disposition": "retained",
-      "current_rules": ["google/gke-node-pool"],
+      "current_rules": [
+        "google.rule.gke-node-pool"
+      ],
       "coverage_decision": "supported",
-      "declaration_outcome": "supporting",
       "reason_code": "retained-verified",
       "evidence_url": "https://cloud.google.com/kubernetes-engine/docs/concepts/node-pools",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ExistingRuleAudit"
     },
     {
-      "prior_rule_id": "google/global-external-application-load-balancer",
+      "prior_rule_id": "google.rule.global-external-application-load-balancer",
       "terraform_type": "google_compute_global_forwarding_rule",
       "baseline_surface": "stable-and-beta",
       "disposition": "corrected",
-      "current_rules": ["google/application-load-balancer"],
+      "current_rules": [
+        "google.rule.application-load-balancer"
+      ],
       "coverage_decision": "partial",
-      "declaration_outcome": "represented",
       "reason_code": "consolidated-load-balancer-topology",
       "evidence_url": "https://cloud.google.com/load-balancing/docs/load-balancing-overview",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8LoadBalancing"
     },
     {
-      "prior_rule_id": "google/google-managed-ssl-certificate",
+      "prior_rule_id": "google.rule.google-managed-ssl-certificate",
       "terraform_type": "google_compute_managed_ssl_certificate",
       "baseline_surface": "stable-and-beta",
       "disposition": "removed",
       "current_rules": [],
-      "coverage_decision": "intentionally-unrepresented",
-      "declaration_outcome": "unsupported",
+      "coverage_decision": "no-rule",
       "reason_code": "helper-not-architecture-entity",
       "evidence_url": "https://cloud.google.com/load-balancing/docs/ssl-certificates/google-managed-certs",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ExistingRuleAudit"
     },
     {
-      "prior_rule_id": "google/iam-service-account",
+      "prior_rule_id": "google.rule.iam-service-account",
       "terraform_type": "google_service_account",
       "baseline_surface": "stable-and-beta",
       "disposition": "retained",
-      "current_rules": ["google/iam-service-account"],
+      "current_rules": [
+        "google.rule.iam-service-account"
+      ],
       "coverage_decision": "partial",
-      "declaration_outcome": "represented",
       "reason_code": "retained-verified",
       "evidence_url": "https://cloud.google.com/iam/docs/service-account-overview",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ExistingRuleAudit"
     },
     {
-      "prior_rule_id": "google/private-services-access-range",
+      "prior_rule_id": "google.rule.private-services-access-range",
       "terraform_type": "google_compute_global_address",
       "baseline_surface": "stable-and-beta",
       "disposition": "retained",
-      "current_rules": ["google/private-services-access-range"],
+      "current_rules": [
+        "google.rule.private-services-access-range"
+      ],
       "coverage_decision": "partial",
-      "declaration_outcome": "supporting",
       "reason_code": "retained-verified",
       "evidence_url": "https://cloud.google.com/vpc/docs/configure-private-services-access",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ExistingRuleAudit"
     },
     {
-      "prior_rule_id": "google/project-iam-binding",
+      "prior_rule_id": "google.rule.project-iam-binding",
       "terraform_type": "google_project_iam_binding",
       "baseline_surface": "stable-and-beta",
       "disposition": "corrected",
-      "current_rules": ["google/project-iam-binding"],
+      "current_rules": [
+        "google.rule.project-iam-binding"
+      ],
       "coverage_decision": "partial",
-      "declaration_outcome": "supporting",
       "reason_code": "iam-collection-multiplicity-corrected",
       "evidence_url": "https://cloud.google.com/iam/docs/policies",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ExistingRuleAuditIAMMultiplicity"
     },
     {
-      "prior_rule_id": "google/project-iam-member",
+      "prior_rule_id": "google.rule.project-iam-member",
       "terraform_type": "google_project_iam_member",
       "baseline_surface": "stable-and-beta",
       "disposition": "retained",
-      "current_rules": ["google/project-iam-member"],
+      "current_rules": [
+        "google.rule.project-iam-member"
+      ],
       "coverage_decision": "partial",
-      "declaration_outcome": "supporting",
       "reason_code": "retained-verified",
       "evidence_url": "https://cloud.google.com/iam/docs/policies",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ExistingRuleAudit"
     },
     {
-      "prior_rule_id": "google/project-iam-policy",
+      "prior_rule_id": "google.rule.project-iam-policy",
       "terraform_type": "google_project_iam_policy",
       "baseline_surface": "stable-and-beta",
       "disposition": "retained",
-      "current_rules": ["google/project-iam-policy"],
+      "current_rules": [
+        "google.rule.project-iam-policy"
+      ],
       "coverage_decision": "partial",
-      "declaration_outcome": "supporting",
       "reason_code": "retained-verified",
       "evidence_url": "https://cloud.google.com/iam/docs/policies",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ExistingRuleAudit"
     },
     {
-      "prior_rule_id": "google/project-service-enablement",
+      "prior_rule_id": "google.rule.project-service-enablement",
       "terraform_type": "google_project_service",
       "baseline_surface": "stable-and-beta",
-      "disposition": "retained",
-      "current_rules": ["google/project-service-enablement"],
-      "coverage_decision": "supported",
-      "declaration_outcome": "supporting",
-      "reason_code": "retained-verified",
+      "disposition": "removed",
+      "current_rules": [],
+      "coverage_decision": "no-rule",
+      "reason_code": "resource-mirror-pruned",
       "evidence_url": "https://cloud.google.com/service-usage/docs/enable-disable",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ExistingRuleAudit"
     },
     {
-      "prior_rule_id": "google/self-managed-ssl-certificate",
+      "prior_rule_id": "google.rule.self-managed-ssl-certificate",
       "terraform_type": "google_compute_ssl_certificate",
       "baseline_surface": "stable-and-beta",
       "disposition": "removed",
       "current_rules": [],
-      "coverage_decision": "intentionally-unrepresented",
-      "declaration_outcome": "unsupported",
+      "coverage_decision": "no-rule",
       "reason_code": "helper-not-architecture-entity",
       "evidence_url": "https://cloud.google.com/load-balancing/docs/ssl-certificates/self-managed-certs",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ExistingRuleAudit"
     },
     {
-      "prior_rule_id": "google/service-account-key",
+      "prior_rule_id": "google.rule.service-account-key",
       "terraform_type": "google_service_account_key",
       "baseline_surface": "stable-and-beta",
       "disposition": "retained",
-      "current_rules": ["google/service-account-key"],
+      "current_rules": [
+        "google.rule.service-account-key"
+      ],
       "coverage_decision": "partial",
-      "declaration_outcome": "supporting",
       "reason_code": "retained-verified",
       "evidence_url": "https://cloud.google.com/iam/docs/keys-create-delete",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ExistingRuleAudit"
     },
     {
-      "prior_rule_id": "google/service-networking-connection",
+      "prior_rule_id": "google.rule.service-networking-connection",
       "terraform_type": "google_service_networking_connection",
       "baseline_surface": "stable-and-beta",
       "disposition": "retained",
-      "current_rules": ["google/service-networking-connection"],
+      "current_rules": [
+        "google.rule.service-networking-connection"
+      ],
       "coverage_decision": "partial",
-      "declaration_outcome": "supporting",
       "reason_code": "retained-verified",
       "evidence_url": "https://cloud.google.com/vpc/docs/private-services-access",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ExistingRuleAudit"
     },
     {
-      "prior_rule_id": "google/shared-vpc-host-project",
+      "prior_rule_id": "google.rule.shared-vpc-host-project",
       "terraform_type": "google_compute_shared_vpc_host_project",
       "baseline_surface": "stable-and-beta",
       "disposition": "removed",
       "current_rules": [],
-      "coverage_decision": "intentionally-unrepresented",
-      "declaration_outcome": "unsupported",
+      "coverage_decision": "no-rule",
       "reason_code": "shared-vpc-project-role-not-network-scope",
       "evidence_url": "https://cloud.google.com/vpc/docs/shared-vpc",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8SharedVPC"
     },
     {
-      "prior_rule_id": "google/shared-vpc-service-project",
+      "prior_rule_id": "google.rule.shared-vpc-service-project",
       "terraform_type": "google_compute_shared_vpc_service_project",
       "baseline_surface": "stable-and-beta",
       "disposition": "removed",
       "current_rules": [],
-      "coverage_decision": "intentionally-unrepresented",
-      "declaration_outcome": "unsupported",
+      "coverage_decision": "no-rule",
       "reason_code": "shared-vpc-project-role-not-network-scope",
       "evidence_url": "https://cloud.google.com/vpc/docs/shared-vpc",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8SharedVPC"
     },
     {
-      "prior_rule_id": "google/vpc-network",
+      "prior_rule_id": "google.rule.vpc-network",
       "terraform_type": "google_compute_network",
       "baseline_surface": "stable-and-beta",
       "disposition": "retained",
-      "current_rules": ["google/vpc-network"],
+      "current_rules": [
+        "google.rule.vpc-network"
+      ],
       "coverage_decision": "supported",
-      "declaration_outcome": "represented",
       "reason_code": "retained-verified",
       "evidence_url": "https://cloud.google.com/vpc/docs/vpc",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ExistingRuleAudit"
     },
     {
-      "prior_rule_id": "google/vpc-subnetwork",
+      "prior_rule_id": "google.rule.vpc-subnetwork",
       "terraform_type": "google_compute_subnetwork",
       "baseline_surface": "stable-and-beta",
       "disposition": "retained",
-      "current_rules": ["google/vpc-subnetwork"],
+      "current_rules": [
+        "google.rule.vpc-subnetwork"
+      ],
       "coverage_decision": "supported",
-      "declaration_outcome": "represented",
       "reason_code": "retained-verified",
       "evidence_url": "https://cloud.google.com/vpc/docs/subnets",
       "regression_test": "internal/architecture/compiler/google_v8_test.go#TestGoogleV8ExistingRuleAudit"

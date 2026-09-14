@@ -1,7 +1,0 @@
-rule "slo" {
-  match {
-    type = "grafana_slo"
-  }
-
-  as = concept.core.service-objective
-}

@@ -1,20 +1,16 @@
 concept "api-integration" {
-  kind        = entity
   description = "A Snowflake API integration authorizing access to an external API proxy or repository."
 }
 
 concept "external-access-integration" {
-  kind        = entity
   description = "A Snowflake external access integration governing outbound access from handler code or services."
 }
 
 concept "external-function" {
-  kind        = entity
   description = "A Snowflake external function relaying execution through an HTTPS proxy service."
 }
 
 concept "git-repository" {
-  kind        = entity
   description = "A Snowflake Git repository clone connected through an API integration."
 }
 
@@ -26,14 +22,10 @@ rule "api-integration" {
   as = concept.api-integration
 
   relation "connects-api-gateway" {
-    to  = concept.core.api-gateway
+    to  = concept.api-gateway
     via = source.api_allowed_prefixes[0]
   }
 
-  relation "assumes-cloud-identity" {
-    to  = concept.core.service-identity
-    via = source.api_aws_role_arn
-  }
 }
 
 rule "amazon-api-gateway-integration" {
@@ -44,14 +36,10 @@ rule "amazon-api-gateway-integration" {
   as = concept.api-integration
 
   relation "connects-api-gateway" {
-    to  = concept.core.api-gateway
+    to  = concept.api-gateway
     via = source.api_allowed_prefixes[0]
   }
 
-  relation "assumes-cloud-identity" {
-    to  = concept.core.service-identity
-    via = source.api_aws_role_arn
-  }
 }
 
 rule "azure-api-management-integration" {
@@ -62,7 +50,7 @@ rule "azure-api-management-integration" {
   as = concept.api-integration
 
   relation "connects-api-gateway" {
-    to  = concept.core.api-gateway
+    to  = concept.api-gateway
     via = source.api_allowed_prefixes[0]
   }
 }
@@ -75,7 +63,7 @@ rule "google-cloud-api-gateway-integration" {
   as = concept.api-integration
 
   relation "connects-api-gateway" {
-    to  = concept.core.api-gateway
+    to  = concept.api-gateway
     via = source.api_allowed_prefixes[0]
   }
 }
@@ -149,7 +137,7 @@ rule "external-function" {
   as = concept.external-function
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.schema
     via = source.schema
   }
@@ -168,7 +156,7 @@ rule "git-repository" {
   as = concept.git-repository
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.schema
     via = source.schema
   }

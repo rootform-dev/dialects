@@ -1,5 +1,4 @@
 concept "identity-configuration" {
-  kind        = detail
   description = "An SSO or SCIM configuration supporting access to Grafana."
 }
 

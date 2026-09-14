@@ -1,5 +1,4 @@
 concept "cloud-identity-group-membership" {
-  kind        = detail
   description = "A membership contributing a principal to a Cloud Identity group."
 }
 
@@ -8,7 +7,7 @@ rule "cloud-identity-group" {
     type = "google_cloud_identity_group"
   }
 
-  as = concept.core.identity-group
+  as = concept.identity-group
 }
 
 rule "cloud-identity-group-membership" {
@@ -19,7 +18,7 @@ rule "cloud-identity-group-membership" {
   as = concept.cloud-identity-group-membership
 
   contribution {
-    to  = concept.core.identity-group
+    to  = concept.identity-group
     via = source.group
   }
 }

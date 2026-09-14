@@ -1,5 +1,4 @@
 concept "api-resource-server" {
-  kind        = entity
   description = "An API registered as an Auth0 resource server for authorized applications."
 }
 
@@ -8,7 +7,7 @@ rule "client" {
     type = "auth0_client"
   }
 
-  as = concept.core.identity-application
+  as = concept.identity-application
 
   relation "defaults-to-organization" {
     to  = concept.customer-organization
@@ -26,7 +25,7 @@ rule "client-cimd" {
     type = "auth0_client_cimd"
   }
 
-  as = concept.core.identity-application
+  as = concept.identity-application
 
   relation "defaults-to-organization" {
     to  = concept.customer-organization
@@ -40,7 +39,7 @@ rule "client-lookup" {
     type = "auth0_client"
   }
 
-  as = concept.core.identity-application
+  as = concept.identity-application
 
   relation "defaults-to-organization" {
     to  = concept.customer-organization

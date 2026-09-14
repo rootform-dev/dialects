@@ -1,52 +1,23 @@
-concept "vertex-ai-dataset" {
-  kind        = entity
-  description = "A managed Vertex AI dataset."
-}
 
 concept "vertex-ai-vector-index" {
-  kind        = entity
   description = "A Vertex AI vector index."
 }
 
-concept "vertex-ai-index-endpoint" {
-  kind        = entity
-  description = "A Vertex AI endpoint serving vector indexes."
-}
 
 concept "vertex-ai-feature-store" {
-  kind        = entity
   description = "A Vertex AI feature store or online feature store."
 }
 
-concept "vertex-ai-persistent-resource" {
-  kind        = entity
-  description = "A Vertex AI persistent compute resource for training workloads."
-}
 
-concept "vertex-ai-reasoning-engine" {
-  kind        = entity
-  description = "A managed Vertex AI reasoning engine runtime."
-}
 
-concept "vertex-ai-metadata-store" {
-  kind        = entity
-  description = "A Vertex AI metadata store recording ML lineage metadata."
-}
 
-rule "vertex-ai-dataset" {
-  match {
-    type = "google_vertex_ai_dataset"
-  }
-
-  as = concept.vertex-ai-dataset
-}
 
 rule "vertex-ai-endpoint" {
   match {
     type = "google_vertex_ai_endpoint"
   }
 
-  as = concept.core.ai-inference-endpoint
+  as = concept.ai-inference-endpoint
 }
 
 rule "vertex-ai-model-garden-endpoint" {
@@ -54,7 +25,7 @@ rule "vertex-ai-model-garden-endpoint" {
     type = "google_vertex_ai_endpoint_with_model_garden_deployment"
   }
 
-  as = concept.core.ai-inference-endpoint
+  as = concept.ai-inference-endpoint
 }
 
 rule "vertex-ai-vector-index" {
@@ -65,13 +36,6 @@ rule "vertex-ai-vector-index" {
   as = concept.vertex-ai-vector-index
 }
 
-rule "vertex-ai-index-endpoint" {
-  match {
-    type = "google_vertex_ai_index_endpoint"
-  }
-
-  as = concept.vertex-ai-index-endpoint
-}
 
 rule "vertex-ai-feature-store" {
   match {
@@ -87,28 +51,4 @@ rule "vertex-ai-feature-online-store" {
   }
 
   as = concept.vertex-ai-feature-store
-}
-
-rule "vertex-ai-persistent-resource" {
-  match {
-    type = "google_vertex_ai_persistent_resource"
-  }
-
-  as = concept.vertex-ai-persistent-resource
-}
-
-rule "vertex-ai-reasoning-engine" {
-  match {
-    type = "google_vertex_ai_reasoning_engine"
-  }
-
-  as = concept.vertex-ai-reasoning-engine
-}
-
-rule "vertex-ai-metadata-store" {
-  match {
-    type = "google_vertex_ai_metadata_store"
-  }
-
-  as = concept.vertex-ai-metadata-store
 }

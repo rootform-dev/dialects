@@ -1,6 +1,5 @@
 # Maintained directly from pinned provider evidence.
 concept "cosmos-account" {
-  kind        = scope
   description = "An Azure Cosmos DB account defining global distribution and API boundaries."
 }
 
@@ -12,7 +11,7 @@ rule "cosmos-account" {
   as = concept.cosmos-account
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -23,10 +22,10 @@ rule "cosmos-cassandra-cluster" {
     type = "azurerm_cosmosdb_cassandra_cluster"
   }
 
-  as = concept.core.managed-database
+  as = rf.concept.managed-database
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -37,10 +36,10 @@ rule "cosmos-cassandra-keyspace" {
     type = "azurerm_cosmosdb_cassandra_keyspace"
   }
 
-  as = concept.core.managed-database
+  as = concept.logical-database
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.cosmos-account
     via = source.account_name
   }
@@ -54,7 +53,7 @@ rule "cosmos-cassandra-table" {
   as = concept.database-component
 
   contribution {
-    to  = concept.core.managed-database
+    to  = concept.logical-database
     via = source.cassandra_keyspace_id
   }
 }
@@ -77,10 +76,10 @@ rule "cosmos-gremlin-database" {
     type = "azurerm_cosmosdb_gremlin_database"
   }
 
-  as = concept.core.managed-database
+  as = concept.logical-database
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.cosmos-account
     via = source.account_name
   }
@@ -94,7 +93,7 @@ rule "cosmos-gremlin-graph" {
   as = concept.database-component
 
   contribution {
-    to  = concept.core.managed-database
+    to  = concept.logical-database
     via = source.database_name
   }
 }
@@ -107,7 +106,7 @@ rule "cosmos-mongo-collection" {
   as = concept.database-component
 
   contribution {
-    to  = concept.core.managed-database
+    to  = concept.logical-database
     via = source.database_name
   }
 }
@@ -117,10 +116,10 @@ rule "cosmos-mongo-database" {
     type = "azurerm_cosmosdb_mongo_database"
   }
 
-  as = concept.core.managed-database
+  as = concept.logical-database
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.cosmos-account
     via = source.account_name
   }
@@ -131,10 +130,10 @@ rule "cosmos-postgresql-cluster" {
     type = "azurerm_cosmosdb_postgresql_cluster"
   }
 
-  as = concept.core.managed-database
+  as = rf.concept.managed-database
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -148,7 +147,7 @@ rule "cosmos-sql-container" {
   as = concept.database-component
 
   contribution {
-    to  = concept.core.managed-database
+    to  = concept.logical-database
     via = source.database_name
   }
 }
@@ -158,10 +157,10 @@ rule "cosmos-sql-database" {
     type = "azurerm_cosmosdb_sql_database"
   }
 
-  as = concept.core.managed-database
+  as = concept.logical-database
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.cosmos-account
     via = source.account_name
   }

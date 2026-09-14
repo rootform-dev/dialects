@@ -1,15 +1,12 @@
 concept "identity-provider" {
-  kind        = entity
   description = "An OpenID Connect identity provider trusted by Confluent Cloud."
 }
 
 concept "identity-pool" {
-  kind        = entity
   description = "A Confluent Cloud identity pool mapping external identities to access."
 }
 
 concept "identity-access-configuration" {
-  kind        = detail
   description = "Identity mapping, role binding, or access configuration in Confluent Cloud."
 }
 
@@ -18,7 +15,7 @@ rule "service-account" {
     type = "confluent_service_account"
   }
 
-  as = concept.core.service-identity
+  as = rf.concept.service-identity
 }
 
 rule "identity-provider" {

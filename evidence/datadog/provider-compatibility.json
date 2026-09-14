@@ -15,7 +15,7 @@
   "semantic_sources_sha256": "sha256:5a70cf76aa4b354d1e5c222c091a877e8f2cafb06c21743b10c88d6d6b2266ea",
   "rules": [
     {
-      "rule_id": "datadog/action-connection",
+      "rule_id": "datadog.rule.action-connection",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_action_connection",
       "file": "dialects/datadog/integrations/service-integrations.rf",
@@ -25,7 +25,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/action-connection-lookup",
+      "rule_id": "datadog.rule.action-connection-lookup",
       "construct_kind": "data_source",
       "resource_type": "datadog_action_connection",
       "file": "dialects/datadog/integrations/service-integrations.rf",
@@ -35,7 +35,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/app-builder-app",
+      "rule_id": "datadog.rule.app-builder-app",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_app_builder_app",
       "file": "dialects/datadog/automation/app-platform.rf",
@@ -45,7 +45,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/app-builder-app-lookup",
+      "rule_id": "datadog.rule.app-builder-app-lookup",
       "construct_kind": "data_source",
       "resource_type": "datadog_app_builder_app",
       "file": "dialects/datadog/automation/app-platform.rf",
@@ -55,7 +55,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/child-organization",
+      "rule_id": "datadog.rule.child-organization",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_child_organization",
       "file": "dialects/datadog/governance-management/organizations.rf",
@@ -65,7 +65,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/compliance-custom-framework",
+      "rule_id": "datadog.rule.compliance-custom-framework",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_compliance_custom_framework",
       "file": "dialects/datadog/security/cloud-security.rf",
@@ -75,7 +75,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/csm-threats-policy",
+      "rule_id": "datadog.rule.csm-threats-policy",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_csm_threats_policy",
       "file": "dialects/datadog/security/cloud-security.rf",
@@ -85,7 +85,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/datastore",
+      "rule_id": "datadog.rule.datastore",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_datastore",
       "file": "dialects/datadog/automation/app-platform.rf",
@@ -95,7 +95,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/datastore-item",
+      "rule_id": "datadog.rule.datastore-item",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_datastore_item",
       "file": "dialects/datadog/automation/app-platform.rf",
@@ -111,7 +111,7 @@
       ]
     },
     {
-      "rule_id": "datadog/datastore-item-lookup",
+      "rule_id": "datadog.rule.datastore-item-lookup",
       "construct_kind": "data_source",
       "resource_type": "datadog_datastore_item",
       "file": "dialects/datadog/automation/app-platform.rf",
@@ -127,7 +127,7 @@
       ]
     },
     {
-      "rule_id": "datadog/datastore-lookup",
+      "rule_id": "datadog.rule.datastore-lookup",
       "construct_kind": "data_source",
       "resource_type": "datadog_datastore",
       "file": "dialects/datadog/automation/app-platform.rf",
@@ -137,7 +137,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/integration-aws-account",
+      "rule_id": "datadog.rule.integration-aws-account",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_integration_aws_account",
       "file": "dialects/datadog/integrations/cloud-integrations.rf",
@@ -147,7 +147,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/integration-azure",
+      "rule_id": "datadog.rule.integration-azure",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_integration_azure",
       "file": "dialects/datadog/integrations/cloud-integrations.rf",
@@ -157,7 +157,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/integration-cloudflare-account",
+      "rule_id": "datadog.rule.integration-cloudflare-account",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_integration_cloudflare_account",
       "file": "dialects/datadog/integrations/service-integrations.rf",
@@ -167,7 +167,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/integration-confluent-account",
+      "rule_id": "datadog.rule.integration-confluent-account",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_integration_confluent_account",
       "file": "dialects/datadog/integrations/service-integrations.rf",
@@ -177,7 +177,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/integration-confluent-resource",
+      "rule_id": "datadog.rule.integration-confluent-resource",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_integration_confluent_resource",
       "file": "dialects/datadog/integrations/service-integrations.rf",
@@ -193,7 +193,7 @@
       ]
     },
     {
-      "rule_id": "datadog/integration-fastly-account",
+      "rule_id": "datadog.rule.integration-fastly-account",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_integration_fastly_account",
       "file": "dialects/datadog/integrations/service-integrations.rf",
@@ -203,7 +203,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/integration-fastly-service",
+      "rule_id": "datadog.rule.integration-fastly-service",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_integration_fastly_service",
       "file": "dialects/datadog/integrations/service-integrations.rf",
@@ -219,7 +219,7 @@
       ]
     },
     {
-      "rule_id": "datadog/integration-gcp",
+      "rule_id": "datadog.rule.integration-gcp",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_integration_gcp",
       "file": "dialects/datadog/integrations/cloud-integrations.rf",
@@ -229,7 +229,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/integration-gcp-sts",
+      "rule_id": "datadog.rule.integration-gcp-sts",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_integration_gcp_sts",
       "file": "dialects/datadog/integrations/cloud-integrations.rf",
@@ -239,7 +239,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/logs-archive",
+      "rule_id": "datadog.rule.logs-archive",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_logs_archive",
       "file": "dialects/datadog/telemetry/log-management.rf",
@@ -249,7 +249,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/logs-archive-order",
+      "rule_id": "datadog.rule.logs-archive-order",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_logs_archive_order",
       "file": "dialects/datadog/telemetry/log-management.rf",
@@ -265,7 +265,7 @@
       ]
     },
     {
-      "rule_id": "datadog/logs-custom-destination",
+      "rule_id": "datadog.rule.logs-custom-destination",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_logs_custom_destination",
       "file": "dialects/datadog/telemetry/log-management.rf",
@@ -275,7 +275,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/logs-custom-pipeline",
+      "rule_id": "datadog.rule.logs-custom-pipeline",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_logs_custom_pipeline",
       "file": "dialects/datadog/telemetry/log-management.rf",
@@ -285,7 +285,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/logs-index",
+      "rule_id": "datadog.rule.logs-index",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_logs_index",
       "file": "dialects/datadog/telemetry/log-management.rf",
@@ -295,7 +295,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/logs-integration-pipeline",
+      "rule_id": "datadog.rule.logs-integration-pipeline",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_logs_integration_pipeline",
       "file": "dialects/datadog/telemetry/log-management.rf",
@@ -305,17 +305,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/observability-pipeline",
-      "construct_kind": "managed_resource",
-      "resource_type": "datadog_observability_pipeline",
-      "file": "dialects/datadog/telemetry/observability-pipelines.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://registry.terraform.io/providers/datadog/datadog/4.19.0/docs/resources/observability_pipeline",
-      "paths": []
-    },
-    {
-      "rule_id": "datadog/org-connection",
+      "rule_id": "datadog.rule.org-connection",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_org_connection",
       "file": "dialects/datadog/governance-management/organizations.rf",
@@ -331,7 +321,7 @@
       ]
     },
     {
-      "rule_id": "datadog/rum-application",
+      "rule_id": "datadog.rule.rum-application",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_rum_application",
       "file": "dialects/datadog/digital-experience/rum.rf",
@@ -341,7 +331,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/rum-application-lookup",
+      "rule_id": "datadog.rule.rum-application-lookup",
       "construct_kind": "data_source",
       "resource_type": "datadog_rum_application",
       "file": "dialects/datadog/digital-experience/rum.rf",
@@ -351,7 +341,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/rum-retention-filter",
+      "rule_id": "datadog.rule.rum-retention-filter",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_rum_retention_filter",
       "file": "dialects/datadog/digital-experience/rum.rf",
@@ -367,7 +357,7 @@
       ]
     },
     {
-      "rule_id": "datadog/security-monitoring-rule",
+      "rule_id": "datadog.rule.security-monitoring-rule",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_security_monitoring_rule",
       "file": "dialects/datadog/security/cloud-security.rf",
@@ -377,7 +367,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/sensitive-data-scanner-group",
+      "rule_id": "datadog.rule.sensitive-data-scanner-group",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_sensitive_data_scanner_group",
       "file": "dialects/datadog/security/cloud-security.rf",
@@ -387,7 +377,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/service-definition-yaml",
+      "rule_id": "datadog.rule.service-definition-yaml",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_service_definition_yaml",
       "file": "dialects/datadog/service-management/software-catalog.rf",
@@ -397,7 +387,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/service-level-objective",
+      "rule_id": "datadog.rule.service-level-objective",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_service_level_objective",
       "file": "dialects/datadog/service-management/service-objectives.rf",
@@ -407,7 +397,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/service-level-objective-lookup",
+      "rule_id": "datadog.rule.service-level-objective-lookup",
       "construct_kind": "data_source",
       "resource_type": "datadog_service_level_objective",
       "file": "dialects/datadog/service-management/service-objectives.rf",
@@ -417,7 +407,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/software-catalog",
+      "rule_id": "datadog.rule.software-catalog",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_software_catalog",
       "file": "dialects/datadog/service-management/software-catalog.rf",
@@ -427,7 +417,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/software-catalog-lookup",
+      "rule_id": "datadog.rule.software-catalog-lookup",
       "construct_kind": "data_source",
       "resource_type": "datadog_software_catalog",
       "file": "dialects/datadog/service-management/software-catalog.rf",
@@ -437,7 +427,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/synthetics-private-location",
+      "rule_id": "datadog.rule.synthetics-private-location",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_synthetics_private_location",
       "file": "dialects/datadog/digital-experience/synthetics.rf",
@@ -447,7 +437,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/synthetics-suite",
+      "rule_id": "datadog.rule.synthetics-suite",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_synthetics_suite",
       "file": "dialects/datadog/digital-experience/synthetics.rf",
@@ -457,7 +447,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/synthetics-test",
+      "rule_id": "datadog.rule.synthetics-test",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_synthetics_test",
       "file": "dialects/datadog/digital-experience/synthetics.rf",
@@ -473,7 +463,7 @@
       ]
     },
     {
-      "rule_id": "datadog/synthetics-test-lookup",
+      "rule_id": "datadog.rule.synthetics-test-lookup",
       "construct_kind": "data_source",
       "resource_type": "datadog_synthetics_test",
       "file": "dialects/datadog/digital-experience/synthetics.rf",
@@ -483,7 +473,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/workflow-automation",
+      "rule_id": "datadog.rule.workflow-automation",
       "construct_kind": "managed_resource",
       "resource_type": "datadog_workflow_automation",
       "file": "dialects/datadog/automation/workflows.rf",
@@ -493,7 +483,7 @@
       "paths": []
     },
     {
-      "rule_id": "datadog/workflow-automation-lookup",
+      "rule_id": "datadog.rule.workflow-automation-lookup",
       "construct_kind": "data_source",
       "resource_type": "datadog_workflow_automation",
       "file": "dialects/datadog/automation/workflows.rf",

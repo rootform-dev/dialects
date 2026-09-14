@@ -1,5 +1,4 @@
 concept "agent-observability-configuration" {
-  kind        = detail
   description = "A collection, evaluator, evaluation, guard, or action configuration for Agent Observability."
 }
 

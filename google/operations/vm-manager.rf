@@ -1,5 +1,4 @@
 concept "vm-manager-policy" {
-  kind        = entity
   description = "A VM Manager policy orchestrating guest configuration or operating system maintenance."
 }
 

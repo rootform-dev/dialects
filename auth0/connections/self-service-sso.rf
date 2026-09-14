@@ -1,10 +1,8 @@
 concept "self-service-configuration" {
-  kind        = detail
   description = "A connection or user-attribute profile supporting Self-Service SSO."
 }
 
 concept "self-service-sso-profile" {
-  kind        = entity
   description = "An Auth0 profile governing customer self-service enterprise SSO onboarding."
 }
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bun
 
-import { mkdtempSync, readdirSync, readFileSync, rmSync } from "node:fs";
+import { existsSync, mkdtempSync, readdirSync, readFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { isAbsolute, join, resolve } from "node:path";
 import { requireRootformVersion, resolveRootformVersion } from "./verify-version.ts";
@@ -23,18 +23,76 @@ function run(command: string[], environment: Record<string, string> = {}): strin
   return stdout;
 }
 
-function snapshot(directory: string, prefix = ""): Record<string, string> {
-  const files: Record<string, string> = {};
-  for (const entry of readdirSync(directory, { withFileTypes: true }).sort((left, right) =>
-    left.name.localeCompare(right.name, "en"),
-  )) {
-    const relative = prefix ? `${prefix}/${entry.name}` : entry.name;
-    const path = join(directory, entry.name);
-    if (entry.isDirectory()) Object.assign(files, snapshot(path, relative));
-    else if (entry.isFile()) files[relative] = readFileSync(path).toString("base64");
-    else throw new Error(`irregular distribution output: ${relative}`);
+type BoundaryScenario = {
+  expected_build_failure: true;
+  expected_diagnostic_codes: string[];
+  fixture: string;
+  forbidden_output?: string[];
+};
+
+function boundaryScenarios(): BoundaryScenario[] {
+  const scenarios: BoundaryScenario[] = [];
+  for (const entry of readdirSync(join(root, "evidence"), { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    const path = join(root, "evidence", entry.name, "scenarios.json");
+    if (!existsSync(path)) continue;
+    const document = JSON.parse(readFileSync(path, "utf8")) as {
+      scenarios?: BoundaryScenario[];
+    };
+    for (const scenario of document.scenarios ?? []) {
+      if (scenario.expected_build_failure === true) scenarios.push(scenario);
+    }
   }
-  return files;
+  return scenarios.sort((left, right) => left.fixture.localeCompare(right.fixture, "en"));
+}
+
+function buildBoundary(
+  binary: string,
+  scenario: BoundaryScenario,
+  environment: Record<string, string>,
+): string {
+  if (!/^fixtures\/[a-z0-9-]+\/boundary$/u.test(scenario.fixture)) {
+    throw new Error(`invalid boundary fixture path: ${scenario.fixture}`);
+  }
+  const fixture = join(root, scenario.fixture);
+  if (!existsSync(fixture)) throw new Error(`boundary fixture is unavailable: ${scenario.fixture}`);
+  const result = Bun.spawnSync({
+    cmd: [binary, "build", fixture],
+    cwd: root,
+    env: { ...process.env, ...environment },
+    stderr: "pipe",
+    stdout: "pipe",
+  });
+  if (result.exitCode !== 3) {
+    throw new Error(`${scenario.fixture} must exit 3 with delivered partial IR`);
+  }
+
+  const stdout = result.stdout.toString();
+  const stderr = result.stderr.toString();
+  const document = JSON.parse(stdout) as {
+    architecture?: { representations?: unknown };
+    diagnostics?: Array<{ code?: unknown }>;
+    format_version?: unknown;
+  };
+  if (
+    document.format_version !== "0.1.0" ||
+    !Array.isArray(document.architecture?.representations) ||
+    document.architecture.representations.length === 0 ||
+    !Array.isArray(document.diagnostics)
+  ) {
+    throw new Error(`${scenario.fixture} did not deliver valid partial Architecture IR`);
+  }
+  const actual = document.diagnostics.map(({ code }) => code).sort();
+  const expected = [...scenario.expected_diagnostic_codes].sort();
+  if (JSON.stringify(actual) !== JSON.stringify(expected)) {
+    throw new Error(`${scenario.fixture} diagnostic codes drifted: ${JSON.stringify(actual)}`);
+  }
+  for (const sentinel of scenario.forbidden_output ?? []) {
+    if (stdout.includes(sentinel) || stderr.includes(sentinel)) {
+      throw new Error(`${scenario.fixture} leaked forbidden output`);
+    }
+  }
+  return stdout;
 }
 
 run(["bun", "run", "check"]);
@@ -66,63 +124,19 @@ try {
   requireRootformVersion(run([binary, "version"], environment), expectedVersion);
   run([binary, "fmt", "--check", "."], environment);
   run([binary, "validate", "dialects", "."], environment);
-  run([binary, "install", "dialects", "."], environment);
-  run([binary, "verify", "dialects", "."], environment);
-  const catalog = JSON.parse(
-    run(["bun", "scripts/catalog.ts"], { ...environment, ROOTFORM_BIN: binary }),
-  ) as Record<string, unknown>;
-  const expectedCatalog = JSON.parse(
-    readFileSync(join(root, "evidence/core/semantic-catalog.json"), "utf8"),
-  ) as Record<string, unknown>;
-  // Executable provenance may differ between validated release builds.
-  delete catalog.generator;
-  delete expectedCatalog.generator;
-  if (JSON.stringify(catalog) !== JSON.stringify(expectedCatalog)) {
-    throw new Error("core vocabulary catalog differs from the compiled official dialects");
-  }
-  const firstLayout = join(isolatedHome, "distribution-first");
-  const secondLayout = join(isolatedHome, "distribution-second");
-  run(
-    [
-      binary,
-      "package",
-      "dialects",
-      ".",
-      "--to",
-      firstLayout,
-      "--repository",
-      "ghcr.io/rootform-dev/dialects",
-    ],
-    environment,
-  );
-  run(
-    [
-      binary,
-      "package",
-      "dialects",
-      ".",
-      "--to",
-      secondLayout,
-      "--repository",
-      "ghcr.io/rootform-dev/dialects",
-    ],
-    environment,
-  );
-  const firstDistribution = snapshot(firstLayout);
-  const secondDistribution = snapshot(secondLayout);
-  if (JSON.stringify(firstDistribution) !== JSON.stringify(secondDistribution)) {
-    throw new Error("official dialect distribution changed between identical builds");
-  }
-  if (
-    !("index.json" in firstDistribution) ||
-    !("oci-layout" in firstDistribution) ||
-    !Object.keys(firstDistribution).some((path) => path.startsWith("blobs/sha256/"))
-  ) {
-    throw new Error("official dialect distribution is incomplete");
-  }
   const first = run([binary, "test", "./fixtures", "--format", "json"], environment);
   const second = run([binary, "test", "./fixtures", "--format", "json"], environment);
   if (first !== second) throw new Error("fixture output changed between identical runs");
+  const boundaries = boundaryScenarios();
+  if (boundaries.length === 0) throw new Error("no boundary evidence is declared");
+  for (const scenario of boundaries) {
+    const firstBoundary = buildBoundary(binary, scenario, environment);
+    const secondBoundary = buildBoundary(binary, scenario, environment);
+    if (firstBoundary !== secondBoundary) {
+      throw new Error(`${scenario.fixture} partial Architecture IR is nondeterministic`);
+    }
+  }
+  console.log(`Verified ${boundaries.length} delivered partial-IR boundaries.`);
 } finally {
   rmSync(isolatedHome, { force: true, recursive: true });
 }

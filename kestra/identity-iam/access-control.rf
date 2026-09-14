@@ -1,10 +1,8 @@
 concept "access-role" {
-  kind        = entity
   description = "A Kestra role defining an access permission set."
 }
 
 concept "access-binding" {
-  kind        = detail
   description = "A Kestra role binding for an external principal."
 }
 
@@ -13,10 +11,10 @@ rule "group" {
     type = "kestra_group"
   }
 
-  as = concept.core.identity-group
+  as = concept.identity-group
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
 
@@ -35,7 +33,7 @@ rule "role" {
   as = concept.access-role
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
 

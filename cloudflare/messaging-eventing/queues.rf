@@ -1,5 +1,4 @@
 concept "queue-consumer-binding" {
-  kind        = detail
   description = "A consumer binding connecting a Cloudflare Queue to a Worker."
 }
 
@@ -8,7 +7,7 @@ rule "queue" {
     type = "cloudflare_queue"
   }
 
-  as = concept.core.message-queue
+  as = concept.message-queue
 }
 
 rule "queue-consumer" {
@@ -19,12 +18,12 @@ rule "queue-consumer" {
   as = concept.queue-consumer-binding
 
   contribution {
-    to  = concept.core.message-queue
+    to  = concept.message-queue
     via = source.queue_id
   }
 
   contribution {
-    to  = concept.core.serverless-function
+    to  = concept.serverless-function
     via = source.script_name
   }
 }

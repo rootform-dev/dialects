@@ -1,5 +1,4 @@
 concept "gateway-configuration" {
-  kind        = detail
   description = "A route or certificate configuration supporting a Consul API gateway."
 }
 
@@ -9,7 +8,7 @@ rule "config-entry-api-gateway-json" {
     where = source.kind == "api-gateway"
   }
 
-  as = concept.core.api-gateway
+  as = concept.api-gateway
 }
 
 rule "config-entry-api-gateway-json-lookup" {
@@ -19,7 +18,7 @@ rule "config-entry-api-gateway-json-lookup" {
     where = source.kind == "api-gateway"
   }
 
-  as = concept.core.api-gateway
+  as = concept.api-gateway
 }
 
 rule "config-entry-file-system-certificate-json" {

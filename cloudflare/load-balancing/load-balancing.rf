@@ -1,10 +1,8 @@
 concept "origin-pool" {
-  kind        = entity
   description = "A Cloudflare Load Balancing pool grouping origin endpoints."
 }
 
 concept "load-balancer-monitoring" {
-  kind        = detail
   description = "Health monitoring configuration supporting Cloudflare Load Balancing."
 }
 
@@ -13,11 +11,11 @@ rule "load-balancer" {
     type = "cloudflare_load_balancer"
   }
 
-  as = concept.core.load-balancer
+  as = concept.load-balancer
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.dns-zone
+    as  = context.ownership
+    to  = concept.dns-zone
     via = source.zone_id
   }
 
@@ -40,22 +38,22 @@ rule "load-balancer-pool" {
   as = concept.origin-pool
 
   relation "routes-to" {
-    to  = concept.core.load-balancer
+    to  = concept.load-balancer
     via = source.origins[0].address
   }
 
   relation "routes-to" {
-    to  = concept.core.load-balancer
+    to  = concept.load-balancer
     via = source.origins[1].address
   }
 
   relation "routes-to" {
-    to  = concept.core.load-balancer
+    to  = concept.load-balancer
     via = source.origins[2].address
   }
 
   relation "routes-to" {
-    to  = concept.core.load-balancer
+    to  = concept.load-balancer
     via = source.origins[3].address
   }
 }

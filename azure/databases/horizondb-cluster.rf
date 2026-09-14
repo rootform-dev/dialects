@@ -5,5 +5,5 @@ rule "horizondb-cluster" {
     where = source.type == "Microsoft.HorizonDb/clusters@2026-01-20-preview"
   }
 
-  as = concept.core.managed-database
+  as = rf.concept.managed-database
 }

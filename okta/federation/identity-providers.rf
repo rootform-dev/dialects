@@ -1,5 +1,4 @@
 concept "external-identity-provider" {
-  kind        = entity
   description = "An external OIDC, SAML, or social Identity Provider trusted by Okta."
 }
 

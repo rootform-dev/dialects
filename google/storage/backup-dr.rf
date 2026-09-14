@@ -3,7 +3,7 @@ rule "backup-dr-backup-vault" {
     type = "google_backup_dr_backup_vault"
   }
 
-  as = concept.core.backup-vault
+  as = concept.backup-vault
 }
 
 rule "backup-dr-backup-plan" {
@@ -11,10 +11,10 @@ rule "backup-dr-backup-plan" {
     type = "google_backup_dr_backup_plan"
   }
 
-  as = concept.core.backup-plan
+  as = concept.backup-plan
 
   relation "stores-in" {
-    to  = concept.core.backup-vault
+    to  = concept.backup-vault
     via = source.backup_vault
   }
 }

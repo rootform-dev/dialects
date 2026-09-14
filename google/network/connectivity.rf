@@ -1,24 +1,20 @@
-concept "private-service-connect-service-attachment" {
-  kind        = entity
-  description = "A Private Service Connect service attachment published by a producer."
-}
 
 rule "vpc-network-peering" {
   match {
     type = "google_compute_network_peering"
   }
 
-  as = concept.core.network-peering
+  as = concept.network-peering
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.network
   }
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.peer_network
   }
 }
@@ -28,10 +24,10 @@ rule "cloud-nat" {
     type = "google_compute_router_nat"
   }
 
-  as = concept.core.managed-nat
+  as = concept.managed-nat
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.cloud-router
     via = source.router
   }
@@ -42,11 +38,11 @@ rule "ha-vpn-gateway" {
     type = "google_compute_ha_vpn_gateway"
   }
 
-  as = concept.core.vpn-gateway
+  as = concept.vpn-gateway
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.network
   }
 }
@@ -56,22 +52,15 @@ rule "classic-vpn-gateway" {
     type = "google_compute_vpn_gateway"
   }
 
-  as = concept.core.vpn-gateway
+  as = concept.vpn-gateway
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.network
   }
 }
 
-rule "cloud-vpn-tunnel" {
-  match {
-    type = "google_compute_vpn_tunnel"
-  }
-
-  as = concept.core.vpn-connection
-}
 
 rule "private-service-connect-endpoint" {
   match {
@@ -79,25 +68,17 @@ rule "private-service-connect-endpoint" {
     where = source.load_balancing_scheme == ""
   }
 
-  as = concept.core.private-endpoint
+  as = concept.private-endpoint
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.network
   }
 
   context {
-    as  = context.core.network
-    to  = concept.core.subnet
+    as  = rf.context.network
+    to  = rf.concept.subnet
     via = source.subnetwork
   }
-}
-
-rule "private-service-connect-service-attachment" {
-  match {
-    type = "google_compute_service_attachment"
-  }
-
-  as = concept.private-service-connect-service-attachment
 }

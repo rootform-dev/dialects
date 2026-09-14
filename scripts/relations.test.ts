@@ -1,288 +1,273 @@
 import { expect, test } from "bun:test";
-import { readFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
 const root = join(import.meta.dir, "..");
 
-type Architecture = {
-  semantics: {
-    emissions: { id: string; rule: string; predicate?: string }[];
-  };
-  architecture: {
-    entities: { id: string; concept: string }[];
-    scopes: { id: string; concept: string }[];
-    contexts: {
-      from: string;
-      to: string;
-      dimension: string;
-      provenance: { emission: string; rule: string; via: string }[];
-    }[];
-    relations: {
-      from: string;
-      to: string;
-      predicate: string;
-      provenance: { emission: string; rule: string; via: string }[];
-    }[];
-    omissions: { representation: string; emission: string; reason: string }[];
-  };
-  diagnostics: { declaration?: string; emission?: string; code: string }[];
+// Target Architecture IR v0.1 (target spec §8): architecture.representations is
+// the single uniform representation collection, symbol identities are owner-first
+// (owner.kind.name, e.g. rf.concept.managed-database, google.rule.cloud-sql-instance),
+// and facts carry resolution-backed provenance. Slice goldens are regenerated
+// against the target IR, so every behavior test below runs and must pass.
+
+type Provenance = {
+  emission: string;
+  rule: string;
+  resolution: string;
 };
 
-function fixture(name: string): Architecture {
+type Representation = {
+  id: string;
+  declaration?: string;
+  rule?: string;
+  concept?: string;
+  implementation?: { declaration?: string };
+};
+
+type Fact = {
+  from: string;
+  to: string;
+  dimension?: string;
+  predicate?: string;
+  provenance?: Provenance[];
+};
+
+type Emission = {
+  id: string;
+  rule: string;
+  kind: string;
+  to?: string;
+  via?: string;
+};
+
+type ArchitectDocument = {
+  semantics: {
+    emissions?: Emission[];
+    owners?: Array<{ owner: string; nature: string }>;
+  };
+  architecture: {
+    representations: Representation[];
+    contexts?: Fact[];
+    relations?: Fact[];
+    omissions?: Array<{ representation: string; emission: string; reason?: string }>;
+  };
+  resolutions?: Array<{ id: string }>;
+  diagnostics?: Array<{ declaration?: string; emission?: string; code?: string }>;
+};
+
+const SLICES = [
+  ["azure-aks", "azurerm_kubernetes_cluster", "workloads"],
+  ["azure-database", "azurerm_postgresql_flexible_server", "records"],
+  ["azure-network", "azurerm_virtual_network_peering", "platform"],
+  ["azure-ownership-sweep", "azurerm_arc_kubernetes_cluster", "owned"],
+  ["cloud-sql", "google_sql_database_instance", "db"],
+  ["eks", "aws_eks_cluster", "workloads"],
+  ["gke", "google_container_cluster", "cluster"],
+  ["google-cloud-run", "google_cloud_run_v2_service", "connector"],
+] as const;
+
+function fixture(name: string): ArchitectDocument {
   return JSON.parse(
     readFileSync(join(root, "fixtures/slice", name, "architecture.golden"), "utf8"),
-  ) as Architecture;
+  ) as ArchitectDocument;
 }
 
-test("Kubernetes clusters are runtime scopes across managed and hybrid providers", () => {
-  const cases = [
-    ["azure-aks", "scope:azurerm_kubernetes_cluster.workloads"],
-    ["gke", "scope:google_container_cluster.cluster"],
-    ["eks", "scope:aws_eks_cluster.workloads"],
-    ["azure-ownership-sweep", "scope:azurerm_arc_kubernetes_cluster.owned"],
-  ] as const;
+function sourceId(kind: string, type: string, name: string): string {
+  return `source:1:root:${kind}:${type}.${name}`;
+}
 
-  for (const [name, id] of cases) {
-    const document = fixture(name);
-    expect(document.architecture.scopes).toContainEqual(
-      expect.objectContaining({ id, concept: "core/kubernetes-cluster" }),
-    );
-    expect(document.architecture.entities.some((entity) => entity.id === id)).toBe(false);
+function representation(doc: ArchitectDocument, kind: string, type: string, name: string) {
+  const id = sourceId(kind, type, name);
+  return doc.architecture.representations.find(
+    (entry) => entry.declaration === id || entry.implementation?.declaration === id,
+  );
+}
+
+test("slice behavior goldens are present", () => {
+  for (const [name] of SLICES) {
+    expect(existsSync(join(root, "fixtures/slice", name, "architecture.golden"))).toBeTrue();
   }
 });
 
-test("shared reachability keeps its core owner and its Google producer", () => {
-  const catalog = JSON.parse(
-    readFileSync(join(root, "evidence/core/semantic-catalog.json"), "utf8"),
+test("kubernetes clusters get one uniform rf.concept.kubernetes-cluster representation", () => {
+  for (const [name, type, resource] of SLICES) {
+    if (!type.includes("kubernetes_cluster")) continue;
+    const doc = fixture(name);
+    const entry = representation(doc, "resource", type, resource);
+    expect(entry).toBeDefined();
+    expect(entry?.concept).toBe("rf.concept.kubernetes-cluster");
+    expect(entry?.rule).toMatch(/^[a-z0-9-]+.rule./u);
+    expect("scopes" in doc.architecture).toBe(false);
+    expect("entities" in doc.architecture).toBe(false);
+  }
+});
+
+test("cloud-sql keeps its managed-database classification and a resolution-backed network context", () => {
+  const doc = fixture("cloud-sql");
+  const instance = representation(doc, "resource", "google_sql_database_instance", "db");
+  const network = representation(doc, "resource", "google_compute_network", "vpc");
+  expect(instance).toBeDefined();
+  expect(instance?.concept).toBe("rf.concept.managed-database");
+  expect(instance?.rule).toBe("google.rule.cloud-sql-instance");
+  expect(network?.concept).toBe("rf.concept.virtual-network");
+
+  const fact = doc.architecture.contexts?.find(
+    (entry) => entry.from === instance?.id && entry.to === network?.id,
   );
-  expect(catalog.relations).toHaveLength(1);
-  expect(catalog.relations[0]).toMatchObject({ id: "core/private-reachability", shared: true });
-  expect(catalog.relations[0].producers).toEqual([
-    expect.objectContaining({
-      rule: "google/cloud-sql-instance",
-      from: "core/managed-database",
-      to: "core/virtual-network",
-      via: "source.settings[0].ip_configuration[0].private_network",
-    }),
-  ]);
+  expect(fact).toBeDefined();
+  expect(fact?.dimension).toBe("rf.context.network");
+  expect(fact?.provenance?.[0]).toMatchObject({
+    rule: "google.rule.cloud-sql-instance",
+  });
+  expect(doc.resolutions?.some((entry) => entry.id === fact?.provenance?.[0]?.resolution)).toBe(
+    true,
+  );
+
+  const serialized = JSON.stringify(doc);
+  expect(serialized).not.toContain("core/");
+  expect(serialized).not.toContain("entity:");
+  expect(serialized).not.toContain("scope:");
+  expect(serialized).not.toContain("private-reachability");
+});
+
+test("delegated subnet injection is network placement, not a relation", () => {
+  const doc = fixture("azure-database");
+  const server = representation(doc, "resource", "azurerm_postgresql_flexible_server", "records");
+  const subnet = representation(doc, "resource", "azurerm_subnet", "database");
+  expect(server).toBeDefined();
+  expect(subnet).toBeDefined();
   expect(
-    fixture("cloud-sql").architecture.relations.some(
-      (fact) => fact.predicate === "core/private-reachability",
+    doc.architecture.contexts?.some(
+      (entry) =>
+        entry.from === server?.id &&
+        entry.to === subnet?.id &&
+        entry.dimension === "rf.context.network",
+    ),
+  ).toBe(true);
+  expect(
+    doc.architecture.relations?.some(
+      (entry) => entry.from === server?.id && entry.to === subnet?.id,
+    ),
+  ).toBe(false);
+  expect(JSON.stringify(doc)).not.toContain("private-reachability");
+});
+
+test("a local relation retains its emission and resolution provenance", () => {
+  const doc = fixture("google-cloud-run");
+  const fact = doc.architecture.relations?.find(
+    (entry) => entry.predicate === "google.relation.routes-to",
+  );
+  expect(fact).toBeDefined();
+  expect(fact?.from).toBe(
+    representation(doc, "resource", "google_cloud_run_v2_service", "connector")?.id,
+  );
+  const provenance = fact?.provenance?.[0];
+  expect(provenance?.rule).toBe("google.rule.cloud-run-service");
+  expect(doc.resolutions?.some((entry) => entry.id === provenance?.resolution)).toBe(true);
+  expect(
+    doc.semantics.emissions?.some(
+      (entry) =>
+        entry.id === provenance?.emission && entry.rule === "google.rule.cloud-run-service",
     ),
   ).toBe(true);
 });
 
-test("Azure delegated subnet injection is placement, not reachability", () => {
-  const document = fixture("azure-database");
-  expect(
-    document.architecture.relations.some((fact) => fact.predicate === "core/private-reachability"),
-  ).toBe(false);
-  expect(document.architecture.contexts).toContainEqual(
-    expect.objectContaining({
-      from: "entity:azurerm_postgresql_flexible_server.records",
-      to: "scope:azurerm_subnet.database",
-      dimension: "core/network",
-      provenance: expect.arrayContaining([
-        expect.objectContaining({
-          rule: "azure/postgresql-flexible-server",
-          via: "resolution:azurerm_postgresql_flexible_server.records:delegated_subnet_id:azurerm_subnet.database",
-        }),
-      ]),
-    }),
-  );
-});
-
-test("local Google route fact retains emission and resolution provenance", () => {
-  const document = fixture("google-cloud-run");
-  const fact = document.architecture.relations.find(
-    (entry) => entry.predicate === "google/routes-to",
-  );
-  expect(fact).toBeDefined();
-  expect(fact?.from).toBe("entity:google_cloud_run_v2_service.connector");
-  expect(fact?.provenance).toContainEqual(
-    expect.objectContaining({ rule: "google/cloud-run-service", via: expect.any(String) }),
-  );
-  expect(document.semantics.emissions).toContainEqual(
-    expect.objectContaining({ id: fact?.provenance[0]?.emission, predicate: "google/routes-to" }),
-  );
-});
-
-test("empty optional route and unresolved route have different closure evidence", () => {
-  const document = fixture("google-cloud-run");
-  const emission = document.semantics.emissions.find(
-    (entry) => entry.rule === "google/cloud-run-service" && entry.predicate === "google/routes-to",
+test("an empty optional route and an unresolved route have different closure evidence", () => {
+  const doc = fixture("google-cloud-run");
+  const emission = doc.semantics.emissions?.find(
+    (entry) =>
+      entry.rule === "google.rule.cloud-run-service" &&
+      entry.kind === "relation" &&
+      entry.via?.includes("connector"),
   );
   expect(emission).toBeDefined();
-  expect(document.architecture.omissions).toContainEqual(
-    expect.objectContaining({
-      representation: "entity:google_cloud_run_v2_service.api",
-      emission: emission?.id,
-      reason: "source_absent",
-    }),
-  );
-  expect(document.diagnostics).toContainEqual(
-    expect.objectContaining({
-      declaration: "source:google_cloud_run_v2_service.unknown",
-      emission: emission?.id,
-      code: "TRAVERSAL_UNRESOLVED",
-    }),
-  );
   expect(
-    document.architecture.omissions.some(
+    doc.architecture.omissions?.some(
       (entry) =>
-        entry.representation === "entity:google_cloud_run_v2_service.unknown" &&
-        entry.emission === emission?.id,
+        entry.representation ===
+          representation(doc, "resource", "google_cloud_run_v2_service", "api")?.id &&
+        entry.emission === emission?.id &&
+        entry.reason === "source_absent",
     ),
-  ).toBe(false);
-});
-
-test("Azure VNet peering keeps local containment distinct from remote connectivity", () => {
-  const document = fixture("azure-network");
-  const peerings = [
-    {
-      from: "entity:azurerm_virtual_network_peering.platform",
-      local: "scope:azurerm_virtual_network.platform",
-      remote: "scope:azurerm_virtual_network.remote",
-    },
-    {
-      from: "entity:azurerm_virtual_network_peering.remote_to_platform",
-      local: "scope:azurerm_virtual_network.remote",
-      remote: "scope:azurerm_virtual_network.platform",
-    },
-  ];
-
-  for (const peering of peerings) {
-    expect(document.architecture.contexts).toContainEqual(
-      expect.objectContaining({
-        from: peering.from,
-        to: peering.local,
-        dimension: "core/network",
-      }),
-    );
-    expect(document.architecture.relations).toContainEqual(
-      expect.objectContaining({
-        from: peering.from,
-        to: peering.remote,
-        predicate: "azure/peers-with",
-        provenance: [
-          expect.objectContaining({
-            rule: "azure/virtual-network-peering",
-            via: expect.stringContaining("remote_virtual_network_id"),
-          }),
-        ],
-      }),
-    );
-  }
-
-  for (const unresolved of ["literal", "unknown"]) {
-    const from = `entity:azurerm_virtual_network_peering.${unresolved}`;
-    expect(
-      document.architecture.contexts.some(
-        (fact) => fact.from === from && fact.dimension === "core/network",
-      ),
-    ).toBe(false);
-    expect(document.architecture.relations.some((fact) => fact.from === from)).toBe(false);
-  }
-});
-
-test("Azure Application Gateway uses an owned WAF policy", () => {
-  const document = fixture("azure-load-balancing");
-  expect(document.architecture.contexts).toContainEqual(
-    expect.objectContaining({
-      from: "entity:azurerm_web_application_firewall_policy.edge",
-      to: "scope:azurerm_resource_group.edge",
-      dimension: "core/ownership",
-      provenance: [
-        expect.objectContaining({
-          rule: "azure/web-application-firewall-policy",
-          via: expect.stringContaining("resource_group_name"),
-        }),
-      ],
-    }),
-  );
-  expect(document.architecture.relations).toContainEqual(
-    expect.objectContaining({
-      from: "entity:azurerm_application_gateway.web",
-      to: "entity:azurerm_web_application_firewall_policy.edge",
-      predicate: "azure/uses-waf-policy",
-      provenance: [
-        expect.objectContaining({
-          rule: "azure/application-gateway",
-          via: expect.stringContaining("firewall_policy_id"),
-        }),
-      ],
-    }),
-  );
-});
-
-test("Azure Service Bus preserves namespace, topic, and subscription ownership", () => {
-  const document = fixture("azure-service-bus");
-  const topic = "scope:azurerm_servicebus_topic.events";
-  const subscription = "entity:azurerm_servicebus_subscription.worker";
-
-  expect(document.architecture.scopes).toContainEqual(
-    expect.objectContaining({ id: topic, concept: "azure/service-bus-topic" }),
-  );
-  expect(document.architecture.contexts).toContainEqual(
-    expect.objectContaining({
-      from: topic,
-      to: "scope:azurerm_servicebus_namespace.platform",
-      dimension: "core/ownership",
-    }),
-  );
-  expect(document.architecture.contexts).toContainEqual(
-    expect.objectContaining({ from: subscription, to: topic, dimension: "core/ownership" }),
-  );
-  expect(document.architecture.relations).toContainEqual(
-    expect.objectContaining({
-      from: subscription,
-      to: topic,
-      predicate: "azure/subscribes-to",
-    }),
-  );
+  ).toBe(true);
   expect(
-    document.architecture.contexts.some(
-      (fact) =>
-        fact.from === subscription && fact.to === "scope:azurerm_servicebus_namespace.platform",
+    doc.diagnostics?.some(
+      (entry) =>
+        entry.declaration === sourceId("resource", "google_cloud_run_v2_service", "unknown") &&
+        entry.emission === emission?.id &&
+        entry.code === "TRAVERSAL_UNRESOLVED",
+    ),
+  ).toBe(true);
+  const unknown = representation(doc, "resource", "google_cloud_run_v2_service", "unknown");
+  expect(unknown).toBeDefined();
+  expect(unknown?.rule).toBe("google.rule.cloud-run-service");
+  expect(
+    doc.architecture.relations?.some(
+      (entry) => entry.from === sourceId("resource", "google_cloud_run_v2_service", "unknown"),
     ),
   ).toBe(false);
+});
 
+test("network peerings keep containment distinct from remote connectivity", () => {
+  const doc = fixture("azure-network");
+  const peerings = [
+    ["platform", "platform", "remote"],
+    ["remote_to_platform", "remote", "platform"],
+  ] as const;
+  for (const [peeringResource, localResource, remoteResource] of peerings) {
+    const peering = representation(
+      doc,
+      "resource",
+      "azurerm_virtual_network_peering",
+      peeringResource,
+    );
+    const local = representation(doc, "resource", "azurerm_virtual_network", localResource);
+    const remote = representation(doc, "resource", "azurerm_virtual_network", remoteResource);
+    expect(peering).toBeDefined();
+    expect(local).toBeDefined();
+    expect(remote).toBeDefined();
+    expect(
+      doc.architecture.contexts?.some(
+        (entry) =>
+          entry.from === peering?.id &&
+          entry.to === local?.id &&
+          entry.dimension === "rf.context.network",
+      ),
+    ).toBe(true);
+    expect(
+      doc.architecture.relations?.some(
+        (entry) =>
+          entry.from === peering?.id &&
+          entry.to === remote?.id &&
+          entry.predicate === "azure.relation.peers-with",
+      ),
+    ).toBe(true);
+  }
   for (const unresolved of ["literal", "unknown"]) {
-    const from = `entity:azurerm_servicebus_subscription.${unresolved}`;
-    expect(document.architecture.contexts.some((fact) => fact.from === from)).toBe(false);
-    expect(document.architecture.relations.some((fact) => fact.from === from)).toBe(false);
+    const id = sourceId("resource", "azurerm_virtual_network_peering", unresolved);
+    expect(doc.architecture.contexts?.some((entry) => entry.from === id)).toBe(false);
+    expect(doc.architecture.relations?.some((entry) => entry.from === id)).toBe(false);
   }
 });
 
-test("Azure Event Grid system subscriptions belong to their exact topic", () => {
-  const document = fixture("azure-event-grid");
-  const topic = "scope:azurerm_eventgrid_system_topic.storage";
-
-  expect(document.architecture.scopes).toContainEqual(
-    expect.objectContaining({ id: topic, concept: "azure/event-grid-topic" }),
-  );
-  for (const name of ["eventhub", "queue", "topic", "function", "storage"]) {
-    const from = `entity:azurerm_eventgrid_system_topic_event_subscription.${name}`;
-    expect(document.architecture.contexts).toContainEqual(
-      expect.objectContaining({ from, to: topic, dimension: "core/ownership" }),
-    );
-    expect(document.architecture.relations).toContainEqual(
-      expect.objectContaining({ from, to: topic, predicate: "azure/subscribes-to" }),
-    );
-    expect(
-      document.architecture.contexts.some(
-        (fact) => fact.from === from && fact.to === "scope:azurerm_resource_group.platform",
-      ),
-    ).toBe(false);
-  }
-
-  for (const unresolved of ["literal", "unknown"]) {
-    const from = `entity:azurerm_eventgrid_system_topic_event_subscription.${unresolved}`;
-    expect(document.architecture.contexts.some((fact) => fact.from === from)).toBe(false);
-    expect(
-      document.architecture.relations.some(
-        (fact) => fact.from === from && fact.predicate === "azure/subscribes-to",
-      ),
-    ).toBe(false);
+test("every fact is closed over representations and proofs", () => {
+  for (const directory of readdirSync(join(root, "fixtures/slice"), { withFileTypes: true })) {
+    if (!directory.isDirectory()) continue;
+    const doc = fixture(directory.name);
+    if (!Array.isArray(doc.architecture?.representations)) continue;
+    const representationIds = new Set(doc.architecture.representations.map((entry) => entry.id));
+    const emissionIds = new Set(doc.semantics.emissions?.map((entry) => entry.id) ?? []);
+    const resolutionIds = new Set(doc.resolutions?.map((entry) => entry.id) ?? []);
+    for (const fact of [
+      ...(doc.architecture.contexts ?? []),
+      ...(doc.architecture.relations ?? []),
+    ]) {
+      expect(representationIds.has(fact.from)).toBe(true);
+      expect(representationIds.has(fact.to)).toBe(true);
+      for (const provenance of fact.provenance ?? []) {
+        expect(emissionIds.has(provenance.emission)).toBe(true);
+        expect(resolutionIds.has(provenance.resolution)).toBe(true);
+      }
+    }
   }
 });

@@ -1,20 +1,8 @@
-concept "online-store" {
-  kind        = entity
-  description = "A Databricks online feature store serving low-latency feature data."
-}
 
 concept "online-serving-configuration" {
-  kind        = detail
   description = "An online table or feature-serving configuration supporting Databricks online serving."
 }
 
-rule "online-store" {
-  match {
-    type = "databricks_online_store"
-  }
-
-  as = concept.online-store
-}
 
 rule "online-table" {
   match {

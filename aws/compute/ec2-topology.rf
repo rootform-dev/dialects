@@ -3,11 +3,11 @@ rule "instance" {
     type = "aws_instance"
   }
 
-  as = concept.core.compute-instance
+  as = concept.compute-instance
 
   context {
-    as  = context.core.network
-    to  = concept.core.subnet
+    as  = rf.context.network
+    to  = rf.concept.subnet
     via = source.subnet_id
   }
 }

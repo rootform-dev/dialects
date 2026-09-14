@@ -1,35 +1,28 @@
 concept "network-gateway" {
-  kind        = entity
   description = "A Confluent Cloud gateway for private ingress or egress connectivity."
 }
 
 concept "network-link-service" {
-  kind        = entity
   description = "A Confluent Cloud Network Linking service published to accepted networks."
 }
 
 concept "network-link-endpoint" {
-  kind        = entity
   description = "A Confluent Cloud Network Linking endpoint consuming a link service."
 }
 
 concept "private-link-attachment" {
-  kind        = entity
   description = "A Confluent Cloud Private Link Attachment publishing private service connectivity."
 }
 
 concept "transit-gateway-attachment" {
-  kind        = entity
   description = "A Confluent Cloud attachment to an AWS Transit Gateway."
 }
 
 concept "dns-forwarder" {
-  kind        = entity
   description = "A Confluent Cloud DNS forwarder associated with a gateway."
 }
 
 concept "network-configuration" {
-  kind        = detail
   description = "Private access or DNS configuration supporting a Confluent Cloud network."
 }
 
@@ -38,10 +31,10 @@ rule "network" {
     type = "confluent_network"
   }
 
-  as = concept.core.virtual-network
+  as = rf.concept.virtual-network
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.environment
     via = source.environment[0].id
   }
@@ -55,7 +48,7 @@ rule "gateway" {
   as = concept.network-gateway
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.environment
     via = source.environment[0].id
   }
@@ -66,7 +59,7 @@ rule "access-point" {
     type = "confluent_access_point"
   }
 
-  as = concept.core.private-endpoint
+  as = concept.private-endpoint
 
   relation "uses-gateway" {
     to  = concept.network-gateway
@@ -74,17 +67,17 @@ rule "access-point" {
   }
 
   relation "connects-to" {
-    to  = concept.core.private-endpoint
+    to  = concept.private-endpoint
     via = source.aws_ingress_private_link_endpoint[0].vpc_endpoint_id
   }
 
   relation "connects-to" {
-    to  = concept.core.private-endpoint
+    to  = concept.private-endpoint
     via = source.azure_ingress_private_link_endpoint[0].private_endpoint_resource_id
   }
 
   relation "connects-to" {
-    to  = concept.core.private-endpoint
+    to  = concept.private-endpoint
     via = source.gcp_ingress_private_service_connect_endpoint[0].private_service_connect_connection_id
   }
 }
@@ -94,26 +87,26 @@ rule "network-peering" {
     type = "confluent_peering"
   }
 
-  as = concept.core.network-peering
+  as = concept.network-peering
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.network[0].id
   }
 
   relation "peers-with" {
-    to  = concept.core.virtual-network
+    to  = rf.concept.virtual-network
     via = source.aws[0].vpc
   }
 
   relation "peers-with" {
-    to  = concept.core.virtual-network
+    to  = rf.concept.virtual-network
     via = source.azure[0].vnet
   }
 
   relation "peers-with" {
-    to  = concept.core.virtual-network
+    to  = rf.concept.virtual-network
     via = source.gcp[0].vpc_network
   }
 }
@@ -126,7 +119,7 @@ rule "private-link-access" {
   as = concept.network-configuration
 
   contribution {
-    to  = concept.core.virtual-network
+    to  = rf.concept.virtual-network
     via = source.network[0].id
   }
 }
@@ -139,7 +132,7 @@ rule "private-link-attachment" {
   as = concept.private-link-attachment
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.environment
     via = source.environment[0].id
   }
@@ -150,7 +143,7 @@ rule "private-link-attachment-connection" {
     type = "confluent_private_link_attachment_connection"
   }
 
-  as = concept.core.private-endpoint
+  as = concept.private-endpoint
 
   relation "connects-to-attachment" {
     to  = concept.private-link-attachment
@@ -158,17 +151,17 @@ rule "private-link-attachment-connection" {
   }
 
   relation "connects-to" {
-    to  = concept.core.private-endpoint
+    to  = concept.private-endpoint
     via = source.aws[0].vpc_endpoint_id
   }
 
   relation "connects-to" {
-    to  = concept.core.private-endpoint
+    to  = concept.private-endpoint
     via = source.azure[0].private_endpoint_resource_id
   }
 
   relation "connects-to" {
-    to  = concept.core.private-endpoint
+    to  = concept.private-endpoint
     via = source.gcp[0].private_service_connect_connection_id
   }
 }
@@ -181,8 +174,8 @@ rule "network-link-service" {
   as = concept.network-link-service
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.network[0].id
   }
 }
@@ -195,8 +188,8 @@ rule "network-link-endpoint" {
   as = concept.network-link-endpoint
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.network[0].id
   }
 
@@ -214,8 +207,8 @@ rule "transit-gateway-attachment" {
   as = concept.transit-gateway-attachment
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.network[0].id
   }
 }

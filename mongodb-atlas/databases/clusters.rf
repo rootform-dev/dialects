@@ -1,5 +1,4 @@
 concept "database-configuration" {
-  kind        = detail
   description = "A configuration supporting MongoDB Atlas database deployments within a project."
 }
 
@@ -8,10 +7,10 @@ rule "advanced-cluster" {
     type = "mongodbatlas_advanced_cluster"
   }
 
-  as = concept.core.managed-database
+  as = rf.concept.managed-database
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -22,10 +21,10 @@ rule "cluster" {
     type = "mongodbatlas_cluster"
   }
 
-  as = concept.core.managed-database
+  as = rf.concept.managed-database
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -36,10 +35,10 @@ rule "flex-cluster" {
     type = "mongodbatlas_flex_cluster"
   }
 
-  as = concept.core.managed-database
+  as = rf.concept.managed-database
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -50,10 +49,10 @@ rule "serverless-instance" {
     type = "mongodbatlas_serverless_instance"
   }
 
-  as = concept.core.managed-database
+  as = rf.concept.managed-database
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -67,7 +66,7 @@ rule "global-cluster-configuration" {
   as = concept.database-configuration
 
   contribution {
-    to  = concept.core.managed-database
+    to  = rf.concept.managed-database
     via = source.cluster_name
   }
 

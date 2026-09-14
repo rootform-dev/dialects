@@ -1,10 +1,8 @@
 concept "authentication-boundary" {
-  kind        = scope
   description = "An Auth0 Network ACL bounding authentication or management traffic."
 }
 
 concept "authentication-configuration" {
-  kind        = detail
   description = "Attack protection, MFA, risk, rate-limit, or encryption configuration supporting Auth0."
 }
 

@@ -1,25 +1,20 @@
 concept "packer-artifact" {
-  kind        = entity
   description = "An HCP Packer record locating a built machine image on an external platform."
 }
 
 concept "packer-bucket" {
-  kind        = scope
   description = "An HCP Packer registry boundary grouping machine-image metadata."
 }
 
 concept "packer-channel" {
-  kind        = entity
   description = "A named HCP Packer release channel selecting an image version."
 }
 
 concept "packer-configuration" {
-  kind        = detail
   description = "An assignment or access setting supporting HCP Packer registry architecture."
 }
 
 concept "packer-version" {
-  kind        = entity
   description = "A version of machine-image metadata in HCP Packer."
 }
 
@@ -32,7 +27,7 @@ rule "packer-artifact-lookup" {
   as = concept.packer-artifact
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.packer-bucket
     via = source.bucket_name
   }
@@ -51,7 +46,7 @@ rule "packer-bucket" {
   as = concept.packer-bucket
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -91,7 +86,7 @@ rule "packer-channel" {
   as = concept.packer-channel
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.packer-bucket
     via = source.bucket_name
   }
@@ -124,7 +119,7 @@ rule "packer-version-lookup" {
   as = concept.packer-version
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.packer-bucket
     via = source.bucket_name
   }

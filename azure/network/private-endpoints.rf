@@ -3,16 +3,16 @@ rule "private-endpoint" {
     type = "azurerm_private_endpoint"
   }
 
-  as = concept.core.private-endpoint
+  as = concept.private-endpoint
 
   context {
-    as  = context.core.network
-    to  = concept.core.subnet
+    as  = rf.context.network
+    to  = rf.concept.subnet
     via = source.subnet_id
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
 

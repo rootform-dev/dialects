@@ -1,15 +1,12 @@
 concept "biglake-catalog" {
-  kind        = scope
   description = "A BigLake catalog organizing lakehouse metadata."
 }
 
 concept "biglake-database" {
-  kind        = scope
   description = "A database namespace in a BigLake catalog."
 }
 
 concept "biglake-table" {
-  kind        = entity
   description = "A table registered in BigLake."
 }
 

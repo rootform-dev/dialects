@@ -1,10 +1,8 @@
 concept "user-account" {
-  kind        = entity
   description = "A Kestra user account."
 }
 
 concept "user-credential" {
-  kind        = detail
   description = "A basic-auth credential attached to a Kestra user."
 }
 

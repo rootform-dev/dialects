@@ -22,9 +22,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_business_metadata",
@@ -39,9 +41,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_business_metadata_binding",
@@ -56,9 +60,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_byok_key",
@@ -73,9 +79,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_catalog_integration",
@@ -90,9 +98,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_certificate_authority",
@@ -107,9 +117,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_certificate_pool",
@@ -124,9 +136,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_cluster_link",
@@ -141,9 +155,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_connect_artifact",
@@ -158,9 +174,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_dns_record",
@@ -175,9 +193,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_endpoint",
@@ -192,9 +212,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_environment",
@@ -209,9 +231,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_environments",
@@ -226,9 +250,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_flink_artifact",
@@ -243,9 +269,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_flink_compute_pool",
@@ -260,9 +288,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_flink_compute_pool_config",
@@ -277,9 +307,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_flink_connection",
@@ -294,9 +326,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_flink_materialized_table",
@@ -311,9 +345,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_flink_region",
@@ -328,9 +364,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_gateway",
@@ -345,9 +383,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_gateways",
@@ -362,9 +402,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_group_mapping",
@@ -379,9 +421,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_identity_pool",
@@ -396,9 +440,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_identity_provider",
@@ -413,9 +459,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_invitation",
@@ -430,9 +478,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_ip_addresses",
@@ -447,9 +497,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_ip_filter",
@@ -464,9 +516,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_ip_group",
@@ -481,9 +535,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_kafka_client_quota",
@@ -498,9 +554,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_kafka_cluster",
@@ -515,9 +573,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_kafka_clusters",
@@ -532,9 +592,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_kafka_topic",
@@ -549,9 +611,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_ksql_cluster",
@@ -566,9 +630,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_network",
@@ -583,9 +649,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_network_link_endpoint",
@@ -600,9 +668,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_network_link_service",
@@ -617,9 +687,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_organization",
@@ -634,9 +706,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_peering",
@@ -651,9 +725,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_private_link_access",
@@ -668,9 +744,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_private_link_attachment",
@@ -685,9 +763,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_private_link_attachment_connection",
@@ -702,9 +782,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_provider_integration",
@@ -719,9 +801,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_provider_integration_authorization",
@@ -736,9 +820,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_provider_integration_setup",
@@ -753,9 +839,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_role_binding",
@@ -770,9 +858,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_rtce_topic",
@@ -787,9 +877,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_schema",
@@ -804,26 +896,33 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_schema_registry_cluster",
       "construct_kind": "data_source",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "confluent.context.ownership"
+      ],
       "contributions": [],
       "family": "data-governance",
       "product": "stream-governance",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/data-sources/confluent_schema_registry_cluster.md",
       "reason": "provider-exception: sole durable Schema Registry cluster per environment has no managed resource",
       "relations": [],
-      "rootform_concept": "confluent/schema-registry",
-      "rules": ["confluent/schema-registry"],
+      "rootform_concept": "confluent.rule.schema-registry",
+      "rules": [
+        "confluent.rule.schema-registry"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_schema_registry_cluster_config",
@@ -838,9 +937,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_schema_registry_cluster_mode",
@@ -855,9 +956,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_schema_registry_clusters",
@@ -872,9 +975,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_schema_registry_dek",
@@ -889,9 +994,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_schema_registry_kek",
@@ -906,9 +1013,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_schemas",
@@ -923,9 +1032,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_service_account",
@@ -940,9 +1051,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_subject_config",
@@ -957,9 +1070,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_subject_mode",
@@ -974,9 +1089,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_tableflow_topic",
@@ -991,9 +1108,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_tag",
@@ -1008,9 +1127,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_tag_binding",
@@ -1025,9 +1146,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_transit_gateway_attachment",
@@ -1042,9 +1165,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "deep",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_user",
@@ -1059,9 +1184,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_users",
@@ -1076,9 +1203,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_access_point",
@@ -1089,13 +1218,21 @@
       "product": "networking",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_access_point.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
-      "relations": ["connects-to", "connects-to", "connects-to", "uses-gateway"],
-      "rootform_concept": "core/private-endpoint",
-      "rules": ["confluent/access-point"],
+      "relations": [
+        "connects-to",
+        "connects-to",
+        "connects-to",
+        "uses-gateway"
+      ],
+      "rootform_concept": "confluent.concept.private-endpoint",
+      "rules": [
+        "confluent.rule.access-point"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_api_key",
@@ -1110,9 +1247,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_business_metadata",
@@ -1122,14 +1261,17 @@
       "family": "data-governance",
       "product": "catalog-tableflow",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_business_metadata.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/governance-configuration",
-      "rules": ["confluent/business-metadata"],
+      "rootform_concept": "confluent.concept.governance-configuration",
+      "rules": [
+        "confluent.rule.business-metadata"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_business_metadata_binding",
@@ -1139,14 +1281,17 @@
       "family": "data-governance",
       "product": "catalog-tableflow",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_business_metadata_binding.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/governance-configuration",
-      "rules": ["confluent/business-metadata-binding"],
+      "rootform_concept": "confluent.concept.governance-configuration",
+      "rules": [
+        "confluent.rule.business-metadata-binding"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_byok_key",
@@ -1157,13 +1302,20 @@
       "product": "security-integrations",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_byok_key.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
-      "relations": ["registers-key", "registers-key", "registers-key"],
-      "rootform_concept": "confluent/byok-key",
-      "rules": ["confluent/byok-key"],
+      "relations": [
+        "registers-key",
+        "registers-key",
+        "registers-key"
+      ],
+      "rootform_concept": "confluent.rule.byok-key",
+      "rules": [
+        "confluent.rule.byok-key"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_catalog_entity_attributes",
@@ -1173,31 +1325,42 @@
       "family": "data-governance",
       "product": "catalog-tableflow",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_catalog_entity_attributes.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/governance-configuration",
-      "rules": ["confluent/catalog-entity-attributes"],
+      "rootform_concept": "confluent.concept.governance-configuration",
+      "rules": [
+        "confluent.rule.catalog-entity-attributes"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_catalog_integration",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership", "core.runtime"],
+      "contexts": [
+        "confluent.context.ownership",
+        "rf.context.runtime"
+      ],
       "contributions": [],
       "family": "data-governance",
       "product": "catalog-tableflow",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_catalog_integration.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
-      "relations": ["uses-provider-integration"],
-      "rootform_concept": "confluent/catalog-integration",
-      "rules": ["confluent/catalog-integration"],
+      "relations": [
+        "uses-provider-integration"
+      ],
+      "rootform_concept": "confluent.rule.catalog-integration",
+      "rules": [
+        "confluent.rule.catalog-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_certificate_authority",
@@ -1209,12 +1372,15 @@
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_certificate_authority.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
       "relations": [],
-      "rootform_concept": "confluent/certificate-authority",
-      "rules": ["confluent/certificate-authority"],
+      "rootform_concept": "confluent.rule.certificate-authority",
+      "rules": [
+        "confluent.rule.certificate-authority"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_certificate_pool",
@@ -1225,13 +1391,18 @@
       "product": "security-integrations",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_certificate_pool.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
-      "relations": ["trusts"],
-      "rootform_concept": "confluent/certificate-pool",
-      "rules": ["confluent/certificate-pool"],
+      "relations": [
+        "trusts"
+      ],
+      "rootform_concept": "confluent.rule.certificate-pool",
+      "rules": [
+        "confluent.rule.certificate-pool"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_cluster_link",
@@ -1242,47 +1413,66 @@
       "product": "cluster-linking",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_cluster_link.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
-      "relations": ["destination-cluster", "local-cluster", "remote-cluster", "source-cluster"],
-      "rootform_concept": "confluent/cluster-link",
-      "rules": ["confluent/cluster-link"],
+      "relations": [
+        "destination-cluster",
+        "local-cluster",
+        "remote-cluster",
+        "source-cluster"
+      ],
+      "rootform_concept": "confluent.rule.cluster-link",
+      "rules": [
+        "confluent.rule.cluster-link"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_connect_artifact",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "confluent.context.ownership"
+      ],
       "contributions": [],
       "family": "connectors",
       "product": "connectors",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_connect_artifact.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/connector-artifact",
-      "rules": ["confluent/connect-artifact"],
+      "rootform_concept": "confluent.concept.connector-artifact",
+      "rules": [
+        "confluent.rule.connect-artifact"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_connector",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership", "core.runtime"],
+      "contexts": [
+        "confluent.context.ownership",
+        "rf.context.runtime"
+      ],
       "contributions": [],
       "family": "connectors",
       "product": "connectors",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_connector.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
       "relations": [],
-      "rootform_concept": "confluent/connector",
-      "rules": ["confluent/connector"],
+      "rootform_concept": "confluent.rule.connector",
+      "rules": [
+        "confluent.rule.connector"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_custom_connector_plugin",
@@ -1292,31 +1482,39 @@
       "family": "connectors",
       "product": "connectors",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_custom_connector_plugin.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/connector-artifact",
-      "rules": ["confluent/custom-connector-plugin"],
+      "rootform_concept": "confluent.concept.connector-artifact",
+      "rules": [
+        "confluent.rule.custom-connector-plugin"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_custom_connector_plugin_version",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "confluent.context.ownership"
+      ],
       "contributions": [],
       "family": "connectors",
       "product": "connectors",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_custom_connector_plugin_version.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/connector-artifact",
-      "rules": ["confluent/custom-connector-plugin-version"],
+      "rootform_concept": "confluent.concept.connector-artifact",
+      "rules": [
+        "confluent.rule.custom-connector-plugin-version"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_dns_forwarder",
@@ -1327,13 +1525,18 @@
       "product": "networking",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_dns_forwarder.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
-      "relations": ["uses-gateway"],
-      "rootform_concept": "confluent/dns-forwarder",
-      "rules": ["confluent/dns-forwarder"],
+      "relations": [
+        "uses-gateway"
+      ],
+      "rootform_concept": "confluent.rule.dns-forwarder",
+      "rules": [
+        "confluent.rule.dns-forwarder"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_dns_record",
@@ -1343,14 +1546,17 @@
       "family": "network",
       "product": "networking",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_dns_record.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/network-configuration",
-      "rules": ["confluent/dns-record"],
+      "rootform_concept": "confluent.concept.network-configuration",
+      "rules": [
+        "confluent.rule.dns-record"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_environment",
@@ -1362,46 +1568,59 @@
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_environment.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
       "relations": [],
-      "rootform_concept": "confluent/environment",
-      "rules": ["confluent/environment"],
+      "rootform_concept": "confluent.rule.environment",
+      "rules": [
+        "confluent.rule.environment"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_flink_artifact",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "confluent.context.ownership"
+      ],
       "contributions": [],
       "family": "stream-processing",
       "product": "flink",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_flink_artifact.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/flink-artifact",
-      "rules": ["confluent/flink-artifact"],
+      "rootform_concept": "confluent.rule.flink-artifact",
+      "rules": [
+        "confluent.rule.flink-artifact"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_flink_compute_pool",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "confluent.context.ownership"
+      ],
       "contributions": [],
       "family": "stream-processing",
       "product": "flink",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_flink_compute_pool.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
       "relations": [],
-      "rootform_concept": "confluent/flink-compute-pool",
-      "rules": ["confluent/flink-compute-pool"],
+      "rootform_concept": "confluent.rule.flink-compute-pool",
+      "rules": [
+        "confluent.rule.flink-compute-pool"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_flink_compute_pool_config",
@@ -1411,82 +1630,111 @@
       "family": "stream-processing",
       "product": "flink",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_flink_compute_pool_config.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/flink-configuration",
-      "rules": ["confluent/flink-compute-pool-config"],
+      "rootform_concept": "confluent.concept.flink-configuration",
+      "rules": [
+        "confluent.rule.flink-compute-pool-config"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_flink_connection",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership", "core.runtime"],
+      "contexts": [
+        "confluent.context.ownership",
+        "rf.context.runtime"
+      ],
       "contributions": [],
       "family": "stream-processing",
       "product": "flink",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_flink_connection.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
-      "relations": ["uses-principal"],
-      "rootform_concept": "confluent/flink-connection",
-      "rules": ["confluent/flink-connection"],
+      "relations": [
+        "uses-principal"
+      ],
+      "rootform_concept": "confluent.rule.flink-connection",
+      "rules": [
+        "confluent.rule.flink-connection"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_flink_materialized_table",
       "construct_kind": "managed_resource",
-      "contexts": ["core.runtime"],
+      "contexts": [
+        "rf.context.runtime"
+      ],
       "contributions": [],
       "family": "stream-processing",
       "product": "flink",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_flink_materialized_table.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
-      "relations": ["uses-kafka-cluster", "uses-principal"],
-      "rootform_concept": "confluent/flink-materialized-table",
-      "rules": ["confluent/flink-materialized-table"],
+      "relations": [
+        "uses-kafka-cluster",
+        "uses-principal"
+      ],
+      "rootform_concept": "confluent.rule.flink-materialized-table",
+      "rules": [
+        "confluent.rule.flink-materialized-table"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_flink_statement",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["flink-compute-pool"],
+      "contributions": [
+        "flink-compute-pool"
+      ],
       "family": "stream-processing",
       "product": "flink",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_flink_statement.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/flink-configuration",
-      "rules": ["confluent/flink-statement"],
+      "rootform_concept": "confluent.concept.flink-configuration",
+      "rules": [
+        "confluent.rule.flink-statement"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_gateway",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "confluent.context.ownership"
+      ],
       "contributions": [],
       "family": "network",
       "product": "networking",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_gateway.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
       "relations": [],
-      "rootform_concept": "confluent/network-gateway",
-      "rules": ["confluent/gateway"],
+      "rootform_concept": "confluent.concept.network-gateway",
+      "rules": [
+        "confluent.rule.gateway"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_group_mapping",
@@ -1496,14 +1744,17 @@
       "family": "identity-iam",
       "product": "identity-access",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_group_mapping.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/identity-access-configuration",
-      "rules": ["confluent/group-mapping"],
+      "rootform_concept": "confluent.concept.identity-access-configuration",
+      "rules": [
+        "confluent.rule.group-mapping"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_identity_pool",
@@ -1514,13 +1765,18 @@
       "product": "identity-access",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_identity_pool.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
-      "relations": ["trusts"],
-      "rootform_concept": "confluent/identity-pool",
-      "rules": ["confluent/identity-pool"],
+      "relations": [
+        "trusts"
+      ],
+      "rootform_concept": "confluent.rule.identity-pool",
+      "rules": [
+        "confluent.rule.identity-pool"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_identity_provider",
@@ -1532,12 +1788,15 @@
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_identity_provider.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
       "relations": [],
-      "rootform_concept": "confluent/identity-provider",
-      "rules": ["confluent/identity-provider"],
+      "rootform_concept": "confluent.rule.identity-provider",
+      "rules": [
+        "confluent.rule.identity-provider"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_invitation",
@@ -1552,9 +1811,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_ip_filter",
@@ -1564,14 +1825,17 @@
       "family": "identity-iam",
       "product": "identity-access",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_ip_filter.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/identity-access-configuration",
-      "rules": ["confluent/ip-filter"],
+      "rootform_concept": "confluent.concept.identity-access-configuration",
+      "rules": [
+        "confluent.rule.ip-filter"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_ip_group",
@@ -1581,201 +1845,274 @@
       "family": "identity-iam",
       "product": "identity-access",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_ip_group.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/identity-access-configuration",
-      "rules": ["confluent/ip-group"],
+      "rootform_concept": "confluent.concept.identity-access-configuration",
+      "rules": [
+        "confluent.rule.ip-group"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_kafka_acl",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["kafka-cluster"],
+      "contributions": [
+        "kafka-cluster"
+      ],
       "family": "streaming",
       "product": "kafka",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_kafka_acl.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/kafka-configuration",
-      "rules": ["confluent/kafka-acl"],
+      "rootform_concept": "confluent.concept.kafka-configuration",
+      "rules": [
+        "confluent.rule.kafka-acl"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_kafka_client_quota",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["kafka-cluster"],
+      "contributions": [
+        "kafka-cluster"
+      ],
       "family": "streaming",
       "product": "kafka",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_kafka_client_quota.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/kafka-configuration",
-      "rules": ["confluent/kafka-client-quota"],
+      "rootform_concept": "confluent.concept.kafka-configuration",
+      "rules": [
+        "confluent.rule.kafka-client-quota"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_kafka_cluster",
       "construct_kind": "managed_resource",
-      "contexts": ["core.network", "core.ownership"],
+      "contexts": [
+        "rf.context.network",
+        "confluent.context.ownership"
+      ],
       "contributions": [],
       "family": "streaming",
       "product": "kafka",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_kafka_cluster.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
-      "relations": ["uses-key"],
-      "rootform_concept": "confluent/kafka-cluster",
-      "rules": ["confluent/kafka-cluster"],
+      "relations": [
+        "uses-key"
+      ],
+      "rootform_concept": "confluent.rule.kafka-cluster",
+      "rules": [
+        "confluent.rule.kafka-cluster"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_kafka_cluster_config",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["kafka-cluster"],
+      "contributions": [
+        "kafka-cluster"
+      ],
       "family": "streaming",
       "product": "kafka",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_kafka_cluster_config.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/kafka-configuration",
-      "rules": ["confluent/kafka-cluster-config"],
+      "rootform_concept": "confluent.concept.kafka-configuration",
+      "rules": [
+        "confluent.rule.kafka-cluster-config"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_kafka_mirror_topic",
       "construct_kind": "managed_resource",
-      "contexts": ["core.runtime"],
+      "contexts": [
+        "rf.context.runtime"
+      ],
       "contributions": [],
       "family": "streaming",
       "product": "cluster-linking",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_kafka_mirror_topic.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
-      "relations": ["mirrors", "replicated-through"],
-      "rootform_concept": "core/message-topic",
-      "rules": ["confluent/kafka-mirror-topic"],
+      "relations": [
+        "mirrors",
+        "replicated-through"
+      ],
+      "rootform_concept": "confluent.concept.message-topic",
+      "rules": [
+        "confluent.rule.kafka-mirror-topic"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_kafka_topic",
       "construct_kind": "managed_resource",
-      "contexts": ["core.runtime"],
+      "contexts": [
+        "rf.context.runtime"
+      ],
       "contributions": [],
       "family": "streaming",
       "product": "kafka",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_kafka_topic.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
       "relations": [],
-      "rootform_concept": "core/message-topic",
-      "rules": ["confluent/kafka-topic"],
+      "rootform_concept": "confluent.concept.message-topic",
+      "rules": [
+        "confluent.rule.kafka-topic"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_ksql_cluster",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership", "core.runtime"],
+      "contexts": [
+        "confluent.context.ownership",
+        "rf.context.runtime"
+      ],
       "contributions": [],
       "family": "stream-processing",
       "product": "ksqldb",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_ksql_cluster.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
-      "relations": ["uses-principal"],
-      "rootform_concept": "confluent/ksqldb-cluster",
-      "rules": ["confluent/ksqldb-cluster"],
+      "relations": [
+        "uses-principal"
+      ],
+      "rootform_concept": "confluent.rule.ksqldb-cluster",
+      "rules": [
+        "confluent.rule.ksqldb-cluster"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_network",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "confluent.context.ownership"
+      ],
       "contributions": [],
       "family": "network",
       "product": "networking",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_network.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
       "relations": [],
-      "rootform_concept": "core/virtual-network",
-      "rules": ["confluent/network"],
+      "rootform_concept": "rf.concept.virtual-network",
+      "rules": [
+        "confluent.rule.network"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_network_link_endpoint",
       "construct_kind": "managed_resource",
-      "contexts": ["core.network"],
+      "contexts": [
+        "rf.context.network"
+      ],
       "contributions": [],
       "family": "network",
       "product": "networking",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_network_link_endpoint.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
-      "relations": ["connects-to"],
-      "rootform_concept": "confluent/network-link-endpoint",
-      "rules": ["confluent/network-link-endpoint"],
+      "relations": [
+        "connects-to"
+      ],
+      "rootform_concept": "confluent.rule.network-link-endpoint",
+      "rules": [
+        "confluent.rule.network-link-endpoint"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_network_link_service",
       "construct_kind": "managed_resource",
-      "contexts": ["core.network"],
+      "contexts": [
+        "rf.context.network"
+      ],
       "contributions": [],
       "family": "network",
       "product": "networking",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_network_link_service.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
       "relations": [],
-      "rootform_concept": "confluent/network-link-service",
-      "rules": ["confluent/network-link-service"],
+      "rootform_concept": "confluent.rule.network-link-service",
+      "rules": [
+        "confluent.rule.network-link-service"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_peering",
       "construct_kind": "managed_resource",
-      "contexts": ["core.network"],
+      "contexts": [
+        "rf.context.network"
+      ],
       "contributions": [],
       "family": "network",
       "product": "networking",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_peering.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
-      "relations": ["peers-with", "peers-with", "peers-with"],
-      "rootform_concept": "core/network-peering",
-      "rules": ["confluent/network-peering"],
+      "relations": [
+        "peers-with",
+        "peers-with",
+        "peers-with"
+      ],
+      "rootform_concept": "confluent.concept.network-peering",
+      "rules": [
+        "confluent.rule.network-peering"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_plugin",
@@ -1785,48 +2122,61 @@
       "family": "connectors",
       "product": "connectors",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_plugin.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/connector-artifact",
-      "rules": ["confluent/legacy-connector-plugin"],
+      "rootform_concept": "confluent.concept.connector-artifact",
+      "rules": [
+        "confluent.rule.legacy-connector-plugin"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_private_link_access",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["core.virtual-network"],
+      "contributions": [
+        "rf.concept.virtual-network"
+      ],
       "family": "network",
       "product": "networking",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_private_link_access.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/network-configuration",
-      "rules": ["confluent/private-link-access"],
+      "rootform_concept": "confluent.concept.network-configuration",
+      "rules": [
+        "confluent.rule.private-link-access"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_private_link_attachment",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "confluent.context.ownership"
+      ],
       "contributions": [],
       "family": "network",
       "product": "networking",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_private_link_attachment.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
       "relations": [],
-      "rootform_concept": "confluent/private-link-attachment",
-      "rules": ["confluent/private-link-attachment"],
+      "rootform_concept": "confluent.rule.private-link-attachment",
+      "rules": [
+        "confluent.rule.private-link-attachment"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_private_link_attachment_connection",
@@ -1837,64 +2187,89 @@
       "product": "networking",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_private_link_attachment_connection.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
-      "relations": ["connects-to", "connects-to", "connects-to", "connects-to-attachment"],
-      "rootform_concept": "core/private-endpoint",
-      "rules": ["confluent/private-link-attachment-connection"],
+      "relations": [
+        "connects-to",
+        "connects-to",
+        "connects-to",
+        "connects-to-attachment"
+      ],
+      "rootform_concept": "confluent.concept.private-endpoint",
+      "rules": [
+        "confluent.rule.private-link-attachment-connection"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_provider_integration",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "confluent.context.ownership"
+      ],
       "contributions": [],
       "family": "security",
       "product": "security-integrations",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_provider_integration.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
-      "relations": ["uses-cloud-identity"],
-      "rootform_concept": "confluent/provider-integration",
-      "rules": ["confluent/provider-integration"],
+      "relations": [
+        "uses-cloud-identity"
+      ],
+      "rootform_concept": "confluent.rule.provider-integration",
+      "rules": [
+        "confluent.rule.provider-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_provider_integration_authorization",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["provider-integration"],
+      "contributions": [
+        "provider-integration"
+      ],
       "family": "security",
       "product": "security-integrations",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_provider_integration_authorization.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/security-configuration",
-      "rules": ["confluent/provider-integration-authorization"],
+      "rootform_concept": "confluent.concept.security-configuration",
+      "rules": [
+        "confluent.rule.provider-integration-authorization"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_provider_integration_setup",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "confluent.context.ownership"
+      ],
       "contributions": [],
       "family": "security",
       "product": "security-integrations",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_provider_integration_setup.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/security-configuration",
-      "rules": ["confluent/provider-integration-setup"],
+      "rootform_concept": "confluent.concept.security-configuration",
+      "rules": [
+        "confluent.rule.provider-integration-setup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_role_binding",
@@ -1904,48 +2279,62 @@
       "family": "identity-iam",
       "product": "identity-access",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_role_binding.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/identity-access-configuration",
-      "rules": ["confluent/role-binding"],
+      "rootform_concept": "confluent.concept.identity-access-configuration",
+      "rules": [
+        "confluent.rule.role-binding"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_rtce_topic",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership", "core.runtime"],
+      "contexts": [
+        "confluent.context.ownership",
+        "rf.context.runtime"
+      ],
       "contributions": [],
       "family": "streaming",
       "product": "kafka",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_rtce_topic.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
       "relations": [],
-      "rootform_concept": "core/message-topic",
-      "rules": ["confluent/rtce-topic"],
+      "rootform_concept": "confluent.concept.message-topic",
+      "rules": [
+        "confluent.rule.rtce-topic"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_schema",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["schema-registry"],
+      "contributions": [
+        "schema-registry"
+      ],
       "family": "data-governance",
       "product": "stream-governance",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_schema.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/schema-registry-configuration",
-      "rules": ["confluent/schema"],
+      "rootform_concept": "confluent.concept.schema-registry-configuration",
+      "rules": [
+        "confluent.rule.schema"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_schema_exporter",
@@ -1956,81 +2345,107 @@
       "product": "stream-governance",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_schema_exporter.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
-      "relations": ["exports-from", "exports-to"],
-      "rootform_concept": "confluent/schema-link",
-      "rules": ["confluent/schema-exporter"],
+      "relations": [
+        "exports-from",
+        "exports-to"
+      ],
+      "rootform_concept": "confluent.concept.schema-link",
+      "rules": [
+        "confluent.rule.schema-exporter"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_schema_registry_cluster_config",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["schema-registry"],
+      "contributions": [
+        "schema-registry"
+      ],
       "family": "data-governance",
       "product": "stream-governance",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_schema_registry_cluster_config.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/schema-registry-configuration",
-      "rules": ["confluent/schema-registry-cluster-config"],
+      "rootform_concept": "confluent.concept.schema-registry-configuration",
+      "rules": [
+        "confluent.rule.schema-registry-cluster-config"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_schema_registry_cluster_mode",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["schema-registry"],
+      "contributions": [
+        "schema-registry"
+      ],
       "family": "data-governance",
       "product": "stream-governance",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_schema_registry_cluster_mode.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/schema-registry-configuration",
-      "rules": ["confluent/schema-registry-cluster-mode"],
+      "rootform_concept": "confluent.concept.schema-registry-configuration",
+      "rules": [
+        "confluent.rule.schema-registry-cluster-mode"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_schema_registry_dek",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["schema-registry"],
+      "contributions": [
+        "schema-registry"
+      ],
       "family": "data-governance",
       "product": "stream-governance",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_schema_registry_dek.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/schema-registry-configuration",
-      "rules": ["confluent/schema-registry-dek"],
+      "rootform_concept": "confluent.concept.schema-registry-configuration",
+      "rules": [
+        "confluent.rule.schema-registry-dek"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_schema_registry_kek",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["schema-registry"],
+      "contributions": [
+        "schema-registry"
+      ],
       "family": "data-governance",
       "product": "stream-governance",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_schema_registry_kek.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/schema-registry-configuration",
-      "rules": ["confluent/schema-registry-kek"],
+      "rootform_concept": "confluent.concept.schema-registry-configuration",
+      "rules": [
+        "confluent.rule.schema-registry-kek"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_service_account",
@@ -2042,51 +2457,67 @@
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_service_account.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
       "relations": [],
-      "rootform_concept": "core/service-identity",
-      "rules": ["confluent/service-account"],
+      "rootform_concept": "rf.concept.service-identity",
+      "rules": [
+        "confluent.rule.service-account"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_subject_config",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["schema-registry"],
+      "contributions": [
+        "schema-registry"
+      ],
       "family": "data-governance",
       "product": "stream-governance",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_subject_config.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/schema-registry-configuration",
-      "rules": ["confluent/subject-config"],
+      "rootform_concept": "confluent.concept.schema-registry-configuration",
+      "rules": [
+        "confluent.rule.subject-config"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_subject_mode",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["schema-registry"],
+      "contributions": [
+        "schema-registry"
+      ],
       "family": "data-governance",
       "product": "stream-governance",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_subject_mode.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/schema-registry-configuration",
-      "rules": ["confluent/subject-mode"],
+      "rootform_concept": "confluent.concept.schema-registry-configuration",
+      "rules": [
+        "confluent.rule.subject-mode"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_tableflow_topic",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership", "core.runtime"],
+      "contexts": [
+        "confluent.context.ownership",
+        "rf.context.runtime"
+      ],
       "contributions": [],
       "family": "data-governance",
       "product": "catalog-tableflow",
@@ -2098,12 +2529,15 @@
         "uses-provider-integration",
         "uses-provider-integration"
       ],
-      "rootform_concept": "confluent/tableflow-topic",
-      "rules": ["confluent/tableflow-topic"],
+      "rootform_concept": "confluent.rule.tableflow-topic",
+      "rules": [
+        "confluent.rule.tableflow-topic"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_tag",
@@ -2113,14 +2547,17 @@
       "family": "data-governance",
       "product": "catalog-tableflow",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_tag.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/governance-configuration",
-      "rules": ["confluent/tag"],
+      "rootform_concept": "confluent.concept.governance-configuration",
+      "rules": [
+        "confluent.rule.tag"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_tag_binding",
@@ -2130,14 +2567,17 @@
       "family": "data-governance",
       "product": "catalog-tableflow",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_tag_binding.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "confluent/governance-configuration",
-      "rules": ["confluent/tag-binding"],
+      "rootform_concept": "confluent.concept.governance-configuration",
+      "rules": [
+        "confluent.rule.tag-binding"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     },
     {
       "construct": "confluent_tf_importer",
@@ -2152,26 +2592,33 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["confluent-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "confluent-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "confluent_transit_gateway_attachment",
       "construct_kind": "managed_resource",
-      "contexts": ["core.network"],
+      "contexts": [
+        "rf.context.network"
+      ],
       "contributions": [],
       "family": "network",
       "product": "networking",
       "proof_url": "https://github.com/confluentinc/terraform-provider-confluent/blob/v2.83.0/docs/resources/confluent_transit_gateway_attachment.md",
       "reason": "architecture-role: durable service, scope, identity, or connectivity construct",
       "relations": [],
-      "rootform_concept": "confluent/transit-gateway-attachment",
-      "rules": ["confluent/transit-gateway-attachment"],
+      "rootform_concept": "confluent.rule.transit-gateway-attachment",
+      "rules": [
+        "confluent.rule.transit-gateway-attachment"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["confluent-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "confluent-compiler-scenarios"
+      ]
     }
   ]
 }

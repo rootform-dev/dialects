@@ -1,5 +1,4 @@
 concept "cluster-link" {
-  kind        = entity
   description = "A Confluent Cloud Cluster Linking connection between Kafka clusters."
 }
 
@@ -36,16 +35,16 @@ rule "kafka-mirror-topic" {
     type = "confluent_kafka_mirror_topic"
   }
 
-  as = concept.core.message-topic
+  as = concept.message-topic
 
   context {
-    as  = context.core.runtime
+    as  = rf.context.runtime
     to  = concept.kafka-cluster
     via = source.kafka_cluster[0].id
   }
 
   relation "mirrors" {
-    to  = concept.core.message-topic
+    to  = concept.message-topic
     via = source.source_kafka_topic[0].topic_name
   }
 

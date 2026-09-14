@@ -1,7 +1,0 @@
-rule "cloudfront-distribution" {
-  match {
-    type = "aws_cloudfront_distribution"
-  }
-
-  as = concept.cloudfront-distribution
-}

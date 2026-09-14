@@ -1,33 +1,10 @@
-concept "migration-center-source" {
-  kind        = entity
-  description = "A Migration Center source representing an environment being discovered."
-}
 
-concept "migration-center-discovery-client" {
-  kind        = entity
-  description = "A Migration Center discovery client collecting infrastructure data."
-}
 
 concept "migration-center-assessment" {
-  kind        = detail
   description = "An import, grouping, preference, report, or settings resource supporting migration assessment."
 }
 
-rule "migration-center-source" {
-  match {
-    type = "google_migration_center_source"
-  }
 
-  as = concept.migration-center-source
-}
-
-rule "migration-center-discovery-client" {
-  match {
-    type = "google_migration_center_discovery_client"
-  }
-
-  as = concept.migration-center-discovery-client
-}
 
 rule "migration-center-assets-export-job" {
   match {

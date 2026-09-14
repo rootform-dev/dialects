@@ -1,6 +1,5 @@
 # Maintained directly from pinned provider evidence.
 concept "azure-local-cluster" {
-  kind        = entity
   description = "An Azure Local or Azure Stack HCI cluster."
 }
 
@@ -12,7 +11,7 @@ rule "azure-local-cluster" {
   as = concept.azure-local-cluster
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

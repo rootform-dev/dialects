@@ -16,6 +16,6 @@ scripts, manifests, and dependencies are insufficient. This supports broad
 representation without dashboard/alert/IAM inventory and without secret reads.
 
 Telemetry abstractions remain Grafana-local until New Relic completes the
-Datadog/Grafana/New Relic comparison. PDC is not promoted to `core.private-endpoint`:
+Datadog/Grafana/New Relic comparison. PDC is not promoted to `private-endpoint`:
 official docs define an agent-backed outbound SSH connectivity network, not a
 provider-neutral private endpoint.

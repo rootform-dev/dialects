@@ -1,22 +1,15 @@
 concept "dataplex-lake" {
-  kind        = scope
   description = "A Dataplex lake organizing governed data domains."
 }
 
 concept "dataplex-zone" {
-  kind        = scope
   description = "A Dataplex zone organizing assets within a lake."
 }
 
 concept "dataplex-asset" {
-  kind        = entity
   description = "A data asset governed through Dataplex."
 }
 
-concept "dataplex-data-product" {
-  kind        = entity
-  description = "A Dataplex data product publishing governed data assets."
-}
 
 rule "dataplex-lake" {
   match {
@@ -34,7 +27,7 @@ rule "dataplex-zone" {
   as = concept.dataplex-zone
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.dataplex-lake
     via = source.lake
   }
@@ -54,12 +47,4 @@ rule "dataplex-data-asset" {
   }
 
   as = concept.dataplex-asset
-}
-
-rule "dataplex-data-product" {
-  match {
-    type = "google_dataplex_data_product"
-  }
-
-  as = concept.dataplex-data-product
 }

@@ -4,5 +4,5 @@ rule "elb" {
     type = "aws_elb"
   }
 
-  as = concept.core.load-balancer
+  as = concept.load-balancer
 }

@@ -1,5 +1,4 @@
 concept "extension-configuration" {
-  kind        = detail
   description = "A module or trigger binding supporting Auth0 identity extensions."
 }
 

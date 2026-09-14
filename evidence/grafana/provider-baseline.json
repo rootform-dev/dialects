@@ -232,7 +232,9 @@
       "grafana_users"
     ],
     "ephemeral_resources": [],
-    "provider_functions": ["k6bundle"],
+    "provider_functions": [
+      "k6bundle"
+    ],
     "resource_identities": []
   },
   "limitations": [

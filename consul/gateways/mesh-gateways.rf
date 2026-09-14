@@ -1,10 +1,8 @@
 concept "ingress-gateway" {
-  kind        = entity
   description = "A deprecated Consul gateway admitting traffic into the service mesh."
 }
 
 concept "terminating-gateway" {
-  kind        = entity
   description = "A Consul gateway connecting mesh services to services outside the mesh."
 }
 

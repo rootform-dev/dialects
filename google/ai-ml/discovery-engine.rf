@@ -1,25 +1,9 @@
-concept "discovery-engine-data-store" {
-  kind        = entity
-  description = "A Discovery Engine data store supplying grounded content."
-}
 
 concept "discovery-engine" {
-  kind        = entity
   description = "A Discovery Engine search, recommendation, or conversational engine."
 }
 
-concept "discovery-engine-assistant" {
-  kind        = entity
-  description = "A Discovery Engine assistant backed by enterprise data."
-}
 
-rule "discovery-engine-data-store" {
-  match {
-    type = "google_discovery_engine_data_store"
-  }
-
-  as = concept.discovery-engine-data-store
-}
 
 rule "discovery-engine-search-engine" {
   match {
@@ -43,12 +27,4 @@ rule "discovery-engine-recommendation-engine" {
   }
 
   as = concept.discovery-engine
-}
-
-rule "discovery-engine-assistant" {
-  match {
-    type = "google_discovery_engine_assistant"
-  }
-
-  as = concept.discovery-engine-assistant
 }

@@ -1,6 +1,5 @@
 # Maintained directly from pinned provider evidence.
 concept "app-configuration" {
-  kind        = entity
   description = "An Azure App Configuration store."
 }
 
@@ -12,7 +11,7 @@ rule "app-configuration" {
   as = concept.app-configuration
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

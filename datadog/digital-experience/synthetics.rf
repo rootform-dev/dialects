@@ -3,7 +3,7 @@ rule "synthetics-private-location" {
     type = "datadog_synthetics_private_location"
   }
 
-  as = concept.core.synthetic-execution-location
+  as = concept.synthetic-execution-location
 }
 
 rule "synthetics-suite" {
@@ -11,7 +11,7 @@ rule "synthetics-suite" {
     type = "datadog_synthetics_suite"
   }
 
-  as = concept.core.synthetic-check
+  as = concept.synthetic-check
 }
 
 rule "synthetics-test" {
@@ -19,10 +19,10 @@ rule "synthetics-test" {
     type = "datadog_synthetics_test"
   }
 
-  as = concept.core.synthetic-check
+  as = concept.synthetic-check
 
   contribution {
-    to  = concept.core.synthetic-execution-location
+    to  = concept.synthetic-execution-location
     via = source.locations
   }
 }
@@ -33,5 +33,5 @@ rule "synthetics-test-lookup" {
     type = "datadog_synthetics_test"
   }
 
-  as = concept.core.synthetic-check
+  as = concept.synthetic-check
 }

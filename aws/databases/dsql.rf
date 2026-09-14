@@ -4,5 +4,5 @@ rule "dsql-cluster" {
     type = "aws_dsql_cluster"
   }
 
-  as = concept.core.managed-database
+  as = rf.concept.managed-database
 }

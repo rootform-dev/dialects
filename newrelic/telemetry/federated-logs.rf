@@ -1,15 +1,12 @@
 concept "aws-connection" {
-  kind        = entity
   description = "An AWS role-backed connection used by New Relic to ingest or query data."
 }
 
 concept "federated-logs-partition" {
-  kind        = detail
   description = "A storage, retention, and forwarding partition supporting a Federated Logs setup."
 }
 
 concept "federated-logs-setup" {
-  kind        = entity
   description = "A New Relic Federated Logs storage and query boundary backed by external cloud storage."
 }
 
@@ -21,15 +18,11 @@ rule "aws-connection" {
   as = concept.aws-connection
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.account_id
   }
 
-  relation "authorized-by" {
-    to  = concept.core.service-identity
-    via = source.credential[0].assume_role[0].role_arn
-  }
 }
 
 rule "federated-logs-partition" {
@@ -40,8 +33,8 @@ rule "federated-logs-partition" {
   as = concept.federated-logs-partition
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.account_id
   }
 
@@ -59,8 +52,8 @@ rule "federated-logs-setup" {
   as = concept.federated-logs-setup
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.account_id
   }
 

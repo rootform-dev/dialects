@@ -22,9 +22,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_accounts",
@@ -39,9 +41,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_alerts",
@@ -56,9 +60,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_api_integrations",
@@ -73,9 +79,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_authentication_policies",
@@ -90,9 +98,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_catalog_integrations",
@@ -107,9 +117,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_compute_pools",
@@ -124,9 +136,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_connections",
@@ -141,9 +155,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_cortex_agents",
@@ -158,9 +174,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_cortex_search_services",
@@ -175,9 +193,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_current_account",
@@ -192,9 +212,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_current_role",
@@ -209,9 +231,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_database",
@@ -226,9 +250,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_database_role",
@@ -243,9 +269,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_database_roles",
@@ -260,9 +288,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_databases",
@@ -277,9 +307,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_dynamic_tables",
@@ -294,9 +326,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_external_access_integrations",
@@ -311,9 +345,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_external_functions",
@@ -328,9 +364,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_external_tables",
@@ -345,9 +383,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_external_volumes",
@@ -362,9 +402,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_failover_groups",
@@ -379,9 +421,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_file_formats",
@@ -396,9 +440,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_functions",
@@ -413,9 +459,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_git_repositories",
@@ -430,9 +478,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_grants",
@@ -447,9 +497,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_iceberg_tables",
@@ -464,9 +516,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_image_repositories",
@@ -481,9 +535,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_listings",
@@ -498,9 +554,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_masking_policies",
@@ -515,9 +573,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_materialized_views",
@@ -532,9 +592,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_mcp_servers",
@@ -549,9 +611,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_network_policies",
@@ -566,9 +630,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_network_rules",
@@ -583,9 +649,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_notebooks",
@@ -600,9 +668,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_parameters",
@@ -617,9 +687,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_password_policies",
@@ -634,9 +706,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_pipes",
@@ -651,9 +725,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_procedures",
@@ -668,9 +744,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_resource_monitors",
@@ -685,9 +763,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_row_access_policies",
@@ -702,9 +782,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_schemas",
@@ -719,9 +801,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_secrets",
@@ -736,9 +820,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_security_integrations",
@@ -753,9 +839,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_semantic_views",
@@ -770,9 +858,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_sequences",
@@ -787,9 +877,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_services",
@@ -804,9 +896,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_session_policies",
@@ -821,9 +915,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_shares",
@@ -838,9 +934,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_stages",
@@ -855,9 +953,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_storage_integrations",
@@ -872,9 +972,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_storage_lifecycle_policies",
@@ -889,9 +991,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_streamlits",
@@ -906,9 +1010,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_streams",
@@ -923,9 +1029,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_system_generate_scim_access_token",
@@ -940,9 +1048,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_system_get_aws_sns_iam_policy",
@@ -957,9 +1067,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_system_get_privatelink_config",
@@ -974,9 +1086,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_system_get_snowflake_platform_info",
@@ -991,9 +1105,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_tables",
@@ -1008,9 +1124,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_tags",
@@ -1025,9 +1143,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_tasks",
@@ -1042,9 +1162,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_user_programmatic_access_tokens",
@@ -1059,9 +1181,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_users",
@@ -1076,9 +1200,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_views",
@@ -1093,9 +1219,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_warehouses",
@@ -1110,9 +1238,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_account",
@@ -1124,12 +1254,15 @@
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/account.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/account",
-      "rules": ["snowflake/account"],
+      "rootform_concept": "snowflake.rule.account",
+      "rules": [
+        "snowflake.rule.account"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_account_authentication_policy_attachment",
@@ -1144,9 +1277,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_account_parameter",
@@ -1161,9 +1296,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_account_password_policy_attachment",
@@ -1178,9 +1315,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_account_role",
@@ -1190,14 +1329,13 @@
       "family": "identity-iam",
       "product": "identity-access",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/account_role.md",
-      "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
+      "reason": "no-rule",
       "relations": [],
-      "rootform_concept": "snowflake/account-role",
-      "rules": ["snowflake/account-role"],
+      "rootform_concept": null,
+      "rules": [],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "no-rule",
+      "tests": []
     },
     {
       "construct": "snowflake_account_session_policy_attachment",
@@ -1212,26 +1350,34 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_alert",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership", "core.runtime"],
+      "contexts": [
+        "snowflake.context.ownership",
+        "rf.context.runtime"
+      ],
       "contributions": [],
       "family": "observability",
       "product": "observability-cost",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/alert.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/alert",
-      "rules": ["snowflake/alert"],
+      "rootform_concept": "snowflake.rule.alert",
+      "rules": [
+        "snowflake.rule.alert"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_api_authentication_integration_with_authorization_code_grant",
@@ -1243,12 +1389,15 @@
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_authentication_integration_with_authorization_code_grant.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/identity-integration",
-      "rules": ["snowflake/authorization-code-api-authentication"],
+      "rootform_concept": "snowflake.concept.identity-integration",
+      "rules": [
+        "snowflake.rule.authorization-code-api-authentication"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_api_authentication_integration_with_client_credentials",
@@ -1260,12 +1409,15 @@
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_authentication_integration_with_client_credentials.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/identity-integration",
-      "rules": ["snowflake/client-credentials-api-authentication"],
+      "rootform_concept": "snowflake.concept.identity-integration",
+      "rules": [
+        "snowflake.rule.client-credentials-api-authentication"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_api_authentication_integration_with_jwt_bearer",
@@ -1277,12 +1429,15 @@
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_authentication_integration_with_jwt_bearer.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/identity-integration",
-      "rules": ["snowflake/jwt-bearer-api-authentication"],
+      "rootform_concept": "snowflake.concept.identity-integration",
+      "rules": [
+        "snowflake.rule.jwt-bearer-api-authentication"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_api_integration",
@@ -1293,13 +1448,19 @@
       "product": "api-external-access",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["assumes-cloud-identity", "connects-api-gateway"],
-      "rootform_concept": "snowflake/api-integration",
-      "rules": ["snowflake/api-integration"],
+      "relations": [
+        "assumes-cloud-identity",
+        "connects-api-gateway"
+      ],
+      "rootform_concept": "snowflake.rule.api-integration",
+      "rules": [
+        "snowflake.rule.api-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_api_integration_amazon_api_gateway",
@@ -1310,13 +1471,19 @@
       "product": "api-external-access",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_amazon_api_gateway.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["assumes-cloud-identity", "connects-api-gateway"],
-      "rootform_concept": "snowflake/api-integration",
-      "rules": ["snowflake/amazon-api-gateway-integration"],
+      "relations": [
+        "assumes-cloud-identity",
+        "connects-api-gateway"
+      ],
+      "rootform_concept": "snowflake.rule.api-integration",
+      "rules": [
+        "snowflake.rule.amazon-api-gateway-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_api_integration_azure_api_management",
@@ -1327,13 +1494,18 @@
       "product": "api-external-access",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_azure_api_management.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["connects-api-gateway"],
-      "rootform_concept": "snowflake/api-integration",
-      "rules": ["snowflake/azure-api-management-integration"],
+      "relations": [
+        "connects-api-gateway"
+      ],
+      "rootform_concept": "snowflake.rule.api-integration",
+      "rules": [
+        "snowflake.rule.azure-api-management-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_api_integration_external_mcp_dynamic_client",
@@ -1345,12 +1517,15 @@
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_external_mcp_dynamic_client.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/api-integration",
-      "rules": ["snowflake/external-mcp-dynamic-client-integration"],
+      "rootform_concept": "snowflake.rule.api-integration",
+      "rules": [
+        "snowflake.rule.external-mcp-dynamic-client-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_api_integration_external_mcp_oauth2",
@@ -1362,12 +1537,15 @@
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_external_mcp_oauth2.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/api-integration",
-      "rules": ["snowflake/external-mcp-oauth2-integration"],
+      "rootform_concept": "snowflake.rule.api-integration",
+      "rules": [
+        "snowflake.rule.external-mcp-oauth2-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_api_integration_git_repository_github_app",
@@ -1379,12 +1557,15 @@
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_git_repository_github_app.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/api-integration",
-      "rules": ["snowflake/github-app-repository-integration"],
+      "rootform_concept": "snowflake.rule.api-integration",
+      "rules": [
+        "snowflake.rule.github-app-repository-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_api_integration_git_repository_oauth2",
@@ -1396,12 +1577,15 @@
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_git_repository_oauth2.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/api-integration",
-      "rules": ["snowflake/oauth2-repository-integration"],
+      "rootform_concept": "snowflake.rule.api-integration",
+      "rules": [
+        "snowflake.rule.oauth2-repository-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_api_integration_git_repository_private_link",
@@ -1413,12 +1597,15 @@
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_git_repository_private_link.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/api-integration",
-      "rules": ["snowflake/private-link-repository-integration"],
+      "rootform_concept": "snowflake.rule.api-integration",
+      "rules": [
+        "snowflake.rule.private-link-repository-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_api_integration_git_repository_token",
@@ -1430,12 +1617,15 @@
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_git_repository_token.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/api-integration",
-      "rules": ["snowflake/token-repository-integration"],
+      "rootform_concept": "snowflake.rule.api-integration",
+      "rules": [
+        "snowflake.rule.token-repository-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_api_integration_google_cloud_api_gateway",
@@ -1446,13 +1636,18 @@
       "product": "api-external-access",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/api_integration_google_cloud_api_gateway.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["connects-api-gateway"],
-      "rootform_concept": "snowflake/api-integration",
-      "rules": ["snowflake/google-cloud-api-gateway-integration"],
+      "relations": [
+        "connects-api-gateway"
+      ],
+      "rootform_concept": "snowflake.rule.api-integration",
+      "rules": [
+        "snowflake.rule.google-cloud-api-gateway-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_authentication_policy",
@@ -1467,9 +1662,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_catalog_integration_aws_glue",
@@ -1480,13 +1677,18 @@
       "product": "iceberg-catalogs",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/catalog_integration_aws_glue.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["assumes-cloud-identity"],
-      "rootform_concept": "snowflake/catalog-integration",
-      "rules": ["snowflake/aws-glue-catalog-integration"],
+      "relations": [
+        "assumes-cloud-identity"
+      ],
+      "rootform_concept": "snowflake.concept.catalog-integration",
+      "rules": [
+        "snowflake.rule.aws-glue-catalog-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_catalog_integration_iceberg_rest",
@@ -1497,13 +1699,18 @@
       "product": "iceberg-catalogs",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/catalog_integration_iceberg_rest.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["assumes-cloud-identity"],
-      "rootform_concept": "snowflake/catalog-integration",
-      "rules": ["snowflake/iceberg-rest-catalog-integration"],
+      "relations": [
+        "assumes-cloud-identity"
+      ],
+      "rootform_concept": "snowflake.concept.catalog-integration",
+      "rules": [
+        "snowflake.rule.iceberg-rest-catalog-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_catalog_integration_object_storage",
@@ -1515,12 +1722,15 @@
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/catalog_integration_object_storage.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/catalog-integration",
-      "rules": ["snowflake/object-storage-catalog-integration"],
+      "rootform_concept": "snowflake.concept.catalog-integration",
+      "rules": [
+        "snowflake.rule.object-storage-catalog-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_catalog_integration_open_catalog",
@@ -1532,12 +1742,15 @@
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/catalog_integration_open_catalog.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/catalog-integration",
-      "rules": ["snowflake/open-catalog-integration"],
+      "rootform_concept": "snowflake.concept.catalog-integration",
+      "rules": [
+        "snowflake.rule.open-catalog-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_compute_pool",
@@ -1549,46 +1762,60 @@
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/compute_pool.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/compute-pool",
-      "rules": ["snowflake/compute-pool"],
+      "rootform_concept": "snowflake.rule.compute-pool",
+      "rules": [
+        "snowflake.rule.compute-pool"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_cortex_agent",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "snowflake.context.ownership"
+      ],
       "contributions": [],
       "family": "ai-ml",
       "product": "cortex-ai",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/cortex_agent.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/cortex-agent",
-      "rules": ["snowflake/cortex-agent"],
+      "rootform_concept": "snowflake.rule.cortex-agent",
+      "rules": [
+        "snowflake.rule.cortex-agent"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_cortex_search_service",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership", "core.runtime"],
+      "contexts": [
+        "snowflake.context.ownership",
+        "rf.context.runtime"
+      ],
       "contributions": [],
       "family": "ai-ml",
       "product": "cortex-ai",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/cortex_search_service.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/cortex-search-service",
-      "rules": ["snowflake/cortex-search-service"],
+      "rootform_concept": "snowflake.rule.cortex-search-service",
+      "rules": [
+        "snowflake.rule.cortex-search-service"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_current_account",
@@ -1598,14 +1825,17 @@
       "family": "governance",
       "product": "organizations-accounts",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/current_account.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "snowflake/account-configuration",
-      "rules": ["snowflake/current-account"],
+      "rootform_concept": "snowflake.concept.account-configuration",
+      "rules": [
+        "snowflake.rule.current-account"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_current_organization_account",
@@ -1615,14 +1845,17 @@
       "family": "governance",
       "product": "organizations-accounts",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/current_organization_account.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "snowflake/account-configuration",
-      "rules": ["snowflake/current-organization-account"],
+      "rootform_concept": "snowflake.concept.account-configuration",
+      "rules": [
+        "snowflake.rule.current-organization-account"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_database",
@@ -1633,47 +1866,63 @@
       "product": "databases-schemas",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/database.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["uses-external-volume"],
-      "rootform_concept": "snowflake/database",
-      "rules": ["snowflake/database"],
+      "relations": [
+        "uses-external-volume"
+      ],
+      "rootform_concept": "snowflake.rule.database",
+      "rules": [
+        "snowflake.rule.database"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_database_role",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["database"],
+      "contributions": [
+        "database"
+      ],
       "family": "identity-iam",
       "product": "identity-access",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/database_role.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "snowflake/security-configuration",
-      "rules": ["snowflake/database-role"],
+      "rootform_concept": "snowflake.concept.security-configuration",
+      "rules": [
+        "snowflake.rule.database-role"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_dynamic_table",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership", "core.runtime"],
+      "contexts": [
+        "snowflake.context.ownership",
+        "rf.context.runtime"
+      ],
       "contributions": [],
       "family": "data-platform",
       "product": "databases-schemas",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/dynamic_table.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/dynamic-table",
-      "rules": ["snowflake/dynamic-table"],
+      "rootform_concept": "snowflake.rule.dynamic-table",
+      "rules": [
+        "snowflake.rule.dynamic-table"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_email_notification_integration",
@@ -1685,12 +1934,15 @@
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/email_notification_integration.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/notification-integration",
-      "rules": ["snowflake/email-notification-integration"],
+      "rootform_concept": "snowflake.rule.notification-integration",
+      "rules": [
+        "snowflake.rule.email-notification-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_execute",
@@ -1705,9 +1957,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_external_access_integration",
@@ -1718,30 +1972,42 @@
       "product": "api-external-access",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/external_access_integration.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["uses-api-authentication-integration"],
-      "rootform_concept": "snowflake/external-access-integration",
-      "rules": ["snowflake/external-access-integration"],
+      "relations": [
+        "uses-api-authentication-integration"
+      ],
+      "rootform_concept": "snowflake.rule.external-access-integration",
+      "rules": [
+        "snowflake.rule.external-access-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_external_function",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "snowflake.context.ownership"
+      ],
       "contributions": [],
       "family": "api-integration",
       "product": "api-external-access",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/external_function.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["uses-api-integration"],
-      "rootform_concept": "snowflake/external-function",
-      "rules": ["snowflake/external-function"],
+      "relations": [
+        "uses-api-integration"
+      ],
+      "rootform_concept": "snowflake.rule.external-function",
+      "rules": [
+        "snowflake.rule.external-function"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_external_oauth_integration",
@@ -1753,29 +2019,37 @@
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/external_oauth_integration.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/identity-integration",
-      "rules": ["snowflake/external-oauth-integration"],
+      "rootform_concept": "snowflake.concept.identity-integration",
+      "rules": [
+        "snowflake.rule.external-oauth-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_external_table",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["schema"],
+      "contributions": [
+        "schema"
+      ],
       "family": "data-platform",
       "product": "databases-schemas",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/external_table.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "snowflake/data-object-configuration",
-      "rules": ["snowflake/external-table"],
+      "rootform_concept": "snowflake.concept.data-object-configuration",
+      "rules": [
+        "snowflake.rule.external-table"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_external_volume",
@@ -1792,12 +2066,15 @@
         "uses-object-storage",
         "uses-object-storage"
       ],
-      "rootform_concept": "snowflake/external-volume",
-      "rules": ["snowflake/external-volume"],
+      "rootform_concept": "snowflake.rule.external-volume",
+      "rules": [
+        "snowflake.rule.external-volume"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_failover_group",
@@ -1808,13 +2085,20 @@
       "product": "sharing-continuity",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/failover_group.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["replicates-database", "replicates-share", "replicates-to-account"],
-      "rootform_concept": "snowflake/failover-group",
-      "rules": ["snowflake/failover-group"],
+      "relations": [
+        "replicates-database",
+        "replicates-share",
+        "replicates-to-account"
+      ],
+      "rootform_concept": "snowflake.rule.failover-group",
+      "rules": [
+        "snowflake.rule.failover-group"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_file_format",
@@ -1829,9 +2113,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_file_format_avro",
@@ -1846,9 +2132,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_file_format_csv",
@@ -1863,9 +2151,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_file_format_json",
@@ -1880,9 +2170,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_file_format_orc",
@@ -1897,9 +2189,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_file_format_parquet",
@@ -1914,9 +2208,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_file_format_xml",
@@ -1931,9 +2227,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_function_java",
@@ -1948,9 +2246,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_function_javascript",
@@ -1965,9 +2265,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_function_python",
@@ -1982,9 +2284,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_function_scala",
@@ -1999,9 +2303,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_function_sql",
@@ -2016,26 +2322,35 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_git_repository",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "snowflake.context.ownership"
+      ],
       "contributions": [],
       "family": "api-integration",
       "product": "api-external-access",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/git_repository.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["uses-api-integration"],
-      "rootform_concept": "snowflake/git-repository",
-      "rules": ["snowflake/git-repository"],
+      "relations": [
+        "uses-api-integration"
+      ],
+      "rootform_concept": "snowflake.rule.git-repository",
+      "rules": [
+        "snowflake.rule.git-repository"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_grant_account_role",
@@ -2050,9 +2365,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_grant_application_role",
@@ -2067,9 +2384,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_grant_database_role",
@@ -2084,9 +2403,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_grant_ownership",
@@ -2101,9 +2422,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_grant_privileges_to_account_role",
@@ -2118,9 +2441,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_grant_privileges_to_database_role",
@@ -2135,9 +2460,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_grant_privileges_to_share",
@@ -2152,133 +2479,173 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_hybrid_table",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["schema"],
+      "contributions": [
+        "schema"
+      ],
       "family": "data-platform",
       "product": "databases-schemas",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/hybrid_table.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "snowflake/data-object-configuration",
-      "rules": ["snowflake/hybrid-table"],
+      "rootform_concept": "snowflake.concept.data-object-configuration",
+      "rules": [
+        "snowflake.rule.hybrid-table"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_iceberg_table",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["schema"],
+      "contributions": [
+        "schema"
+      ],
       "family": "data-catalog",
       "product": "iceberg-catalogs",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/iceberg_table.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "snowflake/data-object-configuration",
-      "rules": ["snowflake/iceberg-table"],
+      "rootform_concept": "snowflake.concept.data-object-configuration",
+      "rules": [
+        "snowflake.rule.iceberg-table"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_iceberg_table_from_aws_glue",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["schema"],
+      "contributions": [
+        "schema"
+      ],
       "family": "data-catalog",
       "product": "iceberg-catalogs",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/iceberg_table_from_aws_glue.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "snowflake/data-object-configuration",
-      "rules": ["snowflake/iceberg-table-from-aws-glue"],
+      "rootform_concept": "snowflake.concept.data-object-configuration",
+      "rules": [
+        "snowflake.rule.iceberg-table-from-aws-glue"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_iceberg_table_from_delta_files",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["schema"],
+      "contributions": [
+        "schema"
+      ],
       "family": "data-catalog",
       "product": "iceberg-catalogs",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/iceberg_table_from_delta_files.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "snowflake/data-object-configuration",
-      "rules": ["snowflake/iceberg-table-from-delta-files"],
+      "rootform_concept": "snowflake.concept.data-object-configuration",
+      "rules": [
+        "snowflake.rule.iceberg-table-from-delta-files"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_iceberg_table_from_files",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["schema"],
+      "contributions": [
+        "schema"
+      ],
       "family": "data-catalog",
       "product": "iceberg-catalogs",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/iceberg_table_from_files.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "snowflake/data-object-configuration",
-      "rules": ["snowflake/iceberg-table-from-files"],
+      "rootform_concept": "snowflake.concept.data-object-configuration",
+      "rules": [
+        "snowflake.rule.iceberg-table-from-files"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_iceberg_table_from_rest",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["schema"],
+      "contributions": [
+        "schema"
+      ],
       "family": "data-catalog",
       "product": "iceberg-catalogs",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/iceberg_table_from_rest.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "snowflake/data-object-configuration",
-      "rules": ["snowflake/iceberg-table-from-rest"],
+      "rootform_concept": "snowflake.concept.data-object-configuration",
+      "rules": [
+        "snowflake.rule.iceberg-table-from-rest"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_image_repository",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "snowflake.context.ownership"
+      ],
       "contributions": [],
       "family": "containers",
       "product": "snowpark-container-services",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/image_repository.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/image-repository",
-      "rules": ["snowflake/image-repository"],
+      "rootform_concept": "snowflake.rule.image-repository",
+      "rules": [
+        "snowflake.rule.image-repository"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_job_service",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership", "core.runtime"],
+      "contexts": [
+        "snowflake.context.ownership",
+        "rf.context.runtime"
+      ],
       "contributions": [],
       "family": "containers",
       "product": "snowpark-container-services",
@@ -2289,12 +2656,15 @@
         "queries-on-warehouse",
         "uses-external-access"
       ],
-      "rootform_concept": "snowflake/container-service",
-      "rules": ["snowflake/job-service"],
+      "rootform_concept": "snowflake.concept.container-service",
+      "rules": [
+        "snowflake.rule.job-service"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_legacy_service_user",
@@ -2305,13 +2675,19 @@
       "product": "identity-access",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/legacy_service_user.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["uses-default-warehouse", "uses-network-policy"],
-      "rootform_concept": "core/service-identity",
-      "rules": ["snowflake/legacy-service-user"],
+      "relations": [
+        "uses-default-warehouse",
+        "uses-network-policy"
+      ],
+      "rootform_concept": "rf.concept.service-identity",
+      "rules": [
+        "snowflake.rule.legacy-service-user"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_listing",
@@ -2322,13 +2698,18 @@
       "product": "sharing-continuity",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/listing.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["publishes-share"],
-      "rootform_concept": "snowflake/listing",
-      "rules": ["snowflake/listing"],
+      "relations": [
+        "publishes-share"
+      ],
+      "rootform_concept": "snowflake.rule.listing",
+      "rules": [
+        "snowflake.rule.listing"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_managed_account",
@@ -2340,12 +2721,15 @@
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/managed_account.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/account",
-      "rules": ["snowflake/managed-account"],
+      "rootform_concept": "snowflake.rule.account",
+      "rules": [
+        "snowflake.rule.managed-account"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_masking_policy",
@@ -2360,9 +2744,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_materialized_view",
@@ -2377,26 +2763,33 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_mcp_server",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "snowflake.context.ownership"
+      ],
       "contributions": [],
       "family": "ai-ml",
       "product": "cortex-ai",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/mcp_server.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/mcp-server",
-      "rules": ["snowflake/mcp-server"],
+      "rootform_concept": "snowflake.rule.mcp-server",
+      "rules": [
+        "snowflake.rule.mcp-server"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_network_policy",
@@ -2408,12 +2801,15 @@
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/network_policy.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/network-policy",
-      "rules": ["snowflake/network-policy"],
+      "rootform_concept": "snowflake.rule.network-policy",
+      "rules": [
+        "snowflake.rule.network-policy"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_network_policy_attachment",
@@ -2428,43 +2824,58 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_network_rule",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["schema"],
+      "contributions": [
+        "schema"
+      ],
       "family": "security",
       "product": "network-security",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/network_rule.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "snowflake/security-configuration",
-      "rules": ["snowflake/network-rule"],
+      "rootform_concept": "snowflake.concept.security-configuration",
+      "rules": [
+        "snowflake.rule.network-rule"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_notebook",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership", "core.runtime"],
+      "contexts": [
+        "snowflake.context.ownership",
+        "rf.context.runtime"
+      ],
       "contributions": [],
       "family": "applications",
       "product": "applications",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/notebook.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["loads-code-from-stage"],
-      "rootform_concept": "snowflake/application",
-      "rules": ["snowflake/notebook"],
+      "relations": [
+        "loads-code-from-stage"
+      ],
+      "rootform_concept": "snowflake.concept.application",
+      "rules": [
+        "snowflake.rule.notebook"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_notification_integration",
@@ -2484,12 +2895,15 @@
         "connects-message-topic",
         "connects-message-topic"
       ],
-      "rootform_concept": "snowflake/notification-integration",
-      "rules": ["snowflake/notification-integration"],
+      "rootform_concept": "snowflake.rule.notification-integration",
+      "rules": [
+        "snowflake.rule.notification-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_oauth_integration_for_custom_clients",
@@ -2500,13 +2914,18 @@
       "product": "identity-access",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/oauth_integration_for_custom_clients.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["uses-network-policy"],
-      "rootform_concept": "snowflake/identity-integration",
-      "rules": ["snowflake/custom-client-oauth-integration"],
+      "relations": [
+        "uses-network-policy"
+      ],
+      "rootform_concept": "snowflake.concept.identity-integration",
+      "rules": [
+        "snowflake.rule.custom-client-oauth-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_oauth_integration_for_partner_applications",
@@ -2518,12 +2937,15 @@
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/oauth_integration_for_partner_applications.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/identity-integration",
-      "rules": ["snowflake/partner-application-oauth-integration"],
+      "rootform_concept": "snowflake.concept.identity-integration",
+      "rules": [
+        "snowflake.rule.partner-application-oauth-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_object_parameter",
@@ -2538,9 +2960,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_password_policy",
@@ -2555,14 +2979,18 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_pipe",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "snowflake.context.ownership"
+      ],
       "contributions": [],
       "family": "data-pipelines",
       "product": "ingestion-orchestration",
@@ -2573,12 +3001,15 @@
         "reports-to-notification-integration",
         "uses-notification-integration"
       ],
-      "rootform_concept": "snowflake/data-pipe",
-      "rules": ["snowflake/pipe"],
+      "rootform_concept": "snowflake.concept.data-pipe",
+      "rules": [
+        "snowflake.rule.pipe"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_postgres_instance",
@@ -2589,13 +3020,19 @@
       "product": "databases-schemas",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/postgres_instance.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["uses-network-policy", "uses-storage-integration"],
-      "rootform_concept": "core/managed-database",
-      "rules": ["snowflake/postgres-instance"],
+      "relations": [
+        "uses-network-policy",
+        "uses-storage-integration"
+      ],
+      "rootform_concept": "rf.concept.managed-database",
+      "rules": [
+        "snowflake.rule.postgres-instance"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_primary_connection",
@@ -2606,13 +3043,18 @@
       "product": "sharing-continuity",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/primary_connection.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["fails-over-to-account"],
-      "rootform_concept": "snowflake/account-connection",
-      "rules": ["snowflake/primary-connection"],
+      "relations": [
+        "fails-over-to-account"
+      ],
+      "rootform_concept": "snowflake.concept.account-connection",
+      "rules": [
+        "snowflake.rule.primary-connection"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_procedure_java",
@@ -2627,9 +3069,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_procedure_javascript",
@@ -2644,9 +3088,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_procedure_python",
@@ -2661,9 +3107,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_procedure_scala",
@@ -2678,9 +3126,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_procedure_sql",
@@ -2695,9 +3145,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_resource_monitor",
@@ -2707,14 +3159,13 @@
       "family": "observability",
       "product": "observability-cost",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/resource_monitor.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "no-rule",
       "relations": [],
-      "rootform_concept": "snowflake/monitoring-configuration",
-      "rules": ["snowflake/resource-monitor"],
+      "rootform_concept": null,
+      "rules": [],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "no-rule",
+      "tests": []
     },
     {
       "construct": "snowflake_row_access_policy",
@@ -2729,9 +3180,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_saml2_integration",
@@ -2743,29 +3196,39 @@
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/saml2_integration.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/identity-integration",
-      "rules": ["snowflake/saml2-integration"],
+      "rootform_concept": "snowflake.concept.identity-integration",
+      "rules": [
+        "snowflake.rule.saml2-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_schema",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "snowflake.context.ownership"
+      ],
       "contributions": [],
       "family": "data-platform",
       "product": "databases-schemas",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/schema.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["uses-external-volume"],
-      "rootform_concept": "snowflake/schema",
-      "rules": ["snowflake/schema"],
+      "relations": [
+        "uses-external-volume"
+      ],
+      "rootform_concept": "snowflake.rule.schema",
+      "rules": [
+        "snowflake.rule.schema"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_scim_integration",
@@ -2776,13 +3239,18 @@
       "product": "identity-access",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/scim_integration.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["uses-network-policy"],
-      "rootform_concept": "snowflake/identity-integration",
-      "rules": ["snowflake/scim-integration"],
+      "relations": [
+        "uses-network-policy"
+      ],
+      "rootform_concept": "snowflake.concept.identity-integration",
+      "rules": [
+        "snowflake.rule.scim-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_secondary_connection",
@@ -2793,13 +3261,18 @@
       "product": "sharing-continuity",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/secondary_connection.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["replicates-connection"],
-      "rootform_concept": "snowflake/account-connection",
-      "rules": ["snowflake/secondary-connection"],
+      "relations": [
+        "replicates-connection"
+      ],
+      "rootform_concept": "snowflake.concept.account-connection",
+      "rules": [
+        "snowflake.rule.secondary-connection"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_secondary_database",
@@ -2810,13 +3283,19 @@
       "product": "sharing-continuity",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/secondary_database.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["replicates-database", "uses-external-volume"],
-      "rootform_concept": "snowflake/database",
-      "rules": ["snowflake/secondary-database"],
+      "relations": [
+        "replicates-database",
+        "uses-external-volume"
+      ],
+      "rootform_concept": "snowflake.rule.database",
+      "rules": [
+        "snowflake.rule.secondary-database"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_secret_with_authorization_code_grant",
@@ -2831,9 +3310,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_secret_with_basic_authentication",
@@ -2848,9 +3329,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_secret_with_client_credentials",
@@ -2865,9 +3348,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_secret_with_generic_string",
@@ -2882,26 +3367,33 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_semantic_view",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["schema"],
+      "contributions": [
+        "schema"
+      ],
       "family": "data-platform",
       "product": "databases-schemas",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/semantic_view.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "snowflake/data-object-configuration",
-      "rules": ["snowflake/semantic-view"],
+      "rootform_concept": "snowflake.concept.data-object-configuration",
+      "rules": [
+        "snowflake.rule.semantic-view"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_sequence",
@@ -2916,14 +3408,19 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_service",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership", "core.runtime"],
+      "contexts": [
+        "snowflake.context.ownership",
+        "rf.context.runtime"
+      ],
       "contributions": [],
       "family": "containers",
       "product": "snowpark-container-services",
@@ -2934,12 +3431,15 @@
         "queries-on-warehouse",
         "uses-external-access"
       ],
-      "rootform_concept": "snowflake/container-service",
-      "rules": ["snowflake/service"],
+      "rootform_concept": "snowflake.concept.container-service",
+      "rules": [
+        "snowflake.rule.service"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_service_user",
@@ -2950,13 +3450,19 @@
       "product": "identity-access",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/service_user.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["uses-default-warehouse", "uses-network-policy"],
-      "rootform_concept": "core/service-identity",
-      "rules": ["snowflake/service-user"],
+      "relations": [
+        "uses-default-warehouse",
+        "uses-network-policy"
+      ],
+      "rootform_concept": "rf.concept.service-identity",
+      "rules": [
+        "snowflake.rule.service-user"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_session_policy",
@@ -2971,9 +3477,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_share",
@@ -2984,13 +3492,18 @@
       "product": "sharing-continuity",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/share.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["shared-with-account"],
-      "rootform_concept": "snowflake/data-share",
-      "rules": ["snowflake/share"],
+      "relations": [
+        "shared-with-account"
+      ],
+      "rootform_concept": "snowflake.concept.data-share",
+      "rules": [
+        "snowflake.rule.share"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_shared_database",
@@ -3001,35 +3514,51 @@
       "product": "sharing-continuity",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/shared_database.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["imports-share", "uses-external-volume"],
-      "rootform_concept": "snowflake/database",
-      "rules": ["snowflake/shared-database"],
+      "relations": [
+        "imports-share",
+        "uses-external-volume"
+      ],
+      "rootform_concept": "snowflake.rule.database",
+      "rules": [
+        "snowflake.rule.shared-database"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_stage",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "snowflake.context.ownership"
+      ],
       "contributions": [],
       "family": "storage",
       "product": "stages-storage",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stage.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["accesses-object-storage", "uses-storage-integration"],
-      "rootform_concept": "snowflake/stage",
-      "rules": ["snowflake/stage"],
+      "relations": [
+        "accesses-object-storage",
+        "uses-storage-integration"
+      ],
+      "rootform_concept": "snowflake.rule.stage",
+      "rules": [
+        "snowflake.rule.stage"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_stage_external_azure",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "snowflake.context.ownership"
+      ],
       "contributions": [],
       "family": "storage",
       "product": "stages-storage",
@@ -3040,17 +3569,22 @@
         "uses-notification-integration",
         "uses-storage-integration"
       ],
-      "rootform_concept": "snowflake/stage",
-      "rules": ["snowflake/external-azure-stage"],
+      "rootform_concept": "snowflake.rule.stage",
+      "rules": [
+        "snowflake.rule.external-azure-stage"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_stage_external_gcs",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "snowflake.context.ownership"
+      ],
       "contributions": [],
       "family": "storage",
       "product": "stages-storage",
@@ -3062,17 +3596,22 @@
         "uses-notification-integration",
         "uses-storage-integration"
       ],
-      "rootform_concept": "snowflake/stage",
-      "rules": ["snowflake/external-gcs-stage"],
+      "rootform_concept": "snowflake.rule.stage",
+      "rules": [
+        "snowflake.rule.external-gcs-stage"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_stage_external_s3",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "snowflake.context.ownership"
+      ],
       "contributions": [],
       "family": "storage",
       "product": "stages-storage",
@@ -3085,46 +3624,61 @@
         "uses-encryption-key",
         "uses-storage-integration"
       ],
-      "rootform_concept": "snowflake/stage",
-      "rules": ["snowflake/external-s3-stage"],
+      "rootform_concept": "snowflake.rule.stage",
+      "rules": [
+        "snowflake.rule.external-s3-stage"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_stage_external_s3_compatible",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "snowflake.context.ownership"
+      ],
       "contributions": [],
       "family": "storage",
       "product": "stages-storage",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stage_external_s3_compatible.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["accesses-object-storage"],
-      "rootform_concept": "snowflake/stage",
-      "rules": ["snowflake/external-s3-compatible-stage"],
+      "relations": [
+        "accesses-object-storage"
+      ],
+      "rootform_concept": "snowflake.rule.stage",
+      "rules": [
+        "snowflake.rule.external-s3-compatible-stage"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_stage_internal",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "snowflake.context.ownership"
+      ],
       "contributions": [],
       "family": "storage",
       "product": "stages-storage",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stage_internal.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/stage",
-      "rules": ["snowflake/internal-stage"],
+      "rootform_concept": "snowflake.rule.stage",
+      "rules": [
+        "snowflake.rule.internal-stage"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_storage_integration",
@@ -3140,12 +3694,15 @@
         "authorizes-object-storage",
         "authorizes-object-storage"
       ],
-      "rootform_concept": "snowflake/storage-integration",
-      "rules": ["snowflake/storage-integration"],
+      "rootform_concept": "snowflake.rule.storage-integration",
+      "rules": [
+        "snowflake.rule.storage-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_storage_integration_aws",
@@ -3161,12 +3718,15 @@
         "authorizes-object-storage",
         "authorizes-object-storage"
       ],
-      "rootform_concept": "snowflake/storage-integration",
-      "rules": ["snowflake/aws-storage-integration"],
+      "rootform_concept": "snowflake.rule.storage-integration",
+      "rules": [
+        "snowflake.rule.aws-storage-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_storage_integration_azure",
@@ -3177,13 +3737,19 @@
       "product": "stages-storage",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/storage_integration_azure.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["authorizes-object-storage", "authorizes-object-storage"],
-      "rootform_concept": "snowflake/storage-integration",
-      "rules": ["snowflake/azure-storage-integration"],
+      "relations": [
+        "authorizes-object-storage",
+        "authorizes-object-storage"
+      ],
+      "rootform_concept": "snowflake.rule.storage-integration",
+      "rules": [
+        "snowflake.rule.azure-storage-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_storage_integration_gcs",
@@ -3194,13 +3760,19 @@
       "product": "stages-storage",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/storage_integration_gcs.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["authorizes-object-storage", "authorizes-object-storage"],
-      "rootform_concept": "snowflake/storage-integration",
-      "rules": ["snowflake/gcs-storage-integration"],
+      "relations": [
+        "authorizes-object-storage",
+        "authorizes-object-storage"
+      ],
+      "rootform_concept": "snowflake.rule.storage-integration",
+      "rules": [
+        "snowflake.rule.gcs-storage-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_storage_lifecycle_policy",
@@ -3215,94 +3787,125 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_stream_on_directory_table",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["schema"],
+      "contributions": [
+        "schema"
+      ],
       "family": "data-pipelines",
       "product": "ingestion-orchestration",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stream_on_directory_table.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "snowflake/stream-configuration",
-      "rules": ["snowflake/stream-on-directory-table"],
+      "rootform_concept": "snowflake.concept.stream-configuration",
+      "rules": [
+        "snowflake.rule.stream-on-directory-table"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_stream_on_external_table",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["schema"],
+      "contributions": [
+        "schema"
+      ],
       "family": "data-pipelines",
       "product": "ingestion-orchestration",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stream_on_external_table.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "snowflake/stream-configuration",
-      "rules": ["snowflake/stream-on-external-table"],
+      "rootform_concept": "snowflake.concept.stream-configuration",
+      "rules": [
+        "snowflake.rule.stream-on-external-table"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_stream_on_table",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["schema"],
+      "contributions": [
+        "schema"
+      ],
       "family": "data-pipelines",
       "product": "ingestion-orchestration",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stream_on_table.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "snowflake/stream-configuration",
-      "rules": ["snowflake/stream-on-table"],
+      "rootform_concept": "snowflake.concept.stream-configuration",
+      "rules": [
+        "snowflake.rule.stream-on-table"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_stream_on_view",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["schema"],
+      "contributions": [
+        "schema"
+      ],
       "family": "data-pipelines",
       "product": "ingestion-orchestration",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/stream_on_view.md",
-      "reason": "supporting-detail: configuration contributes evidence without independent topology",
+      "reason": "member-configuration: configuration contributes evidence without independent topology",
       "relations": [],
-      "rootform_concept": "snowflake/stream-configuration",
-      "rules": ["snowflake/stream-on-view"],
+      "rootform_concept": "snowflake.concept.stream-configuration",
+      "rules": [
+        "snowflake.rule.stream-on-view"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_streamlit",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership", "core.runtime"],
+      "contexts": [
+        "snowflake.context.ownership",
+        "rf.context.runtime"
+      ],
       "contributions": [],
       "family": "applications",
       "product": "applications",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/streamlit.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["loads-code-from-stage", "uses-external-access"],
-      "rootform_concept": "snowflake/application",
-      "rules": ["snowflake/streamlit"],
+      "relations": [
+        "loads-code-from-stage",
+        "uses-external-access"
+      ],
+      "rootform_concept": "snowflake.concept.application",
+      "rules": [
+        "snowflake.rule.streamlit"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_table",
@@ -3317,9 +3920,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_table_column_masking_policy_application",
@@ -3334,9 +3939,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_table_constraint",
@@ -3351,9 +3958,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_table_storage_lifecycle_policy_attachment",
@@ -3368,9 +3977,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_tag",
@@ -3385,9 +3996,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_tag_association",
@@ -3402,14 +4015,19 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_task",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership", "core.runtime"],
+      "contexts": [
+        "snowflake.context.ownership",
+        "rf.context.runtime"
+      ],
       "contributions": [],
       "family": "data-pipelines",
       "product": "ingestion-orchestration",
@@ -3421,12 +4039,15 @@
         "runs-after-task",
         "runs-after-task"
       ],
-      "rootform_concept": "core/workflow",
-      "rules": ["snowflake/task"],
+      "rootform_concept": "snowflake.concept.workflow",
+      "rules": [
+        "snowflake.rule.task"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_user",
@@ -3441,9 +4062,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_user_authentication_policy_attachment",
@@ -3458,9 +4081,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_user_password_policy_attachment",
@@ -3475,9 +4100,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_user_programmatic_access_token",
@@ -3492,9 +4119,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_user_public_keys",
@@ -3509,9 +4138,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_user_session_policy_attachment",
@@ -3526,9 +4157,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_view",
@@ -3543,9 +4176,11 @@
       "rootform_concept": null,
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["snowflake-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "snowflake-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "snowflake_warehouse",
@@ -3557,12 +4192,15 @@
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/warehouse.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/virtual-warehouse",
-      "rules": ["snowflake/warehouse"],
+      "rootform_concept": "snowflake.concept.virtual-warehouse",
+      "rules": [
+        "snowflake.rule.warehouse"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_warehouse_adaptive",
@@ -3574,12 +4212,15 @@
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/warehouse_adaptive.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
       "relations": [],
-      "rootform_concept": "snowflake/virtual-warehouse",
-      "rules": ["snowflake/adaptive-warehouse"],
+      "rootform_concept": "snowflake.concept.virtual-warehouse",
+      "rules": [
+        "snowflake.rule.adaptive-warehouse"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     },
     {
       "construct": "snowflake_warehouse_interactive",
@@ -3590,13 +4231,18 @@
       "product": "virtual-warehouses",
       "proof_url": "https://github.com/snowflakedb/terraform-provider-snowflake/blob/v2.20.0/docs/resources/warehouse_interactive.md",
       "reason": "architecture-role: durable Snowflake service, scope, compute, integration, or identity boundary",
-      "relations": ["falls-back-to-warehouse"],
-      "rootform_concept": "snowflake/virtual-warehouse",
-      "rules": ["snowflake/interactive-warehouse"],
+      "relations": [
+        "falls-back-to-warehouse"
+      ],
+      "rootform_concept": "snowflake.concept.virtual-warehouse",
+      "rules": [
+        "snowflake.rule.interactive-warehouse"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["snowflake-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "snowflake-compiler-scenarios"
+      ]
     }
   ]
 }

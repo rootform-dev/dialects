@@ -9,10 +9,9 @@
       "major": true,
       "constructs": 20,
       "counts": {
-        "supported": 4,
-        "partial": 8,
-        "intentionally-unrepresented": 8,
-        "unsupported": 0
+        "rule-present": 4,
+        "partial-rule": 8,
+        "no-rule": 8
       }
     },
     {
@@ -23,10 +22,9 @@
       "major": true,
       "constructs": 12,
       "counts": {
-        "supported": 5,
-        "partial": 4,
-        "intentionally-unrepresented": 3,
-        "unsupported": 0
+        "rule-present": 5,
+        "partial-rule": 4,
+        "no-rule": 3
       }
     },
     {
@@ -37,10 +35,9 @@
       "major": true,
       "constructs": 14,
       "counts": {
-        "supported": 4,
-        "partial": 8,
-        "intentionally-unrepresented": 2,
-        "unsupported": 0
+        "rule-present": 4,
+        "partial-rule": 8,
+        "no-rule": 2
       }
     },
     {
@@ -51,10 +48,9 @@
       "major": true,
       "constructs": 5,
       "counts": {
-        "supported": 2,
-        "partial": 2,
-        "intentionally-unrepresented": 1,
-        "unsupported": 0
+        "rule-present": 2,
+        "partial-rule": 2,
+        "no-rule": 1
       }
     },
     {
@@ -65,10 +61,9 @@
       "major": true,
       "constructs": 14,
       "counts": {
-        "supported": 6,
-        "partial": 4,
-        "intentionally-unrepresented": 4,
-        "unsupported": 0
+        "rule-present": 6,
+        "partial-rule": 4,
+        "no-rule": 4
       }
     },
     {
@@ -79,10 +74,9 @@
       "major": true,
       "constructs": 6,
       "counts": {
-        "supported": 6,
-        "partial": 0,
-        "intentionally-unrepresented": 0,
-        "unsupported": 0
+        "rule-present": 6,
+        "partial-rule": 0,
+        "no-rule": 0
       }
     },
     {
@@ -93,10 +87,9 @@
       "major": true,
       "constructs": 3,
       "counts": {
-        "supported": 3,
-        "partial": 0,
-        "intentionally-unrepresented": 0,
-        "unsupported": 0
+        "rule-present": 3,
+        "partial-rule": 0,
+        "no-rule": 0
       }
     },
     {
@@ -107,10 +100,9 @@
       "major": true,
       "constructs": 12,
       "counts": {
-        "supported": 2,
-        "partial": 9,
-        "intentionally-unrepresented": 1,
-        "unsupported": 0
+        "rule-present": 2,
+        "partial-rule": 9,
+        "no-rule": 1
       }
     },
     {
@@ -121,10 +113,9 @@
       "major": true,
       "constructs": 7,
       "counts": {
-        "supported": 2,
-        "partial": 4,
-        "intentionally-unrepresented": 1,
-        "unsupported": 0
+        "rule-present": 2,
+        "partial-rule": 4,
+        "no-rule": 1
       }
     },
     {
@@ -135,10 +126,9 @@
       "major": false,
       "constructs": 5,
       "counts": {
-        "supported": 3,
-        "partial": 0,
-        "intentionally-unrepresented": 2,
-        "unsupported": 0
+        "rule-present": 3,
+        "partial-rule": 0,
+        "no-rule": 2
       }
     },
     {
@@ -149,10 +139,9 @@
       "major": false,
       "constructs": 12,
       "counts": {
-        "supported": 0,
-        "partial": 0,
-        "intentionally-unrepresented": 12,
-        "unsupported": 0
+        "rule-present": 0,
+        "partial-rule": 0,
+        "no-rule": 12
       }
     },
     {
@@ -163,10 +152,9 @@
       "major": false,
       "constructs": 17,
       "counts": {
-        "supported": 0,
-        "partial": 0,
-        "intentionally-unrepresented": 17,
-        "unsupported": 0
+        "rule-present": 0,
+        "partial-rule": 0,
+        "no-rule": 17
       }
     },
     {
@@ -177,10 +165,9 @@
       "major": false,
       "constructs": 2,
       "counts": {
-        "supported": 0,
-        "partial": 0,
-        "intentionally-unrepresented": 2,
-        "unsupported": 0
+        "rule-present": 0,
+        "partial-rule": 0,
+        "no-rule": 2
       }
     }
   ]

@@ -1,33 +1,10 @@
-concept "databricks-app" {
-  kind        = entity
-  description = "A secure data or AI application deployed on the Databricks serverless platform."
-}
 
-concept "app-space" {
-  kind        = scope
-  description = "A Databricks application space organizing deployed application resources."
-}
 
 concept "application-configuration" {
-  kind        = detail
   description = "A template, embedding, or deployment configuration supporting Databricks applications."
 }
 
-rule "databricks-app" {
-  match {
-    type = "databricks_app"
-  }
 
-  as = concept.databricks-app
-}
-
-rule "app-space" {
-  match {
-    type = "databricks_app_space"
-  }
-
-  as = concept.app-space
-}
 
 rule "apps-custom-template" {
   match {

@@ -1,5 +1,4 @@
 concept "horizontal-pod-autoscaler" {
-  kind        = detail
   description = "A controller that scales a workload by observed demand."
 }
 
@@ -11,7 +10,7 @@ rule "kubernetes-horizontal-pod-autoscaler" {
   as = concept.horizontal-pod-autoscaler
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.metadata[0].namespace
 

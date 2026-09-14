@@ -1,10 +1,8 @@
 concept "apm-application" {
-  kind        = entity
   description = "An application boundary observed through New Relic APM."
 }
 
 concept "application-configuration" {
-  kind        = detail
   description = "Application settings or key transactions supporting New Relic application observability."
 }
 
@@ -30,11 +28,11 @@ rule "browser-application" {
     type = "newrelic_browser_application"
   }
 
-  as = concept.core.browser-observability-application
+  as = concept.browser-observability-application
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.account_id
   }
 }

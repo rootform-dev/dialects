@@ -1,6 +1,5 @@
 # Maintained directly from pinned provider evidence.
 concept "storage-sync-service" {
-  kind        = entity
   description = "An Azure File Sync service synchronizing file servers and Azure Files."
 }
 
@@ -9,10 +8,10 @@ rule "azure-files-share" {
     type = "azurerm_storage_share"
   }
 
-  as = concept.core.managed-file-storage
+  as = concept.managed-file-storage
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.storage-account
     via = source.storage_account_id
   }
@@ -23,10 +22,10 @@ rule "blob-container" {
     type = "azurerm_storage_container"
   }
 
-  as = concept.core.object-storage-container
+  as = rf.concept.object-storage-container
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.storage-account
     via = source.storage_account_id
   }
@@ -40,7 +39,7 @@ rule "storage-blob" {
   as = concept.storage-object-detail
 
   contribution {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.storage_container_id
   }
 }
@@ -95,7 +94,7 @@ rule "storage-sync-service" {
   as = concept.storage-sync-service
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

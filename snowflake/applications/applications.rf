@@ -1,5 +1,4 @@
 concept "application" {
-  kind        = entity
   description = "A Snowflake-hosted interactive data application or notebook."
 }
 
@@ -11,13 +10,13 @@ rule "streamlit" {
   as = concept.application
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.schema
     via = source.schema
   }
 
   context {
-    as  = context.core.runtime
+    as  = rf.context.runtime
     to  = concept.virtual-warehouse
     via = source.query_warehouse
   }
@@ -41,13 +40,13 @@ rule "notebook" {
   as = concept.application
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.schema
     via = source.schema
   }
 
   context {
-    as  = context.core.runtime
+    as  = rf.context.runtime
     to  = concept.virtual-warehouse
     via = source.query_warehouse
   }

@@ -1,11 +1,9 @@
 # Maintained directly from pinned provider evidence.
 concept "analytics-pool" {
-  kind        = entity
   description = "A SQL or Apache Spark analytics pool."
 }
 
 concept "synapse-workspace" {
-  kind        = scope
   description = "An Azure Synapse Analytics workspace."
 }
 
@@ -33,7 +31,7 @@ rule "synapse-workspace" {
   as = concept.synapse-workspace
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

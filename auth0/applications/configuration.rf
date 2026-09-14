@@ -1,5 +1,4 @@
 concept "application-configuration" {
-  kind        = detail
   description = "Credentials, grants, or associations supporting an Auth0 Application."
 }
 
@@ -11,7 +10,7 @@ rule "client-credentials" {
   as = concept.application-configuration
 
   contribution {
-    to  = concept.core.identity-application
+    to  = concept.identity-application
     via = source.client_id
   }
 }
@@ -24,7 +23,7 @@ rule "client-grant" {
   as = concept.application-configuration
 
   contribution {
-    to  = concept.core.identity-application
+    to  = concept.identity-application
     via = source.client_id
   }
 }

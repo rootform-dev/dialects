@@ -3,10 +3,10 @@ rule "synthetic-monitoring-check" {
     type = "grafana_synthetic_monitoring_check"
   }
 
-  as = concept.core.synthetic-check
+  as = concept.synthetic-check
 
   contribution {
-    to  = concept.core.synthetic-execution-location
+    to  = concept.synthetic-execution-location
     via = source.probes
   }
 }
@@ -16,7 +16,7 @@ rule "synthetic-monitoring-probe" {
     type = "grafana_synthetic_monitoring_probe"
   }
 
-  as = concept.core.synthetic-execution-location
+  as = concept.synthetic-execution-location
 }
 
 rule "synthetic-monitoring-probe-lookup" {
@@ -25,5 +25,5 @@ rule "synthetic-monitoring-probe-lookup" {
     type = "grafana_synthetic_monitoring_probe"
   }
 
-  as = concept.core.synthetic-execution-location
+  as = concept.synthetic-execution-location
 }

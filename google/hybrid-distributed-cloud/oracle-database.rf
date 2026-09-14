@@ -1,43 +1,21 @@
-concept "oracle-exadata-infrastructure" {
-  kind        = entity
-  description = "Oracle Exadata infrastructure hosted in Google Cloud."
-}
 
-concept "oracle-database-vm-cluster" {
-  kind        = entity
-  description = "An Oracle Database VM cluster running on Exadata infrastructure."
-}
 
 rule "oracle-autonomous-database" {
   match {
     type = "google_oracle_database_autonomous_database"
   }
 
-  as = concept.core.managed-database
+  as = rf.concept.managed-database
 }
 
-rule "oracle-exadata-infrastructure" {
-  match {
-    type = "google_oracle_database_cloud_exadata_infrastructure"
-  }
 
-  as = concept.oracle-exadata-infrastructure
-}
-
-rule "oracle-database-vm-cluster" {
-  match {
-    type = "google_oracle_database_cloud_vm_cluster"
-  }
-
-  as = concept.oracle-database-vm-cluster
-}
 
 rule "oracle-odb-network" {
   match {
     type = "google_oracle_database_odb_network"
   }
 
-  as = concept.core.virtual-network
+  as = rf.concept.virtual-network
 }
 
 rule "oracle-odb-subnet" {
@@ -45,5 +23,5 @@ rule "oracle-odb-subnet" {
     type = "google_oracle_database_odb_subnet"
   }
 
-  as = concept.core.subnet
+  as = rf.concept.subnet
 }

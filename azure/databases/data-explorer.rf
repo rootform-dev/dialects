@@ -1,13 +1,8 @@
 # Maintained directly from pinned provider evidence.
 concept "data-explorer-cluster" {
-  kind        = entity
   description = "An Azure Data Explorer cluster serving real-time analytics."
 }
 
-concept "data-explorer-database" {
-  kind        = detail
-  description = "A database inside an Azure Data Explorer cluster."
-}
 
 rule "data-explorer-cluster" {
   match {
@@ -17,19 +12,12 @@ rule "data-explorer-cluster" {
   as = concept.data-explorer-cluster
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
 }
 
-rule "data-explorer-database" {
-  match {
-    type = "azurerm_kusto_database"
-  }
-
-  as = concept.data-explorer-database
-}
 
 rule "data-explorer-event-grid-connection" {
   match {

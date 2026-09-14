@@ -1,10 +1,8 @@
 concept "sensitive-data-protection-scan" {
-  kind        = entity
   description = "A Sensitive Data Protection discovery or inspection job configuration."
 }
 
 concept "sensitive-data-protection-template" {
-  kind        = detail
   description = "A reusable inspection, de-identification, or stored information type configuration."
 }
 

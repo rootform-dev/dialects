@@ -1,6 +1,5 @@
 # Maintained directly from pinned provider evidence.
 concept "table-storage-table" {
-  kind        = entity
   description = "An Azure Table Storage table."
 }
 
@@ -12,7 +11,7 @@ rule "table-storage-table" {
   as = concept.table-storage-table
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.storage-account
     via = source.storage_account_id
   }

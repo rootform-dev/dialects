@@ -3,16 +3,16 @@ rule "memorystore-redis-instance" {
     type = "google_redis_instance"
   }
 
-  as = concept.core.managed-cache
+  as = concept.managed-cache
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.authorized_network
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.google-cloud-project
     via = source.project
   }
@@ -23,10 +23,10 @@ rule "memorystore-redis-cluster" {
     type = "google_redis_cluster"
   }
 
-  as = concept.core.managed-cache
+  as = concept.managed-cache
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.google-cloud-project
     via = source.project
   }
@@ -37,16 +37,16 @@ rule "memorystore-memcached-instance" {
     type = "google_memcache_instance"
   }
 
-  as = concept.core.managed-cache
+  as = concept.managed-cache
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.authorized_network
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.google-cloud-project
     via = source.project
   }
@@ -57,10 +57,10 @@ rule "memorystore-instance" {
     type = "google_memorystore_instance"
   }
 
-  as = concept.core.managed-cache
+  as = concept.managed-cache
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.google-cloud-project
     via = source.project
   }

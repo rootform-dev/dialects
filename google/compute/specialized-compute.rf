@@ -1,20 +1,9 @@
-concept "hypercompute-cluster" {
-  kind        = entity
-  description = "A Hypercompute Cluster coordinating tightly coupled accelerated workloads."
-}
 
-rule "hypercompute-cluster" {
-  match {
-    type = "google_hypercomputecluster_cluster"
-  }
-
-  as = concept.hypercompute-cluster
-}
 
 rule "tpu-vm" {
   match {
     type = "google_tpu_v2_vm"
   }
 
-  as = concept.core.compute-instance
+  as = concept.compute-instance
 }

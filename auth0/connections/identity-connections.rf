@@ -1,5 +1,4 @@
 concept "identity-connection" {
-  kind        = entity
   description = "An Auth0 Connection sourcing identities from an enterprise provider, social provider, database, or passwordless method."
 }
 

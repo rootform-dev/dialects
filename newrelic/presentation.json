@@ -40,7 +40,6 @@
     "obfuscation-expression-lookup": "generic/entity",
     "obfuscation-rule": "generic/entity",
     "pipeline-cloud-rule": "generic/entity",
-    "service-level": "generic/entity",
     "synthetics-broken-links-monitor": "generic/entity",
     "synthetics-cert-check-monitor": "generic/entity",
     "synthetics-monitor": "generic/entity",
@@ -48,22 +47,7 @@
     "synthetics-private-location-lookup": "generic/compute",
     "synthetics-script-monitor": "generic/entity",
     "synthetics-step-monitor": "generic/entity",
-    "workflow-automation": "generic/entity",
     "workload": "generic/scope"
-  },
-  "concepts": {
-    "apm-application": "generic/entity",
-    "application-configuration": "generic/entity",
-    "aws-connection": "generic/network",
-    "cloud-integration-configuration": "generic/entity",
-    "federated-logs-partition": "generic/storage",
-    "federated-logs-setup": "generic/storage",
-    "fleet": "generic/compute",
-    "fleet-configuration": "generic/entity",
-    "fleet-deployment": "generic/entity",
-    "fleet-membership": "generic/entity",
-    "observability-workload": "generic/scope",
-    "telemetry-processing-configuration": "generic/entity"
   },
   "rule_labels": {
     "account-lookup": "New Relic account lookup",
@@ -105,7 +89,6 @@
     "obfuscation-expression-lookup": "New Relic obfuscation expression lookup",
     "obfuscation-rule": "New Relic obfuscation rule",
     "pipeline-cloud-rule": "New Relic Pipeline Cloud Rule",
-    "service-level": "New Relic service level",
     "synthetics-broken-links-monitor": "New Relic Synthetics broken links monitor",
     "synthetics-cert-check-monitor": "New Relic Synthetics certificate check monitor",
     "synthetics-monitor": "New Relic Synthetics monitor",
@@ -113,8 +96,21 @@
     "synthetics-private-location-lookup": "New Relic Synthetics private location lookup",
     "synthetics-script-monitor": "New Relic Synthetics scripted monitor",
     "synthetics-step-monitor": "New Relic Synthetics step monitor",
-    "workflow-automation": "New Relic Workflow Automation workflow",
     "workload": "New Relic workload"
+  },
+  "concepts": {
+    "apm-application": "generic/entity",
+    "application-configuration": "generic/entity",
+    "aws-connection": "generic/network",
+    "cloud-integration-configuration": "generic/entity",
+    "federated-logs-partition": "generic/storage",
+    "federated-logs-setup": "generic/storage",
+    "fleet": "generic/compute",
+    "fleet-configuration": "generic/entity",
+    "fleet-deployment": "generic/entity",
+    "fleet-membership": "generic/entity",
+    "observability-workload": "generic/scope",
+    "telemetry-processing-configuration": "generic/entity"
   },
   "concept_labels": {
     "apm-application": "New Relic APM application",
@@ -129,5 +125,13 @@
     "fleet-membership": "New Relic Fleet Control membership",
     "observability-workload": "New Relic workload",
     "telemetry-processing-configuration": "New Relic telemetry processing configuration"
+  },
+  "resources": {
+    "resource/newrelic_workflow_automation": "generic/entity",
+    "resource/newrelic_service_level": "generic/entity"
+  },
+  "resource_labels": {
+    "resource/newrelic_workflow_automation": "New Relic Workflow Automation workflow",
+    "resource/newrelic_service_level": "New Relic service level"
   }
 }

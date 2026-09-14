@@ -1,4 +1,0 @@
-concept "api-gateway" {
-  kind        = entity
-  description = "A managed gateway that exposes and governs APIs."
-}

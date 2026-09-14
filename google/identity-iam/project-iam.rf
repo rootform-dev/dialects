@@ -3,10 +3,10 @@ rule "project-iam-member" {
     type = "google_project_iam_member"
   }
 
-  as = concept.core.service-identity-binding
+  as = concept.service-identity-binding
 
   contribution {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.member
 
     match {
@@ -21,10 +21,10 @@ rule "project-iam-binding" {
     type = "google_project_iam_binding"
   }
 
-  as = concept.core.service-identity-binding
+  as = concept.service-identity-binding
 
   contribution {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.members
 
     match {
@@ -39,5 +39,5 @@ rule "project-iam-policy" {
     type = "google_project_iam_policy"
   }
 
-  as = concept.core.service-identity-binding
+  as = concept.service-identity-binding
 }

@@ -3,10 +3,10 @@ rule "vpc-network" {
     type = "google_compute_network"
   }
 
-  as = concept.core.virtual-network
+  as = rf.concept.virtual-network
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.google-cloud-project
     via = source.project
   }
@@ -17,16 +17,16 @@ rule "vpc-subnetwork" {
     type = "google_compute_subnetwork"
   }
 
-  as = concept.core.subnet
+  as = rf.concept.subnet
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.network
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.google-cloud-project
     via = source.project
   }

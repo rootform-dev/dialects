@@ -1,20 +1,16 @@
 concept "vault-secrets-application" {
-  kind        = scope
   description = "An HCP Vault Secrets application boundary grouping secrets and sync destinations."
 }
 
 concept "vault-secrets-configuration" {
-  kind        = detail
   description = "A secret read or access setting supporting an HCP Vault Secrets application."
 }
 
 concept "vault-secrets-integration" {
-  kind        = entity
   description = "An HCP Vault Secrets integration with an external cloud or SaaS platform."
 }
 
 concept "vault-secrets-sync" {
-  kind        = entity
   description = "An HCP Vault Secrets destination synchronizing application secrets externally."
 }
 
@@ -26,7 +22,7 @@ rule "vault-secrets-app" {
   as = concept.vault-secrets-application
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -72,7 +68,7 @@ rule "vault-secrets-app-lookup" {
   as = concept.vault-secrets-application
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -83,10 +79,10 @@ rule "vault-secrets-dynamic-secret" {
     type = "hcp_vault_secrets_dynamic_secret"
   }
 
-  as = concept.core.managed-secret
+  as = concept.managed-secret
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.vault-secrets-application
     via = source.app_name
   }
@@ -97,12 +93,7 @@ rule "vault-secrets-dynamic-secret" {
   }
 
   relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
-    via = source.aws_assume_role.iam_role_arn
-  }
-
-  relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.gcp_impersonate_service_account.service_account_email
   }
 }
@@ -129,28 +120,23 @@ rule "vault-secrets-integration" {
   as = concept.vault-secrets-integration
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
 
   relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
-    via = source.aws_federated_workload_identity.role_arn
-  }
-
-  relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.azure_federated_workload_identity.client_id
   }
 
   relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.gcp_federated_workload_identity.service_account_email
   }
 
   relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.gcp_service_account_key.client_email
   }
 }
@@ -163,15 +149,11 @@ rule "vault-secrets-integration-aws" {
   as = concept.vault-secrets-integration
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
 
-  relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
-    via = source.federated_workload_identity.role_arn
-  }
 }
 
 rule "vault-secrets-integration-azure" {
@@ -182,13 +164,13 @@ rule "vault-secrets-integration-azure" {
   as = concept.vault-secrets-integration
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
 
   relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.federated_workload_identity.client_id
   }
 }
@@ -201,7 +183,7 @@ rule "vault-secrets-integration-confluent" {
   as = concept.vault-secrets-integration
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -215,18 +197,18 @@ rule "vault-secrets-integration-gcp" {
   as = concept.vault-secrets-integration
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
 
   relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.federated_workload_identity.service_account_email
   }
 
   relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.service_account_key.client_email
   }
 }
@@ -239,7 +221,7 @@ rule "vault-secrets-integration-mongodbatlas" {
   as = concept.vault-secrets-integration
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -253,7 +235,7 @@ rule "vault-secrets-integration-twilio" {
   as = concept.vault-secrets-integration
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -264,10 +246,10 @@ rule "vault-secrets-rotating-secret" {
     type = "hcp_vault_secrets_rotating_secret"
   }
 
-  as = concept.core.managed-secret
+  as = concept.managed-secret
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.vault-secrets-application
     via = source.app_name
   }
@@ -278,17 +260,17 @@ rule "vault-secrets-rotating-secret" {
   }
 
   relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.azure_application_password.app_client_id
   }
 
   relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.confluent_service_account.service_account_id
   }
 
   relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.gcp_service_account_key.service_account_email
   }
 }
@@ -312,10 +294,10 @@ rule "vault-secrets-secret" {
     type = "hcp_vault_secrets_secret"
   }
 
-  as = concept.core.managed-secret
+  as = concept.managed-secret
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.vault-secrets-application
     via = source.app_name
   }
@@ -343,7 +325,7 @@ rule "vault-secrets-sync" {
   as = concept.vault-secrets-sync
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }

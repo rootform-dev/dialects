@@ -1,7 +1,0 @@
-rule "lambda-function" {
-  match {
-    type = "aws_lambda_function"
-  }
-
-  as = concept.core.serverless-function
-}

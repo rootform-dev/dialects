@@ -9,7 +9,11 @@
       "subscribes-to",
       "uses-waf-policy"
     ],
-    "contexts_added": ["core/network", "core/ownership", "core/runtime"],
+    "contexts_added": [
+      "rf.context.network",
+      "azure.context.ownership",
+      "rf.context.runtime"
+    ],
     "contributions_asserted": [
       "private DNS link to zone and VNet",
       "NAT association to subnet and NAT gateway"
@@ -20,44 +24,30 @@
   "ownership_membership_sweep": {
     "verified_date": "2026-09-10",
     "resource_group_ownership_contexts_added": 188,
-    "scope_membership_contexts_added": 17,
-    "detail_contributions_added": 31,
     "structural_topic_concepts_added": 2,
     "system_topic_event_subscription_relations_added": 6,
     "rules_added": 7,
-    "refused_candidates": 3
+    "refused_candidates": 3,
+    "membership_contexts_added": 17,
+    "contributions_added": 31
   },
   "total_rows": 1970,
   "by_inventory": {
-    "provider_constructs": 1773,
-    "catalog_products": 194,
-    "azapi_arm_types": 3
+    "azapi-arm-type": 3,
+    "catalog-product": 194,
+    "provider-construct": 1773
   },
-  "provider_constructs": {
-    "azapi": 20,
-    "azuread": 74,
-    "azurerm": 1679
-  },
-  "represented_rules": 424,
+  "provider_constructs": {},
+  "rules_with_rows": 411,
   "by_decision": {
-    "supported": 326,
-    "partial": 235,
-    "intentionally-unrepresented": 1408,
-    "unsupported": 1
-  },
-  "by_declaration_outcome": {
-    "represented": 425,
-    "supporting": 0,
-    "filtered": 0,
-    "unsupported": 1163,
-    "failed": 0,
-    "not-applicable": 382
+    "rule-present": 315,
+    "partial-rule": 233,
+    "no-rule": 23
   },
   "catalog": {
-    "supported": 31,
-    "partial": 105,
-    "intentionally-unrepresented": 58,
-    "unsupported": 0,
-    "no-provider-surface": 51
+    "rule-present": 31,
+    "partial-rule": 105,
+    "no-rule": 58,
+    "no-provider-surface": 46
   }
 }

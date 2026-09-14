@@ -1,5 +1,4 @@
 concept "cloud-router" {
-  kind        = entity
   description = "A Cloud Router exchanging dynamic routes for a VPC network."
 }
 
@@ -11,13 +10,13 @@ rule "cloud-router" {
   as = concept.cloud-router
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.network
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.google-cloud-project
     via = source.project
   }

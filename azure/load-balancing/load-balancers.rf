@@ -3,10 +3,10 @@ rule "load-balancer" {
     type = "azurerm_lb"
   }
 
-  as = concept.core.load-balancer
+  as = concept.load-balancer
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
 
@@ -22,16 +22,16 @@ rule "application-gateway" {
     type = "azurerm_application_gateway"
   }
 
-  as = concept.core.load-balancer
+  as = concept.load-balancer
 
   context {
-    as  = context.core.network
-    to  = concept.core.subnet
+    as  = rf.context.network
+    to  = rf.concept.subnet
     via = source.gateway_ip_configuration[0].subnet_id
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
 
@@ -55,7 +55,7 @@ rule "load-balancer-backend-pool" {
   as = concept.load-balancer-component
 
   contribution {
-    to  = concept.core.load-balancer
+    to  = concept.load-balancer
     via = source.loadbalancer_id
   }
 }
@@ -68,7 +68,7 @@ rule "load-balancer-rule" {
   as = concept.load-balancer-component
 
   contribution {
-    to  = concept.core.load-balancer
+    to  = concept.load-balancer
     via = source.loadbalancer_id
   }
 }

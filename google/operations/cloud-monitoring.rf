@@ -1,15 +1,12 @@
 concept "cloud-monitoring-alerting-policy" {
-  kind        = entity
   description = "A Cloud Monitoring alerting policy defining conditions and notification behavior."
 }
 
 concept "cloud-monitoring-service" {
-  kind        = entity
   description = "A Cloud Monitoring service used as the target of service-level objectives."
 }
 
 concept "cloud-monitoring-slo" {
-  kind        = detail
   description = "A service-level objective contributing reliability intent to a monitored service."
 }
 
@@ -21,7 +18,7 @@ rule "cloud-monitoring-alerting-policy" {
   as = concept.cloud-monitoring-alerting-policy
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.google-cloud-project
     via = source.project
   }
@@ -35,7 +32,7 @@ rule "cloud-monitoring-service" {
   as = concept.cloud-monitoring-service
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.google-cloud-project
     via = source.project
   }
@@ -54,7 +51,7 @@ rule "cloud-monitoring-slo" {
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.google-cloud-project
     via = source.project
   }

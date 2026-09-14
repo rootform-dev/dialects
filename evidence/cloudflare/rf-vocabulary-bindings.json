@@ -1,0 +1,35 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-29",
+  "dialect": "cloudflare@0.1.0",
+  "policy": {
+    "rf_vocabulary": "RF Vocabulary owns rf.concept.* and rf.context.*; adoptions require individual justification (target spec §6).",
+    "replacement": "Pre-v0.1 core catalog and promotions are replaced; the RF Vocabulary is fixed and embedded."
+  },
+  "rf_concept_bindings": [
+    {
+      "rule": "cloudflare.rule.access-service-token",
+      "concept": "rf.concept.service-identity"
+    },
+    {
+      "rule": "cloudflare.rule.d1-database",
+      "concept": "rf.concept.managed-database"
+    },
+    {
+      "rule": "cloudflare.rule.oauth-client",
+      "concept": "rf.concept.service-identity"
+    },
+    {
+      "rule": "cloudflare.rule.r2-bucket",
+      "concept": "rf.concept.object-storage-container"
+    }
+  ],
+  "local_concept_count": 60,
+  "local_context_count": 1,
+  "local_relation_count": 10,
+  "rule_count": 166,
+  "limitations": [
+    "Coverage and boundary evidence is provider-surface research; it does not prove semantic completeness of representations.",
+    "RF Vocabulary adoptions are derived from the current dialect sources and individually justifiable per target spec §6."
+  ]
+}

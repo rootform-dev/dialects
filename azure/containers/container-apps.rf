@@ -1,16 +1,13 @@
 # Maintained directly from pinned provider evidence.
 concept "container-app" {
-  kind        = entity
   description = "An Azure Container Apps service running container revisions."
 }
 
 concept "container-app-environment" {
-  kind        = scope
   description = "An Azure Container Apps environment sharing network and operational boundaries."
 }
 
 concept "container-app-job" {
-  kind        = entity
   description = "An Azure Container Apps job running finite container work."
 }
 
@@ -22,13 +19,13 @@ rule "container-app" {
   as = concept.container-app
 
   context {
-    as  = context.core.runtime
+    as  = rf.context.runtime
     to  = concept.container-app-environment
     via = source.container_app_environment_id
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -42,13 +39,13 @@ rule "container-app-environment" {
   as = concept.container-app-environment
 
   context {
-    as  = context.core.network
-    to  = concept.core.subnet
+    as  = rf.context.network
+    to  = rf.concept.subnet
     via = source.infrastructure_subnet_id
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -67,13 +64,13 @@ rule "container-app-job" {
   as = concept.container-app-job
 
   context {
-    as  = context.core.runtime
+    as  = rf.context.runtime
     to  = concept.container-app-environment
     via = source.container_app_environment_id
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

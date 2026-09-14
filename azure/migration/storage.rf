@@ -7,7 +7,7 @@ rule "storage-mover" {
   as = concept.migration-service
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

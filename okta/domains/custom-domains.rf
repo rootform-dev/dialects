@@ -1,10 +1,8 @@
 concept "domain-configuration" {
-  kind        = detail
   description = "Certificate or verification configuration supporting an Okta custom domain."
 }
 
 concept "identity-domain" {
-  kind        = entity
   description = "A custom domain exposing an Okta-hosted identity endpoint."
 }
 

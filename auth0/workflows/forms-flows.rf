@@ -1,5 +1,4 @@
 concept "identity-workflow" {
-  kind        = entity
   description = "An Auth0 Form or Flow orchestrating an identity journey."
 }
 

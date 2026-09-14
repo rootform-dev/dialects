@@ -3,7 +3,7 @@ rule "lb" {
     type = "aws_lb"
   }
 
-  as = concept.core.load-balancer
+  as = concept.load-balancer
 }
 
 rule "lb-listener" {
@@ -14,7 +14,7 @@ rule "lb-listener" {
   as = concept.load-balancer-component
 
   contribution {
-    to  = concept.core.load-balancer
+    to  = concept.load-balancer
     via = source.load_balancer_arn
   }
 }

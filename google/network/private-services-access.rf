@@ -3,10 +3,10 @@ rule "service-networking-connection" {
     type = "google_service_networking_connection"
   }
 
-  as = concept.core.service-networking-detail
+  as = concept.service-networking-detail
 
   contribution {
-    to  = concept.core.virtual-network
+    to  = rf.concept.virtual-network
     via = source.network
   }
 }
@@ -17,10 +17,10 @@ rule "private-services-access-range" {
     where = source.purpose == "VPC_PEERING" && source.address_type == "INTERNAL"
   }
 
-  as = concept.core.allocated-network-range
+  as = concept.allocated-network-range
 
   contribution {
-    to  = concept.core.virtual-network
+    to  = rf.concept.virtual-network
     via = source.network
   }
 }

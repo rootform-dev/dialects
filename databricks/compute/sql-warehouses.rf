@@ -1,25 +1,8 @@
-concept "sql-warehouse" {
-  kind        = entity
-  description = "A Databricks SQL compute resource for querying and exploring governed data."
-}
 
 concept "sql-configuration" {
-  kind        = detail
   description = "Configuration or access control supporting Databricks SQL."
 }
 
-rule "sql-warehouse" {
-  match {
-    type = "databricks_sql_endpoint"
-  }
-
-  as = concept.sql-warehouse
-
-  relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
-    via = source.instance_profile_arn
-  }
-}
 
 rule "sql-global-config" {
   match {

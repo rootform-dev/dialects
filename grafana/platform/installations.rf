@@ -1,5 +1,4 @@
 concept "platform-installation" {
-  kind        = detail
   description = "A product activation or installation supporting a Grafana Cloud stack."
 }
 
@@ -43,7 +42,7 @@ rule "cloud-plugin-installation" {
   as = concept.platform-installation
 
   contribution {
-    to  = concept.core.observability-tenant
+    to  = concept.observability-tenant
     via = source.stack_slug
   }
 }
@@ -56,7 +55,7 @@ rule "k6-installation" {
   as = concept.platform-installation
 
   contribution {
-    to  = concept.core.observability-tenant
+    to  = concept.observability-tenant
     via = source.stack_id
   }
 }
@@ -69,7 +68,7 @@ rule "synthetic-monitoring-installation" {
   as = concept.platform-installation
 
   contribution {
-    to  = concept.core.observability-tenant
+    to  = concept.observability-tenant
     via = source.stack_id
   }
 }

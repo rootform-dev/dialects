@@ -1,25 +1,24 @@
 concept "lakebase-project" {
-  kind        = scope
   description = "A Lakebase Autoscaling project containing branches, Postgres compute endpoints, and databases."
 }
 
 concept "lakebase-branch" {
-  kind        = scope
   description = "An isolated Lakebase database environment sharing project storage through copy-on-write."
 }
 
 concept "lakebase-endpoint" {
-  kind        = entity
   description = "A Lakebase Postgres compute endpoint providing read-write or read-only database access."
 }
 
 concept "lakebase-data-api" {
-  kind        = entity
   description = "A Lakebase Data API exposing governed database access."
 }
 
+concept "lakebase-database" {
+  description = "A logical Postgres database contained by a Lakebase branch."
+}
+
 concept "database-configuration" {
-  kind        = detail
   description = "A database, role, synchronization, catalog, or change-data configuration supporting Lakebase."
 }
 
@@ -39,7 +38,7 @@ rule "lakebase-branch" {
   as = concept.lakebase-branch
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.lakebase-project
     via = source.parent
   }
@@ -58,7 +57,7 @@ rule "lakebase-endpoint" {
   as = concept.lakebase-endpoint
 
   context {
-    as  = context.core.runtime
+    as  = rf.context.runtime
     to  = concept.lakebase-branch
     via = source.parent
   }
@@ -69,10 +68,10 @@ rule "lakebase-database" {
     type = "databricks_postgres_database"
   }
 
-  as = concept.core.managed-database
+  as = concept.lakebase-database
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.lakebase-branch
     via = source.parent
   }
@@ -86,7 +85,7 @@ rule "lakebase-data-api" {
   as = concept.lakebase-data-api
 
   context {
-    as  = context.core.runtime
+    as  = rf.context.runtime
     to  = concept.lakebase-project
     via = source.parent
   }
@@ -97,10 +96,10 @@ rule "lakebase-provisioned-instance" {
     type = "databricks_database_instance"
   }
 
-  as = concept.core.managed-database
+  as = rf.concept.managed-database
 
   relation "branched-from" {
-    to  = concept.core.managed-database
+    to  = rf.concept.managed-database
     via = source.parent_instance_ref[0].name
   }
 }

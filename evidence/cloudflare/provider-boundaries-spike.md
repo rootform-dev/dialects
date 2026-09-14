@@ -57,7 +57,7 @@ and Cloudflare developer-platform differences remain local. Existing core
 concepts cover DNS zone, load balancer, serverless function, object storage,
 managed database, queue, workflow, secret, identity, group, VPN connection,
 and VPN gateway. Kubernetes `LoadBalancer` Service can reuse existing
-`core.load-balancer` without changing core.
+`cloudflare.concept.load-balancer` without changing the RF Language.
 
 Cloudflare trademark terms permit word-mark references but require written
 permission for logos. No such permission is evidenced. Rootform therefore
@@ -80,5 +80,5 @@ ships no Cloudflare logo and uses neutral fallback.
 
 Proceed with exact `= 5.24.0`, exhaustive decisions, targeted semantics,
 provider-neutral fixed-path reference selection, bounded nested paths, no new
-core/Language/IR contract, and neutral icon fallback. Revisit compatibility on
+RF Language/IR contract, and neutral icon fallback. Revisit compatibility on
 later provider evidence, not every minor.

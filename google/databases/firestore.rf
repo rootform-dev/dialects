@@ -3,5 +3,5 @@ rule "firestore-database" {
     type = "google_firestore_database"
   }
 
-  as = concept.core.managed-database
+  as = rf.concept.managed-database
 }

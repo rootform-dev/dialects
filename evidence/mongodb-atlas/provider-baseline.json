@@ -268,7 +268,9 @@
       "mongodbatlas_third_party_integrations",
       "mongodbatlas_x509_authentication_database_user"
     ],
-    "ephemeral_resources": ["mongodbatlas_service_account_jwt"],
+    "ephemeral_resources": [
+      "mongodbatlas_service_account_jwt"
+    ],
     "provider_functions": [],
     "resource_identities": []
   },

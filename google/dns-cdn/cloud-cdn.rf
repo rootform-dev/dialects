@@ -1,12 +1,7 @@
 concept "cloud-cdn-service" {
-  kind        = entity
   description = "A Cloud CDN or Media CDN edge delivery service."
 }
 
-concept "cloud-cdn-origin" {
-  kind        = detail
-  description = "An origin contributing content to a Media CDN edge cache service."
-}
 
 rule "cloud-cdn-backend-bucket" {
   match {
@@ -23,12 +18,4 @@ rule "media-cdn-service" {
   }
 
   as = concept.cloud-cdn-service
-}
-
-rule "media-cdn-origin" {
-  match {
-    type = "google_network_services_edge_cache_origin"
-  }
-
-  as = concept.cloud-cdn-origin
 }

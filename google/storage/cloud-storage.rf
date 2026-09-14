@@ -3,7 +3,7 @@ rule "cloud-storage-bucket" {
     type = "google_storage_bucket"
   }
 
-  as = concept.core.object-storage-container
+  as = rf.concept.object-storage-container
 }
 
 rule "cloud-storage-bucket-iam-member" {
@@ -14,7 +14,7 @@ rule "cloud-storage-bucket-iam-member" {
   as = concept.access-binding
 
   contribution {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.bucket
 
     match {

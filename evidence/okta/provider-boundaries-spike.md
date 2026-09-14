@@ -17,7 +17,7 @@ administers identities and access.
 
 Policy and routing helpers can reference both applications and providers, but
 Rootform Language facts originate from the helper representation. They remain
-supporting details; deriving an application-to-provider authentication flow
+helper details; deriving an application-to-provider authentication flow
 would exceed evidence. Okta/Auth0 terminology overlaps, while tenant,
 connection, and authorization-server ownership differs enough to defer core
 promotion until Auth0 is verified.

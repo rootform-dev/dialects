@@ -1,5 +1,4 @@
 concept "application-configuration" {
-  kind        = detail
   description = "Claims, features, redirects, scopes, or access policy supporting an app integration."
 }
 
@@ -11,7 +10,7 @@ rule "app-access-policy-assignment" {
   as = concept.application-configuration
 
   contribution {
-    to  = concept.core.identity-application
+    to  = concept.identity-application
     via = source.app_id
   }
 }
@@ -24,7 +23,7 @@ rule "app-features" {
   as = concept.application-configuration
 
   contribution {
-    to  = concept.core.identity-application
+    to  = concept.identity-application
     via = source.app_id
   }
 }
@@ -38,7 +37,7 @@ rule "app-features-lookup" {
   as = concept.application-configuration
 
   contribution {
-    to  = concept.core.identity-application
+    to  = concept.identity-application
     via = source.app_id
   }
 }
@@ -51,7 +50,7 @@ rule "app-federated-claim" {
   as = concept.application-configuration
 
   contribution {
-    to  = concept.core.identity-application
+    to  = concept.identity-application
     via = source.app_id
   }
 }
@@ -65,7 +64,7 @@ rule "app-federated-claim-lookup" {
   as = concept.application-configuration
 
   contribution {
-    to  = concept.core.identity-application
+    to  = concept.identity-application
     via = source.app_id
   }
 }
@@ -78,7 +77,7 @@ rule "app-oauth-api-scope" {
   as = concept.application-configuration
 
   contribution {
-    to  = concept.core.identity-application
+    to  = concept.identity-application
     via = source.app_id
   }
 }
@@ -91,7 +90,7 @@ rule "app-oauth-post-logout-redirect-uri" {
   as = concept.application-configuration
 
   contribution {
-    to  = concept.core.identity-application
+    to  = concept.identity-application
     via = source.app_id
   }
 }
@@ -104,7 +103,7 @@ rule "app-oauth-redirect-uri" {
   as = concept.application-configuration
 
   contribution {
-    to  = concept.core.identity-application
+    to  = concept.identity-application
     via = source.app_id
   }
 }
@@ -117,7 +116,7 @@ rule "app-saml-app-settings" {
   as = concept.application-configuration
 
   contribution {
-    to  = concept.core.identity-application
+    to  = concept.identity-application
     via = source.app_id
   }
 }

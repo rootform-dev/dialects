@@ -6,16 +6,11 @@
   "data_sources": 63,
   "rules": 62,
   "status": {
-    "supported": 32,
-    "partial": 30,
-    "intentionally-unrepresented": 65,
-    "unsupported": 0
+    "rule-present": 32,
+    "partial-rule": 30,
+    "no-rule": 0
   },
   "treatment": {
-    "entity": 30,
-    "scope": 2,
-    "detail": 30,
-    "intentionally-unrepresented": 65,
-    "unsupported": 0
+    "no-rule": 0
   }
 }

@@ -1,20 +1,13 @@
 concept "cluster-peering" {
-  kind        = entity
   description = "A Consul cluster peering connection for exported service discovery and mesh traffic."
 }
 
-concept "network-area" {
-  kind        = entity
-  description = "A Consul Enterprise server-RPC connection between datacenters."
-}
 
 concept "sameness-group" {
-  kind        = entity
   description = "A Consul group of partitions or peers with equivalent service instances."
 }
 
 concept "service-export" {
-  kind        = detail
   description = "A service export detail for peers, partitions, or sameness groups."
 }
 
@@ -103,13 +96,6 @@ rule "config-entry-v2-exported-services-lookup" {
   }
 }
 
-rule "network-area" {
-  match {
-    type = "consul_network_area"
-  }
-
-  as = concept.network-area
-}
 
 rule "peering" {
   match {

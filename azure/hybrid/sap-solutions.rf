@@ -7,7 +7,7 @@ rule "sap-discovery-virtual-instance" {
   as = concept.hybrid-platform
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -21,7 +21,7 @@ rule "sap-single-node-virtual-instance" {
   as = concept.hybrid-platform
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -35,7 +35,7 @@ rule "sap-three-tier-virtual-instance" {
   as = concept.hybrid-platform
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

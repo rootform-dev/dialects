@@ -1,10 +1,8 @@
 concept "telemetry-configuration" {
-  kind        = detail
   description = "A processing, indexing, routing, retention, or enrichment detail for telemetry."
 }
 
 concept "telemetry-destination" {
-  kind        = entity
   description = "A durable archive or forwarding destination for Datadog logs."
 }
 

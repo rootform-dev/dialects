@@ -1,5 +1,4 @@
 concept "data-loss-prevention-configuration" {
-  kind        = detail
   description = "Cloudflare One Data Loss Prevention profile, dataset, integration, or service configuration."
 }
 

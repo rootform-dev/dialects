@@ -20,9 +20,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_cloud_ips",
@@ -37,9 +39,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_cloud_organization",
@@ -54,9 +58,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_cloud_private_data_source_connect_networks",
@@ -71,43 +77,63 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_cloud_provider_aws_account",
       "construct_kind": "data_source",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "grafana.context.ownership"
+      ],
       "contributions": [],
       "family": "integrations",
       "product": "cloud-provider-observability",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/cloud_provider_aws_account",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
-      "relations": ["authorized-by"],
-      "rootform_concepts": ["core/cloud-observability-integration"],
-      "rules": ["grafana/cloud-provider-aws-account-lookup"],
+      "relations": [
+        "authorized-by"
+      ],
+      "rootform_concepts": [
+        "grafana.concept.cloud-observability-integration"
+      ],
+      "rules": [
+        "grafana.rule.cloud-provider-aws-account-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_cloud_provider_aws_cloudwatch_scrape_job",
       "construct_kind": "data_source",
-      "contexts": ["core.ownership"],
-      "contributions": ["core.cloud-observability-integration"],
+      "contexts": [
+        "grafana.context.ownership"
+      ],
+      "contributions": [
+        "grafana.concept.cloud-observability-integration"
+      ],
       "family": "integrations",
       "product": "cloud-provider-observability",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/cloud_provider_aws_cloudwatch_scrape_job",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/cloud-integration-configuration"],
-      "rules": ["grafana/cloud-provider-aws-cloudwatch-scrape-job-lookup"],
+      "rootform_concepts": [
+        "grafana/cloud-integration-configuration"
+      ],
+      "rules": [
+        "grafana.rule.cloud-provider-aws-cloudwatch-scrape-job-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_cloud_provider_aws_cloudwatch_scrape_jobs",
@@ -122,26 +148,37 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_cloud_provider_azure_credential",
       "construct_kind": "data_source",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "grafana.context.ownership"
+      ],
       "contributions": [],
       "family": "integrations",
       "product": "cloud-provider-observability",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/cloud_provider_azure_credential",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
-      "relations": ["authorized-by"],
-      "rootform_concepts": ["core/cloud-observability-integration"],
-      "rules": ["grafana/cloud-provider-azure-credential-lookup"],
+      "relations": [
+        "authorized-by"
+      ],
+      "rootform_concepts": [
+        "grafana.concept.cloud-observability-integration"
+      ],
+      "rules": [
+        "grafana.rule.cloud-provider-azure-credential-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_cloud_stack",
@@ -153,29 +190,41 @@
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/cloud_stack",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/observability-tenant"],
-      "rules": ["grafana/cloud-stack-lookup"],
+      "rootform_concepts": [
+        "grafana.concept.observability-tenant"
+      ],
+      "rules": [
+        "grafana.rule.cloud-stack-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_connections_metrics_endpoint_scrape_job",
       "construct_kind": "data_source",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "grafana.context.ownership"
+      ],
       "contributions": [],
       "family": "integrations",
       "product": "cloud-provider-observability",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/connections_metrics_endpoint_scrape_job",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["grafana/metrics-scrape-job"],
-      "rules": ["grafana/connections-metrics-endpoint-scrape-job-lookup"],
+      "rootform_concepts": [
+        "grafana/metrics-scrape-job"
+      ],
+      "rules": [
+        "grafana.rule.connections-metrics-endpoint-scrape-job-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_dashboard",
@@ -190,9 +239,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_dashboards",
@@ -207,26 +258,37 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_data_source",
       "construct_kind": "data_source",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "grafana.context.ownership"
+      ],
       "contributions": [],
       "family": "telemetry",
       "product": "data-connectivity",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/data_source",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
-      "relations": ["connects-through"],
-      "rootform_concepts": ["grafana/data-source"],
-      "rules": ["grafana/data-source-lookup"],
+      "relations": [
+        "connects-through"
+      ],
+      "rootform_concepts": [
+        "grafana.rule.data-source"
+      ],
+      "rules": [
+        "grafana.rule.data-source-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_fleet_management_collector",
@@ -238,12 +300,17 @@
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/fleet_management_collector",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["grafana/telemetry-collector"],
-      "rules": ["grafana/fleet-management-collector-lookup"],
+      "rootform_concepts": [
+        "grafana/telemetry-collector"
+      ],
+      "rules": [
+        "grafana.rule.fleet-management-collector-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_fleet_management_collectors",
@@ -258,9 +325,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_folder",
@@ -275,9 +344,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_folders",
@@ -292,43 +363,59 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_frontend_o11y_app",
       "construct_kind": "data_source",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "grafana.context.ownership"
+      ],
       "contributions": [],
       "family": "digital-experience",
       "product": "frontend-observability",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/frontend_o11y_app",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/browser-observability-application"],
-      "rules": ["grafana/frontend-o11y-app-lookup"],
+      "rootform_concepts": [
+        "grafana.concept.browser-observability-application"
+      ],
+      "rules": [
+        "grafana.rule.frontend-o11y-app-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_k6_load_test",
       "construct_kind": "data_source",
       "contexts": [],
-      "contributions": ["performance-testing-project"],
+      "contributions": [
+        "performance-testing-project"
+      ],
       "family": "performance-testing",
       "product": "k6",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/k6_load_test",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/performance-test"],
-      "rules": ["grafana/k6-load-test-lookup"],
+      "rootform_concepts": [
+        "grafana/performance-test"
+      ],
+      "rules": [
+        "grafana.rule.k6-load-test-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_k6_load_tests",
@@ -343,9 +430,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_k6_project",
@@ -357,12 +446,17 @@
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/k6_project",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["grafana/performance-testing-project"],
-      "rules": ["grafana/k6-project-lookup"],
+      "rootform_concepts": [
+        "grafana/performance-testing-project"
+      ],
+      "rules": [
+        "grafana.rule.k6-project-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_k6_project_allowed_load_zones",
@@ -372,14 +466,16 @@
       "family": "performance-testing",
       "product": "k6",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/k6_project_allowed_load_zones",
-      "reason": "supporting-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
+      "reason": "unmodeled-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_k6_project_limits",
@@ -389,14 +485,16 @@
       "family": "performance-testing",
       "product": "k6",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/k6_project_limits",
-      "reason": "supporting-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
+      "reason": "unmodeled-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_k6_projects",
@@ -411,9 +509,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_k6_schedule",
@@ -423,14 +523,16 @@
       "family": "performance-testing",
       "product": "k6",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/k6_schedule",
-      "reason": "supporting-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
+      "reason": "unmodeled-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_k6_schedules",
@@ -440,14 +542,16 @@
       "family": "performance-testing",
       "product": "k6",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/k6_schedules",
-      "reason": "supporting-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
+      "reason": "unmodeled-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_library_panel",
@@ -462,9 +566,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_library_panels",
@@ -479,9 +585,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_oncall_escalation_chain",
@@ -491,14 +599,16 @@
       "family": "incident-response",
       "product": "incident-response",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/oncall_escalation_chain",
-      "reason": "supporting-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
+      "reason": "unmodeled-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_oncall_integration",
@@ -510,12 +620,17 @@
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/oncall_integration",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["grafana/oncall-integration"],
-      "rules": ["grafana/oncall-integration-lookup"],
+      "rootform_concepts": [
+        "grafana.rule.oncall-integration"
+      ],
+      "rules": [
+        "grafana.rule.oncall-integration-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_oncall_label",
@@ -530,9 +645,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_oncall_outgoing_webhook",
@@ -542,14 +659,16 @@
       "family": "incident-response",
       "product": "incident-response",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/oncall_outgoing_webhook",
-      "reason": "supporting-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
+      "reason": "unmodeled-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_oncall_schedule",
@@ -559,14 +678,16 @@
       "family": "incident-response",
       "product": "incident-response",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/oncall_schedule",
-      "reason": "supporting-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
+      "reason": "unmodeled-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_oncall_slack_channel",
@@ -581,9 +702,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_oncall_team",
@@ -598,9 +721,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_oncall_user",
@@ -615,9 +740,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_oncall_user_group",
@@ -632,9 +759,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_oncall_users",
@@ -649,9 +778,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_organization",
@@ -663,12 +794,17 @@
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/organization",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/observability-tenant"],
-      "rules": ["grafana/organization-lookup"],
+      "rootform_concepts": [
+        "grafana.concept.observability-tenant"
+      ],
+      "rules": [
+        "grafana.rule.organization-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_organization_preferences",
@@ -678,14 +814,16 @@
       "family": "platform",
       "product": "platform",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/organization_preferences",
-      "reason": "supporting-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
+      "reason": "unmodeled-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_organization_user",
@@ -700,9 +838,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_role",
@@ -717,9 +857,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_service_account",
@@ -734,9 +876,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_slos",
@@ -751,9 +895,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_synthetic_monitoring_probe",
@@ -765,12 +911,17 @@
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/data-sources/synthetic_monitoring_probe",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/synthetic-execution-location"],
-      "rules": ["grafana/synthetic-monitoring-probe-lookup"],
+      "rootform_concepts": [
+        "grafana.concept.synthetic-execution-location"
+      ],
+      "rules": [
+        "grafana.rule.synthetic-monitoring-probe-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_synthetic_monitoring_probes",
@@ -785,9 +936,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_team",
@@ -802,9 +955,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_teams",
@@ -819,9 +974,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_user",
@@ -836,9 +993,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_users",
@@ -853,9 +1012,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_agento11y_collection",
@@ -865,14 +1026,19 @@
       "family": "ai-ml",
       "product": "agent-observability",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/agento11y_collection",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/agent-observability-configuration"],
-      "rules": ["grafana/agento11y-collection"],
+      "rootform_concepts": [
+        "grafana/agent-observability-configuration"
+      ],
+      "rules": [
+        "grafana.rule.agento11y-collection"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_agento11y_evaluation_rule",
@@ -882,14 +1048,19 @@
       "family": "ai-ml",
       "product": "agent-observability",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/agento11y_evaluation_rule",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/agent-observability-configuration"],
-      "rules": ["grafana/agento11y-evaluation-rule"],
+      "rootform_concepts": [
+        "grafana/agent-observability-configuration"
+      ],
+      "rules": [
+        "grafana.rule.agento11y-evaluation-rule"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_agento11y_evaluator",
@@ -899,14 +1070,19 @@
       "family": "ai-ml",
       "product": "agent-observability",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/agento11y_evaluator",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/agent-observability-configuration"],
-      "rules": ["grafana/agento11y-evaluator"],
+      "rootform_concepts": [
+        "grafana/agent-observability-configuration"
+      ],
+      "rules": [
+        "grafana.rule.agento11y-evaluator"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_agento11y_hook_rule",
@@ -916,14 +1092,19 @@
       "family": "ai-ml",
       "product": "agent-observability",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/agento11y_hook_rule",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/agent-observability-configuration"],
-      "rules": ["grafana/agento11y-hook-rule"],
+      "rootform_concepts": [
+        "grafana/agent-observability-configuration"
+      ],
+      "rules": [
+        "grafana.rule.agento11y-hook-rule"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_agento11y_rule_action",
@@ -933,14 +1114,19 @@
       "family": "ai-ml",
       "product": "agent-observability",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/agento11y_rule_action",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/agent-observability-configuration"],
-      "rules": ["grafana/agento11y-rule-action"],
+      "rootform_concepts": [
+        "grafana/agent-observability-configuration"
+      ],
+      "rules": [
+        "grafana.rule.agento11y-rule-action"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_annotation",
@@ -955,9 +1141,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_apps_alertenrichment_alertenrichment_v1beta1",
@@ -967,14 +1155,16 @@
       "family": "service-management",
       "product": "service-management",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/apps_alertenrichment_alertenrichment_v1beta1",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Grafana configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Grafana configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_apps_dashboard_dashboard_v1beta1",
@@ -989,9 +1179,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_apps_dashboard_dashboard_v2",
@@ -1006,9 +1198,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_apps_dashboard_dashboard_v2beta1",
@@ -1023,9 +1217,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_apps_generic_resource",
@@ -1040,9 +1236,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_apps_notifications_inhibitionrule_v1beta1",
@@ -1057,9 +1255,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_apps_notifications_routingtree_v1beta1",
@@ -1074,9 +1274,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_apps_playlist_playlist_v0alpha1",
@@ -1091,9 +1293,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_apps_playlist_playlist_v1",
@@ -1108,9 +1312,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_apps_productactivation_appo11yconfig_v1alpha1",
@@ -1120,14 +1326,19 @@
       "family": "service-management",
       "product": "guided-observability",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/apps_productactivation_appo11yconfig_v1alpha1",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/platform-installation"],
-      "rules": ["grafana/apps-productactivation-appo11yconfig-v1alpha1"],
+      "rootform_concepts": [
+        "grafana/platform-installation"
+      ],
+      "rules": [
+        "grafana.rule.apps-productactivation-appo11yconfig-v1alpha1"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_apps_productactivation_dbo11yconfig_v1alpha1",
@@ -1137,14 +1348,19 @@
       "family": "service-management",
       "product": "guided-observability",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/apps_productactivation_dbo11yconfig_v1alpha1",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/platform-installation"],
-      "rules": ["grafana/apps-productactivation-dbo11yconfig-v1alpha1"],
+      "rootform_concepts": [
+        "grafana/platform-installation"
+      ],
+      "rules": [
+        "grafana.rule.apps-productactivation-dbo11yconfig-v1alpha1"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_apps_productactivation_k8so11yconfig_v1alpha1",
@@ -1154,14 +1370,19 @@
       "family": "service-management",
       "product": "guided-observability",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/apps_productactivation_k8so11yconfig_v1alpha1",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/platform-installation"],
-      "rules": ["grafana/apps-productactivation-k8so11yconfig-v1alpha1"],
+      "rootform_concepts": [
+        "grafana/platform-installation"
+      ],
+      "rules": [
+        "grafana.rule.apps-productactivation-k8so11yconfig-v1alpha1"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_apps_provisioning_connection_v0alpha1",
@@ -1173,12 +1394,17 @@
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/apps_provisioning_connection_v0alpha1",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["grafana/git-sync-connection"],
-      "rules": ["grafana/apps-provisioning-connection-v0alpha1"],
+      "rootform_concepts": [
+        "grafana/git-sync-connection"
+      ],
+      "rules": [
+        "grafana.rule.apps-provisioning-connection-v0alpha1"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_apps_provisioning_repository_v0alpha1",
@@ -1189,13 +1415,20 @@
       "product": "git-sync",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/apps_provisioning_repository_v0alpha1",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
-      "relations": ["authenticates-through"],
-      "rootform_concepts": ["grafana/git-sync-repository"],
-      "rules": ["grafana/apps-provisioning-repository-v0alpha1"],
+      "relations": [
+        "authenticates-through"
+      ],
+      "rootform_concepts": [
+        "grafana/git-sync-repository"
+      ],
+      "rules": [
+        "grafana.rule.apps-provisioning-repository-v0alpha1"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_apps_queries_query_v1",
@@ -1210,9 +1443,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_apps_rules_alertrule_v0alpha1",
@@ -1227,9 +1462,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_apps_rules_recordingrule_v0alpha1",
@@ -1244,9 +1481,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_apps_rules_rulesequence_v0alpha1",
@@ -1261,9 +1500,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_apps_secret_keeper_activation_v1beta1",
@@ -1273,14 +1514,19 @@
       "family": "security",
       "product": "secrets-management",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/apps_secret_keeper_activation_v1beta1",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/platform-installation"],
-      "rules": ["grafana/apps-secret-keeper-activation-v1beta1"],
+      "rootform_concepts": [
+        "grafana/platform-installation"
+      ],
+      "rules": [
+        "grafana.rule.apps-secret-keeper-activation-v1beta1"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_apps_secret_keeper_v1beta1",
@@ -1290,14 +1536,17 @@
       "family": "security",
       "product": "secrets-management",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/apps_secret_keeper_v1beta1",
-      "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
-      "relations": ["authorized-by"],
-      "rootform_concepts": ["grafana/secret-keeper"],
-      "rules": ["grafana/apps-secret-keeper-v1beta1"],
+      "reason": "no-rule",
+      "relations": [
+        "authorized-by"
+      ],
+      "rootform_concepts": [
+        "grafana/secret-keeper"
+      ],
+      "rules": [],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "no-rule",
+      "tests": []
     },
     {
       "construct": "grafana_apps_secret_securevalue_v1beta1",
@@ -1307,14 +1556,15 @@
       "family": "security",
       "product": "secrets-management",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/apps_secret_securevalue_v1beta1",
-      "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
+      "reason": "no-rule",
       "relations": [],
-      "rootform_concepts": ["core/managed-secret"],
-      "rules": ["grafana/apps-secret-securevalue-v1beta1"],
+      "rootform_concepts": [
+        "grafana.concept.managed-secret"
+      ],
+      "rules": [],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "no-rule",
+      "tests": []
     },
     {
       "construct": "grafana_apps_servicemodel_component_v1alpha1",
@@ -1329,9 +1579,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_asserts_custom_model_rules",
@@ -1341,31 +1593,43 @@
       "family": "service-management",
       "product": "knowledge-graph",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/asserts_custom_model_rules",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/knowledge-graph-configuration"],
-      "rules": ["grafana/asserts-custom-model-rules"],
+      "rootform_concepts": [
+        "grafana/knowledge-graph-configuration"
+      ],
+      "rules": [
+        "grafana.rule.asserts-custom-model-rules"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_asserts_log_config",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["data-source"],
+      "contributions": [
+        "data-source"
+      ],
       "family": "service-management",
       "product": "knowledge-graph",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/asserts_log_config",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/knowledge-graph-configuration"],
-      "rules": ["grafana/asserts-log-config"],
+      "rootform_concepts": [
+        "grafana/knowledge-graph-configuration"
+      ],
+      "rules": [
+        "grafana.rule.asserts-log-config"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_asserts_notification_alerts_config",
@@ -1375,31 +1639,43 @@
       "family": "service-management",
       "product": "knowledge-graph",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/asserts_notification_alerts_config",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/knowledge-graph-configuration"],
-      "rules": ["grafana/asserts-notification-alerts-config"],
+      "rootform_concepts": [
+        "grafana/knowledge-graph-configuration"
+      ],
+      "rules": [
+        "grafana.rule.asserts-notification-alerts-config"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_asserts_profile_config",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["data-source"],
+      "contributions": [
+        "data-source"
+      ],
       "family": "service-management",
       "product": "knowledge-graph",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/asserts_profile_config",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/knowledge-graph-configuration"],
-      "rules": ["grafana/asserts-profile-config"],
+      "rootform_concepts": [
+        "grafana/knowledge-graph-configuration"
+      ],
+      "rules": [
+        "grafana.rule.asserts-profile-config"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_asserts_prom_rule_file",
@@ -1409,14 +1685,19 @@
       "family": "service-management",
       "product": "knowledge-graph",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/asserts_prom_rule_file",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/knowledge-graph-configuration"],
-      "rules": ["grafana/asserts-prom-rule-file"],
+      "rootform_concepts": [
+        "grafana/knowledge-graph-configuration"
+      ],
+      "rules": [
+        "grafana.rule.asserts-prom-rule-file"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_asserts_stack",
@@ -1428,12 +1709,17 @@
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/asserts_stack",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["grafana/knowledge-graph"],
-      "rules": ["grafana/asserts-stack"],
+      "rootform_concepts": [
+        "grafana/knowledge-graph"
+      ],
+      "rules": [
+        "grafana.rule.asserts-stack"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_asserts_suppressed_assertions_config",
@@ -1443,14 +1729,19 @@
       "family": "service-management",
       "product": "knowledge-graph",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/asserts_suppressed_assertions_config",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/knowledge-graph-configuration"],
-      "rules": ["grafana/asserts-suppressed-assertions-config"],
+      "rootform_concepts": [
+        "grafana/knowledge-graph-configuration"
+      ],
+      "rules": [
+        "grafana.rule.asserts-suppressed-assertions-config"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_asserts_thresholds",
@@ -1460,31 +1751,43 @@
       "family": "service-management",
       "product": "knowledge-graph",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/asserts_thresholds",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/knowledge-graph-configuration"],
-      "rules": ["grafana/asserts-thresholds"],
+      "rootform_concepts": [
+        "grafana/knowledge-graph-configuration"
+      ],
+      "rules": [
+        "grafana.rule.asserts-thresholds"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_asserts_trace_config",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["data-source"],
+      "contributions": [
+        "data-source"
+      ],
       "family": "service-management",
       "product": "knowledge-graph",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/asserts_trace_config",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/knowledge-graph-configuration"],
-      "rules": ["grafana/asserts-trace-config"],
+      "rootform_concepts": [
+        "grafana/knowledge-graph-configuration"
+      ],
+      "rules": [
+        "grafana.rule.asserts-trace-config"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_assistant_mcp_server",
@@ -1494,14 +1797,15 @@
       "family": "ai-ml",
       "product": "assistant",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/assistant_mcp_server",
-      "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
+      "reason": "no-rule",
       "relations": [],
-      "rootform_concepts": ["grafana/assistant-integration"],
-      "rules": ["grafana/assistant-mcp-server"],
+      "rootform_concepts": [
+        "grafana/assistant-integration"
+      ],
+      "rules": [],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "no-rule",
+      "tests": []
     },
     {
       "construct": "grafana_assistant_quickstart",
@@ -1511,14 +1815,16 @@
       "family": "ai-ml",
       "product": "assistant",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/assistant_quickstart",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Grafana configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Grafana configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_assistant_rule",
@@ -1528,14 +1834,16 @@
       "family": "ai-ml",
       "product": "assistant",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/assistant_rule",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Grafana configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Grafana configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_assistant_skill",
@@ -1545,14 +1853,16 @@
       "family": "ai-ml",
       "product": "assistant",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/assistant_skill",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Grafana configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Grafana configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_assistant_terms_acceptance",
@@ -1562,14 +1872,16 @@
       "family": "ai-ml",
       "product": "assistant",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/assistant_terms_acceptance",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Grafana configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Grafana configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_cloud_access_policy",
@@ -1584,9 +1896,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_cloud_access_policy_rotating_token",
@@ -1601,9 +1915,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_cloud_access_policy_token",
@@ -1618,9 +1934,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_cloud_integration",
@@ -1630,14 +1948,19 @@
       "family": "integrations",
       "product": "cloud-provider-observability",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/cloud_integration",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/cloud-integration-configuration"],
-      "rules": ["grafana/cloud-integration"],
+      "rootform_concepts": [
+        "grafana/cloud-integration-configuration"
+      ],
+      "rules": [
+        "grafana.rule.cloud-integration"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_cloud_org_member",
@@ -1652,43 +1975,59 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_cloud_plugin_installation",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["core.observability-tenant"],
+      "contributions": [
+        "grafana.concept.observability-tenant"
+      ],
       "family": "integrations",
       "product": "cloud-provider-observability",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/cloud_plugin_installation",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/platform-installation"],
-      "rules": ["grafana/cloud-plugin-installation"],
+      "rootform_concepts": [
+        "grafana/platform-installation"
+      ],
+      "rules": [
+        "grafana.rule.cloud-plugin-installation"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_cloud_private_data_source_connect_network",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "grafana.context.ownership"
+      ],
       "contributions": [],
       "family": "telemetry",
       "product": "data-connectivity",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/cloud_private_data_source_connect_network",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["grafana/private-data-source-connect-network"],
-      "rules": ["grafana/cloud-private-data-source-connect-network"],
+      "rootform_concepts": [
+        "grafana/private-data-source-connect-network"
+      ],
+      "rules": [
+        "grafana.rule.cloud-private-data-source-connect-network"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_cloud_private_data_source_connect_network_token",
@@ -1703,77 +2042,115 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_cloud_provider_aws_account",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "grafana.context.ownership"
+      ],
       "contributions": [],
       "family": "integrations",
       "product": "cloud-provider-observability",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/cloud_provider_aws_account",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
-      "relations": ["authorized-by"],
-      "rootform_concepts": ["core/cloud-observability-integration"],
-      "rules": ["grafana/cloud-provider-aws-account"],
+      "relations": [
+        "authorized-by"
+      ],
+      "rootform_concepts": [
+        "grafana.concept.cloud-observability-integration"
+      ],
+      "rules": [
+        "grafana.rule.cloud-provider-aws-account"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_cloud_provider_aws_cloudwatch_scrape_job",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
-      "contributions": ["core.cloud-observability-integration"],
+      "contexts": [
+        "grafana.context.ownership"
+      ],
+      "contributions": [
+        "grafana.concept.cloud-observability-integration"
+      ],
       "family": "integrations",
       "product": "cloud-provider-observability",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/cloud_provider_aws_cloudwatch_scrape_job",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/cloud-integration-configuration"],
-      "rules": ["grafana/cloud-provider-aws-cloudwatch-scrape-job"],
+      "rootform_concepts": [
+        "grafana/cloud-integration-configuration"
+      ],
+      "rules": [
+        "grafana.rule.cloud-provider-aws-cloudwatch-scrape-job"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_cloud_provider_aws_resource_metadata_scrape_job",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
-      "contributions": ["core.cloud-observability-integration"],
+      "contexts": [
+        "grafana.context.ownership"
+      ],
+      "contributions": [
+        "grafana.concept.cloud-observability-integration"
+      ],
       "family": "integrations",
       "product": "cloud-provider-observability",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/cloud_provider_aws_resource_metadata_scrape_job",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/cloud-integration-configuration"],
-      "rules": ["grafana/cloud-provider-aws-resource-metadata-scrape-job"],
+      "rootform_concepts": [
+        "grafana/cloud-integration-configuration"
+      ],
+      "rules": [
+        "grafana.rule.cloud-provider-aws-resource-metadata-scrape-job"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_cloud_provider_azure_credential",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "grafana.context.ownership"
+      ],
       "contributions": [],
       "family": "integrations",
       "product": "cloud-provider-observability",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/cloud_provider_azure_credential",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
-      "relations": ["authorized-by"],
-      "rootform_concepts": ["core/cloud-observability-integration"],
-      "rules": ["grafana/cloud-provider-azure-credential"],
+      "relations": [
+        "authorized-by"
+      ],
+      "rootform_concepts": [
+        "grafana.concept.cloud-observability-integration"
+      ],
+      "rules": [
+        "grafana.rule.cloud-provider-azure-credential"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_cloud_stack",
@@ -1785,12 +2162,17 @@
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/cloud_stack",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/observability-tenant"],
-      "rules": ["grafana/cloud-stack"],
+      "rootform_concepts": [
+        "grafana.concept.observability-tenant"
+      ],
+      "rules": [
+        "grafana.rule.cloud-stack"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_cloud_stack_service_account",
@@ -1805,9 +2187,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_cloud_stack_service_account_rotating_token",
@@ -1822,9 +2206,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_cloud_stack_service_account_token",
@@ -1839,26 +2225,35 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_connections_metrics_endpoint_scrape_job",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "grafana.context.ownership"
+      ],
       "contributions": [],
       "family": "integrations",
       "product": "cloud-provider-observability",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/connections_metrics_endpoint_scrape_job",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["grafana/metrics-scrape-job"],
-      "rules": ["grafana/connections-metrics-endpoint-scrape-job"],
+      "rootform_concepts": [
+        "grafana/metrics-scrape-job"
+      ],
+      "rules": [
+        "grafana.rule.connections-metrics-endpoint-scrape-job"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_contact_point",
@@ -1873,9 +2268,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_dashboard",
@@ -1890,9 +2287,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_dashboard_permission",
@@ -1907,9 +2306,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_dashboard_permission_item",
@@ -1924,9 +2325,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_dashboard_public",
@@ -1941,26 +2344,37 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_data_source",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "grafana.context.ownership"
+      ],
       "contributions": [],
       "family": "telemetry",
       "product": "data-connectivity",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/data_source",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
-      "relations": ["connects-through"],
-      "rootform_concepts": ["grafana/data-source"],
-      "rules": ["grafana/data-source"],
+      "relations": [
+        "connects-through"
+      ],
+      "rootform_concepts": [
+        "grafana.rule.data-source"
+      ],
+      "rules": [
+        "grafana.rule.data-source"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_data_source_cache_config",
@@ -1970,14 +2384,16 @@
       "family": "telemetry",
       "product": "data-connectivity",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/data_source_cache_config",
-      "reason": "supporting-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
+      "reason": "unmodeled-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_data_source_config",
@@ -1987,14 +2403,16 @@
       "family": "telemetry",
       "product": "data-connectivity",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/data_source_config",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Grafana configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Grafana configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_data_source_config_lbac_rules",
@@ -2004,14 +2422,16 @@
       "family": "telemetry",
       "product": "data-connectivity",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/data_source_config_lbac_rules",
-      "reason": "supporting-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
+      "reason": "unmodeled-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_data_source_permission",
@@ -2026,9 +2446,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_data_source_permission_item",
@@ -2043,9 +2465,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_fleet_management_collector",
@@ -2057,12 +2481,17 @@
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/fleet_management_collector",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["grafana/telemetry-collector"],
-      "rules": ["grafana/fleet-management-collector"],
+      "rootform_concepts": [
+        "grafana/telemetry-collector"
+      ],
+      "rules": [
+        "grafana.rule.fleet-management-collector"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_fleet_management_pipeline",
@@ -2072,14 +2501,15 @@
       "family": "telemetry",
       "product": "fleet-management",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/fleet_management_pipeline",
-      "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
+      "reason": "no-rule",
       "relations": [],
-      "rootform_concepts": ["grafana/telemetry-pipeline"],
-      "rules": ["grafana/fleet-management-pipeline"],
+      "rootform_concepts": [
+        "grafana/telemetry-pipeline"
+      ],
+      "rules": [],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "no-rule",
+      "tests": []
     },
     {
       "construct": "grafana_folder",
@@ -2094,9 +2524,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_folder_permission",
@@ -2111,9 +2543,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_folder_permission_item",
@@ -2128,60 +2562,83 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_frontend_o11y_app",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "grafana.context.ownership"
+      ],
       "contributions": [],
       "family": "digital-experience",
       "product": "frontend-observability",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/frontend_o11y_app",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/browser-observability-application"],
-      "rules": ["grafana/frontend-o11y-app"],
+      "rootform_concepts": [
+        "grafana.concept.browser-observability-application"
+      ],
+      "rules": [
+        "grafana.rule.frontend-o11y-app"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_k6_installation",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["core.observability-tenant"],
+      "contributions": [
+        "grafana.concept.observability-tenant"
+      ],
       "family": "performance-testing",
       "product": "k6",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/k6_installation",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/platform-installation"],
-      "rules": ["grafana/k6-installation"],
+      "rootform_concepts": [
+        "grafana/platform-installation"
+      ],
+      "rules": [
+        "grafana.rule.k6-installation"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_k6_load_test",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["performance-testing-project"],
+      "contributions": [
+        "performance-testing-project"
+      ],
       "family": "performance-testing",
       "product": "k6",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/k6_load_test",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/performance-test"],
-      "rules": ["grafana/k6-load-test"],
+      "rootform_concepts": [
+        "grafana/performance-test"
+      ],
+      "rules": [
+        "grafana.rule.k6-load-test"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_k6_project",
@@ -2193,12 +2650,17 @@
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/k6_project",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["grafana/performance-testing-project"],
-      "rules": ["grafana/k6-project"],
+      "rootform_concepts": [
+        "grafana/performance-testing-project"
+      ],
+      "rules": [
+        "grafana.rule.k6-project"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_k6_project_allowed_load_zones",
@@ -2208,14 +2670,16 @@
       "family": "performance-testing",
       "product": "k6",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/k6_project_allowed_load_zones",
-      "reason": "supporting-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
+      "reason": "unmodeled-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_k6_project_limits",
@@ -2225,14 +2689,16 @@
       "family": "performance-testing",
       "product": "k6",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/k6_project_limits",
-      "reason": "supporting-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
+      "reason": "unmodeled-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_k6_schedule",
@@ -2242,14 +2708,16 @@
       "family": "performance-testing",
       "product": "k6",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/k6_schedule",
-      "reason": "supporting-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
+      "reason": "unmodeled-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_library_panel",
@@ -2264,9 +2732,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_machine_learning_alert",
@@ -2276,14 +2746,19 @@
       "family": "ai-ml",
       "product": "machine-learning",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/machine_learning_alert",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/machine-learning-configuration"],
-      "rules": ["grafana/machine-learning-alert"],
+      "rootform_concepts": [
+        "grafana/machine-learning-configuration"
+      ],
+      "rules": [
+        "grafana.rule.machine-learning-alert"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_machine_learning_holiday",
@@ -2293,14 +2768,16 @@
       "family": "ai-ml",
       "product": "machine-learning",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/machine_learning_holiday",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Grafana configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Grafana configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_machine_learning_job",
@@ -2310,14 +2787,19 @@
       "family": "ai-ml",
       "product": "machine-learning",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/machine_learning_job",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/machine-learning-configuration"],
-      "rules": ["grafana/machine-learning-job"],
+      "rootform_concepts": [
+        "grafana/machine-learning-configuration"
+      ],
+      "rules": [
+        "grafana.rule.machine-learning-job"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_machine_learning_outlier_detector",
@@ -2327,14 +2809,19 @@
       "family": "ai-ml",
       "product": "machine-learning",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/machine_learning_outlier_detector",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/machine-learning-configuration"],
-      "rules": ["grafana/machine-learning-outlier-detector"],
+      "rootform_concepts": [
+        "grafana/machine-learning-configuration"
+      ],
+      "rules": [
+        "grafana.rule.machine-learning-outlier-detector"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_message_template",
@@ -2349,9 +2836,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_mute_timing",
@@ -2366,9 +2855,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_notification_policy",
@@ -2383,9 +2874,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_oncall_escalation",
@@ -2395,14 +2888,16 @@
       "family": "incident-response",
       "product": "incident-response",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/oncall_escalation",
-      "reason": "supporting-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
+      "reason": "unmodeled-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_oncall_escalation_chain",
@@ -2412,14 +2907,16 @@
       "family": "incident-response",
       "product": "incident-response",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/oncall_escalation_chain",
-      "reason": "supporting-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
+      "reason": "unmodeled-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_oncall_integration",
@@ -2431,12 +2928,17 @@
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/oncall_integration",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["grafana/oncall-integration"],
-      "rules": ["grafana/oncall-integration"],
+      "rootform_concepts": [
+        "grafana.rule.oncall-integration"
+      ],
+      "rules": [
+        "grafana.rule.oncall-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_oncall_on_call_shift",
@@ -2446,14 +2948,16 @@
       "family": "incident-response",
       "product": "incident-response",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/oncall_on_call_shift",
-      "reason": "supporting-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
+      "reason": "unmodeled-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_oncall_outgoing_webhook",
@@ -2463,31 +2967,40 @@
       "family": "incident-response",
       "product": "incident-response",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/oncall_outgoing_webhook",
-      "reason": "supporting-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
+      "reason": "unmodeled-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_oncall_route",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["oncall-integration"],
+      "contributions": [
+        "oncall-integration"
+      ],
       "family": "incident-response",
       "product": "incident-response",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/oncall_route",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/oncall-routing"],
-      "rules": ["grafana/oncall-route"],
+      "rootform_concepts": [
+        "grafana/oncall-routing"
+      ],
+      "rules": [
+        "grafana.rule.oncall-route"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_oncall_schedule",
@@ -2497,14 +3010,16 @@
       "family": "incident-response",
       "product": "incident-response",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/oncall_schedule",
-      "reason": "supporting-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
+      "reason": "unmodeled-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_oncall_user_notification_rule",
@@ -2519,9 +3034,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_organization",
@@ -2533,12 +3050,17 @@
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/organization",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/observability-tenant"],
-      "rules": ["grafana/organization"],
+      "rootform_concepts": [
+        "grafana.concept.observability-tenant"
+      ],
+      "rules": [
+        "grafana.rule.organization"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_organization_preferences",
@@ -2548,14 +3070,16 @@
       "family": "platform",
       "product": "platform",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/organization_preferences",
-      "reason": "supporting-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
+      "reason": "unmodeled-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_playlist",
@@ -2570,9 +3094,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_report",
@@ -2587,9 +3113,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_role",
@@ -2604,9 +3132,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_role_assignment",
@@ -2621,9 +3151,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_role_assignment_item",
@@ -2638,9 +3170,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_rule_group",
@@ -2655,9 +3189,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_scim_config",
@@ -2667,14 +3203,19 @@
       "family": "identity-access",
       "product": "access-management",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/scim_config",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/identity-configuration"],
-      "rules": ["grafana/scim-config"],
+      "rootform_concepts": [
+        "grafana/identity-configuration"
+      ],
+      "rules": [
+        "grafana.rule.scim-config"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_service_account",
@@ -2689,9 +3230,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_service_account_permission",
@@ -2706,9 +3249,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_service_account_permission_item",
@@ -2723,9 +3268,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_service_account_rotating_token",
@@ -2740,9 +3287,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_service_account_token",
@@ -2757,9 +3306,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_slo",
@@ -2769,14 +3320,15 @@
       "family": "service-management",
       "product": "service-management",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/slo",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "no-rule",
       "relations": [],
-      "rootform_concepts": ["core/service-objective"],
-      "rules": ["grafana/slo"],
+      "rootform_concepts": [
+        "grafana.concept.service-objective"
+      ],
+      "rules": [],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "no-rule",
+      "tests": []
     },
     {
       "construct": "grafana_sso_settings",
@@ -2786,31 +3338,43 @@
       "family": "identity-access",
       "product": "access-management",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/sso_settings",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/identity-configuration"],
-      "rules": ["grafana/sso-settings"],
+      "rootform_concepts": [
+        "grafana/identity-configuration"
+      ],
+      "rules": [
+        "grafana.rule.sso-settings"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_synthetic_monitoring_check",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["core.synthetic-execution-location"],
+      "contributions": [
+        "grafana.concept.synthetic-execution-location"
+      ],
       "family": "digital-experience",
       "product": "synthetic-monitoring",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/synthetic_monitoring_check",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["core/synthetic-check"],
-      "rules": ["grafana/synthetic-monitoring-check"],
+      "rootform_concepts": [
+        "grafana.concept.synthetic-check"
+      ],
+      "rules": [
+        "grafana.rule.synthetic-monitoring-check"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_synthetic_monitoring_check_alerts",
@@ -2820,31 +3384,40 @@
       "family": "digital-experience",
       "product": "synthetic-monitoring",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/synthetic_monitoring_check_alerts",
-      "reason": "supporting-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
+      "reason": "unmodeled-configuration: fine-grained scheduling, routing, caching, limits, or operational settings own no independent topology",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_synthetic_monitoring_installation",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["core.observability-tenant"],
+      "contributions": [
+        "grafana.concept.observability-tenant"
+      ],
       "family": "digital-experience",
       "product": "synthetic-monitoring",
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/synthetic_monitoring_installation",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["grafana/platform-installation"],
-      "rules": ["grafana/synthetic-monitoring-installation"],
+      "rootform_concepts": [
+        "grafana/platform-installation"
+      ],
+      "rules": [
+        "grafana.rule.synthetic-monitoring-installation"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_synthetic_monitoring_probe",
@@ -2856,12 +3429,17 @@
       "proof_url": "https://registry.terraform.io/providers/grafana/grafana/4.45.2/docs/resources/synthetic_monitoring_probe",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/synthetic-execution-location"],
-      "rules": ["grafana/synthetic-monitoring-probe"],
+      "rootform_concepts": [
+        "grafana.concept.synthetic-execution-location"
+      ],
+      "rules": [
+        "grafana.rule.synthetic-monitoring-probe"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["grafana-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "grafana-compiler-scenarios"
+      ]
     },
     {
       "construct": "grafana_team",
@@ -2876,9 +3454,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_team_external_group",
@@ -2893,9 +3473,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "grafana_user",
@@ -2910,9 +3492,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "k6bundle",
@@ -2927,9 +3511,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["grafana-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "grafana-coverage-validator"
+      ],
+      "treatment": "no-rule"
     }
   ]
 }

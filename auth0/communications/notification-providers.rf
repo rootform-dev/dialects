@@ -1,5 +1,4 @@
 concept "notification-provider" {
-  kind        = entity
   description = "An email or phone provider delivering Auth0 identity notifications."
 }
 

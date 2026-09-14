@@ -1,10 +1,8 @@
 concept "organization" {
-  kind        = scope
   description = "A top-level HCP ownership and governance boundary."
 }
 
 concept "project" {
-  kind        = scope
   description = "An HCP boundary grouping managed products and access."
 }
 

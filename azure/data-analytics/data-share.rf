@@ -1,20 +1,6 @@
 # Maintained directly from pinned provider evidence.
-concept "data-share" {
-  kind        = entity
-  description = "An Azure Data Share publication."
-}
-
 concept "data-share-account" {
-  kind        = scope
   description = "An Azure Data Share account."
-}
-
-rule "data-share" {
-  match {
-    type = "azurerm_data_share"
-  }
-
-  as = concept.data-share
 }
 
 rule "data-share-account" {
@@ -25,7 +11,7 @@ rule "data-share-account" {
   as = concept.data-share-account
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

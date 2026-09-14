@@ -6,7 +6,7 @@ terraform {
 
 variable "unknown_id" { type = string }
 
-# One declaration per azurerm rule whose resource_group_name reference yields core/ownership.
+# One declaration per azurerm rule whose resource_group_name reference yields an ownership context.
 
 resource "azurerm_resource_group" "platform" {
   name     = "platform"

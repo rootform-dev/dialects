@@ -1,5 +1,4 @@
 concept "cloud-ids-endpoint" {
-  kind        = entity
   description = "A Cloud IDS endpoint inspecting traffic in a VPC network."
 }
 
@@ -11,8 +10,8 @@ rule "cloud-ids-endpoint" {
   as = concept.cloud-ids-endpoint
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.network
   }
 }

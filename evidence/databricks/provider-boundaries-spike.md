@@ -12,7 +12,7 @@
 - `databricks_metastore_assignment` explicitly names workspace and metastore. MWS workspace resources explicitly name network, storage, credential, key, and private-access registrations.
 - Unity Catalog external locations explicitly combine a cloud storage URL and storage credential. Storage credential blocks explicitly name AWS roles, Azure managed identities/access connectors, or Google service accounts; secret fields are marked sensitive.
 - MWS network objects register customer VPC/subnet and private endpoint resources. NCCs are regional Databricks constructs attached to workspaces; private endpoint rules name their target through dedicated fields.
-- Jobs and Lakeflow pipelines are durable orchestration boundaries. Tasks, notebooks, SQL text, refresh operations, permissions, and settings are supporting or operational objects.
+- Jobs and Lakeflow pipelines are durable orchestration boundaries. Tasks, notebooks, SQL text, refresh operations, permissions, and settings are helper or operational objects.
 
 ## Resolution
 

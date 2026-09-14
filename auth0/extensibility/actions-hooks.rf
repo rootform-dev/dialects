@@ -1,5 +1,4 @@
 concept "identity-extension" {
-  kind        = entity
   description = "An Auth0 Action, Rule, or Hook executing custom identity logic."
 }
 

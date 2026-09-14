@@ -1,10 +1,8 @@
 concept "customer-organization" {
-  kind        = scope
   description = "An Auth0 Organization representing a customer or business audience inside a tenant."
 }
 
 concept "identity-tenant" {
-  kind        = scope
   description = "An existing Auth0 tenant acting as an identity and authorization boundary."
 }
 

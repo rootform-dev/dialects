@@ -1,15 +1,12 @@
 concept "network-connectivity-configuration" {
-  kind        = entity
   description = "A regional Databricks network connectivity configuration for serverless workloads."
 }
 
 concept "private-endpoint-rule" {
-  kind        = entity
   description = "A Databricks rule provisioning private connectivity from serverless compute to a cloud resource."
 }
 
 concept "network-binding" {
-  kind        = detail
   description = "A binding attaching Databricks serverless network configuration to a workspace."
 }
 
@@ -47,18 +44,18 @@ rule "private-endpoint-rule" {
   as = concept.private-endpoint-rule
 
   context {
-    as  = context.core.network
+    as  = rf.context.network
     to  = concept.network-connectivity-configuration
     via = source.network_connectivity_config_id
   }
 
   relation "connects-to-storage" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.resource_id
   }
 
   relation "connects-to-endpoint" {
-    to  = concept.core.private-endpoint
+    to  = concept.private-endpoint
     via = source.vpc_endpoint_id
   }
 }

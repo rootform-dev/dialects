@@ -1,0 +1,123 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-29",
+  "dialect": "google@0.1.0",
+  "policy": {
+    "rf_vocabulary": "RF Vocabulary owns rf.concept.* and rf.context.*; adoptions require individual justification (target spec §6).",
+    "replacement": "Pre-v0.1 core catalog and promotions are replaced; the RF Vocabulary is fixed and embedded."
+  },
+  "rf_concept_bindings": [
+    {
+      "rule": "google.rule.alloydb-cluster",
+      "concept": "rf.concept.managed-database"
+    },
+    {
+      "rule": "google.rule.bare-metal-gdc-admin-cluster",
+      "concept": "rf.concept.kubernetes-cluster"
+    },
+    {
+      "rule": "google.rule.bare-metal-gdc-cluster",
+      "concept": "rf.concept.kubernetes-cluster"
+    },
+    {
+      "rule": "google.rule.bigtable-instance",
+      "concept": "rf.concept.managed-database"
+    },
+    {
+      "rule": "google.rule.cloud-sql-instance",
+      "concept": "rf.concept.managed-database"
+    },
+    {
+      "rule": "google.rule.cloud-storage-bucket",
+      "concept": "rf.concept.object-storage-container"
+    },
+    {
+      "rule": "google.rule.edge-container-cluster",
+      "concept": "rf.concept.kubernetes-cluster"
+    },
+    {
+      "rule": "google.rule.edge-network",
+      "concept": "rf.concept.virtual-network"
+    },
+    {
+      "rule": "google.rule.edge-network-subnet",
+      "concept": "rf.concept.subnet"
+    },
+    {
+      "rule": "google.rule.firebase-realtime-database",
+      "concept": "rf.concept.managed-database"
+    },
+    {
+      "rule": "google.rule.firestore-database",
+      "concept": "rf.concept.managed-database"
+    },
+    {
+      "rule": "google.rule.gke-attached-cluster",
+      "concept": "rf.concept.kubernetes-cluster"
+    },
+    {
+      "rule": "google.rule.gke-aws-cluster",
+      "concept": "rf.concept.kubernetes-cluster"
+    },
+    {
+      "rule": "google.rule.gke-azure-cluster",
+      "concept": "rf.concept.kubernetes-cluster"
+    },
+    {
+      "rule": "google.rule.gke-cluster",
+      "concept": "rf.concept.kubernetes-cluster"
+    },
+    {
+      "rule": "google.rule.iam-service-account",
+      "concept": "rf.concept.service-identity"
+    },
+    {
+      "rule": "google.rule.oracle-autonomous-database",
+      "concept": "rf.concept.managed-database"
+    },
+    {
+      "rule": "google.rule.oracle-odb-network",
+      "concept": "rf.concept.virtual-network"
+    },
+    {
+      "rule": "google.rule.oracle-odb-subnet",
+      "concept": "rf.concept.subnet"
+    },
+    {
+      "rule": "google.rule.spanner-instance",
+      "concept": "rf.concept.managed-database"
+    },
+    {
+      "rule": "google.rule.vmware-engine-network",
+      "concept": "rf.concept.virtual-network"
+    },
+    {
+      "rule": "google.rule.vmware-engine-subnet",
+      "concept": "rf.concept.subnet"
+    },
+    {
+      "rule": "google.rule.vmware-gdc-admin-cluster",
+      "concept": "rf.concept.kubernetes-cluster"
+    },
+    {
+      "rule": "google.rule.vmware-gdc-cluster",
+      "concept": "rf.concept.kubernetes-cluster"
+    },
+    {
+      "rule": "google.rule.vpc-network",
+      "concept": "rf.concept.virtual-network"
+    },
+    {
+      "rule": "google.rule.vpc-subnetwork",
+      "concept": "rf.concept.subnet"
+    }
+  ],
+  "local_concept_count": 93,
+  "local_context_count": 1,
+  "local_relation_count": 6,
+  "rule_count": 218,
+  "limitations": [
+    "Coverage and boundary evidence is provider-surface research; it does not prove semantic completeness of representations.",
+    "RF Vocabulary adoptions are derived from the current dialect sources and individually justifiable per target spec §6."
+  ]
+}

@@ -3,7 +3,7 @@ rule "integration-aws-account" {
     type = "datadog_integration_aws_account"
   }
 
-  as = concept.core.cloud-observability-integration
+  as = concept.cloud-observability-integration
 }
 
 rule "integration-azure" {
@@ -11,7 +11,7 @@ rule "integration-azure" {
     type = "datadog_integration_azure"
   }
 
-  as = concept.core.cloud-observability-integration
+  as = concept.cloud-observability-integration
 }
 
 rule "integration-gcp" {
@@ -19,7 +19,7 @@ rule "integration-gcp" {
     type = "datadog_integration_gcp"
   }
 
-  as = concept.core.cloud-observability-integration
+  as = concept.cloud-observability-integration
 }
 
 rule "integration-gcp-sts" {
@@ -27,5 +27,5 @@ rule "integration-gcp-sts" {
     type = "datadog_integration_gcp_sts"
   }
 
-  as = concept.core.cloud-observability-integration
+  as = concept.cloud-observability-integration
 }

@@ -4,5 +4,5 @@ rule "regional-load-balancer" {
     where = source.load_balancing_scheme != ""
   }
 
-  as = concept.core.load-balancer
+  as = concept.load-balancer
 }

@@ -4,10 +4,10 @@ rule "queue-storage-queue" {
     type = "azurerm_storage_queue"
   }
 
-  as = concept.core.message-queue
+  as = concept.message-queue
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.storage-account
     via = source.storage_account_id
   }

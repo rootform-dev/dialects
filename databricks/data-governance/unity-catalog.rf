@@ -1,45 +1,36 @@
 concept "unity-catalog-metastore" {
-  kind        = scope
   description = "A regional Unity Catalog metastore governing Databricks data and AI assets."
 }
 
 concept "unity-catalog-catalog" {
-  kind        = scope
   description = "A Unity Catalog catalog organizing governed data and AI assets."
 }
 
 concept "unity-catalog-schema" {
-  kind        = scope
   description = "A Unity Catalog schema organizing tables, volumes, models, and functions within a catalog."
 }
 
 concept "external-location" {
-  kind        = entity
   description = "A Unity Catalog external location pairing a cloud storage path with a storage credential."
 }
 
 concept "storage-credential" {
-  kind        = entity
   description = "A Unity Catalog credential authorizing access to cloud storage."
 }
 
 concept "service-credential" {
-  kind        = entity
   description = "A Unity Catalog credential authorizing access to a cloud service."
 }
 
 concept "unity-catalog-volume" {
-  kind        = entity
   description = "A Unity Catalog volume governing file storage for non-tabular data."
 }
 
 concept "unity-catalog-data-detail" {
-  kind        = detail
   description = "A governed data object or configuration within Unity Catalog."
 }
 
 concept "unity-catalog-access-detail" {
-  kind        = detail
   description = "An assignment, binding, or access configuration supporting Unity Catalog."
 }
 
@@ -51,7 +42,7 @@ rule "unity-catalog-metastore" {
   as = concept.unity-catalog-metastore
 
   relation "stores-in" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.storage_root
   }
 }
@@ -82,23 +73,18 @@ rule "metastore-data-access" {
   as = concept.storage-credential
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.unity-catalog-metastore
     via = source.metastore_id
   }
 
   relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
-    via = source.aws_iam_role[0].role_arn
-  }
-
-  relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.azure_managed_identity[0].managed_identity_id
   }
 
   relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.gcp_service_account_key[0].email
   }
 }
@@ -111,13 +97,13 @@ rule "unity-catalog-catalog" {
   as = concept.unity-catalog-catalog
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.unity-catalog-metastore
     via = source.metastore_id
   }
 
   relation "stores-in" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.storage_root
   }
 
@@ -145,13 +131,13 @@ rule "unity-catalog-schema" {
   as = concept.unity-catalog-schema
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.unity-catalog-catalog
     via = source.catalog_name
   }
 
   relation "stores-in" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.storage_root
   }
 }
@@ -164,7 +150,7 @@ rule "external-location" {
   as = concept.external-location
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.unity-catalog-metastore
     via = source.metastore_id
   }
@@ -175,12 +161,12 @@ rule "external-location" {
   }
 
   relation "stores-in" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.url
   }
 
   relation "uses-key" {
-    to  = concept.core.encryption-key
+    to  = concept.encryption-key
     via = source.encryption_details[0].sse_encryption_details[0].aws_kms_key_arn
   }
 }
@@ -193,23 +179,18 @@ rule "storage-credential" {
   as = concept.storage-credential
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.unity-catalog-metastore
     via = source.metastore_id
   }
 
   relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
-    via = source.aws_iam_role[0].role_arn
-  }
-
-  relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.azure_managed_identity[0].managed_identity_id
   }
 
   relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.gcp_service_account_key[0].email
   }
 }
@@ -222,18 +203,13 @@ rule "service-credential" {
   as = concept.service-credential
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.unity-catalog-metastore
     via = source.metastore_id
   }
 
   relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
-    via = source.aws_iam_role[0].role_arn
-  }
-
-  relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.azure_managed_identity[0].managed_identity_id
   }
 }
@@ -246,13 +222,13 @@ rule "unity-catalog-volume" {
   as = concept.unity-catalog-volume
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.unity-catalog-schema
     via = source.schema_name
   }
 
   relation "stores-in" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.storage_location
   }
 }

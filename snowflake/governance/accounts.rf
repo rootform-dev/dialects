@@ -1,10 +1,8 @@
 concept "account" {
-  kind        = scope
   description = "A Snowflake account providing an administrative and regional service boundary."
 }
 
 concept "account-configuration" {
-  kind        = detail
   description = "Configuration applied to a Snowflake account without creating independent service topology."
 }
 

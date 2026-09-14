@@ -1,0 +1,18 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-30",
+  "dialect": "consul@0.1.0",
+  "policy": {
+    "rf_vocabulary": "RF Vocabulary owns rf.concept.* and rf.context.*; adoptions require individual justification (target spec §6).",
+    "replacement": "Pre-v0.1 core catalog and promotions are replaced; the RF Vocabulary is fixed and embedded."
+  },
+  "rf_concept_bindings": [],
+  "local_concept_count": 19,
+  "local_context_count": 1,
+  "local_relation_count": 0,
+  "rule_count": 61,
+  "limitations": [
+    "Coverage and boundary evidence is provider-surface research; it does not prove semantic completeness of representations.",
+    "RF Vocabulary adoptions are derived from the current dialect sources and individually justifiable per target spec §6."
+  ]
+}

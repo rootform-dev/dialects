@@ -2,8 +2,8 @@
   "format_version": "1",
   "total_rows": 3380,
   "by_inventory": {
-    "provider_constructs": 3127,
-    "catalog_products": 253
+    "catalog-product": 253,
+    "provider-construct": 3127
   },
   "provider_constructs": {
     "managed_resources": 1711,
@@ -14,26 +14,16 @@
     "provider_functions": 4,
     "resource_identities": 501
   },
-  "represented_rules": 443,
+  "rules_with_rows": 108,
   "by_decision": {
-    "supported": 407,
-    "partial": 192,
-    "intentionally-unrepresented": 2779,
-    "unsupported": 2
-  },
-  "by_declaration_outcome": {
-    "represented": 443,
-    "supporting": 0,
-    "filtered": 0,
-    "unsupported": 1969,
-    "failed": 0,
-    "not-applicable": 715
+    "rule-present": 58,
+    "partial-rule": 88,
+    "no-rule": 455
   },
   "catalog": {
-    "supported": 16,
-    "partial": 140,
-    "intentionally-unrepresented": 96,
-    "unsupported": 1,
+    "rule-present": 2,
+    "partial-rule": 36,
+    "no-rule": 215,
     "no-provider-surface": 82
   }
 }

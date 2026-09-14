@@ -3,16 +3,16 @@ rule "aks-cluster" {
     type = "azurerm_kubernetes_cluster"
   }
 
-  as = concept.core.kubernetes-cluster
+  as = rf.concept.kubernetes-cluster
 
   context {
-    as  = context.core.network
-    to  = concept.core.subnet
+    as  = rf.context.network
+    to  = rf.concept.subnet
     via = source.default_node_pool[0].vnet_subnet_id
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
 
@@ -33,16 +33,16 @@ rule "aks-node-pool" {
     type = "azurerm_kubernetes_cluster_node_pool"
   }
 
-  as = concept.core.kubernetes-node-pool
+  as = concept.kubernetes-node-pool
 
   context {
-    as  = context.core.network
-    to  = concept.core.subnet
+    as  = rf.context.network
+    to  = rf.concept.subnet
     via = source.vnet_subnet_id
   }
 
   contribution {
-    to  = concept.core.kubernetes-cluster
+    to  = rf.concept.kubernetes-cluster
     via = source.kubernetes_cluster_id
   }
 }

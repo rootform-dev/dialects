@@ -3,16 +3,16 @@ rule "cloud-sql-instance" {
     type = "google_sql_database_instance"
   }
 
-  as = concept.core.managed-database
+  as = rf.concept.managed-database
 
-  relation {
-    as  = relation.core.private-reachability
-    to  = concept.core.virtual-network
+  context {
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.settings[0].ip_configuration[0].private_network
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.google-cloud-project
     via = source.project
   }

@@ -1,10 +1,8 @@
 concept "environment" {
-  kind        = scope
   description = "An isolated Confluent Cloud namespace for organizational and lifecycle ownership."
 }
 
 concept "governance-configuration" {
-  kind        = detail
   description = "Business metadata, tags, or catalog attributes configuring Confluent Cloud governance."
 }
 

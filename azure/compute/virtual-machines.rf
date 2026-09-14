@@ -1,11 +1,5 @@
 # Maintained directly from pinned provider evidence.
-concept "dedicated-host" {
-  kind        = entity
-  description = "A physical Azure server dedicated to one customer."
-}
-
 concept "dedicated-host-group" {
-  kind        = scope
   description = "An Azure Dedicated Host placement group."
 }
 
@@ -33,14 +27,6 @@ rule "capacity-reservation-group" {
   as = concept.compute-placement
 }
 
-rule "dedicated-host" {
-  match {
-    type = "azurerm_dedicated_host"
-  }
-
-  as = concept.dedicated-host
-}
-
 rule "dedicated-host-group" {
   match {
     type = "azurerm_dedicated_host_group"
@@ -49,7 +35,7 @@ rule "dedicated-host-group" {
   as = concept.dedicated-host-group
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

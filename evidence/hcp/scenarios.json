@@ -8,38 +8,43 @@
         "synthetic Terraform proves project, HVN, Vault Dedicated, and Private Link architecture without contacting HCP"
       ],
       "minimum": {
-        "entities": 2,
-        "scopes": 2,
+        "representations": 4,
         "relations": 1,
-        "contexts": 5
+        "contexts": 5,
+        "contributions": 0
       },
       "maximum_facts": {
         "relations": 1,
         "contexts": 5,
         "contributions": 0
       },
-      "required_rules": ["hcp/hvn", "hcp/private-link", "hcp/project", "hcp/vault-cluster"],
+      "required_rules": [
+        "hcp.rule.hvn",
+        "hcp.rule.private-link",
+        "hcp.rule.project",
+        "hcp.rule.vault-cluster"
+      ],
       "required_facts": [
         {
           "collection": "contexts",
-          "from": "scope:hcp_hvn.security",
-          "to": "scope:hcp_project.platform",
-          "dimension": "core/ownership",
-          "rule": "hcp/hvn"
+          "from": "representation:1:root:resource:hcp_hvn.security",
+          "to": "representation:1:root:resource:hcp_project.platform",
+          "dimension": "hcp.context.ownership",
+          "rule": "hcp.rule.hvn"
         },
         {
           "collection": "contexts",
-          "from": "entity:hcp_vault_cluster.security",
-          "to": "scope:hcp_hvn.security",
-          "dimension": "core/network",
-          "rule": "hcp/vault-cluster"
+          "from": "representation:1:root:resource:hcp_vault_cluster.security",
+          "to": "representation:1:root:resource:hcp_hvn.security",
+          "dimension": "rf.context.network",
+          "rule": "hcp.rule.vault-cluster"
         },
         {
           "collection": "relations",
-          "from": "entity:hcp_private_link.vault",
-          "to": "entity:hcp_vault_cluster.security",
+          "from": "representation:1:root:resource:hcp_private_link.vault",
+          "to": "representation:1:root:resource:hcp_vault_cluster.security",
           "type": "exposes-vault-cluster",
-          "rule": "hcp/private-link"
+          "rule": "hcp.rule.private-link"
         }
       ],
       "expected_html_labels": [
@@ -55,10 +60,8 @@
         "synthetic references prove AWS, Azure, Google Cloud, Confluent, networking, security, registry, platform, and operations facts; provider APIs and credentials are never used"
       ],
       "minimum": {
-        "entities": 41,
-        "scopes": 9,
-        "details": 14,
-        "relations": 24,
+        "representations": 64,
+        "relations": 21,
         "contexts": 45,
         "contributions": 12
       },
@@ -68,84 +71,83 @@
         "contributions": 12
       },
       "required_rules": [
-        "hcp/aws-network-peering",
-        "hcp/azure-peering-connection",
-        "hcp/boundary-cluster",
-        "hcp/consul-cluster",
-        "hcp/hvn",
-        "hcp/iam-workload-identity-provider",
-        "hcp/log-streaming-destination",
-        "hcp/packer-artifact-lookup",
-        "hcp/private-link",
-        "hcp/vault-cluster",
-        "hcp/vault-radar-source-github-cloud",
-        "hcp/vault-secrets-app",
-        "hcp/vault-secrets-integration",
-        "hcp/waypoint-application"
+        "hcp.rule.aws-network-peering",
+        "hcp.rule.azure-peering-connection",
+        "hcp.rule.boundary-cluster",
+        "hcp.rule.consul-cluster",
+        "hcp.rule.hvn",
+        "hcp.rule.iam-workload-identity-provider",
+        "hcp.rule.packer-artifact-lookup",
+        "hcp.rule.private-link",
+        "hcp.rule.vault-cluster",
+        "hcp.rule.vault-radar-source-github-cloud",
+        "hcp.rule.vault-secrets-app",
+        "hcp.rule.vault-secrets-integration",
+        "hcp.rule.waypoint-application"
       ],
       "required_facts": [
         {
           "collection": "relations",
-          "from": "entity:hcp_aws_network_peering.applications",
-          "to": "scope:aws_vpc.applications",
+          "from": "representation:1:root:resource:hcp_aws_network_peering.applications",
+          "to": "representation:1:root:resource:aws_vpc.applications",
           "type": "peers-with",
-          "rule": "hcp/aws-network-peering"
+          "rule": "hcp.rule.aws-network-peering"
         },
         {
           "collection": "relations",
-          "from": "entity:hcp_azure_peering_connection.applications",
-          "to": "scope:azurerm_virtual_network.applications",
+          "from": "representation:1:root:resource:hcp_azure_peering_connection.applications",
+          "to": "representation:1:root:resource:azurerm_virtual_network.applications",
           "type": "peers-with",
-          "rule": "hcp/azure-peering-connection"
+          "rule": "hcp.rule.azure-peering-connection"
         },
         {
           "collection": "relations",
-          "from": "entity:hcp_iam_workload_identity_provider.aws",
-          "to": "entity:hcp_service_principal.automation",
+          "from": "representation:1:root:resource:hcp_iam_workload_identity_provider.aws",
+          "to": "representation:1:root:resource:hcp_service_principal.automation",
           "type": "federates-to",
-          "rule": "hcp/iam-workload-identity-provider"
+          "rule": "hcp.rule.iam-workload-identity-provider"
         },
         {
           "collection": "relations",
-          "from": "entity:hcp_vault_secrets_integration.azure",
-          "to": "entity:azurerm_user_assigned_identity.vault",
+          "from": "representation:1:root:resource:hcp_vault_secrets_integration.azure",
+          "to": "representation:1:root:resource:azurerm_user_assigned_identity.vault",
           "type": "uses-cloud-identity",
-          "rule": "hcp/vault-secrets-integration"
+          "rule": "hcp.rule.vault-secrets-integration"
         },
         {
           "collection": "relations",
-          "from": "entity:hcp_vault_secrets_rotating_secret.confluent",
-          "to": "entity:confluent_service_account.vault",
+          "from": "representation:1:root:resource:hcp_vault_secrets_rotating_secret.confluent",
+          "to": "representation:1:root:resource:confluent_service_account.vault",
           "type": "uses-cloud-identity",
-          "rule": "hcp/vault-secrets-rotating-secret"
+          "rule": "hcp.rule.vault-secrets-rotating-secret"
         },
         {
           "collection": "relations",
-          "from": "entity:hcp_vault_radar_secret_manager_vault_dedicated.security",
-          "to": "entity:hcp_vault_cluster.security",
+          "from": "representation:1:root:resource:hcp_vault_radar_secret_manager_vault_dedicated.security",
+          "to": "representation:1:root:resource:hcp_vault_cluster.security",
           "type": "connects-vault-cluster",
-          "rule": "hcp/vault-radar-secret-manager-vault-dedicated"
+          "rule": "hcp.rule.vault-radar-secret-manager-vault-dedicated"
         },
         {
           "collection": "relations",
-          "from": "entity:hcp_waypoint_application.api",
-          "to": "entity:hcp_waypoint_template.service",
+          "from": "representation:1:root:resource:hcp_waypoint_application.api",
+          "to": "representation:1:root:resource:hcp_waypoint_template.service",
           "type": "uses-template",
-          "rule": "hcp/waypoint-application"
+          "rule": "hcp.rule.waypoint-application"
         },
         {
           "collection": "contributions",
-          "from": "detail:hcp_consul_snapshot.legacy",
-          "to": "entity:hcp_consul_cluster.legacy",
-          "rule": "hcp/consul-snapshot"
+          "from": "representation:1:root:resource:hcp_consul_snapshot.legacy",
+          "to": "representation:1:root:resource:hcp_consul_cluster.legacy",
+          "rule": "hcp.rule.consul-snapshot"
         }
       ],
       "required_outcomes": {
-        "hcp_boundary_cluster.access": "represented",
-        "hcp_consul_cluster.legacy": "represented",
-        "hcp_vault_cluster.security": "represented",
-        "hcp_vault_secrets_secret.api": "represented",
-        "hcp_waypoint_tfc_config.platform": "represented"
+        "hcp_boundary_cluster.access": "representation-present",
+        "hcp_consul_cluster.legacy": "representation-present",
+        "hcp_vault_cluster.security": "representation-present",
+        "hcp_vault_secrets_secret.api": "representation-present",
+        "hcp_waypoint_tfc_config.platform": "representation-present"
       },
       "expected_html_labels": [
         "HashiCorp Virtual Network (HVN)",
@@ -172,15 +174,15 @@
       "id": "hcp-fail-closed",
       "fixture": "fixtures/hcp-v0/boundary",
       "limitations": [
-        "negative fixture deliberately fails build to prove literal, depends_on, ambiguous, dangling, and concept-mismatched evidence creates no partial IR"
+        "negative fixture exits indeterminate while preserving resource bases and diagnostics; literal, depends_on, ambiguous, dangling, and target-mismatched evidence creates no unresolved fact"
       ],
       "expected_build_failure": true,
       "expected_diagnostic_codes": [
         "DEPENDENCY_DANGLING",
         "DEPENDENCY_DANGLING",
-        "FACT_CONCEPT_MISMATCH",
-        "FACT_CONCEPT_MISMATCH",
-        "FACT_CONCEPT_MISMATCH",
+        "FACT_TARGET_MISMATCH",
+        "FACT_TARGET_MISMATCH",
+        "FACT_TARGET_MISMATCH",
         "TRAVERSAL_AMBIGUOUS",
         "TRAVERSAL_AMBIGUOUS",
         "TRAVERSAL_AMBIGUOUS",

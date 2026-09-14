@@ -1,11 +1,9 @@
 # Maintained directly from pinned provider evidence.
 concept "netapp-account" {
-  kind        = scope
   description = "An Azure NetApp Files account."
 }
 
 concept "netapp-capacity-pool" {
-  kind        = scope
   description = "An Azure NetApp Files capacity pool."
 }
 
@@ -17,7 +15,7 @@ rule "netapp-account" {
   as = concept.netapp-account
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -31,7 +29,7 @@ rule "netapp-capacity-pool" {
   as = concept.netapp-capacity-pool
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -42,10 +40,10 @@ rule "netapp-volume" {
     type = "azurerm_netapp_volume"
   }
 
-  as = concept.core.managed-file-storage
+  as = concept.managed-file-storage
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

@@ -1,7 +1,0 @@
-rule "workflow-automation" {
-  match {
-    type = "newrelic_workflow_automation"
-  }
-
-  as = concept.core.workflow
-}

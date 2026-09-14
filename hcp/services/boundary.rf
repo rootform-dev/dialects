@@ -1,5 +1,4 @@
 concept "boundary-cluster" {
-  kind        = entity
   description = "A HashiCorp-managed Boundary control plane on HCP."
 }
 
@@ -11,7 +10,7 @@ rule "boundary-cluster" {
   as = concept.boundary-cluster
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -26,7 +25,7 @@ rule "boundary-cluster-lookup" {
   as = concept.boundary-cluster
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }

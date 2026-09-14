@@ -1,17 +1,8 @@
 concept "edge-security-configuration" {
-  kind        = detail
   description = "WAF, API, bot, content, credential, or certificate protection applied at the Cloudflare edge."
 }
 
-concept "turnstile-widget" {
-  kind        = entity
-  description = "A Cloudflare Turnstile site widget protecting an application interaction."
-}
 
-concept "vulnerability-scanner-target" {
-  kind        = entity
-  description = "A target environment scanned by Cloudflare for vulnerabilities."
-}
 
 rule "ruleset" {
   match {
@@ -21,7 +12,7 @@ rule "ruleset" {
   as = concept.edge-security-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -34,7 +25,7 @@ rule "firewall-rule" {
   as = concept.edge-security-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -47,7 +38,7 @@ rule "rate-limit" {
   as = concept.edge-security-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -60,7 +51,7 @@ rule "api-shield" {
   as = concept.edge-security-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -73,7 +64,7 @@ rule "bot-management" {
   as = concept.edge-security-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -86,7 +77,7 @@ rule "page-shield-policy" {
   as = concept.edge-security-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -99,7 +90,7 @@ rule "content-scanning" {
   as = concept.edge-security-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -112,26 +103,12 @@ rule "token-validation-config" {
   as = concept.edge-security-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
 
-rule "turnstile-widget" {
-  match {
-    type = "cloudflare_turnstile_widget"
-  }
 
-  as = concept.turnstile-widget
-}
-
-rule "vulnerability-scanner-target" {
-  match {
-    type = "cloudflare_vulnerability_scanner_target_environment"
-  }
-
-  as = concept.vulnerability-scanner-target
-}
 
 rule "precursor" {
   match {
@@ -141,7 +118,7 @@ rule "precursor" {
   as = concept.edge-security-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -154,7 +131,7 @@ rule "api-shield-discovery-operation" {
   as = concept.edge-security-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -167,7 +144,7 @@ rule "api-shield-operation" {
   as = concept.edge-security-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -180,7 +157,7 @@ rule "api-shield-operation-schema-validation" {
   as = concept.edge-security-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -193,7 +170,7 @@ rule "api-shield-schema" {
   as = concept.edge-security-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -206,7 +183,7 @@ rule "api-shield-schema-validation" {
   as = concept.edge-security-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -219,7 +196,7 @@ rule "schema-validation-operation-settings" {
   as = concept.edge-security-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -232,7 +209,7 @@ rule "schema-validation-schemas" {
   as = concept.edge-security-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -245,7 +222,7 @@ rule "schema-validation-settings" {
   as = concept.edge-security-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -258,7 +235,7 @@ rule "content-scanning-expression" {
   as = concept.edge-security-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -271,7 +248,7 @@ rule "user-agent-blocking-rule" {
   as = concept.edge-security-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -284,7 +261,7 @@ rule "zone-lockdown" {
   as = concept.edge-security-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }

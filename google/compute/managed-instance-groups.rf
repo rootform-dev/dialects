@@ -1,5 +1,4 @@
 concept "compute-instance-group" {
-  kind        = entity
   description = "A managed or unmanaged Compute Engine instance group."
 }
 
@@ -8,7 +7,7 @@ rule "compute-instance-from-template" {
     type = "google_compute_instance_from_template"
   }
 
-  as = concept.core.compute-instance
+  as = concept.compute-instance
 }
 
 rule "compute-instance-from-machine-image" {
@@ -16,7 +15,7 @@ rule "compute-instance-from-machine-image" {
     type = "google_compute_instance_from_machine_image"
   }
 
-  as = concept.core.compute-instance
+  as = concept.compute-instance
 }
 
 rule "unmanaged-instance-group" {

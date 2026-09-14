@@ -3,5 +3,5 @@ rule "cloud-endpoints-service" {
     type = "google_endpoints_service"
   }
 
-  as = concept.core.api-gateway
+  as = concept.api-gateway
 }

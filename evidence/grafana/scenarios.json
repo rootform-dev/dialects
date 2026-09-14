@@ -6,10 +6,14 @@
     {
       "id": "grafana-minimal",
       "fixture": "fixtures/grafana-v4/minimal",
-      "limitations": ["synthetic Terraform proves Grafana roots without contacting Grafana"],
+      "limitations": [
+        "synthetic Terraform proves Grafana roots without contacting Grafana"
+      ],
       "minimum": {
-        "entities": 3,
-        "scopes": 1
+        "representations": 4,
+        "relations": 0,
+        "contexts": 0,
+        "contributions": 0
       },
       "maximum_facts": {
         "contexts": 0,
@@ -17,10 +21,9 @@
         "relations": 0
       },
       "required_rules": [
-        "grafana/cloud-stack",
-        "grafana/data-source",
-        "grafana/fleet-management-collector",
-        "grafana/fleet-management-pipeline"
+        "grafana.rule.cloud-stack",
+        "grafana.rule.data-source",
+        "grafana.rule.fleet-management-collector"
       ],
       "expected_html_labels": [
         "Grafana Cloud stack",
@@ -36,12 +39,10 @@
         "only exact Terraform references create ownership, contribution, or cross-dialect relations; dashboards and alerts remain configuration"
       ],
       "minimum": {
-        "entities": 28,
-        "scopes": 4,
-        "details": 34,
+        "representations": 67,
+        "relations": 5,
         "contexts": 14,
-        "contributions": 13,
-        "relations": 8
+        "contributions": 13
       },
       "maximum_facts": {
         "contexts": 14,
@@ -49,132 +50,120 @@
         "relations": 8
       },
       "required_rules": [
-        "grafana/agento11y-collection",
-        "grafana/agento11y-evaluation-rule",
-        "grafana/agento11y-evaluator",
-        "grafana/agento11y-hook-rule",
-        "grafana/agento11y-rule-action",
-        "grafana/apps-productactivation-appo11yconfig-v1alpha1",
-        "grafana/apps-productactivation-dbo11yconfig-v1alpha1",
-        "grafana/apps-productactivation-k8so11yconfig-v1alpha1",
-        "grafana/apps-provisioning-connection-v0alpha1",
-        "grafana/apps-provisioning-repository-v0alpha1",
-        "grafana/apps-secret-keeper-activation-v1beta1",
-        "grafana/apps-secret-keeper-v1beta1",
-        "grafana/apps-secret-securevalue-v1beta1",
-        "grafana/asserts-custom-model-rules",
-        "grafana/asserts-log-config",
-        "grafana/asserts-notification-alerts-config",
-        "grafana/asserts-profile-config",
-        "grafana/asserts-prom-rule-file",
-        "grafana/asserts-stack",
-        "grafana/asserts-suppressed-assertions-config",
-        "grafana/asserts-thresholds",
-        "grafana/asserts-trace-config",
-        "grafana/assistant-mcp-server",
-        "grafana/cloud-integration",
-        "grafana/cloud-plugin-installation",
-        "grafana/cloud-private-data-source-connect-network",
-        "grafana/cloud-provider-aws-account",
-        "grafana/cloud-provider-aws-account-lookup",
-        "grafana/cloud-provider-aws-cloudwatch-scrape-job",
-        "grafana/cloud-provider-aws-cloudwatch-scrape-job-lookup",
-        "grafana/cloud-provider-aws-resource-metadata-scrape-job",
-        "grafana/cloud-provider-azure-credential",
-        "grafana/cloud-provider-azure-credential-lookup",
-        "grafana/cloud-stack",
-        "grafana/cloud-stack-lookup",
-        "grafana/connections-metrics-endpoint-scrape-job",
-        "grafana/connections-metrics-endpoint-scrape-job-lookup",
-        "grafana/data-source",
-        "grafana/data-source-lookup",
-        "grafana/fleet-management-collector",
-        "grafana/fleet-management-collector-lookup",
-        "grafana/fleet-management-pipeline",
-        "grafana/frontend-o11y-app",
-        "grafana/frontend-o11y-app-lookup",
-        "grafana/k6-installation",
-        "grafana/k6-load-test",
-        "grafana/k6-load-test-lookup",
-        "grafana/k6-project",
-        "grafana/k6-project-lookup",
-        "grafana/machine-learning-alert",
-        "grafana/machine-learning-job",
-        "grafana/machine-learning-outlier-detector",
-        "grafana/oncall-integration",
-        "grafana/oncall-integration-lookup",
-        "grafana/oncall-route",
-        "grafana/organization",
-        "grafana/organization-lookup",
-        "grafana/scim-config",
-        "grafana/slo",
-        "grafana/sso-settings",
-        "grafana/synthetic-monitoring-check",
-        "grafana/synthetic-monitoring-installation",
-        "grafana/synthetic-monitoring-probe",
-        "grafana/synthetic-monitoring-probe-lookup"
+        "grafana.rule.agento11y-collection",
+        "grafana.rule.agento11y-evaluation-rule",
+        "grafana.rule.agento11y-evaluator",
+        "grafana.rule.agento11y-hook-rule",
+        "grafana.rule.agento11y-rule-action",
+        "grafana.rule.apps-productactivation-appo11yconfig-v1alpha1",
+        "grafana.rule.apps-productactivation-dbo11yconfig-v1alpha1",
+        "grafana.rule.apps-productactivation-k8so11yconfig-v1alpha1",
+        "grafana.rule.apps-provisioning-connection-v0alpha1",
+        "grafana.rule.apps-provisioning-repository-v0alpha1",
+        "grafana.rule.apps-secret-keeper-activation-v1beta1",
+        "grafana.rule.asserts-custom-model-rules",
+        "grafana.rule.asserts-log-config",
+        "grafana.rule.asserts-notification-alerts-config",
+        "grafana.rule.asserts-profile-config",
+        "grafana.rule.asserts-prom-rule-file",
+        "grafana.rule.asserts-stack",
+        "grafana.rule.asserts-suppressed-assertions-config",
+        "grafana.rule.asserts-thresholds",
+        "grafana.rule.asserts-trace-config",
+        "grafana.rule.cloud-integration",
+        "grafana.rule.cloud-plugin-installation",
+        "grafana.rule.cloud-private-data-source-connect-network",
+        "grafana.rule.cloud-provider-aws-account",
+        "grafana.rule.cloud-provider-aws-account-lookup",
+        "grafana.rule.cloud-provider-aws-cloudwatch-scrape-job",
+        "grafana.rule.cloud-provider-aws-cloudwatch-scrape-job-lookup",
+        "grafana.rule.cloud-provider-aws-resource-metadata-scrape-job",
+        "grafana.rule.cloud-provider-azure-credential",
+        "grafana.rule.cloud-provider-azure-credential-lookup",
+        "grafana.rule.cloud-stack",
+        "grafana.rule.cloud-stack-lookup",
+        "grafana.rule.connections-metrics-endpoint-scrape-job",
+        "grafana.rule.connections-metrics-endpoint-scrape-job-lookup",
+        "grafana.rule.data-source",
+        "grafana.rule.data-source-lookup",
+        "grafana.rule.fleet-management-collector",
+        "grafana.rule.fleet-management-collector-lookup",
+        "grafana.rule.frontend-o11y-app",
+        "grafana.rule.frontend-o11y-app-lookup",
+        "grafana.rule.k6-installation",
+        "grafana.rule.k6-load-test",
+        "grafana.rule.k6-load-test-lookup",
+        "grafana.rule.k6-project",
+        "grafana.rule.k6-project-lookup",
+        "grafana.rule.machine-learning-alert",
+        "grafana.rule.machine-learning-job",
+        "grafana.rule.machine-learning-outlier-detector",
+        "grafana.rule.oncall-integration",
+        "grafana.rule.oncall-integration-lookup",
+        "grafana.rule.oncall-route",
+        "grafana.rule.organization",
+        "grafana.rule.organization-lookup",
+        "grafana.rule.scim-config",
+        "grafana.rule.sso-settings",
+        "grafana.rule.synthetic-monitoring-check",
+        "grafana.rule.synthetic-monitoring-installation",
+        "grafana.rule.synthetic-monitoring-probe",
+        "grafana.rule.synthetic-monitoring-probe-lookup"
       ],
       "required_facts": [
         {
           "collection": "contexts",
-          "from": "entity:grafana_cloud_private_data_source_connect_network.private",
-          "to": "scope:grafana_cloud_stack.platform",
-          "dimension": "core/ownership",
-          "rule": "grafana/cloud-private-data-source-connect-network"
+          "from": "representation:1:root:resource:grafana_cloud_private_data_source_connect_network.private",
+          "to": "representation:1:root:resource:grafana_cloud_stack.platform",
+          "dimension": "grafana.context.ownership",
+          "rule": "grafana.rule.cloud-private-data-source-connect-network"
         },
         {
           "collection": "relations",
-          "from": "entity:grafana_data_source.metrics",
-          "to": "entity:grafana_cloud_private_data_source_connect_network.private",
+          "from": "representation:1:root:resource:grafana_data_source.metrics",
+          "to": "representation:1:root:resource:grafana_cloud_private_data_source_connect_network.private",
           "type": "connects-through",
-          "rule": "grafana/data-source"
+          "rule": "grafana.rule.data-source"
         },
         {
           "collection": "relations",
-          "from": "entity:grafana_cloud_provider_aws_account.production",
-          "to": "entity:aws_iam_role.grafana",
+          "from": "representation:1:root:resource:grafana_cloud_provider_aws_account.production",
+          "to": "representation:1:root:resource:aws_iam_role.grafana",
           "type": "authorized-by",
-          "rule": "grafana/cloud-provider-aws-account"
+          "rule": "grafana.rule.cloud-provider-aws-account"
         },
         {
           "collection": "relations",
-          "from": "entity:grafana_cloud_provider_azure_credential.production",
-          "to": "entity:azuread_service_principal.grafana",
+          "from": "representation:1:root:resource:grafana_cloud_provider_azure_credential.production",
+          "to": "representation:1:root:resource:azuread_service_principal.grafana",
           "type": "authorized-by",
-          "rule": "grafana/cloud-provider-azure-credential"
+          "rule": "grafana.rule.cloud-provider-azure-credential"
         },
         {
           "collection": "relations",
-          "from": "entity:grafana_apps_provisioning_repository_v0alpha1.dashboards",
-          "to": "entity:grafana_apps_provisioning_connection_v0alpha1.github",
+          "from": "representation:1:root:resource:grafana_apps_provisioning_repository_v0alpha1.dashboards",
+          "to": "representation:1:root:resource:grafana_apps_provisioning_connection_v0alpha1.github",
           "type": "authenticates-through",
-          "rule": "grafana/apps-provisioning-repository-v0alpha1"
-        },
-        {
-          "collection": "relations",
-          "from": "entity:grafana_apps_secret_keeper_v1beta1.aws",
-          "to": "entity:aws_iam_role.grafana",
-          "type": "authorized-by",
-          "rule": "grafana/apps-secret-keeper-v1beta1"
+          "rule": "grafana.rule.apps-provisioning-repository-v0alpha1"
         },
         {
           "collection": "contributions",
-          "from": "detail:grafana_synthetic_monitoring_check.api",
-          "to": "entity:grafana_synthetic_monitoring_probe.private",
-          "rule": "grafana/synthetic-monitoring-check"
+          "from": "representation:1:root:resource:grafana_synthetic_monitoring_check.api",
+          "to": "representation:1:root:resource:grafana_synthetic_monitoring_probe.private",
+          "rule": "grafana.rule.synthetic-monitoring-check"
         },
         {
           "collection": "contributions",
-          "from": "detail:grafana_asserts_log_config.logs",
-          "to": "entity:grafana_data_source.metrics",
-          "rule": "grafana/asserts-log-config"
+          "from": "representation:1:root:resource:grafana_asserts_log_config.logs",
+          "to": "representation:1:root:resource:grafana_data_source.metrics",
+          "rule": "grafana.rule.asserts-log-config"
         }
       ],
       "required_outcomes": {
-        "grafana_dashboard.must_not_create_topology": "unsupported",
-        "grafana_cloud_stack.platform": "represented",
-        "grafana_fleet_management_pipeline.telemetry": "represented",
-        "grafana_synthetic_monitoring_check.api": "represented"
+        "grafana_dashboard.must_not_create_topology": "no-rule",
+        "grafana_cloud_stack.platform": "representation-present",
+        "grafana_fleet_management_pipeline.telemetry": "representation-present",
+        "grafana_synthetic_monitoring_check.api": "representation-present"
       },
       "expected_html_labels": [
         "Grafana Cloud stack",
@@ -212,12 +201,12 @@
       "id": "grafana-fail-closed",
       "fixture": "fixtures/grafana-v4/boundary",
       "limitations": [
-        "negative fixture proves literals, ambiguity, dangling references, concept mismatches, and depends_on create no facts"
+        "negative fixture proves literals, ambiguity, dangling references, target mismatches, and depends_on create no unresolved facts while partial IR preserves bases"
       ],
       "expected_build_failure": true,
       "expected_diagnostic_codes": [
         "DEPENDENCY_DANGLING",
-        "FACT_CONCEPT_MISMATCH",
+        "FACT_TARGET_MISMATCH",
         "TRAVERSAL_AMBIGUOUS",
         "TRAVERSAL_DANGLING",
         "TRAVERSAL_UNRESOLVED"

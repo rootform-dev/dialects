@@ -3,7 +3,7 @@ rule "db-instance" {
     type = "aws_db_instance"
   }
 
-  as = concept.core.managed-database
+  as = rf.concept.managed-database
 }
 
 rule "rds-cluster" {
@@ -11,7 +11,7 @@ rule "rds-cluster" {
     type = "aws_rds_cluster"
   }
 
-  as = concept.core.managed-database
+  as = rf.concept.managed-database
 }
 
 rule "rds-cluster-instance" {
@@ -22,7 +22,7 @@ rule "rds-cluster-instance" {
   as = concept.managed-database-component
 
   contribution {
-    to  = concept.core.managed-database
+    to  = rf.concept.managed-database
     via = source.cluster_identifier
   }
 }
@@ -35,7 +35,7 @@ rule "docdb-cluster-instance" {
   as = concept.managed-database-component
 
   contribution {
-    to  = concept.core.managed-database
+    to  = rf.concept.managed-database
     via = source.cluster_identifier
   }
 }
@@ -48,7 +48,7 @@ rule "neptune-cluster-instance" {
   as = concept.managed-database-component
 
   contribution {
-    to  = concept.core.managed-database
+    to  = rf.concept.managed-database
     via = source.cluster_identifier
   }
 }
@@ -61,7 +61,7 @@ rule "rds-cluster-endpoint" {
   as = concept.managed-database-component
 
   contribution {
-    to  = concept.core.managed-database
+    to  = rf.concept.managed-database
     via = source.cluster_identifier
   }
 }
@@ -74,7 +74,7 @@ rule "rds-cluster-activity-stream" {
   as = concept.managed-database-component
 
   contribution {
-    to  = concept.core.managed-database
+    to  = rf.concept.managed-database
     via = source.resource_arn
   }
 }

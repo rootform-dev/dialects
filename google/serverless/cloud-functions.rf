@@ -3,7 +3,7 @@ rule "cloud-run-function" {
     type = "google_cloudfunctions_function"
   }
 
-  as = concept.core.serverless-function
+  as = concept.serverless-function
 }
 
 rule "cloud-run-function-v2" {
@@ -11,5 +11,5 @@ rule "cloud-run-function-v2" {
     type = "google_cloudfunctions2_function"
   }
 
-  as = concept.core.serverless-function
+  as = concept.serverless-function
 }

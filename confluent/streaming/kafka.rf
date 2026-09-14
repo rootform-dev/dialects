@@ -1,10 +1,8 @@
 concept "kafka-cluster" {
-  kind        = entity
   description = "A managed Apache Kafka cluster in Confluent Cloud."
 }
 
 concept "kafka-configuration" {
-  kind        = detail
   description = "Cluster, topic, quota, or access configuration supporting a Confluent Cloud Kafka cluster."
 }
 
@@ -16,14 +14,14 @@ rule "kafka-cluster" {
   as = concept.kafka-cluster
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.environment
     via = source.environment[0].id
   }
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.network[0].id
   }
 
@@ -38,10 +36,10 @@ rule "kafka-topic" {
     type = "confluent_kafka_topic"
   }
 
-  as = concept.core.message-topic
+  as = concept.message-topic
 
   context {
-    as  = context.core.runtime
+    as  = rf.context.runtime
     to  = concept.kafka-cluster
     via = source.kafka_cluster[0].id
   }
@@ -52,16 +50,16 @@ rule "rtce-topic" {
     type = "confluent_rtce_topic"
   }
 
-  as = concept.core.message-topic
+  as = concept.message-topic
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.environment
     via = source.environment[0].id
   }
 
   context {
-    as  = context.core.runtime
+    as  = rf.context.runtime
     to  = concept.kafka-cluster
     via = source.kafka_cluster[0].id
   }

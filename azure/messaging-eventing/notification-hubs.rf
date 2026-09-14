@@ -1,11 +1,9 @@
 # Maintained directly from pinned provider evidence.
 concept "notification-hub" {
-  kind        = entity
   description = "An Azure Notification Hubs push-notification hub."
 }
 
 concept "notification-namespace" {
-  kind        = scope
   description = "An Azure Notification Hubs namespace."
 }
 
@@ -17,7 +15,7 @@ rule "notification-hub" {
   as = concept.notification-hub
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -31,7 +29,7 @@ rule "notification-hubs-namespace" {
   as = concept.notification-namespace
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

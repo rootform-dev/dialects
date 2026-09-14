@@ -10,8 +10,10 @@
         "synthetic Terraform proves durable Datadog roots without contacting Datadog"
       ],
       "minimum": {
-        "entities": 3,
-        "scopes": 1
+        "representations": 4,
+        "relations": 0,
+        "contexts": 0,
+        "contributions": 0
       },
       "maximum_facts": {
         "contexts": 0,
@@ -19,10 +21,9 @@
         "relations": 0
       },
       "required_rules": [
-        "datadog/child-organization",
-        "datadog/integration-aws-account",
-        "datadog/logs-archive",
-        "datadog/observability-pipeline"
+        "datadog.rule.child-organization",
+        "datadog.rule.integration-aws-account",
+        "datadog.rule.logs-archive"
       ],
       "expected_html_labels": [
         "Datadog child organization",
@@ -38,12 +39,10 @@
         "cloud and service integrations prove Datadog collection boundaries, not application traffic; nested OpenTelemetry blocks stay unclaimed"
       ],
       "minimum": {
-        "entities": 22,
-        "scopes": 6,
-        "details": 21,
+        "representations": 51,
+        "relations": 1,
         "contexts": 0,
-        "contributions": 7,
-        "relations": 1
+        "contributions": 7
       },
       "maximum_facts": {
         "contexts": 0,
@@ -51,95 +50,94 @@
         "relations": 1
       },
       "required_rules": [
-        "datadog/action-connection",
-        "datadog/action-connection-lookup",
-        "datadog/app-builder-app",
-        "datadog/app-builder-app-lookup",
-        "datadog/child-organization",
-        "datadog/compliance-custom-framework",
-        "datadog/csm-threats-policy",
-        "datadog/datastore",
-        "datadog/datastore-item",
-        "datadog/datastore-item-lookup",
-        "datadog/datastore-lookup",
-        "datadog/integration-aws-account",
-        "datadog/integration-azure",
-        "datadog/integration-cloudflare-account",
-        "datadog/integration-confluent-account",
-        "datadog/integration-confluent-resource",
-        "datadog/integration-fastly-account",
-        "datadog/integration-fastly-service",
-        "datadog/integration-gcp",
-        "datadog/integration-gcp-sts",
-        "datadog/logs-archive",
-        "datadog/logs-archive-order",
-        "datadog/logs-custom-destination",
-        "datadog/logs-custom-pipeline",
-        "datadog/logs-index",
-        "datadog/logs-integration-pipeline",
-        "datadog/observability-pipeline",
-        "datadog/org-connection",
-        "datadog/rum-application",
-        "datadog/rum-application-lookup",
-        "datadog/rum-retention-filter",
-        "datadog/security-monitoring-rule",
-        "datadog/sensitive-data-scanner-group",
-        "datadog/service-definition-yaml",
-        "datadog/service-level-objective",
-        "datadog/service-level-objective-lookup",
-        "datadog/software-catalog",
-        "datadog/software-catalog-lookup",
-        "datadog/synthetics-private-location",
-        "datadog/synthetics-suite",
-        "datadog/synthetics-test",
-        "datadog/synthetics-test-lookup",
-        "datadog/workflow-automation",
-        "datadog/workflow-automation-lookup"
+        "datadog.rule.action-connection",
+        "datadog.rule.action-connection-lookup",
+        "datadog.rule.app-builder-app",
+        "datadog.rule.app-builder-app-lookup",
+        "datadog.rule.child-organization",
+        "datadog.rule.compliance-custom-framework",
+        "datadog.rule.csm-threats-policy",
+        "datadog.rule.datastore",
+        "datadog.rule.datastore-item",
+        "datadog.rule.datastore-item-lookup",
+        "datadog.rule.datastore-lookup",
+        "datadog.rule.integration-aws-account",
+        "datadog.rule.integration-azure",
+        "datadog.rule.integration-cloudflare-account",
+        "datadog.rule.integration-confluent-account",
+        "datadog.rule.integration-confluent-resource",
+        "datadog.rule.integration-fastly-account",
+        "datadog.rule.integration-fastly-service",
+        "datadog.rule.integration-gcp",
+        "datadog.rule.integration-gcp-sts",
+        "datadog.rule.logs-archive",
+        "datadog.rule.logs-archive-order",
+        "datadog.rule.logs-custom-destination",
+        "datadog.rule.logs-custom-pipeline",
+        "datadog.rule.logs-index",
+        "datadog.rule.logs-integration-pipeline",
+        "datadog.rule.org-connection",
+        "datadog.rule.rum-application",
+        "datadog.rule.rum-application-lookup",
+        "datadog.rule.rum-retention-filter",
+        "datadog.rule.security-monitoring-rule",
+        "datadog.rule.sensitive-data-scanner-group",
+        "datadog.rule.service-definition-yaml",
+        "datadog.rule.service-level-objective",
+        "datadog.rule.service-level-objective-lookup",
+        "datadog.rule.software-catalog",
+        "datadog.rule.software-catalog-lookup",
+        "datadog.rule.synthetics-private-location",
+        "datadog.rule.synthetics-suite",
+        "datadog.rule.synthetics-test",
+        "datadog.rule.synthetics-test-lookup",
+        "datadog.rule.workflow-automation",
+        "datadog.rule.workflow-automation-lookup"
       ],
       "required_facts": [
         {
           "collection": "relations",
-          "from": "entity:datadog_org_connection.shared",
-          "to": "scope:datadog_child_organization.platform",
+          "from": "representation:1:root:resource:datadog_org_connection.shared",
+          "to": "representation:1:root:resource:datadog_child_organization.platform",
           "type": "shares-telemetry-with",
-          "rule": "datadog/org-connection"
+          "rule": "datadog.rule.org-connection"
         },
         {
           "collection": "contributions",
-          "from": "detail:datadog_integration_confluent_resource.kafka",
-          "to": "entity:datadog_integration_confluent_account.streaming",
-          "rule": "datadog/integration-confluent-resource"
+          "from": "representation:1:root:resource:datadog_integration_confluent_resource.kafka",
+          "to": "representation:1:root:resource:datadog_integration_confluent_account.streaming",
+          "rule": "datadog.rule.integration-confluent-resource"
         },
         {
           "collection": "contributions",
-          "from": "detail:datadog_integration_fastly_service.edge",
-          "to": "entity:datadog_integration_fastly_account.edge",
-          "rule": "datadog/integration-fastly-service"
+          "from": "representation:1:root:resource:datadog_integration_fastly_service.edge",
+          "to": "representation:1:root:resource:datadog_integration_fastly_account.edge",
+          "rule": "datadog.rule.integration-fastly-service"
         },
         {
           "collection": "contributions",
-          "from": "detail:datadog_logs_archive_order.primary",
-          "to": "entity:datadog_logs_archive.primary",
-          "rule": "datadog/logs-archive-order"
+          "from": "representation:1:root:resource:datadog_logs_archive_order.primary",
+          "to": "representation:1:root:resource:datadog_logs_archive.primary",
+          "rule": "datadog.rule.logs-archive-order"
         },
         {
           "collection": "contributions",
-          "from": "detail:datadog_rum_retention_filter.web",
-          "to": "entity:datadog_rum_application.web",
-          "rule": "datadog/rum-retention-filter"
+          "from": "representation:1:root:resource:datadog_rum_retention_filter.web",
+          "to": "representation:1:root:resource:datadog_rum_application.web",
+          "rule": "datadog.rule.rum-retention-filter"
         },
         {
           "collection": "contributions",
-          "from": "detail:datadog_synthetics_test.api",
-          "to": "entity:datadog_synthetics_private_location.internal",
-          "rule": "datadog/synthetics-test"
+          "from": "representation:1:root:resource:datadog_synthetics_test.api",
+          "to": "representation:1:root:resource:datadog_synthetics_private_location.internal",
+          "rule": "datadog.rule.synthetics-test"
         }
       ],
       "required_outcomes": {
-        "datadog_monitor.must_not_create_topology": "unsupported",
-        "datadog_observability_pipeline.telemetry": "represented",
-        "datadog_org_connection.shared": "represented",
-        "datadog_synthetics_test.api": "represented"
+        "datadog_monitor.must_not_create_topology": "no-rule",
+        "datadog_observability_pipeline.telemetry": "representation-present",
+        "datadog_org_connection.shared": "representation-present",
+        "datadog_synthetics_test.api": "representation-present"
       },
       "expected_html_labels": [
         "Datadog organization connection",
@@ -166,12 +164,12 @@
       "id": "datadog-fail-closed",
       "fixture": "fixtures/datadog-v4/boundary",
       "limitations": [
-        "negative fixture deliberately fails build to prove literals, depends_on, ambiguity, dangling references, and concept mismatches create no partial output"
+        "negative fixture exits indeterminate while preserving resource bases and diagnostics; literals, depends_on, ambiguity, dangling references, and target mismatches create no unresolved fact"
       ],
       "expected_build_failure": true,
       "expected_diagnostic_codes": [
         "DEPENDENCY_DANGLING",
-        "FACT_CONCEPT_MISMATCH",
+        "FACT_TARGET_MISMATCH",
         "TRAVERSAL_AMBIGUOUS",
         "TRAVERSAL_DANGLING",
         "TRAVERSAL_UNRESOLVED"

@@ -4,10 +4,10 @@ rule "data-protection-backup-vault" {
     type = "azurerm_data_protection_backup_vault"
   }
 
-  as = concept.core.backup-vault
+  as = concept.backup-vault
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -18,7 +18,7 @@ rule "data-protection-blob-backup-policy" {
     type = "azurerm_data_protection_backup_policy_blob_storage"
   }
 
-  as = concept.core.backup-plan
+  as = concept.backup-plan
 }
 
 rule "data-protection-disk-backup-policy" {
@@ -26,7 +26,7 @@ rule "data-protection-disk-backup-policy" {
     type = "azurerm_data_protection_backup_policy_disk"
   }
 
-  as = concept.core.backup-plan
+  as = concept.backup-plan
 }
 
 rule "netapp-backup-policy" {
@@ -34,10 +34,10 @@ rule "netapp-backup-policy" {
     type = "azurerm_netapp_backup_policy"
   }
 
-  as = concept.core.backup-plan
+  as = concept.backup-plan
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -48,10 +48,10 @@ rule "netapp-backup-vault" {
     type = "azurerm_netapp_backup_vault"
   }
 
-  as = concept.core.backup-vault
+  as = concept.backup-vault
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

@@ -123,7 +123,10 @@
   "lifecycle_findings": {
     "provider_deprecations": {
       "state": "deprecated",
-      "constructs": ["consul_agent_service", "consul_catalog_entry"],
+      "constructs": [
+        "consul_agent_service",
+        "consul_catalog_entry"
+      ],
       "since_provider": "2.0.0",
       "source_url": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/guides/upgrading"
     },

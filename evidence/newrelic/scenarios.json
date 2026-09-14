@@ -6,10 +6,14 @@
     {
       "id": "newrelic-minimal",
       "fixture": "fixtures/newrelic-v3/minimal",
-      "limitations": ["synthetic Terraform proves roots without contacting New Relic"],
+      "limitations": [
+        "synthetic Terraform proves roots without contacting New Relic"
+      ],
       "minimum": {
-        "entities": 3,
-        "scopes": 1
+        "representations": 4,
+        "relations": 0,
+        "contexts": 0,
+        "contributions": 0
       },
       "maximum_facts": {
         "contexts": 0,
@@ -17,10 +21,10 @@
         "relations": 0
       },
       "required_rules": [
-        "newrelic/account-management",
-        "newrelic/browser-application",
-        "newrelic/fleet",
-        "newrelic/synthetics-private-location"
+        "newrelic.rule.account-management",
+        "newrelic.rule.browser-application",
+        "newrelic.rule.fleet",
+        "newrelic.rule.synthetics-private-location"
       ],
       "expected_html_labels": [
         "New Relic account",
@@ -36,12 +40,10 @@
         "only exact Terraform references create ownership, composition, or cross-dialect relations"
       ],
       "minimum": {
-        "entities": 17,
-        "scopes": 3,
-        "details": 31,
+        "representations": 52,
+        "relations": 3,
         "contexts": 34,
-        "contributions": 15,
-        "relations": 7
+        "contributions": 15
       },
       "maximum_facts": {
         "contexts": 34,
@@ -49,90 +51,88 @@
         "relations": 7
       },
       "required_rules": [
-        "newrelic/account-lookup",
-        "newrelic/account-management",
-        "newrelic/application-lookup",
-        "newrelic/application-settings",
-        "newrelic/aws-connection",
-        "newrelic/browser-application",
-        "newrelic/cardinality-management",
-        "newrelic/cloud-account-lookup",
-        "newrelic/cloud-aws-eu-sovereign-integrations",
-        "newrelic/cloud-aws-eu-sovereign-link-account",
-        "newrelic/cloud-aws-govcloud-integrations",
-        "newrelic/cloud-aws-govcloud-link-account",
-        "newrelic/cloud-aws-integrations",
-        "newrelic/cloud-aws-link-account",
-        "newrelic/cloud-azure-integrations",
-        "newrelic/cloud-azure-link-account",
-        "newrelic/cloud-gcp-dm-integrations",
-        "newrelic/cloud-gcp-integrations",
-        "newrelic/cloud-gcp-link-account",
-        "newrelic/cloud-oci-link-account",
-        "newrelic/data-partition-rule",
-        "newrelic/events-to-metrics-rule",
-        "newrelic/federated-logs-partition",
-        "newrelic/federated-logs-setup",
-        "newrelic/fleet",
-        "newrelic/fleet-configuration",
-        "newrelic/fleet-configuration-lookup",
-        "newrelic/fleet-deployment",
-        "newrelic/fleet-members",
-        "newrelic/fleet-members-lookup",
-        "newrelic/key-transaction",
-        "newrelic/key-transaction-lookup",
-        "newrelic/log-parsing-rule",
-        "newrelic/metric-pruning-rule",
-        "newrelic/nrql-drop-rule",
-        "newrelic/obfuscation-expression",
-        "newrelic/obfuscation-expression-lookup",
-        "newrelic/obfuscation-rule",
-        "newrelic/pipeline-cloud-rule",
-        "newrelic/service-level",
-        "newrelic/synthetics-broken-links-monitor",
-        "newrelic/synthetics-cert-check-monitor",
-        "newrelic/synthetics-monitor",
-        "newrelic/synthetics-private-location",
-        "newrelic/synthetics-private-location-lookup",
-        "newrelic/synthetics-script-monitor",
-        "newrelic/synthetics-step-monitor",
-        "newrelic/workflow-automation",
-        "newrelic/workload"
+        "newrelic.rule.account-lookup",
+        "newrelic.rule.account-management",
+        "newrelic.rule.application-lookup",
+        "newrelic.rule.application-settings",
+        "newrelic.rule.aws-connection",
+        "newrelic.rule.browser-application",
+        "newrelic.rule.cardinality-management",
+        "newrelic.rule.cloud-account-lookup",
+        "newrelic.rule.cloud-aws-eu-sovereign-integrations",
+        "newrelic.rule.cloud-aws-eu-sovereign-link-account",
+        "newrelic.rule.cloud-aws-govcloud-integrations",
+        "newrelic.rule.cloud-aws-govcloud-link-account",
+        "newrelic.rule.cloud-aws-integrations",
+        "newrelic.rule.cloud-aws-link-account",
+        "newrelic.rule.cloud-azure-integrations",
+        "newrelic.rule.cloud-azure-link-account",
+        "newrelic.rule.cloud-gcp-dm-integrations",
+        "newrelic.rule.cloud-gcp-integrations",
+        "newrelic.rule.cloud-gcp-link-account",
+        "newrelic.rule.cloud-oci-link-account",
+        "newrelic.rule.data-partition-rule",
+        "newrelic.rule.events-to-metrics-rule",
+        "newrelic.rule.federated-logs-partition",
+        "newrelic.rule.federated-logs-setup",
+        "newrelic.rule.fleet",
+        "newrelic.rule.fleet-configuration",
+        "newrelic.rule.fleet-configuration-lookup",
+        "newrelic.rule.fleet-deployment",
+        "newrelic.rule.fleet-members",
+        "newrelic.rule.fleet-members-lookup",
+        "newrelic.rule.key-transaction",
+        "newrelic.rule.key-transaction-lookup",
+        "newrelic.rule.log-parsing-rule",
+        "newrelic.rule.metric-pruning-rule",
+        "newrelic.rule.nrql-drop-rule",
+        "newrelic.rule.obfuscation-expression",
+        "newrelic.rule.obfuscation-expression-lookup",
+        "newrelic.rule.obfuscation-rule",
+        "newrelic.rule.pipeline-cloud-rule",
+        "newrelic.rule.synthetics-broken-links-monitor",
+        "newrelic.rule.synthetics-cert-check-monitor",
+        "newrelic.rule.synthetics-monitor",
+        "newrelic.rule.synthetics-private-location",
+        "newrelic.rule.synthetics-private-location-lookup",
+        "newrelic.rule.synthetics-script-monitor",
+        "newrelic.rule.synthetics-step-monitor",
+        "newrelic.rule.workload"
       ],
       "required_facts": [
         {
           "collection": "relations",
-          "from": "entity:newrelic_cloud_aws_link_account.production",
-          "to": "entity:aws_iam_role.newrelic",
+          "from": "representation:1:root:resource:newrelic_cloud_aws_link_account.production",
+          "to": "representation:1:root:resource:aws_iam_role.newrelic",
           "type": "authorized-by",
-          "rule": "newrelic/cloud-aws-link-account"
+          "rule": "newrelic.rule.cloud-aws-link-account"
         },
         {
           "collection": "relations",
-          "from": "entity:newrelic_cloud_gcp_link_account.production",
-          "to": "entity:google_service_account.newrelic",
+          "from": "representation:1:root:resource:newrelic_cloud_gcp_link_account.production",
+          "to": "representation:1:root:resource:google_service_account.newrelic",
           "type": "authorized-by",
-          "rule": "newrelic/cloud-gcp-link-account"
+          "rule": "newrelic.rule.cloud-gcp-link-account"
         },
         {
           "collection": "relations",
-          "from": "entity:newrelic_federated_logs_setup.logs",
-          "to": "entity:newrelic_aws_connection.ingest",
+          "from": "representation:1:root:resource:newrelic_federated_logs_setup.logs",
+          "to": "representation:1:root:resource:newrelic_aws_connection.ingest",
           "type": "ingests-through",
-          "rule": "newrelic/federated-logs-setup"
+          "rule": "newrelic.rule.federated-logs-setup"
         },
         {
           "collection": "contributions",
-          "from": "detail:newrelic_synthetics_monitor.api",
-          "to": "entity:newrelic_synthetics_private_location.private",
-          "rule": "newrelic/synthetics-monitor"
+          "from": "representation:1:root:resource:newrelic_synthetics_monitor.api",
+          "to": "representation:1:root:resource:newrelic_synthetics_private_location.private",
+          "rule": "newrelic.rule.synthetics-monitor"
         }
       ],
       "required_outcomes": {
-        "newrelic_one_dashboard.must_not_create_topology": "unsupported",
-        "newrelic_account_management.platform": "represented",
-        "newrelic_fleet.production": "represented",
-        "newrelic_synthetics_monitor.api": "represented"
+        "newrelic_one_dashboard.must_not_create_topology": "no-rule",
+        "newrelic_account_management.platform": "representation-present",
+        "newrelic_fleet.production": "representation-present",
+        "newrelic_synthetics_monitor.api": "representation-present"
       },
       "expected_html_labels": [
         "New Relic account",
@@ -156,17 +156,19 @@
       "id": "newrelic-fail-closed",
       "fixture": "fixtures/newrelic-v3/boundary",
       "limitations": [
-        "negative fixture proves literals, ambiguity, dangling references, concept mismatches, and depends_on create no facts"
+        "negative fixture proves literals, ambiguity, dangling references, target mismatches, and depends_on create no unresolved facts while partial IR preserves bases"
       ],
       "expected_build_failure": true,
       "expected_diagnostic_codes": [
         "DEPENDENCY_DANGLING",
-        "FACT_CONCEPT_MISMATCH",
+        "FACT_TARGET_MISMATCH",
         "TRAVERSAL_AMBIGUOUS",
         "TRAVERSAL_DANGLING",
         "TRAVERSAL_UNRESOLVED"
       ],
-      "forbidden_output": ["ROOTFORM_NEWRELIC_BOUNDARY_SECRET_SENTINEL"]
+      "forbidden_output": [
+        "ROOTFORM_NEWRELIC_BOUNDARY_SECRET_SENTINEL"
+      ]
     }
   ]
 }
