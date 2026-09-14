@@ -3,7 +3,7 @@
   "showcase_semantics": [
     {
       "candidate": "AZ-01",
-      "rule": "azure/private-endpoint",
+      "rule": "azure.rule.private-endpoint",
       "path": "private_service_connection[0].private_connection_resource_id",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/private_endpoint",
       "quote": "The ID of the Private Link Enabled Remote Resource which this Private Endpoint should be connected to.",
@@ -14,26 +14,26 @@
     },
     {
       "candidate": "AZ-06",
-      "rule": "azure/service-bus-subscription",
+      "rule": "azure.rule.service-bus-subscription",
       "path": "topic_id",
-      "fact": "core/ownership and subscribes-to to azure/service-bus-topic",
+      "fact": "azure.context.ownership and subscribes-to to azure.rule.service-bus-topic",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/servicebus_subscription",
       "quote": "The ID of the ServiceBus Topic to create this Subscription in."
     },
     {
       "candidate": "AZ-07",
       "rules": [
-        "azure/service-bus-queue",
-        "azure/service-bus-topic"
+        "azure.rule.service-bus-queue",
+        "azure.rule.service-bus-topic"
       ],
       "path": "namespace_id",
-      "fact": "core/ownership to azure/messaging-namespace",
+      "fact": "azure.context.ownership to azure/messaging-namespace",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/servicebus_queue",
       "quote": "The ID of the ServiceBus Namespace to create this queue in."
     },
     {
       "candidate": "AZ-08",
-      "rule": "azure/event-grid-event-subscription",
+      "rule": "azure.rule.event-grid-event-subscription",
       "paths": [
         "eventhub_id",
         "service_bus_queue_id",
@@ -52,11 +52,11 @@
     {
       "candidate": "AZ-10",
       "rules": [
-        "azure/linux-function-app",
-        "azure/windows-function-app"
+        "azure.rule.linux-function-app",
+        "azure.rule.windows-function-app"
       ],
       "path": "site_config[0].application_insights_connection_string",
-      "fact": "observed-by azure/application-insights",
+      "fact": "observed-by azure.rule.application-insights",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/linux_function_app",
       "quote": "The Connection String for linking the Linux Function App to Application Insights.",
       "schema_bounds": [
@@ -65,9 +65,9 @@
     },
     {
       "candidate": "AZ-11",
-      "rule": "azure/aks-cluster",
+      "rule": "azure.rule.aks-cluster",
       "path": "oms_agent[0].log_analytics_workspace_id",
-      "fact": "observed-by azure/log-analytics-workspace",
+      "fact": "observed-by azure.rule.log-analytics-workspace",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/kubernetes_cluster",
       "quote": "The ID of the Log Analytics Workspace which the OMS Agent should send data to.",
       "schema_bounds": [
@@ -76,18 +76,18 @@
     },
     {
       "candidate": "AZ-14",
-      "rule": "azure/virtual-network-peering",
+      "rule": "azure.rule.virtual-network-peering",
       "paths": [
         "virtual_network_name",
         "remote_virtual_network_id"
       ],
-      "fact": "core/network to the local virtual network; azure/peers-with to the remote virtual network",
+      "fact": "rf.context.network to the local virtual network; azure/peers-with to the remote virtual network",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/virtual_network_peering",
       "quote": "The name of the virtual network. The full Azure resource ID of the remote virtual network."
     },
     {
       "candidate": "AZ-15",
-      "rule": "azure/subnet-nat-gateway-association",
+      "rule": "azure.rule.subnet-nat-gateway-association",
       "paths": [
         "subnet_id",
         "nat_gateway_id"
@@ -98,93 +98,93 @@
     },
     {
       "candidate": "AZ-16",
-      "rule": "azure/container-app-environment",
+      "rule": "azure.rule.container-app-environment",
       "path": "infrastructure_subnet_id",
-      "fact": "core/network to core/subnet",
+      "fact": "rf.context.network to rf.concept.subnet",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/container_app_environment",
       "quote": "The existing Subnet to use for the Container Apps Control Plane."
     },
     {
       "candidate": "AZ-17",
-      "rule": "azure/container-app-environment",
+      "rule": "azure.rule.container-app-environment",
       "path": "log_analytics_workspace_id",
-      "fact": "observed-by azure/log-analytics-workspace",
+      "fact": "observed-by azure.rule.log-analytics-workspace",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/container_app_environment",
       "quote": "The ID for the Log Analytics Workspace to link this Container Apps Managed Environment to."
     },
     {
       "candidate": "AZ-18",
-      "rule": "azure/application-insights",
+      "rule": "azure.rule.application-insights",
       "path": "workspace_id",
-      "fact": "observed-by azure/log-analytics-workspace",
+      "fact": "observed-by azure.rule.log-analytics-workspace",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/application_insights",
       "quote": "Specifies the id of a log analytics workspace resource."
     },
     {
       "candidate": "AZ-19",
       "path": "resource_group_name",
-      "fact": "core/ownership to azure/resource-group",
+      "fact": "azure.context.ownership to azure.rule.resource-group",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/linux_web_app",
       "quote": "The name of the Resource Group where the Linux Web App should exist."
     },
     {
       "candidate": "AZ-20",
       "rules": [
-        "azure/linux-web-app",
-        "azure/windows-web-app",
-        "azure/linux-function-app",
-        "azure/windows-function-app"
+        "azure.rule.linux-web-app",
+        "azure.rule.windows-web-app",
+        "azure.rule.linux-function-app",
+        "azure.rule.windows-function-app"
       ],
       "path": "virtual_network_subnet_id",
-      "fact": "core/network to core/subnet",
+      "fact": "rf.context.network to rf.concept.subnet",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/linux_web_app",
       "quote": "The subnet id used by this Web App for regional virtual network integration."
     },
     {
       "candidate": "AZ-23",
       "rules": [
-        "azure/linux-web-app",
-        "azure/windows-web-app",
-        "azure/linux-function-app",
-        "azure/windows-function-app"
+        "azure.rule.linux-web-app",
+        "azure.rule.windows-web-app",
+        "azure.rule.linux-function-app",
+        "azure.rule.windows-function-app"
       ],
       "path": "service_plan_id",
-      "fact": "core/runtime to azure/app-service-plan",
+      "fact": "rf.context.runtime to azure.rule.app-service-plan",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/linux_function_app",
       "quote": "The ID of the App Service Plan within which to create this Function App."
     },
     {
       "candidate": "AZ-24",
       "rules": [
-        "azure/container-app",
-        "azure/container-app-job"
+        "azure.rule.container-app",
+        "azure.rule.container-app-job"
       ],
       "path": "container_app_environment_id",
-      "fact": "core/runtime to azure/container-app-environment",
+      "fact": "rf.context.runtime to azure.rule.container-app-environment",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/container_app_job",
       "quote": "The ID of the Container App Environment in which to create the Container App Job."
     },
     {
       "candidate": "AZ-27",
-      "rule": "azure/application-gateway",
+      "rule": "azure.rule.application-gateway",
       "path": "firewall_policy_id",
-      "fact": "azure/uses-waf-policy to azure/web-application-firewall-policy",
+      "fact": "azure/uses-waf-policy to azure.rule.web-application-firewall-policy",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/application_gateway",
       "quote": "The ID of the Web Application Firewall Policy."
     },
     {
       "candidate": "AZ-28",
-      "rule": "azure/web-application-firewall-policy",
+      "rule": "azure.rule.web-application-firewall-policy",
       "path": "resource_group_name",
-      "fact": "core/ownership to azure/resource-group",
+      "fact": "azure.context.ownership to azure.rule.resource-group",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/web_application_firewall_policy",
       "quote": "The name of the resource group."
     },
     {
       "candidate": "AZ-29",
       "rules": [
-        "azure/service-bus-topic",
-        "azure/service-bus-subscription"
+        "azure.rule.service-bus-topic",
+        "azure.rule.service-bus-subscription"
       ],
       "paths": [
         "namespace_id",
@@ -198,10 +198,10 @@
     {
       "candidate": "AZ-30",
       "rules": [
-        "azure/event-grid-domain-topic",
-        "azure/event-grid-topic",
-        "azure/event-grid-system-topic",
-        "azure/event-grid-system-topic-subscription"
+        "azure.rule.event-grid-domain-topic",
+        "azure.rule.event-grid-topic",
+        "azure.rule.event-grid-system-topic",
+        "azure.rule.event-grid-system-topic-subscription"
       ],
       "paths": [
         "domain_name",
@@ -219,9 +219,9 @@
     },
     {
       "candidate": "AZ-31",
-      "rule": "azure/postgresql-flexible-server",
+      "rule": "azure.rule.postgresql-flexible-server",
       "path": "delegated_subnet_id",
-      "fact": "core/network placement in the delegated subnet",
+      "fact": "rf.context.network placement in the delegated subnet",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/postgresql_flexible_server",
       "normative_urls": [
         "https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/concepts-networking-private"
@@ -230,9 +230,9 @@
     },
     {
       "candidate": "AZ-32",
-      "rule": "azure/aks-node-pool",
+      "rule": "azure.rule.aks-node-pool",
       "path": "vnet_subnet_id",
-      "fact": "core/network placement of node pool nodes in the exact subnet",
+      "fact": "rf.context.network placement of node pool nodes in the exact subnet",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/kubernetes_cluster_node_pool",
       "normative_urls": [
         "https://learn.microsoft.com/en-us/azure/aks/concepts-network-cni-overview"
@@ -241,20 +241,20 @@
     },
     {
       "candidate": "AZ-33",
-      "rule": "azure/application-gateway",
+      "rule": "azure.rule.application-gateway",
       "path": "gateway_ip_configuration[0].subnet_id",
-      "fact": "core/network placement in the dedicated gateway subnet",
+      "fact": "rf.context.network placement in the dedicated gateway subnet",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/application_gateway",
       "normative_urls": [
-        "https://learn.microsoft.com/en-us/azure/application-gateway/configuration-infrastructure"
+        "https://learn.microsoft.com/en-us/azure.rule.application-gateway/configuration-infrastructure"
       ],
       "quote": "The ID of the Subnet which the Application Gateway should be connected to."
     },
     {
       "candidate": "AZ-34",
-      "rule": "azure/load-balancer",
+      "rule": "azure.rule.load-balancer",
       "path": "frontend_ip_configuration[*].subnet_id",
-      "fact": "core/network placement of an internal load balancer frontend",
+      "fact": "rf.context.network placement of an internal load balancer frontend",
       "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/lb",
       "quote": "The ID of the Subnet which should be associated with the IP Configuration.",
       "schema_bounds": [
@@ -273,2197 +273,2197 @@
     "entries": [
       {
         "section": "ownership_rg",
-        "rule": "azure/ai-foundry",
+        "rule": "azure.rule.ai-foundry",
         "terraform_type": "azurerm_ai_foundry",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/ai_foundry",
         "quote": "The name of the Resource Group where the AI Foundry Hub should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/machine-learning-workspace",
+        "rule": "azure.rule.machine-learning-workspace",
         "terraform_type": "azurerm_machine_learning_workspace",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/machine_learning_workspace",
         "quote": "Specifies the name of the Resource Group in which the Machine Learning Workspace should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/ai-search-service",
+        "rule": "azure.rule.ai-search-service",
         "terraform_type": "azurerm_search_service",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/search_service",
         "quote": "The name of the Resource Group where the Search Service should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/ai-services-account",
+        "rule": "azure.rule.ai-services-account",
         "terraform_type": "azurerm_cognitive_account",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/cognitive_account",
         "quote": "The name of the resource group in which the Cognitive Service Account is created."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/azure-bot",
+        "rule": "azure.rule.azure-bot",
         "terraform_type": "azurerm_bot_service_azure_bot",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/bot_service_azure_bot",
         "quote": "The name of the Resource Group where the Azure Bot Service should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/bot-channels-registration",
+        "rule": "azure.rule.bot-channels-registration",
         "terraform_type": "azurerm_bot_channels_registration",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/bot_channels_registration",
         "quote": "The name of the resource group in which to create the Bot Channels Registration."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/bot-web-app",
+        "rule": "azure.rule.bot-web-app",
         "terraform_type": "azurerm_bot_web_app",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/bot_web_app",
         "quote": "The name of the resource group in which to create the Web App Bot."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/health-bot",
+        "rule": "azure.rule.health-bot",
         "terraform_type": "azurerm_healthbot",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/healthbot",
         "quote": "Specifies The name of the Resource Group in which to create the Healthbot Service."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/video-indexer-account",
+        "rule": "azure.rule.video-indexer-account",
         "terraform_type": "azurerm_video_indexer_account",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/video_indexer_account",
         "quote": "The name of the Resource Group that the Video Indexer Account will be associated with."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/api-management",
+        "rule": "azure.rule.api-management",
         "terraform_type": "azurerm_api_management",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/api_management",
         "quote": "The name of the Resource Group in which the API Management Service should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/api-management-standalone-gateway",
+        "rule": "azure.rule.api-management-standalone-gateway",
         "terraform_type": "azurerm_api_management_standalone_gateway",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/api_management_standalone_gateway",
         "quote": "Specifies the name of the Resource Group where the API Management Standalone Gateway should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/app-configuration",
+        "rule": "azure.rule.app-configuration",
         "terraform_type": "azurerm_app_configuration",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/app_configuration",
         "quote": "The name of the resource group in which to create the App Configuration."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/logic-app-integration-account",
+        "rule": "azure.rule.logic-app-integration-account",
         "terraform_type": "azurerm_logic_app_integration_account",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/logic_app_integration_account",
         "quote": "The name of the Resource Group where the Logic App Integration Account should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/logic-app-standard",
+        "rule": "azure.rule.logic-app-standard",
         "terraform_type": "azurerm_logic_app_standard",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/logic_app_standard",
         "quote": "The name of the resource group in which to create the Logic App."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/logic-app-workflow",
+        "rule": "azure.rule.logic-app-workflow",
         "terraform_type": "azurerm_logic_app_workflow",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/logic_app_workflow",
         "quote": "The name of the Resource Group in which the Logic App Workflow should be created."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/maps-account",
+        "rule": "azure.rule.maps-account",
         "terraform_type": "azurerm_maps_account",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/maps_account",
         "quote": "The name of the Resource Group in which the Azure Maps Account should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/communication-service",
+        "rule": "azure.rule.communication-service",
         "terraform_type": "azurerm_communication_service",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/communication_service",
         "quote": "The name of the Resource Group where the Communication Service should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/email-communication-service",
+        "rule": "azure.rule.email-communication-service",
         "terraform_type": "azurerm_email_communication_service",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/email_communication_service",
         "quote": "The name of the Resource Group where the Email Communication Service should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/fluid-relay",
+        "rule": "azure.rule.fluid-relay",
         "terraform_type": "azurerm_fluid_relay_server",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/fluid_relay_server",
         "quote": "The name of the Resource Group where the Fluid Relay Server should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/signalr-service",
+        "rule": "azure.rule.signalr-service",
         "terraform_type": "azurerm_signalr_service",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/signalr_service",
         "quote": "The name of the resource group in which to create the SignalR service."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/web-pubsub",
+        "rule": "azure.rule.web-pubsub",
         "terraform_type": "azurerm_web_pubsub",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/web_pubsub",
         "quote": "The name of the resource group in which to create the Web PubSub service."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/batch-account",
+        "rule": "azure.rule.batch-account",
         "terraform_type": "azurerm_batch_account",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/batch_account",
         "quote": "The name of the resource group in which to create the Batch account."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/compute-image",
+        "rule": "azure.rule.compute-image",
         "terraform_type": "azurerm_image",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/image",
         "quote": "The name of the resource group in which to create the image."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/shared-image",
+        "rule": "azure.rule.shared-image",
         "terraform_type": "azurerm_shared_image",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/shared_image",
         "quote": "The name of the resource group in which the Shared Image Gallery exists."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/managed-disk",
+        "rule": "azure.rule.managed-disk",
         "terraform_type": "azurerm_managed_disk",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/managed_disk",
         "quote": "The name of the Resource Group where the Managed Disk should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/stack-hci-virtual-hard-disk",
+        "rule": "azure.rule.stack-hci-virtual-hard-disk",
         "terraform_type": "azurerm_stack_hci_virtual_hard_disk",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/stack_hci_virtual_hard_disk",
         "quote": "The name of the Resource Group where the Azure Stack HCI Virtual Hard Disk should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/disk-snapshot",
+        "rule": "azure.rule.disk-snapshot",
         "terraform_type": "azurerm_snapshot",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/snapshot",
         "quote": "The name of the resource group in which to create the Snapshot."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/virtual-desktop-application-group",
+        "rule": "azure.rule.virtual-desktop-application-group",
         "terraform_type": "azurerm_virtual_desktop_application_group",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/virtual_desktop_application_group",
         "quote": "The name of the resource group in which to create the Virtual Desktop Application Group."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/virtual-desktop-host-pool",
+        "rule": "azure.rule.virtual-desktop-host-pool",
         "terraform_type": "azurerm_virtual_desktop_host_pool",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/virtual_desktop_host_pool",
         "quote": "The name of the resource group in which to create the Virtual Desktop Host Pool."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/virtual-desktop-workspace",
+        "rule": "azure.rule.virtual-desktop-workspace",
         "terraform_type": "azurerm_virtual_desktop_workspace",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/virtual_desktop_workspace",
         "quote": "The name of the resource group in which to create the Virtual Desktop Workspace."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/dev-test-linux-virtual-machine",
+        "rule": "azure.rule.dev-test-linux-virtual-machine",
         "terraform_type": "azurerm_dev_test_linux_virtual_machine",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/dev_test_linux_virtual_machine",
         "quote": "The name of the resource group in which the Dev Test Lab resource exists."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/dev-test-windows-virtual-machine",
+        "rule": "azure.rule.dev-test-windows-virtual-machine",
         "terraform_type": "azurerm_dev_test_windows_virtual_machine",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/dev_test_windows_virtual_machine",
         "quote": "The name of the resource group in which the Dev Test Lab resource exists."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/dedicated-host-group",
+        "rule": "azure.rule.dedicated-host-group",
         "terraform_type": "azurerm_dedicated_host_group",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/dedicated_host_group",
         "quote": "Specifies the name of the resource group the Dedicated Host Group is located in."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/arc-kubernetes-cluster",
+        "rule": "azure.rule.arc-kubernetes-cluster",
         "terraform_type": "azurerm_arc_kubernetes_cluster",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/arc_kubernetes_cluster",
         "quote": "Specifies the name of the Resource Group where the Arc Kubernetes Cluster should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/arc-provisioned-kubernetes-cluster",
+        "rule": "azure.rule.arc-provisioned-kubernetes-cluster",
         "terraform_type": "azurerm_arc_kubernetes_provisioned_cluster",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/arc_kubernetes_provisioned_cluster",
         "quote": "The name of the Resource Group where the Arc Kubernetes Provisioned Cluster should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/container-instance-group",
+        "rule": "azure.rule.container-instance-group",
         "terraform_type": "azurerm_container_group",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/container_group",
         "quote": "The name of the resource group in which to create the Container Group."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/container-registry",
+        "rule": "azure.rule.container-registry",
         "terraform_type": "azurerm_container_registry",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/container_registry",
         "quote": "The name of the resource group in which to create the Container Registry."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/kubernetes-fleet",
+        "rule": "azure.rule.kubernetes-fleet",
         "terraform_type": "azurerm_kubernetes_fleet_manager",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/kubernetes_fleet_manager",
         "quote": "Specifies the name of the Resource Group within which this Kubernetes Fleet Manager should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/automatic-kubernetes-cluster",
+        "rule": "azure.rule.automatic-kubernetes-cluster",
         "terraform_type": "azurerm_kubernetes_automatic_cluster",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/kubernetes_automatic_cluster",
         "quote": "Specifies the Resource Group where the Managed Kubernetes Cluster should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/red-hat-openshift-cluster",
+        "rule": "azure.rule.red-hat-openshift-cluster",
         "terraform_type": "azurerm_redhat_openshift_cluster",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/redhat_openshift_cluster",
         "quote": "Specifies the Resource Group where the Azure Red Hat OpenShift Cluster should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/managed-service-fabric-cluster",
+        "rule": "azure.rule.managed-service-fabric-cluster",
         "terraform_type": "azurerm_service_fabric_managed_cluster",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/service_fabric_managed_cluster",
         "quote": "The name of the Resource Group where the Resource Group should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/service-fabric-cluster",
+        "rule": "azure.rule.service-fabric-cluster",
         "terraform_type": "azurerm_service_fabric_cluster",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/service_fabric_cluster",
         "quote": "The name of the Resource Group in which the Service Fabric Cluster exists."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/analysis-services-server",
+        "rule": "azure.rule.analysis-services-server",
         "terraform_type": "azurerm_analysis_services_server",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/analysis_services_server",
         "quote": "The name of the Resource Group in which the Analysis Services Server should be exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/data-factory",
+        "rule": "azure.rule.data-factory",
         "terraform_type": "azurerm_data_factory",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/data_factory",
         "quote": "The name of the resource group in which to create the Data Factory."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/data-share-account",
+        "rule": "azure.rule.data-share-account",
         "terraform_type": "azurerm_data_share_account",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/data_share_account",
         "quote": "The name of the Resource Group where the Data Share Account should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/databricks-workspace",
+        "rule": "azure.rule.databricks-workspace",
         "terraform_type": "azurerm_databricks_workspace",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/databricks_workspace",
         "quote": "The name of the Resource Group in which the Databricks Workspace should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/fabric-capacity",
+        "rule": "azure.rule.fabric-capacity",
         "terraform_type": "azurerm_fabric_capacity",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/fabric_capacity",
         "quote": "The name of the Resource Group in which to create the Fabric Capacity."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/graph-data-connect-account",
+        "rule": "azure.rule.graph-data-connect-account",
         "terraform_type": "azurerm_graph_services_account",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/graph_services_account",
         "quote": "Specifies the name of the Resource Group within which this Account should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/hdinsight-hadoop-cluster",
+        "rule": "azure.rule.hdinsight-hadoop-cluster",
         "terraform_type": "azurerm_hdinsight_hadoop_cluster",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/hdinsight_hadoop_cluster",
         "quote": "Specifies the name of the Resource Group in which this HDInsight Hadoop Cluster should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/hdinsight-hbase-cluster",
+        "rule": "azure.rule.hdinsight-hbase-cluster",
         "terraform_type": "azurerm_hdinsight_hbase_cluster",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/hdinsight_hbase_cluster",
         "quote": "Specifies the name of the Resource Group in which this HDInsight HBase Cluster should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/hdinsight-interactive-query-cluster",
+        "rule": "azure.rule.hdinsight-interactive-query-cluster",
         "terraform_type": "azurerm_hdinsight_interactive_query_cluster",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/hdinsight_interactive_query_cluster",
         "quote": "Specifies the name of the Resource Group in which this HDInsight Interactive Query Cluster should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/hdinsight-kafka-cluster",
+        "rule": "azure.rule.hdinsight-kafka-cluster",
         "terraform_type": "azurerm_hdinsight_kafka_cluster",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/hdinsight_kafka_cluster",
         "quote": "Specifies the name of the Resource Group in which this HDInsight Kafka Cluster should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/hdinsight-spark-cluster",
+        "rule": "azure.rule.hdinsight-spark-cluster",
         "terraform_type": "azurerm_hdinsight_spark_cluster",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/hdinsight_spark_cluster",
         "quote": "Specifies the name of the Resource Group in which this HDInsight Spark Cluster should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/health-data-fhir-service",
+        "rule": "azure.rule.health-data-fhir-service",
         "terraform_type": "azurerm_healthcare_fhir_service",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/healthcare_fhir_service",
         "quote": "Specifies the name of the Resource Group in which to create the Healthcare FHIR Service."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/health-data-services-workspace",
+        "rule": "azure.rule.health-data-services-workspace",
         "terraform_type": "azurerm_healthcare_workspace",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/healthcare_workspace",
         "quote": "Specifies the name of the Resource Group where the Healthcare Workspace should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/healthcare-service",
+        "rule": "azure.rule.healthcare-service",
         "terraform_type": "azurerm_healthcare_service",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/healthcare_service",
         "quote": "The name of the Resource Group in which to create the Service."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/power-bi-embedded-capacity",
+        "rule": "azure.rule.power-bi-embedded-capacity",
         "terraform_type": "azurerm_powerbi_embedded",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/powerbi_embedded",
         "quote": "The name of the Resource Group where the PowerBI Embedded should be created."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/purview-account",
+        "rule": "azure.rule.purview-account",
         "terraform_type": "azurerm_purview_account",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/purview_account",
         "quote": "The name of the Resource Group where the Purview Account should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/stream-analytics-cluster",
+        "rule": "azure.rule.stream-analytics-cluster",
         "terraform_type": "azurerm_stream_analytics_cluster",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/stream_analytics_cluster",
         "quote": "The name of the Resource Group where the Stream Analytics Cluster should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/stream-analytics-job",
+        "rule": "azure.rule.stream-analytics-job",
         "terraform_type": "azurerm_stream_analytics_job",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/stream_analytics_job",
         "quote": "The name of the Resource Group where the Stream Analytics Job should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/synapse-workspace",
+        "rule": "azure.rule.synapse-workspace",
         "terraform_type": "azurerm_synapse_workspace",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/synapse_workspace",
         "quote": "Specifies the name of the Resource Group where the synapse Workspace should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/cosmos-account",
+        "rule": "azure.rule.cosmos-account",
         "terraform_type": "azurerm_cosmosdb_account",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/cosmosdb_account",
         "quote": "The name of the resource group in which the CosmosDB Account is created."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/cosmos-cassandra-cluster",
+        "rule": "azure.rule.cosmos-cassandra-cluster",
         "terraform_type": "azurerm_cosmosdb_cassandra_cluster",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/cosmosdb_cassandra_cluster",
         "quote": "The name of the Resource Group where the Cassandra Cluster should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/cosmos-postgresql-cluster",
+        "rule": "azure.rule.cosmos-postgresql-cluster",
         "terraform_type": "azurerm_cosmosdb_postgresql_cluster",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/cosmosdb_postgresql_cluster",
         "quote": "The name of the Resource Group where the Azure Cosmos DB for PostgreSQL Cluster should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/data-explorer-cluster",
+        "rule": "azure.rule.data-explorer-cluster",
         "terraform_type": "azurerm_kusto_cluster",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/kusto_cluster",
         "quote": "Specifies the Resource Group where the Kusto Cluster should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/mysql-database",
+        "rule": "azure.rule.mysql-database",
         "terraform_type": "azurerm_mysql_flexible_database",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/mysql_flexible_database",
         "quote": "The name of the resource group in which the MySQL Server exists."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/mysql-flexible-server",
+        "rule": "azure.rule.mysql-flexible-server",
         "terraform_type": "azurerm_mysql_flexible_server",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/mysql_flexible_server",
         "quote": "The name of the Resource Group where the MySQL Flexible Server should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/azure-cache-for-redis",
+        "rule": "azure.rule.azure-cache-for-redis",
         "terraform_type": "azurerm_redis_cache",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/redis_cache",
         "quote": "The name of the resource group in which to create the Redis instance."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/azure-managed-redis",
+        "rule": "azure.rule.azure-managed-redis",
         "terraform_type": "azurerm_managed_redis",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/managed_redis",
         "quote": "The name of the Resource Group where the Managed Redis instance should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/mongo-cluster",
+        "rule": "azure.rule.mongo-cluster",
         "terraform_type": "azurerm_mongo_cluster",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/mongo_cluster",
         "quote": "The name of the resource group in which to create the MongoDB Cluster."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/oracle-autonomous-database",
+        "rule": "azure.rule.oracle-autonomous-database",
         "terraform_type": "azurerm_oracle_autonomous_database",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/oracle_autonomous_database",
         "quote": "The name of the Resource Group where the Autonomous Database should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/sql-managed-instance",
+        "rule": "azure.rule.sql-managed-instance",
         "terraform_type": "azurerm_mssql_managed_instance",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/mssql_managed_instance",
         "quote": "The name of the resource group in which to create the SQL Managed Instance."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/dev-center",
+        "rule": "azure.rule.dev-center",
         "terraform_type": "azurerm_dev_center",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/dev_center",
         "quote": "Specifies the name of the Resource Group within which this Dev Center should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/dev-center-project",
+        "rule": "azure.rule.dev-center-project",
         "terraform_type": "azurerm_dev_center_project",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/dev_center_project",
         "quote": "Specifies the name of the Resource Group within which this Dev Center Project should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/dev-test-lab",
+        "rule": "azure.rule.dev-test-lab",
         "terraform_type": "azurerm_dev_test_lab",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/dev_test_lab",
         "quote": "The name of the resource group under which the Dev Test Lab resource has to be created."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/managed-devops-pool",
+        "rule": "azure.rule.managed-devops-pool",
         "terraform_type": "azurerm_managed_devops_pool",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/managed_devops_pool",
         "quote": "The name of the Resource Group where the Managed DevOps Pool should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/playwright-workspace",
+        "rule": "azure.rule.playwright-workspace",
         "terraform_type": "azurerm_playwright_workspace",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/playwright_workspace",
         "quote": "The name of the Resource Group where the Playwright Workspace should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/cdn-endpoint",
+        "rule": "azure.rule.cdn-endpoint",
         "terraform_type": "azurerm_cdn_endpoint",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/cdn_endpoint",
         "quote": "The name of the resource group in which to create the CDN Endpoint."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/cdn-profile",
+        "rule": "azure.rule.cdn-profile",
         "terraform_type": "azurerm_cdn_profile",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/cdn_profile",
         "quote": "The name of the resource group in which to create the CDN Profile."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/dns-zone",
+        "rule": "azure.rule.dns-zone",
         "terraform_type": "azurerm_dns_zone",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/dns_zone",
         "quote": "Specifies the resource group where the resource exists."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/private-dns-resolver",
+        "rule": "azure.rule.private-dns-resolver",
         "terraform_type": "azurerm_private_dns_resolver",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/private_dns_resolver",
         "quote": "Specifies the name of the Resource Group where the Private DNS Resolver should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/managed-application",
+        "rule": "azure.rule.managed-application",
         "terraform_type": "azurerm_managed_application",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/managed_application",
         "quote": "The name of the Resource Group where the Managed Application should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/arc-custom-location",
+        "rule": "azure.rule.arc-custom-location",
         "terraform_type": "azurerm_extended_location_custom_location",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/extended_location_custom_location",
         "quote": "Specifies the name of the Resource Group where the Custom Location should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/arc-enabled-server",
+        "rule": "azure.rule.arc-enabled-server",
         "terraform_type": "azurerm_arc_machine",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/arc_machine",
         "quote": "The name of the Resource Group where the Arc Machine should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/arc-resource-bridge",
+        "rule": "azure.rule.arc-resource-bridge",
         "terraform_type": "azurerm_arc_resource_bridge_appliance",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/arc_resource_bridge_appliance",
         "quote": "Specifies the resource group where the Arc Resource Bridge Appliance exists."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/azure-local-cluster",
+        "rule": "azure.rule.azure-local-cluster",
         "terraform_type": "azurerm_stack_hci_cluster",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/stack_hci_cluster",
         "quote": "The name of the Resource Group where the Azure Stack HCI Cluster should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/nginx-deployment",
+        "rule": "azure.rule.nginx-deployment",
         "terraform_type": "azurerm_nginx_deployment",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/nginx_deployment",
         "quote": "The name of the Resource Group where the NGINX Deployment should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/oracle-cloud-vm-cluster",
+        "rule": "azure.rule.oracle-cloud-vm-cluster",
         "terraform_type": "azurerm_oracle_cloud_vm_cluster",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/oracle_cloud_vm_cluster",
         "quote": "The name of the Resource Group where the Cloud VM Cluster should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/oracle-exadata-infrastructure",
+        "rule": "azure.rule.oracle-exadata-infrastructure",
         "terraform_type": "azurerm_oracle_exadata_infrastructure",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/oracle_exadata_infrastructure",
         "quote": "The name of the Resource Group where the ODB@A Infrastructure should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/oracle-resource-anchor",
+        "rule": "azure.rule.oracle-resource-anchor",
         "terraform_type": "azurerm_oracle_resource_anchor",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/oracle_resource_anchor",
         "quote": "The name of the Resource Group where the Oracle Resource Anchor should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/palo-alto-firewall",
+        "rule": "azure.rule.palo-alto-firewall",
         "terraform_type": "azurerm_palo_alto_next_generation_firewall_virtual_network_local_rulestack",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/palo_alto_next_generation_firewall_virtual_network_local_rulestack",
         "quote": "The name of the Resource Group where the Palo Alto Next Generation Firewall Virtual Network Local Rulestack should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/sap-discovery-virtual-instance",
+        "rule": "azure.rule.sap-discovery-virtual-instance",
         "terraform_type": "azurerm_workloads_sap_discovery_virtual_instance",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/workloads_sap_discovery_virtual_instance",
         "quote": "The name of the Resource Group where the SAP Discovery Virtual Instance should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/sap-single-node-virtual-instance",
+        "rule": "azure.rule.sap-single-node-virtual-instance",
         "terraform_type": "azurerm_workloads_sap_single_node_virtual_instance",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/workloads_sap_single_node_virtual_instance",
         "quote": "The name of the Resource Group where the SAP Single Node Virtual Instance should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/sap-three-tier-virtual-instance",
+        "rule": "azure.rule.sap-three-tier-virtual-instance",
         "terraform_type": "azurerm_workloads_sap_three_tier_virtual_instance",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/workloads_sap_three_tier_virtual_instance",
         "quote": "The name of the Resource Group where the SAP Three Tier Virtual Instance should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/system-center-vmm-server",
+        "rule": "azure.rule.system-center-vmm-server",
         "terraform_type": "azurerm_system_center_virtual_machine_manager_server",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/system_center_virtual_machine_manager_server",
         "quote": "The name of the Resource Group where the System Center Virtual Machine Manager should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/vmware-private-cloud",
+        "rule": "azure.rule.vmware-private-cloud",
         "terraform_type": "azurerm_vmware_private_cloud",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/vmware_private_cloud",
         "quote": "The name of the Resource Group where the Azure VMware Solution Private Cloud should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/entra-domain-services",
+        "rule": "azure.rule.entra-domain-services",
         "terraform_type": "azurerm_active_directory_domain_service",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/active_directory_domain_service",
         "quote": "The name of the Resource Group in which the Domain Service should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/entra-external-id-directory",
+        "rule": "azure.rule.entra-external-id-directory",
         "terraform_type": "azurerm_aadb2c_directory",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/aadb2c_directory",
         "quote": "The name of the Resource Group where the AAD B2C Directory should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/digital-twins-instance",
+        "rule": "azure.rule.digital-twins-instance",
         "terraform_type": "azurerm_digital_twins_instance",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/digital_twins_instance",
         "quote": "The name of the Resource Group where the Digital Twins instance should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/iot-central-application",
+        "rule": "azure.rule.iot-central-application",
         "terraform_type": "azurerm_iotcentral_application",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/iotcentral_application",
         "quote": "The name of the resource group under which the IotHub resource has to be created."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/iot-hub",
+        "rule": "azure.rule.iot-hub",
         "terraform_type": "azurerm_iothub",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/iothub",
         "quote": "The name of the resource group under which the IotHub resource has to be created."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/iot-hub-device-provisioning-service",
+        "rule": "azure.rule.iot-hub-device-provisioning-service",
         "terraform_type": "azurerm_iothub_dps",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/iothub_dps",
         "quote": "The name of the resource group under which the Iot Device Provisioning Service resource has to be created."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/iot-hub-device-update-account",
+        "rule": "azure.rule.iot-hub-device-update-account",
         "terraform_type": "azurerm_iothub_device_update_account",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/iothub_device_update_account",
         "quote": "Specifies the name of the Resource Group where the IoT Hub Device Update Account should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/classic-front-door",
+        "rule": "azure.rule.classic-front-door",
         "terraform_type": "azurerm_frontdoor",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/frontdoor",
         "quote": "Specifies the name of the Resource Group in which the Front Door service should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/front-door-profile",
+        "rule": "azure.rule.front-door-profile",
         "terraform_type": "azurerm_cdn_frontdoor_profile",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/cdn_frontdoor_profile",
         "quote": "The name of the Resource Group where this Front Door Profile should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/application-load-balancer",
+        "rule": "azure.rule.application-load-balancer",
         "terraform_type": "azurerm_application_load_balancer",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/application_load_balancer",
         "quote": "The name of Resource Group where the Application Gateway for Containers (ALB) should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/traffic-manager-profile",
+        "rule": "azure.rule.traffic-manager-profile",
         "terraform_type": "azurerm_traffic_manager_profile",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/traffic_manager_profile",
         "quote": "The name of the resource group in which to create the Traffic Manager profile."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/event-grid-domain",
+        "rule": "azure.rule.event-grid-domain",
         "terraform_type": "azurerm_eventgrid_domain",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/eventgrid_domain",
         "quote": "The name of the resource group in which the EventGrid Domain exists."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/event-grid-namespace",
+        "rule": "azure.rule.event-grid-namespace",
         "terraform_type": "azurerm_eventgrid_namespace",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/eventgrid_namespace",
         "quote": "The name of the resource group in which the Event Grid Namespace should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/event-grid-partner-namespace",
+        "rule": "azure.rule.event-grid-partner-namespace",
         "terraform_type": "azurerm_eventgrid_partner_namespace",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/eventgrid_partner_namespace",
         "quote": "The name of the Resource Group where the Event Grid Partner Namespace should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/event-grid-system-topic",
+        "rule": "azure.rule.event-grid-system-topic",
         "terraform_type": "azurerm_eventgrid_system_topic",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/eventgrid_system_topic",
         "quote": "The name of the Resource Group where the Event Grid System Topic should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/event-grid-topic",
+        "rule": "azure.rule.event-grid-topic",
         "terraform_type": "azurerm_eventgrid_topic",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/eventgrid_topic",
         "quote": "The name of the resource group in which the EventGrid Topic exists."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/event-hubs-cluster",
+        "rule": "azure.rule.event-hubs-cluster",
         "terraform_type": "azurerm_eventhub_cluster",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/eventhub_cluster",
         "quote": "The name of the resource group in which the EventHub Cluster exists."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/event-hubs-namespace",
+        "rule": "azure.rule.event-hubs-namespace",
         "terraform_type": "azurerm_eventhub_namespace",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/eventhub_namespace",
         "quote": "The name of the resource group in which to create the namespace."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/notification-hub",
+        "rule": "azure.rule.notification-hub",
         "terraform_type": "azurerm_notification_hub",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/notification_hub",
         "quote": "The name of the Resource Group in which the Notification Hub Namespace exists."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/notification-hubs-namespace",
+        "rule": "azure.rule.notification-hubs-namespace",
         "terraform_type": "azurerm_notification_hub_namespace",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/notification_hub_namespace",
         "quote": "The name of the Resource Group in which the Notification Hub Namespace should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/relay-hybrid-connection",
+        "rule": "azure.rule.relay-hybrid-connection",
         "terraform_type": "azurerm_relay_hybrid_connection",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/relay_hybrid_connection",
         "quote": "The name of the resource group in which to create the Azure Relay Hybrid Connection."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/relay-namespace",
+        "rule": "azure.rule.relay-namespace",
         "terraform_type": "azurerm_relay_namespace",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/relay_namespace",
         "quote": "The name of the resource group in which to create the Azure Relay Namespace."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/file-share-backup-policy",
+        "rule": "azure.rule.file-share-backup-policy",
         "terraform_type": "azurerm_backup_policy_file_share",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/backup_policy_file_share",
         "quote": "The name of the resource group in which to create the policy."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/recovery-services-vault",
+        "rule": "azure.rule.recovery-services-vault",
         "terraform_type": "azurerm_recovery_services_vault",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/recovery_services_vault",
         "quote": "The name of the resource group in which to create the Recovery Services Vault."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/virtual-machine-backup-policy",
+        "rule": "azure.rule.virtual-machine-backup-policy",
         "terraform_type": "azurerm_backup_policy_vm",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/backup_policy_vm",
         "quote": "The name of the resource group in which to create the policy."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/data-box-edge-device",
+        "rule": "azure.rule.data-box-edge-device",
         "terraform_type": "azurerm_databox_edge_device",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/databox_edge_device",
         "quote": "The name of the Resource Group where the Databox Edge Device should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/database-migration-project",
+        "rule": "azure.rule.database-migration-project",
         "terraform_type": "azurerm_database_migration_project",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/database_migration_project",
         "quote": "Name of the resource group in which to create the database migration project."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/database-migration-service",
+        "rule": "azure.rule.database-migration-service",
         "terraform_type": "azurerm_database_migration_service",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/database_migration_service",
         "quote": "Name of the resource group in which to create the database migration service."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/site-recovery-fabric",
+        "rule": "azure.rule.site-recovery-fabric",
         "terraform_type": "azurerm_site_recovery_fabric",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/site_recovery_fabric",
         "quote": "Name of the resource group where the vault that should be updated is located."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/site-recovery-protection-container",
+        "rule": "azure.rule.site-recovery-protection-container",
         "terraform_type": "azurerm_site_recovery_protection_container",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/site_recovery_protection_container",
         "quote": "Name of the resource group where the vault that should be updated is located."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/storage-mover",
+        "rule": "azure.rule.storage-mover",
         "terraform_type": "azurerm_storage_mover",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/storage_mover",
         "quote": "Specifies the name of the Resource Group where the Storage Mover should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/arc-private-link-scope",
+        "rule": "azure.rule.arc-private-link-scope",
         "terraform_type": "azurerm_arc_private_link_scope",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/arc_private_link_scope",
         "quote": "The name of the Resource Group where the Azure Arc Private Link Scope should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/bastion-host",
+        "rule": "azure.rule.bastion-host",
         "terraform_type": "azurerm_bastion_host",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/bastion_host",
         "quote": "The name of the resource group in which to create the Bastion Host."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/databricks-virtual-network-peering",
+        "rule": "azure.rule.databricks-virtual-network-peering",
         "terraform_type": "azurerm_databricks_virtual_network_peering",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/databricks_virtual_network_peering",
         "quote": "The name of the Resource Group in which the Databricks Virtual Network Peering should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/ddos-protection-plan",
+        "rule": "azure.rule.ddos-protection-plan",
         "terraform_type": "azurerm_network_ddos_protection_plan",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/network_ddos_protection_plan",
         "quote": "The name of the resource group in which to create the resource."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/expressroute-circuit",
+        "rule": "azure.rule.expressroute-circuit",
         "terraform_type": "azurerm_express_route_circuit",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/express_route_circuit",
         "quote": "The name of the resource group in which to create the ExpressRoute circuit."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/expressroute-gateway",
+        "rule": "azure.rule.expressroute-gateway",
         "terraform_type": "azurerm_express_route_gateway",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/express_route_gateway",
         "quote": "The name of the resource group in which to create the ExpressRoute gateway."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/expressroute-port",
+        "rule": "azure.rule.expressroute-port",
         "terraform_type": "azurerm_express_route_port",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/express_route_port",
         "quote": "The name of the Resource Group where the Express Route Port should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/azure-firewall",
+        "rule": "azure.rule.azure-firewall",
         "terraform_type": "azurerm_firewall",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/firewall",
         "quote": "The name of the resource group in which to create the resource."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/local-network-gateway",
+        "rule": "azure.rule.local-network-gateway",
         "terraform_type": "azurerm_local_network_gateway",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/local_network_gateway",
         "quote": "The name of the resource group in which to create the local network gateway."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/monitor-private-link-scope",
+        "rule": "azure.rule.monitor-private-link-scope",
         "terraform_type": "azurerm_monitor_private_link_scope",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/monitor_private_link_scope",
         "quote": "The name of the Resource Group where the Azure Monitor Private Link Scope should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/nat-gateway",
+        "rule": "azure.rule.nat-gateway",
         "terraform_type": "azurerm_nat_gateway",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/nat_gateway",
         "quote": "Specifies the name of the Resource Group in which the NAT Gateway should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/network-function-traffic-collector",
+        "rule": "azure.rule.network-function-traffic-collector",
         "terraform_type": "azurerm_network_function_azure_traffic_collector",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/network_function_azure_traffic_collector",
         "quote": "Specifies the name of the Resource Group where the Network Function Azure Traffic Collector should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/network-security-group",
+        "rule": "azure.rule.network-security-group",
         "terraform_type": "azurerm_network_security_group",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/network_security_group",
         "quote": "The name of the resource group in which to create the network security group."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/network-security-perimeter",
+        "rule": "azure.rule.network-security-perimeter",
         "terraform_type": "azurerm_network_security_perimeter",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/network_security_perimeter",
         "quote": "The name of the Resource Group where the Network Security Perimeter should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/private-link-service",
+        "rule": "azure.rule.private-link-service",
         "terraform_type": "azurerm_private_link_service",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/private_link_service",
         "quote": "The name of the Resource Group where the Private Link Service should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/custom-ip-prefix",
+        "rule": "azure.rule.custom-ip-prefix",
         "terraform_type": "azurerm_custom_ip_prefix",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/custom_ip_prefix",
         "quote": "The name of the Resource Group in which to create the Custom IP Prefix."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/public-ip-prefix",
+        "rule": "azure.rule.public-ip-prefix",
         "terraform_type": "azurerm_public_ip_prefix",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/public_ip_prefix",
         "quote": "The name of the resource group in which to create the Public IP Prefix."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/route-server",
+        "rule": "azure.rule.route-server",
         "terraform_type": "azurerm_route_server",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/route_server",
         "quote": "Specifies the name of the Resource Group where the Route Server should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/route-table",
+        "rule": "azure.rule.route-table",
         "terraform_type": "azurerm_route_table",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/route_table",
         "quote": "The name of the resource group in which to create the route table."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/synapse-private-link-hub",
+        "rule": "azure.rule.synapse-private-link-hub",
         "terraform_type": "azurerm_synapse_private_link_hub",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/synapse_private_link_hub",
         "quote": "The name of the resource group in which to create the Synapse Private Link Hub."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/virtual-hub",
+        "rule": "azure.rule.virtual-hub",
         "terraform_type": "azurerm_virtual_hub",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/virtual_hub",
         "quote": "Specifies the name of the Resource Group where the Virtual Hub should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/virtual-network-manager",
+        "rule": "azure.rule.virtual-network-manager",
         "terraform_type": "azurerm_network_manager",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/network_manager",
         "quote": "Specifies the name of the Resource Group where the Network Manager should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/virtual-network-peering",
+        "rule": "azure.rule.virtual-network-peering",
         "terraform_type": "azurerm_virtual_network_peering",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/virtual_network_peering",
         "quote": "The name of the resource group in which to create the virtual network peering."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/virtual-wan",
+        "rule": "azure.rule.virtual-wan",
         "terraform_type": "azurerm_virtual_wan",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/virtual_wan",
         "quote": "The name of the resource group in which to create the Virtual WAN."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/point-to-site-vpn-gateway",
+        "rule": "azure.rule.point-to-site-vpn-gateway",
         "terraform_type": "azurerm_point_to_site_vpn_gateway",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/point_to_site_vpn_gateway",
         "quote": "The name of the resource group in which to create the Point-to-Site VPN Gateway."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/virtual-network-gateway",
+        "rule": "azure.rule.virtual-network-gateway",
         "terraform_type": "azurerm_virtual_network_gateway",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/virtual_network_gateway",
         "quote": "The name of the resource group in which to create the Virtual Network Gateway."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/virtual-network-gateway-connection",
+        "rule": "azure.rule.virtual-network-gateway-connection",
         "terraform_type": "azurerm_virtual_network_gateway_connection",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/virtual_network_gateway_connection",
         "quote": "The name of the resource group in which to create the connection Changing this forces a new resource to be"
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/vpn-gateway",
+        "rule": "azure.rule.vpn-gateway",
         "terraform_type": "azurerm_vpn_gateway",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/vpn_gateway",
         "quote": "The Name of the Resource Group in which this VPN Gateway should be created."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/vpn-site",
+        "rule": "azure.rule.vpn-site",
         "terraform_type": "azurerm_vpn_site",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/vpn_site",
         "quote": "The name of the Resource Group where the VPN Site should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/automation-account",
+        "rule": "azure.rule.automation-account",
         "terraform_type": "azurerm_automation_account",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/automation_account",
         "quote": "The name of the resource group in which the Automation Account is created."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/automation-runbook",
+        "rule": "azure.rule.automation-runbook",
         "terraform_type": "azurerm_automation_runbook",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/automation_runbook",
         "quote": "The name of the resource group in which the Runbook is created."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/chaos-studio-experiment",
+        "rule": "azure.rule.chaos-studio-experiment",
         "terraform_type": "azurerm_chaos_studio_experiment",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/chaos_studio_experiment",
         "quote": "The name of the Resource Group where the Chaos Studio Experiment should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/datadog-monitor",
+        "rule": "azure.rule.datadog-monitor",
         "terraform_type": "azurerm_datadog_monitor",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/datadog_monitor",
         "quote": "The name of the Resource Group where the Datadog Monitor should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/dynatrace-monitor",
+        "rule": "azure.rule.dynatrace-monitor",
         "terraform_type": "azurerm_dynatrace_monitor",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/dynatrace_monitor",
         "quote": "The name of the Resource Group where the Dynatrace monitor should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/elastic-cloud",
+        "rule": "azure.rule.elastic-cloud",
         "terraform_type": "azurerm_elastic_cloud_elasticsearch",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/elastic_cloud_elasticsearch",
         "quote": "The name of the Resource Group where the Elasticsearch resource should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/load-test",
+        "rule": "azure.rule.load-test",
         "terraform_type": "azurerm_load_test",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/load_test",
         "quote": "Specifies the name of the Resource Group within which this Load Test should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/maintenance-configuration",
+        "rule": "azure.rule.maintenance-configuration",
         "terraform_type": "azurerm_maintenance_configuration",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/maintenance_configuration",
         "quote": "The name of the Resource Group where the Maintenance Configuration should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/managed-grafana",
+        "rule": "azure.rule.managed-grafana",
         "terraform_type": "azurerm_dashboard_grafana",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/dashboard_grafana",
         "quote": "Specifies the name of the Resource Group where the Dashboard Grafana should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/network-watcher",
+        "rule": "azure.rule.network-watcher",
         "terraform_type": "azurerm_network_watcher",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/network_watcher",
         "quote": "The name of the resource group in which to create the Network Watcher."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/new-relic-monitor",
+        "rule": "azure.rule.new-relic-monitor",
         "terraform_type": "azurerm_new_relic_monitor",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/new_relic_monitor",
         "quote": "Specifies the name of the Resource Group where the Azure Native New Relic Monitor should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/attestation-provider",
+        "rule": "azure.rule.attestation-provider",
         "terraform_type": "azurerm_attestation_provider",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/attestation_provider",
         "quote": "The name of the Resource Group where the attestation provider should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/confidential-ledger",
+        "rule": "azure.rule.confidential-ledger",
         "terraform_type": "azurerm_confidential_ledger",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/confidential_ledger",
         "quote": "The name of the Resource Group where the Confidential Ledger exists."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/dedicated-hardware-security-module",
+        "rule": "azure.rule.dedicated-hardware-security-module",
         "terraform_type": "azurerm_dedicated_hardware_security_module",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/dedicated_hardware_security_module",
         "quote": "The name of the Resource Group where the Dedicated Hardware Security Module should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/key-vault",
+        "rule": "azure.rule.key-vault",
         "terraform_type": "azurerm_key_vault",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/key_vault",
         "quote": "The name of the resource group in which to create the Key Vault."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/managed-hsm",
+        "rule": "azure.rule.managed-hsm",
         "terraform_type": "azurerm_key_vault_managed_hardware_security_module",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/key_vault_managed_hardware_security_module",
         "quote": "The name of the resource group in which to create the Key Vault Managed Hardware Security Module."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/trusted-signing-account",
+        "rule": "azure.rule.trusted-signing-account",
         "terraform_type": "azurerm_trusted_signing_account",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/trusted_signing_account",
         "quote": "The name of the Resource Group where the Artifact Signing Account should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/windows-function-app",
+        "rule": "azure.rule.windows-function-app",
         "terraform_type": "azurerm_windows_function_app",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/windows_function_app",
         "quote": "The name of the Resource Group where the Windows Function App should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/spring-app",
+        "rule": "azure.rule.spring-app",
         "terraform_type": "azurerm_spring_cloud_app",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/spring_cloud_app",
         "quote": "Specifies the name of the resource group in which to create the Spring Cloud Application."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/spring-apps-service",
+        "rule": "azure.rule.spring-apps-service",
         "terraform_type": "azurerm_spring_cloud_service",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/spring_cloud_service",
         "quote": "Specifies The name of the resource group in which to create the Spring Cloud Service."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/static-web-app",
+        "rule": "azure.rule.static-web-app",
         "terraform_type": "azurerm_static_web_app",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/static_web_app",
         "quote": "The name of the Resource Group where the Static Web App should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/data-protection-backup-vault",
+        "rule": "azure.rule.data-protection-backup-vault",
         "terraform_type": "azurerm_data_protection_backup_vault",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/data_protection_backup_vault",
         "quote": "The name of the Resource Group where the Backup Vault should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/netapp-backup-policy",
+        "rule": "azure.rule.netapp-backup-policy",
         "terraform_type": "azurerm_netapp_backup_policy",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/netapp_backup_policy",
         "quote": "The name of the resource group where the NetApp Backup Policy should be created."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/netapp-backup-vault",
+        "rule": "azure.rule.netapp-backup-vault",
         "terraform_type": "azurerm_netapp_backup_vault",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/netapp_backup_vault",
         "quote": "The name of the resource group where the NetApp Backup Vault should be created."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/compute-gallery",
+        "rule": "azure.rule.compute-gallery",
         "terraform_type": "azurerm_shared_image_gallery",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/shared_image_gallery",
         "quote": "The name of the resource group in which to create the Shared Image Gallery."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/elastic-san",
+        "rule": "azure.rule.elastic-san",
         "terraform_type": "azurerm_elastic_san",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/elastic_san",
         "quote": "Specifies the name of the Resource Group within which this Elastic SAN resource should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/managed-lustre-file-system",
+        "rule": "azure.rule.managed-lustre-file-system",
         "terraform_type": "azurerm_managed_lustre_file_system",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/managed_lustre_file_system",
         "quote": "The name of the Resource Group where the Azure Managed Lustre File System should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/netapp-account",
+        "rule": "azure.rule.netapp-account",
         "terraform_type": "azurerm_netapp_account",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/netapp_account",
         "quote": "The name of the resource group where the NetApp Account should be created."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/netapp-capacity-pool",
+        "rule": "azure.rule.netapp-capacity-pool",
         "terraform_type": "azurerm_netapp_pool",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/netapp_pool",
         "quote": "The name of the resource group where the NetApp Pool should be created."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/netapp-volume",
+        "rule": "azure.rule.netapp-volume",
         "terraform_type": "azurerm_netapp_volume",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/netapp_volume",
         "quote": "The name of the resource group where the NetApp Volume should be created."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/qumulo-file-system",
+        "rule": "azure.rule.qumulo-file-system",
         "terraform_type": "azurerm_qumulo_file_system",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/qumulo_file_system",
         "quote": "Specifies the name of the Resource Group within which this Azure Native Qumulo Scalable File System should exist."
       },
       {
         "section": "ownership_rg",
-        "rule": "azure/storage-sync-service",
+        "rule": "azure.rule.storage-sync-service",
         "terraform_type": "azurerm_storage_sync",
         "path": "resource_group_name",
-        "fact": "core/ownership to azure/resource-group",
+        "fact": "azure.context.ownership to azure.rule.resource-group",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/storage_sync",
         "quote": "The name of the Resource Group where the Storage Sync should exist."
       },
       {
         "section": "ownership_scope",
-        "rule": "azure/blob-container",
+        "rule": "azure.rule.blob-container",
         "terraform_type": "azurerm_storage_container",
         "path": "storage_account_id",
-        "fact": "core/ownership to azure/storage-account",
+        "fact": "azure.context.ownership to azure.rule.storage-account",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/storage_container",
         "quote": "The ID of the Storage Account where the Container should be created."
       },
       {
         "section": "ownership_scope",
-        "rule": "azure/data-lake-filesystem",
+        "rule": "azure.rule.data-lake-filesystem",
         "terraform_type": "azurerm_storage_data_lake_gen2_filesystem",
         "path": "storage_account_id",
-        "fact": "core/ownership to azure/storage-account",
+        "fact": "azure.context.ownership to azure.rule.storage-account",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/storage_data_lake_gen2_filesystem",
         "quote": "Specifies the ID of the Storage Account in which the Data Lake Gen2 File System should exist."
       },
       {
         "section": "ownership_scope",
-        "rule": "azure/queue-storage-queue",
+        "rule": "azure.rule.queue-storage-queue",
         "terraform_type": "azurerm_storage_queue",
         "path": "storage_account_id",
-        "fact": "core/ownership to azure/storage-account",
+        "fact": "azure.context.ownership to azure.rule.storage-account",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/storage_queue",
         "quote": "The ID of the Storage Account where the Storage Queue should be created."
       },
       {
         "section": "ownership_scope",
-        "rule": "azure/table-storage-table",
+        "rule": "azure.rule.table-storage-table",
         "terraform_type": "azurerm_storage_table",
         "path": "storage_account_id",
-        "fact": "core/ownership to azure/storage-account",
+        "fact": "azure.context.ownership to azure.rule.storage-account",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/storage_table",
         "quote": "Specifies the ID of the storage account in which to create the storage table."
       },
       {
         "section": "ownership_scope",
-        "rule": "azure/azure-files-share",
+        "rule": "azure.rule.azure-files-share",
         "terraform_type": "azurerm_storage_share",
         "path": "storage_account_id",
-        "fact": "core/ownership to azure/storage-account",
+        "fact": "azure.context.ownership to azure.rule.storage-account",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/storage_share",
         "quote": "Specifies the ID of the storage account in which to create the share."
       },
       {
         "section": "ownership_scope",
-        "rule": "azure/key-vault-secret",
+        "rule": "azure.rule.key-vault-secret",
         "terraform_type": "azurerm_key_vault_secret",
         "path": "key_vault_id",
-        "fact": "core/ownership to azure/key-vault",
+        "fact": "azure.context.ownership to azure.rule.key-vault",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/key_vault_secret",
         "quote": "The ID of the Key Vault where the Secret should be created."
       },
       {
         "section": "ownership_scope",
-        "rule": "azure/key-vault-key",
+        "rule": "azure.rule.key-vault-key",
         "terraform_type": "azurerm_key_vault_key",
         "path": "key_vault_id",
-        "fact": "core/ownership to azure/key-vault",
+        "fact": "azure.context.ownership to azure.rule.key-vault",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/key_vault_key",
         "quote": "The ID of the Key Vault where the Key should be created."
       },
       {
         "section": "ownership_scope",
-        "rule": "azure/managed-hsm-key",
+        "rule": "azure.rule.managed-hsm-key",
         "terraform_type": "azurerm_key_vault_managed_hardware_security_module_key",
         "path": "managed_hsm_id",
-        "fact": "core/ownership to azure/managed-hsm",
+        "fact": "azure.context.ownership to azure.rule.managed-hsm",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/key_vault_managed_hardware_security_module_key",
         "quote": "Specifies the ID of the Key Vault Managed Hardware Security Module that they key will be owned by."
       },
       {
         "section": "ownership_scope",
-        "rule": "azure/cosmos-sql-database",
+        "rule": "azure.rule.cosmos-sql-database",
         "terraform_type": "azurerm_cosmosdb_sql_database",
         "path": "account_name",
-        "fact": "core/ownership to azure/cosmos-account",
+        "fact": "azure.context.ownership to azure.rule.cosmos-account",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/cosmosdb_sql_database",
         "quote": "The name of the Cosmos DB SQL Database to create the table within."
       },
       {
         "section": "ownership_scope",
-        "rule": "azure/cosmos-mongo-database",
+        "rule": "azure.rule.cosmos-mongo-database",
         "terraform_type": "azurerm_cosmosdb_mongo_database",
         "path": "account_name",
-        "fact": "core/ownership to azure/cosmos-account",
+        "fact": "azure.context.ownership to azure.rule.cosmos-account",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/cosmosdb_mongo_database",
         "quote": "The name of the Cosmos DB Mongo Database to create the table within."
       },
       {
         "section": "ownership_scope",
-        "rule": "azure/cosmos-gremlin-database",
+        "rule": "azure.rule.cosmos-gremlin-database",
         "terraform_type": "azurerm_cosmosdb_gremlin_database",
         "path": "account_name",
-        "fact": "core/ownership to azure/cosmos-account",
+        "fact": "azure.context.ownership to azure.rule.cosmos-account",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/cosmosdb_gremlin_database",
         "quote": "The name of the CosmosDB Account to create the Gremlin Database within."
       },
       {
         "section": "ownership_scope",
-        "rule": "azure/cosmos-cassandra-keyspace",
+        "rule": "azure.rule.cosmos-cassandra-keyspace",
         "terraform_type": "azurerm_cosmosdb_cassandra_keyspace",
         "path": "account_name",
-        "fact": "core/ownership to azure/cosmos-account",
+        "fact": "azure.context.ownership to azure.rule.cosmos-account",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/cosmosdb_cassandra_keyspace",
         "quote": "The name of the Cosmos DB Cassandra KeySpace to create the table within."
       },
       {
         "section": "ownership_scope",
-        "rule": "azure/event-hub",
+        "rule": "azure.rule.event-hub",
         "terraform_type": "azurerm_eventhub",
         "path": "namespace_id",
-        "fact": "core/ownership to azure/messaging-namespace",
+        "fact": "azure.context.ownership to azure/messaging-namespace",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/eventhub",
         "quote": "Specifies the ID of the EventHub Namespace."
       },
       {
         "section": "ownership_scope",
-        "rule": "azure/event-grid-namespace-topic",
+        "rule": "azure.rule.event-grid-namespace-topic",
         "terraform_type": "azurerm_eventgrid_namespace_topic",
         "path": "eventgrid_namespace_id",
-        "fact": "core/ownership to azure/event-grid-domain",
+        "fact": "azure.context.ownership to azure.rule.event-grid-domain",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/eventgrid_namespace_topic",
         "quote": "The ID of the Event Grid Namespace."
       },
       {
         "section": "contributions",
-        "rule": "azure/key-vault-certificate",
+        "rule": "azure.rule.key-vault-certificate",
         "terraform_type": "azurerm_key_vault_certificate",
         "path": "key_vault_id",
-        "fact": "contribution to azure/key-vault",
+        "fact": "contribution to azure.rule.key-vault",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/key_vault_certificate",
         "quote": "The ID of the Key Vault where the Certificate should be created."
       },
       {
         "section": "contributions",
-        "rule": "azure/key-vault-access-policy",
+        "rule": "azure.rule.key-vault-access-policy",
         "terraform_type": "azurerm_key_vault_access_policy",
         "path": "key_vault_id",
-        "fact": "contribution to azure/key-vault",
+        "fact": "contribution to azure.rule.key-vault",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/key_vault_access_policy",
         "quote": "Specifies the id of the Key Vault resource."
       },
       {
         "section": "contributions",
-        "rule": "azure/cosmos-sql-container",
+        "rule": "azure.rule.cosmos-sql-container",
         "terraform_type": "azurerm_cosmosdb_sql_container",
         "path": "database_name",
-        "fact": "contribution to core/managed-database",
+        "fact": "contribution to rf.concept.managed-database",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/cosmosdb_sql_container",
         "quote": "The name of the Cosmos DB SQL Database to create the container within."
       },
       {
         "section": "contributions",
-        "rule": "azure/cosmos-mongo-collection",
+        "rule": "azure.rule.cosmos-mongo-collection",
         "terraform_type": "azurerm_cosmosdb_mongo_collection",
         "path": "database_name",
-        "fact": "contribution to core/managed-database",
+        "fact": "contribution to rf.concept.managed-database",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/cosmosdb_mongo_collection",
         "quote": "The name of the Cosmos DB Mongo Database in which the Cosmos DB Mongo Collection is created."
       },
       {
         "section": "contributions",
-        "rule": "azure/cosmos-gremlin-graph",
+        "rule": "azure.rule.cosmos-gremlin-graph",
         "terraform_type": "azurerm_cosmosdb_gremlin_graph",
         "path": "database_name",
-        "fact": "contribution to core/managed-database",
+        "fact": "contribution to rf.concept.managed-database",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/cosmosdb_gremlin_graph",
         "quote": "The name of the Cosmos DB Graph Database in which the Cosmos DB Gremlin Graph is created."
       },
       {
         "section": "contributions",
-        "rule": "azure/cosmos-cassandra-table",
+        "rule": "azure.rule.cosmos-cassandra-table",
         "terraform_type": "azurerm_cosmosdb_cassandra_table",
         "path": "cassandra_keyspace_id",
-        "fact": "contribution to core/managed-database",
+        "fact": "contribution to rf.concept.managed-database",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/cosmosdb_cassandra_table",
         "quote": "The ID of the Cosmos DB Cassandra Keyspace to create the table within."
       },
       {
         "section": "contributions",
-        "rule": "azure/cosmos-dedicated-gateway",
+        "rule": "azure.rule.cosmos-dedicated-gateway",
         "terraform_type": "azurerm_cosmosdb_sql_dedicated_gateway",
         "path": "cosmosdb_account_id",
-        "fact": "contribution to azure/cosmos-account",
+        "fact": "contribution to azure.rule.cosmos-account",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/cosmosdb_sql_dedicated_gateway",
         "quote": "The resource ID of the CosmosDB Account."
       },
       {
         "section": "contributions",
-        "rule": "azure/private-dns-a-record",
+        "rule": "azure.rule.private-dns-a-record",
         "terraform_type": "azurerm_private_dns_a_record",
         "path": "private_dns_zone_id",
-        "fact": "contribution to core/dns-zone",
+        "fact": "contribution to azure.concept.dns-zone",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/private_dns_a_record",
         "quote": "Specifies the ID of the Private DNS Zone where the resource exists."
       },
       {
         "section": "contributions",
-        "rule": "azure/private-dns-cname-record",
+        "rule": "azure.rule.private-dns-cname-record",
         "terraform_type": "azurerm_private_dns_cname_record",
         "path": "private_dns_zone_id",
-        "fact": "contribution to core/dns-zone",
+        "fact": "contribution to azure.concept.dns-zone",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/private_dns_cname_record",
         "quote": "Specifies the ID of the Private DNS Zone where the resource exists."
       },
       {
         "section": "contributions",
-        "rule": "azure/dns-a-record",
+        "rule": "azure.rule.dns-a-record",
         "terraform_type": "azurerm_dns_a_record",
         "path": "zone_name",
-        "fact": "contribution to core/dns-zone",
+        "fact": "contribution to azure.concept.dns-zone",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/dns_a_record",
         "quote": "Specifies the DNS Zone where the resource exists."
       },
       {
         "section": "contributions",
-        "rule": "azure/dns-aaaa-record",
+        "rule": "azure.rule.dns-aaaa-record",
         "terraform_type": "azurerm_dns_aaaa_record",
         "path": "zone_name",
-        "fact": "contribution to core/dns-zone",
+        "fact": "contribution to azure.concept.dns-zone",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/dns_aaaa_record",
         "quote": "Specifies the DNS Zone where the resource exists."
       },
       {
         "section": "contributions",
-        "rule": "azure/dns-cname-record",
+        "rule": "azure.rule.dns-cname-record",
         "terraform_type": "azurerm_dns_cname_record",
         "path": "zone_name",
-        "fact": "contribution to core/dns-zone",
+        "fact": "contribution to azure.concept.dns-zone",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/dns_cname_record",
         "quote": "Specifies the DNS Zone where the resource exists."
       },
       {
         "section": "contributions",
-        "rule": "azure/dns-mx-record",
+        "rule": "azure.rule.dns-mx-record",
         "terraform_type": "azurerm_dns_mx_record",
         "path": "zone_name",
-        "fact": "contribution to core/dns-zone",
+        "fact": "contribution to azure.concept.dns-zone",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/dns_mx_record",
         "quote": "Specifies the DNS Zone where the resource exists."
       },
       {
         "section": "contributions",
-        "rule": "azure/dns-ns-record",
+        "rule": "azure.rule.dns-ns-record",
         "terraform_type": "azurerm_dns_ns_record",
         "path": "zone_name",
-        "fact": "contribution to core/dns-zone",
+        "fact": "contribution to azure.concept.dns-zone",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/dns_ns_record",
         "quote": "Specifies the DNS Zone where the resource exists."
       },
       {
         "section": "contributions",
-        "rule": "azure/dns-ptr-record",
+        "rule": "azure.rule.dns-ptr-record",
         "terraform_type": "azurerm_dns_ptr_record",
         "path": "zone_name",
-        "fact": "contribution to core/dns-zone",
+        "fact": "contribution to azure.concept.dns-zone",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/dns_ptr_record",
         "quote": "Specifies the DNS Zone where the resource exists."
       },
       {
         "section": "contributions",
-        "rule": "azure/dns-srv-record",
+        "rule": "azure.rule.dns-srv-record",
         "terraform_type": "azurerm_dns_srv_record",
         "path": "zone_name",
-        "fact": "contribution to core/dns-zone",
+        "fact": "contribution to azure.concept.dns-zone",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/dns_srv_record",
         "quote": "Specifies the DNS Zone where the resource exists."
       },
       {
         "section": "contributions",
-        "rule": "azure/dns-txt-record",
+        "rule": "azure.rule.dns-txt-record",
         "terraform_type": "azurerm_dns_txt_record",
         "path": "zone_name",
-        "fact": "contribution to core/dns-zone",
+        "fact": "contribution to azure.concept.dns-zone",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/dns_txt_record",
         "quote": "Specifies the DNS Zone where the resource exists."
       },
       {
         "section": "contributions",
-        "rule": "azure/event-hubs-consumer-group",
+        "rule": "azure.rule.event-hubs-consumer-group",
         "terraform_type": "azurerm_eventhub_consumer_group",
         "path": "eventhub_name",
         "fact": "contribution to azure/event-stream",
@@ -2473,7 +2473,7 @@
       },
       {
         "section": "contributions",
-        "rule": "azure/event-hubs-schema-group",
+        "rule": "azure.rule.event-hubs-schema-group",
         "terraform_type": "azurerm_eventhub_namespace_schema_group",
         "path": "namespace_id",
         "fact": "contribution to azure/messaging-namespace",
@@ -2483,147 +2483,147 @@
       },
       {
         "section": "contributions",
-        "rule": "azure/storage-blob",
+        "rule": "azure.rule.storage-blob",
         "terraform_type": "azurerm_storage_blob",
         "path": "storage_container_id",
-        "fact": "contribution to core/object-storage-container",
+        "fact": "contribution to rf.concept.object-storage-container",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/storage_blob",
         "quote": "The ID of the storage container in which this blob should be created."
       },
       {
         "section": "contributions",
-        "rule": "azure/storage-management-policy",
+        "rule": "azure.rule.storage-management-policy",
         "terraform_type": "azurerm_storage_management_policy",
         "path": "storage_account_id",
-        "fact": "contribution to azure/storage-account",
+        "fact": "contribution to azure.rule.storage-account",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/storage_management_policy",
         "quote": "Specifies the id of the storage account to apply the management policy to."
       },
       {
         "section": "contributions",
-        "rule": "azure/storage-encryption-scope",
+        "rule": "azure.rule.storage-encryption-scope",
         "terraform_type": "azurerm_storage_encryption_scope",
         "path": "storage_account_id",
-        "fact": "contribution to azure/storage-account",
+        "fact": "contribution to azure.rule.storage-account",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/storage_encryption_scope",
         "quote": "The ID of the Storage Account where this Storage Encryption Scope is created."
       },
       {
         "section": "contributions",
-        "rule": "azure/storage-table-entity",
+        "rule": "azure.rule.storage-table-entity",
         "terraform_type": "azurerm_storage_table_entity",
         "path": "storage_table_id",
-        "fact": "contribution to azure/table-storage-table",
+        "fact": "contribution to azure.rule.table-storage-table",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/storage_table_entity",
         "quote": "The ID of the storage table in which this entity will be placed."
       },
       {
         "section": "new_rules",
-        "rule": "azure/nat-gateway-public-ip-association",
+        "rule": "azure.rule.nat-gateway-public-ip-association",
         "terraform_type": "azurerm_nat_gateway_public_ip_association",
         "path": "nat_gateway_id",
-        "fact": "contribution to core/managed-nat",
+        "fact": "contribution to azure.concept.managed-nat",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/nat_gateway_public_ip_association",
         "quote": "The ID of the NAT Gateway."
       },
       {
         "section": "new_rules",
-        "rule": "azure/nat-gateway-public-ip-association",
+        "rule": "azure.rule.nat-gateway-public-ip-association",
         "terraform_type": "azurerm_nat_gateway_public_ip_association",
         "path": "public_ip_address_id",
-        "fact": "contribution to azure/public-address",
+        "fact": "contribution to azure.rule.public-address",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/nat_gateway_public_ip_association",
         "quote": "The ID of the Public IP Address which this NAT Gateway should be connected to."
       },
       {
         "section": "new_rules",
-        "rule": "azure/nat-gateway-public-ip-prefix-association",
+        "rule": "azure.rule.nat-gateway-public-ip-prefix-association",
         "terraform_type": "azurerm_nat_gateway_public_ip_prefix_association",
         "path": "nat_gateway_id",
-        "fact": "contribution to core/managed-nat",
+        "fact": "contribution to azure.concept.managed-nat",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/nat_gateway_public_ip_prefix_association",
         "quote": "The ID of the NAT Gateway."
       },
       {
         "section": "new_rules",
-        "rule": "azure/nat-gateway-public-ip-prefix-association",
+        "rule": "azure.rule.nat-gateway-public-ip-prefix-association",
         "terraform_type": "azurerm_nat_gateway_public_ip_prefix_association",
         "path": "public_ip_prefix_id",
-        "fact": "contribution to azure/public-address",
+        "fact": "contribution to azure.rule.public-address",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/nat_gateway_public_ip_prefix_association",
         "quote": "The ID of the Public IP Prefix which this NAT Gateway should be connected to."
       },
       {
         "section": "new_rules",
-        "rule": "azure/event-grid-domain-topic",
+        "rule": "azure.rule.event-grid-domain-topic",
         "terraform_type": "azurerm_eventgrid_domain_topic",
         "path": "domain_name",
-        "fact": "core/ownership to azure/event-grid-domain",
+        "fact": "azure.context.ownership to azure.rule.event-grid-domain",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/eventgrid_domain_topic",
         "quote": "Specifies the name of the EventGrid Domain."
       },
       {
         "section": "new_rules",
-        "rule": "azure/log-analytics-data-export-rule",
+        "rule": "azure.rule.log-analytics-data-export-rule",
         "terraform_type": "azurerm_log_analytics_data_export_rule",
         "path": "workspace_resource_id",
-        "fact": "contribution to azure/log-analytics-workspace",
+        "fact": "contribution to azure.rule.log-analytics-workspace",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/log_analytics_data_export_rule",
         "quote": "The resource ID of the workspace."
       },
       {
         "section": "new_rules",
-        "rule": "azure/log-analytics-saved-search",
+        "rule": "azure.rule.log-analytics-saved-search",
         "terraform_type": "azurerm_log_analytics_saved_search",
         "path": "log_analytics_workspace_id",
-        "fact": "contribution to azure/log-analytics-workspace",
+        "fact": "contribution to azure.rule.log-analytics-workspace",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/log_analytics_saved_search",
         "quote": "Specifies the ID of the Log Analytics Workspace that the Saved Search will be associated with."
       },
       {
         "section": "new_rules",
-        "rule": "azure/log-analytics-solution",
+        "rule": "azure.rule.log-analytics-solution",
         "terraform_type": "azurerm_log_analytics_solution",
         "path": "workspace_resource_id",
-        "fact": "contribution to azure/log-analytics-workspace",
+        "fact": "contribution to azure.rule.log-analytics-workspace",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/log_analytics_solution",
         "quote": "The full resource ID of the Log Analytics workspace with which the solution will be linked."
       },
       {
         "section": "new_rules",
-        "rule": "azure/log-analytics-workspace-table",
+        "rule": "azure.rule.log-analytics-workspace-table",
         "terraform_type": "azurerm_log_analytics_workspace_table",
         "path": "workspace_id",
-        "fact": "contribution to azure/log-analytics-workspace",
+        "fact": "contribution to azure.rule.log-analytics-workspace",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/log_analytics_workspace_table",
         "quote": "The object ID of the Log Analytics Workspace that contains the table."
       },
       {
         "section": "system_topic_subscription",
-        "rule": "azure/event-grid-system-topic-subscription",
+        "rule": "azure.rule.event-grid-system-topic-subscription",
         "terraform_type": "azurerm_eventgrid_system_topic_event_subscription",
         "path": "system_topic",
-        "fact": "core/ownership and subscribes-to to azure/event-grid-topic",
+        "fact": "azure.context.ownership and subscribes-to to azure.rule.event-grid-topic",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/eventgrid_system_topic_event_subscription",
         "quote": "The System Topic where the Event Subscription should be created in."
       },
       {
         "section": "system_topic_subscription",
-        "rule": "azure/event-grid-system-topic-subscription",
+        "rule": "azure.rule.event-grid-system-topic-subscription",
         "terraform_type": "azurerm_eventgrid_system_topic_event_subscription",
         "path": "eventhub_id",
         "fact": "delivers-to azure/event-stream",
@@ -2633,30 +2633,30 @@
       },
       {
         "section": "system_topic_subscription",
-        "rule": "azure/event-grid-system-topic-subscription",
+        "rule": "azure.rule.event-grid-system-topic-subscription",
         "terraform_type": "azurerm_eventgrid_system_topic_event_subscription",
         "path": "service_bus_queue_id",
-        "fact": "delivers-to core/message-queue",
+        "fact": "delivers-to azure.concept.message-queue",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/eventgrid_system_topic_event_subscription",
         "quote": "Specifies the id where the Service Bus Queue is located."
       },
       {
         "section": "system_topic_subscription",
-        "rule": "azure/event-grid-system-topic-subscription",
+        "rule": "azure.rule.event-grid-system-topic-subscription",
         "terraform_type": "azurerm_eventgrid_system_topic_event_subscription",
         "path": "service_bus_topic_id",
-        "fact": "delivers-to azure/service-bus-topic",
+        "fact": "delivers-to azure.rule.service-bus-topic",
         "schema_status": "attribute",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/eventgrid_system_topic_event_subscription",
         "quote": "Specifies the id where the Service Bus Topic is located."
       },
       {
         "section": "system_topic_subscription",
-        "rule": "azure/event-grid-system-topic-subscription",
+        "rule": "azure.rule.event-grid-system-topic-subscription",
         "terraform_type": "azurerm_eventgrid_system_topic_event_subscription",
         "path": "azure_function_endpoint[0].function_id",
-        "fact": "delivers-to core/serverless-function",
+        "fact": "delivers-to azure.concept.serverless-function",
         "schema_status": "attribute",
         "schema_bounds": [
           "azurerm_eventgrid_system_topic_event_subscription.azure_function_endpoint max_items=1"
@@ -2666,10 +2666,10 @@
       },
       {
         "section": "system_topic_subscription",
-        "rule": "azure/event-grid-system-topic-subscription",
+        "rule": "azure.rule.event-grid-system-topic-subscription",
         "terraform_type": "azurerm_eventgrid_system_topic_event_subscription",
         "path": "storage_queue_endpoint[0].storage_account_id",
-        "fact": "delivers-to azure/storage-account",
+        "fact": "delivers-to azure.rule.storage-account",
         "schema_status": "attribute",
         "schema_bounds": [
           "azurerm_eventgrid_system_topic_event_subscription.storage_queue_endpoint max_items=1"
@@ -2681,23 +2681,23 @@
     "refusals": [
       {
         "candidate": "AZ-01",
-        "rule": "azure/event-grid-event-subscription",
+        "rule": "azure.rule.event-grid-event-subscription",
         "path": "scope",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/eventgrid_event_subscription",
         "quote": "Specifies the scope at which the EventGrid Event Subscription should be created.",
-        "decision": "no fact: scope is exact but polymorphic across resource groups, Azure resources, domains, and topics; v1 requires one exact target concept and emits FACT_CONCEPT_MISMATCH for other valid scopes"
+        "decision": "no fact: scope is exact but polymorphic across resource groups, Azure resources, domains, and topics; v0.1 requires one exact typed target and emits FACT_TARGET_MISMATCH for other valid scopes"
       },
       {
         "candidate": "AZ-25",
-        "rule": "azure/service-bus-subscription",
+        "rule": "azure.rule.service-bus-subscription",
         "path": "topic_id",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/servicebus_subscription",
         "quote": "The ID of the ServiceBus Topic to create this Subscription in.",
-        "decision": "direct ownership to azure/service-bus-topic is implemented; no direct subscription-to-namespace fact because topic_id references only the topic and the topic already owns its namespace"
+        "decision": "direct ownership to azure.rule.service-bus-topic is implemented; no direct subscription-to-namespace fact because topic_id references only the topic and the topic already owns its namespace"
       },
       {
         "candidate": "AZ-26",
-        "rule": "azure/application-gateway",
+        "rule": "azure.rule.application-gateway",
         "path": "gateway_ip_configuration[*].subnet_id",
         "evidence_url": "https://registry.terraform.io/providers/hashicorp/azurerm/5.3.0/docs/resources/application_gateway",
         "quote": "The ID of the Subnet which the Application Gateway should be connected to.",
@@ -2721,12 +2721,12 @@
   },
   "entries": [
     {
-      "rule_id": "azure/aks-cluster",
+      "rule_id": "azure.rule.aks-cluster",
       "terraform_type": "azurerm_kubernetes_cluster",
       "provider": "azurerm",
       "official_label": "Azure Kubernetes Service (AKS) cluster",
-      "prior_concept": "core/kubernetes-cluster",
-      "current_concept": "core/kubernetes-cluster",
+      "prior_concept": "rf.concept.kubernetes-cluster",
+      "current_concept": "rf.concept.kubernetes-cluster",
       "decision": "retained",
       "changes": [
         "retained after exact provider, terminology, and semantic audit"
@@ -2761,16 +2761,16 @@
       "evidence_refs": [
         "provider-baseline",
         "provider-compatibility",
-        "rule:azure/aks-cluster"
+        "rule:azure.rule.aks-cluster"
       ]
     },
     {
-      "rule_id": "azure/aks-node-pool",
+      "rule_id": "azure.rule.aks-node-pool",
       "terraform_type": "azurerm_kubernetes_cluster_node_pool",
       "provider": "azurerm",
       "official_label": "AKS node pool",
-      "prior_concept": "core/kubernetes-node-pool",
-      "current_concept": "core/kubernetes-node-pool",
+      "prior_concept": "azure.concept.kubernetes-node-pool",
+      "current_concept": "azure.concept.kubernetes-node-pool",
       "decision": "modified",
       "changes": [
         "placed node pool nodes in the exact subnet declared by vnet_subnet_id"
@@ -2795,16 +2795,16 @@
       "evidence_refs": [
         "provider-baseline",
         "provider-compatibility",
-        "rule:azure/aks-node-pool"
+        "rule:azure.rule.aks-node-pool"
       ]
     },
     {
-      "rule_id": "azure/application-gateway",
+      "rule_id": "azure.rule.application-gateway",
       "terraform_type": "azurerm_application_gateway",
       "provider": "azurerm",
       "official_label": "Azure Application Gateway",
-      "prior_concept": "core/load-balancer",
-      "current_concept": "core/load-balancer",
+      "prior_concept": "azure.concept.load-balancer",
+      "current_concept": "azure.concept.load-balancer",
       "decision": "modified",
       "changes": [
         "placed the gateway in the dedicated subnet declared by gateway_ip_configuration"
@@ -2834,16 +2834,16 @@
       "evidence_refs": [
         "provider-baseline",
         "provider-compatibility",
-        "rule:azure/application-gateway"
+        "rule:azure.rule.application-gateway"
       ]
     },
     {
-      "rule_id": "azure/load-balancer",
+      "rule_id": "azure.rule.load-balancer",
       "terraform_type": "azurerm_lb",
       "provider": "azurerm",
       "official_label": "Azure Load Balancer",
-      "prior_concept": "core/load-balancer",
-      "current_concept": "core/load-balancer",
+      "prior_concept": "azure.concept.load-balancer",
+      "current_concept": "azure.concept.load-balancer",
       "decision": "retained",
       "changes": [
         "retained after exact provider, terminology, and semantic audit"
@@ -2868,16 +2868,16 @@
       "evidence_refs": [
         "provider-baseline",
         "provider-compatibility",
-        "rule:azure/load-balancer"
+        "rule:azure.rule.load-balancer"
       ]
     },
     {
-      "rule_id": "azure/load-balancer-backend-pool",
+      "rule_id": "azure.rule.load-balancer-backend-pool",
       "terraform_type": "azurerm_lb_backend_address_pool",
       "provider": "azurerm",
       "official_label": "Azure Load Balancer backend pool",
-      "prior_concept": "azure/load-balancer-component",
-      "current_concept": "azure/load-balancer-component",
+      "prior_concept": "azure.concept.load-balancer-component",
+      "current_concept": "azure.concept.load-balancer-component",
       "decision": "retained",
       "changes": [
         "retained after exact provider, terminology, and semantic audit"
@@ -2897,16 +2897,16 @@
       "evidence_refs": [
         "provider-baseline",
         "provider-compatibility",
-        "rule:azure/load-balancer-backend-pool"
+        "rule:azure.rule.load-balancer-backend-pool"
       ]
     },
     {
-      "rule_id": "azure/load-balancer-rule",
+      "rule_id": "azure.rule.load-balancer-rule",
       "terraform_type": "azurerm_lb_rule",
       "provider": "azurerm",
       "official_label": "Azure Load Balancer rule",
-      "prior_concept": "azure/load-balancer-component",
-      "current_concept": "azure/load-balancer-component",
+      "prior_concept": "azure.concept.load-balancer-component",
+      "current_concept": "azure.concept.load-balancer-component",
       "decision": "retained",
       "changes": [
         "retained after exact provider, terminology, and semantic audit"
@@ -2926,16 +2926,16 @@
       "evidence_refs": [
         "provider-baseline",
         "provider-compatibility",
-        "rule:azure/load-balancer-rule"
+        "rule:azure.rule.load-balancer-rule"
       ]
     },
     {
-      "rule_id": "azure/mssql-database",
+      "rule_id": "azure.rule.mssql-database",
       "terraform_type": "azurerm_mssql_database",
       "provider": "azurerm",
       "official_label": "Azure SQL Database",
-      "prior_concept": "azure/sql-database",
-      "current_concept": "core/managed-database",
+      "prior_concept": "azure.concept.sql-database",
+      "current_concept": "rf.concept.managed-database",
       "decision": "modified",
       "changes": [
         "promoted Azure SQL Database from provider detail to core managed-database entity",
@@ -2956,16 +2956,16 @@
       "evidence_refs": [
         "provider-baseline",
         "provider-compatibility",
-        "rule:azure/mssql-database"
+        "rule:azure.rule.mssql-database"
       ]
     },
     {
-      "rule_id": "azure/mssql-server",
+      "rule_id": "azure.rule.mssql-server",
       "terraform_type": "azurerm_mssql_server",
       "provider": "azurerm",
       "official_label": "Azure SQL logical server",
-      "prior_concept": "core/managed-database",
-      "current_concept": "azure/sql-server",
+      "prior_concept": "rf.concept.managed-database",
+      "current_concept": "azure.concept.sql-server",
       "decision": "modified",
       "changes": [
         "narrowed Azure SQL logical server from managed database entity to Azure-specific ownership scope"
@@ -2990,16 +2990,16 @@
       "evidence_refs": [
         "provider-baseline",
         "provider-compatibility",
-        "rule:azure/mssql-server"
+        "rule:azure.rule.mssql-server"
       ]
     },
     {
-      "rule_id": "azure/postgresql-flexible-server",
+      "rule_id": "azure.rule.postgresql-flexible-server",
       "terraform_type": "azurerm_postgresql_flexible_server",
       "provider": "azurerm",
       "official_label": "Azure Database for PostgreSQL flexible server",
-      "prior_concept": "core/managed-database",
-      "current_concept": "core/managed-database",
+      "prior_concept": "rf.concept.managed-database",
+      "current_concept": "rf.concept.managed-database",
       "decision": "modified",
       "changes": [
         "reused core DNS zone identity for private name resolution",
@@ -3045,16 +3045,16 @@
       "evidence_refs": [
         "provider-baseline",
         "provider-compatibility",
-        "rule:azure/postgresql-flexible-server"
+        "rule:azure.rule.postgresql-flexible-server"
       ]
     },
     {
-      "rule_id": "azure/private-dns-zone",
+      "rule_id": "azure.rule.private-dns-zone",
       "terraform_type": "azurerm_private_dns_zone",
       "provider": "azurerm",
       "official_label": "Azure Private DNS zone",
-      "prior_concept": "azure/private-dns-zone",
-      "current_concept": "core/dns-zone",
+      "prior_concept": "azure.rule.private-dns-zone",
+      "current_concept": "azure.concept.dns-zone",
       "decision": "modified",
       "changes": [
         "reused core DNS zone identity and removed duplicated Azure concept"
@@ -3079,16 +3079,16 @@
       "evidence_refs": [
         "provider-baseline",
         "provider-compatibility",
-        "rule:azure/private-dns-zone"
+        "rule:azure.rule.private-dns-zone"
       ]
     },
     {
-      "rule_id": "azure/private-dns-zone-vnet-link",
+      "rule_id": "azure.rule.private-dns-zone-vnet-link",
       "terraform_type": "azurerm_private_dns_zone_virtual_network_link",
       "provider": "azurerm",
       "official_label": "Azure Private DNS virtual network link",
-      "prior_concept": "azure/private-network-link",
-      "current_concept": "azure/private-network-link",
+      "prior_concept": "azure.concept.private-network-link",
+      "current_concept": "azure.concept.private-network-link",
       "decision": "retained",
       "changes": [
         "retained after exact provider, terminology, and semantic audit"
@@ -3113,16 +3113,16 @@
       "evidence_refs": [
         "provider-baseline",
         "provider-compatibility",
-        "rule:azure/private-dns-zone-vnet-link"
+        "rule:azure.rule.private-dns-zone-vnet-link"
       ]
     },
     {
-      "rule_id": "azure/private-endpoint",
+      "rule_id": "azure.rule.private-endpoint",
       "terraform_type": "azurerm_private_endpoint",
       "provider": "azurerm",
       "official_label": "Azure Private Endpoint",
-      "prior_concept": "core/private-endpoint",
-      "current_concept": "core/private-endpoint",
+      "prior_concept": "azure.concept.private-endpoint",
+      "current_concept": "azure.concept.private-endpoint",
       "decision": "retained",
       "changes": [
         "retained after exact provider, terminology, and semantic audit"
@@ -3157,16 +3157,16 @@
       "evidence_refs": [
         "provider-baseline",
         "provider-compatibility",
-        "rule:azure/private-endpoint"
+        "rule:azure.rule.private-endpoint"
       ]
     },
     {
-      "rule_id": "azure/public-address",
+      "rule_id": "azure.rule.public-address",
       "terraform_type": "azurerm_public_ip",
       "provider": "azurerm",
       "official_label": "Azure Public IP address",
-      "prior_concept": "azure/public-address",
-      "current_concept": "azure/public-address",
+      "prior_concept": "azure.rule.public-address",
+      "current_concept": "azure.rule.public-address",
       "decision": "retained",
       "changes": [
         "retained after exact provider, terminology, and semantic audit"
@@ -3191,16 +3191,16 @@
       "evidence_refs": [
         "provider-baseline",
         "provider-compatibility",
-        "rule:azure/public-address"
+        "rule:azure.rule.public-address"
       ]
     },
     {
-      "rule_id": "azure/resource-group",
+      "rule_id": "azure.rule.resource-group",
       "terraform_type": "azurerm_resource_group",
       "provider": "azurerm",
       "official_label": "Azure Resource Group",
-      "prior_concept": "azure/resource-group",
-      "current_concept": "azure/resource-group",
+      "prior_concept": "azure.rule.resource-group",
+      "current_concept": "azure.rule.resource-group",
       "decision": "retained",
       "changes": [
         "retained after exact provider, terminology, and semantic audit"
@@ -3215,16 +3215,16 @@
       "evidence_refs": [
         "provider-baseline",
         "provider-compatibility",
-        "rule:azure/resource-group"
+        "rule:azure.rule.resource-group"
       ]
     },
     {
-      "rule_id": "azure/storage-account",
+      "rule_id": "azure.rule.storage-account",
       "terraform_type": "azurerm_storage_account",
       "provider": "azurerm",
       "official_label": "Azure Storage account",
-      "prior_concept": "azure/storage-account",
-      "current_concept": "azure/storage-account",
+      "prior_concept": "azure.rule.storage-account",
+      "current_concept": "azure.rule.storage-account",
       "decision": "retained",
       "changes": [
         "retained after exact provider, terminology, and semantic audit"
@@ -3249,16 +3249,16 @@
       "evidence_refs": [
         "provider-baseline",
         "provider-compatibility",
-        "rule:azure/storage-account"
+        "rule:azure.rule.storage-account"
       ]
     },
     {
-      "rule_id": "azure/subnet",
+      "rule_id": "azure.rule.subnet",
       "terraform_type": "azurerm_subnet",
       "provider": "azurerm",
       "official_label": "subnet",
-      "prior_concept": "core/subnet",
-      "current_concept": "core/subnet",
+      "prior_concept": "rf.concept.subnet",
+      "current_concept": "rf.concept.subnet",
       "decision": "retained",
       "changes": [
         "retained after exact provider, terminology, and semantic audit"
@@ -3293,16 +3293,16 @@
       "evidence_refs": [
         "provider-baseline",
         "provider-compatibility",
-        "rule:azure/subnet"
+        "rule:azure.rule.subnet"
       ]
     },
     {
-      "rule_id": "azure/user-assigned-managed-identity",
+      "rule_id": "azure.rule.user-assigned-managed-identity",
       "terraform_type": "azurerm_user_assigned_identity",
       "provider": "azurerm",
       "official_label": "user-assigned managed identity",
-      "prior_concept": "core/service-identity",
-      "current_concept": "core/service-identity",
+      "prior_concept": "rf.concept.service-identity",
+      "current_concept": "rf.concept.service-identity",
       "decision": "retained",
       "changes": [
         "retained after exact provider, terminology, and semantic audit"
@@ -3327,16 +3327,16 @@
       "evidence_refs": [
         "provider-baseline",
         "provider-compatibility",
-        "rule:azure/user-assigned-managed-identity"
+        "rule:azure.rule.user-assigned-managed-identity"
       ]
     },
     {
-      "rule_id": "azure/virtual-network",
+      "rule_id": "azure.rule.virtual-network",
       "terraform_type": "azurerm_virtual_network",
       "provider": "azurerm",
       "official_label": "Azure Virtual Network",
-      "prior_concept": "core/virtual-network",
-      "current_concept": "core/virtual-network",
+      "prior_concept": "rf.concept.virtual-network",
+      "current_concept": "rf.concept.virtual-network",
       "decision": "retained",
       "changes": [
         "retained after exact provider, terminology, and semantic audit"
@@ -3361,7 +3361,7 @@
       "evidence_refs": [
         "provider-baseline",
         "provider-compatibility",
-        "rule:azure/virtual-network"
+        "rule:azure.rule.virtual-network"
       ]
     }
   ]

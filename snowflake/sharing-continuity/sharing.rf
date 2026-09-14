@@ -1,20 +1,16 @@
 concept "data-share" {
-  kind        = entity
   description = "A Snowflake secure data share exposed to other accounts."
 }
 
 concept "listing" {
-  kind        = entity
   description = "A Snowflake listing distributing a share or application package."
 }
 
 concept "failover-group" {
-  kind        = entity
   description = "A Snowflake failover group replicating selected account objects."
 }
 
 concept "account-connection" {
-  kind        = entity
   description = "A Snowflake client connection replicated across accounts for failover."
 }
 

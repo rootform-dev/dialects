@@ -6,1092 +6,865 @@
     {
       "name": "ai-foundry",
       "family": "ai-ml",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "A Microsoft Foundry account or project boundary."
     },
     {
       "name": "ai-search-service",
       "family": "ai-ml",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure AI Search service."
     },
     {
       "name": "ai-service-account",
       "family": "ai-ml",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure AI services account exposing managed AI APIs."
     },
     {
       "name": "analytics-cluster",
       "family": "data-analytics",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "A managed Azure analytics cluster or server."
     },
     {
       "name": "analytics-pool",
       "family": "data-analytics",
-      "kind": "entity",
       "identity": "generic/database",
       "description": "A SQL or Apache Spark analytics pool."
     },
     {
       "name": "api-management-detail",
       "family": "api-integration",
-      "kind": "detail",
       "identity": "generic/entity",
       "description": "An API, product, backend, policy, workspace, or gateway configuration inside API Management."
     },
     {
       "name": "app-configuration",
       "family": "api-integration",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure App Configuration store."
     },
     {
       "name": "app-service",
       "family": "serverless",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure App Service web application runtime."
     },
     {
       "name": "app-service-environment",
       "family": "serverless",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An isolated Azure App Service hosting environment."
     },
     {
       "name": "app-service-plan",
       "family": "serverless",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure App Service plan providing shared runtime capacity."
     },
     {
       "name": "application-insights",
       "family": "operations",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure Monitor Application Insights application resource."
     },
     {
       "name": "arc-enabled-server",
       "family": "hybrid",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "A server connected to Azure through Azure Arc."
     },
     {
       "name": "arc-resource-bridge",
       "family": "hybrid",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure Arc resource bridge connecting an external platform."
     },
     {
       "name": "attestation-provider",
       "family": "security",
-      "kind": "entity",
       "identity": "generic/identity",
       "description": "A Microsoft Azure Attestation provider."
     },
     {
       "name": "automation-account",
       "family": "operations",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Automation account owning runbooks and schedules."
     },
     {
       "name": "azure-enclave",
       "family": "hybrid",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Enclave isolated workload and connectivity boundary."
     },
     {
       "name": "azure-firewall",
       "family": "network",
-      "kind": "entity",
       "identity": "generic/network",
       "description": "An Azure Firewall managed network security service."
     },
     {
       "name": "azure-local-cluster",
       "family": "hybrid",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure Local or Azure Stack HCI cluster."
     },
     {
       "name": "bastion-host",
       "family": "network",
-      "kind": "entity",
       "identity": "generic/network",
       "description": "An Azure Bastion service providing managed private administration access."
     },
     {
       "name": "batch-account",
       "family": "compute",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Batch account owning pools, jobs, and applications."
     },
     {
-      "name": "batch-job",
-      "family": "compute",
-      "kind": "entity",
-      "identity": "generic/entity",
-      "description": "An Azure Batch job coordinating parallel compute tasks."
-    },
-    {
       "name": "batch-pool",
       "family": "compute",
-      "kind": "detail",
       "identity": "generic/entity",
       "description": "A pool providing compute capacity to Azure Batch."
     },
     {
       "name": "bot-service",
       "family": "ai-ml",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure Bot Service bot registration or application."
     },
     {
       "name": "chaos-experiment",
       "family": "operations",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure Chaos Studio experiment."
     },
     {
       "name": "communication-service",
       "family": "communication",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure Communication Services resource."
     },
     {
       "name": "compute-image",
       "family": "compute",
-      "kind": "entity",
       "identity": "generic/storage",
       "description": "A reusable Azure compute image or image definition."
     },
     {
       "name": "compute-placement",
       "family": "compute",
-      "kind": "detail",
       "identity": "generic/entity",
       "description": "Availability, proximity, reservation, or host placement supporting Azure compute."
     },
     {
-      "name": "conditional-access-policy",
-      "family": "identity-iam",
-      "kind": "entity",
-      "identity": "generic/identity",
-      "description": "A Microsoft Entra Conditional Access policy."
-    },
-    {
       "name": "confidential-ledger",
       "family": "security",
-      "kind": "entity",
       "identity": "generic/database",
       "description": "An Azure confidential ledger providing tamper-evident storage."
     },
     {
       "name": "container-app",
       "family": "containers",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure Container Apps service running container revisions."
     },
     {
       "name": "container-app-environment",
       "family": "containers",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Container Apps environment sharing network and operational boundaries."
     },
     {
       "name": "container-app-job",
       "family": "containers",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure Container Apps job running finite container work."
     },
     {
       "name": "container-instance-group",
       "family": "containers",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure Container Instances container group scheduled as one unit."
     },
     {
       "name": "container-registry",
       "family": "containers",
-      "kind": "entity",
       "identity": "generic/storage",
       "description": "An Azure Container Registry storing and distributing OCI artifacts."
     },
     {
       "name": "content-delivery-profile",
       "family": "dns-cdn",
-      "kind": "entity",
       "identity": "generic/network",
       "description": "An Azure content delivery profile serving cached content globally."
     },
     {
       "name": "cosmos-account",
       "family": "databases",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Cosmos DB account defining global distribution and API boundaries."
     },
     {
       "name": "custom-location",
       "family": "hybrid",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Arc custom location extending Azure resource placement."
     },
     {
       "name": "data-explorer-cluster",
       "family": "databases",
-      "kind": "entity",
       "identity": "generic/database",
       "description": "An Azure Data Explorer cluster serving real-time analytics."
     },
     {
-      "name": "data-explorer-database",
-      "family": "databases",
-      "kind": "detail",
-      "identity": "generic/database",
-      "description": "A database inside an Azure Data Explorer cluster."
-    },
-    {
       "name": "data-factory",
       "family": "data-analytics",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Data Factory integration and orchestration boundary."
     },
     {
       "name": "data-integration-detail",
       "family": "data-analytics",
-      "kind": "detail",
       "identity": "generic/entity",
       "description": "A dataset, linked service, trigger, connection, or data-flow supporting integration."
     },
     {
       "name": "data-integration-runtime",
       "family": "data-analytics",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "A managed or self-hosted Azure data integration runtime."
     },
     {
       "name": "data-share",
       "family": "data-analytics",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure Data Share publication."
     },
     {
       "name": "data-share-account",
       "family": "data-analytics",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Data Share account."
     },
     {
       "name": "database-component",
       "family": "databases",
-      "kind": "detail",
       "identity": "generic/database",
       "description": "A table, container, graph, configuration, replica, or policy supporting an Azure database."
     },
     {
       "name": "databricks-workspace",
       "family": "data-analytics",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Databricks workspace."
     },
     {
       "name": "ddos-protection-plan",
       "family": "network",
-      "kind": "entity",
       "identity": "generic/network",
       "description": "An Azure DDoS Protection plan protecting virtual networks."
     },
     {
       "name": "dedicated-host",
       "family": "compute",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "A physical Azure server dedicated to one customer."
     },
     {
       "name": "dedicated-host-group",
       "family": "compute",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Dedicated Host placement group."
     },
     {
       "name": "defender-plan",
       "family": "security",
-      "kind": "entity",
       "identity": "generic/identity",
       "description": "A Microsoft Defender for Cloud protection plan or workspace integration."
     },
     {
       "name": "dev-center",
       "family": "developer-ci-cd",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "A Microsoft Dev Box and deployment-environment Dev Center."
     },
     {
       "name": "dev-center-project",
       "family": "developer-ci-cd",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "A Dev Center project boundary."
     },
     {
       "name": "developer-environment",
       "family": "developer-ci-cd",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "A developer workstation, environment, or testing workspace."
     },
     {
       "name": "digital-twins-instance",
       "family": "iot",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure Digital Twins service instance."
     },
     {
       "name": "disk-snapshot",
       "family": "compute",
-      "kind": "entity",
       "identity": "generic/storage",
       "description": "A point-in-time snapshot of Azure disk storage."
     },
     {
       "name": "dns-record",
       "family": "dns-cdn",
-      "kind": "detail",
       "identity": "generic/network",
       "description": "A DNS record inside an Azure DNS zone."
     },
     {
       "name": "elastic-san",
       "family": "storage",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Elastic SAN storage boundary."
     },
     {
       "name": "email-communication-service",
       "family": "communication",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure Communication Services Email resource."
     },
     {
-      "name": "entra-access-package",
-      "family": "identity-iam",
-      "kind": "entity",
-      "identity": "generic/identity",
-      "description": "A Microsoft Entra access package bundling governed access."
-    },
-    {
-      "name": "entra-access-package-catalog",
-      "family": "identity-iam",
-      "kind": "scope",
-      "identity": "generic/scope",
-      "description": "A Microsoft Entra entitlement-management catalog."
-    },
-    {
-      "name": "entra-administrative-unit",
-      "family": "identity-iam",
-      "kind": "scope",
-      "identity": "generic/scope",
-      "description": "A Microsoft Entra administrative boundary."
-    },
-    {
       "name": "entra-application",
       "family": "identity-iam",
-      "kind": "entity",
       "identity": "generic/identity",
       "description": "A Microsoft Entra application identity definition."
     },
     {
       "name": "entra-directory",
       "family": "identity-iam",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "A Microsoft Entra External ID directory boundary."
     },
     {
       "name": "entra-domain-service",
       "family": "identity-iam",
-      "kind": "entity",
       "identity": "generic/identity",
       "description": "A Microsoft Entra Domain Services managed domain."
     },
     {
       "name": "event-grid-domain",
       "family": "messaging-eventing",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Event Grid domain or namespace owning event topics."
     },
     {
       "name": "event-stream",
       "family": "messaging-eventing",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure Event Hubs append-only event stream."
     },
     {
       "name": "expressroute-gateway",
       "family": "network",
-      "kind": "entity",
       "identity": "generic/network",
       "description": "An Azure ExpressRoute gateway connecting a virtual network to private circuits."
     },
     {
       "name": "firewall-policy",
       "family": "network",
-      "kind": "detail",
       "identity": "generic/network",
       "description": "An Azure Firewall or web application firewall policy."
     },
     {
       "name": "front-door-profile",
       "family": "load-balancing",
-      "kind": "entity",
       "identity": "generic/load-balancer",
       "description": "An Azure Front Door global application delivery profile."
     },
     {
       "name": "governance-detail",
       "family": "governance-management",
-      "kind": "detail",
       "identity": "generic/entity",
       "description": "An Azure policy, role, deployment, budget, or governance configuration."
     },
     {
       "name": "graph-data-connect-account",
       "family": "data-analytics",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "A Microsoft Graph Data Connect service account."
     },
     {
       "name": "health-data-service",
       "family": "data-analytics",
-      "kind": "entity",
       "identity": "generic/database",
       "description": "A FHIR, DICOM, or MedTech service in Azure Health Data Services."
     },
     {
       "name": "health-data-workspace",
       "family": "data-analytics",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Health Data Services workspace owning healthcare data services."
     },
     {
       "name": "hybrid-platform",
       "family": "hybrid",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "A hybrid or partner platform managed through Azure."
     },
     {
       "name": "identity-governance-detail",
       "family": "identity-iam",
-      "kind": "detail",
       "identity": "generic/identity",
       "description": "A location, assignment, federation, role, or policy supporting identity governance."
     },
     {
-      "name": "identity-synchronization-job",
-      "family": "identity-iam",
-      "kind": "entity",
-      "identity": "generic/identity",
-      "description": "A Microsoft Entra provisioning synchronization job."
-    },
-    {
       "name": "image-gallery",
       "family": "storage",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Compute Gallery owning image definitions and versions."
     },
     {
       "name": "integration-account",
       "family": "api-integration",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Logic Apps integration account."
     },
     {
       "name": "integration-connection",
       "family": "api-integration",
-      "kind": "detail",
       "identity": "generic/network",
       "description": "An Azure API or App Service connection supporting integration."
     },
     {
       "name": "iot-central-application",
       "family": "iot",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure IoT Central application."
     },
     {
       "name": "iot-detail",
       "family": "iot",
-      "kind": "detail",
       "identity": "generic/entity",
       "description": "A route, endpoint, consumer group, certificate, or organization supporting Azure IoT."
     },
     {
       "name": "iot-hub",
       "family": "iot",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure IoT Hub device messaging service."
     },
     {
       "name": "iot-provisioning-service",
       "family": "iot",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure IoT Hub Device Provisioning Service."
     },
     {
       "name": "iot-update-service",
       "family": "iot",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Device Update for IoT Hub account boundary."
     },
     {
       "name": "key-vault",
       "family": "security",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Key Vault security boundary for keys, secrets, and certificates."
     },
     {
       "name": "kubernetes-fleet",
       "family": "containers",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Kubernetes Fleet Manager fleet coordinating Kubernetes clusters."
     },
     {
       "name": "load-balancer-component",
       "family": "load-balancing",
-      "kind": "detail",
       "identity": "generic/load-balancer",
       "description": "A frontend, backend, route, probe, rule, or policy supporting Azure load balancing."
     },
     {
       "name": "load-test",
       "family": "operations",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure Load Testing resource."
     },
     {
       "name": "local-network-gateway",
       "family": "network",
-      "kind": "entity",
       "identity": "generic/network",
       "description": "An Azure representation of an external VPN site gateway."
     },
     {
       "name": "log-analytics-workspace",
       "family": "operations",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Log Analytics workspace collecting operational data."
     },
     {
       "name": "machine-learning-compute",
       "family": "ai-ml",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "Compute capacity attached to Azure Machine Learning."
     },
     {
       "name": "machine-learning-workspace",
       "family": "ai-ml",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Machine Learning workspace."
     },
     {
       "name": "maintenance-configuration",
       "family": "operations",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure maintenance configuration defining update windows."
     },
     {
       "name": "managed-application",
       "family": "governance-management",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure Managed Application deployment."
     },
     {
       "name": "managed-grafana",
       "family": "operations",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure Managed Grafana workspace."
     },
     {
       "name": "managed-hsm",
       "family": "security",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Key Vault Managed HSM security boundary."
     },
     {
-      "name": "management-group",
-      "family": "governance-management",
-      "kind": "scope",
-      "identity": "generic/scope",
-      "description": "An Azure management group organizing subscriptions for governance."
-    },
-    {
       "name": "maps-account",
       "family": "api-integration",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure Maps account exposing geospatial platform APIs."
     },
     {
       "name": "messaging-detail",
       "family": "messaging-eventing",
-      "kind": "detail",
       "identity": "generic/entity",
       "description": "A consumer group, authorization rule, schema, route, or endpoint supporting messaging."
     },
     {
       "name": "messaging-namespace",
       "family": "messaging-eventing",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure messaging namespace owning queues, topics, or event streams."
     },
     {
       "name": "migration-service",
       "family": "migration",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure migration or movement service."
     },
     {
       "name": "monitor-workspace",
       "family": "operations",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure Monitor workspace."
     },
     {
       "name": "netapp-account",
       "family": "storage",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure NetApp Files account."
     },
     {
       "name": "netapp-capacity-pool",
       "family": "storage",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure NetApp Files capacity pool."
     },
     {
       "name": "network-function-service",
       "family": "network",
-      "kind": "entity",
       "identity": "generic/network",
       "description": "An Azure managed network-function collection or control service."
     },
     {
-      "name": "network-interface",
-      "family": "network",
-      "kind": "detail",
-      "identity": "generic/network",
-      "description": "An Azure network interface attaching compute to a network."
-    },
-    {
       "name": "network-policy-detail",
       "family": "network",
-      "kind": "detail",
       "identity": "generic/network",
       "description": "A route, security rule, association, or network policy supporting Azure networking."
     },
     {
       "name": "network-security-group",
       "family": "network",
-      "kind": "entity",
       "identity": "generic/network",
       "description": "An Azure Network Security Group containing stateful traffic rules."
     },
     {
       "name": "network-security-perimeter",
       "family": "network",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Network Security Perimeter isolating platform services."
     },
     {
       "name": "network-watcher",
       "family": "operations",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure Network Watcher regional network monitoring service."
     },
     {
       "name": "notification-hub",
       "family": "messaging-eventing",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure Notification Hubs push-notification hub."
     },
     {
       "name": "notification-namespace",
       "family": "messaging-eventing",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Notification Hubs namespace."
     },
     {
       "name": "operations-detail",
       "family": "operations",
-      "kind": "detail",
       "identity": "generic/entity",
       "description": "An alert, diagnostic, workbook, schedule, dashboard, or operational configuration."
     },
     {
       "name": "private-dns-resolver",
       "family": "dns-cdn",
-      "kind": "entity",
       "identity": "generic/network",
       "description": "An Azure DNS Private Resolver forwarding DNS between networks."
     },
     {
       "name": "private-link-scope",
       "family": "network",
-      "kind": "scope",
       "identity": "generic/network",
       "description": "An Azure private-link scope or hub grouping private service connectivity."
     },
     {
       "name": "private-link-service",
       "family": "network",
-      "kind": "entity",
       "identity": "generic/network",
       "description": "An Azure Private Link service publishing a private endpoint target."
     },
     {
       "name": "private-network-link",
       "family": "dns-cdn",
-      "kind": "detail",
       "identity": "generic/network",
       "description": "An Azure Private DNS virtual network link."
     },
     {
       "name": "public-address",
       "family": "network",
-      "kind": "entity",
       "identity": "generic/network",
       "description": "A public Azure IP address exposed to network traffic."
     },
     {
       "name": "purview-account",
       "family": "data-analytics",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "A Microsoft Purview data governance account."
     },
     {
       "name": "realtime-communication-service",
       "family": "communication",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure managed real-time communication service."
     },
     {
       "name": "relay-connection",
       "family": "messaging-eventing",
-      "kind": "entity",
       "identity": "generic/network",
       "description": "An Azure Relay hybrid connection."
     },
     {
       "name": "relay-namespace",
       "family": "messaging-eventing",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Relay namespace."
     },
     {
       "name": "resource-group",
       "family": "governance-management",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Resource Group lifecycle and access boundary."
     },
     {
-      "name": "route-server",
-      "family": "network",
-      "kind": "entity",
-      "identity": "generic/network",
-      "description": "An Azure Route Server exchanging routes through BGP."
-    },
-    {
       "name": "route-table",
       "family": "network",
-      "kind": "entity",
       "identity": "generic/network",
       "description": "An Azure route table controlling subnet traffic paths."
     },
     {
       "name": "security-detail",
       "family": "security",
-      "kind": "detail",
       "identity": "generic/identity",
       "description": "A certificate, access policy, alert, connector, or security configuration."
     },
     {
-      "name": "sentinel-service",
-      "family": "security",
-      "kind": "entity",
-      "identity": "generic/identity",
-      "description": "A Microsoft Sentinel service enabled on a Log Analytics workspace."
-    },
-    {
       "name": "service-fabric-cluster",
       "family": "containers",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure Service Fabric cluster running distributed applications."
     },
     {
       "name": "site-recovery-detail",
       "family": "migration",
-      "kind": "detail",
       "identity": "generic/entity",
       "description": "A recovery plan, mapping, replicated machine, or protection configuration."
     },
     {
       "name": "site-recovery-fabric",
       "family": "migration",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Site Recovery source or target fabric."
     },
     {
       "name": "spring-app",
       "family": "serverless",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An application deployed in Azure Spring Apps."
     },
     {
       "name": "spring-apps-service",
       "family": "serverless",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Spring Apps service boundary."
     },
     {
       "name": "sql-server",
       "family": "databases",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure SQL logical server owning managed databases."
     },
     {
       "name": "sre-agent",
       "family": "ai-ml",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure SRE Agent operating against explicitly assigned Azure resources."
     },
     {
       "name": "static-web-app",
       "family": "serverless",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure Static Web Apps site with managed hosting and APIs."
     },
     {
       "name": "storage-account",
       "family": "storage",
-      "kind": "scope",
       "identity": "generic/storage",
       "description": "An Azure Storage account owning data services and their security boundary."
     },
     {
       "name": "storage-object-detail",
       "family": "storage",
-      "kind": "detail",
       "identity": "generic/storage",
       "description": "An object, path, directory, table entity, or policy inside Azure Storage."
     },
     {
       "name": "storage-sync-service",
       "family": "storage",
-      "kind": "entity",
       "identity": "generic/storage",
       "description": "An Azure File Sync service synchronizing file servers and Azure Files."
     },
     {
       "name": "stream-analytics-job",
       "family": "data-analytics",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure Stream Analytics streaming query job."
     },
     {
-      "name": "subscription",
-      "family": "governance-management",
-      "kind": "scope",
-      "identity": "generic/scope",
-      "description": "An Azure subscription billing, policy, and deployment boundary."
-    },
-    {
       "name": "synapse-workspace",
       "family": "data-analytics",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Synapse Analytics workspace."
     },
     {
       "name": "table-storage-table",
       "family": "storage",
-      "kind": "entity",
       "identity": "generic/storage",
       "description": "An Azure Table Storage table."
     },
     {
       "name": "third-party-monitor",
       "family": "operations",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "A third-party observability service managed through Azure."
     },
     {
       "name": "traffic-manager-profile",
       "family": "load-balancing",
-      "kind": "entity",
       "identity": "generic/load-balancer",
       "description": "An Azure Traffic Manager DNS traffic-routing profile."
     },
     {
       "name": "trusted-signing-account",
       "family": "security",
-      "kind": "entity",
       "identity": "generic/identity",
       "description": "An Azure Artifact Signing account."
     },
     {
       "name": "video-indexer-account",
       "family": "ai-ml",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure AI Video Indexer account."
     },
     {
       "name": "virtual-desktop-application-group",
       "family": "compute",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure Virtual Desktop desktop or RemoteApp publication group."
     },
     {
       "name": "virtual-desktop-host-pool",
       "family": "compute",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Virtual Desktop host pool providing session hosts."
     },
     {
       "name": "virtual-desktop-workspace",
       "family": "compute",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Virtual Desktop workspace publishing application groups."
     },
     {
       "name": "virtual-hub",
       "family": "network",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Virtual WAN regional transit hub."
     },
     {
       "name": "virtual-machine-scale-set",
       "family": "compute",
-      "kind": "entity",
       "identity": "generic/entity",
       "description": "An Azure-managed group of virtual machines that scales as one compute workload."
     },
     {
       "name": "virtual-network-manager",
       "family": "network",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Virtual Network Manager control plane for network groups and policy."
     },
     {
       "name": "virtual-wan",
       "family": "network",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure Virtual WAN global transit network."
     },
     {
       "name": "vmware-private-cloud",
       "family": "hybrid",
-      "kind": "scope",
       "identity": "generic/scope",
       "description": "An Azure VMware Solution private cloud."
     },
     {
       "name": "web-application-firewall-policy",
       "family": "network",
-      "kind": "entity",
       "identity": "azure/firewall",
       "description": "A reusable Azure Web Application Firewall policy applied to Application Gateway traffic."
     }
   ],
   "rules": [
     {
-      "concept": "azure/security-detail",
+      "concept": "azure.concept.security-detail",
       "family": "security",
       "identity": "generic/identity",
       "label": "Microsoft Defender for Cloud advanced threat protection",
@@ -1101,7 +874,7 @@
       "terraform_type": "azurerm_advanced_threat_protection"
     },
     {
-      "concept": "azure/ai-foundry",
+      "concept": "azure.rule.ai-foundry",
       "family": "ai-ml",
       "identity": "azure/ai-foundry",
       "label": "Microsoft Foundry resource",
@@ -1111,7 +884,7 @@
       "terraform_type": "azurerm_ai_foundry"
     },
     {
-      "concept": "azure/ai-foundry",
+      "concept": "azure.rule.ai-foundry",
       "family": "ai-ml",
       "identity": "azure/ai-foundry",
       "label": "Microsoft Foundry project",
@@ -1121,7 +894,7 @@
       "terraform_type": "azurerm_ai_foundry_project"
     },
     {
-      "concept": "core/ai-inference-endpoint",
+      "concept": "azure.concept.ai-inference-endpoint",
       "family": "ai-ml",
       "identity": "generic/entity",
       "label": "AI model deployment",
@@ -1131,7 +904,7 @@
       "terraform_type": "azurerm_cognitive_deployment"
     },
     {
-      "concept": "azure/ai-search-service",
+      "concept": "azure.rule.ai-search-service",
       "family": "ai-ml",
       "identity": "generic/entity",
       "label": "AI Search service",
@@ -1141,7 +914,7 @@
       "terraform_type": "azurerm_search_service"
     },
     {
-      "concept": "azure/ai-service-account",
+      "concept": "azure.concept.ai-service-account",
       "family": "ai-ml",
       "identity": "generic/entity",
       "label": "AI services account",
@@ -1151,7 +924,7 @@
       "terraform_type": "azurerm_cognitive_account"
     },
     {
-      "concept": "azure/ai-foundry",
+      "concept": "azure.rule.ai-foundry",
       "family": "ai-ml",
       "identity": "azure/ai-foundry",
       "label": "AI services project",
@@ -1161,7 +934,7 @@
       "terraform_type": "azurerm_cognitive_account_project"
     },
     {
-      "concept": "core/kubernetes-cluster",
+      "concept": "rf.concept.kubernetes-cluster",
       "family": "containers",
       "identity": "azure/aks",
       "label": "AKS cluster",
@@ -1171,7 +944,7 @@
       "terraform_type": "azurerm_kubernetes_cluster"
     },
     {
-      "concept": "core/kubernetes-node-pool",
+      "concept": "azure.concept.kubernetes-node-pool",
       "family": "containers",
       "identity": "generic/entity",
       "label": "AKS node pool",
@@ -1181,7 +954,7 @@
       "terraform_type": "azurerm_kubernetes_cluster_node_pool"
     },
     {
-      "concept": "azure/analytics-cluster",
+      "concept": "azure.concept.analytics-cluster",
       "family": "data-analytics",
       "identity": "generic/entity",
       "label": "Analysis Services server",
@@ -1191,7 +964,7 @@
       "terraform_type": "azurerm_analysis_services_server"
     },
     {
-      "concept": "azure/integration-connection",
+      "concept": "azure.concept.integration-connection",
       "family": "api-integration",
       "identity": "generic/network",
       "label": "API connection",
@@ -1201,7 +974,7 @@
       "terraform_type": "azurerm_api_connection"
     },
     {
-      "concept": "core/api-gateway",
+      "concept": "azure.concept.api-gateway",
       "family": "api-integration",
       "identity": "azure/api-management",
       "label": "API Management service",
@@ -1211,7 +984,7 @@
       "terraform_type": "azurerm_api_management"
     },
     {
-      "concept": "azure/api-management-detail",
+      "concept": "azure.concept.api-management-detail",
       "family": "api-integration",
       "identity": "generic/entity",
       "label": "API Management API",
@@ -1221,7 +994,7 @@
       "terraform_type": "azurerm_api_management_api"
     },
     {
-      "concept": "azure/api-management-detail",
+      "concept": "azure.concept.api-management-detail",
       "family": "api-integration",
       "identity": "generic/entity",
       "label": "API Management backend",
@@ -1231,7 +1004,7 @@
       "terraform_type": "azurerm_api_management_backend"
     },
     {
-      "concept": "azure/api-management-detail",
+      "concept": "azure.concept.api-management-detail",
       "family": "api-integration",
       "identity": "generic/entity",
       "label": "API Management self-hosted gateway",
@@ -1241,7 +1014,7 @@
       "terraform_type": "azurerm_api_management_gateway"
     },
     {
-      "concept": "azure/api-management-detail",
+      "concept": "azure.concept.api-management-detail",
       "family": "api-integration",
       "identity": "generic/entity",
       "label": "API Management policy",
@@ -1251,7 +1024,7 @@
       "terraform_type": "azurerm_api_management_policy"
     },
     {
-      "concept": "azure/api-management-detail",
+      "concept": "azure.concept.api-management-detail",
       "family": "api-integration",
       "identity": "generic/entity",
       "label": "API Management product",
@@ -1261,7 +1034,7 @@
       "terraform_type": "azurerm_api_management_product"
     },
     {
-      "concept": "core/api-gateway",
+      "concept": "azure.concept.api-gateway",
       "family": "api-integration",
       "identity": "azure/api-management",
       "label": "API Management standalone gateway",
@@ -1271,7 +1044,7 @@
       "terraform_type": "azurerm_api_management_standalone_gateway"
     },
     {
-      "concept": "azure/api-management-detail",
+      "concept": "azure.concept.api-management-detail",
       "family": "api-integration",
       "identity": "generic/entity",
       "label": "API Management workspace",
@@ -1281,7 +1054,7 @@
       "terraform_type": "azurerm_api_management_workspace"
     },
     {
-      "concept": "azure/app-configuration",
+      "concept": "azure.rule.app-configuration",
       "family": "api-integration",
       "identity": "generic/entity",
       "label": "App Configuration store",
@@ -1291,7 +1064,7 @@
       "terraform_type": "azurerm_app_configuration"
     },
     {
-      "concept": "azure/integration-connection",
+      "concept": "azure.concept.integration-connection",
       "family": "api-integration",
       "identity": "generic/network",
       "label": "App Service connection",
@@ -1301,7 +1074,7 @@
       "terraform_type": "azurerm_app_service_connection"
     },
     {
-      "concept": "azure/app-service-environment",
+      "concept": "azure.rule.app-service-environment",
       "family": "serverless",
       "identity": "azure/app-service",
       "label": "App Service Environment v3",
@@ -1311,7 +1084,7 @@
       "terraform_type": "azurerm_app_service_environment_v3"
     },
     {
-      "concept": "azure/app-service-plan",
+      "concept": "azure.rule.app-service-plan",
       "family": "serverless",
       "identity": "azure/app-service",
       "label": "App Service plan",
@@ -1321,7 +1094,7 @@
       "terraform_type": "azurerm_service_plan"
     },
     {
-      "concept": "core/load-balancer",
+      "concept": "azure.concept.load-balancer",
       "family": "load-balancing",
       "identity": "azure/application-gateway",
       "label": "Application Gateway",
@@ -1331,7 +1104,7 @@
       "terraform_type": "azurerm_application_gateway"
     },
     {
-      "concept": "azure/application-insights",
+      "concept": "azure.rule.application-insights",
       "family": "operations",
       "identity": "azure/monitor",
       "label": "Application Insights",
@@ -1341,7 +1114,7 @@
       "terraform_type": "azurerm_application_insights"
     },
     {
-      "concept": "azure/operations-detail",
+      "concept": "azure.concept.operations-detail",
       "family": "operations",
       "identity": "azure/monitor",
       "label": "Application Insights standard availability test",
@@ -1351,7 +1124,7 @@
       "terraform_type": "azurerm_application_insights_standard_web_test"
     },
     {
-      "concept": "core/load-balancer",
+      "concept": "azure.concept.load-balancer",
       "family": "load-balancing",
       "identity": "generic/load-balancer",
       "label": "Application Load Balancer",
@@ -1361,7 +1134,7 @@
       "terraform_type": "azurerm_application_load_balancer"
     },
     {
-      "concept": "azure/load-balancer-component",
+      "concept": "azure.concept.load-balancer-component",
       "family": "load-balancing",
       "identity": "generic/load-balancer",
       "label": "Application Load Balancer frontend",
@@ -1371,7 +1144,7 @@
       "terraform_type": "azurerm_application_load_balancer_frontend"
     },
     {
-      "concept": "azure/network-policy-detail",
+      "concept": "azure.concept.network-policy-detail",
       "family": "network",
       "identity": "generic/network",
       "label": "Application Security Group",
@@ -1381,7 +1154,7 @@
       "terraform_type": "azurerm_application_security_group"
     },
     {
-      "concept": "azure/custom-location",
+      "concept": "azure.concept.custom-location",
       "family": "hybrid",
       "identity": "azure/arc",
       "label": "Azure Arc custom location",
@@ -1391,7 +1164,7 @@
       "terraform_type": "azurerm_extended_location_custom_location"
     },
     {
-      "concept": "azure/arc-enabled-server",
+      "concept": "azure.rule.arc-enabled-server",
       "family": "hybrid",
       "identity": "azure/arc",
       "label": "Azure Arc-enabled server",
@@ -1401,7 +1174,7 @@
       "terraform_type": "azurerm_arc_machine"
     },
     {
-      "concept": "core/kubernetes-cluster",
+      "concept": "rf.concept.kubernetes-cluster",
       "family": "containers",
       "identity": "azure/arc",
       "label": "Azure Arc-enabled Kubernetes cluster",
@@ -1411,7 +1184,7 @@
       "terraform_type": "azurerm_arc_kubernetes_cluster"
     },
     {
-      "concept": "azure/private-link-scope",
+      "concept": "azure.concept.private-link-scope",
       "family": "network",
       "identity": "azure/arc",
       "label": "Azure Arc Private Link Scope",
@@ -1421,7 +1194,7 @@
       "terraform_type": "azurerm_arc_private_link_scope"
     },
     {
-      "concept": "core/kubernetes-cluster",
+      "concept": "rf.concept.kubernetes-cluster",
       "family": "containers",
       "identity": "azure/arc",
       "label": "Azure Arc-enabled provisioned Kubernetes cluster",
@@ -1431,7 +1204,7 @@
       "terraform_type": "azurerm_arc_kubernetes_provisioned_cluster"
     },
     {
-      "concept": "azure/arc-resource-bridge",
+      "concept": "azure.rule.arc-resource-bridge",
       "family": "hybrid",
       "identity": "azure/arc",
       "label": "Azure Arc resource bridge",
@@ -1441,7 +1214,7 @@
       "terraform_type": "azurerm_arc_resource_bridge_appliance"
     },
     {
-      "concept": "azure/attestation-provider",
+      "concept": "azure.rule.attestation-provider",
       "family": "security",
       "identity": "generic/identity",
       "label": "Microsoft Azure Attestation provider",
@@ -1451,7 +1224,7 @@
       "terraform_type": "azurerm_attestation_provider"
     },
     {
-      "concept": "core/kubernetes-cluster",
+      "concept": "rf.concept.kubernetes-cluster",
       "family": "containers",
       "identity": "generic/entity",
       "label": "AKS Automatic cluster",
@@ -1461,7 +1234,7 @@
       "terraform_type": "azurerm_kubernetes_automatic_cluster"
     },
     {
-      "concept": "azure/automation-account",
+      "concept": "azure.rule.automation-account",
       "family": "operations",
       "identity": "generic/scope",
       "label": "Automation account",
@@ -1471,7 +1244,7 @@
       "terraform_type": "azurerm_automation_account"
     },
     {
-      "concept": "core/workflow",
+      "concept": "azure.concept.workflow",
       "family": "operations",
       "identity": "generic/entity",
       "label": "Automation runbook",
@@ -1481,7 +1254,7 @@
       "terraform_type": "azurerm_automation_runbook"
     },
     {
-      "concept": "azure/operations-detail",
+      "concept": "azure.concept.operations-detail",
       "family": "operations",
       "identity": "generic/entity",
       "label": "Automation schedule",
@@ -1491,7 +1264,7 @@
       "terraform_type": "azurerm_automation_schedule"
     },
     {
-      "concept": "azure/compute-placement",
+      "concept": "azure.concept.compute-placement",
       "family": "compute",
       "identity": "generic/entity",
       "label": "Availability set",
@@ -1501,7 +1274,7 @@
       "terraform_type": "azurerm_availability_set"
     },
     {
-      "concept": "azure/bot-service",
+      "concept": "azure.concept.bot-service",
       "family": "ai-ml",
       "identity": "generic/entity",
       "label": "Azure Bot Service bot",
@@ -1511,7 +1284,7 @@
       "terraform_type": "azurerm_bot_service_azure_bot"
     },
     {
-      "concept": "core/managed-cache",
+      "concept": "azure.concept.managed-cache",
       "family": "databases",
       "identity": "azure/managed-redis",
       "label": "Azure Cache for Redis",
@@ -1522,7 +1295,7 @@
     },
     {
       "arm_type": "Microsoft.Mission/virtualEnclaves@2026-03-01-preview",
-      "concept": "azure/azure-enclave",
+      "concept": "azure.rule.azure-enclave",
       "family": "hybrid",
       "identity": "generic/scope",
       "label": "Azure Enclave",
@@ -1532,7 +1305,7 @@
       "terraform_type": "azapi_resource"
     },
     {
-      "concept": "core/managed-file-storage",
+      "concept": "azure.concept.managed-file-storage",
       "family": "storage",
       "identity": "generic/storage",
       "label": "Azure Files share",
@@ -1542,7 +1315,7 @@
       "terraform_type": "azurerm_storage_share"
     },
     {
-      "concept": "azure/azure-firewall",
+      "concept": "azure.rule.azure-firewall",
       "family": "network",
       "identity": "azure/firewall",
       "label": "Azure Firewall",
@@ -1552,7 +1325,7 @@
       "terraform_type": "azurerm_firewall"
     },
     {
-      "concept": "azure/firewall-policy",
+      "concept": "azure.concept.firewall-policy",
       "family": "network",
       "identity": "azure/firewall",
       "label": "Azure Firewall Policy",
@@ -1562,7 +1335,7 @@
       "terraform_type": "azurerm_firewall_policy"
     },
     {
-      "concept": "azure/firewall-policy",
+      "concept": "azure.concept.firewall-policy",
       "family": "network",
       "identity": "azure/firewall",
       "label": "Azure Firewall Policy rule collection group",
@@ -1572,7 +1345,7 @@
       "terraform_type": "azurerm_firewall_policy_rule_collection_group"
     },
     {
-      "concept": "azure/azure-local-cluster",
+      "concept": "azure.rule.azure-local-cluster",
       "family": "hybrid",
       "identity": "generic/entity",
       "label": "Azure Local cluster",
@@ -1582,7 +1355,7 @@
       "terraform_type": "azurerm_stack_hci_cluster"
     },
     {
-      "concept": "core/managed-cache",
+      "concept": "azure.concept.managed-cache",
       "family": "databases",
       "identity": "azure/managed-redis",
       "label": "Azure Managed Redis",
@@ -1592,7 +1365,7 @@
       "terraform_type": "azurerm_managed_redis"
     },
     {
-      "concept": "azure/site-recovery-detail",
+      "concept": "azure.concept.site-recovery-detail",
       "family": "migration",
       "identity": "azure/backup",
       "label": "Azure Backup protected virtual machine",
@@ -1602,7 +1375,7 @@
       "terraform_type": "azurerm_backup_protected_vm"
     },
     {
-      "concept": "azure/bastion-host",
+      "concept": "azure.rule.bastion-host",
       "family": "network",
       "identity": "azure/bastion",
       "label": "Azure Bastion",
@@ -1612,7 +1385,7 @@
       "terraform_type": "azurerm_bastion_host"
     },
     {
-      "concept": "azure/batch-account",
+      "concept": "azure.rule.batch-account",
       "family": "compute",
       "identity": "generic/scope",
       "label": "Batch account",
@@ -1622,7 +1395,7 @@
       "terraform_type": "azurerm_batch_account"
     },
     {
-      "concept": "azure/batch-pool",
+      "concept": "azure.rule.batch-pool",
       "family": "compute",
       "identity": "generic/entity",
       "label": "Batch application",
@@ -1632,17 +1405,7 @@
       "terraform_type": "azurerm_batch_application"
     },
     {
-      "concept": "azure/batch-job",
-      "family": "compute",
-      "identity": "generic/entity",
-      "label": "Batch job",
-      "mode": "generated",
-      "provider": "azurerm",
-      "rule": "batch-job",
-      "terraform_type": "azurerm_batch_job"
-    },
-    {
-      "concept": "azure/batch-pool",
+      "concept": "azure.rule.batch-pool",
       "family": "compute",
       "identity": "generic/entity",
       "label": "Batch pool",
@@ -1652,7 +1415,7 @@
       "terraform_type": "azurerm_batch_pool"
     },
     {
-      "concept": "core/object-storage-container",
+      "concept": "rf.concept.object-storage-container",
       "family": "storage",
       "identity": "generic/storage",
       "label": "Blob Storage container",
@@ -1662,7 +1425,7 @@
       "terraform_type": "azurerm_storage_container"
     },
     {
-      "concept": "azure/bot-service",
+      "concept": "azure.concept.bot-service",
       "family": "ai-ml",
       "identity": "generic/entity",
       "label": "Bot Channels Registration",
@@ -1672,7 +1435,7 @@
       "terraform_type": "azurerm_bot_channels_registration"
     },
     {
-      "concept": "azure/bot-service",
+      "concept": "azure.concept.bot-service",
       "family": "ai-ml",
       "identity": "generic/entity",
       "label": "Azure Bot Service Web App Bot",
@@ -1682,7 +1445,7 @@
       "terraform_type": "azurerm_bot_web_app"
     },
     {
-      "concept": "azure/compute-placement",
+      "concept": "azure.concept.compute-placement",
       "family": "compute",
       "identity": "generic/entity",
       "label": "Capacity reservation",
@@ -1692,7 +1455,7 @@
       "terraform_type": "azurerm_capacity_reservation"
     },
     {
-      "concept": "azure/compute-placement",
+      "concept": "azure.concept.compute-placement",
       "family": "compute",
       "identity": "generic/entity",
       "label": "Capacity reservation group",
@@ -1702,7 +1465,7 @@
       "terraform_type": "azurerm_capacity_reservation_group"
     },
     {
-      "concept": "azure/content-delivery-profile",
+      "concept": "azure.concept.content-delivery-profile",
       "family": "dns-cdn",
       "identity": "generic/network",
       "label": "Content Delivery Network endpoint",
@@ -1712,7 +1475,7 @@
       "terraform_type": "azurerm_cdn_endpoint"
     },
     {
-      "concept": "azure/content-delivery-profile",
+      "concept": "azure.concept.content-delivery-profile",
       "family": "dns-cdn",
       "identity": "generic/network",
       "label": "Content Delivery Network profile",
@@ -1722,7 +1485,7 @@
       "terraform_type": "azurerm_cdn_profile"
     },
     {
-      "concept": "azure/chaos-experiment",
+      "concept": "azure.concept.chaos-experiment",
       "family": "operations",
       "identity": "generic/entity",
       "label": "Azure Chaos Studio experiment",
@@ -1732,7 +1495,7 @@
       "terraform_type": "azurerm_chaos_studio_experiment"
     },
     {
-      "concept": "azure/front-door-profile",
+      "concept": "azure.rule.front-door-profile",
       "family": "load-balancing",
       "identity": "azure/front-door",
       "label": "Azure Front Door (classic)",
@@ -1742,7 +1505,7 @@
       "terraform_type": "azurerm_frontdoor"
     },
     {
-      "concept": "azure/communication-service",
+      "concept": "azure.rule.communication-service",
       "family": "communication",
       "identity": "generic/entity",
       "label": "Azure Communication Services resource",
@@ -1752,7 +1515,7 @@
       "terraform_type": "azurerm_communication_service"
     },
     {
-      "concept": "azure/image-gallery",
+      "concept": "azure.concept.image-gallery",
       "family": "storage",
       "identity": "generic/scope",
       "label": "Compute Gallery",
@@ -1762,7 +1525,7 @@
       "terraform_type": "azurerm_shared_image_gallery"
     },
     {
-      "concept": "azure/compute-image",
+      "concept": "azure.rule.compute-image",
       "family": "compute",
       "identity": "generic/storage",
       "label": "Compute image",
@@ -1772,7 +1535,7 @@
       "terraform_type": "azurerm_image"
     },
     {
-      "concept": "azure/confidential-ledger",
+      "concept": "azure.rule.confidential-ledger",
       "family": "security",
       "identity": "generic/database",
       "label": "Confidential ledger",
@@ -1782,7 +1545,7 @@
       "terraform_type": "azurerm_confidential_ledger"
     },
     {
-      "concept": "azure/container-registry",
+      "concept": "azure.rule.container-registry",
       "family": "containers",
       "identity": "azure/container-registry",
       "label": "Connected Azure Container Registry",
@@ -1792,7 +1555,7 @@
       "terraform_type": "azurerm_container_connected_registry"
     },
     {
-      "concept": "azure/container-app",
+      "concept": "azure.rule.container-app",
       "family": "containers",
       "identity": "azure/container-apps",
       "label": "Container App",
@@ -1802,7 +1565,7 @@
       "terraform_type": "azurerm_container_app"
     },
     {
-      "concept": "azure/container-app-environment",
+      "concept": "azure.rule.container-app-environment",
       "family": "containers",
       "identity": "azure/container-apps",
       "label": "Container Apps Environment",
@@ -1812,7 +1575,7 @@
       "terraform_type": "azurerm_container_app_environment"
     },
     {
-      "concept": "azure/container-app-job",
+      "concept": "azure.rule.container-app-job",
       "family": "containers",
       "identity": "azure/container-apps",
       "label": "Container Apps job",
@@ -1822,7 +1585,7 @@
       "terraform_type": "azurerm_container_app_job"
     },
     {
-      "concept": "azure/container-instance-group",
+      "concept": "azure.rule.container-instance-group",
       "family": "containers",
       "identity": "azure/container-instances",
       "label": "Container Instances container group",
@@ -1832,7 +1595,7 @@
       "terraform_type": "azurerm_container_group"
     },
     {
-      "concept": "azure/container-registry",
+      "concept": "azure.rule.container-registry",
       "family": "containers",
       "identity": "azure/container-registry",
       "label": "Container Registry",
@@ -1842,7 +1605,7 @@
       "terraform_type": "azurerm_container_registry"
     },
     {
-      "concept": "azure/cosmos-account",
+      "concept": "azure.rule.cosmos-account",
       "family": "databases",
       "identity": "azure/cosmos-db",
       "label": "Cosmos DB account",
@@ -1852,7 +1615,7 @@
       "terraform_type": "azurerm_cosmosdb_account"
     },
     {
-      "concept": "core/managed-database",
+      "concept": "rf.concept.managed-database",
       "family": "databases",
       "identity": "azure/cosmos-db",
       "label": "Azure Managed Instance for Apache Cassandra cluster",
@@ -1862,7 +1625,7 @@
       "terraform_type": "azurerm_cosmosdb_cassandra_cluster"
     },
     {
-      "concept": "core/managed-database",
+      "concept": "rf.concept.managed-database",
       "family": "databases",
       "identity": "azure/cosmos-db",
       "label": "Cosmos DB for Apache Cassandra keyspace",
@@ -1872,7 +1635,7 @@
       "terraform_type": "azurerm_cosmosdb_cassandra_keyspace"
     },
     {
-      "concept": "azure/database-component",
+      "concept": "azure.concept.database-component",
       "family": "databases",
       "identity": "azure/cosmos-db",
       "label": "Cosmos DB for Apache Cassandra table",
@@ -1882,7 +1645,7 @@
       "terraform_type": "azurerm_cosmosdb_cassandra_table"
     },
     {
-      "concept": "azure/database-component",
+      "concept": "azure.concept.database-component",
       "family": "databases",
       "identity": "azure/cosmos-db",
       "label": "Cosmos DB dedicated gateway",
@@ -1892,7 +1655,7 @@
       "terraform_type": "azurerm_cosmosdb_sql_dedicated_gateway"
     },
     {
-      "concept": "core/managed-database",
+      "concept": "rf.concept.managed-database",
       "family": "databases",
       "identity": "azure/cosmos-db",
       "label": "Cosmos DB for Apache Gremlin database",
@@ -1902,7 +1665,7 @@
       "terraform_type": "azurerm_cosmosdb_gremlin_database"
     },
     {
-      "concept": "azure/database-component",
+      "concept": "azure.concept.database-component",
       "family": "databases",
       "identity": "azure/cosmos-db",
       "label": "Cosmos DB for Apache Gremlin graph",
@@ -1912,7 +1675,7 @@
       "terraform_type": "azurerm_cosmosdb_gremlin_graph"
     },
     {
-      "concept": "azure/database-component",
+      "concept": "azure.concept.database-component",
       "family": "databases",
       "identity": "azure/cosmos-db",
       "label": "Cosmos DB for MongoDB collection",
@@ -1922,7 +1685,7 @@
       "terraform_type": "azurerm_cosmosdb_mongo_collection"
     },
     {
-      "concept": "core/managed-database",
+      "concept": "rf.concept.managed-database",
       "family": "databases",
       "identity": "azure/cosmos-db",
       "label": "Cosmos DB for MongoDB database",
@@ -1932,7 +1695,7 @@
       "terraform_type": "azurerm_cosmosdb_mongo_database"
     },
     {
-      "concept": "core/managed-database",
+      "concept": "rf.concept.managed-database",
       "family": "databases",
       "identity": "azure/cosmos-db",
       "label": "Cosmos DB for PostgreSQL cluster",
@@ -1942,7 +1705,7 @@
       "terraform_type": "azurerm_cosmosdb_postgresql_cluster"
     },
     {
-      "concept": "azure/database-component",
+      "concept": "azure.concept.database-component",
       "family": "databases",
       "identity": "azure/cosmos-db",
       "label": "Cosmos DB for NoSQL container",
@@ -1952,7 +1715,7 @@
       "terraform_type": "azurerm_cosmosdb_sql_container"
     },
     {
-      "concept": "core/managed-database",
+      "concept": "rf.concept.managed-database",
       "family": "databases",
       "identity": "azure/cosmos-db",
       "label": "Cosmos DB for NoSQL database",
@@ -1962,7 +1725,7 @@
       "terraform_type": "azurerm_cosmosdb_sql_database"
     },
     {
-      "concept": "azure/public-address",
+      "concept": "azure.rule.public-address",
       "family": "network",
       "identity": "generic/network",
       "label": "Custom IP prefix",
@@ -1972,7 +1735,7 @@
       "terraform_type": "azurerm_custom_ip_prefix"
     },
     {
-      "concept": "azure/migration-service",
+      "concept": "azure.concept.migration-service",
       "family": "migration",
       "identity": "generic/entity",
       "label": "Azure Data Box Edge device",
@@ -1982,7 +1745,7 @@
       "terraform_type": "azurerm_databox_edge_device"
     },
     {
-      "concept": "azure/data-explorer-cluster",
+      "concept": "azure.rule.data-explorer-cluster",
       "family": "databases",
       "identity": "generic/database",
       "label": "Data Explorer cluster",
@@ -1992,17 +1755,7 @@
       "terraform_type": "azurerm_kusto_cluster"
     },
     {
-      "concept": "azure/data-explorer-database",
-      "family": "databases",
-      "identity": "generic/database",
-      "label": "Data Explorer database",
-      "mode": "generated",
-      "provider": "azurerm",
-      "rule": "data-explorer-database",
-      "terraform_type": "azurerm_kusto_database"
-    },
-    {
-      "concept": "azure/database-component",
+      "concept": "azure.concept.database-component",
       "family": "databases",
       "identity": "generic/database",
       "label": "Data Explorer Event Grid data connection",
@@ -2012,7 +1765,7 @@
       "terraform_type": "azurerm_kusto_eventgrid_data_connection"
     },
     {
-      "concept": "azure/database-component",
+      "concept": "azure.concept.database-component",
       "family": "databases",
       "identity": "generic/database",
       "label": "Data Explorer Event Hubs data connection",
@@ -2022,7 +1775,7 @@
       "terraform_type": "azurerm_kusto_eventhub_data_connection"
     },
     {
-      "concept": "azure/data-factory",
+      "concept": "azure.rule.data-factory",
       "family": "data-analytics",
       "identity": "azure/data-factory",
       "label": "Azure Data Factory",
@@ -2032,7 +1785,7 @@
       "terraform_type": "azurerm_data_factory"
     },
     {
-      "concept": "azure/data-integration-runtime",
+      "concept": "azure.concept.data-integration-runtime",
       "family": "data-analytics",
       "identity": "azure/data-factory",
       "label": "Azure Data Factory Azure integration runtime",
@@ -2042,7 +1795,7 @@
       "terraform_type": "azurerm_data_factory_integration_runtime_azure"
     },
     {
-      "concept": "azure/data-integration-detail",
+      "concept": "azure.concept.data-integration-detail",
       "family": "data-analytics",
       "identity": "azure/data-factory",
       "label": "Azure Data Factory Azure Blob dataset",
@@ -2052,7 +1805,7 @@
       "terraform_type": "azurerm_data_factory_dataset_azure_blob"
     },
     {
-      "concept": "azure/data-integration-detail",
+      "concept": "azure.concept.data-integration-detail",
       "family": "data-analytics",
       "identity": "azure/data-factory",
       "label": "Azure Data Factory Azure Blob Storage linked service",
@@ -2062,7 +1815,7 @@
       "terraform_type": "azurerm_data_factory_linked_service_azure_blob_storage"
     },
     {
-      "concept": "azure/data-integration-detail",
+      "concept": "azure.concept.data-integration-detail",
       "family": "data-analytics",
       "identity": "azure/data-factory",
       "label": "Azure Data Factory mapping data flow",
@@ -2072,7 +1825,7 @@
       "terraform_type": "azurerm_data_factory_data_flow"
     },
     {
-      "concept": "azure/data-integration-detail",
+      "concept": "azure.concept.data-integration-detail",
       "family": "data-analytics",
       "identity": "azure/data-factory",
       "label": "Azure Data Factory managed private endpoint",
@@ -2082,7 +1835,7 @@
       "terraform_type": "azurerm_data_factory_managed_private_endpoint"
     },
     {
-      "concept": "core/workflow",
+      "concept": "azure.concept.workflow",
       "family": "data-analytics",
       "identity": "azure/data-factory",
       "label": "Azure Data Factory pipeline",
@@ -2092,7 +1845,7 @@
       "terraform_type": "azurerm_data_factory_pipeline"
     },
     {
-      "concept": "azure/data-integration-detail",
+      "concept": "azure.concept.data-integration-detail",
       "family": "data-analytics",
       "identity": "azure/data-factory",
       "label": "Azure Data Factory schedule trigger",
@@ -2102,7 +1855,7 @@
       "terraform_type": "azurerm_data_factory_trigger_schedule"
     },
     {
-      "concept": "azure/data-integration-runtime",
+      "concept": "azure.concept.data-integration-runtime",
       "family": "data-analytics",
       "identity": "azure/data-factory",
       "label": "Azure Data Factory self-hosted integration runtime",
@@ -2112,7 +1865,7 @@
       "terraform_type": "azurerm_data_factory_integration_runtime_self_hosted"
     },
     {
-      "concept": "azure/data-integration-detail",
+      "concept": "azure.concept.data-integration-detail",
       "family": "data-analytics",
       "identity": "azure/data-factory",
       "label": "Azure Data Factory Azure SQL table dataset",
@@ -2122,7 +1875,7 @@
       "terraform_type": "azurerm_data_factory_dataset_azure_sql_table"
     },
     {
-      "concept": "azure/data-integration-detail",
+      "concept": "azure.concept.data-integration-detail",
       "family": "data-analytics",
       "identity": "azure/data-factory",
       "label": "Azure Data Factory Azure SQL Database linked service",
@@ -2132,7 +1885,7 @@
       "terraform_type": "azurerm_data_factory_linked_service_azure_sql_database"
     },
     {
-      "concept": "core/object-storage-container",
+      "concept": "rf.concept.object-storage-container",
       "family": "storage",
       "identity": "generic/storage",
       "label": "Data Lake Storage Gen2 filesystem",
@@ -2142,7 +1895,7 @@
       "terraform_type": "azurerm_storage_data_lake_gen2_filesystem"
     },
     {
-      "concept": "azure/storage-object-detail",
+      "concept": "azure.concept.storage-object-detail",
       "family": "storage",
       "identity": "generic/storage",
       "label": "Data Lake Storage Gen2 path",
@@ -2152,7 +1905,7 @@
       "terraform_type": "azurerm_storage_data_lake_gen2_path"
     },
     {
-      "concept": "core/backup-vault",
+      "concept": "azure.concept.backup-vault",
       "family": "storage",
       "identity": "azure/backup",
       "label": "Azure Backup vault",
@@ -2162,7 +1915,7 @@
       "terraform_type": "azurerm_data_protection_backup_vault"
     },
     {
-      "concept": "core/backup-plan",
+      "concept": "azure.concept.backup-plan",
       "family": "storage",
       "identity": "azure/backup",
       "label": "Blob Storage backup policy",
@@ -2172,7 +1925,7 @@
       "terraform_type": "azurerm_data_protection_backup_policy_blob_storage"
     },
     {
-      "concept": "core/backup-plan",
+      "concept": "azure.concept.backup-plan",
       "family": "storage",
       "identity": "azure/backup",
       "label": "Disk Backup policy",
@@ -2182,17 +1935,7 @@
       "terraform_type": "azurerm_data_protection_backup_policy_disk"
     },
     {
-      "concept": "azure/data-share",
-      "family": "data-analytics",
-      "identity": "generic/entity",
-      "label": "Azure Data Share",
-      "mode": "generated",
-      "provider": "azurerm",
-      "rule": "data-share",
-      "terraform_type": "azurerm_data_share"
-    },
-    {
-      "concept": "azure/data-share-account",
+      "concept": "azure.rule.data-share-account",
       "family": "data-analytics",
       "identity": "generic/scope",
       "label": "Azure Data Share account",
@@ -2202,7 +1945,7 @@
       "terraform_type": "azurerm_data_share_account"
     },
     {
-      "concept": "azure/migration-service",
+      "concept": "azure.concept.migration-service",
       "family": "migration",
       "identity": "generic/entity",
       "label": "Database Migration project",
@@ -2212,7 +1955,7 @@
       "terraform_type": "azurerm_database_migration_project"
     },
     {
-      "concept": "azure/migration-service",
+      "concept": "azure.concept.migration-service",
       "family": "migration",
       "identity": "generic/entity",
       "label": "Database Migration Service",
@@ -2222,7 +1965,7 @@
       "terraform_type": "azurerm_database_migration_service"
     },
     {
-      "concept": "core/network-peering",
+      "concept": "azure.concept.network-peering",
       "family": "network",
       "identity": "azure/databricks",
       "label": "Azure Databricks virtual network peering",
@@ -2232,7 +1975,7 @@
       "terraform_type": "azurerm_databricks_virtual_network_peering"
     },
     {
-      "concept": "azure/databricks-workspace",
+      "concept": "azure.rule.databricks-workspace",
       "family": "data-analytics",
       "identity": "azure/databricks",
       "label": "Azure Databricks workspace",
@@ -2242,7 +1985,7 @@
       "terraform_type": "azurerm_databricks_workspace"
     },
     {
-      "concept": "azure/third-party-monitor",
+      "concept": "azure.concept.third-party-monitor",
       "family": "operations",
       "identity": "generic/entity",
       "label": "Datadog on Azure monitor",
@@ -2252,7 +1995,7 @@
       "terraform_type": "azurerm_datadog_monitor"
     },
     {
-      "concept": "azure/ddos-protection-plan",
+      "concept": "azure.rule.ddos-protection-plan",
       "family": "network",
       "identity": "generic/network",
       "label": "DDoS Protection plan",
@@ -2262,7 +2005,7 @@
       "terraform_type": "azurerm_network_ddos_protection_plan"
     },
     {
-      "concept": "azure/managed-hsm",
+      "concept": "azure.rule.managed-hsm",
       "family": "security",
       "identity": "azure/dedicated-hsm",
       "label": "Dedicated HSM",
@@ -2272,17 +2015,7 @@
       "terraform_type": "azurerm_dedicated_hardware_security_module"
     },
     {
-      "concept": "azure/dedicated-host",
-      "family": "compute",
-      "identity": "generic/entity",
-      "label": "Dedicated Host",
-      "mode": "generated",
-      "provider": "azurerm",
-      "rule": "dedicated-host",
-      "terraform_type": "azurerm_dedicated_host"
-    },
-    {
-      "concept": "azure/dedicated-host-group",
+      "concept": "azure.rule.dedicated-host-group",
       "family": "compute",
       "identity": "generic/scope",
       "label": "Dedicated Host group",
@@ -2292,7 +2025,7 @@
       "terraform_type": "azurerm_dedicated_host_group"
     },
     {
-      "concept": "azure/defender-plan",
+      "concept": "azure.concept.defender-plan",
       "family": "security",
       "identity": "generic/identity",
       "label": "Microsoft Defender for Cloud plan",
@@ -2302,7 +2035,7 @@
       "terraform_type": "azurerm_security_center_subscription_pricing"
     },
     {
-      "concept": "azure/defender-plan",
+      "concept": "azure.concept.defender-plan",
       "family": "security",
       "identity": "generic/identity",
       "label": "Microsoft Defender for Cloud workspace integration",
@@ -2312,7 +2045,7 @@
       "terraform_type": "azurerm_security_center_workspace"
     },
     {
-      "concept": "azure/developer-environment",
+      "concept": "azure.concept.developer-environment",
       "family": "developer-ci-cd",
       "identity": "generic/entity",
       "label": "Microsoft Dev Box definition",
@@ -2322,7 +2055,7 @@
       "terraform_type": "azurerm_dev_center_dev_box_definition"
     },
     {
-      "concept": "azure/dev-center",
+      "concept": "azure.rule.dev-center",
       "family": "developer-ci-cd",
       "identity": "generic/scope",
       "label": "Microsoft Dev Box Dev Center",
@@ -2332,7 +2065,7 @@
       "terraform_type": "azurerm_dev_center"
     },
     {
-      "concept": "azure/dev-center-project",
+      "concept": "azure.rule.dev-center-project",
       "family": "developer-ci-cd",
       "identity": "generic/scope",
       "label": "Dev Center project",
@@ -2342,7 +2075,7 @@
       "terraform_type": "azurerm_dev_center_project"
     },
     {
-      "concept": "azure/developer-environment",
+      "concept": "azure.concept.developer-environment",
       "family": "developer-ci-cd",
       "identity": "generic/entity",
       "label": "DevTest Labs lab",
@@ -2352,7 +2085,7 @@
       "terraform_type": "azurerm_dev_test_lab"
     },
     {
-      "concept": "core/compute-instance",
+      "concept": "azure.concept.compute-instance",
       "family": "compute",
       "identity": "azure/virtual-machine",
       "label": "DevTest Labs Linux virtual machine",
@@ -2362,7 +2095,7 @@
       "terraform_type": "azurerm_dev_test_linux_virtual_machine"
     },
     {
-      "concept": "core/compute-instance",
+      "concept": "azure.concept.compute-instance",
       "family": "compute",
       "identity": "azure/virtual-machine",
       "label": "DevTest Labs Windows virtual machine",
@@ -2372,7 +2105,7 @@
       "terraform_type": "azurerm_dev_test_windows_virtual_machine"
     },
     {
-      "concept": "azure/iot-detail",
+      "concept": "azure.concept.iot-detail",
       "family": "iot",
       "identity": "azure/iot-hub",
       "label": "Azure Digital Twins Event Grid endpoint",
@@ -2382,7 +2115,7 @@
       "terraform_type": "azurerm_digital_twins_endpoint_eventgrid"
     },
     {
-      "concept": "azure/digital-twins-instance",
+      "concept": "azure.rule.digital-twins-instance",
       "family": "iot",
       "identity": "generic/entity",
       "label": "Azure Digital Twins instance",
@@ -2392,7 +2125,7 @@
       "terraform_type": "azurerm_digital_twins_instance"
     },
     {
-      "concept": "azure/disk-snapshot",
+      "concept": "azure.rule.disk-snapshot",
       "family": "compute",
       "identity": "generic/storage",
       "label": "Managed disk snapshot",
@@ -2402,7 +2135,7 @@
       "terraform_type": "azurerm_snapshot"
     },
     {
-      "concept": "azure/dns-record",
+      "concept": "azure.concept.dns-record",
       "family": "dns-cdn",
       "identity": "azure/dns",
       "label": "DNS A record",
@@ -2412,7 +2145,7 @@
       "terraform_type": "azurerm_dns_a_record"
     },
     {
-      "concept": "azure/dns-record",
+      "concept": "azure.concept.dns-record",
       "family": "dns-cdn",
       "identity": "azure/dns",
       "label": "DNS AAAA record",
@@ -2422,7 +2155,7 @@
       "terraform_type": "azurerm_dns_aaaa_record"
     },
     {
-      "concept": "azure/dns-record",
+      "concept": "azure.concept.dns-record",
       "family": "dns-cdn",
       "identity": "azure/dns",
       "label": "DNS CNAME record",
@@ -2432,7 +2165,7 @@
       "terraform_type": "azurerm_dns_cname_record"
     },
     {
-      "concept": "azure/dns-record",
+      "concept": "azure.concept.dns-record",
       "family": "dns-cdn",
       "identity": "azure/dns",
       "label": "DNS MX record",
@@ -2442,7 +2175,7 @@
       "terraform_type": "azurerm_dns_mx_record"
     },
     {
-      "concept": "azure/dns-record",
+      "concept": "azure.concept.dns-record",
       "family": "dns-cdn",
       "identity": "azure/dns",
       "label": "DNS NS record",
@@ -2452,7 +2185,7 @@
       "terraform_type": "azurerm_dns_ns_record"
     },
     {
-      "concept": "azure/dns-record",
+      "concept": "azure.concept.dns-record",
       "family": "dns-cdn",
       "identity": "azure/dns",
       "label": "DNS PTR record",
@@ -2462,7 +2195,7 @@
       "terraform_type": "azurerm_dns_ptr_record"
     },
     {
-      "concept": "azure/dns-record",
+      "concept": "azure.concept.dns-record",
       "family": "dns-cdn",
       "identity": "azure/dns",
       "label": "DNS SRV record",
@@ -2472,7 +2205,7 @@
       "terraform_type": "azurerm_dns_srv_record"
     },
     {
-      "concept": "azure/dns-record",
+      "concept": "azure.concept.dns-record",
       "family": "dns-cdn",
       "identity": "azure/dns",
       "label": "DNS TXT record",
@@ -2482,7 +2215,7 @@
       "terraform_type": "azurerm_dns_txt_record"
     },
     {
-      "concept": "core/dns-zone",
+      "concept": "azure.concept.dns-zone",
       "family": "dns-cdn",
       "identity": "azure/dns",
       "label": "DNS zone",
@@ -2492,7 +2225,7 @@
       "terraform_type": "azurerm_dns_zone"
     },
     {
-      "concept": "azure/third-party-monitor",
+      "concept": "azure.concept.third-party-monitor",
       "family": "operations",
       "identity": "generic/entity",
       "label": "Dynatrace on Azure monitor",
@@ -2502,7 +2235,7 @@
       "terraform_type": "azurerm_dynatrace_monitor"
     },
     {
-      "concept": "azure/third-party-monitor",
+      "concept": "azure.concept.third-party-monitor",
       "family": "operations",
       "identity": "generic/entity",
       "label": "Elastic Cloud on Azure",
@@ -2512,7 +2245,7 @@
       "terraform_type": "azurerm_elastic_cloud_elasticsearch"
     },
     {
-      "concept": "azure/elastic-san",
+      "concept": "azure.rule.elastic-san",
       "family": "storage",
       "identity": "generic/scope",
       "label": "Azure Elastic SAN",
@@ -2522,7 +2255,7 @@
       "terraform_type": "azurerm_elastic_san"
     },
     {
-      "concept": "core/block-storage-volume",
+      "concept": "azure.concept.block-storage-volume",
       "family": "compute",
       "identity": "azure/disk",
       "label": "Azure Elastic SAN volume",
@@ -2532,7 +2265,7 @@
       "terraform_type": "azurerm_elastic_san_volume"
     },
     {
-      "concept": "azure/elastic-san",
+      "concept": "azure.rule.elastic-san",
       "family": "storage",
       "identity": "generic/scope",
       "label": "Azure Elastic SAN volume group",
@@ -2542,7 +2275,7 @@
       "terraform_type": "azurerm_elastic_san_volume_group"
     },
     {
-      "concept": "azure/email-communication-service",
+      "concept": "azure.rule.email-communication-service",
       "family": "communication",
       "identity": "generic/entity",
       "label": "Azure Communication Services Email resource",
@@ -2552,17 +2285,7 @@
       "terraform_type": "azurerm_email_communication_service"
     },
     {
-      "concept": "azure/entra-access-package",
-      "family": "identity-iam",
-      "identity": "generic/identity",
-      "label": "Microsoft Entra access package",
-      "mode": "generated",
-      "provider": "azuread",
-      "rule": "entra-access-package",
-      "terraform_type": "azuread_access_package"
-    },
-    {
-      "concept": "azure/identity-governance-detail",
+      "concept": "azure.concept.identity-governance-detail",
       "family": "identity-iam",
       "identity": "generic/identity",
       "label": "Microsoft Entra access package assignment policy",
@@ -2572,27 +2295,7 @@
       "terraform_type": "azuread_access_package_assignment_policy"
     },
     {
-      "concept": "azure/entra-access-package-catalog",
-      "family": "identity-iam",
-      "identity": "generic/scope",
-      "label": "Microsoft Entra access package catalog",
-      "mode": "generated",
-      "provider": "azuread",
-      "rule": "entra-access-package-catalog",
-      "terraform_type": "azuread_access_package_catalog"
-    },
-    {
-      "concept": "azure/entra-administrative-unit",
-      "family": "identity-iam",
-      "identity": "generic/scope",
-      "label": "Microsoft Entra administrative unit",
-      "mode": "generated",
-      "provider": "azuread",
-      "rule": "entra-administrative-unit",
-      "terraform_type": "azuread_administrative_unit"
-    },
-    {
-      "concept": "azure/identity-governance-detail",
+      "concept": "azure.concept.identity-governance-detail",
       "family": "identity-iam",
       "identity": "generic/identity",
       "label": "Microsoft Entra app role assignment",
@@ -2602,7 +2305,7 @@
       "terraform_type": "azuread_app_role_assignment"
     },
     {
-      "concept": "azure/entra-application",
+      "concept": "azure.rule.entra-application",
       "family": "identity-iam",
       "identity": "generic/identity",
       "label": "Microsoft Entra application",
@@ -2612,7 +2315,7 @@
       "terraform_type": "azuread_application"
     },
     {
-      "concept": "azure/identity-governance-detail",
+      "concept": "azure.concept.identity-governance-detail",
       "family": "identity-iam",
       "identity": "generic/identity",
       "label": "Microsoft Entra application federated identity credential",
@@ -2622,7 +2325,7 @@
       "terraform_type": "azuread_application_federated_identity_credential"
     },
     {
-      "concept": "azure/entra-application",
+      "concept": "azure.rule.entra-application",
       "family": "identity-iam",
       "identity": "generic/identity",
       "label": "Microsoft Entra application registration",
@@ -2632,7 +2335,7 @@
       "terraform_type": "azuread_application_registration"
     },
     {
-      "concept": "azure/identity-governance-detail",
+      "concept": "azure.concept.identity-governance-detail",
       "family": "identity-iam",
       "identity": "generic/identity",
       "label": "Microsoft Entra authentication strength policy",
@@ -2642,17 +2345,7 @@
       "terraform_type": "azuread_authentication_strength_policy"
     },
     {
-      "concept": "azure/conditional-access-policy",
-      "family": "identity-iam",
-      "identity": "generic/identity",
-      "label": "Microsoft Entra Conditional Access policy",
-      "mode": "generated",
-      "provider": "azuread",
-      "rule": "entra-conditional-access-policy",
-      "terraform_type": "azuread_conditional_access_policy"
-    },
-    {
-      "concept": "azure/entra-domain-service",
+      "concept": "azure.concept.entra-domain-service",
       "family": "identity-iam",
       "identity": "generic/identity",
       "label": "Microsoft Entra Domain Services managed domain",
@@ -2662,7 +2355,7 @@
       "terraform_type": "azurerm_active_directory_domain_service"
     },
     {
-      "concept": "azure/identity-governance-detail",
+      "concept": "azure.concept.identity-governance-detail",
       "family": "identity-iam",
       "identity": "generic/identity",
       "label": "Microsoft Entra Domain Services replica set",
@@ -2672,7 +2365,7 @@
       "terraform_type": "azurerm_active_directory_domain_service_replica_set"
     },
     {
-      "concept": "azure/identity-governance-detail",
+      "concept": "azure.concept.identity-governance-detail",
       "family": "identity-iam",
       "identity": "generic/identity",
       "label": "Microsoft Entra Domain Services trust",
@@ -2682,7 +2375,7 @@
       "terraform_type": "azurerm_active_directory_domain_service_trust"
     },
     {
-      "concept": "azure/entra-directory",
+      "concept": "azure.concept.entra-directory",
       "family": "identity-iam",
       "identity": "generic/scope",
       "label": "Microsoft Entra External ID directory",
@@ -2692,7 +2385,7 @@
       "terraform_type": "azurerm_aadb2c_directory"
     },
     {
-      "concept": "core/identity-group",
+      "concept": "azure.concept.identity-group",
       "family": "identity-iam",
       "identity": "generic/identity",
       "label": "Microsoft Entra group",
@@ -2702,7 +2395,7 @@
       "terraform_type": "azuread_group"
     },
     {
-      "concept": "core/identity-group",
+      "concept": "azure.concept.identity-group",
       "family": "identity-iam",
       "identity": "generic/identity",
       "label": "Microsoft Entra group",
@@ -2712,7 +2405,7 @@
       "terraform_type": "azuread_group_without_members"
     },
     {
-      "concept": "azure/identity-governance-detail",
+      "concept": "azure.concept.identity-governance-detail",
       "family": "identity-iam",
       "identity": "generic/identity",
       "label": "Microsoft Entra named location",
@@ -2722,7 +2415,7 @@
       "terraform_type": "azuread_named_location"
     },
     {
-      "concept": "core/service-identity",
+      "concept": "rf.concept.service-identity",
       "family": "identity-iam",
       "identity": "generic/identity",
       "label": "Microsoft Entra service principal",
@@ -2732,17 +2425,7 @@
       "terraform_type": "azuread_service_principal"
     },
     {
-      "concept": "azure/identity-synchronization-job",
-      "family": "identity-iam",
-      "identity": "generic/identity",
-      "label": "Microsoft Entra provisioning synchronization job",
-      "mode": "generated",
-      "provider": "azuread",
-      "rule": "entra-synchronization-job",
-      "terraform_type": "azuread_synchronization_job"
-    },
-    {
-      "concept": "azure/event-grid-domain",
+      "concept": "azure.rule.event-grid-domain",
       "family": "messaging-eventing",
       "identity": "azure/event-grid",
       "label": "Event Grid domain",
@@ -2752,7 +2435,7 @@
       "terraform_type": "azurerm_eventgrid_domain"
     },
     {
-      "concept": "core/message-topic",
+      "concept": "azure.concept.message-topic",
       "family": "messaging-eventing",
       "identity": "azure/event-grid",
       "label": "Event Grid domain topic",
@@ -2762,7 +2445,7 @@
       "terraform_type": "azurerm_eventgrid_domain_topic"
     },
     {
-      "concept": "core/message-subscription",
+      "concept": "azure.concept.message-subscription",
       "family": "messaging-eventing",
       "identity": "azure/event-grid",
       "label": "Event Grid subscription",
@@ -2772,7 +2455,7 @@
       "terraform_type": "azurerm_eventgrid_event_subscription"
     },
     {
-      "concept": "azure/event-grid-domain",
+      "concept": "azure.rule.event-grid-domain",
       "family": "messaging-eventing",
       "identity": "azure/event-grid",
       "label": "Event Grid namespace",
@@ -2782,7 +2465,7 @@
       "terraform_type": "azurerm_eventgrid_namespace"
     },
     {
-      "concept": "core/message-topic",
+      "concept": "azure.concept.message-topic",
       "family": "messaging-eventing",
       "identity": "azure/event-grid",
       "label": "Event Grid namespace topic",
@@ -2792,7 +2475,7 @@
       "terraform_type": "azurerm_eventgrid_namespace_topic"
     },
     {
-      "concept": "azure/event-grid-domain",
+      "concept": "azure.rule.event-grid-domain",
       "family": "messaging-eventing",
       "identity": "azure/event-grid",
       "label": "Event Grid partner namespace",
@@ -2802,7 +2485,7 @@
       "terraform_type": "azurerm_eventgrid_partner_namespace"
     },
     {
-      "concept": "core/message-topic",
+      "concept": "azure.concept.message-topic",
       "family": "messaging-eventing",
       "identity": "azure/event-grid",
       "label": "Event Grid system topic",
@@ -2812,7 +2495,7 @@
       "terraform_type": "azurerm_eventgrid_system_topic"
     },
     {
-      "concept": "core/message-subscription",
+      "concept": "azure.concept.message-subscription",
       "family": "messaging-eventing",
       "identity": "azure/event-grid",
       "label": "System topic subscription",
@@ -2822,7 +2505,7 @@
       "terraform_type": "azurerm_eventgrid_system_topic_event_subscription"
     },
     {
-      "concept": "core/message-topic",
+      "concept": "azure.concept.message-topic",
       "family": "messaging-eventing",
       "identity": "azure/event-grid",
       "label": "Event Grid custom topic",
@@ -2832,7 +2515,7 @@
       "terraform_type": "azurerm_eventgrid_topic"
     },
     {
-      "concept": "azure/event-stream",
+      "concept": "azure.concept.event-stream",
       "family": "messaging-eventing",
       "identity": "azure/event-hubs",
       "label": "Event Hubs event hub",
@@ -2842,7 +2525,7 @@
       "terraform_type": "azurerm_eventhub"
     },
     {
-      "concept": "azure/event-stream",
+      "concept": "azure.concept.event-stream",
       "family": "messaging-eventing",
       "identity": "azure/event-hubs",
       "label": "Event Hubs Dedicated cluster",
@@ -2852,7 +2535,7 @@
       "terraform_type": "azurerm_eventhub_cluster"
     },
     {
-      "concept": "azure/messaging-detail",
+      "concept": "azure.concept.messaging-detail",
       "family": "messaging-eventing",
       "identity": "azure/event-hubs",
       "label": "Event Hubs consumer group",
@@ -2862,7 +2545,7 @@
       "terraform_type": "azurerm_eventhub_consumer_group"
     },
     {
-      "concept": "azure/messaging-namespace",
+      "concept": "azure.concept.messaging-namespace",
       "family": "messaging-eventing",
       "identity": "azure/event-hubs",
       "label": "Event Hubs namespace",
@@ -2872,7 +2555,7 @@
       "terraform_type": "azurerm_eventhub_namespace"
     },
     {
-      "concept": "azure/messaging-detail",
+      "concept": "azure.concept.messaging-detail",
       "family": "messaging-eventing",
       "identity": "azure/event-hubs",
       "label": "Event Hubs schema group",
@@ -2882,7 +2565,7 @@
       "terraform_type": "azurerm_eventhub_namespace_schema_group"
     },
     {
-      "concept": "core/dedicated-interconnect",
+      "concept": "azure.concept.dedicated-interconnect",
       "family": "network",
       "identity": "azure/expressroute",
       "label": "ExpressRoute circuit",
@@ -2892,7 +2575,7 @@
       "terraform_type": "azurerm_express_route_circuit"
     },
     {
-      "concept": "azure/expressroute-gateway",
+      "concept": "azure.rule.expressroute-gateway",
       "family": "network",
       "identity": "azure/expressroute",
       "label": "ExpressRoute gateway",
@@ -2902,7 +2585,7 @@
       "terraform_type": "azurerm_express_route_gateway"
     },
     {
-      "concept": "core/dedicated-interconnect",
+      "concept": "azure.concept.dedicated-interconnect",
       "family": "network",
       "identity": "azure/expressroute",
       "label": "ExpressRoute Direct port",
@@ -2912,7 +2595,7 @@
       "terraform_type": "azurerm_express_route_port"
     },
     {
-      "concept": "azure/analytics-cluster",
+      "concept": "azure.concept.analytics-cluster",
       "family": "data-analytics",
       "identity": "generic/entity",
       "label": "Microsoft Fabric capacity",
@@ -2922,17 +2605,7 @@
       "terraform_type": "azurerm_fabric_capacity"
     },
     {
-      "concept": "core/service-identity-binding",
-      "family": "identity-iam",
-      "identity": "generic/identity",
-      "label": "Federated identity credential",
-      "mode": "generated",
-      "provider": "azurerm",
-      "rule": "federated-identity-credential",
-      "terraform_type": "azurerm_federated_identity_credential"
-    },
-    {
-      "concept": "core/backup-plan",
+      "concept": "azure.concept.backup-plan",
       "family": "migration",
       "identity": "azure/backup",
       "label": "Azure Files backup policy",
@@ -2942,7 +2615,7 @@
       "terraform_type": "azurerm_backup_policy_file_share"
     },
     {
-      "concept": "core/serverless-function",
+      "concept": "azure.concept.serverless-function",
       "family": "serverless",
       "identity": "azure/functions",
       "label": "Functions Flex Consumption app",
@@ -2952,7 +2625,7 @@
       "terraform_type": "azurerm_function_app_flex_consumption"
     },
     {
-      "concept": "azure/realtime-communication-service",
+      "concept": "azure.concept.realtime-communication-service",
       "family": "communication",
       "identity": "generic/entity",
       "label": "Fluid Relay service",
@@ -2962,7 +2635,7 @@
       "terraform_type": "azurerm_fluid_relay_server"
     },
     {
-      "concept": "azure/load-balancer-component",
+      "concept": "azure.concept.load-balancer-component",
       "family": "load-balancing",
       "identity": "generic/load-balancer",
       "label": "Azure Front Door endpoint",
@@ -2972,7 +2645,7 @@
       "terraform_type": "azurerm_cdn_frontdoor_endpoint"
     },
     {
-      "concept": "azure/load-balancer-component",
+      "concept": "azure.concept.load-balancer-component",
       "family": "load-balancing",
       "identity": "generic/load-balancer",
       "label": "Azure Front Door origin",
@@ -2982,7 +2655,7 @@
       "terraform_type": "azurerm_cdn_frontdoor_origin"
     },
     {
-      "concept": "azure/load-balancer-component",
+      "concept": "azure.concept.load-balancer-component",
       "family": "load-balancing",
       "identity": "generic/load-balancer",
       "label": "Azure Front Door origin group",
@@ -2992,7 +2665,7 @@
       "terraform_type": "azurerm_cdn_frontdoor_origin_group"
     },
     {
-      "concept": "azure/front-door-profile",
+      "concept": "azure.rule.front-door-profile",
       "family": "load-balancing",
       "identity": "azure/front-door",
       "label": "Azure Front Door profile",
@@ -3002,7 +2675,7 @@
       "terraform_type": "azurerm_cdn_frontdoor_profile"
     },
     {
-      "concept": "azure/load-balancer-component",
+      "concept": "azure.concept.load-balancer-component",
       "family": "load-balancing",
       "identity": "generic/load-balancer",
       "label": "Azure Front Door route",
@@ -3012,7 +2685,7 @@
       "terraform_type": "azurerm_cdn_frontdoor_route"
     },
     {
-      "concept": "core/serverless-function",
+      "concept": "azure.concept.serverless-function",
       "family": "serverless",
       "identity": "azure/functions",
       "label": "Functions function",
@@ -3022,7 +2695,7 @@
       "terraform_type": "azurerm_function_app_function"
     },
     {
-      "concept": "azure/graph-data-connect-account",
+      "concept": "azure.rule.graph-data-connect-account",
       "family": "data-analytics",
       "identity": "generic/entity",
       "label": "Microsoft Graph Data Connect account",
@@ -3032,7 +2705,7 @@
       "terraform_type": "azurerm_graph_services_account"
     },
     {
-      "concept": "azure/analytics-cluster",
+      "concept": "azure.concept.analytics-cluster",
       "family": "data-analytics",
       "identity": "generic/entity",
       "label": "HDInsight Hadoop cluster",
@@ -3042,7 +2715,7 @@
       "terraform_type": "azurerm_hdinsight_hadoop_cluster"
     },
     {
-      "concept": "azure/analytics-cluster",
+      "concept": "azure.concept.analytics-cluster",
       "family": "data-analytics",
       "identity": "generic/entity",
       "label": "HDInsight Apache HBase cluster",
@@ -3052,7 +2725,7 @@
       "terraform_type": "azurerm_hdinsight_hbase_cluster"
     },
     {
-      "concept": "azure/analytics-cluster",
+      "concept": "azure.concept.analytics-cluster",
       "family": "data-analytics",
       "identity": "generic/entity",
       "label": "HDInsight Interactive Query cluster",
@@ -3062,7 +2735,7 @@
       "terraform_type": "azurerm_hdinsight_interactive_query_cluster"
     },
     {
-      "concept": "azure/analytics-cluster",
+      "concept": "azure.concept.analytics-cluster",
       "family": "data-analytics",
       "identity": "generic/entity",
       "label": "HDInsight Apache Kafka cluster",
@@ -3072,7 +2745,7 @@
       "terraform_type": "azurerm_hdinsight_kafka_cluster"
     },
     {
-      "concept": "azure/analytics-cluster",
+      "concept": "azure.concept.analytics-cluster",
       "family": "data-analytics",
       "identity": "generic/entity",
       "label": "HDInsight Apache Spark cluster",
@@ -3082,7 +2755,7 @@
       "terraform_type": "azurerm_hdinsight_spark_cluster"
     },
     {
-      "concept": "azure/bot-service",
+      "concept": "azure.concept.bot-service",
       "family": "ai-ml",
       "identity": "generic/entity",
       "label": "Health Bot",
@@ -3092,7 +2765,7 @@
       "terraform_type": "azurerm_healthbot"
     },
     {
-      "concept": "azure/health-data-service",
+      "concept": "azure.concept.health-data-service",
       "family": "data-analytics",
       "identity": "generic/database",
       "label": "Azure Health Data Services DICOM service",
@@ -3102,7 +2775,7 @@
       "terraform_type": "azurerm_healthcare_dicom_service"
     },
     {
-      "concept": "azure/health-data-service",
+      "concept": "azure.concept.health-data-service",
       "family": "data-analytics",
       "identity": "generic/database",
       "label": "Azure Health Data Services FHIR service",
@@ -3112,7 +2785,7 @@
       "terraform_type": "azurerm_healthcare_fhir_service"
     },
     {
-      "concept": "azure/health-data-service",
+      "concept": "azure.concept.health-data-service",
       "family": "data-analytics",
       "identity": "generic/database",
       "label": "Azure Health Data Services MedTech service",
@@ -3122,7 +2795,7 @@
       "terraform_type": "azurerm_healthcare_medtech_service"
     },
     {
-      "concept": "azure/health-data-workspace",
+      "concept": "azure.concept.health-data-workspace",
       "family": "data-analytics",
       "identity": "generic/scope",
       "label": "Azure Health Data Services workspace",
@@ -3132,7 +2805,7 @@
       "terraform_type": "azurerm_healthcare_workspace"
     },
     {
-      "concept": "azure/health-data-service",
+      "concept": "azure.concept.health-data-service",
       "family": "data-analytics",
       "identity": "generic/database",
       "label": "Azure API for FHIR",
@@ -3143,7 +2816,7 @@
     },
     {
       "arm_type": "Microsoft.HorizonDb/clusters@2026-01-20-preview",
-      "concept": "core/managed-database",
+      "concept": "rf.concept.managed-database",
       "family": "databases",
       "identity": "generic/database",
       "label": "HorizonDB cluster",
@@ -3153,7 +2826,7 @@
       "terraform_type": "azapi_resource"
     },
     {
-      "concept": "azure/iot-central-application",
+      "concept": "azure.rule.iot-central-application",
       "family": "iot",
       "identity": "generic/entity",
       "label": "IoT Central application",
@@ -3163,7 +2836,7 @@
       "terraform_type": "azurerm_iotcentral_application"
     },
     {
-      "concept": "azure/iot-hub",
+      "concept": "azure.rule.iot-hub",
       "family": "iot",
       "identity": "azure/iot-hub",
       "label": "IoT Hub",
@@ -3173,7 +2846,7 @@
       "terraform_type": "azurerm_iothub"
     },
     {
-      "concept": "azure/iot-provisioning-service",
+      "concept": "azure.concept.iot-provisioning-service",
       "family": "iot",
       "identity": "azure/iot-hub",
       "label": "IoT Hub Device Provisioning Service",
@@ -3183,7 +2856,7 @@
       "terraform_type": "azurerm_iothub_dps"
     },
     {
-      "concept": "azure/iot-update-service",
+      "concept": "azure.concept.iot-update-service",
       "family": "iot",
       "identity": "azure/iot-hub",
       "label": "Device Update for IoT Hub account",
@@ -3193,7 +2866,7 @@
       "terraform_type": "azurerm_iothub_device_update_account"
     },
     {
-      "concept": "azure/iot-detail",
+      "concept": "azure.concept.iot-detail",
       "family": "iot",
       "identity": "azure/iot-hub",
       "label": "Device Update for IoT Hub instance",
@@ -3203,7 +2876,7 @@
       "terraform_type": "azurerm_iothub_device_update_instance"
     },
     {
-      "concept": "azure/iot-detail",
+      "concept": "azure.concept.iot-detail",
       "family": "iot",
       "identity": "azure/iot-hub",
       "label": "IoT Hub Event Hubs endpoint",
@@ -3213,7 +2886,7 @@
       "terraform_type": "azurerm_iothub_endpoint_eventhub"
     },
     {
-      "concept": "azure/iot-detail",
+      "concept": "azure.concept.iot-detail",
       "family": "iot",
       "identity": "azure/iot-hub",
       "label": "IoT Hub Service Bus queue endpoint",
@@ -3223,7 +2896,7 @@
       "terraform_type": "azurerm_iothub_endpoint_servicebus_queue"
     },
     {
-      "concept": "azure/iot-detail",
+      "concept": "azure.concept.iot-detail",
       "family": "iot",
       "identity": "azure/iot-hub",
       "label": "IoT Hub Storage container endpoint",
@@ -3233,7 +2906,7 @@
       "terraform_type": "azurerm_iothub_endpoint_storage_container"
     },
     {
-      "concept": "azure/network-policy-detail",
+      "concept": "azure.concept.network-policy-detail",
       "family": "network",
       "identity": "generic/network",
       "label": "IP Group",
@@ -3243,7 +2916,7 @@
       "terraform_type": "azurerm_ip_group"
     },
     {
-      "concept": "azure/key-vault",
+      "concept": "azure.rule.key-vault",
       "family": "security",
       "identity": "azure/key-vault",
       "label": "Key Vault",
@@ -3253,7 +2926,7 @@
       "terraform_type": "azurerm_key_vault"
     },
     {
-      "concept": "azure/security-detail",
+      "concept": "azure.concept.security-detail",
       "family": "security",
       "identity": "azure/key-vault",
       "label": "Key Vault access policy",
@@ -3263,7 +2936,7 @@
       "terraform_type": "azurerm_key_vault_access_policy"
     },
     {
-      "concept": "azure/security-detail",
+      "concept": "azure.concept.security-detail",
       "family": "security",
       "identity": "azure/key-vault",
       "label": "Key Vault certificate",
@@ -3273,7 +2946,7 @@
       "terraform_type": "azurerm_key_vault_certificate"
     },
     {
-      "concept": "core/encryption-key",
+      "concept": "azure.concept.encryption-key",
       "family": "security",
       "identity": "azure/key-vault",
       "label": "Key Vault key",
@@ -3283,7 +2956,7 @@
       "terraform_type": "azurerm_key_vault_key"
     },
     {
-      "concept": "core/managed-secret",
+      "concept": "azure.concept.managed-secret",
       "family": "security",
       "identity": "azure/key-vault",
       "label": "Key Vault secret",
@@ -3293,7 +2966,7 @@
       "terraform_type": "azurerm_key_vault_secret"
     },
     {
-      "concept": "azure/kubernetes-fleet",
+      "concept": "azure.rule.kubernetes-fleet",
       "family": "containers",
       "identity": "generic/scope",
       "label": "Azure Kubernetes Fleet Manager fleet",
@@ -3303,7 +2976,7 @@
       "terraform_type": "azurerm_kubernetes_fleet_manager"
     },
     {
-      "concept": "azure/governance-detail",
+      "concept": "azure.concept.governance-detail",
       "family": "governance-management",
       "identity": "generic/entity",
       "label": "Azure Lighthouse registration definition",
@@ -3313,7 +2986,7 @@
       "terraform_type": "azurerm_lighthouse_definition"
     },
     {
-      "concept": "core/serverless-function",
+      "concept": "azure.concept.serverless-function",
       "family": "serverless",
       "identity": "azure/functions",
       "label": "Function App",
@@ -3323,7 +2996,7 @@
       "terraform_type": "azurerm_linux_function_app"
     },
     {
-      "concept": "core/compute-instance",
+      "concept": "azure.concept.compute-instance",
       "family": "compute",
       "identity": "azure/virtual-machine",
       "label": "Linux virtual machine",
@@ -3333,7 +3006,7 @@
       "terraform_type": "azurerm_linux_virtual_machine"
     },
     {
-      "concept": "azure/virtual-machine-scale-set",
+      "concept": "azure.rule.virtual-machine-scale-set",
       "family": "compute",
       "identity": "azure/vm-scale-set",
       "label": "Linux Virtual Machine Scale Set",
@@ -3343,7 +3016,7 @@
       "terraform_type": "azurerm_linux_virtual_machine_scale_set"
     },
     {
-      "concept": "azure/app-service",
+      "concept": "azure.concept.app-service",
       "family": "serverless",
       "identity": "azure/app-service",
       "label": "App Service Linux web app",
@@ -3353,7 +3026,7 @@
       "terraform_type": "azurerm_linux_web_app"
     },
     {
-      "concept": "core/load-balancer",
+      "concept": "azure.concept.load-balancer",
       "family": "load-balancing",
       "identity": "azure/load-balancer",
       "label": "Load Balancer",
@@ -3363,7 +3036,7 @@
       "terraform_type": "azurerm_lb"
     },
     {
-      "concept": "azure/load-balancer-component",
+      "concept": "azure.concept.load-balancer-component",
       "family": "load-balancing",
       "identity": "generic/load-balancer",
       "label": "Load Balancer backend pool",
@@ -3373,7 +3046,7 @@
       "terraform_type": "azurerm_lb_backend_address_pool"
     },
     {
-      "concept": "azure/load-balancer-component",
+      "concept": "azure.concept.load-balancer-component",
       "family": "load-balancing",
       "identity": "generic/load-balancer",
       "label": "Load Balancer inbound NAT rule",
@@ -3383,7 +3056,7 @@
       "terraform_type": "azurerm_lb_nat_rule"
     },
     {
-      "concept": "azure/load-balancer-component",
+      "concept": "azure.concept.load-balancer-component",
       "family": "load-balancing",
       "identity": "generic/load-balancer",
       "label": "Load Balancer outbound rule",
@@ -3393,7 +3066,7 @@
       "terraform_type": "azurerm_lb_outbound_rule"
     },
     {
-      "concept": "azure/load-balancer-component",
+      "concept": "azure.concept.load-balancer-component",
       "family": "load-balancing",
       "identity": "generic/load-balancer",
       "label": "Load Balancer health probe",
@@ -3403,7 +3076,7 @@
       "terraform_type": "azurerm_lb_probe"
     },
     {
-      "concept": "azure/load-balancer-component",
+      "concept": "azure.concept.load-balancer-component",
       "family": "load-balancing",
       "identity": "generic/load-balancer",
       "label": "Load Balancer rule",
@@ -3413,7 +3086,7 @@
       "terraform_type": "azurerm_lb_rule"
     },
     {
-      "concept": "azure/load-test",
+      "concept": "azure.rule.load-test",
       "family": "operations",
       "identity": "generic/entity",
       "label": "Azure Load Testing resource",
@@ -3423,7 +3096,7 @@
       "terraform_type": "azurerm_load_test"
     },
     {
-      "concept": "azure/local-network-gateway",
+      "concept": "azure.rule.local-network-gateway",
       "family": "network",
       "identity": "generic/network",
       "label": "Local network gateway",
@@ -3433,7 +3106,7 @@
       "terraform_type": "azurerm_local_network_gateway"
     },
     {
-      "concept": "azure/log-analytics-workspace",
+      "concept": "azure.rule.log-analytics-workspace",
       "family": "operations",
       "identity": "azure/monitor",
       "label": "Log Analytics dedicated cluster",
@@ -3443,7 +3116,7 @@
       "terraform_type": "azurerm_log_analytics_cluster"
     },
     {
-      "concept": "azure/operations-detail",
+      "concept": "azure.concept.operations-detail",
       "family": "operations",
       "identity": "azure/monitor",
       "label": "Log Analytics data export rule",
@@ -3453,7 +3126,7 @@
       "terraform_type": "azurerm_log_analytics_data_export_rule"
     },
     {
-      "concept": "azure/operations-detail",
+      "concept": "azure.concept.operations-detail",
       "family": "operations",
       "identity": "azure/monitor",
       "label": "Log Analytics saved search",
@@ -3463,7 +3136,7 @@
       "terraform_type": "azurerm_log_analytics_saved_search"
     },
     {
-      "concept": "azure/operations-detail",
+      "concept": "azure.concept.operations-detail",
       "family": "operations",
       "identity": "azure/monitor",
       "label": "Log Analytics solution",
@@ -3473,7 +3146,7 @@
       "terraform_type": "azurerm_log_analytics_solution"
     },
     {
-      "concept": "azure/log-analytics-workspace",
+      "concept": "azure.rule.log-analytics-workspace",
       "family": "operations",
       "identity": "azure/monitor",
       "label": "Log Analytics workspace",
@@ -3483,7 +3156,7 @@
       "terraform_type": "azurerm_log_analytics_workspace"
     },
     {
-      "concept": "azure/operations-detail",
+      "concept": "azure.concept.operations-detail",
       "family": "operations",
       "identity": "azure/monitor",
       "label": "Log Analytics workspace table",
@@ -3493,7 +3166,7 @@
       "terraform_type": "azurerm_log_analytics_workspace_table"
     },
     {
-      "concept": "azure/api-management-detail",
+      "concept": "azure.concept.api-management-detail",
       "family": "api-integration",
       "identity": "generic/entity",
       "label": "Logic Apps HTTP action",
@@ -3503,7 +3176,7 @@
       "terraform_type": "azurerm_logic_app_action_http"
     },
     {
-      "concept": "azure/integration-account",
+      "concept": "azure.concept.integration-account",
       "family": "api-integration",
       "identity": "generic/scope",
       "label": "Logic Apps integration account",
@@ -3513,7 +3186,7 @@
       "terraform_type": "azurerm_logic_app_integration_account"
     },
     {
-      "concept": "azure/api-management-detail",
+      "concept": "azure.concept.api-management-detail",
       "family": "api-integration",
       "identity": "generic/entity",
       "label": "Logic Apps recurrence trigger",
@@ -3523,7 +3196,7 @@
       "terraform_type": "azurerm_logic_app_trigger_recurrence"
     },
     {
-      "concept": "core/workflow",
+      "concept": "azure.concept.workflow",
       "family": "api-integration",
       "identity": "generic/entity",
       "label": "Logic Apps Standard workflow app",
@@ -3533,7 +3206,7 @@
       "terraform_type": "azurerm_logic_app_standard"
     },
     {
-      "concept": "core/workflow",
+      "concept": "azure.concept.workflow",
       "family": "api-integration",
       "identity": "generic/entity",
       "label": "Logic Apps Consumption workflow",
@@ -3543,7 +3216,7 @@
       "terraform_type": "azurerm_logic_app_workflow"
     },
     {
-      "concept": "azure/machine-learning-compute",
+      "concept": "azure.concept.machine-learning-compute",
       "family": "ai-ml",
       "identity": "generic/entity",
       "label": "Azure Machine Learning compute cluster",
@@ -3553,7 +3226,7 @@
       "terraform_type": "azurerm_machine_learning_compute_cluster"
     },
     {
-      "concept": "azure/machine-learning-compute",
+      "concept": "azure.concept.machine-learning-compute",
       "family": "ai-ml",
       "identity": "generic/entity",
       "label": "Azure Machine Learning compute instance",
@@ -3563,7 +3236,7 @@
       "terraform_type": "azurerm_machine_learning_compute_instance"
     },
     {
-      "concept": "core/ai-inference-endpoint",
+      "concept": "azure.concept.ai-inference-endpoint",
       "family": "ai-ml",
       "identity": "generic/entity",
       "label": "Azure Machine Learning inference cluster",
@@ -3573,7 +3246,7 @@
       "terraform_type": "azurerm_machine_learning_inference_cluster"
     },
     {
-      "concept": "azure/machine-learning-workspace",
+      "concept": "azure.rule.machine-learning-workspace",
       "family": "ai-ml",
       "identity": "azure/ai-foundry",
       "label": "Azure Machine Learning workspace",
@@ -3583,7 +3256,7 @@
       "terraform_type": "azurerm_machine_learning_workspace"
     },
     {
-      "concept": "azure/maintenance-configuration",
+      "concept": "azure.rule.maintenance-configuration",
       "family": "operations",
       "identity": "generic/entity",
       "label": "Maintenance configuration",
@@ -3593,7 +3266,7 @@
       "terraform_type": "azurerm_maintenance_configuration"
     },
     {
-      "concept": "azure/managed-application",
+      "concept": "azure.rule.managed-application",
       "family": "governance-management",
       "identity": "generic/entity",
       "label": "Managed Application",
@@ -3603,7 +3276,7 @@
       "terraform_type": "azurerm_managed_application"
     },
     {
-      "concept": "azure/developer-environment",
+      "concept": "azure.concept.developer-environment",
       "family": "developer-ci-cd",
       "identity": "generic/entity",
       "label": "Managed DevOps Pool",
@@ -3613,7 +3286,7 @@
       "terraform_type": "azurerm_managed_devops_pool"
     },
     {
-      "concept": "core/block-storage-volume",
+      "concept": "azure.concept.block-storage-volume",
       "family": "compute",
       "identity": "azure/disk",
       "label": "Managed disk",
@@ -3623,7 +3296,7 @@
       "terraform_type": "azurerm_managed_disk"
     },
     {
-      "concept": "azure/managed-grafana",
+      "concept": "azure.rule.managed-grafana",
       "family": "operations",
       "identity": "generic/entity",
       "label": "Azure Managed Grafana workspace",
@@ -3633,7 +3306,7 @@
       "terraform_type": "azurerm_dashboard_grafana"
     },
     {
-      "concept": "azure/managed-hsm",
+      "concept": "azure.rule.managed-hsm",
       "family": "security",
       "identity": "azure/key-vault",
       "label": "Key Vault Managed HSM",
@@ -3643,7 +3316,7 @@
       "terraform_type": "azurerm_key_vault_managed_hardware_security_module"
     },
     {
-      "concept": "core/encryption-key",
+      "concept": "azure.concept.encryption-key",
       "family": "security",
       "identity": "azure/key-vault",
       "label": "Managed HSM key",
@@ -3653,7 +3326,7 @@
       "terraform_type": "azurerm_key_vault_managed_hardware_security_module_key"
     },
     {
-      "concept": "core/managed-file-storage",
+      "concept": "azure.concept.managed-file-storage",
       "family": "storage",
       "identity": "generic/storage",
       "label": "Managed Lustre file system",
@@ -3663,7 +3336,7 @@
       "terraform_type": "azurerm_managed_lustre_file_system"
     },
     {
-      "concept": "azure/database-component",
+      "concept": "azure.concept.database-component",
       "family": "databases",
       "identity": "generic/database",
       "label": "Azure Managed Redis geo-replication",
@@ -3673,7 +3346,7 @@
       "terraform_type": "azurerm_managed_redis_geo_replication"
     },
     {
-      "concept": "azure/service-fabric-cluster",
+      "concept": "azure.rule.service-fabric-cluster",
       "family": "containers",
       "identity": "generic/entity",
       "label": "Service Fabric managed cluster",
@@ -3683,17 +3356,7 @@
       "terraform_type": "azurerm_service_fabric_managed_cluster"
     },
     {
-      "concept": "azure/management-group",
-      "family": "governance-management",
-      "identity": "generic/scope",
-      "label": "Management group",
-      "mode": "generated",
-      "provider": "azurerm",
-      "rule": "management-group",
-      "terraform_type": "azurerm_management_group"
-    },
-    {
-      "concept": "azure/maps-account",
+      "concept": "azure.rule.maps-account",
       "family": "api-integration",
       "identity": "generic/entity",
       "label": "Maps account",
@@ -3703,7 +3366,7 @@
       "terraform_type": "azurerm_maps_account"
     },
     {
-      "concept": "core/managed-database",
+      "concept": "rf.concept.managed-database",
       "family": "databases",
       "identity": "generic/database",
       "label": "DocumentDB cluster",
@@ -3713,7 +3376,7 @@
       "terraform_type": "azurerm_mongo_cluster"
     },
     {
-      "concept": "azure/operations-detail",
+      "concept": "azure.concept.operations-detail",
       "family": "operations",
       "identity": "azure/monitor",
       "label": "Azure Monitor action group",
@@ -3723,7 +3386,7 @@
       "terraform_type": "azurerm_monitor_action_group"
     },
     {
-      "concept": "azure/operations-detail",
+      "concept": "azure.concept.operations-detail",
       "family": "operations",
       "identity": "azure/monitor",
       "label": "Azure Monitor data collection endpoint",
@@ -3733,7 +3396,7 @@
       "terraform_type": "azurerm_monitor_data_collection_endpoint"
     },
     {
-      "concept": "azure/operations-detail",
+      "concept": "azure.concept.operations-detail",
       "family": "operations",
       "identity": "azure/monitor",
       "label": "Azure Monitor diagnostic setting",
@@ -3743,7 +3406,7 @@
       "terraform_type": "azurerm_monitor_diagnostic_setting"
     },
     {
-      "concept": "azure/operations-detail",
+      "concept": "azure.concept.operations-detail",
       "family": "operations",
       "identity": "azure/monitor",
       "label": "Azure Monitor metric alert",
@@ -3753,7 +3416,7 @@
       "terraform_type": "azurerm_monitor_metric_alert"
     },
     {
-      "concept": "azure/private-link-scope",
+      "concept": "azure.concept.private-link-scope",
       "family": "network",
       "identity": "azure/monitor",
       "label": "Azure Monitor Private Link Scope",
@@ -3763,7 +3426,7 @@
       "terraform_type": "azurerm_monitor_private_link_scope"
     },
     {
-      "concept": "azure/operations-detail",
+      "concept": "azure.concept.operations-detail",
       "family": "operations",
       "identity": "azure/monitor",
       "label": "Azure Monitor log search alert rule",
@@ -3773,7 +3436,7 @@
       "terraform_type": "azurerm_monitor_scheduled_query_rules_alert_v2"
     },
     {
-      "concept": "azure/monitor-workspace",
+      "concept": "azure.rule.monitor-workspace",
       "family": "operations",
       "identity": "azure/monitor",
       "label": "Azure Monitor workspace",
@@ -3783,7 +3446,7 @@
       "terraform_type": "azurerm_monitor_workspace"
     },
     {
-      "concept": "core/managed-database",
+      "concept": "rf.concept.managed-database",
       "family": "databases",
       "identity": "azure/sql-database",
       "label": "SQL Database",
@@ -3793,7 +3456,7 @@
       "terraform_type": "azurerm_mssql_database"
     },
     {
-      "concept": "azure/sql-server",
+      "concept": "azure.concept.sql-server",
       "family": "databases",
       "identity": "azure/sql-database",
       "label": "SQL logical server",
@@ -3803,7 +3466,7 @@
       "terraform_type": "azurerm_mssql_server"
     },
     {
-      "concept": "core/managed-database",
+      "concept": "rf.concept.managed-database",
       "family": "databases",
       "identity": "generic/database",
       "label": "MySQL database",
@@ -3813,7 +3476,7 @@
       "terraform_type": "azurerm_mysql_flexible_database"
     },
     {
-      "concept": "core/managed-database",
+      "concept": "rf.concept.managed-database",
       "family": "databases",
       "identity": "generic/database",
       "label": "MySQL flexible server",
@@ -3823,7 +3486,7 @@
       "terraform_type": "azurerm_mysql_flexible_server"
     },
     {
-      "concept": "core/managed-nat",
+      "concept": "azure.concept.managed-nat",
       "family": "network",
       "identity": "azure/nat-gateway",
       "label": "NAT Gateway",
@@ -3833,7 +3496,7 @@
       "terraform_type": "azurerm_nat_gateway"
     },
     {
-      "concept": "azure/network-policy-detail",
+      "concept": "azure.concept.network-policy-detail",
       "family": "network",
       "identity": "generic/network",
       "label": "NAT Gateway public IP association",
@@ -3843,7 +3506,7 @@
       "terraform_type": "azurerm_nat_gateway_public_ip_association"
     },
     {
-      "concept": "azure/network-policy-detail",
+      "concept": "azure.concept.network-policy-detail",
       "family": "network",
       "identity": "generic/network",
       "label": "NAT Gateway public IP prefix association",
@@ -3853,7 +3516,7 @@
       "terraform_type": "azurerm_nat_gateway_public_ip_prefix_association"
     },
     {
-      "concept": "azure/netapp-account",
+      "concept": "azure.rule.netapp-account",
       "family": "storage",
       "identity": "generic/scope",
       "label": "Azure NetApp Files account",
@@ -3863,7 +3526,7 @@
       "terraform_type": "azurerm_netapp_account"
     },
     {
-      "concept": "core/backup-plan",
+      "concept": "azure.concept.backup-plan",
       "family": "storage",
       "identity": "azure/backup",
       "label": "Azure NetApp Files backup policy",
@@ -3873,7 +3536,7 @@
       "terraform_type": "azurerm_netapp_backup_policy"
     },
     {
-      "concept": "core/backup-vault",
+      "concept": "azure.concept.backup-vault",
       "family": "storage",
       "identity": "azure/backup",
       "label": "Azure NetApp Files backup vault",
@@ -3883,7 +3546,7 @@
       "terraform_type": "azurerm_netapp_backup_vault"
     },
     {
-      "concept": "azure/netapp-capacity-pool",
+      "concept": "azure.rule.netapp-capacity-pool",
       "family": "storage",
       "identity": "generic/scope",
       "label": "Azure NetApp Files capacity pool",
@@ -3893,7 +3556,7 @@
       "terraform_type": "azurerm_netapp_pool"
     },
     {
-      "concept": "core/managed-file-storage",
+      "concept": "azure.concept.managed-file-storage",
       "family": "storage",
       "identity": "generic/storage",
       "label": "Azure NetApp Files volume",
@@ -3903,7 +3566,7 @@
       "terraform_type": "azurerm_netapp_volume"
     },
     {
-      "concept": "azure/network-function-service",
+      "concept": "azure.concept.network-function-service",
       "family": "network",
       "identity": "generic/network",
       "label": "Traffic Collector",
@@ -3913,17 +3576,7 @@
       "terraform_type": "azurerm_network_function_azure_traffic_collector"
     },
     {
-      "concept": "azure/network-interface",
-      "family": "network",
-      "identity": "generic/network",
-      "label": "Network interface",
-      "mode": "generated",
-      "provider": "azurerm",
-      "rule": "network-interface",
-      "terraform_type": "azurerm_network_interface"
-    },
-    {
-      "concept": "azure/network-policy-detail",
+      "concept": "azure.concept.network-policy-detail",
       "family": "network",
       "identity": "generic/network",
       "label": "Virtual Network Manager IP address management pool",
@@ -3933,7 +3586,7 @@
       "terraform_type": "azurerm_network_manager_ipam_pool"
     },
     {
-      "concept": "azure/network-security-group",
+      "concept": "azure.rule.network-security-group",
       "family": "network",
       "identity": "generic/network",
       "label": "Network Security Group",
@@ -3943,7 +3596,7 @@
       "terraform_type": "azurerm_network_security_group"
     },
     {
-      "concept": "azure/network-security-perimeter",
+      "concept": "azure.rule.network-security-perimeter",
       "family": "network",
       "identity": "generic/scope",
       "label": "Network Security Perimeter",
@@ -3953,7 +3606,7 @@
       "terraform_type": "azurerm_network_security_perimeter"
     },
     {
-      "concept": "azure/network-policy-detail",
+      "concept": "azure.concept.network-policy-detail",
       "family": "network",
       "identity": "generic/network",
       "label": "Network Security Group rule",
@@ -3963,7 +3616,7 @@
       "terraform_type": "azurerm_network_security_rule"
     },
     {
-      "concept": "azure/network-watcher",
+      "concept": "azure.rule.network-watcher",
       "family": "operations",
       "identity": "azure/monitor",
       "label": "Network Watcher",
@@ -3973,7 +3626,7 @@
       "terraform_type": "azurerm_network_watcher"
     },
     {
-      "concept": "azure/operations-detail",
+      "concept": "azure.concept.operations-detail",
       "family": "operations",
       "identity": "generic/entity",
       "label": "Network Watcher flow log",
@@ -3983,7 +3636,7 @@
       "terraform_type": "azurerm_network_watcher_flow_log"
     },
     {
-      "concept": "azure/third-party-monitor",
+      "concept": "azure.concept.third-party-monitor",
       "family": "operations",
       "identity": "generic/entity",
       "label": "New Relic on Azure monitor",
@@ -3993,7 +3646,7 @@
       "terraform_type": "azurerm_new_relic_monitor"
     },
     {
-      "concept": "azure/hybrid-platform",
+      "concept": "azure.concept.hybrid-platform",
       "family": "hybrid",
       "identity": "generic/entity",
       "label": "NGINXaaS for Azure deployment",
@@ -4003,7 +3656,7 @@
       "terraform_type": "azurerm_nginx_deployment"
     },
     {
-      "concept": "azure/notification-hub",
+      "concept": "azure.rule.notification-hub",
       "family": "messaging-eventing",
       "identity": "generic/entity",
       "label": "Notification Hub",
@@ -4013,7 +3666,7 @@
       "terraform_type": "azurerm_notification_hub"
     },
     {
-      "concept": "azure/notification-namespace",
+      "concept": "azure.concept.notification-namespace",
       "family": "messaging-eventing",
       "identity": "generic/scope",
       "label": "Notification Hubs namespace",
@@ -4023,7 +3676,7 @@
       "terraform_type": "azurerm_notification_hub_namespace"
     },
     {
-      "concept": "core/managed-database",
+      "concept": "rf.concept.managed-database",
       "family": "databases",
       "identity": "generic/database",
       "label": "Oracle Autonomous Database on Azure",
@@ -4033,7 +3686,7 @@
       "terraform_type": "azurerm_oracle_autonomous_database"
     },
     {
-      "concept": "azure/hybrid-platform",
+      "concept": "azure.concept.hybrid-platform",
       "family": "hybrid",
       "identity": "generic/entity",
       "label": "Oracle Database@Azure cloud VM cluster",
@@ -4043,7 +3696,7 @@
       "terraform_type": "azurerm_oracle_cloud_vm_cluster"
     },
     {
-      "concept": "azure/hybrid-platform",
+      "concept": "azure.concept.hybrid-platform",
       "family": "hybrid",
       "identity": "generic/entity",
       "label": "Oracle Exadata Database Service infrastructure on Azure",
@@ -4053,7 +3706,7 @@
       "terraform_type": "azurerm_oracle_exadata_infrastructure"
     },
     {
-      "concept": "azure/hybrid-platform",
+      "concept": "azure.concept.hybrid-platform",
       "family": "hybrid",
       "identity": "generic/entity",
       "label": "Oracle Database@Azure resource anchor",
@@ -4063,7 +3716,7 @@
       "terraform_type": "azurerm_oracle_resource_anchor"
     },
     {
-      "concept": "azure/virtual-machine-scale-set",
+      "concept": "azure.rule.virtual-machine-scale-set",
       "family": "compute",
       "identity": "azure/vm-scale-set",
       "label": "Orchestrated Virtual Machine Scale Set",
@@ -4073,7 +3726,7 @@
       "terraform_type": "azurerm_orchestrated_virtual_machine_scale_set"
     },
     {
-      "concept": "azure/hybrid-platform",
+      "concept": "azure.concept.hybrid-platform",
       "family": "hybrid",
       "identity": "generic/entity",
       "label": "Palo Alto Networks Cloud NGFW for Azure",
@@ -4083,7 +3736,7 @@
       "terraform_type": "azurerm_palo_alto_next_generation_firewall_virtual_network_local_rulestack"
     },
     {
-      "concept": "azure/developer-environment",
+      "concept": "azure.concept.developer-environment",
       "family": "developer-ci-cd",
       "identity": "generic/entity",
       "label": "Microsoft Playwright Testing workspace",
@@ -4093,7 +3746,7 @@
       "terraform_type": "azurerm_playwright_workspace"
     },
     {
-      "concept": "core/vpn-gateway",
+      "concept": "azure.concept.vpn-gateway",
       "family": "network",
       "identity": "azure/vpn-gateway",
       "label": "Point-to-site VPN gateway",
@@ -4103,7 +3756,7 @@
       "terraform_type": "azurerm_point_to_site_vpn_gateway"
     },
     {
-      "concept": "azure/governance-detail",
+      "concept": "azure.concept.governance-detail",
       "family": "governance-management",
       "identity": "generic/entity",
       "label": "Azure Policy definition",
@@ -4113,7 +3766,7 @@
       "terraform_type": "azurerm_policy_definition"
     },
     {
-      "concept": "azure/governance-detail",
+      "concept": "azure.concept.governance-detail",
       "family": "governance-management",
       "identity": "generic/entity",
       "label": "Azure Policy initiative definition",
@@ -4123,7 +3776,7 @@
       "terraform_type": "azurerm_policy_set_definition"
     },
     {
-      "concept": "azure/operations-detail",
+      "concept": "azure.concept.operations-detail",
       "family": "operations",
       "identity": "generic/entity",
       "label": "Portal dashboard",
@@ -4133,7 +3786,7 @@
       "terraform_type": "azurerm_portal_dashboard"
     },
     {
-      "concept": "azure/database-component",
+      "concept": "azure.concept.database-component",
       "family": "databases",
       "identity": "generic/database",
       "label": "PostgreSQL backup",
@@ -4143,7 +3796,7 @@
       "terraform_type": "azurerm_postgresql_flexible_server_backup"
     },
     {
-      "concept": "core/managed-database",
+      "concept": "rf.concept.managed-database",
       "family": "databases",
       "identity": "generic/database",
       "label": "PostgreSQL database",
@@ -4153,7 +3806,7 @@
       "terraform_type": "azurerm_postgresql_flexible_server_database"
     },
     {
-      "concept": "core/managed-database",
+      "concept": "rf.concept.managed-database",
       "family": "databases",
       "identity": "azure/postgresql",
       "label": "PostgreSQL flexible server",
@@ -4163,7 +3816,7 @@
       "terraform_type": "azurerm_postgresql_flexible_server"
     },
     {
-      "concept": "azure/analytics-cluster",
+      "concept": "azure.concept.analytics-cluster",
       "family": "data-analytics",
       "identity": "generic/entity",
       "label": "Power BI Embedded capacity",
@@ -4173,7 +3826,7 @@
       "terraform_type": "azurerm_powerbi_embedded"
     },
     {
-      "concept": "azure/dns-record",
+      "concept": "azure.concept.dns-record",
       "family": "dns-cdn",
       "identity": "azure/dns",
       "label": "Private DNS A record",
@@ -4183,7 +3836,7 @@
       "terraform_type": "azurerm_private_dns_a_record"
     },
     {
-      "concept": "azure/dns-record",
+      "concept": "azure.concept.dns-record",
       "family": "dns-cdn",
       "identity": "azure/dns",
       "label": "Private DNS CNAME record",
@@ -4193,7 +3846,7 @@
       "terraform_type": "azurerm_private_dns_cname_record"
     },
     {
-      "concept": "azure/private-network-link",
+      "concept": "azure.concept.private-network-link",
       "family": "dns-cdn",
       "identity": "azure/dns",
       "label": "DNS forwarding ruleset",
@@ -4203,7 +3856,7 @@
       "terraform_type": "azurerm_private_dns_resolver_dns_forwarding_ruleset"
     },
     {
-      "concept": "azure/private-network-link",
+      "concept": "azure.concept.private-network-link",
       "family": "dns-cdn",
       "identity": "azure/dns",
       "label": "DNS Private Resolver inbound endpoint",
@@ -4213,7 +3866,7 @@
       "terraform_type": "azurerm_private_dns_resolver_inbound_endpoint"
     },
     {
-      "concept": "azure/private-network-link",
+      "concept": "azure.concept.private-network-link",
       "family": "dns-cdn",
       "identity": "azure/dns",
       "label": "DNS Private Resolver outbound endpoint",
@@ -4223,7 +3876,7 @@
       "terraform_type": "azurerm_private_dns_resolver_outbound_endpoint"
     },
     {
-      "concept": "azure/private-dns-resolver",
+      "concept": "azure.rule.private-dns-resolver",
       "family": "dns-cdn",
       "identity": "azure/dns",
       "label": "DNS Private Resolver",
@@ -4233,7 +3886,7 @@
       "terraform_type": "azurerm_private_dns_resolver"
     },
     {
-      "concept": "core/dns-zone",
+      "concept": "azure.concept.dns-zone",
       "family": "dns-cdn",
       "identity": "azure/dns",
       "label": "Private DNS zone",
@@ -4243,7 +3896,7 @@
       "terraform_type": "azurerm_private_dns_zone"
     },
     {
-      "concept": "azure/private-network-link",
+      "concept": "azure.concept.private-network-link",
       "family": "dns-cdn",
       "identity": "azure/dns",
       "label": "Private DNS virtual network link",
@@ -4253,7 +3906,7 @@
       "terraform_type": "azurerm_private_dns_zone_virtual_network_link"
     },
     {
-      "concept": "core/private-endpoint",
+      "concept": "azure.concept.private-endpoint",
       "family": "network",
       "identity": "azure/private-link",
       "label": "Private Endpoint",
@@ -4263,7 +3916,7 @@
       "terraform_type": "azurerm_private_endpoint"
     },
     {
-      "concept": "azure/private-link-service",
+      "concept": "azure.rule.private-link-service",
       "family": "network",
       "identity": "azure/private-link",
       "label": "Private Link service",
@@ -4273,7 +3926,7 @@
       "terraform_type": "azurerm_private_link_service"
     },
     {
-      "concept": "azure/compute-placement",
+      "concept": "azure.concept.compute-placement",
       "family": "compute",
       "identity": "generic/entity",
       "label": "Proximity placement group",
@@ -4283,7 +3936,7 @@
       "terraform_type": "azurerm_proximity_placement_group"
     },
     {
-      "concept": "azure/public-address",
+      "concept": "azure.rule.public-address",
       "family": "network",
       "identity": "generic/network",
       "label": "Public IP address",
@@ -4293,7 +3946,7 @@
       "terraform_type": "azurerm_public_ip"
     },
     {
-      "concept": "azure/public-address",
+      "concept": "azure.rule.public-address",
       "family": "network",
       "identity": "generic/network",
       "label": "Public IP prefix",
@@ -4303,7 +3956,7 @@
       "terraform_type": "azurerm_public_ip_prefix"
     },
     {
-      "concept": "azure/purview-account",
+      "concept": "azure.rule.purview-account",
       "family": "data-analytics",
       "identity": "generic/scope",
       "label": "Microsoft Purview account",
@@ -4313,7 +3966,7 @@
       "terraform_type": "azurerm_purview_account"
     },
     {
-      "concept": "core/message-queue",
+      "concept": "azure.concept.message-queue",
       "family": "storage",
       "identity": "generic/storage",
       "label": "Queue Storage queue",
@@ -4323,7 +3976,7 @@
       "terraform_type": "azurerm_storage_queue"
     },
     {
-      "concept": "core/managed-file-storage",
+      "concept": "azure.concept.managed-file-storage",
       "family": "storage",
       "identity": "generic/storage",
       "label": "Qumulo file system on Azure",
@@ -4333,7 +3986,7 @@
       "terraform_type": "azurerm_qumulo_file_system"
     },
     {
-      "concept": "core/backup-vault",
+      "concept": "azure.concept.backup-vault",
       "family": "migration",
       "identity": "azure/backup",
       "label": "Recovery Services vault",
@@ -4343,7 +3996,7 @@
       "terraform_type": "azurerm_recovery_services_vault"
     },
     {
-      "concept": "core/kubernetes-cluster",
+      "concept": "rf.concept.kubernetes-cluster",
       "family": "containers",
       "identity": "generic/entity",
       "label": "Red Hat OpenShift cluster",
@@ -4353,7 +4006,7 @@
       "terraform_type": "azurerm_redhat_openshift_cluster"
     },
     {
-      "concept": "azure/relay-connection",
+      "concept": "azure.concept.relay-connection",
       "family": "messaging-eventing",
       "identity": "generic/network",
       "label": "Relay Hybrid Connection",
@@ -4363,7 +4016,7 @@
       "terraform_type": "azurerm_relay_hybrid_connection"
     },
     {
-      "concept": "azure/relay-namespace",
+      "concept": "azure.rule.relay-namespace",
       "family": "messaging-eventing",
       "identity": "generic/scope",
       "label": "Relay namespace",
@@ -4373,7 +4026,7 @@
       "terraform_type": "azurerm_relay_namespace"
     },
     {
-      "concept": "azure/resource-group",
+      "concept": "azure.rule.resource-group",
       "family": "governance-management",
       "identity": "generic/scope",
       "label": "Resource Group",
@@ -4383,7 +4036,7 @@
       "terraform_type": "azurerm_resource_group"
     },
     {
-      "concept": "azure/governance-detail",
+      "concept": "azure.concept.governance-detail",
       "family": "governance-management",
       "identity": "generic/entity",
       "label": "Azure Policy assignment",
@@ -4393,7 +4046,7 @@
       "terraform_type": "azurerm_resource_policy_assignment"
     },
     {
-      "concept": "azure/governance-detail",
+      "concept": "azure.concept.governance-detail",
       "family": "governance-management",
       "identity": "generic/entity",
       "label": "Role assignment",
@@ -4403,7 +4056,7 @@
       "terraform_type": "azurerm_role_assignment"
     },
     {
-      "concept": "azure/governance-detail",
+      "concept": "azure.concept.governance-detail",
       "family": "governance-management",
       "identity": "generic/entity",
       "label": "Custom role definition",
@@ -4413,7 +4066,7 @@
       "terraform_type": "azurerm_role_definition"
     },
     {
-      "concept": "azure/network-policy-detail",
+      "concept": "azure.concept.network-policy-detail",
       "family": "network",
       "identity": "generic/network",
       "label": "User-defined route",
@@ -4423,7 +4076,7 @@
       "terraform_type": "azurerm_route"
     },
     {
-      "concept": "azure/route-table",
+      "concept": "azure.rule.route-table",
       "family": "network",
       "identity": "generic/network",
       "label": "Route Server",
@@ -4433,7 +4086,7 @@
       "terraform_type": "azurerm_route_server"
     },
     {
-      "concept": "azure/route-table",
+      "concept": "azure.rule.route-table",
       "family": "network",
       "identity": "generic/network",
       "label": "Route table",
@@ -4443,7 +4096,7 @@
       "terraform_type": "azurerm_route_table"
     },
     {
-      "concept": "azure/hybrid-platform",
+      "concept": "azure.concept.hybrid-platform",
       "family": "hybrid",
       "identity": "generic/entity",
       "label": "Azure Center for SAP solutions discovered virtual instance",
@@ -4453,7 +4106,7 @@
       "terraform_type": "azurerm_workloads_sap_discovery_virtual_instance"
     },
     {
-      "concept": "azure/hybrid-platform",
+      "concept": "azure.concept.hybrid-platform",
       "family": "hybrid",
       "identity": "generic/entity",
       "label": "Azure Center for SAP solutions single-node virtual instance",
@@ -4463,7 +4116,7 @@
       "terraform_type": "azurerm_workloads_sap_single_node_virtual_instance"
     },
     {
-      "concept": "azure/hybrid-platform",
+      "concept": "azure.concept.hybrid-platform",
       "family": "hybrid",
       "identity": "generic/entity",
       "label": "Azure Center for SAP solutions three-tier virtual instance",
@@ -4473,7 +4126,7 @@
       "terraform_type": "azurerm_workloads_sap_three_tier_virtual_instance"
     },
     {
-      "concept": "azure/security-detail",
+      "concept": "azure.concept.security-detail",
       "family": "security",
       "identity": "generic/identity",
       "label": "Microsoft Sentinel automation rule",
@@ -4483,7 +4136,7 @@
       "terraform_type": "azurerm_sentinel_automation_rule"
     },
     {
-      "concept": "azure/security-detail",
+      "concept": "azure.concept.security-detail",
       "family": "security",
       "identity": "generic/identity",
       "label": "Microsoft Sentinel Amazon Web Services CloudTrail connector",
@@ -4493,7 +4146,7 @@
       "terraform_type": "azurerm_sentinel_data_connector_aws_cloud_trail"
     },
     {
-      "concept": "azure/security-detail",
+      "concept": "azure.concept.security-detail",
       "family": "security",
       "identity": "generic/identity",
       "label": "Microsoft Sentinel Microsoft Entra ID connector",
@@ -4503,7 +4156,7 @@
       "terraform_type": "azurerm_sentinel_data_connector_azure_active_directory"
     },
     {
-      "concept": "azure/security-detail",
+      "concept": "azure.concept.security-detail",
       "family": "security",
       "identity": "generic/identity",
       "label": "Microsoft Sentinel near-real-time analytics rule",
@@ -4513,17 +4166,7 @@
       "terraform_type": "azurerm_sentinel_alert_rule_nrt"
     },
     {
-      "concept": "azure/sentinel-service",
-      "family": "security",
-      "identity": "generic/identity",
-      "label": "Microsoft Sentinel",
-      "mode": "generated",
-      "provider": "azurerm",
-      "rule": "sentinel-onboarding",
-      "terraform_type": "azurerm_sentinel_log_analytics_workspace_onboarding"
-    },
-    {
-      "concept": "azure/security-detail",
+      "concept": "azure.concept.security-detail",
       "family": "security",
       "identity": "generic/identity",
       "label": "Microsoft Sentinel scheduled analytics rule",
@@ -4533,7 +4176,7 @@
       "terraform_type": "azurerm_sentinel_alert_rule_scheduled"
     },
     {
-      "concept": "azure/messaging-namespace",
+      "concept": "azure.concept.messaging-namespace",
       "family": "messaging-eventing",
       "identity": "azure/service-bus",
       "label": "Service Bus namespace",
@@ -4543,7 +4186,7 @@
       "terraform_type": "azurerm_servicebus_namespace"
     },
     {
-      "concept": "core/message-queue",
+      "concept": "azure.concept.message-queue",
       "family": "messaging-eventing",
       "identity": "azure/service-bus",
       "label": "Service Bus queue",
@@ -4553,7 +4196,7 @@
       "terraform_type": "azurerm_servicebus_queue"
     },
     {
-      "concept": "core/message-subscription",
+      "concept": "azure.concept.message-subscription",
       "family": "messaging-eventing",
       "identity": "azure/service-bus",
       "label": "Service Bus subscription",
@@ -4563,7 +4206,7 @@
       "terraform_type": "azurerm_servicebus_subscription"
     },
     {
-      "concept": "azure/messaging-detail",
+      "concept": "azure.concept.messaging-detail",
       "family": "messaging-eventing",
       "identity": "azure/service-bus",
       "label": "Service Bus subscription rule",
@@ -4573,7 +4216,7 @@
       "terraform_type": "azurerm_servicebus_subscription_rule"
     },
     {
-      "concept": "core/message-topic",
+      "concept": "azure.concept.message-topic",
       "family": "messaging-eventing",
       "identity": "azure/service-bus",
       "label": "Service Bus topic",
@@ -4583,7 +4226,7 @@
       "terraform_type": "azurerm_servicebus_topic"
     },
     {
-      "concept": "azure/service-fabric-cluster",
+      "concept": "azure.rule.service-fabric-cluster",
       "family": "containers",
       "identity": "generic/entity",
       "label": "Service Fabric cluster",
@@ -4593,7 +4236,7 @@
       "terraform_type": "azurerm_service_fabric_cluster"
     },
     {
-      "concept": "azure/compute-image",
+      "concept": "azure.rule.compute-image",
       "family": "compute",
       "identity": "generic/storage",
       "label": "Compute Gallery image definition",
@@ -4603,7 +4246,7 @@
       "terraform_type": "azurerm_shared_image"
     },
     {
-      "concept": "azure/realtime-communication-service",
+      "concept": "azure.concept.realtime-communication-service",
       "family": "communication",
       "identity": "generic/entity",
       "label": "SignalR Service",
@@ -4613,7 +4256,7 @@
       "terraform_type": "azurerm_signalr_service"
     },
     {
-      "concept": "azure/site-recovery-fabric",
+      "concept": "azure.rule.site-recovery-fabric",
       "family": "migration",
       "identity": "generic/scope",
       "label": "Azure Site Recovery fabric",
@@ -4623,7 +4266,7 @@
       "terraform_type": "azurerm_site_recovery_fabric"
     },
     {
-      "concept": "azure/site-recovery-detail",
+      "concept": "azure.concept.site-recovery-detail",
       "family": "migration",
       "identity": "generic/entity",
       "label": "Azure Site Recovery recovery plan",
@@ -4633,7 +4276,7 @@
       "terraform_type": "azurerm_site_recovery_replication_recovery_plan"
     },
     {
-      "concept": "azure/site-recovery-fabric",
+      "concept": "azure.rule.site-recovery-fabric",
       "family": "migration",
       "identity": "generic/scope",
       "label": "Azure Site Recovery protection container",
@@ -4643,7 +4286,7 @@
       "terraform_type": "azurerm_site_recovery_protection_container"
     },
     {
-      "concept": "azure/site-recovery-detail",
+      "concept": "azure.concept.site-recovery-detail",
       "family": "migration",
       "identity": "generic/entity",
       "label": "Azure Site Recovery replicated virtual machine",
@@ -4653,7 +4296,7 @@
       "terraform_type": "azurerm_site_recovery_replicated_vm"
     },
     {
-      "concept": "azure/spring-app",
+      "concept": "azure.rule.spring-app",
       "family": "serverless",
       "identity": "generic/entity",
       "label": "Azure Spring Apps app",
@@ -4663,7 +4306,7 @@
       "terraform_type": "azurerm_spring_cloud_app"
     },
     {
-      "concept": "azure/spring-app",
+      "concept": "azure.rule.spring-app",
       "family": "serverless",
       "identity": "generic/entity",
       "label": "Azure Spring Apps Enterprise gateway",
@@ -4673,7 +4316,7 @@
       "terraform_type": "azurerm_spring_cloud_gateway"
     },
     {
-      "concept": "azure/spring-apps-service",
+      "concept": "azure.rule.spring-apps-service",
       "family": "serverless",
       "identity": "generic/scope",
       "label": "Azure Spring Apps service",
@@ -4683,7 +4326,7 @@
       "terraform_type": "azurerm_spring_cloud_service"
     },
     {
-      "concept": "azure/database-component",
+      "concept": "azure.concept.database-component",
       "family": "databases",
       "identity": "azure/sql-database",
       "label": "SQL elastic pool",
@@ -4693,7 +4336,7 @@
       "terraform_type": "azurerm_mssql_elasticpool"
     },
     {
-      "concept": "azure/database-component",
+      "concept": "azure.concept.database-component",
       "family": "databases",
       "identity": "azure/sql-database",
       "label": "SQL failover group",
@@ -4703,7 +4346,7 @@
       "terraform_type": "azurerm_mssql_failover_group"
     },
     {
-      "concept": "core/managed-database",
+      "concept": "rf.concept.managed-database",
       "family": "databases",
       "identity": "azure/sql-database",
       "label": "SQL Managed Instance database",
@@ -4713,7 +4356,7 @@
       "terraform_type": "azurerm_mssql_managed_database"
     },
     {
-      "concept": "core/managed-database",
+      "concept": "rf.concept.managed-database",
       "family": "databases",
       "identity": "azure/sql-database",
       "label": "SQL Managed Instance",
@@ -4724,7 +4367,7 @@
     },
     {
       "arm_type": "Microsoft.App/agents@2026-01-01",
-      "concept": "azure/sre-agent",
+      "concept": "azure.rule.sre-agent",
       "family": "ai-ml",
       "identity": "generic/entity",
       "label": "SRE Agent",
@@ -4734,7 +4377,7 @@
       "terraform_type": "azapi_resource"
     },
     {
-      "concept": "core/block-storage-volume",
+      "concept": "azure.concept.block-storage-volume",
       "family": "compute",
       "identity": "azure/disk",
       "label": "Azure Local virtual hard disk",
@@ -4744,7 +4387,7 @@
       "terraform_type": "azurerm_stack_hci_virtual_hard_disk"
     },
     {
-      "concept": "azure/static-web-app",
+      "concept": "azure.rule.static-web-app",
       "family": "serverless",
       "identity": "generic/entity",
       "label": "Static Web Apps site",
@@ -4754,7 +4397,7 @@
       "terraform_type": "azurerm_static_web_app"
     },
     {
-      "concept": "azure/storage-account",
+      "concept": "azure.rule.storage-account",
       "family": "storage",
       "identity": "azure/storage-account",
       "label": "Storage account",
@@ -4764,7 +4407,7 @@
       "terraform_type": "azurerm_storage_account"
     },
     {
-      "concept": "azure/storage-object-detail",
+      "concept": "azure.concept.storage-object-detail",
       "family": "storage",
       "identity": "generic/storage",
       "label": "Blob Storage blob",
@@ -4774,7 +4417,7 @@
       "terraform_type": "azurerm_storage_blob"
     },
     {
-      "concept": "azure/storage-object-detail",
+      "concept": "azure.concept.storage-object-detail",
       "family": "storage",
       "identity": "generic/storage",
       "label": "Storage encryption scope",
@@ -4784,7 +4427,7 @@
       "terraform_type": "azurerm_storage_encryption_scope"
     },
     {
-      "concept": "azure/storage-object-detail",
+      "concept": "azure.concept.storage-object-detail",
       "family": "storage",
       "identity": "generic/storage",
       "label": "Storage lifecycle management policy",
@@ -4794,7 +4437,7 @@
       "terraform_type": "azurerm_storage_management_policy"
     },
     {
-      "concept": "azure/migration-service",
+      "concept": "azure.concept.migration-service",
       "family": "migration",
       "identity": "generic/entity",
       "label": "Storage Mover",
@@ -4804,7 +4447,7 @@
       "terraform_type": "azurerm_storage_mover"
     },
     {
-      "concept": "azure/storage-object-detail",
+      "concept": "azure.concept.storage-object-detail",
       "family": "storage",
       "identity": "generic/storage",
       "label": "Azure Files directory",
@@ -4814,7 +4457,7 @@
       "terraform_type": "azurerm_storage_share_directory"
     },
     {
-      "concept": "azure/storage-object-detail",
+      "concept": "azure.concept.storage-object-detail",
       "family": "storage",
       "identity": "generic/storage",
       "label": "Azure Files file",
@@ -4824,7 +4467,7 @@
       "terraform_type": "azurerm_storage_share_file"
     },
     {
-      "concept": "azure/storage-sync-service",
+      "concept": "azure.rule.storage-sync-service",
       "family": "storage",
       "identity": "generic/storage",
       "label": "File Sync service",
@@ -4834,7 +4477,7 @@
       "terraform_type": "azurerm_storage_sync"
     },
     {
-      "concept": "azure/storage-object-detail",
+      "concept": "azure.concept.storage-object-detail",
       "family": "storage",
       "identity": "generic/storage",
       "label": "Table Storage entity",
@@ -4844,7 +4487,7 @@
       "terraform_type": "azurerm_storage_table_entity"
     },
     {
-      "concept": "azure/data-integration-detail",
+      "concept": "azure.concept.data-integration-detail",
       "family": "data-analytics",
       "identity": "azure/data-factory",
       "label": "Stream Analytics Blob Storage output",
@@ -4854,7 +4497,7 @@
       "terraform_type": "azurerm_stream_analytics_output_blob"
     },
     {
-      "concept": "azure/analytics-cluster",
+      "concept": "azure.concept.analytics-cluster",
       "family": "data-analytics",
       "identity": "generic/entity",
       "label": "Stream Analytics cluster",
@@ -4864,7 +4507,7 @@
       "terraform_type": "azurerm_stream_analytics_cluster"
     },
     {
-      "concept": "azure/data-integration-detail",
+      "concept": "azure.concept.data-integration-detail",
       "family": "data-analytics",
       "identity": "azure/data-factory",
       "label": "Stream Analytics Event Hubs input",
@@ -4874,7 +4517,7 @@
       "terraform_type": "azurerm_stream_analytics_stream_input_eventhub_v2"
     },
     {
-      "concept": "azure/stream-analytics-job",
+      "concept": "azure.rule.stream-analytics-job",
       "family": "data-analytics",
       "identity": "generic/entity",
       "label": "Stream Analytics job",
@@ -4884,7 +4527,7 @@
       "terraform_type": "azurerm_stream_analytics_job"
     },
     {
-      "concept": "core/subnet",
+      "concept": "rf.concept.subnet",
       "family": "network",
       "identity": "azure/subnet",
       "label": "Subnet",
@@ -4894,7 +4537,7 @@
       "terraform_type": "azurerm_subnet"
     },
     {
-      "concept": "azure/network-policy-detail",
+      "concept": "azure.concept.network-policy-detail",
       "family": "network",
       "identity": "generic/network",
       "label": "Subnet NAT Gateway association",
@@ -4904,7 +4547,7 @@
       "terraform_type": "azurerm_subnet_nat_gateway_association"
     },
     {
-      "concept": "azure/network-policy-detail",
+      "concept": "azure.concept.network-policy-detail",
       "family": "network",
       "identity": "generic/network",
       "label": "Subnet Network Security Group association",
@@ -4914,7 +4557,7 @@
       "terraform_type": "azurerm_subnet_network_security_group_association"
     },
     {
-      "concept": "azure/network-policy-detail",
+      "concept": "azure.concept.network-policy-detail",
       "family": "network",
       "identity": "generic/network",
       "label": "Subnet route table association",
@@ -4924,17 +4567,7 @@
       "terraform_type": "azurerm_subnet_route_table_association"
     },
     {
-      "concept": "azure/subscription",
-      "family": "governance-management",
-      "identity": "generic/scope",
-      "label": "Subscription",
-      "mode": "generated",
-      "provider": "azurerm",
-      "rule": "subscription",
-      "terraform_type": "azurerm_subscription"
-    },
-    {
-      "concept": "azure/private-link-scope",
+      "concept": "azure.concept.private-link-scope",
       "family": "network",
       "identity": "azure/synapse",
       "label": "Azure Synapse Analytics managed private endpoint hub",
@@ -4944,7 +4577,7 @@
       "terraform_type": "azurerm_synapse_private_link_hub"
     },
     {
-      "concept": "azure/analytics-pool",
+      "concept": "azure.concept.analytics-pool",
       "family": "data-analytics",
       "identity": "azure/synapse",
       "label": "Synapse Apache Spark pool",
@@ -4954,7 +4587,7 @@
       "terraform_type": "azurerm_synapse_spark_pool"
     },
     {
-      "concept": "azure/analytics-pool",
+      "concept": "azure.concept.analytics-pool",
       "family": "data-analytics",
       "identity": "azure/synapse",
       "label": "Synapse dedicated SQL pool",
@@ -4964,7 +4597,7 @@
       "terraform_type": "azurerm_synapse_sql_pool"
     },
     {
-      "concept": "azure/synapse-workspace",
+      "concept": "azure.rule.synapse-workspace",
       "family": "data-analytics",
       "identity": "azure/synapse",
       "label": "Azure Synapse Analytics workspace",
@@ -4974,7 +4607,7 @@
       "terraform_type": "azurerm_synapse_workspace"
     },
     {
-      "concept": "core/compute-instance",
+      "concept": "azure.concept.compute-instance",
       "family": "compute",
       "identity": "azure/virtual-machine",
       "label": "System Center Virtual Machine Manager virtual machine",
@@ -4984,7 +4617,7 @@
       "terraform_type": "azurerm_system_center_virtual_machine_manager_virtual_machine_instance"
     },
     {
-      "concept": "azure/hybrid-platform",
+      "concept": "azure.concept.hybrid-platform",
       "family": "hybrid",
       "identity": "generic/entity",
       "label": "System Center Virtual Machine Manager server connected to Azure Arc",
@@ -4994,7 +4627,7 @@
       "terraform_type": "azurerm_system_center_virtual_machine_manager_server"
     },
     {
-      "concept": "azure/table-storage-table",
+      "concept": "azure.rule.table-storage-table",
       "family": "storage",
       "identity": "generic/storage",
       "label": "Table Storage table",
@@ -5004,7 +4637,7 @@
       "terraform_type": "azurerm_storage_table"
     },
     {
-      "concept": "azure/load-balancer-component",
+      "concept": "azure.concept.load-balancer-component",
       "family": "load-balancing",
       "identity": "generic/load-balancer",
       "label": "Traffic Manager Azure endpoint",
@@ -5014,7 +4647,7 @@
       "terraform_type": "azurerm_traffic_manager_azure_endpoint"
     },
     {
-      "concept": "azure/traffic-manager-profile",
+      "concept": "azure.rule.traffic-manager-profile",
       "family": "load-balancing",
       "identity": "generic/load-balancer",
       "label": "Traffic Manager profile",
@@ -5024,7 +4657,7 @@
       "terraform_type": "azurerm_traffic_manager_profile"
     },
     {
-      "concept": "azure/trusted-signing-account",
+      "concept": "azure.rule.trusted-signing-account",
       "family": "security",
       "identity": "generic/identity",
       "label": "Artifact Signing account",
@@ -5034,7 +4667,7 @@
       "terraform_type": "azurerm_trusted_signing_account"
     },
     {
-      "concept": "core/service-identity",
+      "concept": "rf.concept.service-identity",
       "family": "identity-iam",
       "identity": "azure/managed-identity",
       "label": "User-assigned identity",
@@ -5044,7 +4677,7 @@
       "terraform_type": "azurerm_user_assigned_identity"
     },
     {
-      "concept": "azure/video-indexer-account",
+      "concept": "azure.rule.video-indexer-account",
       "family": "ai-ml",
       "identity": "generic/entity",
       "label": "AI Video Indexer account",
@@ -5054,7 +4687,7 @@
       "terraform_type": "azurerm_video_indexer_account"
     },
     {
-      "concept": "azure/compute-placement",
+      "concept": "azure.concept.compute-placement",
       "family": "compute",
       "identity": "generic/entity",
       "label": "Azure Virtual Desktop application",
@@ -5064,7 +4697,7 @@
       "terraform_type": "azurerm_virtual_desktop_application"
     },
     {
-      "concept": "azure/virtual-desktop-application-group",
+      "concept": "azure.rule.virtual-desktop-application-group",
       "family": "compute",
       "identity": "generic/entity",
       "label": "Azure Virtual Desktop application group",
@@ -5074,7 +4707,7 @@
       "terraform_type": "azurerm_virtual_desktop_application_group"
     },
     {
-      "concept": "azure/virtual-desktop-host-pool",
+      "concept": "azure.rule.virtual-desktop-host-pool",
       "family": "compute",
       "identity": "generic/scope",
       "label": "Azure Virtual Desktop host pool",
@@ -5084,7 +4717,7 @@
       "terraform_type": "azurerm_virtual_desktop_host_pool"
     },
     {
-      "concept": "azure/compute-placement",
+      "concept": "azure.concept.compute-placement",
       "family": "compute",
       "identity": "generic/entity",
       "label": "Azure Virtual Desktop scaling plan",
@@ -5094,7 +4727,7 @@
       "terraform_type": "azurerm_virtual_desktop_scaling_plan"
     },
     {
-      "concept": "azure/virtual-desktop-workspace",
+      "concept": "azure.rule.virtual-desktop-workspace",
       "family": "compute",
       "identity": "generic/scope",
       "label": "Azure Virtual Desktop workspace",
@@ -5104,7 +4737,7 @@
       "terraform_type": "azurerm_virtual_desktop_workspace"
     },
     {
-      "concept": "azure/virtual-hub",
+      "concept": "azure.rule.virtual-hub",
       "family": "network",
       "identity": "generic/scope",
       "label": "Virtual WAN hub",
@@ -5114,17 +4747,7 @@
       "terraform_type": "azurerm_virtual_hub"
     },
     {
-      "concept": "azure/route-server",
-      "family": "network",
-      "identity": "generic/network",
-      "label": "Virtual WAN hub routing intent",
-      "mode": "generated",
-      "provider": "azurerm",
-      "rule": "virtual-hub-routing-intent",
-      "terraform_type": "azurerm_virtual_hub_routing_intent"
-    },
-    {
-      "concept": "core/compute-instance",
+      "concept": "azure.concept.compute-instance",
       "family": "compute",
       "identity": "azure/virtual-machine",
       "label": "Virtual machine",
@@ -5134,7 +4757,7 @@
       "terraform_type": "azurerm_virtual_machine"
     },
     {
-      "concept": "core/backup-plan",
+      "concept": "azure.concept.backup-plan",
       "family": "migration",
       "identity": "azure/backup",
       "label": "Virtual machine backup policy",
@@ -5144,7 +4767,7 @@
       "terraform_type": "azurerm_backup_policy_vm"
     },
     {
-      "concept": "azure/disk-snapshot",
+      "concept": "azure.rule.disk-snapshot",
       "family": "compute",
       "identity": "generic/storage",
       "label": "Virtual machine restore point",
@@ -5154,7 +4777,7 @@
       "terraform_type": "azurerm_virtual_machine_restore_point"
     },
     {
-      "concept": "azure/virtual-machine-scale-set",
+      "concept": "azure.rule.virtual-machine-scale-set",
       "family": "compute",
       "identity": "azure/vm-scale-set",
       "label": "Virtual Machine Scale Set",
@@ -5164,7 +4787,7 @@
       "terraform_type": "azurerm_virtual_machine_scale_set"
     },
     {
-      "concept": "core/virtual-network",
+      "concept": "rf.concept.virtual-network",
       "family": "network",
       "identity": "azure/virtual-network",
       "label": "VNet",
@@ -5174,7 +4797,7 @@
       "terraform_type": "azurerm_virtual_network"
     },
     {
-      "concept": "core/vpn-gateway",
+      "concept": "azure.concept.vpn-gateway",
       "family": "network",
       "identity": "azure/vpn-gateway",
       "label": "VPN Gateway",
@@ -5184,7 +4807,7 @@
       "terraform_type": "azurerm_virtual_network_gateway"
     },
     {
-      "concept": "core/vpn-connection",
+      "concept": "azure.concept.vpn-connection",
       "family": "network",
       "identity": "azure/vpn-gateway",
       "label": "VPN Gateway connection",
@@ -5194,7 +4817,7 @@
       "terraform_type": "azurerm_virtual_network_gateway_connection"
     },
     {
-      "concept": "azure/virtual-network-manager",
+      "concept": "azure.rule.virtual-network-manager",
       "family": "network",
       "identity": "generic/scope",
       "label": "Virtual Network Manager",
@@ -5204,7 +4827,7 @@
       "terraform_type": "azurerm_network_manager"
     },
     {
-      "concept": "core/network-peering",
+      "concept": "azure.concept.network-peering",
       "family": "network",
       "identity": "generic/network",
       "label": "Virtual Network peering",
@@ -5214,7 +4837,7 @@
       "terraform_type": "azurerm_virtual_network_peering"
     },
     {
-      "concept": "azure/virtual-wan",
+      "concept": "azure.rule.virtual-wan",
       "family": "network",
       "identity": "generic/scope",
       "label": "Virtual WAN",
@@ -5224,7 +4847,7 @@
       "terraform_type": "azurerm_virtual_wan"
     },
     {
-      "concept": "azure/hybrid-platform",
+      "concept": "azure.concept.hybrid-platform",
       "family": "hybrid",
       "identity": "generic/entity",
       "label": "Azure VMware Solution cluster",
@@ -5234,7 +4857,7 @@
       "terraform_type": "azurerm_vmware_cluster"
     },
     {
-      "concept": "azure/vmware-private-cloud",
+      "concept": "azure.rule.vmware-private-cloud",
       "family": "hybrid",
       "identity": "generic/scope",
       "label": "Azure VMware Solution private cloud",
@@ -5244,7 +4867,7 @@
       "terraform_type": "azurerm_vmware_private_cloud"
     },
     {
-      "concept": "core/vpn-gateway",
+      "concept": "azure.concept.vpn-gateway",
       "family": "network",
       "identity": "azure/vpn-gateway",
       "label": "Virtual WAN VPN gateway",
@@ -5254,7 +4877,7 @@
       "terraform_type": "azurerm_vpn_gateway"
     },
     {
-      "concept": "core/vpn-connection",
+      "concept": "azure.concept.vpn-connection",
       "family": "network",
       "identity": "azure/vpn-gateway",
       "label": "Virtual WAN VPN connection",
@@ -5264,7 +4887,7 @@
       "terraform_type": "azurerm_vpn_gateway_connection"
     },
     {
-      "concept": "azure/local-network-gateway",
+      "concept": "azure.rule.local-network-gateway",
       "family": "network",
       "identity": "generic/network",
       "label": "Virtual WAN VPN site",
@@ -5274,7 +4897,7 @@
       "terraform_type": "azurerm_vpn_site"
     },
     {
-      "concept": "azure/web-application-firewall-policy",
+      "concept": "azure.rule.web-application-firewall-policy",
       "family": "network",
       "identity": "azure/firewall",
       "label": "WAF policy",
@@ -5284,7 +4907,7 @@
       "terraform_type": "azurerm_web_application_firewall_policy"
     },
     {
-      "concept": "azure/realtime-communication-service",
+      "concept": "azure.concept.realtime-communication-service",
       "family": "communication",
       "identity": "generic/entity",
       "label": "Azure Web PubSub service",
@@ -5294,7 +4917,7 @@
       "terraform_type": "azurerm_web_pubsub"
     },
     {
-      "concept": "core/serverless-function",
+      "concept": "azure.concept.serverless-function",
       "family": "serverless",
       "identity": "azure/functions",
       "label": "Function App",
@@ -5304,7 +4927,7 @@
       "terraform_type": "azurerm_windows_function_app"
     },
     {
-      "concept": "core/compute-instance",
+      "concept": "azure.concept.compute-instance",
       "family": "compute",
       "identity": "azure/virtual-machine",
       "label": "Windows virtual machine",
@@ -5314,7 +4937,7 @@
       "terraform_type": "azurerm_windows_virtual_machine"
     },
     {
-      "concept": "azure/virtual-machine-scale-set",
+      "concept": "azure.rule.virtual-machine-scale-set",
       "family": "compute",
       "identity": "azure/vm-scale-set",
       "label": "Windows Virtual Machine Scale Set",
@@ -5324,7 +4947,7 @@
       "terraform_type": "azurerm_windows_virtual_machine_scale_set"
     },
     {
-      "concept": "azure/app-service",
+      "concept": "azure.concept.app-service",
       "family": "serverless",
       "identity": "azure/app-service",
       "label": "App Service Windows web app",

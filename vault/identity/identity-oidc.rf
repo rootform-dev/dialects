@@ -1,15 +1,12 @@
 concept "identity-configuration" {
-  kind        = detail
   description = "An alias, membership, assignment, MFA, scope, or role supporting Vault identity."
 }
 
 concept "identity-entity" {
-  kind        = entity
   description = "A canonical Vault identity joining aliases from one or more auth methods."
 }
 
 concept "oidc-provider" {
-  kind        = entity
   description = "A Vault OpenID Connect identity provider boundary."
 }
 
@@ -21,7 +18,7 @@ rule "identity-entity" {
   as = concept.identity-entity
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
@@ -48,10 +45,10 @@ rule "identity-group" {
     type = "vault_identity_group"
   }
 
-  as = concept.core.identity-group
+  as = concept.identity-group
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
@@ -150,16 +147,16 @@ rule "identity-oidc-client" {
     type = "vault_identity_oidc_client"
   }
 
-  as = concept.core.identity-application
+  as = concept.identity-application
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
 
   relation "uses-signing-key" {
-    to  = concept.core.encryption-key
+    to  = concept.encryption-key
     via = source.key
   }
 }
@@ -169,10 +166,10 @@ rule "identity-oidc-key" {
     type = "vault_identity_oidc_key"
   }
 
-  as = concept.core.encryption-key
+  as = concept.encryption-key
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
@@ -194,7 +191,7 @@ rule "identity-oidc-provider" {
   as = concept.oidc-provider
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }

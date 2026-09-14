@@ -1,6 +1,5 @@
 # Maintained directly from pinned provider evidence.
 concept "bastion-host" {
-  kind        = entity
   description = "An Azure Bastion service providing managed private administration access."
 }
 
@@ -12,7 +11,7 @@ rule "bastion-host" {
   as = concept.bastion-host
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

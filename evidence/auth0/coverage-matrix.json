@@ -17,12 +17,17 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/action",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/identity-extension"],
-      "rules": ["auth0/action-lookup"],
+      "rootform_concepts": [
+        "auth0/identity-extension"
+      ],
+      "rules": [
+        "auth0.rule.action-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_action_module",
@@ -32,14 +37,19 @@
       "family": "extensibility",
       "product": "actions-hooks",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/action_module",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/extension-configuration"],
-      "rules": ["auth0/action-module-lookup"],
+      "rootform_concepts": [
+        "auth0/extension-configuration"
+      ],
+      "rules": [
+        "auth0.rule.action-module-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_action_module_actions",
@@ -54,9 +64,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_action_module_version",
@@ -71,9 +83,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_action_module_versions",
@@ -88,9 +102,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_attack_protection",
@@ -100,14 +116,19 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/attack_protection",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/authentication-configuration"],
-      "rules": ["auth0/attack-protection-lookup"],
+      "rootform_concepts": [
+        "auth0/authentication-configuration"
+      ],
+      "rules": [
+        "auth0.rule.attack-protection-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_branding",
@@ -122,9 +143,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_branding_phone_notification_template",
@@ -139,9 +162,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_branding_theme",
@@ -156,9 +181,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_client",
@@ -169,13 +196,21 @@
       "product": "applications-apis",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/client",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
-      "relations": ["defaults-to-organization", "uses-api"],
-      "rootform_concepts": ["core/identity-application"],
-      "rules": ["auth0/client-lookup"],
+      "relations": [
+        "defaults-to-organization",
+        "uses-api"
+      ],
+      "rootform_concepts": [
+        "auth0.concept.identity-application"
+      ],
+      "rules": [
+        "auth0.rule.client-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_client_grant_organizations",
@@ -190,9 +225,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_client_grants",
@@ -207,9 +244,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_clients",
@@ -224,9 +263,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_connection",
@@ -238,12 +279,17 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/connection",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/identity-connection"],
-      "rules": ["auth0/connection-lookup"],
+      "rootform_concepts": [
+        "auth0/identity-connection"
+      ],
+      "rules": [
+        "auth0.rule.connection-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_connection_directory",
@@ -254,13 +300,20 @@
       "product": "connections-federation",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/connection_directory",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
-      "relations": ["synchronizes-connection"],
-      "rootform_concepts": ["auth0/directory-sync"],
-      "rules": ["auth0/connection-directory-lookup"],
+      "relations": [
+        "synchronizes-connection"
+      ],
+      "rootform_concepts": [
+        "auth0/directory-sync"
+      ],
+      "rules": [
+        "auth0.rule.connection-directory-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_connection_directory_default_mapping",
@@ -275,43 +328,59 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_connection_directory_synchronized_groups",
       "construct_kind": "data_source",
       "contexts": [],
-      "contributions": ["directory-sync"],
+      "contributions": [
+        "directory-sync"
+      ],
       "family": "connections",
       "product": "connections-federation",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/connection_directory_synchronized_groups",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/connection-configuration"],
-      "rules": ["auth0/connection-directory-synchronized-groups-lookup"],
+      "rootform_concepts": [
+        "auth0/connection-configuration"
+      ],
+      "rules": [
+        "auth0.rule.connection-directory-synchronized-groups-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_connection_keys",
       "construct_kind": "data_source",
       "contexts": [],
-      "contributions": ["identity-connection"],
+      "contributions": [
+        "identity-connection"
+      ],
       "family": "connections",
       "product": "connections-federation",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/connection_keys",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/connection-configuration"],
-      "rules": ["auth0/connection-keys-lookup"],
+      "rootform_concepts": [
+        "auth0/connection-configuration"
+      ],
+      "rules": [
+        "auth0.rule.connection-keys-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_connection_profile",
@@ -321,31 +390,43 @@
       "family": "connections",
       "product": "self-service-sso",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/connection_profile",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/self-service-configuration"],
-      "rules": ["auth0/connection-profile-lookup"],
+      "rootform_concepts": [
+        "auth0/self-service-configuration"
+      ],
+      "rules": [
+        "auth0.rule.connection-profile-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_connection_scim_configuration",
       "construct_kind": "data_source",
       "contexts": [],
-      "contributions": ["identity-connection"],
+      "contributions": [
+        "identity-connection"
+      ],
       "family": "connections",
       "product": "connections-federation",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/connection_scim_configuration",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/connection-configuration"],
-      "rules": ["auth0/connection-scim-configuration-lookup"],
+      "rootform_concepts": [
+        "auth0/connection-configuration"
+      ],
+      "rules": [
+        "auth0.rule.connection-scim-configuration-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_custom_domain",
@@ -357,12 +438,17 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/custom_domain",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/identity-domain"],
-      "rules": ["auth0/custom-domain-lookup"],
+      "rootform_concepts": [
+        "auth0/identity-domain"
+      ],
+      "rules": [
+        "auth0.rule.custom-domain-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_custom_domains",
@@ -377,9 +463,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_event_stream",
@@ -390,13 +478,20 @@
       "product": "eventing-observability",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/event_stream",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
-      "relations": ["delivers-to-action"],
-      "rootform_concepts": ["auth0/identity-event-stream"],
-      "rules": ["auth0/event-stream-lookup"],
+      "relations": [
+        "delivers-to-action"
+      ],
+      "rootform_concepts": [
+        "auth0/identity-event-stream"
+      ],
+      "rules": [
+        "auth0.rule.event-stream-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_flow",
@@ -408,12 +503,17 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/flow",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/identity-workflow"],
-      "rules": ["auth0/flow-lookup"],
+      "rootform_concepts": [
+        "auth0/identity-workflow"
+      ],
+      "rules": [
+        "auth0.rule.flow-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_flow_vault_connection",
@@ -425,12 +525,17 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/flow_vault_connection",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/flow-vault-connection"],
-      "rules": ["auth0/flow-vault-connection-lookup"],
+      "rootform_concepts": [
+        "auth0.rule.flow-vault-connection"
+      ],
+      "rules": [
+        "auth0.rule.flow-vault-connection-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_form",
@@ -442,12 +547,17 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/form",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/identity-workflow"],
-      "rules": ["auth0/form-lookup"],
+      "rootform_concepts": [
+        "auth0/identity-workflow"
+      ],
+      "rules": [
+        "auth0.rule.form-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_network_acl",
@@ -459,12 +569,17 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/network_acl",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/authentication-boundary"],
-      "rules": ["auth0/network-acl-lookup"],
+      "rootform_concepts": [
+        "auth0/authentication-boundary"
+      ],
+      "rules": [
+        "auth0.rule.network-acl-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_organization",
@@ -476,29 +591,42 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/organization",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/customer-organization"],
-      "rules": ["auth0/organization-lookup"],
+      "rootform_concepts": [
+        "auth0/customer-organization"
+      ],
+      "rules": [
+        "auth0.rule.organization-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_organization_client",
       "construct_kind": "data_source",
       "contexts": [],
-      "contributions": ["core.identity-application", "customer-organization"],
+      "contributions": [
+        "auth0.concept.identity-application",
+        "customer-organization"
+      ],
       "family": "tenancy",
       "product": "tenants-organizations",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/organization_client",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/connection-configuration"],
-      "rules": ["auth0/organization-client-lookup"],
+      "rootform_concepts": [
+        "auth0/connection-configuration"
+      ],
+      "rules": [
+        "auth0.rule.organization-client-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_organization_clients",
@@ -513,9 +641,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_organization_role_groups",
@@ -530,9 +660,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_organization_role_members",
@@ -547,9 +679,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_organizations",
@@ -564,9 +698,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_outbound_ips",
@@ -581,9 +717,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_pages",
@@ -598,9 +736,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_phone_notification_template",
@@ -615,9 +755,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_phone_provider",
@@ -629,12 +771,17 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/phone_provider",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/notification-provider"],
-      "rules": ["auth0/phone-provider-lookup"],
+      "rootform_concepts": [
+        "auth0/notification-provider"
+      ],
+      "rules": [
+        "auth0.rule.phone-provider-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_prompt_screen_partials",
@@ -649,9 +796,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_prompt_screen_renderer",
@@ -666,9 +815,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_rate_limit_policies",
@@ -683,9 +834,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_rate_limit_policy",
@@ -695,14 +848,19 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/rate_limit_policy",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/authentication-configuration"],
-      "rules": ["auth0/rate-limit-policy-lookup"],
+      "rootform_concepts": [
+        "auth0/authentication-configuration"
+      ],
+      "rules": [
+        "auth0.rule.rate-limit-policy-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_resource_server",
@@ -714,12 +872,17 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/resource_server",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/api-resource-server"],
-      "rules": ["auth0/resource-server-lookup"],
+      "rootform_concepts": [
+        "auth0/api-resource-server"
+      ],
+      "rules": [
+        "auth0.rule.resource-server-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_role",
@@ -734,9 +897,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_self_service_profile",
@@ -748,12 +913,17 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/self_service_profile",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/self-service-sso-profile"],
-      "rules": ["auth0/self-service-profile-lookup"],
+      "rootform_concepts": [
+        "auth0/self-service-sso-profile"
+      ],
+      "rules": [
+        "auth0.rule.self-service-profile-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_signing_keys",
@@ -768,9 +938,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_tenant",
@@ -782,12 +954,17 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/tenant",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/identity-tenant"],
-      "rules": ["auth0/tenant-lookup"],
+      "rootform_concepts": [
+        "auth0/identity-tenant"
+      ],
+      "rules": [
+        "auth0.rule.tenant-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_token_exchange_profile",
@@ -798,13 +975,20 @@
       "product": "actions-hooks",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/token_exchange_profile",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
-      "relations": ["executes-action"],
-      "rootform_concepts": ["auth0/token-exchange-profile"],
-      "rules": ["auth0/token-exchange-profile-lookup"],
+      "relations": [
+        "executes-action"
+      ],
+      "rootform_concepts": [
+        "auth0.rule.token-exchange-profile"
+      ],
+      "rules": [
+        "auth0.rule.token-exchange-profile-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_user",
@@ -819,9 +1003,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_user_attribute_profile",
@@ -831,14 +1017,19 @@
       "family": "connections",
       "product": "self-service-sso",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/data-sources/user_attribute_profile",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/self-service-configuration"],
-      "rules": ["auth0/user-attribute-profile-lookup"],
+      "rootform_concepts": [
+        "auth0/self-service-configuration"
+      ],
+      "rules": [
+        "auth0.rule.user-attribute-profile-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_user_connected_accounts",
@@ -853,9 +1044,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_user_organizations",
@@ -870,9 +1063,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_action",
@@ -884,12 +1079,17 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/action",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/identity-extension"],
-      "rules": ["auth0/action"],
+      "rootform_concepts": [
+        "auth0/identity-extension"
+      ],
+      "rules": [
+        "auth0.rule.action"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_action_module",
@@ -899,14 +1099,19 @@
       "family": "extensibility",
       "product": "actions-hooks",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/action_module",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/extension-configuration"],
-      "rules": ["auth0/action-module"],
+      "rootform_concepts": [
+        "auth0/extension-configuration"
+      ],
+      "rules": [
+        "auth0.rule.action-module"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_attack_protection",
@@ -916,14 +1121,19 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/attack_protection",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/authentication-configuration"],
-      "rules": ["auth0/attack-protection"],
+      "rootform_concepts": [
+        "auth0/authentication-configuration"
+      ],
+      "rules": [
+        "auth0.rule.attack-protection"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_branding",
@@ -938,9 +1148,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_branding_phone_notification_template",
@@ -955,9 +1167,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_branding_theme",
@@ -972,9 +1186,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_client",
@@ -985,13 +1201,21 @@
       "product": "applications-apis",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/client",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
-      "relations": ["defaults-to-organization", "uses-api"],
-      "rootform_concepts": ["core/identity-application"],
-      "rules": ["auth0/client"],
+      "relations": [
+        "defaults-to-organization",
+        "uses-api"
+      ],
+      "rootform_concepts": [
+        "auth0.concept.identity-application"
+      ],
+      "rules": [
+        "auth0.rule.client"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_client_cimd",
@@ -1002,47 +1226,68 @@
       "product": "applications-apis",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/client_cimd",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
-      "relations": ["defaults-to-organization"],
-      "rootform_concepts": ["core/identity-application"],
-      "rules": ["auth0/client-cimd"],
+      "relations": [
+        "defaults-to-organization"
+      ],
+      "rootform_concepts": [
+        "auth0.concept.identity-application"
+      ],
+      "rules": [
+        "auth0.rule.client-cimd"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_client_credentials",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["core.identity-application"],
+      "contributions": [
+        "auth0.concept.identity-application"
+      ],
       "family": "applications",
       "product": "applications-apis",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/client_credentials",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/application-configuration"],
-      "rules": ["auth0/client-credentials"],
+      "rootform_concepts": [
+        "auth0/application-configuration"
+      ],
+      "rules": [
+        "auth0.rule.client-credentials"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_client_grant",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["core.identity-application"],
+      "contributions": [
+        "auth0.concept.identity-application"
+      ],
       "family": "applications",
       "product": "applications-apis",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/client_grant",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/application-configuration"],
-      "rules": ["auth0/client-grant"],
+      "rootform_concepts": [
+        "auth0/application-configuration"
+      ],
+      "rules": [
+        "auth0.rule.client-grant"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_connection",
@@ -1054,46 +1299,66 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/connection",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/identity-connection"],
-      "rules": ["auth0/connection"],
+      "rootform_concepts": [
+        "auth0/identity-connection"
+      ],
+      "rules": [
+        "auth0.rule.connection"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_connection_client",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["core.identity-application", "identity-connection"],
+      "contributions": [
+        "auth0.concept.identity-application",
+        "identity-connection"
+      ],
       "family": "connections",
       "product": "connections-federation",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/connection_client",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/connection-configuration"],
-      "rules": ["auth0/connection-client"],
+      "rootform_concepts": [
+        "auth0/connection-configuration"
+      ],
+      "rules": [
+        "auth0.rule.connection-client"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_connection_clients",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["identity-connection"],
+      "contributions": [
+        "identity-connection"
+      ],
       "family": "connections",
       "product": "connections-federation",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/connection_clients",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/connection-configuration"],
-      "rules": ["auth0/connection-clients"],
+      "rootform_concepts": [
+        "auth0/connection-configuration"
+      ],
+      "rules": [
+        "auth0.rule.connection-clients"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_connection_directory",
@@ -1104,47 +1369,68 @@
       "product": "connections-federation",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/connection_directory",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
-      "relations": ["synchronizes-connection"],
-      "rootform_concepts": ["auth0/directory-sync"],
-      "rules": ["auth0/connection-directory"],
+      "relations": [
+        "synchronizes-connection"
+      ],
+      "rootform_concepts": [
+        "auth0/directory-sync"
+      ],
+      "rules": [
+        "auth0.rule.connection-directory"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_connection_directory_synchronized_groups",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["directory-sync"],
+      "contributions": [
+        "directory-sync"
+      ],
       "family": "connections",
       "product": "connections-federation",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/connection_directory_synchronized_groups",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/connection-configuration"],
-      "rules": ["auth0/connection-directory-synchronized-groups"],
+      "rootform_concepts": [
+        "auth0/connection-configuration"
+      ],
+      "rules": [
+        "auth0.rule.connection-directory-synchronized-groups"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_connection_keys",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["identity-connection"],
+      "contributions": [
+        "identity-connection"
+      ],
       "family": "connections",
       "product": "connections-federation",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/connection_keys",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/connection-configuration"],
-      "rules": ["auth0/connection-keys"],
+      "rootform_concepts": [
+        "auth0/connection-configuration"
+      ],
+      "rules": [
+        "auth0.rule.connection-keys"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_connection_profile",
@@ -1154,31 +1440,43 @@
       "family": "connections",
       "product": "self-service-sso",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/connection_profile",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/self-service-configuration"],
-      "rules": ["auth0/connection-profile"],
+      "rootform_concepts": [
+        "auth0/self-service-configuration"
+      ],
+      "rules": [
+        "auth0.rule.connection-profile"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_connection_scim_configuration",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["identity-connection"],
+      "contributions": [
+        "identity-connection"
+      ],
       "family": "connections",
       "product": "connections-federation",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/connection_scim_configuration",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/connection-configuration"],
-      "rules": ["auth0/connection-scim-configuration"],
+      "rootform_concepts": [
+        "auth0/connection-configuration"
+      ],
+      "rules": [
+        "auth0.rule.connection-scim-configuration"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_connection_scim_token",
@@ -1193,9 +1491,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_custom_domain",
@@ -1207,46 +1507,65 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/custom_domain",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/identity-domain"],
-      "rules": ["auth0/custom-domain"],
+      "rootform_concepts": [
+        "auth0/identity-domain"
+      ],
+      "rules": [
+        "auth0.rule.custom-domain"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_custom_domain_default",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["identity-domain"],
+      "contributions": [
+        "identity-domain"
+      ],
       "family": "domains",
       "product": "custom-domains",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/custom_domain_default",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/domain-configuration"],
-      "rules": ["auth0/custom-domain-default"],
+      "rootform_concepts": [
+        "auth0/domain-configuration"
+      ],
+      "rules": [
+        "auth0.rule.custom-domain-default"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_custom_domain_verification",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["identity-domain"],
+      "contributions": [
+        "identity-domain"
+      ],
       "family": "domains",
       "product": "custom-domains",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/custom_domain_verification",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/domain-configuration"],
-      "rules": ["auth0/custom-domain-verification"],
+      "rootform_concepts": [
+        "auth0/domain-configuration"
+      ],
+      "rules": [
+        "auth0.rule.custom-domain-verification"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_email_provider",
@@ -1258,12 +1577,17 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/email_provider",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/notification-provider"],
-      "rules": ["auth0/email-provider"],
+      "rootform_concepts": [
+        "auth0/notification-provider"
+      ],
+      "rules": [
+        "auth0.rule.email-provider"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_email_template",
@@ -1278,9 +1602,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_encryption_key_manager",
@@ -1290,14 +1616,19 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/encryption_key_manager",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/authentication-configuration"],
-      "rules": ["auth0/encryption-key-manager"],
+      "rootform_concepts": [
+        "auth0/authentication-configuration"
+      ],
+      "rules": [
+        "auth0.rule.encryption-key-manager"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_event_stream",
@@ -1308,13 +1639,20 @@
       "product": "eventing-observability",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/event_stream",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
-      "relations": ["delivers-to-action"],
-      "rootform_concepts": ["auth0/identity-event-stream"],
-      "rules": ["auth0/event-stream"],
+      "relations": [
+        "delivers-to-action"
+      ],
+      "rootform_concepts": [
+        "auth0/identity-event-stream"
+      ],
+      "rules": [
+        "auth0.rule.event-stream"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_flow",
@@ -1326,12 +1664,17 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/flow",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/identity-workflow"],
-      "rules": ["auth0/flow"],
+      "rootform_concepts": [
+        "auth0/identity-workflow"
+      ],
+      "rules": [
+        "auth0.rule.flow"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_flow_vault_connection",
@@ -1343,12 +1686,17 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/flow_vault_connection",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/flow-vault-connection"],
-      "rules": ["auth0/flow-vault-connection"],
+      "rootform_concepts": [
+        "auth0.rule.flow-vault-connection"
+      ],
+      "rules": [
+        "auth0.rule.flow-vault-connection"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_form",
@@ -1360,12 +1708,17 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/form",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/identity-workflow"],
-      "rules": ["auth0/form"],
+      "rootform_concepts": [
+        "auth0/identity-workflow"
+      ],
+      "rules": [
+        "auth0.rule.form"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_guardian",
@@ -1375,14 +1728,19 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/guardian",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/authentication-configuration"],
-      "rules": ["auth0/guardian"],
+      "rootform_concepts": [
+        "auth0/authentication-configuration"
+      ],
+      "rules": [
+        "auth0.rule.guardian"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_hook",
@@ -1394,12 +1752,17 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/hook",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/identity-extension"],
-      "rules": ["auth0/hook"],
+      "rootform_concepts": [
+        "auth0/identity-extension"
+      ],
+      "rules": [
+        "auth0.rule.hook"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_log_stream",
@@ -1409,14 +1772,15 @@
       "family": "eventing-observability",
       "product": "eventing-observability",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/log_stream",
-      "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
+      "reason": "no-rule",
       "relations": [],
-      "rootform_concepts": ["auth0/identity-log-stream"],
-      "rules": ["auth0/log-stream"],
+      "rootform_concepts": [
+        "auth0/identity-log-stream"
+      ],
+      "rules": [],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "no-rule",
+      "tests": []
     },
     {
       "construct": "auth0_network_acl",
@@ -1428,12 +1792,17 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/network_acl",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/authentication-boundary"],
-      "rules": ["auth0/network-acl"],
+      "rootform_concepts": [
+        "auth0/authentication-boundary"
+      ],
+      "rules": [
+        "auth0.rule.network-acl"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_organization",
@@ -1445,131 +1814,187 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/organization",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/customer-organization"],
-      "rules": ["auth0/organization"],
+      "rootform_concepts": [
+        "auth0/customer-organization"
+      ],
+      "rules": [
+        "auth0.rule.organization"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_organization_client",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["core.identity-application", "customer-organization"],
+      "contributions": [
+        "auth0.concept.identity-application",
+        "customer-organization"
+      ],
       "family": "tenancy",
       "product": "tenants-organizations",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/organization_client",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/connection-configuration"],
-      "rules": ["auth0/organization-client"],
+      "rootform_concepts": [
+        "auth0/connection-configuration"
+      ],
+      "rules": [
+        "auth0.rule.organization-client"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_organization_client_grant",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["customer-organization"],
+      "contributions": [
+        "customer-organization"
+      ],
       "family": "tenancy",
       "product": "tenants-organizations",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/organization_client_grant",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/connection-configuration"],
-      "rules": ["auth0/organization-client-grant"],
+      "rootform_concepts": [
+        "auth0/connection-configuration"
+      ],
+      "rules": [
+        "auth0.rule.organization-client-grant"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_organization_clients",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["customer-organization"],
+      "contributions": [
+        "customer-organization"
+      ],
       "family": "tenancy",
       "product": "tenants-organizations",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/organization_clients",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/connection-configuration"],
-      "rules": ["auth0/organization-clients"],
+      "rootform_concepts": [
+        "auth0/connection-configuration"
+      ],
+      "rules": [
+        "auth0.rule.organization-clients"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_organization_connection",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["customer-organization", "identity-connection"],
+      "contributions": [
+        "customer-organization",
+        "identity-connection"
+      ],
       "family": "tenancy",
       "product": "tenants-organizations",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/organization_connection",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/connection-configuration"],
-      "rules": ["auth0/organization-connection"],
+      "rootform_concepts": [
+        "auth0/connection-configuration"
+      ],
+      "rules": [
+        "auth0.rule.organization-connection"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_organization_connections",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["customer-organization"],
+      "contributions": [
+        "customer-organization"
+      ],
       "family": "tenancy",
       "product": "tenants-organizations",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/organization_connections",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/connection-configuration"],
-      "rules": ["auth0/organization-connections"],
+      "rootform_concepts": [
+        "auth0/connection-configuration"
+      ],
+      "rules": [
+        "auth0.rule.organization-connections"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_organization_discovery_domain",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["customer-organization"],
+      "contributions": [
+        "customer-organization"
+      ],
       "family": "tenancy",
       "product": "tenants-organizations",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/organization_discovery_domain",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/connection-configuration"],
-      "rules": ["auth0/organization-discovery-domain"],
+      "rootform_concepts": [
+        "auth0/connection-configuration"
+      ],
+      "rules": [
+        "auth0.rule.organization-discovery-domain"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_organization_discovery_domains",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["customer-organization"],
+      "contributions": [
+        "customer-organization"
+      ],
       "family": "tenancy",
       "product": "tenants-organizations",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/organization_discovery_domains",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/connection-configuration"],
-      "rules": ["auth0/organization-discovery-domains"],
+      "rootform_concepts": [
+        "auth0/connection-configuration"
+      ],
+      "rules": [
+        "auth0.rule.organization-discovery-domains"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_organization_member",
@@ -1584,9 +2009,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_organization_member_role",
@@ -1601,9 +2028,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_organization_member_roles",
@@ -1618,9 +2047,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_organization_members",
@@ -1635,9 +2066,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_pages",
@@ -1652,9 +2085,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_phone_notification_template",
@@ -1669,9 +2104,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_phone_provider",
@@ -1683,12 +2120,17 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/phone_provider",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/notification-provider"],
-      "rules": ["auth0/phone-provider"],
+      "rootform_concepts": [
+        "auth0/notification-provider"
+      ],
+      "rules": [
+        "auth0.rule.phone-provider"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_prompt",
@@ -1703,9 +2145,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_prompt_custom_text",
@@ -1720,9 +2164,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_prompt_partials",
@@ -1737,9 +2183,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_prompt_screen_partial",
@@ -1754,9 +2202,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_prompt_screen_partials",
@@ -1771,9 +2221,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_prompt_screen_renderer",
@@ -1788,9 +2240,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_rate_limit_policy",
@@ -1800,14 +2254,19 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/rate_limit_policy",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/authentication-configuration"],
-      "rules": ["auth0/rate-limit-policy"],
+      "rootform_concepts": [
+        "auth0/authentication-configuration"
+      ],
+      "rules": [
+        "auth0.rule.rate-limit-policy"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_resource_server",
@@ -1819,46 +2278,65 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/resource_server",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/api-resource-server"],
-      "rules": ["auth0/resource-server"],
+      "rootform_concepts": [
+        "auth0/api-resource-server"
+      ],
+      "rules": [
+        "auth0.rule.resource-server"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_resource_server_scope",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["api-resource-server"],
+      "contributions": [
+        "api-resource-server"
+      ],
       "family": "applications",
       "product": "applications-apis",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/resource_server_scope",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/application-configuration"],
-      "rules": ["auth0/resource-server-scope"],
+      "rootform_concepts": [
+        "auth0/application-configuration"
+      ],
+      "rules": [
+        "auth0.rule.resource-server-scope"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_resource_server_scopes",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["api-resource-server"],
+      "contributions": [
+        "api-resource-server"
+      ],
       "family": "applications",
       "product": "applications-apis",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/resource_server_scopes",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/application-configuration"],
-      "rules": ["auth0/resource-server-scopes"],
+      "rootform_concepts": [
+        "auth0/application-configuration"
+      ],
+      "rules": [
+        "auth0.rule.resource-server-scopes"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_risk_assessments",
@@ -1868,14 +2346,19 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/risk_assessments",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/authentication-configuration"],
-      "rules": ["auth0/risk-assessments"],
+      "rootform_concepts": [
+        "auth0/authentication-configuration"
+      ],
+      "rules": [
+        "auth0.rule.risk-assessments"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_risk_assessments_new_device",
@@ -1885,14 +2368,19 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/risk_assessments_new_device",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/authentication-configuration"],
-      "rules": ["auth0/risk-assessments-new-device"],
+      "rootform_concepts": [
+        "auth0/authentication-configuration"
+      ],
+      "rules": [
+        "auth0.rule.risk-assessments-new-device"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_role",
@@ -1907,9 +2395,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_role_permission",
@@ -1924,9 +2414,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_role_permissions",
@@ -1941,9 +2433,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_rule",
@@ -1955,12 +2449,17 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/rule",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/identity-extension"],
-      "rules": ["auth0/rule"],
+      "rootform_concepts": [
+        "auth0/identity-extension"
+      ],
+      "rules": [
+        "auth0.rule.rule"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_rule_config",
@@ -1975,9 +2474,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_self_service_profile",
@@ -1989,12 +2490,17 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/self_service_profile",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/self-service-sso-profile"],
-      "rules": ["auth0/self-service-profile"],
+      "rootform_concepts": [
+        "auth0/self-service-sso-profile"
+      ],
+      "rules": [
+        "auth0.rule.self-service-profile"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_self_service_profile_custom_text",
@@ -2004,14 +2510,16 @@
       "family": "connections",
       "product": "self-service-sso",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/self_service_profile_custom_text",
-      "reason": "intentionally-unrepresented: fine-grained Auth0 configuration owns no independent architectural role",
+      "reason": "no-rule: fine-grained Auth0 configuration owns no independent architectural role",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_supplemental_signals",
@@ -2021,14 +2529,19 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/supplemental_signals",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/authentication-configuration"],
-      "rules": ["auth0/supplemental-signals"],
+      "rootform_concepts": [
+        "auth0/authentication-configuration"
+      ],
+      "rules": [
+        "auth0.rule.supplemental-signals"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_tenant",
@@ -2040,12 +2553,17 @@
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/tenant",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["auth0/identity-tenant"],
-      "rules": ["auth0/tenant"],
+      "rootform_concepts": [
+        "auth0/identity-tenant"
+      ],
+      "rules": [
+        "auth0.rule.tenant"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_token_exchange_profile",
@@ -2056,30 +2574,44 @@
       "product": "actions-hooks",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/token_exchange_profile",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
-      "relations": ["executes-action"],
-      "rootform_concepts": ["auth0/token-exchange-profile"],
-      "rules": ["auth0/token-exchange-profile"],
+      "relations": [
+        "executes-action"
+      ],
+      "rootform_concepts": [
+        "auth0.rule.token-exchange-profile"
+      ],
+      "rules": [
+        "auth0.rule.token-exchange-profile"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_trigger_action",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["identity-extension"],
+      "contributions": [
+        "identity-extension"
+      ],
       "family": "extensibility",
       "product": "actions-hooks",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/trigger_action",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/extension-configuration"],
-      "rules": ["auth0/trigger-action"],
+      "rootform_concepts": [
+        "auth0/extension-configuration"
+      ],
+      "rules": [
+        "auth0.rule.trigger-action"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_trigger_actions",
@@ -2089,14 +2621,19 @@
       "family": "extensibility",
       "product": "actions-hooks",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/trigger_actions",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/extension-configuration"],
-      "rules": ["auth0/trigger-actions"],
+      "rootform_concepts": [
+        "auth0/extension-configuration"
+      ],
+      "rules": [
+        "auth0.rule.trigger-actions"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_user",
@@ -2111,9 +2648,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_user_attribute_profile",
@@ -2123,14 +2662,19 @@
       "family": "connections",
       "product": "self-service-sso",
       "proof_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/user_attribute_profile",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["auth0/self-service-configuration"],
-      "rules": ["auth0/user-attribute-profile"],
+      "rootform_concepts": [
+        "auth0/self-service-configuration"
+      ],
+      "rules": [
+        "auth0.rule.user-attribute-profile"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["auth0-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "auth0-compiler-scenarios"
+      ]
     },
     {
       "construct": "auth0_user_permission",
@@ -2145,9 +2689,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_user_permissions",
@@ -2162,9 +2708,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_user_role",
@@ -2179,9 +2727,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "auth0_user_roles",
@@ -2196,9 +2746,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["auth0-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "auth0-coverage-validator"
+      ],
+      "treatment": "no-rule"
     }
   ]
 }

@@ -1,25 +1,20 @@
 concept "flink-compute-pool" {
-  kind        = entity
   description = "A regional Confluent Cloud for Apache Flink compute pool."
 }
 
 concept "flink-connection" {
-  kind        = entity
   description = "A managed connection available to Flink statements in a compute pool."
 }
 
 concept "flink-materialized-table" {
-  kind        = entity
   description = "A Confluent Cloud for Apache Flink materialized table."
 }
 
 concept "flink-artifact" {
-  kind        = detail
   description = "A user artifact available to Confluent Cloud for Apache Flink."
 }
 
 concept "flink-configuration" {
-  kind        = detail
   description = "Compute-pool configuration or a Flink SQL statement contributing processing behavior."
 }
 
@@ -31,7 +26,7 @@ rule "flink-compute-pool" {
   as = concept.flink-compute-pool
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.environment
     via = source.environment[0].id
   }
@@ -53,19 +48,19 @@ rule "flink-connection" {
   as = concept.flink-connection
 
   context {
-    as  = context.core.runtime
+    as  = rf.context.runtime
     to  = concept.flink-compute-pool
     via = source.compute_pool[0].id
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.environment
     via = source.environment[0].id
   }
 
   relation "uses-principal" {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.principal[0].id
   }
 }
@@ -78,7 +73,7 @@ rule "flink-materialized-table" {
   as = concept.flink-materialized-table
 
   context {
-    as  = context.core.runtime
+    as  = rf.context.runtime
     to  = concept.flink-compute-pool
     via = source.compute_pool[0].id
   }
@@ -89,7 +84,7 @@ rule "flink-materialized-table" {
   }
 
   relation "uses-principal" {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.principal[0].id
   }
 }
@@ -115,7 +110,7 @@ rule "flink-artifact" {
   as = concept.flink-artifact
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.environment
     via = source.environment[0].id
   }

@@ -1,50 +1,37 @@
 concept "edge-route" {
-  kind        = entity
   description = "A Cloudflare proxied hostname routing edge traffic to an application endpoint."
 }
 
 concept "dns-record-detail" {
-  kind        = detail
   description = "A DNS record contributing to a Cloudflare zone without independent architecture identity."
 }
 
 concept "zone-configuration" {
-  kind        = detail
   description = "Configuration contributing to a Cloudflare zone."
 }
 
-concept "dns-firewall" {
-  kind        = entity
-  description = "A Cloudflare DNS Firewall cluster protecting upstream DNS infrastructure."
-}
 
 concept "custom-hostname" {
-  kind        = entity
   description = "A customer hostname onboarded through Cloudflare for SaaS."
 }
 
 concept "saas-fallback-origin" {
-  kind        = entity
   description = "A default origin for Cloudflare for SaaS custom hostnames."
 }
 
 concept "web3-hostname" {
-  kind        = entity
   description = "A Cloudflare Web3 gateway hostname."
 }
 
 concept "dns-view" {
-  kind        = scope
   description = "A Cloudflare internal DNS view grouping zones for split-horizon resolution."
 }
 
 concept "dns-transfer-peer" {
-  kind        = entity
   description = "An authoritative DNS peer participating in secondary zone transfers."
 }
 
 concept "dns-transfer-configuration" {
-  kind        = detail
   description = "Secondary DNS transfer, ACL, or TSIG configuration."
 }
 
@@ -53,7 +40,7 @@ rule "zone" {
     type = "cloudflare_zone"
   }
 
-  as = concept.core.dns-zone
+  as = concept.dns-zone
 }
 
 rule "proxied-dns-record" {
@@ -65,13 +52,13 @@ rule "proxied-dns-record" {
   as = concept.edge-route
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.dns-zone
+    as  = context.ownership
+    to  = concept.dns-zone
     via = source.zone_id
   }
 
   relation "routes-to" {
-    to  = concept.core.load-balancer
+    to  = concept.load-balancer
     via = source.content
   }
 }
@@ -85,7 +72,7 @@ rule "dns-record" {
   as = concept.dns-record-detail
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -98,7 +85,7 @@ rule "zone-dnssec" {
   as = concept.zone-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -111,7 +98,7 @@ rule "zone-setting" {
   as = concept.zone-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -124,7 +111,7 @@ rule "zone-dns-settings" {
   as = concept.zone-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -137,18 +124,11 @@ rule "zone-hold" {
   as = concept.zone-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
 
-rule "dns-firewall" {
-  match {
-    type = "cloudflare_dns_firewall"
-  }
-
-  as = concept.dns-firewall
-}
 
 rule "custom-hostname" {
   match {
@@ -158,8 +138,8 @@ rule "custom-hostname" {
   as = concept.custom-hostname
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.dns-zone
+    as  = context.ownership
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -172,13 +152,13 @@ rule "custom-hostname-fallback-origin" {
   as = concept.saas-fallback-origin
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.dns-zone
+    as  = context.ownership
+    to  = concept.dns-zone
     via = source.zone_id
   }
 
   relation "routes-to" {
-    to  = concept.core.load-balancer
+    to  = concept.load-balancer
     via = source.origin
   }
 }
@@ -191,8 +171,8 @@ rule "web3-hostname" {
   as = concept.web3-hostname
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.dns-zone
+    as  = context.ownership
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -205,7 +185,7 @@ rule "account-dns-internal-view" {
   as = concept.dns-view
 
   relation "includes-zone" {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zones
   }
 }
@@ -218,8 +198,8 @@ rule "regional-hostname" {
   as = concept.edge-route
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.dns-zone
+    as  = context.ownership
+    to  = concept.dns-zone
     via = source.zone_id
   }
 }
@@ -240,7 +220,7 @@ rule "dns-transfer-incoming" {
   as = concept.dns-transfer-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 
@@ -258,7 +238,7 @@ rule "dns-transfer-outgoing" {
   as = concept.dns-transfer-configuration
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_id
   }
 

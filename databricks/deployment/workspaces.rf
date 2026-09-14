@@ -1,35 +1,25 @@
 concept "workspace" {
-  kind        = scope
   description = "A Databricks workspace providing an isolated environment for data, analytics, and AI workloads."
 }
 
 concept "workspace-root-storage" {
-  kind        = entity
   description = "A cloud storage registration used as root storage by Databricks workspaces."
 }
 
 concept "workspace-deployment-credential" {
-  kind        = entity
   description = "A cloud identity registration used to deploy Databricks workspace resources."
 }
 
 concept "workspace-key-configuration" {
-  kind        = entity
   description = "A customer-managed key registration protecting Databricks workspace data or services."
 }
 
 concept "log-delivery" {
-  kind        = entity
   description = "A Databricks account or workspace log-delivery configuration."
 }
 
-concept "disaster-recovery-failover-group" {
-  kind        = entity
-  description = "A Databricks disaster-recovery group coordinating workspace failover."
-}
 
 concept "workspace-configuration" {
-  kind        = detail
   description = "Configuration, assignment, or setting supporting a Databricks workspace."
 }
 
@@ -73,10 +63,6 @@ rule "workspace-deployment-credential" {
 
   as = concept.workspace-deployment-credential
 
-  relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
-    via = source.role_arn
-  }
 }
 
 rule "workspace-root-storage" {
@@ -87,14 +73,10 @@ rule "workspace-root-storage" {
   as = concept.workspace-root-storage
 
   relation "stores-in" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.bucket_name
   }
 
-  relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
-    via = source.role_arn
-  }
 }
 
 rule "workspace-customer-managed-key" {
@@ -105,12 +87,12 @@ rule "workspace-customer-managed-key" {
   as = concept.workspace-key-configuration
 
   relation "uses-key" {
-    to  = concept.core.encryption-key
+    to  = concept.encryption-key
     via = source.aws_key_info[0].key_arn
   }
 
   relation "uses-key" {
-    to  = concept.core.encryption-key
+    to  = concept.encryption-key
     via = source.gcp_key_info[0].kms_key_id
   }
 }
@@ -133,13 +115,6 @@ rule "log-delivery" {
   }
 }
 
-rule "disaster-recovery-failover-group" {
-  match {
-    type = "databricks_disaster_recovery_failover_group"
-  }
-
-  as = concept.disaster-recovery-failover-group
-}
 
 rule "disaster-recovery-stable-url" {
   match {

@@ -1,16 +1,13 @@
 # Maintained directly from pinned provider evidence.
 concept "dns-record" {
-  kind        = detail
   description = "A DNS record inside an Azure DNS zone."
 }
 
 concept "private-dns-resolver" {
-  kind        = entity
   description = "An Azure DNS Private Resolver forwarding DNS between networks."
 }
 
 concept "private-network-link" {
-  kind        = detail
   description = "An Azure Private DNS virtual network link."
 }
 
@@ -22,7 +19,7 @@ rule "dns-a-record" {
   as = concept.dns-record
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_name
   }
 }
@@ -35,7 +32,7 @@ rule "dns-aaaa-record" {
   as = concept.dns-record
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_name
   }
 }
@@ -48,7 +45,7 @@ rule "dns-cname-record" {
   as = concept.dns-record
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_name
   }
 }
@@ -61,7 +58,7 @@ rule "dns-mx-record" {
   as = concept.dns-record
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_name
   }
 }
@@ -74,7 +71,7 @@ rule "dns-ns-record" {
   as = concept.dns-record
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_name
   }
 }
@@ -87,7 +84,7 @@ rule "dns-ptr-record" {
   as = concept.dns-record
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_name
   }
 }
@@ -100,7 +97,7 @@ rule "dns-srv-record" {
   as = concept.dns-record
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_name
   }
 }
@@ -113,7 +110,7 @@ rule "dns-txt-record" {
   as = concept.dns-record
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.zone_name
   }
 }
@@ -123,10 +120,10 @@ rule "dns-zone" {
     type = "azurerm_dns_zone"
   }
 
-  as = concept.core.dns-zone
+  as = concept.dns-zone
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -140,7 +137,7 @@ rule "private-dns-a-record" {
   as = concept.dns-record
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.private_dns_zone_id
   }
 }
@@ -153,7 +150,7 @@ rule "private-dns-cname-record" {
   as = concept.dns-record
 
   contribution {
-    to  = concept.core.dns-zone
+    to  = concept.dns-zone
     via = source.private_dns_zone_id
   }
 }
@@ -190,7 +187,7 @@ rule "private-dns-resolver" {
   as = concept.private-dns-resolver
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

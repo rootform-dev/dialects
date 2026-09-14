@@ -1,10 +1,8 @@
 concept "service-integration" {
-  kind        = entity
   description = "A Datadog connection that collects telemetry from an external service or account."
 }
 
 concept "service-integration-configuration" {
-  kind        = detail
   description = "A resource or service selection supporting a Datadog integration."
 }
 

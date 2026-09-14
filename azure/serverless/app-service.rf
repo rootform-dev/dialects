@@ -1,16 +1,13 @@
 # Maintained directly from pinned provider evidence.
 concept "app-service" {
-  kind        = entity
   description = "An Azure App Service web application runtime."
 }
 
 concept "app-service-environment" {
-  kind        = scope
   description = "An isolated Azure App Service hosting environment."
 }
 
 concept "app-service-plan" {
-  kind        = scope
   description = "An Azure App Service plan providing shared runtime capacity."
 }
 
@@ -22,7 +19,7 @@ rule "app-service-environment" {
   as = concept.app-service-environment
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -36,7 +33,7 @@ rule "app-service-plan" {
   as = concept.app-service-plan
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -50,19 +47,19 @@ rule "linux-web-app" {
   as = concept.app-service
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
 
   context {
-    as  = context.core.network
-    to  = concept.core.subnet
+    as  = rf.context.network
+    to  = rf.concept.subnet
     via = source.virtual_network_subnet_id
   }
 
   context {
-    as  = context.core.runtime
+    as  = rf.context.runtime
     to  = concept.app-service-plan
     via = source.service_plan_id
   }
@@ -77,19 +74,19 @@ rule "windows-web-app" {
   as = concept.app-service
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
 
   context {
-    as  = context.core.network
-    to  = concept.core.subnet
+    as  = rf.context.network
+    to  = rf.concept.subnet
     via = source.virtual_network_subnet_id
   }
 
   context {
-    as  = context.core.runtime
+    as  = rf.context.runtime
     to  = concept.app-service-plan
     via = source.service_plan_id
   }

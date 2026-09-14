@@ -1,5 +1,4 @@
 concept "namespace" {
-  kind        = scope
   description = "A namespace partitioning one cluster's workloads, services, and storage."
 }
 
@@ -11,8 +10,8 @@ rule "kubernetes-namespace" {
   as = concept.namespace
 
   context {
-    as  = context.core.runtime
-    to  = concept.core.kubernetes-cluster
+    as  = rf.context.runtime
+    to  = rf.concept.kubernetes-cluster
     via = provider.host
   }
 }

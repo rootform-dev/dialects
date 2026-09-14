@@ -6,56 +6,54 @@
       "id": "minimal-data-platform",
       "fixture": "fixtures/snowflake-v2/minimal",
       "required_rules": [
-        "snowflake/database",
-        "snowflake/dynamic-table",
-        "snowflake/schema",
-        "snowflake/task",
-        "snowflake/warehouse"
+        "snowflake.rule.database",
+        "snowflake.rule.dynamic-table",
+        "snowflake.rule.schema",
+        "snowflake.rule.task",
+        "snowflake.rule.warehouse"
       ],
       "required_outcomes": {
-        "snowflake_database.analytics": "represented",
-        "snowflake_dynamic_table.orders": "represented",
-        "snowflake_schema.pipelines": "represented",
-        "snowflake_task.refresh": "represented",
-        "snowflake_warehouse.transform": "represented"
+        "snowflake_database.analytics": "representation-present",
+        "snowflake_dynamic_table.orders": "representation-present",
+        "snowflake_schema.pipelines": "representation-present",
+        "snowflake_task.refresh": "representation-present",
+        "snowflake_warehouse.transform": "representation-present"
       },
       "required_facts": [
         {
           "collection": "contexts",
-          "from": "scope:snowflake_schema.pipelines",
-          "to": "scope:snowflake_database.analytics",
-          "dimension": "core/ownership",
-          "rule": "snowflake/schema"
+          "from": "representation:1:root:resource:snowflake_schema.pipelines",
+          "to": "representation:1:root:resource:snowflake_database.analytics",
+          "dimension": "snowflake.context.ownership",
+          "rule": "snowflake.rule.schema"
         },
         {
           "collection": "contexts",
-          "from": "entity:snowflake_dynamic_table.orders",
-          "to": "entity:snowflake_warehouse.transform",
-          "dimension": "core/runtime",
-          "rule": "snowflake/dynamic-table"
+          "from": "representation:1:root:resource:snowflake_dynamic_table.orders",
+          "to": "representation:1:root:resource:snowflake_warehouse.transform",
+          "dimension": "rf.context.runtime",
+          "rule": "snowflake.rule.dynamic-table"
         },
         {
           "collection": "contexts",
-          "from": "entity:snowflake_task.refresh",
-          "to": "scope:snowflake_schema.pipelines",
-          "dimension": "core/ownership",
-          "rule": "snowflake/task"
+          "from": "representation:1:root:resource:snowflake_task.refresh",
+          "to": "representation:1:root:resource:snowflake_schema.pipelines",
+          "dimension": "snowflake.context.ownership",
+          "rule": "snowflake.rule.task"
         },
         {
           "collection": "contexts",
-          "from": "entity:snowflake_task.refresh",
-          "to": "entity:snowflake_warehouse.transform",
-          "dimension": "core/runtime",
-          "rule": "snowflake/task"
+          "from": "representation:1:root:resource:snowflake_task.refresh",
+          "to": "representation:1:root:resource:snowflake_warehouse.transform",
+          "dimension": "rf.context.runtime",
+          "rule": "snowflake.rule.task"
         }
       ],
       "minimum": {
-        "entities": 3,
-        "scopes": 2,
-        "details": 0,
+        "representations": 5,
+        "relations": 0,
         "contexts": 5,
-        "contributions": 0,
-        "relations": 0
+        "contributions": 0
       },
       "maximum_facts": {
         "contexts": 5,
@@ -78,142 +76,140 @@
       "id": "broad-cross-cloud",
       "fixture": "fixtures/snowflake-v2/scenarios",
       "required_rules": [
-        "snowflake/amazon-api-gateway-integration",
-        "snowflake/aws-storage-integration",
-        "snowflake/azure-api-management-integration",
-        "snowflake/azure-storage-integration",
-        "snowflake/compute-pool",
-        "snowflake/cortex-agent",
-        "snowflake/cortex-search-service",
-        "snowflake/external-azure-stage",
-        "snowflake/external-function",
-        "snowflake/external-gcs-stage",
-        "snowflake/external-s3-stage",
-        "snowflake/gcs-storage-integration",
-        "snowflake/google-cloud-api-gateway-integration",
-        "snowflake/listing",
-        "snowflake/mcp-server",
-        "snowflake/notification-integration",
-        "snowflake/pipe",
-        "snowflake/service",
-        "snowflake/streamlit",
-        "snowflake/task"
+        "snowflake.rule.amazon-api-gateway-integration",
+        "snowflake.rule.aws-storage-integration",
+        "snowflake.rule.azure-api-management-integration",
+        "snowflake.rule.azure-storage-integration",
+        "snowflake.rule.compute-pool",
+        "snowflake.rule.cortex-agent",
+        "snowflake.rule.cortex-search-service",
+        "snowflake.rule.external-azure-stage",
+        "snowflake.rule.external-function",
+        "snowflake.rule.external-gcs-stage",
+        "snowflake.rule.external-s3-stage",
+        "snowflake.rule.gcs-storage-integration",
+        "snowflake.rule.google-cloud-api-gateway-integration",
+        "snowflake.rule.listing",
+        "snowflake.rule.mcp-server",
+        "snowflake.rule.notification-integration",
+        "snowflake.rule.pipe",
+        "snowflake.rule.service",
+        "snowflake.rule.streamlit",
+        "snowflake.rule.task"
       ],
       "required_outcomes": {
-        "data.snowflake_warehouses.lookup": "unsupported",
-        "snowflake_secret_with_generic_string.credential": "unsupported",
-        "snowflake_stage_external_s3.aws": "represented",
-        "snowflake_storage_integration_aws.lake": "represented",
-        "snowflake_storage_integration_azure.lake": "represented",
-        "snowflake_storage_integration_gcs.lake": "represented"
+        "data.snowflake_warehouses.lookup": "no-rule",
+        "snowflake_secret_with_generic_string.credential": "no-rule",
+        "snowflake_stage_external_s3.aws": "representation-present",
+        "snowflake_storage_integration_aws.lake": "representation-present",
+        "snowflake_storage_integration_azure.lake": "representation-present",
+        "snowflake_storage_integration_gcs.lake": "representation-present"
       },
       "required_facts": [
         {
           "collection": "relations",
-          "from": "entity:snowflake_storage_integration_aws.lake",
-          "to": "entity:aws_s3_bucket.lake",
+          "from": "representation:1:root:resource:snowflake_storage_integration_aws.lake",
+          "to": "representation:1:root:resource:aws_s3_bucket.lake",
           "type": "authorizes-object-storage",
-          "rule": "snowflake/aws-storage-integration"
+          "rule": "snowflake.rule.aws-storage-integration"
         },
         {
           "collection": "relations",
-          "from": "entity:snowflake_storage_integration_azure.lake",
-          "to": "entity:azurerm_storage_container.lake",
+          "from": "representation:1:root:resource:snowflake_storage_integration_azure.lake",
+          "to": "representation:1:root:resource:azurerm_storage_container.lake",
           "type": "authorizes-object-storage",
-          "rule": "snowflake/azure-storage-integration"
+          "rule": "snowflake.rule.azure-storage-integration"
         },
         {
           "collection": "relations",
-          "from": "entity:snowflake_storage_integration_gcs.lake",
-          "to": "entity:google_storage_bucket.lake",
+          "from": "representation:1:root:resource:snowflake_storage_integration_gcs.lake",
+          "to": "representation:1:root:resource:google_storage_bucket.lake",
           "type": "authorizes-object-storage",
-          "rule": "snowflake/gcs-storage-integration"
+          "rule": "snowflake.rule.gcs-storage-integration"
         },
         {
           "collection": "relations",
-          "from": "entity:snowflake_stage_external_s3.aws",
-          "to": "entity:aws_s3_bucket.lake",
+          "from": "representation:1:root:resource:snowflake_stage_external_s3.aws",
+          "to": "representation:1:root:resource:aws_s3_bucket.lake",
           "type": "accesses-object-storage",
-          "rule": "snowflake/external-s3-stage"
+          "rule": "snowflake.rule.external-s3-stage"
         },
         {
           "collection": "relations",
-          "from": "entity:snowflake_stage_external_azure.azure",
-          "to": "entity:azurerm_storage_container.lake",
+          "from": "representation:1:root:resource:snowflake_stage_external_azure.azure",
+          "to": "representation:1:root:resource:azurerm_storage_container.lake",
           "type": "accesses-object-storage",
-          "rule": "snowflake/external-azure-stage"
+          "rule": "snowflake.rule.external-azure-stage"
         },
         {
           "collection": "relations",
-          "from": "entity:snowflake_stage_external_gcs.google",
-          "to": "entity:google_storage_bucket.lake",
+          "from": "representation:1:root:resource:snowflake_stage_external_gcs.google",
+          "to": "representation:1:root:resource:google_storage_bucket.lake",
           "type": "accesses-object-storage",
-          "rule": "snowflake/external-gcs-stage"
+          "rule": "snowflake.rule.external-gcs-stage"
         },
         {
           "collection": "relations",
-          "from": "entity:snowflake_notification_integration.aws",
-          "to": "entity:aws_sns_topic.snowpipe",
+          "from": "representation:1:root:resource:snowflake_notification_integration.aws",
+          "to": "representation:1:root:resource:aws_sns_topic.snowpipe",
           "type": "connects-message-topic",
-          "rule": "snowflake/notification-integration"
+          "rule": "snowflake.rule.notification-integration"
         },
         {
           "collection": "relations",
-          "from": "entity:snowflake_notification_integration.azure",
-          "to": "entity:azurerm_storage_queue.notifications",
+          "from": "representation:1:root:resource:snowflake_notification_integration.azure",
+          "to": "representation:1:root:resource:azurerm_storage_queue.notifications",
           "type": "connects-message-queue",
-          "rule": "snowflake/notification-integration"
+          "rule": "snowflake.rule.notification-integration"
         },
         {
           "collection": "relations",
-          "from": "entity:snowflake_notification_integration.google",
-          "to": "entity:google_pubsub_subscription.snowpipe",
+          "from": "representation:1:root:resource:snowflake_notification_integration.google",
+          "to": "representation:1:root:resource:google_pubsub_subscription.snowpipe",
           "type": "connects-message-subscription",
-          "rule": "snowflake/notification-integration"
+          "rule": "snowflake.rule.notification-integration"
         },
         {
           "collection": "contexts",
-          "from": "entity:snowflake_dynamic_table.orders",
-          "to": "entity:snowflake_warehouse.transform",
-          "dimension": "core/runtime",
-          "rule": "snowflake/dynamic-table"
+          "from": "representation:1:root:resource:snowflake_dynamic_table.orders",
+          "to": "representation:1:root:resource:snowflake_warehouse.transform",
+          "dimension": "rf.context.runtime",
+          "rule": "snowflake.rule.dynamic-table"
         },
         {
           "collection": "contexts",
-          "from": "entity:snowflake_service.application",
-          "to": "entity:snowflake_compute_pool.applications",
-          "dimension": "core/runtime",
-          "rule": "snowflake/service"
+          "from": "representation:1:root:resource:snowflake_service.application",
+          "to": "representation:1:root:resource:snowflake_compute_pool.applications",
+          "dimension": "rf.context.runtime",
+          "rule": "snowflake.rule.service"
         },
         {
           "collection": "relations",
-          "from": "entity:snowflake_service.application",
-          "to": "entity:snowflake_stage_internal.code",
+          "from": "representation:1:root:resource:snowflake_service.application",
+          "to": "representation:1:root:resource:snowflake_stage_internal.code",
           "type": "loads-specification-from-stage",
-          "rule": "snowflake/service"
+          "rule": "snowflake.rule.service"
         },
         {
           "collection": "relations",
-          "from": "entity:snowflake_external_function.score",
-          "to": "entity:snowflake_api_integration_amazon_api_gateway.aws",
+          "from": "representation:1:root:resource:snowflake_external_function.score",
+          "to": "representation:1:root:resource:snowflake_api_integration_amazon_api_gateway.aws",
           "type": "uses-api-integration",
-          "rule": "snowflake/external-function"
+          "rule": "snowflake.rule.external-function"
         },
         {
           "collection": "relations",
-          "from": "entity:snowflake_listing.analytics",
-          "to": "entity:snowflake_share.analytics",
+          "from": "representation:1:root:resource:snowflake_listing.analytics",
+          "to": "representation:1:root:resource:snowflake_share.analytics",
           "type": "publishes-share",
-          "rule": "snowflake/listing"
+          "rule": "snowflake.rule.listing"
         }
       ],
       "minimum": {
-        "entities": 46,
-        "scopes": 6,
-        "details": 1,
-        "contexts": 25,
-        "contributions": 1,
-        "relations": 37
+        "representations": 54,
+        "relations": 21,
+        "contexts": 27,
+        "contributions": 1
       },
       "maximum_facts": {
         "contexts": 25,
@@ -249,7 +245,6 @@
         "TRAVERSAL_AMBIGUOUS",
         "TRAVERSAL_AMBIGUOUS",
         "TRAVERSAL_AMBIGUOUS",
-        "TRAVERSAL_UNRESOLVED",
         "TRAVERSAL_UNRESOLVED",
         "TRAVERSAL_UNRESOLVED",
         "TRAVERSAL_UNRESOLVED"

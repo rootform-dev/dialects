@@ -1,10 +1,8 @@
 concept "access-control-configuration" {
-  kind        = detail
   description = "An IAM binding, membership, policy, or constraint supporting an HCP boundary."
 }
 
 concept "workload-identity-provider" {
-  kind        = entity
   description = "An HCP federation boundary exchanging an external workload identity for a service principal."
 }
 
@@ -13,7 +11,7 @@ rule "group" {
     type = "hcp_group"
   }
 
-  as = concept.core.identity-group
+  as = concept.identity-group
 }
 
 rule "group-iam-binding" {
@@ -24,7 +22,7 @@ rule "group-iam-binding" {
   as = concept.access-control-configuration
 
   contribution {
-    to  = concept.core.identity-group
+    to  = concept.identity-group
     via = source.name
   }
 }
@@ -37,7 +35,7 @@ rule "group-iam-policy" {
   as = concept.access-control-configuration
 
   contribution {
-    to  = concept.core.identity-group
+    to  = concept.identity-group
     via = source.name
   }
 }
@@ -48,7 +46,7 @@ rule "group-lookup" {
     type = "hcp_group"
   }
 
-  as = concept.core.identity-group
+  as = concept.identity-group
 }
 
 rule "group-members" {
@@ -59,7 +57,7 @@ rule "group-members" {
   as = concept.access-control-configuration
 
   contribution {
-    to  = concept.core.identity-group
+    to  = concept.identity-group
     via = source.group
   }
 }
@@ -72,7 +70,7 @@ rule "iam-workload-identity-provider" {
   as = concept.workload-identity-provider
 
   relation "federates-to" {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.service_principal
   }
 }
@@ -137,7 +135,7 @@ rule "service-principal" {
     type = "hcp_service_principal"
   }
 
-  as = concept.core.service-identity
+  as = rf.concept.service-identity
 }
 
 rule "service-principal-lookup" {
@@ -146,5 +144,5 @@ rule "service-principal-lookup" {
     type = "hcp_service_principal"
   }
 
-  as = concept.core.service-identity
+  as = rf.concept.service-identity
 }

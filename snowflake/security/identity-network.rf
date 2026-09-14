@@ -1,20 +1,13 @@
 concept "identity-integration" {
-  kind        = entity
   description = "A Snowflake identity or authentication integration with an external identity system."
 }
 
-concept "account-role" {
-  kind        = entity
-  description = "A Snowflake account role grouping privileges for access control."
-}
 
 concept "network-policy" {
-  kind        = entity
   description = "A Snowflake network policy controlling inbound account access."
 }
 
 concept "security-configuration" {
-  kind        = detail
   description = "A Snowflake security rule or database role supporting an access boundary."
 }
 
@@ -23,7 +16,7 @@ rule "service-user" {
     type = "snowflake_service_user"
   }
 
-  as = concept.core.service-identity
+  as = rf.concept.service-identity
 
   relation "uses-network-policy" {
     to  = concept.network-policy
@@ -41,7 +34,7 @@ rule "legacy-service-user" {
     type = "snowflake_legacy_service_user"
   }
 
-  as = concept.core.service-identity
+  as = rf.concept.service-identity
 
   relation "uses-network-policy" {
     to  = concept.network-policy
@@ -54,13 +47,6 @@ rule "legacy-service-user" {
   }
 }
 
-rule "account-role" {
-  match {
-    type = "snowflake_account_role"
-  }
-
-  as = concept.account-role
-}
 
 rule "database-role" {
   match {

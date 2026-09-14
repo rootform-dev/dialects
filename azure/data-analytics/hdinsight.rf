@@ -7,7 +7,7 @@ rule "hdinsight-hadoop-cluster" {
   as = concept.analytics-cluster
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -21,7 +21,7 @@ rule "hdinsight-hbase-cluster" {
   as = concept.analytics-cluster
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -35,7 +35,7 @@ rule "hdinsight-interactive-query-cluster" {
   as = concept.analytics-cluster
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -49,7 +49,7 @@ rule "hdinsight-kafka-cluster" {
   as = concept.analytics-cluster
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -63,7 +63,7 @@ rule "hdinsight-spark-cluster" {
   as = concept.analytics-cluster
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

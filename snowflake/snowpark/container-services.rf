@@ -1,15 +1,12 @@
 concept "compute-pool" {
-  kind        = entity
   description = "A Snowpark Container Services compute pool containing managed compute nodes."
 }
 
 concept "image-repository" {
-  kind        = entity
   description = "A Snowpark Container Services OCI image repository."
 }
 
 concept "container-service" {
-  kind        = entity
   description = "A Snowpark Container Services workload running on a compute pool."
 }
 
@@ -29,7 +26,7 @@ rule "image-repository" {
   as = concept.image-repository
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.schema
     via = source.schema
   }
@@ -43,13 +40,13 @@ rule "service" {
   as = concept.container-service
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.schema
     via = source.schema
   }
 
   context {
-    as  = context.core.runtime
+    as  = rf.context.runtime
     to  = concept.compute-pool
     via = source.compute_pool
   }
@@ -78,13 +75,13 @@ rule "job-service" {
   as = concept.container-service
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.schema
     via = source.schema
   }
 
   context {
-    as  = context.core.runtime
+    as  = rf.context.runtime
     to  = concept.compute-pool
     via = source.compute_pool
   }

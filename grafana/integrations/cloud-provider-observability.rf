@@ -1,5 +1,4 @@
 concept "cloud-integration-configuration" {
-  kind        = detail
   description = "A scrape job, integration package, or plugin supporting a Grafana Cloud integration."
 }
 
@@ -16,18 +15,14 @@ rule "cloud-provider-aws-account" {
     type = "grafana_cloud_provider_aws_account"
   }
 
-  as = concept.core.cloud-observability-integration
+  as = concept.cloud-observability-integration
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.stack_id
   }
 
-  relation "authorized-by" {
-    to  = concept.core.service-identity
-    via = source.role_arn
-  }
 }
 
 rule "cloud-provider-aws-account-lookup" {
@@ -36,18 +31,14 @@ rule "cloud-provider-aws-account-lookup" {
     type = "grafana_cloud_provider_aws_account"
   }
 
-  as = concept.core.cloud-observability-integration
+  as = concept.cloud-observability-integration
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.stack_id
   }
 
-  relation "authorized-by" {
-    to  = concept.core.service-identity
-    via = source.role_arn
-  }
 }
 
 rule "cloud-provider-aws-cloudwatch-scrape-job" {
@@ -58,13 +49,13 @@ rule "cloud-provider-aws-cloudwatch-scrape-job" {
   as = concept.cloud-integration-configuration
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.stack_id
   }
 
   contribution {
-    to  = concept.core.cloud-observability-integration
+    to  = concept.cloud-observability-integration
     via = source.aws_account_resource_id
   }
 }
@@ -78,13 +69,13 @@ rule "cloud-provider-aws-cloudwatch-scrape-job-lookup" {
   as = concept.cloud-integration-configuration
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.stack_id
   }
 
   contribution {
-    to  = concept.core.cloud-observability-integration
+    to  = concept.cloud-observability-integration
     via = source.aws_account_resource_id
   }
 }
@@ -97,13 +88,13 @@ rule "cloud-provider-aws-resource-metadata-scrape-job" {
   as = concept.cloud-integration-configuration
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.stack_id
   }
 
   contribution {
-    to  = concept.core.cloud-observability-integration
+    to  = concept.cloud-observability-integration
     via = source.aws_account_resource_id
   }
 }
@@ -113,16 +104,16 @@ rule "cloud-provider-azure-credential" {
     type = "grafana_cloud_provider_azure_credential"
   }
 
-  as = concept.core.cloud-observability-integration
+  as = concept.cloud-observability-integration
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.stack_id
   }
 
   relation "authorized-by" {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.client_id
   }
 }
@@ -133,16 +124,16 @@ rule "cloud-provider-azure-credential-lookup" {
     type = "grafana_cloud_provider_azure_credential"
   }
 
-  as = concept.core.cloud-observability-integration
+  as = concept.cloud-observability-integration
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.stack_id
   }
 
   relation "authorized-by" {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.client_id
   }
 }

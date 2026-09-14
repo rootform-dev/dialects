@@ -1544,8 +1544,14 @@
           "azurerm_windows_function_app",
           "azurerm_windows_web_app"
         ],
-        "ephemeral_resources": ["azurerm_key_vault_certificate", "azurerm_key_vault_secret"],
-        "provider_functions": ["normalise_resource_id", "parse_resource_id"],
+        "ephemeral_resources": [
+          "azurerm_key_vault_certificate",
+          "azurerm_key_vault_secret"
+        ],
+        "provider_functions": [
+          "normalise_resource_id",
+          "parse_resource_id"
+        ],
         "resource_identities": [
           "azurerm_analysis_services_server",
           "azurerm_application_gateway",
@@ -1754,7 +1760,9 @@
           "azapi_resource_id",
           "azapi_resource_list"
         ],
-        "ephemeral_resources": ["azapi_resource_action"],
+        "ephemeral_resources": [
+          "azapi_resource_action"
+        ],
         "provider_functions": [
           "build_resource_id",
           "extension_resource_id",
@@ -1766,7 +1774,9 @@
           "tenant_resource_id",
           "unique_string"
         ],
-        "resource_identities": ["azapi_resource"]
+        "resource_identities": [
+          "azapi_resource"
+        ]
       }
     },
     {

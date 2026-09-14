@@ -1,25 +1,17 @@
 concept "cloudflare-tunnel" {
-  kind        = entity
   description = "A Cloudflare Tunnel logical link from private resources to the Cloudflare network."
 }
 
-concept "tunnel-virtual-network" {
-  kind        = scope
-  description = "A virtual routing boundary for Cloudflare Tunnel private routes."
-}
 
 concept "tunnel-configuration" {
-  kind        = detail
   description = "Ingress, private route, hostname route, or connector configuration supporting a Cloudflare Tunnel."
 }
 
 concept "connectivity-service" {
-  kind        = entity
   description = "A service published through Cloudflare Connectivity Directory."
 }
 
 concept "warp-connector" {
-  kind        = entity
   description = "A Cloudflare WARP Connector joining a private network to Cloudflare."
 }
 
@@ -56,19 +48,12 @@ rule "cloudflare-tunnel-route" {
   }
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.network
   }
 }
 
-rule "cloudflare-tunnel-virtual-network" {
-  match {
-    type = "cloudflare_zero_trust_tunnel_cloudflared_virtual_network"
-  }
-
-  as = concept.tunnel-virtual-network
-}
 
 rule "cloudflare-tunnel-hostname-route" {
   match {

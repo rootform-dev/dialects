@@ -12,10 +12,9 @@
       "major": false,
       "constructs": 7,
       "counts": {
-        "supported": 1,
-        "partial": 1,
-        "intentionally-unrepresented": 5,
-        "unsupported": 0
+        "rule-present": 1,
+        "partial-rule": 1,
+        "no-rule": 5
       }
     },
     {
@@ -26,10 +25,9 @@
       "major": true,
       "constructs": 3,
       "counts": {
-        "supported": 2,
-        "partial": 0,
-        "intentionally-unrepresented": 1,
-        "unsupported": 0
+        "rule-present": 2,
+        "partial-rule": 0,
+        "no-rule": 1
       }
     },
     {
@@ -40,10 +38,9 @@
       "major": true,
       "constructs": 11,
       "counts": {
-        "supported": 5,
-        "partial": 2,
-        "intentionally-unrepresented": 4,
-        "unsupported": 0
+        "rule-present": 5,
+        "partial-rule": 2,
+        "no-rule": 4
       }
     },
     {
@@ -54,10 +51,9 @@
       "major": true,
       "constructs": 2,
       "counts": {
-        "supported": 0,
-        "partial": 2,
-        "intentionally-unrepresented": 0,
-        "unsupported": 0
+        "rule-present": 0,
+        "partial-rule": 2,
+        "no-rule": 0
       }
     },
     {
@@ -68,10 +64,9 @@
       "major": true,
       "constructs": 4,
       "counts": {
-        "supported": 1,
-        "partial": 3,
-        "intentionally-unrepresented": 0,
-        "unsupported": 0
+        "rule-present": 1,
+        "partial-rule": 3,
+        "no-rule": 0
       }
     },
     {
@@ -82,10 +77,9 @@
       "major": true,
       "constructs": 3,
       "counts": {
-        "supported": 0,
-        "partial": 3,
-        "intentionally-unrepresented": 0,
-        "unsupported": 0
+        "rule-present": 0,
+        "partial-rule": 3,
+        "no-rule": 0
       }
     },
     {
@@ -96,10 +90,9 @@
       "major": true,
       "constructs": 8,
       "counts": {
-        "supported": 3,
-        "partial": 2,
-        "intentionally-unrepresented": 3,
-        "unsupported": 0
+        "rule-present": 3,
+        "partial-rule": 2,
+        "no-rule": 3
       }
     },
     {
@@ -110,10 +103,9 @@
       "major": true,
       "constructs": 15,
       "counts": {
-        "supported": 2,
-        "partial": 3,
-        "intentionally-unrepresented": 10,
-        "unsupported": 0
+        "rule-present": 2,
+        "partial-rule": 3,
+        "no-rule": 10
       }
     },
     {
@@ -124,10 +116,9 @@
       "major": false,
       "constructs": 4,
       "counts": {
-        "supported": 0,
-        "partial": 0,
-        "intentionally-unrepresented": 4,
-        "unsupported": 0
+        "rule-present": 0,
+        "partial-rule": 0,
+        "no-rule": 4
       }
     }
   ]

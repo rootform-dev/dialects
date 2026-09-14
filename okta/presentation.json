@@ -74,7 +74,6 @@
     "org-captcha-lookup": "generic/entity",
     "org-configuration": "generic/scope",
     "org-metadata-lookup": "generic/scope",
-    "policy-rule-idp-discovery": "generic/entity",
     "realm": "generic/scope",
     "realm-assignment": "generic/entity",
     "realm-assignment-lookup": "generic/entity",
@@ -86,24 +85,6 @@
     "trusted-origin": "generic/entity",
     "trusted-origin-lookup": "generic/entity",
     "trusted-server": "generic/entity"
-  },
-  "concepts": {
-    "application-configuration": "generic/entity",
-    "authentication-configuration": "generic/entity",
-    "authorization-server": "generic/identity",
-    "authorization-server-configuration": "generic/entity",
-    "domain-configuration": "generic/entity",
-    "external-identity-provider": "generic/identity",
-    "federation-configuration": "generic/entity",
-    "hook-configuration": "generic/entity",
-    "identity-domain": "generic/network",
-    "identity-event-extension": "generic/network",
-    "identity-log-stream": "generic/network",
-    "identity-realm": "generic/scope",
-    "identity-tenant": "generic/scope",
-    "network-zone": "generic/scope",
-    "provisioning-connection": "generic/network",
-    "security-events-provider": "generic/network"
   },
   "rule_labels": {
     "api-service-integration": "Okta API Service Integration",
@@ -179,7 +160,6 @@
     "org-captcha-lookup": "Okta org-wide CAPTCHA settings lookup",
     "org-configuration": "Okta org",
     "org-metadata-lookup": "Okta org metadata",
-    "policy-rule-idp-discovery": "Okta Identity Provider discovery rule",
     "realm": "Okta Realm",
     "realm-assignment": "Okta Realm assignment",
     "realm-assignment-lookup": "Okta Realm assignment lookup",
@@ -192,6 +172,23 @@
     "trusted-origin-lookup": "Okta Trusted Origin lookup",
     "trusted-server": "Okta trusted Authorization Server association"
   },
+  "concepts": {
+    "application-configuration": "generic/entity",
+    "authentication-configuration": "generic/entity",
+    "authorization-server": "generic/identity",
+    "authorization-server-configuration": "generic/entity",
+    "domain-configuration": "generic/entity",
+    "external-identity-provider": "generic/identity",
+    "hook-configuration": "generic/entity",
+    "identity-domain": "generic/network",
+    "identity-event-extension": "generic/network",
+    "identity-log-stream": "generic/network",
+    "identity-realm": "generic/scope",
+    "identity-tenant": "generic/scope",
+    "network-zone": "generic/scope",
+    "provisioning-connection": "generic/network",
+    "security-events-provider": "generic/network"
+  },
   "concept_labels": {
     "application-configuration": "Okta app integration configuration",
     "authentication-configuration": "Okta authentication configuration",
@@ -199,7 +196,6 @@
     "authorization-server-configuration": "Okta Authorization Server configuration",
     "domain-configuration": "Okta custom domain configuration",
     "external-identity-provider": "Okta external Identity Provider",
-    "federation-configuration": "Okta federation configuration",
     "hook-configuration": "Okta hook configuration",
     "identity-domain": "Okta custom domain",
     "identity-event-extension": "Okta hook",
@@ -209,5 +205,11 @@
     "network-zone": "Okta Network Zone",
     "provisioning-connection": "Okta provisioning connection",
     "security-events-provider": "Okta Security Events Provider"
+  },
+  "resources": {
+    "resource/okta_policy_rule_idp_discovery": "generic/entity"
+  },
+  "resource_labels": {
+    "resource/okta_policy_rule_idp_discovery": "Okta Identity Provider discovery rule"
   }
 }

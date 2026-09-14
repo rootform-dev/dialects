@@ -4,10 +4,10 @@ rule "point-to-site-vpn-gateway" {
     type = "azurerm_point_to_site_vpn_gateway"
   }
 
-  as = concept.core.vpn-gateway
+  as = concept.vpn-gateway
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -18,10 +18,10 @@ rule "virtual-network-gateway" {
     type = "azurerm_virtual_network_gateway"
   }
 
-  as = concept.core.vpn-gateway
+  as = concept.vpn-gateway
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -32,10 +32,10 @@ rule "virtual-network-gateway-connection" {
     type = "azurerm_virtual_network_gateway_connection"
   }
 
-  as = concept.core.vpn-connection
+  as = concept.vpn-connection
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -46,10 +46,10 @@ rule "vpn-gateway" {
     type = "azurerm_vpn_gateway"
   }
 
-  as = concept.core.vpn-gateway
+  as = concept.vpn-gateway
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -60,7 +60,7 @@ rule "vpn-gateway-connection" {
     type = "azurerm_vpn_gateway_connection"
   }
 
-  as = concept.core.vpn-connection
+  as = concept.vpn-connection
 }
 
 rule "vpn-site" {
@@ -71,7 +71,7 @@ rule "vpn-site" {
   as = concept.local-network-gateway
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

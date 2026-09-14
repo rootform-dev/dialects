@@ -1,30 +1,18 @@
 concept "account" {
-  kind        = scope
   description = "A Cloudflare account as a tenancy and ownership boundary."
 }
 
-concept "organization" {
-  kind        = scope
-  description = "A Cloudflare organization grouping accounts and resources."
-}
 
-concept "resource-share" {
-  kind        = entity
-  description = "A Cloudflare resource share across account boundaries."
-}
 
 concept "feature-flag-application" {
-  kind        = entity
   description = "A Cloudflare feature-flag application."
 }
 
 concept "feature-flag" {
-  kind        = detail
   description = "A feature flag owned by a feature-flag application."
 }
 
 concept "account-configuration" {
-  kind        = detail
   description = "Configuration applied to a Cloudflare account boundary."
 }
 
@@ -36,21 +24,7 @@ rule "account" {
   as = concept.account
 }
 
-rule "organization" {
-  match {
-    type = "cloudflare_organization"
-  }
 
-  as = concept.organization
-}
-
-rule "resource-share" {
-  match {
-    type = "cloudflare_share"
-  }
-
-  as = concept.resource-share
-}
 
 rule "flagship-app" {
   match {

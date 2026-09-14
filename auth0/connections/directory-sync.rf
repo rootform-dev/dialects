@@ -1,5 +1,4 @@
 concept "directory-sync" {
-  kind        = entity
   description = "An Auth0 Directory Sync integration attached to an enterprise Connection."
 }
 

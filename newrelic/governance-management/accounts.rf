@@ -4,7 +4,7 @@ rule "account-lookup" {
     type = "newrelic_account"
   }
 
-  as = concept.core.observability-tenant
+  as = concept.observability-tenant
 }
 
 rule "account-management" {
@@ -12,5 +12,5 @@ rule "account-management" {
     type = "newrelic_account_management"
   }
 
-  as = concept.core.observability-tenant
+  as = concept.observability-tenant
 }

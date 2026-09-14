@@ -1,6 +1,5 @@
 # Maintained directly from pinned provider evidence.
 concept "compute-image" {
-  kind        = entity
   description = "A reusable Azure compute image or image definition."
 }
 
@@ -12,7 +11,7 @@ rule "compute-image" {
   as = concept.compute-image
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -26,7 +25,7 @@ rule "shared-image" {
   as = concept.compute-image
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

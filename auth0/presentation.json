@@ -42,7 +42,6 @@
     "form-lookup": "generic/entity",
     "guardian": "generic/entity",
     "hook": "generic/compute",
-    "log-stream": "generic/network",
     "network-acl": "generic/scope",
     "network-acl-lookup": "generic/scope",
     "organization": "generic/scope",
@@ -77,29 +76,6 @@
     "trigger-actions": "generic/entity",
     "user-attribute-profile": "generic/entity",
     "user-attribute-profile-lookup": "generic/entity"
-  },
-  "concepts": {
-    "api-resource-server": "generic/entity",
-    "application-configuration": "generic/entity",
-    "authentication-boundary": "generic/scope",
-    "authentication-configuration": "generic/entity",
-    "connection-configuration": "generic/entity",
-    "customer-organization": "generic/scope",
-    "directory-sync": "generic/identity",
-    "domain-configuration": "generic/entity",
-    "extension-configuration": "generic/entity",
-    "flow-vault-connection": "generic/network",
-    "identity-connection": "generic/identity",
-    "identity-domain": "generic/network",
-    "identity-event-stream": "generic/network",
-    "identity-extension": "generic/compute",
-    "identity-log-stream": "generic/network",
-    "identity-tenant": "generic/scope",
-    "identity-workflow": "generic/entity",
-    "notification-provider": "generic/network",
-    "self-service-configuration": "generic/entity",
-    "self-service-sso-profile": "generic/identity",
-    "token-exchange-profile": "generic/identity"
   },
   "rule_labels": {
     "action": "Auth0 Action",
@@ -143,7 +119,6 @@
     "form-lookup": "Auth0 Form lookup",
     "guardian": "Auth0 guardian",
     "hook": "Auth0 Hook",
-    "log-stream": "Auth0 Log Stream",
     "network-acl": "Auth0 Network ACL",
     "network-acl-lookup": "Auth0 Network ACL lookup",
     "organization": "Auth0 Organization",
@@ -179,6 +154,28 @@
     "user-attribute-profile": "Auth0 User Attribute Profile",
     "user-attribute-profile-lookup": "Auth0 User Attribute Profile lookup"
   },
+  "concepts": {
+    "api-resource-server": "generic/entity",
+    "application-configuration": "generic/entity",
+    "authentication-boundary": "generic/scope",
+    "authentication-configuration": "generic/entity",
+    "connection-configuration": "generic/entity",
+    "customer-organization": "generic/scope",
+    "directory-sync": "generic/identity",
+    "domain-configuration": "generic/entity",
+    "extension-configuration": "generic/entity",
+    "flow-vault-connection": "generic/network",
+    "identity-connection": "generic/identity",
+    "identity-domain": "generic/network",
+    "identity-event-stream": "generic/network",
+    "identity-extension": "generic/compute",
+    "identity-tenant": "generic/scope",
+    "identity-workflow": "generic/entity",
+    "notification-provider": "generic/network",
+    "self-service-configuration": "generic/entity",
+    "self-service-sso-profile": "generic/identity",
+    "token-exchange-profile": "generic/identity"
+  },
   "concept_labels": {
     "api-resource-server": "Auth0 API",
     "application-configuration": "Auth0 Application configuration",
@@ -194,12 +191,17 @@
     "identity-domain": "Auth0 custom domain",
     "identity-event-stream": "Auth0 Event Stream",
     "identity-extension": "Auth0 identity extension",
-    "identity-log-stream": "Auth0 Log Stream",
     "identity-tenant": "Auth0 tenant",
     "identity-workflow": "Auth0 Form or Flow",
     "notification-provider": "Auth0 notification provider",
     "self-service-configuration": "Auth0 Self-Service SSO configuration",
     "self-service-sso-profile": "Auth0 Self-Service SSO profile",
     "token-exchange-profile": "Auth0 Custom Token Exchange profile"
+  },
+  "resources": {
+    "resource/auth0_log_stream": "generic/network"
+  },
+  "resource_labels": {
+    "resource/auth0_log_stream": "Auth0 Log Stream"
   }
 }

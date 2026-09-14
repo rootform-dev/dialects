@@ -1,16 +1,13 @@
 # Maintained directly from pinned provider evidence.
 concept "data-factory" {
-  kind        = scope
   description = "An Azure Data Factory integration and orchestration boundary."
 }
 
 concept "data-integration-detail" {
-  kind        = detail
   description = "A dataset, linked service, trigger, connection, or data-flow supporting integration."
 }
 
 concept "data-integration-runtime" {
-  kind        = entity
   description = "A managed or self-hosted Azure data integration runtime."
 }
 
@@ -22,7 +19,7 @@ rule "data-factory" {
   as = concept.data-factory
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -73,7 +70,7 @@ rule "data-factory-pipeline" {
     type = "azurerm_data_factory_pipeline"
   }
 
-  as = concept.core.workflow
+  as = concept.workflow
 }
 
 rule "data-factory-schedule-trigger" {

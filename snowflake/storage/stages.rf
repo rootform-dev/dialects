@@ -1,5 +1,4 @@
 concept "stage" {
-  kind        = entity
   description = "A named Snowflake stage for loading, unloading, or serving files."
 }
 
@@ -11,7 +10,7 @@ rule "stage" {
   as = concept.stage
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.schema
     via = source.schema
   }
@@ -22,7 +21,7 @@ rule "stage" {
   }
 
   relation "accesses-object-storage" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.url
   }
 }
@@ -35,7 +34,7 @@ rule "external-azure-stage" {
   as = concept.stage
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.schema
     via = source.schema
   }
@@ -46,7 +45,7 @@ rule "external-azure-stage" {
   }
 
   relation "accesses-object-storage" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.url
   }
 
@@ -64,7 +63,7 @@ rule "external-gcs-stage" {
   as = concept.stage
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.schema
     via = source.schema
   }
@@ -75,7 +74,7 @@ rule "external-gcs-stage" {
   }
 
   relation "accesses-object-storage" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.url
   }
 
@@ -85,7 +84,7 @@ rule "external-gcs-stage" {
   }
 
   relation "uses-encryption-key" {
-    to  = concept.core.encryption-key
+    to  = concept.encryption-key
     via = source.encryption[0].gcs_sse_kms[0].kms_key_id
   }
 }
@@ -98,7 +97,7 @@ rule "external-s3-stage" {
   as = concept.stage
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.schema
     via = source.schema
   }
@@ -109,22 +108,17 @@ rule "external-s3-stage" {
   }
 
   relation "accesses-object-storage" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.url
   }
 
   relation "receives-storage-events" {
-    to  = concept.core.message-topic
+    to  = concept.message-topic
     via = source.directory[0].aws_sns_topic
   }
 
-  relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
-    via = source.credentials[0].aws_role
-  }
-
   relation "uses-encryption-key" {
-    to  = concept.core.encryption-key
+    to  = concept.encryption-key
     via = source.encryption[0].aws_sse_kms[0].kms_key_id
   }
 }
@@ -137,13 +131,13 @@ rule "external-s3-compatible-stage" {
   as = concept.stage
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.schema
     via = source.schema
   }
 
   relation "accesses-object-storage" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.url
   }
 }
@@ -156,7 +150,7 @@ rule "internal-stage" {
   as = concept.stage
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.schema
     via = source.schema
   }

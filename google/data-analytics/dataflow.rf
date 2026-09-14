@@ -1,5 +1,4 @@
 concept "dataflow-job" {
-  kind        = entity
   description = "A Dataflow batch or streaming job."
 }
 

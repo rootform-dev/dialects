@@ -1,10 +1,8 @@
 concept "network-connectivity-center-hub" {
-  kind        = scope
   description = "A Network Connectivity Center hub coordinating connectivity through spokes."
 }
 
 concept "network-connectivity-center-spoke" {
-  kind        = detail
   description = "A spoke attaching a network resource to a Network Connectivity Center hub."
 }
 

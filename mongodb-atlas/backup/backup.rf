@@ -1,10 +1,8 @@
 concept "backup-export-destination" {
-  kind        = entity
   description = "A MongoDB Atlas cloud backup export destination backed by customer object storage."
 }
 
 concept "backup-configuration" {
-  kind        = detail
   description = "A backup compliance or retention configuration supporting an Atlas project."
 }
 
@@ -13,16 +11,16 @@ rule "cloud-backup-schedule" {
     type = "mongodbatlas_cloud_backup_schedule"
   }
 
-  as = concept.core.backup-plan
+  as = concept.backup-plan
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
 
   relation "protects" {
-    to  = concept.core.managed-database
+    to  = rf.concept.managed-database
     via = source.cluster_name
   }
 
@@ -40,13 +38,13 @@ rule "cloud-backup-export-destination" {
   as = concept.backup-export-destination
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
 
   relation "stores-in" {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.bucket_name
   }
 

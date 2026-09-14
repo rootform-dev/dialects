@@ -1,10 +1,8 @@
 concept "authentication-configuration" {
-  kind        = detail
   description = "Authenticator, CAPTCHA, behavior, trusted-origin, or threat configuration supporting authentication."
 }
 
 concept "network-zone" {
-  kind        = scope
   description = "A network location boundary used by Okta authentication and access decisions."
 }
 

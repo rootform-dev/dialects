@@ -1,10 +1,8 @@
 concept "lakeflow-pipeline" {
-  kind        = entity
   description = "A Lakeflow pipeline running declarative batch or streaming data processing."
 }
 
 concept "orchestration-configuration" {
-  kind        = detail
   description = "A task, query, repository, or environment artifact supporting Databricks orchestration."
 }
 
@@ -13,7 +11,7 @@ rule "lakeflow-job" {
     type = "databricks_job"
   }
 
-  as = concept.core.workflow
+  as = concept.workflow
 
   relation "runs-on" {
     to  = concept.compute-cluster

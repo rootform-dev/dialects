@@ -1,5 +1,4 @@
 concept "virtual-warehouse" {
-  kind        = entity
   description = "A Snowflake virtual warehouse providing an independent compute cluster."
 }
 

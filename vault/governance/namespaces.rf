@@ -1,10 +1,8 @@
 concept "governance-configuration" {
-  kind        = detail
   description = "A policy, quota, or administrative object supporting Vault governance."
 }
 
 concept "namespace" {
-  kind        = scope
   description = "An isolated Vault tenancy boundary for secrets, auth methods, identities, and policies."
 }
 
@@ -40,7 +38,7 @@ rule "namespace" {
   as = concept.namespace
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }

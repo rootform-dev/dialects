@@ -1,33 +1,10 @@
-concept "cx-agent-studio-app" {
-  kind        = scope
-  description = "A CX Agent Studio application containing conversational agents."
-}
 
-concept "cx-agent-studio-agent" {
-  kind        = entity
-  description = "A conversational agent defined in a CX Agent Studio application."
-}
 
 concept "cx-agent-studio-configuration" {
-  kind        = detail
   description = "A version, deployment, tool, guardrail, or other configuration supporting a CX Agent Studio application."
 }
 
-rule "cx-agent-studio-app" {
-  match {
-    type = "google_ces_app"
-  }
 
-  as = concept.cx-agent-studio-app
-}
-
-rule "cx-agent-studio-agent" {
-  match {
-    type = "google_ces_agent"
-  }
-
-  as = concept.cx-agent-studio-agent
-}
 
 rule "cx-agent-studio-root-agent-association" {
   match {

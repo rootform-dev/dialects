@@ -27,7 +27,6 @@
     "logs-custom-pipeline": "generic/entity",
     "logs-index": "generic/entity",
     "logs-integration-pipeline": "generic/entity",
-    "observability-pipeline": "generic/network",
     "org-connection": "generic/network",
     "rum-application": "generic/entity",
     "rum-application-lookup": "generic/entity",
@@ -45,19 +44,6 @@
     "synthetics-test-lookup": "generic/entity",
     "workflow-automation": "generic/entity",
     "workflow-automation-lookup": "generic/entity"
-  },
-  "concepts": {
-    "application-datastore": "generic/storage",
-    "automation-application": "generic/entity",
-    "automation-workflow": "generic/entity",
-    "catalog-definition": "generic/entity",
-    "organization-connection": "generic/network",
-    "security-configuration": "generic/identity",
-    "service-integration": "generic/entity",
-    "service-integration-configuration": "generic/entity",
-    "telemetry-configuration": "generic/entity",
-    "telemetry-destination": "generic/storage",
-    "telemetry-pipeline": "generic/network"
   },
   "rule_labels": {
     "action-connection": "Datadog Action connection",
@@ -86,7 +72,6 @@
     "logs-custom-pipeline": "Datadog Logs custom pipeline",
     "logs-index": "Datadog Logs index",
     "logs-integration-pipeline": "Datadog Logs integration pipeline",
-    "observability-pipeline": "Datadog Observability Pipeline",
     "org-connection": "Datadog org connection",
     "rum-application": "Datadog RUM application",
     "rum-application-lookup": "Datadog RUM application lookup",
@@ -105,6 +90,18 @@
     "workflow-automation": "Datadog Workflow Automation workflow",
     "workflow-automation-lookup": "Datadog Workflow Automation lookup"
   },
+  "concepts": {
+    "application-datastore": "generic/storage",
+    "automation-application": "generic/entity",
+    "automation-workflow": "generic/entity",
+    "catalog-definition": "generic/entity",
+    "organization-connection": "generic/network",
+    "security-configuration": "generic/identity",
+    "service-integration": "generic/entity",
+    "service-integration-configuration": "generic/entity",
+    "telemetry-configuration": "generic/entity",
+    "telemetry-destination": "generic/storage"
+  },
   "concept_labels": {
     "application-datastore": "Datadog datastore",
     "automation-application": "Datadog App Builder app",
@@ -115,7 +112,12 @@
     "service-integration": "Datadog service integration",
     "service-integration-configuration": "Datadog service integration configuration",
     "telemetry-configuration": "Datadog telemetry configuration",
-    "telemetry-destination": "Datadog telemetry destination",
-    "telemetry-pipeline": "Datadog Observability Pipeline"
+    "telemetry-destination": "Datadog telemetry destination"
+  },
+  "resources": {
+    "resource/datadog_observability_pipeline": "generic/network"
+  },
+  "resource_labels": {
+    "resource/datadog_observability_pipeline": "Datadog Observability Pipeline"
   }
 }

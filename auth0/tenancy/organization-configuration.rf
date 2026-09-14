@@ -11,7 +11,7 @@ rule "organization-client" {
   }
 
   contribution {
-    to  = concept.core.identity-application
+    to  = concept.identity-application
     via = source.client_id
   }
 }
@@ -43,7 +43,7 @@ rule "organization-client-lookup" {
   }
 
   contribution {
-    to  = concept.core.identity-application
+    to  = concept.identity-application
     via = source.client_id
   }
 }

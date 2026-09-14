@@ -4,18 +4,13 @@
   "total_constructs": 208,
   "managed_resources": 143,
   "data_sources": 65,
-  "rules": 87,
+  "rules": 85,
   "status": {
-    "supported": 70,
-    "partial": 17,
-    "intentionally-unrepresented": 121,
-    "unsupported": 0
+    "rule-present": 70,
+    "partial-rule": 17,
+    "no-rule": 0
   },
   "treatment": {
-    "entity": 64,
-    "scope": 6,
-    "detail": 17,
-    "intentionally-unrepresented": 121,
-    "unsupported": 0
+    "no-rule": 0
   }
 }

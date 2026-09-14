@@ -1,15 +1,12 @@
 concept "auth-configuration" {
-  kind        = detail
   description = "A role, mapping, certificate, or setting supporting a Vault auth method."
 }
 
 concept "auth-method" {
-  kind        = entity
   description = "A mounted Vault auth method verifying a human or machine identity."
 }
 
 concept "kubernetes-auth-integration" {
-  kind        = entity
   description = "A Vault Kubernetes authentication integration connecting a mounted auth method to a Kubernetes cluster."
 }
 
@@ -47,7 +44,7 @@ rule "auth-backend" {
   as = concept.auth-method
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
@@ -210,13 +207,13 @@ rule "gcp-auth-backend" {
   as = concept.auth-method
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
 
   relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.service_account_email
   }
 }
@@ -242,7 +239,7 @@ rule "github-auth-backend" {
   as = concept.auth-method
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
@@ -269,7 +266,7 @@ rule "jwt-auth-backend" {
   as = concept.auth-method
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
@@ -330,13 +327,13 @@ rule "kubernetes-auth-backend-config" {
   as = concept.kubernetes-auth-integration
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
 
   relation "authenticates-kubernetes-cluster" {
-    to  = concept.core.kubernetes-cluster
+    to  = rf.concept.kubernetes-cluster
     via = source.kubernetes_host
   }
 
@@ -367,7 +364,7 @@ rule "ldap-auth-backend" {
   as = concept.auth-method
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
@@ -420,7 +417,7 @@ rule "okta-auth-backend" {
   as = concept.auth-method
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
@@ -460,7 +457,7 @@ rule "saml-auth-backend" {
   as = concept.auth-method
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }

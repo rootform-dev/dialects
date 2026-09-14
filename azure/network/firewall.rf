@@ -1,16 +1,13 @@
 # Maintained directly from pinned provider evidence.
 concept "azure-firewall" {
-  kind        = entity
   description = "An Azure Firewall managed network security service."
 }
 
 concept "firewall-policy" {
-  kind        = detail
   description = "An Azure Firewall or web application firewall policy."
 }
 
 concept "web-application-firewall-policy" {
-  kind        = entity
   description = "A reusable Azure Web Application Firewall policy applied to Application Gateway traffic."
 }
 
@@ -22,7 +19,7 @@ rule "azure-firewall" {
   as = concept.azure-firewall
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -52,7 +49,7 @@ rule "web-application-firewall-policy" {
   as = concept.web-application-firewall-policy
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

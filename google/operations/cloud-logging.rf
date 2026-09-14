@@ -1,17 +1,11 @@
 concept "cloud-logging-sink" {
-  kind        = entity
   description = "A Cloud Logging sink routing selected log entries to a destination."
 }
 
 concept "cloud-logging-bucket" {
-  kind        = entity
   description = "A Cloud Logging bucket retaining log entries."
 }
 
-concept "cloud-logging-scope" {
-  kind        = scope
-  description = "A Cloud Logging scope aggregating log views."
-}
 
 rule "cloud-logging-project-sink" {
   match {
@@ -75,12 +69,4 @@ rule "cloud-logging-billing-account-bucket" {
   }
 
   as = concept.cloud-logging-bucket
-}
-
-rule "cloud-logging-scope" {
-  match {
-    type = "google_logging_log_scope"
-  }
-
-  as = concept.cloud-logging-scope
 }

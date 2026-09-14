@@ -1,7 +1,0 @@
-rule "athena-workgroup" {
-  match {
-    type = "aws_athena_workgroup"
-  }
-
-  as = concept.athena-workgroup
-}

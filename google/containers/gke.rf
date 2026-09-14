@@ -3,22 +3,22 @@ rule "gke-cluster" {
     type = "google_container_cluster"
   }
 
-  as = concept.core.kubernetes-cluster
+  as = rf.concept.kubernetes-cluster
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.network
   }
 
   context {
-    as  = context.core.network
-    to  = concept.core.subnet
+    as  = rf.context.network
+    to  = rf.concept.subnet
     via = source.subnetwork
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.google-cloud-project
     via = source.project
   }
@@ -29,10 +29,10 @@ rule "gke-node-pool" {
     type = "google_container_node_pool"
   }
 
-  as = concept.core.kubernetes-node-pool
+  as = concept.kubernetes-node-pool
 
   contribution {
-    to  = concept.core.kubernetes-cluster
+    to  = rf.concept.kubernetes-cluster
     via = source.cluster
   }
 }
@@ -42,7 +42,7 @@ rule "gke-attached-cluster" {
     type = "google_container_attached_cluster"
   }
 
-  as = concept.core.kubernetes-cluster
+  as = rf.concept.kubernetes-cluster
 }
 
 rule "gke-aws-cluster" {
@@ -50,7 +50,7 @@ rule "gke-aws-cluster" {
     type = "google_container_aws_cluster"
   }
 
-  as = concept.core.kubernetes-cluster
+  as = rf.concept.kubernetes-cluster
 }
 
 rule "gke-aws-node-pool" {
@@ -58,7 +58,7 @@ rule "gke-aws-node-pool" {
     type = "google_container_aws_node_pool"
   }
 
-  as = concept.core.kubernetes-node-pool
+  as = concept.kubernetes-node-pool
 }
 
 rule "gke-azure-cluster" {
@@ -66,7 +66,7 @@ rule "gke-azure-cluster" {
     type = "google_container_azure_cluster"
   }
 
-  as = concept.core.kubernetes-cluster
+  as = rf.concept.kubernetes-cluster
 }
 
 rule "gke-azure-node-pool" {
@@ -74,5 +74,5 @@ rule "gke-azure-node-pool" {
     type = "google_container_azure_node_pool"
   }
 
-  as = concept.core.kubernetes-node-pool
+  as = concept.kubernetes-node-pool
 }

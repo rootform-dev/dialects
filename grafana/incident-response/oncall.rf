@@ -1,10 +1,8 @@
 concept "oncall-integration" {
-  kind        = entity
   description = "An inbound Grafana OnCall integration receiving alerts from an external system."
 }
 
 concept "oncall-routing" {
-  kind        = detail
   description = "A route supporting an OnCall integration without becoming an application flow."
 }
 

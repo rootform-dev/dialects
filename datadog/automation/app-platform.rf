@@ -1,10 +1,8 @@
 concept "application-datastore" {
-  kind        = entity
   description = "A Datadog-managed datastore used by App Builder and Workflow Automation."
 }
 
 concept "automation-application" {
-  kind        = entity
   description = "An application assembled and published with Datadog App Builder."
 }
 

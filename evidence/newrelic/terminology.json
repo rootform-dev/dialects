@@ -11,249 +11,241 @@
   },
   "rules": [
     {
-      "id": "newrelic/account-lookup",
+      "id": "newrelic.rule.account-lookup",
       "label": "New Relic account lookup"
     },
     {
-      "id": "newrelic/account-management",
+      "id": "newrelic.rule.account-management",
       "label": "New Relic account"
     },
     {
-      "id": "newrelic/application-lookup",
+      "id": "newrelic.rule.application-lookup",
       "label": "New Relic APM application lookup"
     },
     {
-      "id": "newrelic/application-settings",
+      "id": "newrelic.rule.application-settings",
       "label": "New Relic application settings"
     },
     {
-      "id": "newrelic/aws-connection",
+      "id": "newrelic.rule.aws-connection",
       "label": "New Relic AWS Connection"
     },
     {
-      "id": "newrelic/browser-application",
+      "id": "newrelic.rule.browser-application",
       "label": "New Relic browser application"
     },
     {
-      "id": "newrelic/cardinality-management",
+      "id": "newrelic.rule.cardinality-management",
       "label": "New Relic cardinality management"
     },
     {
-      "id": "newrelic/cloud-account-lookup",
+      "id": "newrelic.rule.cloud-account-lookup",
       "label": "New Relic linked cloud account lookup"
     },
     {
-      "id": "newrelic/cloud-aws-eu-sovereign-integrations",
+      "id": "newrelic.rule.cloud-aws-eu-sovereign-integrations",
       "label": "New Relic AWS European Union Sovereign Cloud integrations"
     },
     {
-      "id": "newrelic/cloud-aws-eu-sovereign-link-account",
+      "id": "newrelic.rule.cloud-aws-eu-sovereign-link-account",
       "label": "New Relic AWS European Union Sovereign Cloud linked account"
     },
     {
-      "id": "newrelic/cloud-aws-govcloud-integrations",
+      "id": "newrelic.rule.cloud-aws-govcloud-integrations",
       "label": "New Relic AWS GovCloud integrations"
     },
     {
-      "id": "newrelic/cloud-aws-govcloud-link-account",
+      "id": "newrelic.rule.cloud-aws-govcloud-link-account",
       "label": "New Relic AWS GovCloud linked account"
     },
     {
-      "id": "newrelic/cloud-aws-integrations",
+      "id": "newrelic.rule.cloud-aws-integrations",
       "label": "New Relic AWS integrations"
     },
     {
-      "id": "newrelic/cloud-aws-link-account",
+      "id": "newrelic.rule.cloud-aws-link-account",
       "label": "New Relic AWS linked account"
     },
     {
-      "id": "newrelic/cloud-azure-integrations",
+      "id": "newrelic.rule.cloud-azure-integrations",
       "label": "New Relic Azure integrations"
     },
     {
-      "id": "newrelic/cloud-azure-link-account",
+      "id": "newrelic.rule.cloud-azure-link-account",
       "label": "New Relic Azure linked account"
     },
     {
-      "id": "newrelic/cloud-gcp-dm-integrations",
+      "id": "newrelic.rule.cloud-gcp-dm-integrations",
       "label": "New Relic Google Cloud dimensional metrics integrations"
     },
     {
-      "id": "newrelic/cloud-gcp-integrations",
+      "id": "newrelic.rule.cloud-gcp-integrations",
       "label": "New Relic Google Cloud integrations"
     },
     {
-      "id": "newrelic/cloud-gcp-link-account",
+      "id": "newrelic.rule.cloud-gcp-link-account",
       "label": "New Relic Google Cloud linked account"
     },
     {
-      "id": "newrelic/cloud-oci-link-account",
+      "id": "newrelic.rule.cloud-oci-link-account",
       "label": "New Relic Oracle Cloud Infrastructure linked account"
     },
     {
-      "id": "newrelic/data-partition-rule",
+      "id": "newrelic.rule.data-partition-rule",
       "label": "New Relic data partition rule"
     },
     {
-      "id": "newrelic/events-to-metrics-rule",
+      "id": "newrelic.rule.events-to-metrics-rule",
       "label": "New Relic events-to-metrics rule"
     },
     {
-      "id": "newrelic/federated-logs-partition",
+      "id": "newrelic.rule.federated-logs-partition",
       "label": "New Relic Federated Logs partition"
     },
     {
-      "id": "newrelic/federated-logs-setup",
+      "id": "newrelic.rule.federated-logs-setup",
       "label": "New Relic Federated Logs setup"
     },
     {
-      "id": "newrelic/fleet",
+      "id": "newrelic.rule.fleet",
       "label": "New Relic Fleet Control fleet"
     },
     {
-      "id": "newrelic/fleet-configuration",
+      "id": "newrelic.rule.fleet-configuration",
       "label": "New Relic Fleet Control configuration"
     },
     {
-      "id": "newrelic/fleet-configuration-lookup",
+      "id": "newrelic.rule.fleet-configuration-lookup",
       "label": "New Relic Fleet Control configuration lookup"
     },
     {
-      "id": "newrelic/fleet-deployment",
+      "id": "newrelic.rule.fleet-deployment",
       "label": "New Relic Fleet Control deployment"
     },
     {
-      "id": "newrelic/fleet-members",
+      "id": "newrelic.rule.fleet-members",
       "label": "New Relic Fleet Control membership"
     },
     {
-      "id": "newrelic/fleet-members-lookup",
+      "id": "newrelic.rule.fleet-members-lookup",
       "label": "New Relic Fleet Control membership lookup"
     },
     {
-      "id": "newrelic/key-transaction",
+      "id": "newrelic.rule.key-transaction",
       "label": "New Relic key transaction"
     },
     {
-      "id": "newrelic/key-transaction-lookup",
+      "id": "newrelic.rule.key-transaction-lookup",
       "label": "New Relic key transaction lookup"
     },
     {
-      "id": "newrelic/log-parsing-rule",
+      "id": "newrelic.rule.log-parsing-rule",
       "label": "New Relic log parsing rule"
     },
     {
-      "id": "newrelic/metric-pruning-rule",
+      "id": "newrelic.rule.metric-pruning-rule",
       "label": "New Relic metric pruning rule"
     },
     {
-      "id": "newrelic/nrql-drop-rule",
+      "id": "newrelic.rule.nrql-drop-rule",
       "label": "New Relic NRQL drop rule"
     },
     {
-      "id": "newrelic/obfuscation-expression",
+      "id": "newrelic.rule.obfuscation-expression",
       "label": "New Relic obfuscation expression"
     },
     {
-      "id": "newrelic/obfuscation-expression-lookup",
+      "id": "newrelic.rule.obfuscation-expression-lookup",
       "label": "New Relic obfuscation expression lookup"
     },
     {
-      "id": "newrelic/obfuscation-rule",
+      "id": "newrelic.rule.obfuscation-rule",
       "label": "New Relic obfuscation rule"
     },
     {
-      "id": "newrelic/pipeline-cloud-rule",
+      "id": "newrelic.rule.pipeline-cloud-rule",
       "label": "New Relic Pipeline Cloud Rule"
     },
     {
-      "id": "newrelic/service-level",
-      "label": "New Relic service level"
-    },
-    {
-      "id": "newrelic/synthetics-broken-links-monitor",
+      "id": "newrelic.rule.synthetics-broken-links-monitor",
       "label": "New Relic Synthetics broken links monitor"
     },
     {
-      "id": "newrelic/synthetics-cert-check-monitor",
+      "id": "newrelic.rule.synthetics-cert-check-monitor",
       "label": "New Relic Synthetics certificate check monitor"
     },
     {
-      "id": "newrelic/synthetics-monitor",
+      "id": "newrelic.rule.synthetics-monitor",
       "label": "New Relic Synthetics monitor"
     },
     {
-      "id": "newrelic/synthetics-private-location",
+      "id": "newrelic.rule.synthetics-private-location",
       "label": "New Relic Synthetics private location"
     },
     {
-      "id": "newrelic/synthetics-private-location-lookup",
+      "id": "newrelic.rule.synthetics-private-location-lookup",
       "label": "New Relic Synthetics private location lookup"
     },
     {
-      "id": "newrelic/synthetics-script-monitor",
+      "id": "newrelic.rule.synthetics-script-monitor",
       "label": "New Relic Synthetics scripted monitor"
     },
     {
-      "id": "newrelic/synthetics-step-monitor",
+      "id": "newrelic.rule.synthetics-step-monitor",
       "label": "New Relic Synthetics step monitor"
     },
     {
-      "id": "newrelic/workflow-automation",
-      "label": "New Relic Workflow Automation workflow"
-    },
-    {
-      "id": "newrelic/workload",
+      "id": "newrelic.rule.workload",
       "label": "New Relic workload"
     }
   ],
   "concepts": [
     {
-      "id": "newrelic/apm-application",
+      "id": "newrelic.concept.apm-application",
       "label": "New Relic APM application"
     },
     {
-      "id": "newrelic/application-configuration",
+      "id": "newrelic.concept.application-configuration",
       "label": "New Relic application configuration"
     },
     {
-      "id": "newrelic/cloud-integration-configuration",
+      "id": "newrelic.concept.cloud-integration-configuration",
       "label": "New Relic cloud integration configuration"
     },
     {
-      "id": "newrelic/aws-connection",
+      "id": "newrelic.rule.aws-connection",
       "label": "New Relic AWS Connection"
     },
     {
-      "id": "newrelic/federated-logs-setup",
+      "id": "newrelic.rule.federated-logs-setup",
       "label": "New Relic Federated Logs setup"
     },
     {
-      "id": "newrelic/federated-logs-partition",
+      "id": "newrelic.rule.federated-logs-partition",
       "label": "New Relic Federated Logs partition"
     },
     {
-      "id": "newrelic/fleet",
+      "id": "newrelic.rule.fleet",
       "label": "New Relic Fleet Control fleet"
     },
     {
-      "id": "newrelic/fleet-configuration",
+      "id": "newrelic.rule.fleet-configuration",
       "label": "New Relic Fleet Control configuration"
     },
     {
-      "id": "newrelic/fleet-deployment",
+      "id": "newrelic.rule.fleet-deployment",
       "label": "New Relic Fleet Control deployment"
     },
     {
-      "id": "newrelic/fleet-membership",
+      "id": "newrelic.concept.fleet-membership",
       "label": "New Relic Fleet Control membership"
     },
     {
-      "id": "newrelic/telemetry-processing-configuration",
+      "id": "newrelic.concept.telemetry-processing-configuration",
       "label": "New Relic telemetry processing configuration"
     },
     {
-      "id": "newrelic/observability-workload",
+      "id": "newrelic.concept.observability-workload",
       "label": "New Relic workload"
     }
   ]

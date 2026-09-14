@@ -7,12 +7,12 @@ rule "subnet-nat-gateway-association" {
   as = concept.network-policy-detail
 
   contribution {
-    to  = concept.core.subnet
+    to  = rf.concept.subnet
     via = source.subnet_id
   }
 
   contribution {
-    to  = concept.core.managed-nat
+    to  = concept.managed-nat
     via = source.nat_gateway_id
   }
 }

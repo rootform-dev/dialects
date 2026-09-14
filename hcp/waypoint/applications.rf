@@ -1,30 +1,24 @@
 concept "waypoint-add-on" {
-  kind        = entity
   description = "Supporting infrastructure installed for an HCP Waypoint application."
 }
 
 concept "waypoint-add-on-definition" {
-  kind        = entity
   description = "A reusable HCP Waypoint definition for application supporting infrastructure."
 }
 
 concept "waypoint-agent-group" {
-  kind        = entity
   description = "A group of agents executing HCP Waypoint actions."
 }
 
 concept "waypoint-application" {
-  kind        = entity
   description = "An application instantiated and managed through HCP Waypoint."
 }
 
 concept "waypoint-configuration" {
-  kind        = detail
   description = "An action or HCP Terraform connection supporting HCP Waypoint."
 }
 
 concept "waypoint-template" {
-  kind        = entity
   description = "A reusable HCP Waypoint golden pattern for application infrastructure."
 }
 
@@ -53,7 +47,7 @@ rule "waypoint-add-on" {
   as = concept.waypoint-add-on
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -77,7 +71,7 @@ rule "waypoint-add-on-definition" {
   as = concept.waypoint-add-on-definition
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -92,7 +86,7 @@ rule "waypoint-add-on-definition-lookup" {
   as = concept.waypoint-add-on-definition
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -107,7 +101,7 @@ rule "waypoint-add-on-lookup" {
   as = concept.waypoint-add-on
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -131,7 +125,7 @@ rule "waypoint-agent-group" {
   as = concept.waypoint-agent-group
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -146,7 +140,7 @@ rule "waypoint-agent-group-lookup" {
   as = concept.waypoint-agent-group
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -160,7 +154,7 @@ rule "waypoint-application" {
   as = concept.waypoint-application
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -180,7 +174,7 @@ rule "waypoint-application-lookup" {
   as = concept.waypoint-application
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -199,7 +193,7 @@ rule "waypoint-template" {
   as = concept.waypoint-template
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -214,7 +208,7 @@ rule "waypoint-template-lookup" {
   as = concept.waypoint-template
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }

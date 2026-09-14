@@ -1,17 +1,11 @@
 concept "healthcare-dataset" {
-  kind        = scope
   description = "A Cloud Healthcare API dataset containing healthcare data stores."
 }
 
 concept "healthcare-store" {
-  kind        = entity
   description = "A FHIR, DICOM, HL7v2, or consent store in a Cloud Healthcare API dataset."
 }
 
-concept "healthcare-pipeline" {
-  kind        = entity
-  description = "A Cloud Healthcare API pipeline moving or transforming healthcare data."
-}
 
 rule "healthcare-dataset" {
   match {
@@ -29,7 +23,7 @@ rule "healthcare-fhir-store" {
   as = concept.healthcare-store
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.healthcare-dataset
     via = source.dataset
   }
@@ -43,7 +37,7 @@ rule "healthcare-dicom-store" {
   as = concept.healthcare-store
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.healthcare-dataset
     via = source.dataset
   }
@@ -57,7 +51,7 @@ rule "healthcare-hl7v2-store" {
   as = concept.healthcare-store
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.healthcare-dataset
     via = source.dataset
   }
@@ -71,16 +65,8 @@ rule "healthcare-consent-store" {
   as = concept.healthcare-store
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.healthcare-dataset
     via = source.dataset
   }
-}
-
-rule "healthcare-pipeline" {
-  match {
-    type = "google_healthcare_pipeline_job"
-  }
-
-  as = concept.healthcare-pipeline
 }

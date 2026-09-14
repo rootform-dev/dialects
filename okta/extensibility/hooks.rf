@@ -1,10 +1,8 @@
 concept "hook-configuration" {
-  kind        = detail
   description = "Verification or key configuration supporting an Okta hook."
 }
 
 concept "identity-event-extension" {
-  kind        = entity
   description = "An Okta event or inline hook integrating an external callback into an identity lifecycle."
 }
 

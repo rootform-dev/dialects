@@ -1,5 +1,4 @@
 concept "persistent-volume-claim" {
-  kind        = detail
   description = "A request for persistent storage bound to a volume."
 }
 
@@ -11,7 +10,7 @@ rule "kubernetes-persistent-volume-claim" {
   as = concept.persistent-volume-claim
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.metadata[0].namespace
 

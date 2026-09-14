@@ -4,10 +4,10 @@ rule "azure-cache-for-redis" {
     type = "azurerm_redis_cache"
   }
 
-  as = concept.core.managed-cache
+  as = concept.managed-cache
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -18,10 +18,10 @@ rule "azure-managed-redis" {
     type = "azurerm_managed_redis"
   }
 
-  as = concept.core.managed-cache
+  as = concept.managed-cache
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

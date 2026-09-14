@@ -3,5 +3,5 @@ rule "api-gateway" {
     type = "google_api_gateway_gateway"
   }
 
-  as = concept.core.api-gateway
+  as = concept.api-gateway
 }

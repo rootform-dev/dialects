@@ -3,10 +3,10 @@ rule "user-assigned-managed-identity" {
     type = "azurerm_user_assigned_identity"
   }
 
-  as = concept.core.service-identity
+  as = rf.concept.service-identity
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
 

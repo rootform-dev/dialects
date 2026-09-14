@@ -15,7 +15,7 @@
   "semantic_sources_sha256": "sha256:e7c75890e6d9e92c89b7207700753e5a23188f5c79a8249697eecb7934022ec8",
   "rules": [
     {
-      "rule_id": "auth0/action",
+      "rule_id": "auth0.rule.action",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_action",
       "file": "dialects/auth0/extensibility/actions-hooks.rf",
@@ -25,7 +25,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/action-lookup",
+      "rule_id": "auth0.rule.action-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_action",
       "file": "dialects/auth0/extensibility/actions-hooks.rf",
@@ -35,7 +35,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/action-module",
+      "rule_id": "auth0.rule.action-module",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_action_module",
       "file": "dialects/auth0/extensibility/configuration.rf",
@@ -45,7 +45,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/action-module-lookup",
+      "rule_id": "auth0.rule.action-module-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_action_module",
       "file": "dialects/auth0/extensibility/configuration.rf",
@@ -55,7 +55,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/attack-protection",
+      "rule_id": "auth0.rule.attack-protection",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_attack_protection",
       "file": "dialects/auth0/security/authentication-boundaries.rf",
@@ -65,7 +65,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/attack-protection-lookup",
+      "rule_id": "auth0.rule.attack-protection-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_attack_protection",
       "file": "dialects/auth0/security/authentication-boundaries.rf",
@@ -75,7 +75,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/client",
+      "rule_id": "auth0.rule.client",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_client",
       "file": "dialects/auth0/applications/clients-apis.rf",
@@ -96,7 +96,7 @@
       ]
     },
     {
-      "rule_id": "auth0/client-cimd",
+      "rule_id": "auth0.rule.client-cimd",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_client_cimd",
       "file": "dialects/auth0/applications/clients-apis.rf",
@@ -112,7 +112,7 @@
       ]
     },
     {
-      "rule_id": "auth0/client-credentials",
+      "rule_id": "auth0.rule.client-credentials",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_client_credentials",
       "file": "dialects/auth0/applications/configuration.rf",
@@ -128,7 +128,7 @@
       ]
     },
     {
-      "rule_id": "auth0/client-grant",
+      "rule_id": "auth0.rule.client-grant",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_client_grant",
       "file": "dialects/auth0/applications/configuration.rf",
@@ -144,7 +144,7 @@
       ]
     },
     {
-      "rule_id": "auth0/client-lookup",
+      "rule_id": "auth0.rule.client-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_client",
       "file": "dialects/auth0/applications/clients-apis.rf",
@@ -165,7 +165,7 @@
       ]
     },
     {
-      "rule_id": "auth0/connection",
+      "rule_id": "auth0.rule.connection",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_connection",
       "file": "dialects/auth0/connections/identity-connections.rf",
@@ -175,7 +175,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/connection-client",
+      "rule_id": "auth0.rule.connection-client",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_connection_client",
       "file": "dialects/auth0/connections/configuration.rf",
@@ -196,7 +196,7 @@
       ]
     },
     {
-      "rule_id": "auth0/connection-clients",
+      "rule_id": "auth0.rule.connection-clients",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_connection_clients",
       "file": "dialects/auth0/connections/configuration.rf",
@@ -212,7 +212,7 @@
       ]
     },
     {
-      "rule_id": "auth0/connection-directory",
+      "rule_id": "auth0.rule.connection-directory",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_connection_directory",
       "file": "dialects/auth0/connections/directory-sync.rf",
@@ -228,7 +228,7 @@
       ]
     },
     {
-      "rule_id": "auth0/connection-directory-lookup",
+      "rule_id": "auth0.rule.connection-directory-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_connection_directory",
       "file": "dialects/auth0/connections/directory-sync.rf",
@@ -244,7 +244,7 @@
       ]
     },
     {
-      "rule_id": "auth0/connection-directory-synchronized-groups",
+      "rule_id": "auth0.rule.connection-directory-synchronized-groups",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_connection_directory_synchronized_groups",
       "file": "dialects/auth0/connections/configuration.rf",
@@ -260,7 +260,7 @@
       ]
     },
     {
-      "rule_id": "auth0/connection-directory-synchronized-groups-lookup",
+      "rule_id": "auth0.rule.connection-directory-synchronized-groups-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_connection_directory_synchronized_groups",
       "file": "dialects/auth0/connections/configuration.rf",
@@ -276,7 +276,7 @@
       ]
     },
     {
-      "rule_id": "auth0/connection-keys",
+      "rule_id": "auth0.rule.connection-keys",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_connection_keys",
       "file": "dialects/auth0/connections/configuration.rf",
@@ -292,7 +292,7 @@
       ]
     },
     {
-      "rule_id": "auth0/connection-keys-lookup",
+      "rule_id": "auth0.rule.connection-keys-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_connection_keys",
       "file": "dialects/auth0/connections/configuration.rf",
@@ -308,7 +308,7 @@
       ]
     },
     {
-      "rule_id": "auth0/connection-lookup",
+      "rule_id": "auth0.rule.connection-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_connection",
       "file": "dialects/auth0/connections/identity-connections.rf",
@@ -318,7 +318,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/connection-profile",
+      "rule_id": "auth0.rule.connection-profile",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_connection_profile",
       "file": "dialects/auth0/connections/self-service-sso.rf",
@@ -328,7 +328,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/connection-profile-lookup",
+      "rule_id": "auth0.rule.connection-profile-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_connection_profile",
       "file": "dialects/auth0/connections/self-service-sso.rf",
@@ -338,7 +338,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/connection-scim-configuration",
+      "rule_id": "auth0.rule.connection-scim-configuration",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_connection_scim_configuration",
       "file": "dialects/auth0/connections/configuration.rf",
@@ -354,7 +354,7 @@
       ]
     },
     {
-      "rule_id": "auth0/connection-scim-configuration-lookup",
+      "rule_id": "auth0.rule.connection-scim-configuration-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_connection_scim_configuration",
       "file": "dialects/auth0/connections/configuration.rf",
@@ -370,7 +370,7 @@
       ]
     },
     {
-      "rule_id": "auth0/custom-domain",
+      "rule_id": "auth0.rule.custom-domain",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_custom_domain",
       "file": "dialects/auth0/domains/custom-domains.rf",
@@ -380,7 +380,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/custom-domain-default",
+      "rule_id": "auth0.rule.custom-domain-default",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_custom_domain_default",
       "file": "dialects/auth0/domains/custom-domains.rf",
@@ -396,7 +396,7 @@
       ]
     },
     {
-      "rule_id": "auth0/custom-domain-lookup",
+      "rule_id": "auth0.rule.custom-domain-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_custom_domain",
       "file": "dialects/auth0/domains/custom-domains.rf",
@@ -406,7 +406,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/custom-domain-verification",
+      "rule_id": "auth0.rule.custom-domain-verification",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_custom_domain_verification",
       "file": "dialects/auth0/domains/custom-domains.rf",
@@ -422,7 +422,7 @@
       ]
     },
     {
-      "rule_id": "auth0/email-provider",
+      "rule_id": "auth0.rule.email-provider",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_email_provider",
       "file": "dialects/auth0/communications/notification-providers.rf",
@@ -432,7 +432,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/encryption-key-manager",
+      "rule_id": "auth0.rule.encryption-key-manager",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_encryption_key_manager",
       "file": "dialects/auth0/security/authentication-boundaries.rf",
@@ -442,7 +442,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/event-stream",
+      "rule_id": "auth0.rule.event-stream",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_event_stream",
       "file": "dialects/auth0/eventing-observability/event-streams.rf",
@@ -458,7 +458,7 @@
       ]
     },
     {
-      "rule_id": "auth0/event-stream-lookup",
+      "rule_id": "auth0.rule.event-stream-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_event_stream",
       "file": "dialects/auth0/eventing-observability/event-streams.rf",
@@ -474,7 +474,7 @@
       ]
     },
     {
-      "rule_id": "auth0/flow",
+      "rule_id": "auth0.rule.flow",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_flow",
       "file": "dialects/auth0/workflows/forms-flows.rf",
@@ -484,7 +484,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/flow-lookup",
+      "rule_id": "auth0.rule.flow-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_flow",
       "file": "dialects/auth0/workflows/forms-flows.rf",
@@ -494,7 +494,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/flow-vault-connection",
+      "rule_id": "auth0.rule.flow-vault-connection",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_flow_vault_connection",
       "file": "dialects/auth0/workflows/integrations.rf",
@@ -504,7 +504,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/flow-vault-connection-lookup",
+      "rule_id": "auth0.rule.flow-vault-connection-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_flow_vault_connection",
       "file": "dialects/auth0/workflows/integrations.rf",
@@ -514,7 +514,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/form",
+      "rule_id": "auth0.rule.form",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_form",
       "file": "dialects/auth0/workflows/forms-flows.rf",
@@ -524,7 +524,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/form-lookup",
+      "rule_id": "auth0.rule.form-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_form",
       "file": "dialects/auth0/workflows/forms-flows.rf",
@@ -534,7 +534,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/guardian",
+      "rule_id": "auth0.rule.guardian",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_guardian",
       "file": "dialects/auth0/security/authentication-boundaries.rf",
@@ -544,7 +544,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/hook",
+      "rule_id": "auth0.rule.hook",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_hook",
       "file": "dialects/auth0/extensibility/actions-hooks.rf",
@@ -554,17 +554,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/log-stream",
-      "construct_kind": "managed_resource",
-      "resource_type": "auth0_log_stream",
-      "file": "dialects/auth0/eventing-observability/log-streams.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://registry.terraform.io/providers/auth0/auth0/1.56.0/docs/resources/log_stream",
-      "paths": []
-    },
-    {
-      "rule_id": "auth0/network-acl",
+      "rule_id": "auth0.rule.network-acl",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_network_acl",
       "file": "dialects/auth0/security/authentication-boundaries.rf",
@@ -574,7 +564,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/network-acl-lookup",
+      "rule_id": "auth0.rule.network-acl-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_network_acl",
       "file": "dialects/auth0/security/authentication-boundaries.rf",
@@ -584,7 +574,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/organization",
+      "rule_id": "auth0.rule.organization",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_organization",
       "file": "dialects/auth0/tenancy/tenants-organizations.rf",
@@ -594,7 +584,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/organization-client",
+      "rule_id": "auth0.rule.organization-client",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_organization_client",
       "file": "dialects/auth0/tenancy/organization-configuration.rf",
@@ -615,7 +605,7 @@
       ]
     },
     {
-      "rule_id": "auth0/organization-client-grant",
+      "rule_id": "auth0.rule.organization-client-grant",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_organization_client_grant",
       "file": "dialects/auth0/tenancy/organization-configuration.rf",
@@ -631,7 +621,7 @@
       ]
     },
     {
-      "rule_id": "auth0/organization-client-lookup",
+      "rule_id": "auth0.rule.organization-client-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_organization_client",
       "file": "dialects/auth0/tenancy/organization-configuration.rf",
@@ -652,7 +642,7 @@
       ]
     },
     {
-      "rule_id": "auth0/organization-clients",
+      "rule_id": "auth0.rule.organization-clients",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_organization_clients",
       "file": "dialects/auth0/tenancy/organization-configuration.rf",
@@ -668,7 +658,7 @@
       ]
     },
     {
-      "rule_id": "auth0/organization-connection",
+      "rule_id": "auth0.rule.organization-connection",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_organization_connection",
       "file": "dialects/auth0/tenancy/organization-configuration.rf",
@@ -689,7 +679,7 @@
       ]
     },
     {
-      "rule_id": "auth0/organization-connections",
+      "rule_id": "auth0.rule.organization-connections",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_organization_connections",
       "file": "dialects/auth0/tenancy/organization-configuration.rf",
@@ -705,7 +695,7 @@
       ]
     },
     {
-      "rule_id": "auth0/organization-discovery-domain",
+      "rule_id": "auth0.rule.organization-discovery-domain",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_organization_discovery_domain",
       "file": "dialects/auth0/tenancy/organization-configuration.rf",
@@ -721,7 +711,7 @@
       ]
     },
     {
-      "rule_id": "auth0/organization-discovery-domains",
+      "rule_id": "auth0.rule.organization-discovery-domains",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_organization_discovery_domains",
       "file": "dialects/auth0/tenancy/organization-configuration.rf",
@@ -737,7 +727,7 @@
       ]
     },
     {
-      "rule_id": "auth0/organization-lookup",
+      "rule_id": "auth0.rule.organization-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_organization",
       "file": "dialects/auth0/tenancy/tenants-organizations.rf",
@@ -747,7 +737,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/phone-provider",
+      "rule_id": "auth0.rule.phone-provider",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_phone_provider",
       "file": "dialects/auth0/communications/notification-providers.rf",
@@ -757,7 +747,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/phone-provider-lookup",
+      "rule_id": "auth0.rule.phone-provider-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_phone_provider",
       "file": "dialects/auth0/communications/notification-providers.rf",
@@ -767,7 +757,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/rate-limit-policy",
+      "rule_id": "auth0.rule.rate-limit-policy",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_rate_limit_policy",
       "file": "dialects/auth0/security/authentication-boundaries.rf",
@@ -777,7 +767,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/rate-limit-policy-lookup",
+      "rule_id": "auth0.rule.rate-limit-policy-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_rate_limit_policy",
       "file": "dialects/auth0/security/authentication-boundaries.rf",
@@ -787,7 +777,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/resource-server",
+      "rule_id": "auth0.rule.resource-server",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_resource_server",
       "file": "dialects/auth0/applications/clients-apis.rf",
@@ -797,7 +787,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/resource-server-lookup",
+      "rule_id": "auth0.rule.resource-server-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_resource_server",
       "file": "dialects/auth0/applications/clients-apis.rf",
@@ -807,7 +797,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/resource-server-scope",
+      "rule_id": "auth0.rule.resource-server-scope",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_resource_server_scope",
       "file": "dialects/auth0/applications/configuration.rf",
@@ -823,7 +813,7 @@
       ]
     },
     {
-      "rule_id": "auth0/resource-server-scopes",
+      "rule_id": "auth0.rule.resource-server-scopes",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_resource_server_scopes",
       "file": "dialects/auth0/applications/configuration.rf",
@@ -839,7 +829,7 @@
       ]
     },
     {
-      "rule_id": "auth0/risk-assessments",
+      "rule_id": "auth0.rule.risk-assessments",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_risk_assessments",
       "file": "dialects/auth0/security/authentication-boundaries.rf",
@@ -849,7 +839,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/risk-assessments-new-device",
+      "rule_id": "auth0.rule.risk-assessments-new-device",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_risk_assessments_new_device",
       "file": "dialects/auth0/security/authentication-boundaries.rf",
@@ -859,7 +849,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/rule",
+      "rule_id": "auth0.rule.rule",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_rule",
       "file": "dialects/auth0/extensibility/actions-hooks.rf",
@@ -869,7 +859,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/self-service-profile",
+      "rule_id": "auth0.rule.self-service-profile",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_self_service_profile",
       "file": "dialects/auth0/connections/self-service-sso.rf",
@@ -879,7 +869,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/self-service-profile-lookup",
+      "rule_id": "auth0.rule.self-service-profile-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_self_service_profile",
       "file": "dialects/auth0/connections/self-service-sso.rf",
@@ -889,7 +879,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/supplemental-signals",
+      "rule_id": "auth0.rule.supplemental-signals",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_supplemental_signals",
       "file": "dialects/auth0/security/authentication-boundaries.rf",
@@ -899,7 +889,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/tenant",
+      "rule_id": "auth0.rule.tenant",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_tenant",
       "file": "dialects/auth0/tenancy/tenants-organizations.rf",
@@ -909,7 +899,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/tenant-lookup",
+      "rule_id": "auth0.rule.tenant-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_tenant",
       "file": "dialects/auth0/tenancy/tenants-organizations.rf",
@@ -919,7 +909,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/token-exchange-profile",
+      "rule_id": "auth0.rule.token-exchange-profile",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_token_exchange_profile",
       "file": "dialects/auth0/extensibility/token-exchange.rf",
@@ -935,7 +925,7 @@
       ]
     },
     {
-      "rule_id": "auth0/token-exchange-profile-lookup",
+      "rule_id": "auth0.rule.token-exchange-profile-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_token_exchange_profile",
       "file": "dialects/auth0/extensibility/token-exchange.rf",
@@ -951,7 +941,7 @@
       ]
     },
     {
-      "rule_id": "auth0/trigger-action",
+      "rule_id": "auth0.rule.trigger-action",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_trigger_action",
       "file": "dialects/auth0/extensibility/configuration.rf",
@@ -967,7 +957,7 @@
       ]
     },
     {
-      "rule_id": "auth0/trigger-actions",
+      "rule_id": "auth0.rule.trigger-actions",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_trigger_actions",
       "file": "dialects/auth0/extensibility/configuration.rf",
@@ -977,7 +967,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/user-attribute-profile",
+      "rule_id": "auth0.rule.user-attribute-profile",
       "construct_kind": "managed_resource",
       "resource_type": "auth0_user_attribute_profile",
       "file": "dialects/auth0/connections/self-service-sso.rf",
@@ -987,7 +977,7 @@
       "paths": []
     },
     {
-      "rule_id": "auth0/user-attribute-profile-lookup",
+      "rule_id": "auth0.rule.user-attribute-profile-lookup",
       "construct_kind": "data_source",
       "resource_type": "auth0_user_attribute_profile",
       "file": "dialects/auth0/connections/self-service-sso.rf",

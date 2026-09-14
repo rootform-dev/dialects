@@ -1,5 +1,4 @@
 concept "data-source" {
-  kind        = entity
   description = "A Grafana connection to an external or hosted telemetry data source."
 }
 
@@ -11,8 +10,8 @@ rule "data-source" {
   as = concept.data-source
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.org_id
   }
 
@@ -31,8 +30,8 @@ rule "data-source-lookup" {
   as = concept.data-source
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.org_id
   }
 

@@ -1,15 +1,12 @@
 concept "network-configuration" {
-  kind        = detail
   description = "A route or supporting setting attached to HCP network connectivity."
 }
 
 concept "private-link-service" {
-  kind        = entity
   description = "A provider-side private connectivity service exposing an HCP Vault Dedicated cluster to approved consumers."
 }
 
 concept "transit-gateway-attachment" {
-  kind        = entity
   description = "An attachment connecting an HVN to an AWS Transit Gateway."
 }
 
@@ -18,22 +15,22 @@ rule "aws-network-peering" {
     type = "hcp_aws_network_peering"
   }
 
-  as = concept.core.network-peering
+  as = concept.network-peering
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.hvn_id
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
 
   relation "peers-with" {
-    to  = concept.core.virtual-network
+    to  = rf.concept.virtual-network
     via = source.peer_vpc_id
   }
 }
@@ -44,22 +41,22 @@ rule "aws-network-peering-lookup" {
     type = "hcp_aws_network_peering"
   }
 
-  as = concept.core.network-peering
+  as = concept.network-peering
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.hvn_id
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
 
   relation "peers-with" {
-    to  = concept.core.virtual-network
+    to  = rf.concept.virtual-network
     via = source.peer_vpc_id
   }
 }
@@ -72,13 +69,13 @@ rule "aws-transit-gateway-attachment" {
   as = concept.transit-gateway-attachment
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.hvn_id
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -93,13 +90,13 @@ rule "aws-transit-gateway-attachment-lookup" {
   as = concept.transit-gateway-attachment
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.hvn_id
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -110,22 +107,22 @@ rule "azure-peering-connection" {
     type = "hcp_azure_peering_connection"
   }
 
-  as = concept.core.network-peering
+  as = concept.network-peering
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.hvn_link
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
 
   relation "peers-with" {
-    to  = concept.core.virtual-network
+    to  = rf.concept.virtual-network
     via = source.peer_vnet_name
   }
 }
@@ -136,22 +133,22 @@ rule "azure-peering-connection-lookup" {
     type = "hcp_azure_peering_connection"
   }
 
-  as = concept.core.network-peering
+  as = concept.network-peering
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.hvn_link
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
 
   relation "peers-with" {
-    to  = concept.core.virtual-network
+    to  = rf.concept.virtual-network
     via = source.peer_vnet_name
   }
 }
@@ -161,22 +158,22 @@ rule "hvn-peering-connection" {
     type = "hcp_hvn_peering_connection"
   }
 
-  as = concept.core.network-peering
+  as = concept.network-peering
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.hvn_1
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
 
   relation "peers-with" {
-    to  = concept.core.virtual-network
+    to  = rf.concept.virtual-network
     via = source.hvn_2
   }
 }
@@ -187,22 +184,22 @@ rule "hvn-peering-connection-lookup" {
     type = "hcp_hvn_peering_connection"
   }
 
-  as = concept.core.network-peering
+  as = concept.network-peering
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.hvn_1
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
 
   relation "peers-with" {
-    to  = concept.core.virtual-network
+    to  = rf.concept.virtual-network
     via = source.hvn_2
   }
 }
@@ -215,7 +212,7 @@ rule "hvn-route" {
   as = concept.network-configuration
 
   contribution {
-    to  = concept.core.virtual-network
+    to  = rf.concept.virtual-network
     via = source.hvn_link
   }
 }
@@ -229,7 +226,7 @@ rule "hvn-route-lookup" {
   as = concept.network-configuration
 
   contribution {
-    to  = concept.core.virtual-network
+    to  = rf.concept.virtual-network
     via = source.hvn_link
   }
 }
@@ -242,13 +239,13 @@ rule "private-link" {
   as = concept.private-link-service
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.hvn_id
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -268,13 +265,13 @@ rule "private-link-lookup" {
   as = concept.private-link-service
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.hvn_id
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }

@@ -1,5 +1,4 @@
 concept "identity-event-stream" {
-  kind        = entity
   description = "An Auth0 Event Stream publishing tenant events to an external destination or Action."
 }
 

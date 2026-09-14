@@ -3,7 +3,7 @@ rule "s3-bucket" {
     type = "aws_s3_bucket"
   }
 
-  as = concept.core.object-storage-container
+  as = rf.concept.object-storage-container
 }
 
 rule "s3-bucket-versioning" {
@@ -14,7 +14,7 @@ rule "s3-bucket-versioning" {
   as = concept.storage-configuration
 
   contribution {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.bucket
   }
 }
@@ -27,7 +27,7 @@ rule "s3-bucket-server-side-encryption-configuration" {
   as = concept.storage-configuration
 
   contribution {
-    to  = concept.core.object-storage-container
+    to  = rf.concept.object-storage-container
     via = source.bucket
   }
 }

@@ -1,10 +1,8 @@
 concept "plugin-configuration" {
-  kind        = detail
   description = "A plugin registration or version setting supporting a Vault plugin runtime."
 }
 
 concept "plugin-runtime" {
-  kind        = entity
   description = "A runtime boundary executing external Vault plugins."
 }
 
@@ -32,7 +30,7 @@ rule "plugin-runtime" {
   as = concept.plugin-runtime
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }

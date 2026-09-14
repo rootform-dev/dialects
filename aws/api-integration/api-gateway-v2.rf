@@ -4,5 +4,5 @@ rule "apigatewayv2-api" {
     type = "aws_apigatewayv2_api"
   }
 
-  as = concept.core.api-gateway
+  as = concept.api-gateway
 }

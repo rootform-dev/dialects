@@ -1,5 +1,4 @@
 concept "security-configuration" {
-  kind        = detail
   description = "A Datadog Cloud Security policy, framework, detection, or data-scanning configuration."
 }
 

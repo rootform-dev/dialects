@@ -1,20 +1,16 @@
 concept "knowledge-assistant" {
-  kind        = entity
   description = "A Databricks Knowledge Assistant grounded in governed enterprise knowledge."
 }
 
 concept "supervisor-agent" {
-  kind        = entity
   description = "A Databricks supervisor agent coordinating governed tools and specialist agents."
 }
 
 concept "registered-model" {
-  kind        = entity
   description = "A governed machine-learning model registered in Unity Catalog."
 }
 
 concept "ml-platform-detail" {
-  kind        = detail
   description = "An experiment, model version, agent tool, feature, or ML configuration supporting Databricks AI and ML."
 }
 
@@ -68,7 +64,7 @@ rule "registered-model" {
   as = concept.registered-model
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.unity-catalog-schema
     via = source.schema_name
   }

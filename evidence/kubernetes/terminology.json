@@ -2,7 +2,7 @@
   "format_version": "1",
   "terms": [
     {
-      "id": "kubernetes/network-policy",
+      "id": "kubernetes.concept.network-policy",
       "label": "Kubernetes NetworkPolicy",
       "terraform_type": "kubernetes_network_policy_v1",
       "source": "https://registry.terraform.io/providers/hashicorp/kubernetes/2.38.0/docs/resources/network_policy_v1"

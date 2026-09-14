@@ -6,7 +6,7 @@ rule "dynamodb-global-secondary-index" {
   as = concept.dynamodb-component
 
   contribution {
-    to  = concept.core.managed-database
+    to  = concept.dynamodb-table
     via = source.table_name
 
     match {

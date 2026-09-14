@@ -4,10 +4,10 @@ rule "databricks-virtual-network-peering" {
     type = "azurerm_databricks_virtual_network_peering"
   }
 
-  as = concept.core.network-peering
+  as = concept.network-peering
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

@@ -1,6 +1,5 @@
 # Maintained directly from pinned provider evidence.
 concept "container-instance-group" {
-  kind        = entity
   description = "An Azure Container Instances container group scheduled as one unit."
 }
 
@@ -12,7 +11,7 @@ rule "container-instance-group" {
   as = concept.container-instance-group
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

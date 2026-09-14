@@ -25,7 +25,7 @@
         }
       ],
       "resource_type": "vault_ad_secret_backend",
-      "rule_id": "vault/ad-secret-backend",
+      "rule_id": "vault.rule.ad-secret-backend",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/ad_secret_backend"
@@ -35,7 +35,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_ad_secret_library",
-      "rule_id": "vault/ad-secret-library",
+      "rule_id": "vault.rule.ad-secret-library",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/ad_secret_library"
@@ -45,7 +45,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_ad_secret_role",
-      "rule_id": "vault/ad-secret-role",
+      "rule_id": "vault.rule.ad-secret-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/ad_secret_role"
@@ -61,7 +61,7 @@
         }
       ],
       "resource_type": "vault_agent_registration",
-      "rule_id": "vault/agent-registration",
+      "rule_id": "vault.rule.agent-registration",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/agent_registration"
@@ -77,7 +77,7 @@
         }
       ],
       "resource_type": "vault_alicloud_auth_backend_role",
-      "rule_id": "vault/alicloud-auth-backend-role",
+      "rule_id": "vault.rule.alicloud-auth-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/alicloud_auth_backend_role"
@@ -93,7 +93,7 @@
         }
       ],
       "resource_type": "vault_alicloud_secret_backend",
-      "rule_id": "vault/alicloud-secret-backend",
+      "rule_id": "vault.rule.alicloud-secret-backend",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/alicloud_secret_backend"
@@ -103,7 +103,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_alicloud_secret_backend_role",
-      "rule_id": "vault/alicloud-secret-backend-role",
+      "rule_id": "vault.rule.alicloud-secret-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/alicloud_secret_backend_role"
@@ -119,7 +119,7 @@
         }
       ],
       "resource_type": "vault_approle_auth_backend_role",
-      "rule_id": "vault/approle-auth-backend-role",
+      "rule_id": "vault.rule.approle-auth-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/approle_auth_backend_role"
@@ -135,7 +135,7 @@
         }
       ],
       "resource_type": "vault_audit",
-      "rule_id": "vault/audit",
+      "rule_id": "vault.rule.audit",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/audit"
@@ -145,7 +145,7 @@
       "file": "dialects/vault/operations/audit-continuity.rf",
       "paths": [],
       "resource_type": "vault_audit_request_header",
-      "rule_id": "vault/audit-request-header",
+      "rule_id": "vault.rule.audit-request-header",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/audit_request_header"
@@ -161,7 +161,7 @@
         }
       ],
       "resource_type": "vault_auth_backend",
-      "rule_id": "vault/auth-backend",
+      "rule_id": "vault.rule.auth-backend",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/auth_backend"
@@ -177,7 +177,7 @@
         }
       ],
       "resource_type": "vault_aws_auth_backend_cert",
-      "rule_id": "vault/aws-auth-backend-cert",
+      "rule_id": "vault.rule.aws-auth-backend-cert",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/aws_auth_backend_cert"
@@ -193,7 +193,7 @@
         }
       ],
       "resource_type": "vault_aws_auth_backend_client",
-      "rule_id": "vault/aws-auth-backend-client",
+      "rule_id": "vault.rule.aws-auth-backend-client",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/aws_auth_backend_client"
@@ -203,7 +203,7 @@
       "file": "dialects/vault/authentication/auth-methods.rf",
       "paths": [],
       "resource_type": "vault_aws_auth_backend_config_identity",
-      "rule_id": "vault/aws-auth-backend-config-identity",
+      "rule_id": "vault.rule.aws-auth-backend-config-identity",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/aws_auth_backend_config_identity"
@@ -213,7 +213,7 @@
       "file": "dialects/vault/authentication/auth-methods.rf",
       "paths": [],
       "resource_type": "vault_aws_auth_backend_identity_whitelist",
-      "rule_id": "vault/aws-auth-backend-identity-whitelist",
+      "rule_id": "vault.rule.aws-auth-backend-identity-whitelist",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/aws_auth_backend_identity_whitelist"
@@ -229,7 +229,7 @@
         }
       ],
       "resource_type": "vault_aws_auth_backend_role",
-      "rule_id": "vault/aws-auth-backend-role",
+      "rule_id": "vault.rule.aws-auth-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/aws_auth_backend_role"
@@ -239,7 +239,7 @@
       "file": "dialects/vault/authentication/auth-methods.rf",
       "paths": [],
       "resource_type": "vault_aws_auth_backend_role_tag",
-      "rule_id": "vault/aws-auth-backend-role-tag",
+      "rule_id": "vault.rule.aws-auth-backend-role-tag",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/aws_auth_backend_role_tag"
@@ -249,7 +249,7 @@
       "file": "dialects/vault/authentication/auth-methods.rf",
       "paths": [],
       "resource_type": "vault_aws_auth_backend_roletag_blacklist",
-      "rule_id": "vault/aws-auth-backend-roletag-blacklist",
+      "rule_id": "vault.rule.aws-auth-backend-roletag-blacklist",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/aws_auth_backend_roletag_blacklist"
@@ -265,7 +265,7 @@
         }
       ],
       "resource_type": "vault_aws_auth_backend_sts_role",
-      "rule_id": "vault/aws-auth-backend-sts-role",
+      "rule_id": "vault.rule.aws-auth-backend-sts-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/aws_auth_backend_sts_role"
@@ -286,7 +286,7 @@
         }
       ],
       "resource_type": "vault_aws_secret_backend",
-      "rule_id": "vault/aws-secret-backend",
+      "rule_id": "vault.rule.aws-secret-backend",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/aws_secret_backend"
@@ -296,7 +296,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_aws_secret_backend_role",
-      "rule_id": "vault/aws-secret-backend-role",
+      "rule_id": "vault.rule.aws-secret-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/aws_secret_backend_role"
@@ -306,7 +306,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_aws_secret_backend_static_role",
-      "rule_id": "vault/aws-secret-backend-static-role",
+      "rule_id": "vault.rule.aws-secret-backend-static-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/aws_secret_backend_static_role"
@@ -322,7 +322,7 @@
         }
       ],
       "resource_type": "vault_azure_auth_backend_config",
-      "rule_id": "vault/azure-auth-backend-config",
+      "rule_id": "vault.rule.azure-auth-backend-config",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/azure_auth_backend_config"
@@ -338,7 +338,7 @@
         }
       ],
       "resource_type": "vault_azure_auth_backend_role",
-      "rule_id": "vault/azure-auth-backend-role",
+      "rule_id": "vault.rule.azure-auth-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/azure_auth_backend_role"
@@ -354,7 +354,7 @@
         }
       ],
       "resource_type": "vault_azure_secret_backend",
-      "rule_id": "vault/azure-secret-backend",
+      "rule_id": "vault.rule.azure-secret-backend",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/azure_secret_backend"
@@ -364,7 +364,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_azure_secret_backend_role",
-      "rule_id": "vault/azure-secret-backend-role",
+      "rule_id": "vault.rule.azure-secret-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/azure_secret_backend_role"
@@ -374,7 +374,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_azure_secret_backend_static_role",
-      "rule_id": "vault/azure-secret-backend-static-role",
+      "rule_id": "vault.rule.azure-secret-backend-static-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/azure_secret_backend_static_role"
@@ -390,7 +390,7 @@
         }
       ],
       "resource_type": "vault_cert_auth_backend_role",
-      "rule_id": "vault/cert-auth-backend-role",
+      "rule_id": "vault.rule.cert-auth-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/cert_auth_backend_role"
@@ -406,7 +406,7 @@
         }
       ],
       "resource_type": "vault_cf_auth_backend_config",
-      "rule_id": "vault/cf-auth-backend-config",
+      "rule_id": "vault.rule.cf-auth-backend-config",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/cf_auth_backend_config"
@@ -422,7 +422,7 @@
         }
       ],
       "resource_type": "vault_cf_auth_backend_role",
-      "rule_id": "vault/cf-auth-backend-role",
+      "rule_id": "vault.rule.cf-auth-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/cf_auth_backend_role"
@@ -432,7 +432,7 @@
       "file": "dialects/vault/governance/namespaces.rf",
       "paths": [],
       "resource_type": "vault_config_control_group",
-      "rule_id": "vault/config-control-group",
+      "rule_id": "vault.rule.config-control-group",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/config_control_group"
@@ -442,7 +442,7 @@
       "file": "dialects/vault/governance/namespaces.rf",
       "paths": [],
       "resource_type": "vault_config_group_policy_application",
-      "rule_id": "vault/config-group-policy-application",
+      "rule_id": "vault.rule.config-group-policy-application",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/config_group_policy_application"
@@ -458,7 +458,7 @@
         }
       ],
       "resource_type": "vault_consul_secret_backend",
-      "rule_id": "vault/consul-secret-backend",
+      "rule_id": "vault.rule.consul-secret-backend",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/consul_secret_backend"
@@ -468,7 +468,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_consul_secret_backend_role",
-      "rule_id": "vault/consul-secret-backend-role",
+      "rule_id": "vault.rule.consul-secret-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/consul_secret_backend_role"
@@ -484,7 +484,7 @@
         }
       ],
       "resource_type": "vault_database_secret_backend_connection",
-      "rule_id": "vault/database-secret-backend-connection",
+      "rule_id": "vault.rule.database-secret-backend-connection",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/database_secret_backend_connection"
@@ -500,7 +500,7 @@
         }
       ],
       "resource_type": "vault_database_secret_backend_role",
-      "rule_id": "vault/database-secret-backend-role",
+      "rule_id": "vault.rule.database-secret-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/database_secret_backend_role"
@@ -516,7 +516,7 @@
         }
       ],
       "resource_type": "vault_database_secret_backend_static_role",
-      "rule_id": "vault/database-secret-backend-static-role",
+      "rule_id": "vault.rule.database-secret-backend-static-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/database_secret_backend_static_role"
@@ -532,7 +532,7 @@
         }
       ],
       "resource_type": "vault_database_secrets_mount",
-      "rule_id": "vault/database-secrets-mount",
+      "rule_id": "vault.rule.database-secrets-mount",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/database_secrets_mount"
@@ -542,7 +542,7 @@
       "file": "dialects/vault/governance/namespaces.rf",
       "paths": [],
       "resource_type": "vault_egp_policy",
-      "rule_id": "vault/egp-policy",
+      "rule_id": "vault.rule.egp-policy",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/egp_policy"
@@ -563,7 +563,7 @@
         }
       ],
       "resource_type": "vault_gcp_auth_backend",
-      "rule_id": "vault/gcp-auth-backend",
+      "rule_id": "vault.rule.gcp-auth-backend",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/gcp_auth_backend"
@@ -579,7 +579,7 @@
         }
       ],
       "resource_type": "vault_gcp_auth_backend_role",
-      "rule_id": "vault/gcp-auth-backend-role",
+      "rule_id": "vault.rule.gcp-auth-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/gcp_auth_backend_role"
@@ -600,7 +600,7 @@
         }
       ],
       "resource_type": "vault_gcp_secret_backend",
-      "rule_id": "vault/gcp-secret-backend",
+      "rule_id": "vault.rule.gcp-secret-backend",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/gcp_secret_backend"
@@ -610,7 +610,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_gcp_secret_impersonated_account",
-      "rule_id": "vault/gcp-secret-impersonated-account",
+      "rule_id": "vault.rule.gcp-secret-impersonated-account",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/gcp_secret_impersonated_account"
@@ -620,7 +620,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_gcp_secret_roleset",
-      "rule_id": "vault/gcp-secret-roleset",
+      "rule_id": "vault.rule.gcp-secret-roleset",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/gcp_secret_roleset"
@@ -630,7 +630,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_gcp_secret_static_account",
-      "rule_id": "vault/gcp-secret-static-account",
+      "rule_id": "vault.rule.gcp-secret-static-account",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/gcp_secret_static_account"
@@ -646,7 +646,7 @@
         }
       ],
       "resource_type": "vault_gcpkms_secret_backend",
-      "rule_id": "vault/gcpkms-secret-backend",
+      "rule_id": "vault.rule.gcpkms-secret-backend",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/gcpkms_secret_backend"
@@ -662,7 +662,7 @@
         }
       ],
       "resource_type": "vault_gcpkms_secret_backend_key",
-      "rule_id": "vault/gcpkms-secret-backend-key",
+      "rule_id": "vault.rule.gcpkms-secret-backend-key",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/gcpkms_secret_backend_key"
@@ -672,7 +672,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_generic_secret",
-      "rule_id": "vault/generic-secret",
+      "rule_id": "vault.rule.generic-secret",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/generic_secret"
@@ -682,7 +682,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_generic_secret",
-      "rule_id": "vault/generic-secret-read",
+      "rule_id": "vault.rule.generic-secret-read",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/data-sources/generic_secret"
@@ -698,7 +698,7 @@
         }
       ],
       "resource_type": "vault_github_auth_backend",
-      "rule_id": "vault/github-auth-backend",
+      "rule_id": "vault.rule.github-auth-backend",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/github_auth_backend"
@@ -714,7 +714,7 @@
         }
       ],
       "resource_type": "vault_github_team",
-      "rule_id": "vault/github-team",
+      "rule_id": "vault.rule.github-team",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/github_team"
@@ -730,7 +730,7 @@
         }
       ],
       "resource_type": "vault_identity_entity",
-      "rule_id": "vault/identity-entity",
+      "rule_id": "vault.rule.identity-entity",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_entity"
@@ -740,7 +740,7 @@
       "file": "dialects/vault/identity/identity-oidc.rf",
       "paths": [],
       "resource_type": "vault_identity_entity_alias",
-      "rule_id": "vault/identity-entity-alias",
+      "rule_id": "vault.rule.identity-entity-alias",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_entity_alias"
@@ -750,7 +750,7 @@
       "file": "dialects/vault/identity/identity-oidc.rf",
       "paths": [],
       "resource_type": "vault_identity_entity_policies",
-      "rule_id": "vault/identity-entity-policies",
+      "rule_id": "vault.rule.identity-entity-policies",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_entity_policies"
@@ -766,7 +766,7 @@
         }
       ],
       "resource_type": "vault_identity_group",
-      "rule_id": "vault/identity-group",
+      "rule_id": "vault.rule.identity-group",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_group"
@@ -776,7 +776,7 @@
       "file": "dialects/vault/identity/identity-oidc.rf",
       "paths": [],
       "resource_type": "vault_identity_group_alias",
-      "rule_id": "vault/identity-group-alias",
+      "rule_id": "vault.rule.identity-group-alias",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_group_alias"
@@ -786,7 +786,7 @@
       "file": "dialects/vault/identity/identity-oidc.rf",
       "paths": [],
       "resource_type": "vault_identity_group_member_entity_ids",
-      "rule_id": "vault/identity-group-member-entity-ids",
+      "rule_id": "vault.rule.identity-group-member-entity-ids",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_group_member_entity_ids"
@@ -796,7 +796,7 @@
       "file": "dialects/vault/identity/identity-oidc.rf",
       "paths": [],
       "resource_type": "vault_identity_group_member_group_ids",
-      "rule_id": "vault/identity-group-member-group-ids",
+      "rule_id": "vault.rule.identity-group-member-group-ids",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_group_member_group_ids"
@@ -806,7 +806,7 @@
       "file": "dialects/vault/identity/identity-oidc.rf",
       "paths": [],
       "resource_type": "vault_identity_group_policies",
-      "rule_id": "vault/identity-group-policies",
+      "rule_id": "vault.rule.identity-group-policies",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_group_policies"
@@ -816,7 +816,7 @@
       "file": "dialects/vault/identity/identity-oidc.rf",
       "paths": [],
       "resource_type": "vault_identity_mfa_duo",
-      "rule_id": "vault/identity-mfa-duo",
+      "rule_id": "vault.rule.identity-mfa-duo",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_mfa_duo"
@@ -826,7 +826,7 @@
       "file": "dialects/vault/identity/identity-oidc.rf",
       "paths": [],
       "resource_type": "vault_identity_mfa_login_enforcement",
-      "rule_id": "vault/identity-mfa-login-enforcement",
+      "rule_id": "vault.rule.identity-mfa-login-enforcement",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_mfa_login_enforcement"
@@ -836,7 +836,7 @@
       "file": "dialects/vault/identity/identity-oidc.rf",
       "paths": [],
       "resource_type": "vault_identity_mfa_okta",
-      "rule_id": "vault/identity-mfa-okta",
+      "rule_id": "vault.rule.identity-mfa-okta",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_mfa_okta"
@@ -846,7 +846,7 @@
       "file": "dialects/vault/identity/identity-oidc.rf",
       "paths": [],
       "resource_type": "vault_identity_mfa_pingid",
-      "rule_id": "vault/identity-mfa-pingid",
+      "rule_id": "vault.rule.identity-mfa-pingid",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_mfa_pingid"
@@ -856,7 +856,7 @@
       "file": "dialects/vault/identity/identity-oidc.rf",
       "paths": [],
       "resource_type": "vault_identity_mfa_totp",
-      "rule_id": "vault/identity-mfa-totp",
+      "rule_id": "vault.rule.identity-mfa-totp",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_mfa_totp"
@@ -866,7 +866,7 @@
       "file": "dialects/vault/identity/identity-oidc.rf",
       "paths": [],
       "resource_type": "vault_identity_oidc",
-      "rule_id": "vault/identity-oidc",
+      "rule_id": "vault.rule.identity-oidc",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_oidc"
@@ -876,7 +876,7 @@
       "file": "dialects/vault/identity/identity-oidc.rf",
       "paths": [],
       "resource_type": "vault_identity_oidc_assignment",
-      "rule_id": "vault/identity-oidc-assignment",
+      "rule_id": "vault.rule.identity-oidc-assignment",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_oidc_assignment"
@@ -897,7 +897,7 @@
         }
       ],
       "resource_type": "vault_identity_oidc_client",
-      "rule_id": "vault/identity-oidc-client",
+      "rule_id": "vault.rule.identity-oidc-client",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_oidc_client"
@@ -913,7 +913,7 @@
         }
       ],
       "resource_type": "vault_identity_oidc_key",
-      "rule_id": "vault/identity-oidc-key",
+      "rule_id": "vault.rule.identity-oidc-key",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_oidc_key"
@@ -923,7 +923,7 @@
       "file": "dialects/vault/identity/identity-oidc.rf",
       "paths": [],
       "resource_type": "vault_identity_oidc_key_allowed_client_id",
-      "rule_id": "vault/identity-oidc-key-allowed-client-id",
+      "rule_id": "vault.rule.identity-oidc-key-allowed-client-id",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_oidc_key_allowed_client_id"
@@ -939,7 +939,7 @@
         }
       ],
       "resource_type": "vault_identity_oidc_provider",
-      "rule_id": "vault/identity-oidc-provider",
+      "rule_id": "vault.rule.identity-oidc-provider",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_oidc_provider"
@@ -949,7 +949,7 @@
       "file": "dialects/vault/identity/identity-oidc.rf",
       "paths": [],
       "resource_type": "vault_identity_oidc_role",
-      "rule_id": "vault/identity-oidc-role",
+      "rule_id": "vault.rule.identity-oidc-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_oidc_role"
@@ -959,7 +959,7 @@
       "file": "dialects/vault/identity/identity-oidc.rf",
       "paths": [],
       "resource_type": "vault_identity_oidc_scope",
-      "rule_id": "vault/identity-oidc-scope",
+      "rule_id": "vault.rule.identity-oidc-scope",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/identity_oidc_scope"
@@ -975,7 +975,7 @@
         }
       ],
       "resource_type": "vault_jwt_auth_backend",
-      "rule_id": "vault/jwt-auth-backend",
+      "rule_id": "vault.rule.jwt-auth-backend",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/jwt_auth_backend"
@@ -991,7 +991,7 @@
         }
       ],
       "resource_type": "vault_jwt_auth_backend_role",
-      "rule_id": "vault/jwt-auth-backend-role",
+      "rule_id": "vault.rule.jwt-auth-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/jwt_auth_backend_role"
@@ -1007,7 +1007,7 @@
         }
       ],
       "resource_type": "vault_kerberos_auth_backend_config",
-      "rule_id": "vault/kerberos-auth-backend-config",
+      "rule_id": "vault.rule.kerberos-auth-backend-config",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kerberos_auth_backend_config"
@@ -1023,7 +1023,7 @@
         }
       ],
       "resource_type": "vault_kerberos_auth_backend_group",
-      "rule_id": "vault/kerberos-auth-backend-group",
+      "rule_id": "vault.rule.kerberos-auth-backend-group",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kerberos_auth_backend_group"
@@ -1033,7 +1033,7 @@
       "file": "dialects/vault/authentication/auth-methods.rf",
       "paths": [],
       "resource_type": "vault_kerberos_auth_backend_ldap_config",
-      "rule_id": "vault/kerberos-auth-backend-ldap-config",
+      "rule_id": "vault.rule.kerberos-auth-backend-ldap-config",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kerberos_auth_backend_ldap_config"
@@ -1049,7 +1049,7 @@
         }
       ],
       "resource_type": "vault_keymgmt_aws_kms",
-      "rule_id": "vault/keymgmt-aws-kms",
+      "rule_id": "vault.rule.keymgmt-aws-kms",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/keymgmt_aws_kms"
@@ -1065,7 +1065,7 @@
         }
       ],
       "resource_type": "vault_keymgmt_azure_kms",
-      "rule_id": "vault/keymgmt-azure-kms",
+      "rule_id": "vault.rule.keymgmt-azure-kms",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/keymgmt_azure_kms"
@@ -1086,7 +1086,7 @@
         }
       ],
       "resource_type": "vault_keymgmt_distribute_key",
-      "rule_id": "vault/keymgmt-distribute-key",
+      "rule_id": "vault.rule.keymgmt-distribute-key",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/keymgmt_distribute_key"
@@ -1102,7 +1102,7 @@
         }
       ],
       "resource_type": "vault_keymgmt_gcp_kms",
-      "rule_id": "vault/keymgmt-gcp-kms",
+      "rule_id": "vault.rule.keymgmt-gcp-kms",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/keymgmt_gcp_kms"
@@ -1118,7 +1118,7 @@
         }
       ],
       "resource_type": "vault_keymgmt_key",
-      "rule_id": "vault/keymgmt-key",
+      "rule_id": "vault.rule.keymgmt-key",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/keymgmt_key"
@@ -1128,7 +1128,7 @@
       "file": "dialects/vault/encryption/key-management.rf",
       "paths": [],
       "resource_type": "vault_keymgmt_replicate_key",
-      "rule_id": "vault/keymgmt-replicate-key",
+      "rule_id": "vault.rule.keymgmt-replicate-key",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/keymgmt_replicate_key"
@@ -1144,7 +1144,7 @@
         }
       ],
       "resource_type": "vault_kmip_secret_backend",
-      "rule_id": "vault/kmip-secret-backend",
+      "rule_id": "vault.rule.kmip-secret-backend",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kmip_secret_backend"
@@ -1160,7 +1160,7 @@
         }
       ],
       "resource_type": "vault_kmip_secret_ca_generated",
-      "rule_id": "vault/kmip-secret-ca-generated",
+      "rule_id": "vault.rule.kmip-secret-ca-generated",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kmip_secret_ca_generated"
@@ -1176,7 +1176,7 @@
         }
       ],
       "resource_type": "vault_kmip_secret_ca_imported",
-      "rule_id": "vault/kmip-secret-ca-imported",
+      "rule_id": "vault.rule.kmip-secret-ca-imported",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kmip_secret_ca_imported"
@@ -1192,7 +1192,7 @@
         }
       ],
       "resource_type": "vault_kmip_secret_listener",
-      "rule_id": "vault/kmip-secret-listener",
+      "rule_id": "vault.rule.kmip-secret-listener",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kmip_secret_listener"
@@ -1202,7 +1202,7 @@
       "file": "dialects/vault/pki/certificate-authorities.rf",
       "paths": [],
       "resource_type": "vault_kmip_secret_role",
-      "rule_id": "vault/kmip-secret-role",
+      "rule_id": "vault.rule.kmip-secret-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kmip_secret_role"
@@ -1218,7 +1218,7 @@
         }
       ],
       "resource_type": "vault_kmip_secret_scope",
-      "rule_id": "vault/kmip-secret-scope",
+      "rule_id": "vault.rule.kmip-secret-scope",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kmip_secret_scope"
@@ -1244,7 +1244,7 @@
         }
       ],
       "resource_type": "vault_kubernetes_auth_backend_config",
-      "rule_id": "vault/kubernetes-auth-backend-config",
+      "rule_id": "vault.rule.kubernetes-auth-backend-config",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kubernetes_auth_backend_config"
@@ -1260,7 +1260,7 @@
         }
       ],
       "resource_type": "vault_kubernetes_auth_backend_role",
-      "rule_id": "vault/kubernetes-auth-backend-role",
+      "rule_id": "vault.rule.kubernetes-auth-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kubernetes_auth_backend_role"
@@ -1281,7 +1281,7 @@
         }
       ],
       "resource_type": "vault_kubernetes_secret_backend",
-      "rule_id": "vault/kubernetes-secret-backend",
+      "rule_id": "vault.rule.kubernetes-secret-backend",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kubernetes_secret_backend"
@@ -1291,7 +1291,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_kubernetes_secret_backend_role",
-      "rule_id": "vault/kubernetes-secret-backend-role",
+      "rule_id": "vault.rule.kubernetes-secret-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kubernetes_secret_backend_role"
@@ -1301,7 +1301,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_kv_secret",
-      "rule_id": "vault/kv-secret",
+      "rule_id": "vault.rule.kv-secret",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kv_secret"
@@ -1317,7 +1317,7 @@
         }
       ],
       "resource_type": "vault_kv_secret_backend_v2",
-      "rule_id": "vault/kv-secret-backend-v2",
+      "rule_id": "vault.rule.kv-secret-backend-v2",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kv_secret_backend_v2"
@@ -1327,7 +1327,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_kv_secret",
-      "rule_id": "vault/kv-secret-read",
+      "rule_id": "vault.rule.kv-secret-read",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/data-sources/kv_secret"
@@ -1337,7 +1337,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_kv_secret_v2",
-      "rule_id": "vault/kv-secret-v2",
+      "rule_id": "vault.rule.kv-secret-v2",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/kv_secret_v2"
@@ -1347,7 +1347,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_kv_secret_v2",
-      "rule_id": "vault/kv-secret-v2-read",
+      "rule_id": "vault.rule.kv-secret-v2-read",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/data-sources/kv_secret_v2"
@@ -1363,7 +1363,7 @@
         }
       ],
       "resource_type": "vault_ldap_auth_backend",
-      "rule_id": "vault/ldap-auth-backend",
+      "rule_id": "vault.rule.ldap-auth-backend",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/ldap_auth_backend"
@@ -1379,7 +1379,7 @@
         }
       ],
       "resource_type": "vault_ldap_auth_backend_group",
-      "rule_id": "vault/ldap-auth-backend-group",
+      "rule_id": "vault.rule.ldap-auth-backend-group",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/ldap_auth_backend_group"
@@ -1395,7 +1395,7 @@
         }
       ],
       "resource_type": "vault_ldap_secret_backend",
-      "rule_id": "vault/ldap-secret-backend",
+      "rule_id": "vault.rule.ldap-secret-backend",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/ldap_secret_backend"
@@ -1405,7 +1405,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_ldap_secret_backend_dynamic_role",
-      "rule_id": "vault/ldap-secret-backend-dynamic-role",
+      "rule_id": "vault.rule.ldap-secret-backend-dynamic-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/ldap_secret_backend_dynamic_role"
@@ -1415,7 +1415,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_ldap_secret_backend_library_set",
-      "rule_id": "vault/ldap-secret-backend-library-set",
+      "rule_id": "vault.rule.ldap-secret-backend-library-set",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/ldap_secret_backend_library_set"
@@ -1425,7 +1425,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_ldap_secret_backend_static_role",
-      "rule_id": "vault/ldap-secret-backend-static-role",
+      "rule_id": "vault.rule.ldap-secret-backend-static-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/ldap_secret_backend_static_role"
@@ -1435,7 +1435,7 @@
       "file": "dialects/vault/encryption/key-management.rf",
       "paths": [],
       "resource_type": "vault_managed_keys",
-      "rule_id": "vault/managed-keys",
+      "rule_id": "vault.rule.managed-keys",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/managed_keys"
@@ -1445,7 +1445,7 @@
       "file": "dialects/vault/identity/identity-oidc.rf",
       "paths": [],
       "resource_type": "vault_mfa_duo",
-      "rule_id": "vault/mfa-duo",
+      "rule_id": "vault.rule.mfa-duo",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/mfa_duo"
@@ -1455,7 +1455,7 @@
       "file": "dialects/vault/identity/identity-oidc.rf",
       "paths": [],
       "resource_type": "vault_mfa_okta",
-      "rule_id": "vault/mfa-okta",
+      "rule_id": "vault.rule.mfa-okta",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/mfa_okta"
@@ -1465,7 +1465,7 @@
       "file": "dialects/vault/identity/identity-oidc.rf",
       "paths": [],
       "resource_type": "vault_mfa_pingid",
-      "rule_id": "vault/mfa-pingid",
+      "rule_id": "vault.rule.mfa-pingid",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/mfa_pingid"
@@ -1475,7 +1475,7 @@
       "file": "dialects/vault/identity/identity-oidc.rf",
       "paths": [],
       "resource_type": "vault_mfa_totp",
-      "rule_id": "vault/mfa-totp",
+      "rule_id": "vault.rule.mfa-totp",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/mfa_totp"
@@ -1491,7 +1491,7 @@
         }
       ],
       "resource_type": "vault_mongodbatlas_secret_backend",
-      "rule_id": "vault/mongodbatlas-secret-backend",
+      "rule_id": "vault.rule.mongodbatlas-secret-backend",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/mongodbatlas_secret_backend"
@@ -1501,7 +1501,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_mongodbatlas_secret_role",
-      "rule_id": "vault/mongodbatlas-secret-role",
+      "rule_id": "vault.rule.mongodbatlas-secret-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/mongodbatlas_secret_role"
@@ -1517,7 +1517,7 @@
         }
       ],
       "resource_type": "vault_mount",
-      "rule_id": "vault/mount",
+      "rule_id": "vault.rule.mount",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/mount"
@@ -1533,7 +1533,7 @@
         }
       ],
       "resource_type": "vault_namespace",
-      "rule_id": "vault/namespace",
+      "rule_id": "vault.rule.namespace",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/namespace"
@@ -1549,7 +1549,7 @@
         }
       ],
       "resource_type": "vault_nomad_secret_backend",
-      "rule_id": "vault/nomad-secret-backend",
+      "rule_id": "vault.rule.nomad-secret-backend",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/nomad_secret_backend"
@@ -1559,7 +1559,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_nomad_secret_role",
-      "rule_id": "vault/nomad-secret-role",
+      "rule_id": "vault.rule.nomad-secret-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/nomad_secret_role"
@@ -1569,7 +1569,7 @@
       "file": "dialects/vault/identity/identity-oidc.rf",
       "paths": [],
       "resource_type": "vault_oauth_resource_server_config_profile",
-      "rule_id": "vault/oauth-resource-server-config-profile",
+      "rule_id": "vault.rule.oauth-resource-server-config-profile",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/oauth_resource_server_config_profile"
@@ -1585,7 +1585,7 @@
         }
       ],
       "resource_type": "vault_oci_auth_backend",
-      "rule_id": "vault/oci-auth-backend",
+      "rule_id": "vault.rule.oci-auth-backend",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/oci_auth_backend"
@@ -1601,7 +1601,7 @@
         }
       ],
       "resource_type": "vault_oci_auth_backend_role",
-      "rule_id": "vault/oci-auth-backend-role",
+      "rule_id": "vault.rule.oci-auth-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/oci_auth_backend_role"
@@ -1617,7 +1617,7 @@
         }
       ],
       "resource_type": "vault_okta_auth_backend",
-      "rule_id": "vault/okta-auth-backend",
+      "rule_id": "vault.rule.okta-auth-backend",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/okta_auth_backend"
@@ -1633,7 +1633,7 @@
         }
       ],
       "resource_type": "vault_okta_auth_backend_group",
-      "rule_id": "vault/okta-auth-backend-group",
+      "rule_id": "vault.rule.okta-auth-backend-group",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/okta_auth_backend_group"
@@ -1649,7 +1649,7 @@
         }
       ],
       "resource_type": "vault_os_secret_backend",
-      "rule_id": "vault/os-secret-backend",
+      "rule_id": "vault.rule.os-secret-backend",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/os_secret_backend"
@@ -1659,7 +1659,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_os_secret_backend_account",
-      "rule_id": "vault/os-secret-backend-account",
+      "rule_id": "vault.rule.os-secret-backend-account",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/os_secret_backend_account"
@@ -1669,7 +1669,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_os_secret_backend_host",
-      "rule_id": "vault/os-secret-backend-host",
+      "rule_id": "vault.rule.os-secret-backend-host",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/os_secret_backend_host"
@@ -1679,7 +1679,7 @@
       "file": "dialects/vault/governance/namespaces.rf",
       "paths": [],
       "resource_type": "vault_password_policy",
-      "rule_id": "vault/password-policy",
+      "rule_id": "vault.rule.password-policy",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/password_policy"
@@ -1695,7 +1695,7 @@
         }
       ],
       "resource_type": "vault_pki_external_ca_secret_backend_role",
-      "rule_id": "vault/pki-external-ca-secret-backend-role",
+      "rule_id": "vault.rule.pki-external-ca-secret-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_external_ca_secret_backend_role"
@@ -1711,7 +1711,7 @@
         }
       ],
       "resource_type": "vault_pki_secret_backend_config_acme",
-      "rule_id": "vault/pki-secret-backend-config-acme",
+      "rule_id": "vault.rule.pki-secret-backend-config-acme",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_config_acme"
@@ -1727,7 +1727,7 @@
         }
       ],
       "resource_type": "vault_pki_secret_backend_config_auto_tidy",
-      "rule_id": "vault/pki-secret-backend-config-auto-tidy",
+      "rule_id": "vault.rule.pki-secret-backend-config-auto-tidy",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_config_auto_tidy"
@@ -1743,7 +1743,7 @@
         }
       ],
       "resource_type": "vault_pki_secret_backend_config_cluster",
-      "rule_id": "vault/pki-secret-backend-config-cluster",
+      "rule_id": "vault.rule.pki-secret-backend-config-cluster",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_config_cluster"
@@ -1759,7 +1759,7 @@
         }
       ],
       "resource_type": "vault_pki_secret_backend_config_cmpv2",
-      "rule_id": "vault/pki-secret-backend-config-cmpv2",
+      "rule_id": "vault.rule.pki-secret-backend-config-cmpv2",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_config_cmpv2"
@@ -1775,7 +1775,7 @@
         }
       ],
       "resource_type": "vault_pki_secret_backend_config_est",
-      "rule_id": "vault/pki-secret-backend-config-est",
+      "rule_id": "vault.rule.pki-secret-backend-config-est",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_config_est"
@@ -1791,7 +1791,7 @@
         }
       ],
       "resource_type": "vault_pki_secret_backend_config_issuers",
-      "rule_id": "vault/pki-secret-backend-config-issuers",
+      "rule_id": "vault.rule.pki-secret-backend-config-issuers",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_config_issuers"
@@ -1807,7 +1807,7 @@
         }
       ],
       "resource_type": "vault_pki_secret_backend_config_scep",
-      "rule_id": "vault/pki-secret-backend-config-scep",
+      "rule_id": "vault.rule.pki-secret-backend-config-scep",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_config_scep"
@@ -1823,7 +1823,7 @@
         }
       ],
       "resource_type": "vault_pki_secret_backend_config_urls",
-      "rule_id": "vault/pki-secret-backend-config-urls",
+      "rule_id": "vault.rule.pki-secret-backend-config-urls",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_config_urls"
@@ -1839,7 +1839,7 @@
         }
       ],
       "resource_type": "vault_pki_secret_backend_crl_config",
-      "rule_id": "vault/pki-secret-backend-crl-config",
+      "rule_id": "vault.rule.pki-secret-backend-crl-config",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_crl_config"
@@ -1855,7 +1855,7 @@
         }
       ],
       "resource_type": "vault_pki_secret_backend_intermediate_set_signed",
-      "rule_id": "vault/pki-secret-backend-intermediate-set-signed",
+      "rule_id": "vault.rule.pki-secret-backend-intermediate-set-signed",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_intermediate_set_signed"
@@ -1871,7 +1871,7 @@
         }
       ],
       "resource_type": "vault_pki_secret_backend_issuer",
-      "rule_id": "vault/pki-secret-backend-issuer",
+      "rule_id": "vault.rule.pki-secret-backend-issuer",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_issuer"
@@ -1887,7 +1887,7 @@
         }
       ],
       "resource_type": "vault_pki_secret_backend_key",
-      "rule_id": "vault/pki-secret-backend-key",
+      "rule_id": "vault.rule.pki-secret-backend-key",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_key"
@@ -1903,7 +1903,7 @@
         }
       ],
       "resource_type": "vault_pki_secret_backend_role",
-      "rule_id": "vault/pki-secret-backend-role",
+      "rule_id": "vault.rule.pki-secret-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_role"
@@ -1919,7 +1919,7 @@
         }
       ],
       "resource_type": "vault_pki_secret_backend_root_cert",
-      "rule_id": "vault/pki-secret-backend-root-cert",
+      "rule_id": "vault.rule.pki-secret-backend-root-cert",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/pki_secret_backend_root_cert"
@@ -1929,7 +1929,7 @@
       "file": "dialects/vault/system/plugins.rf",
       "paths": [],
       "resource_type": "vault_plugin",
-      "rule_id": "vault/plugin",
+      "rule_id": "vault.rule.plugin",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/plugin"
@@ -1939,7 +1939,7 @@
       "file": "dialects/vault/system/plugins.rf",
       "paths": [],
       "resource_type": "vault_plugin_pinned_version",
-      "rule_id": "vault/plugin-pinned-version",
+      "rule_id": "vault.rule.plugin-pinned-version",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/plugin_pinned_version"
@@ -1955,7 +1955,7 @@
         }
       ],
       "resource_type": "vault_plugin_runtime",
-      "rule_id": "vault/plugin-runtime",
+      "rule_id": "vault.rule.plugin-runtime",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/plugin_runtime"
@@ -1965,7 +1965,7 @@
       "file": "dialects/vault/governance/namespaces.rf",
       "paths": [],
       "resource_type": "vault_policy",
-      "rule_id": "vault/policy",
+      "rule_id": "vault.rule.policy",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/policy"
@@ -1981,7 +1981,7 @@
         }
       ],
       "resource_type": "vault_rabbitmq_secret_backend",
-      "rule_id": "vault/rabbitmq-secret-backend",
+      "rule_id": "vault.rule.rabbitmq-secret-backend",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/rabbitmq_secret_backend"
@@ -1991,7 +1991,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_rabbitmq_secret_backend_role",
-      "rule_id": "vault/rabbitmq-secret-backend-role",
+      "rule_id": "vault.rule.rabbitmq-secret-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/rabbitmq_secret_backend_role"
@@ -2007,7 +2007,7 @@
         }
       ],
       "resource_type": "vault_radius_auth_backend",
-      "rule_id": "vault/radius-auth-backend",
+      "rule_id": "vault.rule.radius-auth-backend",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/radius_auth_backend"
@@ -2017,7 +2017,7 @@
       "file": "dialects/vault/operations/audit-continuity.rf",
       "paths": [],
       "resource_type": "vault_raft_autopilot",
-      "rule_id": "vault/raft-autopilot",
+      "rule_id": "vault.rule.raft-autopilot",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/raft_autopilot"
@@ -2053,7 +2053,7 @@
         }
       ],
       "resource_type": "vault_raft_snapshot_agent_config",
-      "rule_id": "vault/raft-snapshot-agent-config",
+      "rule_id": "vault.rule.raft-snapshot-agent-config",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/raft_snapshot_agent_config"
@@ -2063,7 +2063,7 @@
       "file": "dialects/vault/governance/namespaces.rf",
       "paths": [],
       "resource_type": "vault_rgp_policy",
-      "rule_id": "vault/rgp-policy",
+      "rule_id": "vault.rule.rgp-policy",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/rgp_policy"
@@ -2073,7 +2073,7 @@
       "file": "dialects/vault/governance/namespaces.rf",
       "paths": [],
       "resource_type": "vault_rotation_policy",
-      "rule_id": "vault/rotation-policy",
+      "rule_id": "vault.rule.rotation-policy",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/rotation_policy"
@@ -2089,7 +2089,7 @@
         }
       ],
       "resource_type": "vault_saml_auth_backend",
-      "rule_id": "vault/saml-auth-backend",
+      "rule_id": "vault.rule.saml-auth-backend",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/saml_auth_backend"
@@ -2105,7 +2105,7 @@
         }
       ],
       "resource_type": "vault_saml_auth_backend_role",
-      "rule_id": "vault/saml-auth-backend-role",
+      "rule_id": "vault.rule.saml-auth-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/saml_auth_backend_role"
@@ -2121,7 +2121,7 @@
         }
       ],
       "resource_type": "vault_scep_auth_backend_role",
-      "rule_id": "vault/scep-auth-backend-role",
+      "rule_id": "vault.rule.scep-auth-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/scep_auth_backend_role"
@@ -2137,7 +2137,7 @@
         }
       ],
       "resource_type": "vault_secrets_sync_association",
-      "rule_id": "vault/secrets-sync-association",
+      "rule_id": "vault.rule.secrets-sync-association",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/secrets_sync_association"
@@ -2163,7 +2163,7 @@
         }
       ],
       "resource_type": "vault_secrets_sync_aws_destination",
-      "rule_id": "vault/secrets-sync-aws-destination",
+      "rule_id": "vault.rule.secrets-sync-aws-destination",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/secrets_sync_aws_destination"
@@ -2184,7 +2184,7 @@
         }
       ],
       "resource_type": "vault_secrets_sync_azure_destination",
-      "rule_id": "vault/secrets-sync-azure-destination",
+      "rule_id": "vault.rule.secrets-sync-azure-destination",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/secrets_sync_azure_destination"
@@ -2194,7 +2194,7 @@
       "file": "dialects/vault/secrets-sync/destinations.rf",
       "paths": [],
       "resource_type": "vault_secrets_sync_config",
-      "rule_id": "vault/secrets-sync-config",
+      "rule_id": "vault.rule.secrets-sync-config",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/secrets_sync_config"
@@ -2225,7 +2225,7 @@
         }
       ],
       "resource_type": "vault_secrets_sync_gcp_destination",
-      "rule_id": "vault/secrets-sync-gcp-destination",
+      "rule_id": "vault.rule.secrets-sync-gcp-destination",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/secrets_sync_gcp_destination"
@@ -2241,7 +2241,7 @@
         }
       ],
       "resource_type": "vault_secrets_sync_gh_destination",
-      "rule_id": "vault/secrets-sync-gh-destination",
+      "rule_id": "vault.rule.secrets-sync-gh-destination",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/secrets_sync_gh_destination"
@@ -2257,7 +2257,7 @@
         }
       ],
       "resource_type": "vault_secrets_sync_github_apps",
-      "rule_id": "vault/secrets-sync-github-apps",
+      "rule_id": "vault.rule.secrets-sync-github-apps",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/secrets_sync_github_apps"
@@ -2273,7 +2273,7 @@
         }
       ],
       "resource_type": "vault_secrets_sync_vercel_destination",
-      "rule_id": "vault/secrets-sync-vercel-destination",
+      "rule_id": "vault.rule.secrets-sync-vercel-destination",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/secrets_sync_vercel_destination"
@@ -2289,7 +2289,7 @@
         }
       ],
       "resource_type": "vault_spiffe_auth_backend_config",
-      "rule_id": "vault/spiffe-auth-backend-config",
+      "rule_id": "vault.rule.spiffe-auth-backend-config",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/spiffe_auth_backend_config"
@@ -2305,7 +2305,7 @@
         }
       ],
       "resource_type": "vault_spiffe_auth_backend_role",
-      "rule_id": "vault/spiffe-auth-backend-role",
+      "rule_id": "vault.rule.spiffe-auth-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/spiffe_auth_backend_role"
@@ -2321,7 +2321,7 @@
         }
       ],
       "resource_type": "vault_spiffe_secret_backend_config",
-      "rule_id": "vault/spiffe-secret-backend-config",
+      "rule_id": "vault.rule.spiffe-secret-backend-config",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/spiffe_secret_backend_config"
@@ -2331,7 +2331,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_spiffe_secret_backend_role",
-      "rule_id": "vault/spiffe-secret-backend-role",
+      "rule_id": "vault.rule.spiffe-secret-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/spiffe_secret_backend_role"
@@ -2347,7 +2347,7 @@
         }
       ],
       "resource_type": "vault_ssh_secret_backend_ca",
-      "rule_id": "vault/ssh-secret-backend-ca",
+      "rule_id": "vault.rule.ssh-secret-backend-ca",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/ssh_secret_backend_ca"
@@ -2357,7 +2357,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_ssh_secret_backend_role",
-      "rule_id": "vault/ssh-secret-backend-role",
+      "rule_id": "vault.rule.ssh-secret-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/ssh_secret_backend_role"
@@ -2373,7 +2373,7 @@
         }
       ],
       "resource_type": "vault_terraform_cloud_secret_backend",
-      "rule_id": "vault/terraform-cloud-secret-backend",
+      "rule_id": "vault.rule.terraform-cloud-secret-backend",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/terraform_cloud_secret_backend"
@@ -2383,7 +2383,7 @@
       "file": "dialects/vault/secrets/secrets-engines.rf",
       "paths": [],
       "resource_type": "vault_terraform_cloud_secret_role",
-      "rule_id": "vault/terraform-cloud-secret-role",
+      "rule_id": "vault.rule.terraform-cloud-secret-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/terraform_cloud_secret_role"
@@ -2393,7 +2393,7 @@
       "file": "dialects/vault/authentication/auth-methods.rf",
       "paths": [],
       "resource_type": "vault_token_auth_backend_role",
-      "rule_id": "vault/token-auth-backend-role",
+      "rule_id": "vault.rule.token-auth-backend-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/token_auth_backend_role"
@@ -2403,7 +2403,7 @@
       "file": "dialects/vault/encryption/key-management.rf",
       "paths": [],
       "resource_type": "vault_transform_alphabet",
-      "rule_id": "vault/transform-alphabet",
+      "rule_id": "vault.rule.transform-alphabet",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/transform_alphabet"
@@ -2413,7 +2413,7 @@
       "file": "dialects/vault/encryption/key-management.rf",
       "paths": [],
       "resource_type": "vault_transform_key_configuration",
-      "rule_id": "vault/transform-key-configuration",
+      "rule_id": "vault.rule.transform-key-configuration",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/transform_key_configuration"
@@ -2423,7 +2423,7 @@
       "file": "dialects/vault/encryption/key-management.rf",
       "paths": [],
       "resource_type": "vault_transform_role",
-      "rule_id": "vault/transform-role",
+      "rule_id": "vault.rule.transform-role",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/transform_role"
@@ -2433,7 +2433,7 @@
       "file": "dialects/vault/encryption/key-management.rf",
       "paths": [],
       "resource_type": "vault_transform_template",
-      "rule_id": "vault/transform-template",
+      "rule_id": "vault.rule.transform-template",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/transform_template"
@@ -2449,7 +2449,7 @@
         }
       ],
       "resource_type": "vault_transform_transformation",
-      "rule_id": "vault/transform-transformation",
+      "rule_id": "vault.rule.transform-transformation",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/transform_transformation"
@@ -2465,7 +2465,7 @@
         }
       ],
       "resource_type": "vault_transit_secret_backend_key",
-      "rule_id": "vault/transit-secret-backend-key",
+      "rule_id": "vault.rule.transit-secret-backend-key",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/transit_secret_backend_key"
@@ -2481,7 +2481,7 @@
         }
       ],
       "resource_type": "vault_transit_secret_cache_config",
-      "rule_id": "vault/transit-secret-cache-config",
+      "rule_id": "vault.rule.transit-secret-cache-config",
       "schema_verified": true,
       "meaning_verified": true,
       "source_url": "https://registry.terraform.io/providers/hashicorp/vault/5.11.0/docs/resources/transit_secret_cache_config"

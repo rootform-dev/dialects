@@ -3,11 +3,11 @@ rule "frontend-o11y-app" {
     type = "grafana_frontend_o11y_app"
   }
 
-  as = concept.core.browser-observability-application
+  as = concept.browser-observability-application
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.stack_id
   }
 }
@@ -18,11 +18,11 @@ rule "frontend-o11y-app-lookup" {
     type = "grafana_frontend_o11y_app"
   }
 
-  as = concept.core.browser-observability-application
+  as = concept.browser-observability-application
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.stack_id
   }
 }

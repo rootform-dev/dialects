@@ -15,7 +15,7 @@
   "semantic_sources_sha256": "sha256:95efa18d57686e650d5460556cc0e793ce6f741e2edcd6378091715efb558d47",
   "rules": [
     {
-      "rule_id": "newrelic/account-lookup",
+      "rule_id": "newrelic.rule.account-lookup",
       "construct_kind": "data_source",
       "resource_type": "newrelic_account",
       "file": "dialects/newrelic/governance-management/accounts.rf",
@@ -25,7 +25,7 @@
       "paths": []
     },
     {
-      "rule_id": "newrelic/account-management",
+      "rule_id": "newrelic.rule.account-management",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_account_management",
       "file": "dialects/newrelic/governance-management/accounts.rf",
@@ -35,7 +35,7 @@
       "paths": []
     },
     {
-      "rule_id": "newrelic/application-lookup",
+      "rule_id": "newrelic.rule.application-lookup",
       "construct_kind": "data_source",
       "resource_type": "newrelic_application",
       "file": "dialects/newrelic/digital-experience/applications.rf",
@@ -45,7 +45,7 @@
       "paths": []
     },
     {
-      "rule_id": "newrelic/application-settings",
+      "rule_id": "newrelic.rule.application-settings",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_application_settings",
       "file": "dialects/newrelic/digital-experience/applications.rf",
@@ -55,7 +55,7 @@
       "paths": []
     },
     {
-      "rule_id": "newrelic/aws-connection",
+      "rule_id": "newrelic.rule.aws-connection",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_aws_connection",
       "file": "dialects/newrelic/telemetry/federated-logs.rf",
@@ -76,7 +76,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/browser-application",
+      "rule_id": "newrelic.rule.browser-application",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_browser_application",
       "file": "dialects/newrelic/digital-experience/applications.rf",
@@ -92,7 +92,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/cardinality-management",
+      "rule_id": "newrelic.rule.cardinality-management",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_cardinality_management",
       "file": "dialects/newrelic/telemetry/data-management.rf",
@@ -102,7 +102,7 @@
       "paths": []
     },
     {
-      "rule_id": "newrelic/cloud-account-lookup",
+      "rule_id": "newrelic.rule.cloud-account-lookup",
       "construct_kind": "data_source",
       "resource_type": "newrelic_cloud_account",
       "file": "dialects/newrelic/integrations/cloud-integrations.rf",
@@ -118,7 +118,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/cloud-aws-eu-sovereign-integrations",
+      "rule_id": "newrelic.rule.cloud-aws-eu-sovereign-integrations",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_cloud_aws_eu_sovereign_integrations",
       "file": "dialects/newrelic/integrations/cloud-integrations.rf",
@@ -139,7 +139,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/cloud-aws-eu-sovereign-link-account",
+      "rule_id": "newrelic.rule.cloud-aws-eu-sovereign-link-account",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_cloud_aws_eu_sovereign_link_account",
       "file": "dialects/newrelic/integrations/cloud-integrations.rf",
@@ -160,7 +160,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/cloud-aws-govcloud-integrations",
+      "rule_id": "newrelic.rule.cloud-aws-govcloud-integrations",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_cloud_aws_govcloud_integrations",
       "file": "dialects/newrelic/integrations/cloud-integrations.rf",
@@ -181,7 +181,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/cloud-aws-govcloud-link-account",
+      "rule_id": "newrelic.rule.cloud-aws-govcloud-link-account",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_cloud_aws_govcloud_link_account",
       "file": "dialects/newrelic/integrations/cloud-integrations.rf",
@@ -202,7 +202,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/cloud-aws-integrations",
+      "rule_id": "newrelic.rule.cloud-aws-integrations",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_cloud_aws_integrations",
       "file": "dialects/newrelic/integrations/cloud-integrations.rf",
@@ -223,7 +223,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/cloud-aws-link-account",
+      "rule_id": "newrelic.rule.cloud-aws-link-account",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_cloud_aws_link_account",
       "file": "dialects/newrelic/integrations/cloud-integrations.rf",
@@ -244,7 +244,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/cloud-azure-integrations",
+      "rule_id": "newrelic.rule.cloud-azure-integrations",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_cloud_azure_integrations",
       "file": "dialects/newrelic/integrations/cloud-integrations.rf",
@@ -265,7 +265,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/cloud-azure-link-account",
+      "rule_id": "newrelic.rule.cloud-azure-link-account",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_cloud_azure_link_account",
       "file": "dialects/newrelic/integrations/cloud-integrations.rf",
@@ -281,7 +281,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/cloud-gcp-dm-integrations",
+      "rule_id": "newrelic.rule.cloud-gcp-dm-integrations",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_cloud_gcp_dm_integrations",
       "file": "dialects/newrelic/integrations/cloud-integrations.rf",
@@ -302,7 +302,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/cloud-gcp-integrations",
+      "rule_id": "newrelic.rule.cloud-gcp-integrations",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_cloud_gcp_integrations",
       "file": "dialects/newrelic/integrations/cloud-integrations.rf",
@@ -323,7 +323,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/cloud-gcp-link-account",
+      "rule_id": "newrelic.rule.cloud-gcp-link-account",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_cloud_gcp_link_account",
       "file": "dialects/newrelic/integrations/cloud-integrations.rf",
@@ -344,7 +344,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/cloud-oci-link-account",
+      "rule_id": "newrelic.rule.cloud-oci-link-account",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_cloud_oci_link_account",
       "file": "dialects/newrelic/integrations/cloud-integrations.rf",
@@ -360,7 +360,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/data-partition-rule",
+      "rule_id": "newrelic.rule.data-partition-rule",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_data_partition_rule",
       "file": "dialects/newrelic/telemetry/data-management.rf",
@@ -376,7 +376,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/events-to-metrics-rule",
+      "rule_id": "newrelic.rule.events-to-metrics-rule",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_events_to_metrics_rule",
       "file": "dialects/newrelic/telemetry/data-management.rf",
@@ -392,7 +392,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/federated-logs-partition",
+      "rule_id": "newrelic.rule.federated-logs-partition",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_federated_logs_partition",
       "file": "dialects/newrelic/telemetry/federated-logs.rf",
@@ -413,7 +413,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/federated-logs-setup",
+      "rule_id": "newrelic.rule.federated-logs-setup",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_federated_logs_setup",
       "file": "dialects/newrelic/telemetry/federated-logs.rf",
@@ -439,7 +439,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/fleet",
+      "rule_id": "newrelic.rule.fleet",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_fleet",
       "file": "dialects/newrelic/telemetry/fleet-control.rf",
@@ -449,7 +449,7 @@
       "paths": []
     },
     {
-      "rule_id": "newrelic/fleet-configuration",
+      "rule_id": "newrelic.rule.fleet-configuration",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_fleet_configuration",
       "file": "dialects/newrelic/telemetry/fleet-control.rf",
@@ -459,7 +459,7 @@
       "paths": []
     },
     {
-      "rule_id": "newrelic/fleet-configuration-lookup",
+      "rule_id": "newrelic.rule.fleet-configuration-lookup",
       "construct_kind": "data_source",
       "resource_type": "newrelic_fleet_configuration",
       "file": "dialects/newrelic/telemetry/fleet-control.rf",
@@ -469,7 +469,7 @@
       "paths": []
     },
     {
-      "rule_id": "newrelic/fleet-deployment",
+      "rule_id": "newrelic.rule.fleet-deployment",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_fleet_deployment",
       "file": "dialects/newrelic/telemetry/fleet-control.rf",
@@ -485,7 +485,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/fleet-members",
+      "rule_id": "newrelic.rule.fleet-members",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_fleet_members",
       "file": "dialects/newrelic/telemetry/fleet-control.rf",
@@ -501,7 +501,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/fleet-members-lookup",
+      "rule_id": "newrelic.rule.fleet-members-lookup",
       "construct_kind": "data_source",
       "resource_type": "newrelic_fleet_members",
       "file": "dialects/newrelic/telemetry/fleet-control.rf",
@@ -517,7 +517,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/key-transaction",
+      "rule_id": "newrelic.rule.key-transaction",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_key_transaction",
       "file": "dialects/newrelic/digital-experience/applications.rf",
@@ -527,7 +527,7 @@
       "paths": []
     },
     {
-      "rule_id": "newrelic/key-transaction-lookup",
+      "rule_id": "newrelic.rule.key-transaction-lookup",
       "construct_kind": "data_source",
       "resource_type": "newrelic_key_transaction",
       "file": "dialects/newrelic/digital-experience/applications.rf",
@@ -537,7 +537,7 @@
       "paths": []
     },
     {
-      "rule_id": "newrelic/log-parsing-rule",
+      "rule_id": "newrelic.rule.log-parsing-rule",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_log_parsing_rule",
       "file": "dialects/newrelic/telemetry/data-management.rf",
@@ -553,7 +553,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/metric-pruning-rule",
+      "rule_id": "newrelic.rule.metric-pruning-rule",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_metric_pruning_rule",
       "file": "dialects/newrelic/telemetry/data-management.rf",
@@ -569,7 +569,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/nrql-drop-rule",
+      "rule_id": "newrelic.rule.nrql-drop-rule",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_nrql_drop_rule",
       "file": "dialects/newrelic/telemetry/data-management.rf",
@@ -585,7 +585,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/obfuscation-expression",
+      "rule_id": "newrelic.rule.obfuscation-expression",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_obfuscation_expression",
       "file": "dialects/newrelic/telemetry/data-management.rf",
@@ -601,7 +601,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/obfuscation-expression-lookup",
+      "rule_id": "newrelic.rule.obfuscation-expression-lookup",
       "construct_kind": "data_source",
       "resource_type": "newrelic_obfuscation_expression",
       "file": "dialects/newrelic/telemetry/data-management.rf",
@@ -617,7 +617,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/obfuscation-rule",
+      "rule_id": "newrelic.rule.obfuscation-rule",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_obfuscation_rule",
       "file": "dialects/newrelic/telemetry/data-management.rf",
@@ -633,7 +633,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/pipeline-cloud-rule",
+      "rule_id": "newrelic.rule.pipeline-cloud-rule",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_pipeline_cloud_rule",
       "file": "dialects/newrelic/telemetry/data-management.rf",
@@ -649,17 +649,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/service-level",
-      "construct_kind": "managed_resource",
-      "resource_type": "newrelic_service_level",
-      "file": "dialects/newrelic/service-management/service-objectives.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/service_level",
-      "paths": []
-    },
-    {
-      "rule_id": "newrelic/synthetics-broken-links-monitor",
+      "rule_id": "newrelic.rule.synthetics-broken-links-monitor",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_synthetics_broken_links_monitor",
       "file": "dialects/newrelic/digital-experience/synthetics.rf",
@@ -680,7 +670,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/synthetics-cert-check-monitor",
+      "rule_id": "newrelic.rule.synthetics-cert-check-monitor",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_synthetics_cert_check_monitor",
       "file": "dialects/newrelic/digital-experience/synthetics.rf",
@@ -701,7 +691,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/synthetics-monitor",
+      "rule_id": "newrelic.rule.synthetics-monitor",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_synthetics_monitor",
       "file": "dialects/newrelic/digital-experience/synthetics.rf",
@@ -722,7 +712,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/synthetics-private-location",
+      "rule_id": "newrelic.rule.synthetics-private-location",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_synthetics_private_location",
       "file": "dialects/newrelic/digital-experience/synthetics.rf",
@@ -738,7 +728,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/synthetics-private-location-lookup",
+      "rule_id": "newrelic.rule.synthetics-private-location-lookup",
       "construct_kind": "data_source",
       "resource_type": "newrelic_synthetics_private_location",
       "file": "dialects/newrelic/digital-experience/synthetics.rf",
@@ -754,7 +744,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/synthetics-script-monitor",
+      "rule_id": "newrelic.rule.synthetics-script-monitor",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_synthetics_script_monitor",
       "file": "dialects/newrelic/digital-experience/synthetics.rf",
@@ -775,7 +765,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/synthetics-step-monitor",
+      "rule_id": "newrelic.rule.synthetics-step-monitor",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_synthetics_step_monitor",
       "file": "dialects/newrelic/digital-experience/synthetics.rf",
@@ -796,17 +786,7 @@
       ]
     },
     {
-      "rule_id": "newrelic/workflow-automation",
-      "construct_kind": "managed_resource",
-      "resource_type": "newrelic_workflow_automation",
-      "file": "dialects/newrelic/automation/workflow-automation.rf",
-      "schema_verified": true,
-      "meaning_verified": true,
-      "source_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/workflow_automation",
-      "paths": []
-    },
-    {
-      "rule_id": "newrelic/workload",
+      "rule_id": "newrelic.rule.workload",
       "construct_kind": "managed_resource",
       "resource_type": "newrelic_workload",
       "file": "dialects/newrelic/service-management/workloads.rf",

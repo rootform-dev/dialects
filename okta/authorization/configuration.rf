@@ -1,5 +1,4 @@
 concept "authorization-server-configuration" {
-  kind        = detail
   description = "A claim, scope, policy, rule, or trusted-server association supporting an Authorization Server."
 }
 

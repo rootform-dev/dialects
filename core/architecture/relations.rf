@@ -1,3 +1,0 @@
-relation "private-reachability" {
-  description = "Private network reachability between an architecture component and a network boundary."
-}

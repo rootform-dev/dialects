@@ -3787,7 +3787,12 @@
           "subcategory": "WorkSpaces"
         }
       ],
-      "provider_functions": ["arn_build", "arn_parse", "trim_iam_role_path", "user_agent"],
+      "provider_functions": [
+        "arn_build",
+        "arn_parse",
+        "trim_iam_role_path",
+        "user_agent"
+      ],
       "resource_identities": [
         "aws_acm_certificate",
         "aws_acm_certificate_validation",

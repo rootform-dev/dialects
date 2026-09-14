@@ -3,7 +3,7 @@ rule "iam-role" {
     type = "aws_iam_role"
   }
 
-  as = concept.core.service-identity
+  as = concept.iam-role
 }
 
 rule "iam-role-policy-attachment" {
@@ -11,10 +11,10 @@ rule "iam-role-policy-attachment" {
     type = "aws_iam_role_policy_attachment"
   }
 
-  as = concept.core.service-identity-binding
+  as = concept.service-identity-binding
 
   contribution {
-    to  = concept.core.service-identity
+    to  = concept.iam-role
     via = source.role
 
     match {
@@ -32,7 +32,7 @@ rule "iam-instance-profile" {
   as = concept.instance-profile
 
   contribution {
-    to  = concept.core.service-identity
+    to  = concept.iam-role
     via = source.role
 
     match {

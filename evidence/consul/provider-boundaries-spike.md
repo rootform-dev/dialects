@@ -25,7 +25,7 @@ current lifecycle terminology.
 
 Core comparison keeps Consul cluster peering separate from virtual-network
 peering, keeps service mesh local because AWS/Azure root parity is not yet
-represented, and reuses only `core/api-gateway` plus core contexts. JWT/identity
+represented, and reuses only `consul.concept.api-gateway` plus core contexts. JWT/identity
 provider promotion waits for Okta/Auth0.
 
 Official sources: Terraform Registry exact provider docs, provider GitHub

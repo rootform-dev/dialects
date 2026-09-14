@@ -1,9 +1,0 @@
-concept "kubernetes-cluster" {
-  kind        = scope
-  description = "A Kubernetes cluster forming a workload runtime boundary for its namespaced resources."
-}
-
-concept "kubernetes-node-pool" {
-  kind        = detail
-  description = "A node pool contributing compute capacity to a Kubernetes cluster."
-}

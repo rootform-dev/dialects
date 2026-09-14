@@ -1,5 +1,4 @@
 concept "cloud-asset-feed" {
-  kind        = entity
   description = "A Cloud Asset Inventory feed publishing asset changes to a destination."
 }
 

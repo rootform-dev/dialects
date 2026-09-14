@@ -1,0 +1,31 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-30",
+  "dialect": "snowflake@0.1.0",
+  "policy": {
+    "rf_vocabulary": "RF Vocabulary owns rf.concept.* and rf.context.*; adoptions require individual justification (target spec §6).",
+    "replacement": "Pre-v0.1 core catalog and promotions are replaced; the RF Vocabulary is fixed and embedded."
+  },
+  "rf_concept_bindings": [
+    {
+      "rule": "snowflake.rule.legacy-service-user",
+      "concept": "rf.concept.service-identity"
+    },
+    {
+      "rule": "snowflake.rule.postgres-instance",
+      "concept": "rf.concept.managed-database"
+    },
+    {
+      "rule": "snowflake.rule.service-user",
+      "concept": "rf.concept.service-identity"
+    }
+  ],
+  "local_concept_count": 39,
+  "local_context_count": 1,
+  "local_relation_count": 32,
+  "rule_count": 85,
+  "limitations": [
+    "Coverage and boundary evidence is provider-surface research; it does not prove semantic completeness of representations.",
+    "RF Vocabulary adoptions are derived from the current dialect sources and individually justifiable per target spec §6."
+  ]
+}

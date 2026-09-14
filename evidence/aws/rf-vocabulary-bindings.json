@@ -1,0 +1,59 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-29",
+  "dialect": "aws@0.1.0",
+  "policy": {
+    "rf_vocabulary": "RF Vocabulary owns rf.concept.* and rf.context.*; adoptions require individual justification (target spec §6).",
+    "replacement": "Pre-v0.1 core catalog and promotions are replaced; the RF Vocabulary is fixed and embedded."
+  },
+  "rf_concept_bindings": [
+    {
+      "rule": "aws.rule.db-instance",
+      "concept": "rf.concept.managed-database"
+    },
+    {
+      "rule": "aws.rule.docdb-cluster",
+      "concept": "rf.concept.managed-database"
+    },
+    {
+      "rule": "aws.rule.dsql-cluster",
+      "concept": "rf.concept.managed-database"
+    },
+    {
+      "rule": "aws.rule.eks-cluster",
+      "concept": "rf.concept.kubernetes-cluster"
+    },
+    {
+      "rule": "aws.rule.neptune-cluster",
+      "concept": "rf.concept.managed-database"
+    },
+    {
+      "rule": "aws.rule.rds-cluster",
+      "concept": "rf.concept.managed-database"
+    },
+    {
+      "rule": "aws.rule.s3-bucket",
+      "concept": "rf.concept.object-storage-container"
+    },
+    {
+      "rule": "aws.rule.s3-directory-bucket",
+      "concept": "rf.concept.object-storage-container"
+    },
+    {
+      "rule": "aws.rule.subnet",
+      "concept": "rf.concept.subnet"
+    },
+    {
+      "rule": "aws.rule.vpc",
+      "concept": "rf.concept.virtual-network"
+    }
+  ],
+  "local_concept_count": 64,
+  "local_context_count": 0,
+  "local_relation_count": 1,
+  "rule_count": 108,
+  "limitations": [
+    "Coverage and boundary evidence is provider-surface research; it does not prove semantic completeness of representations.",
+    "RF Vocabulary adoptions are derived from the current dialect sources and individually justifiable per target spec §6."
+  ]
+}

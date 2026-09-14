@@ -4,10 +4,10 @@ rule "arc-kubernetes-cluster" {
     type = "azurerm_arc_kubernetes_cluster"
   }
 
-  as = concept.core.kubernetes-cluster
+  as = rf.concept.kubernetes-cluster
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -18,10 +18,10 @@ rule "arc-provisioned-kubernetes-cluster" {
     type = "azurerm_arc_kubernetes_provisioned_cluster"
   }
 
-  as = concept.core.kubernetes-cluster
+  as = rf.concept.kubernetes-cluster
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

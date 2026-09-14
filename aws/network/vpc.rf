@@ -3,7 +3,7 @@ rule "vpc" {
     type = "aws_vpc"
   }
 
-  as = concept.core.virtual-network
+  as = rf.concept.virtual-network
 }
 
 rule "subnet" {
@@ -11,11 +11,11 @@ rule "subnet" {
     type = "aws_subnet"
   }
 
-  as = concept.core.subnet
+  as = rf.concept.subnet
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.vpc_id
   }
 }
@@ -25,11 +25,11 @@ rule "vpc-endpoint" {
     type = "aws_vpc_endpoint"
   }
 
-  as = concept.core.private-endpoint
+  as = concept.private-endpoint
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.vpc_id
   }
 }
@@ -55,8 +55,8 @@ rule "ec2-transit-gateway-vpc-attachment" {
   }
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.vpc_id
   }
 }
@@ -69,8 +69,8 @@ rule "route-table" {
   as = concept.route-table
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.vpc_id
   }
 }
@@ -83,8 +83,8 @@ rule "security-group" {
   as = concept.security-group
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.vpc_id
   }
 }
@@ -97,8 +97,8 @@ rule "network-acl" {
   as = concept.network-acl
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.vpc_id
   }
 }
@@ -111,8 +111,8 @@ rule "internet-gateway" {
   as = concept.internet-gateway
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.vpc_id
   }
 }
@@ -122,11 +122,11 @@ rule "nat-gateway" {
     type = "aws_nat_gateway"
   }
 
-  as = concept.core.managed-nat
+  as = concept.managed-nat
 
   context {
-    as  = context.core.network
-    to  = concept.core.subnet
+    as  = rf.context.network
+    to  = rf.concept.subnet
     via = source.subnet_id
   }
 }
@@ -136,38 +136,31 @@ rule "vpn-gateway" {
     type = "aws_vpn_gateway"
   }
 
-  as = concept.core.vpn-gateway
+  as = concept.vpn-gateway
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.vpc_id
   }
 }
 
-rule "vpc-peering-connection" {
-  match {
-    type = "aws_vpc_peering_connection"
-  }
-
-  as = concept.core.network-peering
-}
 
 rule "vpn-connection" {
   match {
     type = "aws_vpn_connection"
   }
 
-  as = concept.core.vpn-connection
+  as = concept.vpn-connection
 
   context {
-    as  = context.core.network
-    to  = concept.core.vpn-gateway
+    as  = rf.context.network
+    to  = concept.vpn-gateway
     via = source.vpn_gateway_id
   }
 
   context {
-    as  = context.core.network
+    as  = rf.context.network
     to  = concept.transit-gateway
     via = source.transit_gateway_id
   }

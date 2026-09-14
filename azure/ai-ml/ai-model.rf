@@ -4,5 +4,5 @@ rule "ai-model-deployment" {
     type = "azurerm_cognitive_deployment"
   }
 
-  as = concept.core.ai-inference-endpoint
+  as = concept.ai-inference-endpoint
 }

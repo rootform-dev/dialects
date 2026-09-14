@@ -1,5 +1,4 @@
 concept "flow-vault-connection" {
-  kind        = entity
   description = "A Forms and Flows Vault connection to an external integration."
 }
 

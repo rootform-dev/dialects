@@ -3,16 +3,16 @@ rule "synthetics-broken-links-monitor" {
     type = "newrelic_synthetics_broken_links_monitor"
   }
 
-  as = concept.core.synthetic-check
+  as = concept.synthetic-check
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.account_id
   }
 
   contribution {
-    to  = concept.core.synthetic-execution-location
+    to  = concept.synthetic-execution-location
     via = source.locations_private
   }
 }
@@ -22,16 +22,16 @@ rule "synthetics-cert-check-monitor" {
     type = "newrelic_synthetics_cert_check_monitor"
   }
 
-  as = concept.core.synthetic-check
+  as = concept.synthetic-check
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.account_id
   }
 
   contribution {
-    to  = concept.core.synthetic-execution-location
+    to  = concept.synthetic-execution-location
     via = source.locations_private
   }
 }
@@ -41,16 +41,16 @@ rule "synthetics-monitor" {
     type = "newrelic_synthetics_monitor"
   }
 
-  as = concept.core.synthetic-check
+  as = concept.synthetic-check
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.account_id
   }
 
   contribution {
-    to  = concept.core.synthetic-execution-location
+    to  = concept.synthetic-execution-location
     via = source.locations_private
   }
 }
@@ -60,11 +60,11 @@ rule "synthetics-private-location" {
     type = "newrelic_synthetics_private_location"
   }
 
-  as = concept.core.synthetic-execution-location
+  as = concept.synthetic-execution-location
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.account_id
   }
 }
@@ -75,11 +75,11 @@ rule "synthetics-private-location-lookup" {
     type = "newrelic_synthetics_private_location"
   }
 
-  as = concept.core.synthetic-execution-location
+  as = concept.synthetic-execution-location
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.account_id
   }
 }
@@ -89,16 +89,16 @@ rule "synthetics-script-monitor" {
     type = "newrelic_synthetics_script_monitor"
   }
 
-  as = concept.core.synthetic-check
+  as = concept.synthetic-check
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.account_id
   }
 
   contribution {
-    to  = concept.core.synthetic-execution-location
+    to  = concept.synthetic-execution-location
     via = source.location_private[0].guid
   }
 }
@@ -108,16 +108,16 @@ rule "synthetics-step-monitor" {
     type = "newrelic_synthetics_step_monitor"
   }
 
-  as = concept.core.synthetic-check
+  as = concept.synthetic-check
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.account_id
   }
 
   contribution {
-    to  = concept.core.synthetic-execution-location
+    to  = concept.synthetic-execution-location
     via = source.location_private[0].guid
   }
 }

@@ -1,21 +1,21 @@
 concept "private-endpoint-service" {
-  kind        = entity
   description = "A MongoDB Atlas regional private endpoint service exposed to a customer cloud network."
 }
 
 concept "private-endpoint-registration" {
-  kind        = entity
   description = "A registration joining an Atlas private endpoint service to a customer cloud private endpoint."
 }
 
 concept "data-service-private-endpoint" {
-  kind        = entity
   description = "A private endpoint connection for Atlas Data Federation or Online Archive."
 }
 
 concept "network-configuration" {
-  kind        = detail
   description = "A network access, DNS, or private-connectivity setting supporting an Atlas project."
+}
+
+concept "atlas-network-container" {
+  description = "An Atlas address-space container used to configure peering, not a customer virtual network."
 }
 
 rule "network-container" {
@@ -23,10 +23,10 @@ rule "network-container" {
     type = "mongodbatlas_network_container"
   }
 
-  as = concept.core.virtual-network
+  as = concept.atlas-network-container
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -37,31 +37,31 @@ rule "network-peering" {
     type = "mongodbatlas_network_peering"
   }
 
-  as = concept.core.network-peering
+  as = concept.network-peering
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
 
   relation "connects-atlas-network" {
-    to  = concept.core.virtual-network
+    to  = concept.atlas-network-container
     via = source.container_id
   }
 
   relation "connects-cloud-network" {
-    to  = concept.core.virtual-network
+    to  = rf.concept.virtual-network
     via = source.vpc_id
   }
 
   relation "connects-cloud-network" {
-    to  = concept.core.virtual-network
+    to  = rf.concept.virtual-network
     via = source.vnet_name
   }
 
   relation "connects-cloud-network" {
-    to  = concept.core.virtual-network
+    to  = rf.concept.virtual-network
     via = source.network_name
   }
 }
@@ -74,7 +74,7 @@ rule "private-endpoint-service" {
   as = concept.private-endpoint-service
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -88,7 +88,7 @@ rule "private-endpoint-registration" {
   as = concept.private-endpoint-registration
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -99,7 +99,7 @@ rule "private-endpoint-registration" {
   }
 
   relation "registers-cloud-endpoint" {
-    to  = concept.core.private-endpoint
+    to  = concept.private-endpoint
     via = source.endpoint_service_id
   }
 }
@@ -112,13 +112,13 @@ rule "data-service-private-endpoint" {
   as = concept.data-service-private-endpoint
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
 
   relation "uses-cloud-endpoint" {
-    to  = concept.core.private-endpoint
+    to  = concept.private-endpoint
     via = source.endpoint_id
   }
 }

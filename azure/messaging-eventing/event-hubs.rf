@@ -1,6 +1,5 @@
 # Maintained directly from pinned provider evidence.
 concept "event-stream" {
-  kind        = entity
   description = "An Azure Event Hubs append-only event stream."
 }
 
@@ -12,7 +11,7 @@ rule "event-hub" {
   as = concept.event-stream
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.messaging-namespace
     via = source.namespace_id
   }
@@ -26,7 +25,7 @@ rule "event-hubs-cluster" {
   as = concept.event-stream
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -53,7 +52,7 @@ rule "event-hubs-namespace" {
   as = concept.messaging-namespace
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

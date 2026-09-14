@@ -1,10 +1,8 @@
 concept "database" {
-  kind        = scope
   description = "A Snowflake database containing schemas and governed data objects."
 }
 
 concept "schema" {
-  kind        = scope
   description = "A Snowflake schema containing named data-platform objects."
 }
 
@@ -65,7 +63,7 @@ rule "schema" {
   as = concept.schema
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.database
     via = source.database
   }
@@ -81,7 +79,7 @@ rule "postgres-instance" {
     type = "snowflake_postgres_instance"
   }
 
-  as = concept.core.managed-database
+  as = rf.concept.managed-database
 
   relation "uses-storage-integration" {
     to  = concept.storage-integration

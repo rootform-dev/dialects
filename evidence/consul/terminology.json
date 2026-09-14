@@ -26,385 +26,367 @@
   ],
   "rules": [
     {
-      "id": "consul/acl-auth-method",
+      "id": "consul.rule.acl-auth-method",
       "terraform_type": "consul_acl_auth_method",
       "label": "Consul ACL auth method",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/acl_auth_method"
     },
     {
-      "id": "consul/acl-auth-method-lookup",
+      "id": "consul.rule.acl-auth-method-lookup",
       "terraform_type": "consul_acl_auth_method",
       "label": "Consul ACL auth method lookup",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/acl_auth_method"
     },
     {
-      "id": "consul/acl-binding-rule",
+      "id": "consul.rule.acl-binding-rule",
       "terraform_type": "consul_acl_binding_rule",
       "label": "Consul ACL binding rule",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/acl_binding_rule"
     },
     {
-      "id": "consul/admin-partition",
+      "id": "consul.rule.admin-partition",
       "terraform_type": "consul_admin_partition",
       "label": "Consul admin partition",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/admin_partition"
     },
     {
-      "id": "consul/agent-service",
+      "id": "consul.rule.agent-service",
       "terraform_type": "consul_agent_service",
       "label": "Consul agent service (deprecated)",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/agent_service"
     },
     {
-      "id": "consul/autopilot-config",
+      "id": "consul.rule.autopilot-config",
       "terraform_type": "consul_autopilot_config",
       "label": "Consul Autopilot configuration",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/autopilot_config"
     },
     {
-      "id": "consul/catalog-entry",
-      "terraform_type": "consul_catalog_entry",
-      "label": "Consul catalog registration (deprecated)",
-      "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/catalog_entry"
-    },
-    {
-      "id": "consul/catalog-service-lookup",
+      "id": "consul.rule.catalog-service-lookup",
       "terraform_type": "consul_catalog_service",
       "label": "Consul catalog service lookup",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/catalog_service"
     },
     {
-      "id": "consul/certificate-authority",
-      "terraform_type": "consul_certificate_authority",
-      "label": "Consul service mesh certificate authority",
-      "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/certificate_authority"
-    },
-    {
-      "id": "consul/config-entry-api-gateway-json",
+      "id": "consul.rule.config-entry-api-gateway-json",
       "terraform_type": "consul_config_entry",
       "label": "Consul API gateway",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
     },
     {
-      "id": "consul/config-entry-api-gateway-json-lookup",
+      "id": "consul.rule.config-entry-api-gateway-json-lookup",
       "terraform_type": "consul_config_entry",
       "label": "Consul API gateway lookup",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
     },
     {
-      "id": "consul/config-entry-control-plane-request-limit-json",
+      "id": "consul.rule.config-entry-control-plane-request-limit-json",
       "terraform_type": "consul_config_entry",
       "label": "Consul control plane request limit",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
     },
     {
-      "id": "consul/config-entry-control-plane-request-limit-json-lookup",
+      "id": "consul.rule.config-entry-control-plane-request-limit-json-lookup",
       "terraform_type": "consul_config_entry",
       "label": "Consul control plane request limit lookup",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
     },
     {
-      "id": "consul/config-entry-exported-services-json",
+      "id": "consul.rule.config-entry-exported-services-json",
       "terraform_type": "consul_config_entry",
       "label": "Consul exported services configuration",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
     },
     {
-      "id": "consul/config-entry-exported-services-json-lookup",
+      "id": "consul.rule.config-entry-exported-services-json-lookup",
       "terraform_type": "consul_config_entry",
       "label": "Consul exported services configuration lookup",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
     },
     {
-      "id": "consul/config-entry-file-system-certificate-json",
+      "id": "consul.rule.config-entry-file-system-certificate-json",
       "terraform_type": "consul_config_entry",
       "label": "Consul API gateway file system certificate",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
     },
     {
-      "id": "consul/config-entry-file-system-certificate-json-lookup",
+      "id": "consul.rule.config-entry-file-system-certificate-json-lookup",
       "terraform_type": "consul_config_entry",
       "label": "Consul API gateway file system certificate lookup",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
     },
     {
-      "id": "consul/config-entry-http-route-json",
+      "id": "consul.rule.config-entry-http-route-json",
       "terraform_type": "consul_config_entry",
       "label": "Consul HTTP route",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
     },
     {
-      "id": "consul/config-entry-http-route-json-lookup",
+      "id": "consul.rule.config-entry-http-route-json-lookup",
       "terraform_type": "consul_config_entry",
       "label": "Consul HTTP route lookup",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
     },
     {
-      "id": "consul/config-entry-ingress-gateway-json",
+      "id": "consul.rule.config-entry-ingress-gateway-json",
       "terraform_type": "consul_config_entry",
       "label": "Consul ingress gateway (deprecated)",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
     },
     {
-      "id": "consul/config-entry-ingress-gateway-json-lookup",
+      "id": "consul.rule.config-entry-ingress-gateway-json-lookup",
       "terraform_type": "consul_config_entry",
       "label": "Consul ingress gateway (deprecated) lookup",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
     },
     {
-      "id": "consul/config-entry-inline-certificate-json",
+      "id": "consul.rule.config-entry-inline-certificate-json",
       "terraform_type": "consul_config_entry",
       "label": "Consul API gateway inline certificate",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
     },
     {
-      "id": "consul/config-entry-inline-certificate-json-lookup",
+      "id": "consul.rule.config-entry-inline-certificate-json-lookup",
       "terraform_type": "consul_config_entry",
       "label": "Consul API gateway inline certificate lookup",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
     },
     {
-      "id": "consul/config-entry-jwt-provider-json",
+      "id": "consul.rule.config-entry-jwt-provider-json",
       "terraform_type": "consul_config_entry",
       "label": "Consul JWT provider",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
     },
     {
-      "id": "consul/config-entry-jwt-provider-json-lookup",
+      "id": "consul.rule.config-entry-jwt-provider-json-lookup",
       "terraform_type": "consul_config_entry",
       "label": "Consul JWT provider lookup",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
     },
     {
-      "id": "consul/config-entry-mesh-json",
+      "id": "consul.rule.config-entry-mesh-json",
       "terraform_type": "consul_config_entry",
       "label": "Consul service mesh",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
     },
     {
-      "id": "consul/config-entry-mesh-json-lookup",
+      "id": "consul.rule.config-entry-mesh-json-lookup",
       "terraform_type": "consul_config_entry",
       "label": "Consul service mesh lookup",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
     },
     {
-      "id": "consul/config-entry-proxy-defaults-json",
+      "id": "consul.rule.config-entry-proxy-defaults-json",
       "terraform_type": "consul_config_entry",
       "label": "Consul proxy defaults",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
     },
     {
-      "id": "consul/config-entry-proxy-defaults-json-lookup",
+      "id": "consul.rule.config-entry-proxy-defaults-json-lookup",
       "terraform_type": "consul_config_entry",
       "label": "Consul proxy defaults lookup",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
     },
     {
-      "id": "consul/config-entry-sameness-group-json",
+      "id": "consul.rule.config-entry-sameness-group-json",
       "terraform_type": "consul_config_entry",
       "label": "Consul sameness group",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
     },
     {
-      "id": "consul/config-entry-sameness-group-json-lookup",
+      "id": "consul.rule.config-entry-sameness-group-json-lookup",
       "terraform_type": "consul_config_entry",
       "label": "Consul sameness group lookup",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
     },
     {
-      "id": "consul/config-entry-service-defaults",
+      "id": "consul.rule.config-entry-service-defaults",
       "terraform_type": "consul_config_entry_service_defaults",
       "label": "Consul service defaults",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry_service_defaults"
     },
     {
-      "id": "consul/config-entry-service-defaults-json",
+      "id": "consul.rule.config-entry-service-defaults-json",
       "terraform_type": "consul_config_entry",
       "label": "Consul service defaults",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
     },
     {
-      "id": "consul/config-entry-service-defaults-json-lookup",
+      "id": "consul.rule.config-entry-service-defaults-json-lookup",
       "terraform_type": "consul_config_entry",
       "label": "Consul service defaults lookup",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
     },
     {
-      "id": "consul/config-entry-service-intentions",
+      "id": "consul.rule.config-entry-service-intentions",
       "terraform_type": "consul_config_entry_service_intentions",
       "label": "Consul service intentions",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry_service_intentions"
     },
     {
-      "id": "consul/config-entry-service-intentions-json",
+      "id": "consul.rule.config-entry-service-intentions-json",
       "terraform_type": "consul_config_entry",
       "label": "Consul service intentions",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
     },
     {
-      "id": "consul/config-entry-service-intentions-json-lookup",
+      "id": "consul.rule.config-entry-service-intentions-json-lookup",
       "terraform_type": "consul_config_entry",
       "label": "Consul service intentions lookup",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
     },
     {
-      "id": "consul/config-entry-service-resolver",
+      "id": "consul.rule.config-entry-service-resolver",
       "terraform_type": "consul_config_entry_service_resolver",
       "label": "Consul service resolver",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry_service_resolver"
     },
     {
-      "id": "consul/config-entry-service-resolver-json",
+      "id": "consul.rule.config-entry-service-resolver-json",
       "terraform_type": "consul_config_entry",
       "label": "Consul service resolver",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
     },
     {
-      "id": "consul/config-entry-service-resolver-json-lookup",
+      "id": "consul.rule.config-entry-service-resolver-json-lookup",
       "terraform_type": "consul_config_entry",
       "label": "Consul service resolver lookup",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
     },
     {
-      "id": "consul/config-entry-service-router",
+      "id": "consul.rule.config-entry-service-router",
       "terraform_type": "consul_config_entry_service_router",
       "label": "Consul service router",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry_service_router"
     },
     {
-      "id": "consul/config-entry-service-router-json",
+      "id": "consul.rule.config-entry-service-router-json",
       "terraform_type": "consul_config_entry",
       "label": "Consul service router",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
     },
     {
-      "id": "consul/config-entry-service-router-json-lookup",
+      "id": "consul.rule.config-entry-service-router-json-lookup",
       "terraform_type": "consul_config_entry",
       "label": "Consul service router lookup",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
     },
     {
-      "id": "consul/config-entry-service-splitter",
+      "id": "consul.rule.config-entry-service-splitter",
       "terraform_type": "consul_config_entry_service_splitter",
       "label": "Consul service splitter",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry_service_splitter"
     },
     {
-      "id": "consul/config-entry-service-splitter-json",
+      "id": "consul.rule.config-entry-service-splitter-json",
       "terraform_type": "consul_config_entry",
       "label": "Consul service splitter",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
     },
     {
-      "id": "consul/config-entry-service-splitter-json-lookup",
+      "id": "consul.rule.config-entry-service-splitter-json-lookup",
       "terraform_type": "consul_config_entry",
       "label": "Consul service splitter lookup",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
     },
     {
-      "id": "consul/config-entry-tcp-route-json",
+      "id": "consul.rule.config-entry-tcp-route-json",
       "terraform_type": "consul_config_entry",
       "label": "Consul TCP route",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
     },
     {
-      "id": "consul/config-entry-tcp-route-json-lookup",
+      "id": "consul.rule.config-entry-tcp-route-json-lookup",
       "terraform_type": "consul_config_entry",
       "label": "Consul TCP route lookup",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
     },
     {
-      "id": "consul/config-entry-terminating-gateway-json",
+      "id": "consul.rule.config-entry-terminating-gateway-json",
       "terraform_type": "consul_config_entry",
       "label": "Consul terminating gateway",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry"
     },
     {
-      "id": "consul/config-entry-terminating-gateway-json-lookup",
+      "id": "consul.rule.config-entry-terminating-gateway-json-lookup",
       "terraform_type": "consul_config_entry",
       "label": "Consul terminating gateway lookup",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry"
     },
     {
-      "id": "consul/config-entry-v2-exported-services",
+      "id": "consul.rule.config-entry-v2-exported-services",
       "terraform_type": "consul_config_entry_v2_exported_services",
       "label": "Consul exported services configuration",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/config_entry_v2_exported_services"
     },
     {
-      "id": "consul/config-entry-v2-exported-services-lookup",
+      "id": "consul.rule.config-entry-v2-exported-services-lookup",
       "terraform_type": "consul_config_entry_v2_exported_services",
       "label": "Consul exported services configuration lookup",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/config_entry_v2_exported_services"
     },
     {
-      "id": "consul/intention",
+      "id": "consul.rule.intention",
       "terraform_type": "consul_intention",
       "label": "Consul intention (legacy)",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/intention"
     },
     {
-      "id": "consul/namespace",
+      "id": "consul.rule.namespace",
       "terraform_type": "consul_namespace",
       "label": "Consul namespace",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/namespace"
     },
     {
-      "id": "consul/namespace-policy-attachment",
+      "id": "consul.rule.namespace-policy-attachment",
       "terraform_type": "consul_namespace_policy_attachment",
       "label": "Consul namespace policy attachment",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/namespace_policy_attachment"
     },
     {
-      "id": "consul/namespace-role-attachment",
+      "id": "consul.rule.namespace-role-attachment",
       "terraform_type": "consul_namespace_role_attachment",
       "label": "Consul namespace role attachment",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/namespace_role_attachment"
     },
     {
-      "id": "consul/network-area",
-      "terraform_type": "consul_network_area",
-      "label": "Consul network area",
-      "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/network_area"
-    },
-    {
-      "id": "consul/node",
+      "id": "consul.rule.node",
       "terraform_type": "consul_node",
       "label": "Consul catalog node",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/node"
     },
     {
-      "id": "consul/peering",
+      "id": "consul.rule.peering",
       "terraform_type": "consul_peering",
       "label": "Consul cluster peering",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/peering"
     },
     {
-      "id": "consul/peering-lookup",
+      "id": "consul.rule.peering-lookup",
       "terraform_type": "consul_peering",
       "label": "Consul cluster peering lookup",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/peering"
     },
     {
-      "id": "consul/prepared-query",
+      "id": "consul.rule.prepared-query",
       "terraform_type": "consul_prepared_query",
       "label": "Consul prepared query",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/prepared_query"
     },
     {
-      "id": "consul/service",
+      "id": "consul.rule.service",
       "terraform_type": "consul_service",
       "label": "Consul service",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/resources/service"
     },
     {
-      "id": "consul/service-health-lookup",
+      "id": "consul.rule.service-health-lookup",
       "terraform_type": "consul_service_health",
       "label": "Consul service health lookup lookup",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/service_health"
     },
     {
-      "id": "consul/service-lookup",
+      "id": "consul.rule.service-lookup",
       "terraform_type": "consul_service",
       "label": "Consul service lookup",
       "source": "https://registry.terraform.io/providers/hashicorp/consul/2.23.0/docs/data-sources/service"
@@ -412,107 +394,102 @@
   ],
   "concepts": [
     {
-      "id": "consul/access-control-configuration",
+      "id": "consul.concept.access-control-configuration",
       "label": "Consul access control configuration",
       "source": "https://developer.hashicorp.com/consul/docs"
     },
     {
-      "id": "consul/acl-auth-method",
+      "id": "consul.rule.acl-auth-method",
       "label": "Consul ACL auth method",
       "source": "https://developer.hashicorp.com/consul/docs"
     },
     {
-      "id": "consul/admin-partition",
+      "id": "consul.rule.admin-partition",
       "label": "Consul admin partition",
       "source": "https://developer.hashicorp.com/consul/docs"
     },
     {
-      "id": "consul/catalog-registration",
+      "id": "consul.concept.catalog-registration",
       "label": "Consul catalog registration (deprecated)",
       "source": "https://developer.hashicorp.com/consul/docs"
     },
     {
-      "id": "consul/cluster-peering",
+      "id": "consul.concept.cluster-peering",
       "label": "Consul cluster peering",
       "source": "https://developer.hashicorp.com/consul/docs"
     },
     {
-      "id": "consul/consul-node",
+      "id": "consul.concept.consul-node",
       "label": "Consul catalog node",
       "source": "https://developer.hashicorp.com/consul/docs"
     },
     {
-      "id": "consul/consul-service",
+      "id": "consul.concept.consul-service",
       "label": "Consul service",
       "source": "https://developer.hashicorp.com/consul/docs"
     },
     {
-      "id": "consul/discovery-chain-configuration",
+      "id": "consul.concept.discovery-chain-configuration",
       "label": "Consul discovery chain configuration",
       "source": "https://developer.hashicorp.com/consul/docs"
     },
     {
-      "id": "consul/gateway-configuration",
+      "id": "consul.concept.gateway-configuration",
       "label": "Consul API gateway configuration",
       "source": "https://developer.hashicorp.com/consul/docs"
     },
     {
-      "id": "consul/ingress-gateway",
+      "id": "consul.concept.ingress-gateway",
       "label": "Consul ingress gateway (deprecated)",
       "source": "https://developer.hashicorp.com/consul/docs"
     },
     {
-      "id": "consul/jwt-provider",
+      "id": "consul.concept.jwt-provider",
       "label": "Consul JWT provider",
       "source": "https://developer.hashicorp.com/consul/docs"
     },
     {
-      "id": "consul/mesh-certificate-authority",
+      "id": "consul.concept.mesh-certificate-authority",
       "label": "Consul service mesh certificate authority",
       "source": "https://developer.hashicorp.com/consul/docs"
     },
     {
-      "id": "consul/mesh-security-configuration",
+      "id": "consul.concept.mesh-security-configuration",
       "label": "Consul service intention",
       "source": "https://developer.hashicorp.com/consul/docs"
     },
     {
-      "id": "consul/namespace",
+      "id": "consul.rule.namespace",
       "label": "Consul namespace",
       "source": "https://developer.hashicorp.com/consul/docs"
     },
     {
-      "id": "consul/network-area",
-      "label": "Consul network area",
-      "source": "https://developer.hashicorp.com/consul/docs"
-    },
-    {
-      "id": "consul/operations-configuration",
+      "id": "consul.concept.operations-configuration",
       "label": "Consul operations configuration",
       "source": "https://developer.hashicorp.com/consul/docs"
     },
     {
-      "id": "consul/sameness-group",
+      "id": "consul.concept.sameness-group",
       "label": "Consul sameness group",
       "source": "https://developer.hashicorp.com/consul/docs"
     },
     {
-      "id": "consul/service-export",
+      "id": "consul.concept.service-export",
       "label": "Consul exported services configuration",
       "source": "https://developer.hashicorp.com/consul/docs"
     },
     {
-      "id": "consul/service-mesh",
+      "id": "consul.concept.service-mesh",
       "label": "Consul service mesh",
       "source": "https://developer.hashicorp.com/consul/docs"
     },
     {
-      "id": "consul/service-networking-configuration",
+      "id": "consul.concept.service-networking-configuration",
       "label": "Consul service networking configuration",
       "source": "https://developer.hashicorp.com/consul/docs"
     },
     {
-      "id": "consul/terminating-gateway",
+      "id": "consul.concept.terminating-gateway",
       "label": "Consul terminating gateway",
       "source": "https://developer.hashicorp.com/consul/docs"
     }

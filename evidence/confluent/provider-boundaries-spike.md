@@ -65,4 +65,4 @@ provider terms. Use approved generic presentation identities and official text l
 
 Proceed with exact temporary compatibility, exhaustive decisions, selected
 data-source representation, fixed-path proof, neutral connector facts, explicit
-Cluster Linking direction, no new core/Language/IR contract, and generic assets.
+Cluster Linking direction, no new RF Language/IR contract, and generic assets.

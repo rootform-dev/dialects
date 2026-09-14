@@ -1,6 +1,5 @@
 # Maintained directly from pinned provider evidence.
 concept "managed-application" {
-  kind        = entity
   description = "An Azure Managed Application deployment."
 }
 
@@ -12,7 +11,7 @@ rule "managed-application" {
   as = concept.managed-application
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

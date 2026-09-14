@@ -1,6 +1,5 @@
 # Maintained directly from pinned provider evidence.
 concept "virtual-wan" {
-  kind        = scope
   description = "An Azure Virtual WAN global transit network."
 }
 
@@ -12,7 +11,7 @@ rule "virtual-wan" {
   as = concept.virtual-wan
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

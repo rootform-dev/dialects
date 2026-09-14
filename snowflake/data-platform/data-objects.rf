@@ -1,10 +1,8 @@
 concept "data-object-configuration" {
-  kind        = detail
   description = "A Snowflake table, stream, view, or governed data-object definition supporting a schema."
 }
 
 concept "dynamic-table" {
-  kind        = entity
   description = "A Snowflake dynamic table refreshed as a declarative data pipeline workload."
 }
 
@@ -16,13 +14,13 @@ rule "dynamic-table" {
   as = concept.dynamic-table
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.schema
     via = source.schema
   }
 
   context {
-    as  = context.core.runtime
+    as  = rf.context.runtime
     to  = concept.virtual-warehouse
     via = source.warehouse
   }

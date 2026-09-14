@@ -3,7 +3,7 @@ rule "cloud-stack" {
     type = "grafana_cloud_stack"
   }
 
-  as = concept.core.observability-tenant
+  as = concept.observability-tenant
 }
 
 rule "cloud-stack-lookup" {
@@ -12,5 +12,5 @@ rule "cloud-stack-lookup" {
     type = "grafana_cloud_stack"
   }
 
-  as = concept.core.observability-tenant
+  as = concept.observability-tenant
 }

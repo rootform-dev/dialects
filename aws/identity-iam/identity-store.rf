@@ -4,5 +4,5 @@ rule "identitystore-group" {
     type = "aws_identitystore_group"
   }
 
-  as = concept.core.identity-group
+  as = concept.identity-group
 }

@@ -1,0 +1,27 @@
+{
+  "format_version": "1",
+  "verified_date": "2026-08-29",
+  "dialect": "confluent@0.1.0",
+  "policy": {
+    "rf_vocabulary": "RF Vocabulary owns rf.concept.* and rf.context.*; adoptions require individual justification (target spec §6).",
+    "replacement": "Pre-v0.1 core catalog and promotions are replaced; the RF Vocabulary is fixed and embedded."
+  },
+  "rf_concept_bindings": [
+    {
+      "rule": "confluent.rule.network",
+      "concept": "rf.concept.virtual-network"
+    },
+    {
+      "rule": "confluent.rule.service-account",
+      "concept": "rf.concept.service-identity"
+    }
+  ],
+  "local_concept_count": 37,
+  "local_context_count": 1,
+  "local_relation_count": 19,
+  "rule_count": 62,
+  "limitations": [
+    "Coverage and boundary evidence is provider-surface research; it does not prove semantic completeness of representations.",
+    "RF Vocabulary adoptions are derived from the current dialect sources and individually justifiable per target spec §6."
+  ]
+}

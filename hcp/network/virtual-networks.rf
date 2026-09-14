@@ -3,10 +3,10 @@ rule "hvn" {
     type = "hcp_hvn"
   }
 
-  as = concept.core.virtual-network
+  as = rf.concept.virtual-network
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -18,10 +18,10 @@ rule "hvn-lookup" {
     type = "hcp_hvn"
   }
 
-  as = concept.core.virtual-network
+  as = rf.concept.virtual-network
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }

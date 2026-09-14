@@ -1,11 +1,6 @@
 # Maintained directly from pinned provider evidence.
-concept "route-server" {
-  kind        = entity
-  description = "An Azure Route Server exchanging routes through BGP."
-}
 
 concept "virtual-hub" {
-  kind        = scope
   description = "An Azure Virtual WAN regional transit hub."
 }
 
@@ -17,16 +12,8 @@ rule "virtual-hub" {
   as = concept.virtual-hub
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
-}
-
-rule "virtual-hub-routing-intent" {
-  match {
-    type = "azurerm_virtual_hub_routing_intent"
-  }
-
-  as = concept.route-server
 }

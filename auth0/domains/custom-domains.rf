@@ -1,10 +1,8 @@
 concept "domain-configuration" {
-  kind        = detail
   description = "Default-domain or verification configuration supporting an Auth0 custom domain."
 }
 
 concept "identity-domain" {
-  kind        = entity
   description = "A custom domain exposing an Auth0-hosted identity endpoint."
 }
 

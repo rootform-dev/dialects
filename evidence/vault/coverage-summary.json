@@ -7,16 +7,11 @@
   "ephemeral_resources": 24,
   "rules": 177,
   "status": {
-    "supported": 56,
-    "partial": 121,
-    "intentionally-unrepresented": 101,
-    "unsupported": 0
+    "rule-present": 56,
+    "partial-rule": 121,
+    "no-rule": 0
   },
   "treatment": {
-    "entity": 54,
-    "scope": 2,
-    "detail": 121,
-    "intentionally-unrepresented": 101,
-    "unsupported": 0
+    "no-rule": 0
   }
 }

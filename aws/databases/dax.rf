@@ -4,5 +4,5 @@ rule "dax-cluster" {
     type = "aws_dax_cluster"
   }
 
-  as = concept.core.managed-cache
+  as = concept.managed-cache
 }

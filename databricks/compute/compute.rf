@@ -1,15 +1,12 @@
 concept "compute-cluster" {
-  kind        = entity
   description = "A Databricks compute cluster running data, analytics, or machine-learning workloads."
 }
 
 concept "instance-pool" {
-  kind        = entity
   description = "A shared pool of cloud instances used to reduce Databricks cluster start time."
 }
 
 concept "compute-configuration" {
-  kind        = detail
   description = "A policy, library, environment, identity registration, or setting supporting Databricks compute."
 }
 
@@ -31,12 +28,7 @@ rule "compute-cluster" {
   }
 
   relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
-    via = source.aws_attributes[0].instance_profile_arn
-  }
-
-  relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
+    to  = rf.concept.service-identity
     via = source.gcp_attributes[0].google_service_account
   }
 }
@@ -48,10 +40,6 @@ rule "instance-pool" {
 
   as = concept.instance-pool
 
-  relation "uses-cloud-identity" {
-    to  = concept.core.service-identity
-    via = source.aws_attributes[0].instance_profile_arn
-  }
 }
 
 rule "cluster-policy" {

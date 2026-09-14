@@ -5,19 +5,14 @@
   "managed_resources": 162,
   "data_sources": 109,
   "provider_functions": 0,
-  "rules": 85,
+  "rules": 84,
   "status": {
-    "supported": 40,
-    "partial": 45,
-    "intentionally-unrepresented": 186,
-    "unsupported": 0
+    "rule-present": 40,
+    "partial-rule": 45,
+    "no-rule": 0
   },
   "treatment": {
-    "entity": 34,
-    "scope": 6,
-    "detail": 45,
     "mixed": 0,
-    "intentionally-unrepresented": 186,
-    "unsupported": 0
+    "no-rule": 0
   }
 }

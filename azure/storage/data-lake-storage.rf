@@ -4,10 +4,10 @@ rule "data-lake-filesystem" {
     type = "azurerm_storage_data_lake_gen2_filesystem"
   }
 
-  as = concept.core.object-storage-container
+  as = rf.concept.object-storage-container
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.storage-account
     via = source.storage_account_id
   }

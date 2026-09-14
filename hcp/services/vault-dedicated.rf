@@ -1,10 +1,8 @@
 concept "vault-dedicated-cluster" {
-  kind        = entity
   description = "A HashiCorp-managed Vault Dedicated cluster on HCP."
 }
 
 concept "vault-plugin" {
-  kind        = entity
   description = "A custom plugin installed into an HCP Vault Dedicated cluster."
 }
 
@@ -16,13 +14,13 @@ rule "vault-cluster" {
   as = concept.vault-dedicated-cluster
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.hvn_id
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -42,13 +40,13 @@ rule "vault-cluster-lookup" {
   as = concept.vault-dedicated-cluster
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.hvn_id
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -67,7 +65,7 @@ rule "vault-plugin" {
   as = concept.vault-plugin
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -87,7 +85,7 @@ rule "vault-plugin-lookup" {
   as = concept.vault-plugin
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }

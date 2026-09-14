@@ -1,16 +1,13 @@
 # Maintained directly from pinned provider evidence.
 concept "arc-enabled-server" {
-  kind        = entity
   description = "A server connected to Azure through Azure Arc."
 }
 
 concept "arc-resource-bridge" {
-  kind        = entity
   description = "An Azure Arc resource bridge connecting an external platform."
 }
 
 concept "custom-location" {
-  kind        = scope
   description = "An Azure Arc custom location extending Azure resource placement."
 }
 
@@ -22,7 +19,7 @@ rule "arc-custom-location" {
   as = concept.custom-location
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -36,7 +33,7 @@ rule "arc-enabled-server" {
   as = concept.arc-enabled-server
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -50,7 +47,7 @@ rule "arc-resource-bridge" {
   as = concept.arc-resource-bridge
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

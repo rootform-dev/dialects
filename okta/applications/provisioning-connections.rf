@@ -1,5 +1,4 @@
 concept "provisioning-connection" {
-  kind        = entity
   description = "An Okta application provisioning connection to an external system."
 }
 

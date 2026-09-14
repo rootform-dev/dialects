@@ -1,25 +1,20 @@
 concept "certificate-authority" {
-  kind        = entity
   description = "A Vault-managed or integrated certificate authority and issuer boundary."
 }
 
 concept "external-ca-integration" {
-  kind        = entity
   description = "A Vault PKI integration delegating certificate issuance to an external authority."
 }
 
 concept "kmip-listener" {
-  kind        = entity
   description = "A Vault KMIP protocol listener serving key-management clients."
 }
 
 concept "kmip-scope" {
-  kind        = scope
   description = "An isolated Vault KMIP tenancy scope containing roles and managed objects."
 }
 
 concept "pki-configuration" {
-  kind        = detail
   description = "A role, protocol, revocation, issuer, or lifecycle setting supporting Vault PKI or KMIP."
 }
 
@@ -31,7 +26,7 @@ rule "kmip-secret-ca-generated" {
   as = concept.certificate-authority
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
@@ -45,7 +40,7 @@ rule "kmip-secret-ca-imported" {
   as = concept.certificate-authority
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
@@ -59,7 +54,7 @@ rule "kmip-secret-listener" {
   as = concept.kmip-listener
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
@@ -81,7 +76,7 @@ rule "kmip-secret-scope" {
   as = concept.kmip-scope
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
@@ -95,7 +90,7 @@ rule "pki-external-ca-secret-backend-role" {
   as = concept.external-ca-integration
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
@@ -239,7 +234,7 @@ rule "pki-secret-backend-issuer" {
   as = concept.certificate-authority
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
@@ -250,10 +245,10 @@ rule "pki-secret-backend-key" {
     type = "vault_pki_secret_backend_key"
   }
 
-  as = concept.core.encryption-key
+  as = concept.encryption-key
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
@@ -280,7 +275,7 @@ rule "pki-secret-backend-root-cert" {
   as = concept.certificate-authority
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
@@ -294,7 +289,7 @@ rule "ssh-secret-backend-ca" {
   as = concept.certificate-authority
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }

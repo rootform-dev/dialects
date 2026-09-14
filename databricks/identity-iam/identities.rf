@@ -1,10 +1,5 @@
-concept "oauth-application-integration" {
-  kind        = entity
-  description = "An OAuth application integration trusted by Databricks."
-}
 
 concept "identity-access-configuration" {
-  kind        = detail
   description = "A membership, role, assignment, entitlement, permission, or federation configuration in Databricks."
 }
 
@@ -13,7 +8,7 @@ rule "identity-group" {
     type = "databricks_group"
   }
 
-  as = concept.core.identity-group
+  as = concept.identity-group
 }
 
 rule "account-identity-group" {
@@ -21,7 +16,7 @@ rule "account-identity-group" {
     type = "databricks_account_iam_group_v2"
   }
 
-  as = concept.core.identity-group
+  as = concept.identity-group
 }
 
 rule "workspace-identity-group" {
@@ -29,7 +24,7 @@ rule "workspace-identity-group" {
     type = "databricks_workspace_iam_group_v2"
   }
 
-  as = concept.core.identity-group
+  as = concept.identity-group
 }
 
 rule "service-principal" {
@@ -37,7 +32,7 @@ rule "service-principal" {
     type = "databricks_service_principal"
   }
 
-  as = concept.core.service-identity
+  as = rf.concept.service-identity
 }
 
 rule "account-service-principal" {
@@ -45,7 +40,7 @@ rule "account-service-principal" {
     type = "databricks_account_iam_service_principal_v2"
   }
 
-  as = concept.core.service-identity
+  as = rf.concept.service-identity
 }
 
 rule "workspace-service-principal" {
@@ -53,16 +48,9 @@ rule "workspace-service-principal" {
     type = "databricks_workspace_iam_service_principal_v2"
   }
 
-  as = concept.core.service-identity
+  as = rf.concept.service-identity
 }
 
-rule "custom-app-integration" {
-  match {
-    type = "databricks_custom_app_integration"
-  }
-
-  as = concept.oauth-application-integration
-}
 
 rule "account-federation-policy" {
   match {

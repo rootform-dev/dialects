@@ -3,10 +3,10 @@ rule "virtual-network" {
     type = "azurerm_virtual_network"
   }
 
-  as = concept.core.virtual-network
+  as = rf.concept.virtual-network
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
 
@@ -22,16 +22,16 @@ rule "subnet" {
     type = "azurerm_subnet"
   }
 
-  as = concept.core.subnet
+  as = rf.concept.subnet
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.virtual_network_name
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
 

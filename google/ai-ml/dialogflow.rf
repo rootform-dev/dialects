@@ -1,5 +1,4 @@
 concept "conversational-agent" {
-  kind        = entity
   description = "A Dialogflow conversational agent."
 }
 

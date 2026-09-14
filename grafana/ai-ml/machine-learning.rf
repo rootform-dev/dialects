@@ -1,5 +1,4 @@
 concept "machine-learning-configuration" {
-  kind        = detail
   description = "A machine-learning job, outlier detector, or alert supporting observability operations."
 }
 

@@ -1,5 +1,4 @@
 concept "mesh-security-configuration" {
-  kind        = detail
   description = "An authorization detail protecting service mesh traffic without proving traffic flow."
 }
 

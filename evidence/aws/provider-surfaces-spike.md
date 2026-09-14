@@ -19,18 +19,18 @@ closed baseline:
 | --- | ---: | --- |
 | managed resource | 1,711 | candidate for rule or explicit decision |
 | data source | 679 | read-only lookup; represent only with independent proof |
-| ephemeral resource | 10 | non-durable; supporting or unrepresented |
+| ephemeral resource | 10 | non-durable; unmodeled or without representation |
 | action | 12 | imperative side effect; never durable entity |
 | list resource | 210 | `.tfquery.hcl` discovery/import surface; not source architecture |
 | function | 4 | expression helper; no declaration node |
 | resource identity | 501 | provider protocol metadata; no declaration node |
 
 Actions are provider-defined side effects and do not modify resource state.
-They may support an already represented owner only through exact accepted owner
+They may support an already modeled owner only through exact accepted owner
 resolution. List resources query remote infrastructure for bulk import; current
 Rootform source ingestion does not read `.tfquery.hcl`, and query results are
 not Terraform source of truth. They remain exhaustive inventory with
-`intentionally-unrepresented/query-surface`, not received declaration
+`no-rule/query-surface`, not received declaration
 `unsupported`.
 
 Compatibility remains exactly `= 6.62.0`: only this schema, source registration,

@@ -1,5 +1,4 @@
 concept "operations-configuration" {
-  kind        = detail
   description = "An operational or health setting that owns no independent topology."
 }
 

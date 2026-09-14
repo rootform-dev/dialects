@@ -3,7 +3,7 @@ rule "api-service-integration" {
     type = "okta_api_service_integration"
   }
 
-  as = concept.core.identity-application
+  as = concept.identity-application
 }
 
 rule "api-service-integration-lookup" {
@@ -12,7 +12,7 @@ rule "api-service-integration-lookup" {
     type = "okta_api_service_integration"
   }
 
-  as = concept.core.identity-application
+  as = concept.identity-application
 }
 
 rule "app-auto-login" {
@@ -20,7 +20,7 @@ rule "app-auto-login" {
     type = "okta_app_auto_login"
   }
 
-  as = concept.core.identity-application
+  as = concept.identity-application
 }
 
 rule "app-basic-auth" {
@@ -28,7 +28,7 @@ rule "app-basic-auth" {
     type = "okta_app_basic_auth"
   }
 
-  as = concept.core.identity-application
+  as = concept.identity-application
 }
 
 rule "app-bookmark" {
@@ -36,7 +36,7 @@ rule "app-bookmark" {
     type = "okta_app_bookmark"
   }
 
-  as = concept.core.identity-application
+  as = concept.identity-application
 }
 
 rule "app-lookup" {
@@ -45,7 +45,7 @@ rule "app-lookup" {
     type = "okta_app"
   }
 
-  as = concept.core.identity-application
+  as = concept.identity-application
 }
 
 rule "app-oauth" {
@@ -53,7 +53,7 @@ rule "app-oauth" {
     type = "okta_app_oauth"
   }
 
-  as = concept.core.identity-application
+  as = concept.identity-application
 }
 
 rule "app-oauth-lookup" {
@@ -62,7 +62,7 @@ rule "app-oauth-lookup" {
     type = "okta_app_oauth"
   }
 
-  as = concept.core.identity-application
+  as = concept.identity-application
 }
 
 rule "app-saml" {
@@ -70,7 +70,7 @@ rule "app-saml" {
     type = "okta_app_saml"
   }
 
-  as = concept.core.identity-application
+  as = concept.identity-application
 
   relation "uses-inline-hook" {
     to  = concept.identity-event-extension
@@ -84,7 +84,7 @@ rule "app-saml-lookup" {
     type = "okta_app_saml"
   }
 
-  as = concept.core.identity-application
+  as = concept.identity-application
 }
 
 rule "app-secure-password-store" {
@@ -92,7 +92,7 @@ rule "app-secure-password-store" {
     type = "okta_app_secure_password_store"
   }
 
-  as = concept.core.identity-application
+  as = concept.identity-application
 }
 
 rule "app-shared-credentials" {
@@ -100,7 +100,7 @@ rule "app-shared-credentials" {
     type = "okta_app_shared_credentials"
   }
 
-  as = concept.core.identity-application
+  as = concept.identity-application
 }
 
 rule "app-swa" {
@@ -108,7 +108,7 @@ rule "app-swa" {
     type = "okta_app_swa"
   }
 
-  as = concept.core.identity-application
+  as = concept.identity-application
 }
 
 rule "app-three-field" {
@@ -116,5 +116,5 @@ rule "app-three-field" {
     type = "okta_app_three_field"
   }
 
-  as = concept.core.identity-application
+  as = concept.identity-application
 }

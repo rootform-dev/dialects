@@ -3,7 +3,7 @@ rule "rum-application" {
     type = "datadog_rum_application"
   }
 
-  as = concept.core.browser-observability-application
+  as = concept.browser-observability-application
 }
 
 rule "rum-application-lookup" {
@@ -12,7 +12,7 @@ rule "rum-application-lookup" {
     type = "datadog_rum_application"
   }
 
-  as = concept.core.browser-observability-application
+  as = concept.browser-observability-application
 }
 
 rule "rum-retention-filter" {
@@ -23,7 +23,7 @@ rule "rum-retention-filter" {
   as = concept.telemetry-configuration
 
   contribution {
-    to  = concept.core.browser-observability-application
+    to  = concept.browser-observability-application
     via = source.application_id
   }
 }

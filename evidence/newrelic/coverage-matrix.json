@@ -17,12 +17,17 @@
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/data-sources/account",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/observability-tenant"],
-      "rules": ["newrelic/account-lookup"],
+      "rootform_concepts": [
+        "newrelic.concept.observability-tenant"
+      ],
+      "rules": [
+        "newrelic.rule.account-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_alert_channel",
@@ -37,9 +42,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_alert_policy",
@@ -54,9 +61,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_api_access_key",
@@ -71,9 +80,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_application",
@@ -85,12 +96,17 @@
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/data-sources/application",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["newrelic/apm-application"],
-      "rules": ["newrelic/application-lookup"],
+      "rootform_concepts": [
+        "newrelic/apm-application"
+      ],
+      "rules": [
+        "newrelic.rule.application-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_authentication_domain",
@@ -105,26 +121,35 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_cloud_account",
       "construct_kind": "data_source",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
       "contributions": [],
       "family": "integrations",
       "product": "cloud-integrations",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/data-sources/cloud_account",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/cloud-observability-integration"],
-      "rules": ["newrelic/cloud-account-lookup"],
+      "rootform_concepts": [
+        "newrelic.concept.cloud-observability-integration"
+      ],
+      "rules": [
+        "newrelic.rule.cloud-account-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_entity",
@@ -139,9 +164,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_fleet_configuration",
@@ -151,31 +178,43 @@
       "family": "telemetry",
       "product": "fleet-control",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/data-sources/fleet_configuration",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/fleet-configuration"],
-      "rules": ["newrelic/fleet-configuration-lookup"],
+      "rootform_concepts": [
+        "newrelic.rule.fleet-configuration"
+      ],
+      "rules": [
+        "newrelic.rule.fleet-configuration-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_fleet_members",
       "construct_kind": "data_source",
       "contexts": [],
-      "contributions": ["fleet"],
+      "contributions": [
+        "fleet"
+      ],
       "family": "telemetry",
       "product": "fleet-control",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/data-sources/fleet_members",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/fleet-membership"],
-      "rules": ["newrelic/fleet-members-lookup"],
+      "rootform_concepts": [
+        "newrelic/fleet-membership"
+      ],
+      "rules": [
+        "newrelic.rule.fleet-members-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_group",
@@ -190,9 +229,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_key_transaction",
@@ -202,14 +243,19 @@
       "family": "digital-experience",
       "product": "application-observability",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/data-sources/key_transaction",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/application-configuration"],
-      "rules": ["newrelic/key-transaction-lookup"],
+      "rootform_concepts": [
+        "newrelic/application-configuration"
+      ],
+      "rules": [
+        "newrelic.rule.key-transaction-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_notification_destination",
@@ -224,26 +270,35 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_obfuscation_expression",
       "construct_kind": "data_source",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
       "contributions": [],
       "family": "telemetry",
       "product": "telemetry-data-management",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/data-sources/obfuscation_expression",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/telemetry-processing-configuration"],
-      "rules": ["newrelic/obfuscation-expression-lookup"],
+      "rootform_concepts": [
+        "newrelic/telemetry-processing-configuration"
+      ],
+      "rules": [
+        "newrelic.rule.obfuscation-expression-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_service_level_alert_helper",
@@ -258,26 +313,35 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_synthetics_private_location",
       "construct_kind": "data_source",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
       "contributions": [],
       "family": "digital-experience",
       "product": "synthetics",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/data-sources/synthetics_private_location",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/synthetic-execution-location"],
-      "rules": ["newrelic/synthetics-private-location-lookup"],
+      "rootform_concepts": [
+        "newrelic.concept.synthetic-execution-location"
+      ],
+      "rules": [
+        "newrelic.rule.synthetics-private-location-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_synthetics_secure_credential",
@@ -292,9 +356,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_test_grok_pattern",
@@ -309,9 +375,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_user",
@@ -326,9 +394,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_account_management",
@@ -340,12 +410,17 @@
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/account_management",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/observability-tenant"],
-      "rules": ["newrelic/account-management"],
+      "rootform_concepts": [
+        "newrelic.concept.observability-tenant"
+      ],
+      "rules": [
+        "newrelic.rule.account-management"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_alert_channel",
@@ -360,9 +435,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_alert_compound_condition",
@@ -377,9 +454,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_alert_condition",
@@ -394,9 +473,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_alert_muting_rule",
@@ -411,9 +492,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_alert_policy",
@@ -428,9 +511,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_alert_policy_channel",
@@ -445,9 +530,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_api_access_key",
@@ -462,9 +549,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_application_settings",
@@ -474,48 +563,69 @@
       "family": "digital-experience",
       "product": "application-observability",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/application_settings",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/application-configuration"],
-      "rules": ["newrelic/application-settings"],
+      "rootform_concepts": [
+        "newrelic/application-configuration"
+      ],
+      "rules": [
+        "newrelic.rule.application-settings"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_aws_connection",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
       "contributions": [],
       "family": "telemetry",
       "product": "federated-logs",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/aws_connection",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
-      "relations": ["authorized-by"],
-      "rootform_concepts": ["newrelic/aws-connection"],
-      "rules": ["newrelic/aws-connection"],
+      "relations": [
+        "authorized-by"
+      ],
+      "rootform_concepts": [
+        "newrelic.rule.aws-connection"
+      ],
+      "rules": [
+        "newrelic.rule.aws-connection"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_browser_application",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
       "contributions": [],
       "family": "digital-experience",
       "product": "application-observability",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/browser_application",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/browser-observability-application"],
-      "rules": ["newrelic/browser-application"],
+      "rootform_concepts": [
+        "newrelic.concept.browser-observability-application"
+      ],
+      "rules": [
+        "newrelic.rule.browser-application"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_cardinality_management",
@@ -525,235 +635,351 @@
       "family": "telemetry",
       "product": "telemetry-data-management",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cardinality_management",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/telemetry-processing-configuration"],
-      "rules": ["newrelic/cardinality-management"],
+      "rootform_concepts": [
+        "newrelic/telemetry-processing-configuration"
+      ],
+      "rules": [
+        "newrelic.rule.cardinality-management"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_cloud_aws_eu_sovereign_integrations",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
-      "contributions": ["core.cloud-observability-integration"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
+      "contributions": [
+        "newrelic.concept.cloud-observability-integration"
+      ],
       "family": "integrations",
       "product": "cloud-integrations",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cloud_aws_eu_sovereign_integrations",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/cloud-integration-configuration"],
-      "rules": ["newrelic/cloud-aws-eu-sovereign-integrations"],
+      "rootform_concepts": [
+        "newrelic/cloud-integration-configuration"
+      ],
+      "rules": [
+        "newrelic.rule.cloud-aws-eu-sovereign-integrations"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_cloud_aws_eu_sovereign_link_account",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
       "contributions": [],
       "family": "integrations",
       "product": "cloud-integrations",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cloud_aws_eu_sovereign_link_account",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
-      "relations": ["authorized-by"],
-      "rootform_concepts": ["core/cloud-observability-integration"],
-      "rules": ["newrelic/cloud-aws-eu-sovereign-link-account"],
+      "relations": [
+        "authorized-by"
+      ],
+      "rootform_concepts": [
+        "newrelic.concept.cloud-observability-integration"
+      ],
+      "rules": [
+        "newrelic.rule.cloud-aws-eu-sovereign-link-account"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_cloud_aws_govcloud_integrations",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
-      "contributions": ["core.cloud-observability-integration"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
+      "contributions": [
+        "newrelic.concept.cloud-observability-integration"
+      ],
       "family": "integrations",
       "product": "cloud-integrations",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cloud_aws_govcloud_integrations",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/cloud-integration-configuration"],
-      "rules": ["newrelic/cloud-aws-govcloud-integrations"],
+      "rootform_concepts": [
+        "newrelic/cloud-integration-configuration"
+      ],
+      "rules": [
+        "newrelic.rule.cloud-aws-govcloud-integrations"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_cloud_aws_govcloud_link_account",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
       "contributions": [],
       "family": "integrations",
       "product": "cloud-integrations",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cloud_aws_govcloud_link_account",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
-      "relations": ["authorized-by"],
-      "rootform_concepts": ["core/cloud-observability-integration"],
-      "rules": ["newrelic/cloud-aws-govcloud-link-account"],
+      "relations": [
+        "authorized-by"
+      ],
+      "rootform_concepts": [
+        "newrelic.concept.cloud-observability-integration"
+      ],
+      "rules": [
+        "newrelic.rule.cloud-aws-govcloud-link-account"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_cloud_aws_integrations",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
-      "contributions": ["core.cloud-observability-integration"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
+      "contributions": [
+        "newrelic.concept.cloud-observability-integration"
+      ],
       "family": "integrations",
       "product": "cloud-integrations",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cloud_aws_integrations",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/cloud-integration-configuration"],
-      "rules": ["newrelic/cloud-aws-integrations"],
+      "rootform_concepts": [
+        "newrelic/cloud-integration-configuration"
+      ],
+      "rules": [
+        "newrelic.rule.cloud-aws-integrations"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_cloud_aws_link_account",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
       "contributions": [],
       "family": "integrations",
       "product": "cloud-integrations",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cloud_aws_link_account",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
-      "relations": ["authorized-by"],
-      "rootform_concepts": ["core/cloud-observability-integration"],
-      "rules": ["newrelic/cloud-aws-link-account"],
+      "relations": [
+        "authorized-by"
+      ],
+      "rootform_concepts": [
+        "newrelic.concept.cloud-observability-integration"
+      ],
+      "rules": [
+        "newrelic.rule.cloud-aws-link-account"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_cloud_azure_integrations",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
-      "contributions": ["core.cloud-observability-integration"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
+      "contributions": [
+        "newrelic.concept.cloud-observability-integration"
+      ],
       "family": "integrations",
       "product": "cloud-integrations",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cloud_azure_integrations",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/cloud-integration-configuration"],
-      "rules": ["newrelic/cloud-azure-integrations"],
+      "rootform_concepts": [
+        "newrelic/cloud-integration-configuration"
+      ],
+      "rules": [
+        "newrelic.rule.cloud-azure-integrations"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_cloud_azure_link_account",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
       "contributions": [],
       "family": "integrations",
       "product": "cloud-integrations",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cloud_azure_link_account",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/cloud-observability-integration"],
-      "rules": ["newrelic/cloud-azure-link-account"],
+      "rootform_concepts": [
+        "newrelic.concept.cloud-observability-integration"
+      ],
+      "rules": [
+        "newrelic.rule.cloud-azure-link-account"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_cloud_gcp_dm_integrations",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
-      "contributions": ["core.cloud-observability-integration"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
+      "contributions": [
+        "newrelic.concept.cloud-observability-integration"
+      ],
       "family": "integrations",
       "product": "cloud-integrations",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cloud_gcp_dm_integrations",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/cloud-integration-configuration"],
-      "rules": ["newrelic/cloud-gcp-dm-integrations"],
+      "rootform_concepts": [
+        "newrelic/cloud-integration-configuration"
+      ],
+      "rules": [
+        "newrelic.rule.cloud-gcp-dm-integrations"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_cloud_gcp_integrations",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
-      "contributions": ["core.cloud-observability-integration"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
+      "contributions": [
+        "newrelic.concept.cloud-observability-integration"
+      ],
       "family": "integrations",
       "product": "cloud-integrations",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cloud_gcp_integrations",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/cloud-integration-configuration"],
-      "rules": ["newrelic/cloud-gcp-integrations"],
+      "rootform_concepts": [
+        "newrelic/cloud-integration-configuration"
+      ],
+      "rules": [
+        "newrelic.rule.cloud-gcp-integrations"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_cloud_gcp_link_account",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
       "contributions": [],
       "family": "integrations",
       "product": "cloud-integrations",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cloud_gcp_link_account",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
-      "relations": ["authorized-by"],
-      "rootform_concepts": ["core/cloud-observability-integration"],
-      "rules": ["newrelic/cloud-gcp-link-account"],
+      "relations": [
+        "authorized-by"
+      ],
+      "rootform_concepts": [
+        "newrelic.concept.cloud-observability-integration"
+      ],
+      "rules": [
+        "newrelic.rule.cloud-gcp-link-account"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_cloud_oci_link_account",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
       "contributions": [],
       "family": "integrations",
       "product": "cloud-integrations",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/cloud_oci_link_account",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/cloud-observability-integration"],
-      "rules": ["newrelic/cloud-oci-link-account"],
+      "rootform_concepts": [
+        "newrelic.concept.cloud-observability-integration"
+      ],
+      "rules": [
+        "newrelic.rule.cloud-oci-link-account"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_data_partition_rule",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
       "contributions": [],
       "family": "telemetry",
       "product": "telemetry-data-management",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/data_partition_rule",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/telemetry-processing-configuration"],
-      "rules": ["newrelic/data-partition-rule"],
+      "rootform_concepts": [
+        "newrelic/telemetry-processing-configuration"
+      ],
+      "rules": [
+        "newrelic.rule.data-partition-rule"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_entity_tags",
@@ -768,60 +994,88 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_events_to_metrics_rule",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
       "contributions": [],
       "family": "telemetry",
       "product": "telemetry-data-management",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/events_to_metrics_rule",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/telemetry-processing-configuration"],
-      "rules": ["newrelic/events-to-metrics-rule"],
+      "rootform_concepts": [
+        "newrelic/telemetry-processing-configuration"
+      ],
+      "rules": [
+        "newrelic.rule.events-to-metrics-rule"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_federated_logs_partition",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
-      "contributions": ["federated-logs-setup"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
+      "contributions": [
+        "federated-logs-setup"
+      ],
       "family": "telemetry",
       "product": "federated-logs",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/federated_logs_partition",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/federated-logs-partition"],
-      "rules": ["newrelic/federated-logs-partition"],
+      "rootform_concepts": [
+        "newrelic.rule.federated-logs-partition"
+      ],
+      "rules": [
+        "newrelic.rule.federated-logs-partition"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_federated_logs_setup",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
       "contributions": [],
       "family": "telemetry",
       "product": "federated-logs",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/federated_logs_setup",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
-      "relations": ["ingests-through", "queries-through"],
-      "rootform_concepts": ["newrelic/federated-logs-setup"],
-      "rules": ["newrelic/federated-logs-setup"],
+      "relations": [
+        "ingests-through",
+        "queries-through"
+      ],
+      "rootform_concepts": [
+        "newrelic.rule.federated-logs-setup"
+      ],
+      "rules": [
+        "newrelic.rule.federated-logs-setup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_fleet",
@@ -833,12 +1087,17 @@
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/fleet",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["newrelic/fleet"],
-      "rules": ["newrelic/fleet"],
+      "rootform_concepts": [
+        "newrelic.rule.fleet"
+      ],
+      "rules": [
+        "newrelic.rule.fleet"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_fleet_configuration",
@@ -848,48 +1107,67 @@
       "family": "telemetry",
       "product": "fleet-control",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/fleet_configuration",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/fleet-configuration"],
-      "rules": ["newrelic/fleet-configuration"],
+      "rootform_concepts": [
+        "newrelic.rule.fleet-configuration"
+      ],
+      "rules": [
+        "newrelic.rule.fleet-configuration"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_fleet_deployment",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["fleet"],
+      "contributions": [
+        "fleet"
+      ],
       "family": "telemetry",
       "product": "fleet-control",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/fleet_deployment",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/fleet-deployment"],
-      "rules": ["newrelic/fleet-deployment"],
+      "rootform_concepts": [
+        "newrelic.rule.fleet-deployment"
+      ],
+      "rules": [
+        "newrelic.rule.fleet-deployment"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_fleet_members",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["fleet"],
+      "contributions": [
+        "fleet"
+      ],
       "family": "telemetry",
       "product": "fleet-control",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/fleet_members",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/fleet-membership"],
-      "rules": ["newrelic/fleet-members"],
+      "rootform_concepts": [
+        "newrelic/fleet-membership"
+      ],
+      "rules": [
+        "newrelic.rule.fleet-members"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_group",
@@ -904,9 +1182,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_infra_alert_condition",
@@ -921,9 +1201,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_insights_event",
@@ -938,9 +1220,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_key_transaction",
@@ -950,48 +1234,67 @@
       "family": "digital-experience",
       "product": "application-observability",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/key_transaction",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/application-configuration"],
-      "rules": ["newrelic/key-transaction"],
+      "rootform_concepts": [
+        "newrelic/application-configuration"
+      ],
+      "rules": [
+        "newrelic.rule.key-transaction"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_log_parsing_rule",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
       "contributions": [],
       "family": "telemetry",
       "product": "telemetry-data-management",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/log_parsing_rule",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/telemetry-processing-configuration"],
-      "rules": ["newrelic/log-parsing-rule"],
+      "rootform_concepts": [
+        "newrelic/telemetry-processing-configuration"
+      ],
+      "rules": [
+        "newrelic.rule.log-parsing-rule"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_metric_pruning_rule",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
       "contributions": [],
       "family": "telemetry",
       "product": "telemetry-data-management",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/metric_pruning_rule",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/telemetry-processing-configuration"],
-      "rules": ["newrelic/metric-pruning-rule"],
+      "rootform_concepts": [
+        "newrelic/telemetry-processing-configuration"
+      ],
+      "rules": [
+        "newrelic.rule.metric-pruning-rule"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_monitor_downtime",
@@ -1006,9 +1309,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_notification_channel",
@@ -1023,9 +1328,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_notification_destination",
@@ -1040,9 +1347,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_nrql_alert_condition",
@@ -1057,60 +1366,83 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_nrql_drop_rule",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
       "contributions": [],
       "family": "telemetry",
       "product": "telemetry-data-management",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/nrql_drop_rule",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/telemetry-processing-configuration"],
-      "rules": ["newrelic/nrql-drop-rule"],
+      "rootform_concepts": [
+        "newrelic/telemetry-processing-configuration"
+      ],
+      "rules": [
+        "newrelic.rule.nrql-drop-rule"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_obfuscation_expression",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
       "contributions": [],
       "family": "telemetry",
       "product": "telemetry-data-management",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/obfuscation_expression",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/telemetry-processing-configuration"],
-      "rules": ["newrelic/obfuscation-expression"],
+      "rootform_concepts": [
+        "newrelic/telemetry-processing-configuration"
+      ],
+      "rules": [
+        "newrelic.rule.obfuscation-expression"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_obfuscation_rule",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
       "contributions": [],
       "family": "telemetry",
       "product": "telemetry-data-management",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/obfuscation_rule",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/telemetry-processing-configuration"],
-      "rules": ["newrelic/obfuscation-rule"],
+      "rootform_concepts": [
+        "newrelic/telemetry-processing-configuration"
+      ],
+      "rules": [
+        "newrelic.rule.obfuscation-rule"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_one_dashboard",
@@ -1125,9 +1457,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_one_dashboard_json",
@@ -1142,9 +1476,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_one_dashboard_raw",
@@ -1159,26 +1495,35 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_pipeline_cloud_rule",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
       "contributions": [],
       "family": "telemetry",
       "product": "telemetry-data-management",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/pipeline_cloud_rule",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["newrelic/telemetry-processing-configuration"],
-      "rules": ["newrelic/pipeline-cloud-rule"],
+      "rootform_concepts": [
+        "newrelic/telemetry-processing-configuration"
+      ],
+      "rules": [
+        "newrelic.rule.pipeline-cloud-rule"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_service_level",
@@ -1188,14 +1533,15 @@
       "family": "service-management",
       "product": "service-management",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/service_level",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "no-rule",
       "relations": [],
-      "rootform_concepts": ["core/service-objective"],
-      "rules": ["newrelic/service-level"],
+      "rootform_concepts": [
+        "newrelic.concept.service-objective"
+      ],
+      "rules": [],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "no-rule",
+      "tests": []
     },
     {
       "construct": "newrelic_synthetics_alert_condition",
@@ -1210,60 +1556,89 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_synthetics_broken_links_monitor",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
-      "contributions": ["core.synthetic-execution-location"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
+      "contributions": [
+        "newrelic.concept.synthetic-execution-location"
+      ],
       "family": "digital-experience",
       "product": "synthetics",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/synthetics_broken_links_monitor",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["core/synthetic-check"],
-      "rules": ["newrelic/synthetics-broken-links-monitor"],
+      "rootform_concepts": [
+        "newrelic.concept.synthetic-check"
+      ],
+      "rules": [
+        "newrelic.rule.synthetics-broken-links-monitor"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_synthetics_cert_check_monitor",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
-      "contributions": ["core.synthetic-execution-location"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
+      "contributions": [
+        "newrelic.concept.synthetic-execution-location"
+      ],
       "family": "digital-experience",
       "product": "synthetics",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/synthetics_cert_check_monitor",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["core/synthetic-check"],
-      "rules": ["newrelic/synthetics-cert-check-monitor"],
+      "rootform_concepts": [
+        "newrelic.concept.synthetic-check"
+      ],
+      "rules": [
+        "newrelic.rule.synthetics-cert-check-monitor"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_synthetics_monitor",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
-      "contributions": ["core.synthetic-execution-location"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
+      "contributions": [
+        "newrelic.concept.synthetic-execution-location"
+      ],
       "family": "digital-experience",
       "product": "synthetics",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/synthetics_monitor",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["core/synthetic-check"],
-      "rules": ["newrelic/synthetics-monitor"],
+      "rootform_concepts": [
+        "newrelic.concept.synthetic-check"
+      ],
+      "rules": [
+        "newrelic.rule.synthetics-monitor"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_synthetics_multilocation_alert_condition",
@@ -1278,43 +1653,61 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_synthetics_private_location",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
       "contributions": [],
       "family": "digital-experience",
       "product": "synthetics",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/synthetics_private_location",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/synthetic-execution-location"],
-      "rules": ["newrelic/synthetics-private-location"],
+      "rootform_concepts": [
+        "newrelic.concept.synthetic-execution-location"
+      ],
+      "rules": [
+        "newrelic.rule.synthetics-private-location"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_synthetics_script_monitor",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
-      "contributions": ["core.synthetic-execution-location"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
+      "contributions": [
+        "newrelic.concept.synthetic-execution-location"
+      ],
       "family": "digital-experience",
       "product": "synthetics",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/synthetics_script_monitor",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["core/synthetic-check"],
-      "rules": ["newrelic/synthetics-script-monitor"],
+      "rootform_concepts": [
+        "newrelic.concept.synthetic-check"
+      ],
+      "rules": [
+        "newrelic.rule.synthetics-script-monitor"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_synthetics_secure_credential",
@@ -1329,26 +1722,37 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_synthetics_step_monitor",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
-      "contributions": ["core.synthetic-execution-location"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
+      "contributions": [
+        "newrelic.concept.synthetic-execution-location"
+      ],
       "family": "digital-experience",
       "product": "synthetics",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/synthetics_step_monitor",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["core/synthetic-check"],
-      "rules": ["newrelic/synthetics-step-monitor"],
+      "rootform_concepts": [
+        "newrelic.concept.synthetic-check"
+      ],
+      "rules": [
+        "newrelic.rule.synthetics-step-monitor"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     },
     {
       "construct": "newrelic_user",
@@ -1363,9 +1767,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_workflow",
@@ -1380,9 +1786,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["newrelic-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "newrelic-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "newrelic_workflow_automation",
@@ -1392,31 +1800,39 @@
       "family": "automation",
       "product": "automation",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/workflow_automation",
-      "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
+      "reason": "no-rule",
       "relations": [],
-      "rootform_concepts": ["core/workflow"],
-      "rules": ["newrelic/workflow-automation"],
+      "rootform_concepts": [
+        "newrelic.concept.workflow"
+      ],
+      "rules": [],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "no-rule",
+      "tests": []
     },
     {
       "construct": "newrelic_workload",
       "construct_kind": "managed_resource",
-      "contexts": ["core.ownership"],
+      "contexts": [
+        "newrelic.context.ownership"
+      ],
       "contributions": [],
       "family": "service-management",
       "product": "service-management",
       "proof_url": "https://registry.terraform.io/providers/newrelic/newrelic/3.96.4/docs/resources/workload",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["newrelic/observability-workload"],
-      "rules": ["newrelic/workload"],
+      "rootform_concepts": [
+        "newrelic/observability-workload"
+      ],
+      "rules": [
+        "newrelic.rule.workload"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["newrelic-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "newrelic-compiler-scenarios"
+      ]
     }
   ]
 }

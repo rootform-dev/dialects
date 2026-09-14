@@ -3,7 +3,7 @@ rule "persistent-disk" {
     type = "google_compute_disk"
   }
 
-  as = concept.core.block-storage-volume
+  as = concept.block-storage-volume
 }
 
 rule "regional-persistent-disk" {
@@ -11,5 +11,5 @@ rule "regional-persistent-disk" {
     type = "google_compute_region_disk"
   }
 
-  as = concept.core.block-storage-volume
+  as = concept.block-storage-volume
 }

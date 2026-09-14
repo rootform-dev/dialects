@@ -7,7 +7,7 @@ rule "local-network-gateway" {
   as = concept.local-network-gateway
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

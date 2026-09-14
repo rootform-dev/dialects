@@ -1,27 +1,13 @@
 concept "pages-project" {
-  kind        = entity
   description = "A Cloudflare Pages application project."
 }
 
 concept "pages-domain" {
-  kind        = detail
   description = "A custom domain serving a Cloudflare Pages project."
 }
 
-concept "pipeline" {
-  kind        = entity
-  description = "A Cloudflare Pipelines transformation pipeline."
-}
 
-concept "pipeline-stream" {
-  kind        = entity
-  description = "A Cloudflare Pipelines input stream."
-}
 
-concept "pipeline-sink" {
-  kind        = entity
-  description = "A Cloudflare Pipelines destination sink."
-}
 
 rule "pages-project" {
   match {
@@ -42,36 +28,4 @@ rule "pages-domain" {
     to  = concept.pages-project
     via = source.project_name
   }
-}
-
-rule "workflow" {
-  match {
-    type = "cloudflare_workflow"
-  }
-
-  as = concept.core.workflow
-}
-
-rule "pipeline" {
-  match {
-    type = "cloudflare_pipeline"
-  }
-
-  as = concept.pipeline
-}
-
-rule "pipeline-stream" {
-  match {
-    type = "cloudflare_pipeline_stream"
-  }
-
-  as = concept.pipeline-stream
-}
-
-rule "pipeline-sink" {
-  match {
-    type = "cloudflare_pipeline_sink"
-  }
-
-  as = concept.pipeline-sink
 }

@@ -1,6 +1,5 @@
 # Maintained directly from pinned provider evidence.
 concept "spring-apps-service" {
-  kind        = scope
   description = "An Azure Spring Apps service boundary."
 }
 
@@ -20,7 +19,7 @@ rule "spring-apps-service" {
   as = concept.spring-apps-service
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

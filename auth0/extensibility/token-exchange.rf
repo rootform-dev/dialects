@@ -1,5 +1,4 @@
 concept "token-exchange-profile" {
-  kind        = entity
   description = "An Auth0 Custom Token Exchange profile delegating validation to an Action."
 }
 

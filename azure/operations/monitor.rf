@@ -1,21 +1,17 @@
 # Maintained directly from pinned provider evidence.
 concept "application-insights" {
-  kind        = entity
   description = "An Azure Monitor Application Insights application resource."
 }
 
 concept "log-analytics-workspace" {
-  kind        = scope
   description = "An Azure Log Analytics workspace collecting operational data."
 }
 
 concept "monitor-workspace" {
-  kind        = entity
   description = "An Azure Monitor workspace."
 }
 
 concept "network-watcher" {
-  kind        = entity
   description = "An Azure Network Watcher regional network monitoring service."
 }
 
@@ -27,7 +23,7 @@ rule "application-insights" {
   as = concept.application-insights
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -54,7 +50,7 @@ rule "log-analytics-cluster" {
   as = concept.log-analytics-workspace
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -107,7 +103,7 @@ rule "log-analytics-workspace" {
   as = concept.log-analytics-workspace
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -174,7 +170,7 @@ rule "monitor-workspace" {
   as = concept.monitor-workspace
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -188,7 +184,7 @@ rule "network-watcher" {
   as = concept.network-watcher
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

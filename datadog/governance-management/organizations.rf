@@ -1,5 +1,4 @@
 concept "organization-connection" {
-  kind        = entity
   description = "A Datadog cross-organization metrics or logs visibility connection."
 }
 
@@ -8,7 +7,7 @@ rule "child-organization" {
     type = "datadog_child_organization"
   }
 
-  as = concept.core.observability-tenant
+  as = concept.observability-tenant
 }
 
 rule "org-connection" {
@@ -19,7 +18,7 @@ rule "org-connection" {
   as = concept.organization-connection
 
   relation "shares-telemetry-with" {
-    to  = concept.core.observability-tenant
+    to  = concept.observability-tenant
     via = source.sink_org_id
   }
 }

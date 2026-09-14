@@ -1,5 +1,4 @@
 concept "security-events-provider" {
-  kind        = entity
   description = "A Security Events Provider supplying shared security signals to Okta."
 }
 

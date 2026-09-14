@@ -1,20 +1,16 @@
 concept "vault-radar-configuration" {
-  kind        = detail
   description = "A subscription or access setting supporting HCP Vault Radar."
 }
 
 concept "vault-radar-integration" {
-  kind        = entity
   description = "An external workflow destination integrated with HCP Vault Radar."
 }
 
 concept "vault-radar-secret-manager" {
-  kind        = entity
   description = "A Vault Dedicated secret manager correlated with HCP Vault Radar findings."
 }
 
 concept "vault-radar-source" {
-  kind        = entity
   description = "A source repository scanned by HCP Vault Radar for secret exposure."
 }
 
@@ -26,7 +22,7 @@ rule "vault-radar-integration-jira-connection" {
   as = concept.vault-radar-integration
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -53,7 +49,7 @@ rule "vault-radar-integration-slack-connection" {
   as = concept.vault-radar-integration
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -96,7 +92,7 @@ rule "vault-radar-secret-manager-vault-dedicated" {
   as = concept.vault-radar-secret-manager
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -115,7 +111,7 @@ rule "vault-radar-source-github-cloud" {
   as = concept.vault-radar-source
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -129,7 +125,7 @@ rule "vault-radar-source-github-enterprise" {
   as = concept.vault-radar-source
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }

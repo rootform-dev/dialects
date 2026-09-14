@@ -3,5 +3,5 @@ rule "compute-engine-instance" {
     type = "google_compute_instance"
   }
 
-  as = concept.core.compute-instance
+  as = concept.compute-instance
 }

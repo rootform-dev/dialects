@@ -4,10 +4,10 @@ rule "mysql-database" {
     type = "azurerm_mysql_flexible_database"
   }
 
-  as = concept.core.managed-database
+  as = concept.logical-database
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -18,10 +18,10 @@ rule "mysql-flexible-server" {
     type = "azurerm_mysql_flexible_server"
   }
 
-  as = concept.core.managed-database
+  as = rf.concept.managed-database
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
@@ -40,5 +40,5 @@ rule "postgresql-database" {
     type = "azurerm_postgresql_flexible_server_database"
   }
 
-  as = concept.core.managed-database
+  as = concept.logical-database
 }

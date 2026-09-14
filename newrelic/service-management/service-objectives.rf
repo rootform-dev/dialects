@@ -1,7 +1,0 @@
-rule "service-level" {
-  match {
-    type = "newrelic_service_level"
-  }
-
-  as = concept.core.service-objective
-}

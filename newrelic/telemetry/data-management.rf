@@ -1,5 +1,4 @@
 concept "telemetry-processing-configuration" {
-  kind        = detail
   description = "A parsing, partitioning, pruning, obfuscation, conversion, or Pipeline Control rule."
 }
 
@@ -19,8 +18,8 @@ rule "data-partition-rule" {
   as = concept.telemetry-processing-configuration
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.account_id
   }
 }
@@ -33,8 +32,8 @@ rule "events-to-metrics-rule" {
   as = concept.telemetry-processing-configuration
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.account_id
   }
 }
@@ -47,8 +46,8 @@ rule "log-parsing-rule" {
   as = concept.telemetry-processing-configuration
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.account_id
   }
 }
@@ -61,8 +60,8 @@ rule "metric-pruning-rule" {
   as = concept.telemetry-processing-configuration
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.account_id
   }
 }
@@ -75,8 +74,8 @@ rule "nrql-drop-rule" {
   as = concept.telemetry-processing-configuration
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.account_id
   }
 }
@@ -89,8 +88,8 @@ rule "obfuscation-expression" {
   as = concept.telemetry-processing-configuration
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.account_id
   }
 }
@@ -104,8 +103,8 @@ rule "obfuscation-expression-lookup" {
   as = concept.telemetry-processing-configuration
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.account_id
   }
 }
@@ -118,8 +117,8 @@ rule "obfuscation-rule" {
   as = concept.telemetry-processing-configuration
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.account_id
   }
 }
@@ -132,8 +131,8 @@ rule "pipeline-cloud-rule" {
   as = concept.telemetry-processing-configuration
 
   context {
-    as  = context.core.ownership
-    to  = concept.core.observability-tenant
+    as  = context.ownership
+    to  = concept.observability-tenant
     via = source.account_id
   }
 }

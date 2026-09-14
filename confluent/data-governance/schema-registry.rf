@@ -1,15 +1,12 @@
 concept "schema-registry" {
-  kind        = entity
   description = "The Schema Registry cluster provisioned for a Confluent Cloud environment."
 }
 
 concept "schema-link" {
-  kind        = entity
   description = "A Schema Exporter link between source and destination Schema Registry clusters."
 }
 
 concept "schema-registry-configuration" {
-  kind        = detail
   description = "A schema, subject, mode, compatibility, or encryption configuration supporting Schema Registry."
 }
 
@@ -22,7 +19,7 @@ rule "schema-registry" {
   as = concept.schema-registry
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.environment
     via = source.environment[0].id
   }

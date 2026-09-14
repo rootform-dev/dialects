@@ -1,6 +1,5 @@
 # Maintained directly from pinned provider evidence.
 concept "kubernetes-fleet" {
-  kind        = scope
   description = "An Azure Kubernetes Fleet Manager fleet coordinating Kubernetes clusters."
 }
 
@@ -12,7 +11,7 @@ rule "kubernetes-fleet" {
   as = concept.kubernetes-fleet
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

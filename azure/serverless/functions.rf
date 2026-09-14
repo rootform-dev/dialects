@@ -4,22 +4,22 @@ rule "flex-consumption-function-app" {
     type = "azurerm_function_app_flex_consumption"
   }
 
-  as = concept.core.serverless-function
+  as = concept.serverless-function
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
 
   context {
-    as  = context.core.network
-    to  = concept.core.subnet
+    as  = rf.context.network
+    to  = rf.concept.subnet
     via = source.virtual_network_subnet_id
   }
 
   context {
-    as  = context.core.runtime
+    as  = rf.context.runtime
     to  = concept.app-service-plan
     via = source.service_plan_id
   }
@@ -30,7 +30,7 @@ rule "function-app-function" {
     type = "azurerm_function_app_function"
   }
 
-  as = concept.core.serverless-function
+  as = concept.serverless-function
 }
 
 rule "linux-function-app" {
@@ -38,22 +38,22 @@ rule "linux-function-app" {
     type = "azurerm_linux_function_app"
   }
 
-  as = concept.core.serverless-function
+  as = concept.serverless-function
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }
 
   context {
-    as  = context.core.network
-    to  = concept.core.subnet
+    as  = rf.context.network
+    to  = rf.concept.subnet
     via = source.virtual_network_subnet_id
   }
 
   context {
-    as  = context.core.runtime
+    as  = rf.context.runtime
     to  = concept.app-service-plan
     via = source.service_plan_id
   }
@@ -69,10 +69,10 @@ rule "windows-function-app" {
     type = "azurerm_windows_function_app"
   }
 
-  as = concept.core.serverless-function
+  as = concept.serverless-function
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

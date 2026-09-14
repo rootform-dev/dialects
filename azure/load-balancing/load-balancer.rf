@@ -4,10 +4,10 @@ rule "application-load-balancer" {
     type = "azurerm_application_load_balancer"
   }
 
-  as = concept.core.load-balancer
+  as = concept.load-balancer
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.resource-group
     via = source.resource_group_name
   }

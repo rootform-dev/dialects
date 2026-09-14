@@ -20,9 +20,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_agent_pool_update",
@@ -37,9 +39,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_api_service_integration",
@@ -51,12 +55,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/api_service_integration",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/identity-application"],
-      "rules": ["okta/api-service-integration-lookup"],
+      "rootform_concepts": [
+        "okta.concept.identity-application"
+      ],
+      "rules": [
+        "okta.rule.api-service-integration-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_api_token",
@@ -71,9 +80,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_app",
@@ -85,12 +96,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/app",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/identity-application"],
-      "rules": ["okta/app-lookup"],
+      "rootform_concepts": [
+        "okta.concept.identity-application"
+      ],
+      "rules": [
+        "okta.rule.app-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_connection",
@@ -102,46 +118,65 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/app_connection",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/provisioning-connection"],
-      "rules": ["okta/app-connection-lookup"],
+      "rootform_concepts": [
+        "okta/provisioning-connection"
+      ],
+      "rules": [
+        "okta.rule.app-connection-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_features",
       "construct_kind": "data_source",
       "contexts": [],
-      "contributions": ["core.identity-application"],
+      "contributions": [
+        "okta.concept.identity-application"
+      ],
       "family": "applications",
       "product": "applications",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/app_features",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/application-configuration"],
-      "rules": ["okta/app-features-lookup"],
+      "rootform_concepts": [
+        "okta/application-configuration"
+      ],
+      "rules": [
+        "okta.rule.app-features-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_federated_claim",
       "construct_kind": "data_source",
       "contexts": [],
-      "contributions": ["core.identity-application"],
+      "contributions": [
+        "okta.concept.identity-application"
+      ],
       "family": "applications",
       "product": "applications",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/app_federated_claim",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/application-configuration"],
-      "rules": ["okta/app-federated-claim-lookup"],
+      "rootform_concepts": [
+        "okta/application-configuration"
+      ],
+      "rules": [
+        "okta.rule.app-federated-claim-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_group_assignments",
@@ -156,9 +191,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_app_metadata_saml",
@@ -173,9 +210,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_app_oauth",
@@ -187,12 +226,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/app_oauth",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/identity-application"],
-      "rules": ["okta/app-oauth-lookup"],
+      "rootform_concepts": [
+        "okta.concept.identity-application"
+      ],
+      "rules": [
+        "okta.rule.app-oauth-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_saml",
@@ -204,12 +248,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/app_saml",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/identity-application"],
-      "rules": ["okta/app-saml-lookup"],
+      "rootform_concepts": [
+        "okta.concept.identity-application"
+      ],
+      "rules": [
+        "okta.rule.app-saml-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_sign_on_policy_rule",
@@ -219,14 +268,19 @@
       "family": "applications",
       "product": "applications",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/app_sign_on_policy_rule",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/application-configuration"],
-      "rules": ["okta/app-sign-on-policy-rule-lookup"],
+      "rootform_concepts": [
+        "okta/application-configuration"
+      ],
+      "rules": [
+        "okta.rule.app-sign-on-policy-rule-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_signon_policy",
@@ -236,14 +290,19 @@
       "family": "applications",
       "product": "applications",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/app_signon_policy",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/application-configuration"],
-      "rules": ["okta/app-signon-policy-lookup"],
+      "rootform_concepts": [
+        "okta/application-configuration"
+      ],
+      "rules": [
+        "okta.rule.app-signon-policy-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_token",
@@ -258,9 +317,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_app_user_assignments",
@@ -275,9 +336,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_apps",
@@ -292,9 +355,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_auth_server",
@@ -306,29 +371,41 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/auth_server",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/authorization-server"],
-      "rules": ["okta/auth-server-lookup"],
+      "rootform_concepts": [
+        "okta/authorization-server"
+      ],
+      "rules": [
+        "okta.rule.auth-server-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_auth_server_claim",
       "construct_kind": "data_source",
       "contexts": [],
-      "contributions": ["authorization-server"],
+      "contributions": [
+        "authorization-server"
+      ],
       "family": "authorization",
       "product": "authorization-servers",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/auth_server_claim",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authorization-server-configuration"],
-      "rules": ["okta/auth-server-claim-lookup"],
+      "rootform_concepts": [
+        "okta/authorization-server-configuration"
+      ],
+      "rules": [
+        "okta.rule.auth-server-claim-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_auth_server_claims",
@@ -343,9 +420,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_auth_server_clients",
@@ -360,9 +439,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_auth_server_keys",
@@ -377,26 +458,35 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_auth_server_policy",
       "construct_kind": "data_source",
       "contexts": [],
-      "contributions": ["authorization-server"],
+      "contributions": [
+        "authorization-server"
+      ],
       "family": "authorization",
       "product": "authorization-servers",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/auth_server_policy",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authorization-server-configuration"],
-      "rules": ["okta/auth-server-policy-lookup"],
+      "rootform_concepts": [
+        "okta/authorization-server-configuration"
+      ],
+      "rules": [
+        "okta.rule.auth-server-policy-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_auth_server_scopes",
@@ -411,9 +501,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_authenticator",
@@ -423,14 +515,19 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/authenticator",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authentication-configuration"],
-      "rules": ["okta/authenticator-lookup"],
+      "rootform_concepts": [
+        "okta/authentication-configuration"
+      ],
+      "rules": [
+        "okta.rule.authenticator-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_authenticator_method_webauthn",
@@ -440,14 +537,19 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/authenticator_method_webauthn",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authentication-configuration"],
-      "rules": ["okta/authenticator-method-webauthn-lookup"],
+      "rootform_concepts": [
+        "okta/authentication-configuration"
+      ],
+      "rules": [
+        "okta.rule.authenticator-method-webauthn-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_authenticator_webauthn_custom_aaguids",
@@ -457,14 +559,19 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/authenticator_webauthn_custom_aaguids",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authentication-configuration"],
-      "rules": ["okta/authenticator-webauthn-custom-aaguids-lookup"],
+      "rootform_concepts": [
+        "okta/authentication-configuration"
+      ],
+      "rules": [
+        "okta.rule.authenticator-webauthn-custom-aaguids-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_authorization_servers_policies_rule",
@@ -479,9 +586,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_behavior",
@@ -491,14 +600,19 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/behavior",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authentication-configuration"],
-      "rules": ["okta/behavior-lookup"],
+      "rootform_concepts": [
+        "okta/authentication-configuration"
+      ],
+      "rules": [
+        "okta.rule.behavior-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_behaviors",
@@ -513,9 +627,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_brand",
@@ -530,9 +646,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_brands",
@@ -547,9 +665,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_campaign",
@@ -564,9 +684,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_captcha",
@@ -576,14 +698,19 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/captcha",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authentication-configuration"],
-      "rules": ["okta/captcha-lookup"],
+      "rootform_concepts": [
+        "okta/authentication-configuration"
+      ],
+      "rules": [
+        "okta.rule.captcha-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_catalog_entry_default",
@@ -598,9 +725,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_catalog_entry_user_access_request_fields",
@@ -615,9 +744,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_default_policy",
@@ -632,9 +763,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_default_signin_page",
@@ -649,9 +782,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_device",
@@ -666,9 +801,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_device_assurance_policy",
@@ -683,9 +820,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_domain",
@@ -697,12 +836,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/domain",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/identity-domain"],
-      "rules": ["okta/domain-lookup"],
+      "rootform_concepts": [
+        "okta/identity-domain"
+      ],
+      "rules": [
+        "okta.rule.domain-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_email_customization",
@@ -717,9 +861,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_email_customizations",
@@ -734,9 +880,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_email_smtp_server",
@@ -751,9 +899,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_email_template",
@@ -768,9 +918,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_email_templates",
@@ -785,9 +937,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_end_user_my_requests",
@@ -802,9 +956,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_entitlement",
@@ -819,9 +975,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_entitlement_bundle",
@@ -836,9 +994,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_entity_risk_policy",
@@ -853,9 +1013,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_everyone_group",
@@ -870,9 +1032,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_features",
@@ -887,9 +1051,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_group",
@@ -904,9 +1070,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_group_rule",
@@ -921,9 +1089,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_groups",
@@ -938,9 +1108,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_hook_key",
@@ -950,14 +1122,19 @@
       "family": "extensibility",
       "product": "hooks",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/hook_key",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/hook-configuration"],
-      "rules": ["okta/hook-key-lookup"],
+      "rootform_concepts": [
+        "okta/hook-configuration"
+      ],
+      "rules": [
+        "okta.rule.hook-key-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_iam_assignees_user",
@@ -972,9 +1149,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_iam_resource_set",
@@ -989,9 +1168,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_identity_source_group_memberships",
@@ -1006,9 +1187,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_identity_source_groups",
@@ -1023,9 +1206,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_identity_source_sessions",
@@ -1040,9 +1225,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_identity_source_users",
@@ -1057,9 +1244,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_idp_metadata_saml",
@@ -1074,9 +1263,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_idp_oidc",
@@ -1088,12 +1279,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/idp_oidc",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/external-identity-provider"],
-      "rules": ["okta/idp-oidc-lookup"],
+      "rootform_concepts": [
+        "okta/external-identity-provider"
+      ],
+      "rules": [
+        "okta.rule.idp-oidc-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_idp_saml",
@@ -1105,12 +1301,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/idp_saml",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/external-identity-provider"],
-      "rules": ["okta/idp-saml-lookup"],
+      "rootform_concepts": [
+        "okta/external-identity-provider"
+      ],
+      "rules": [
+        "okta.rule.idp-saml-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_idp_social",
@@ -1122,12 +1323,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/idp_social",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/external-identity-provider"],
-      "rules": ["okta/idp-social-lookup"],
+      "rootform_concepts": [
+        "okta/external-identity-provider"
+      ],
+      "rules": [
+        "okta.rule.idp-social-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_label",
@@ -1142,9 +1348,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_log_stream",
@@ -1156,12 +1364,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/log_stream",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/identity-log-stream"],
-      "rules": ["okta/log-stream-lookup"],
+      "rootform_concepts": [
+        "okta/identity-log-stream"
+      ],
+      "rules": [
+        "okta.rule.log-stream-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_network_zone",
@@ -1173,12 +1386,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/network_zone",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/network-zone"],
-      "rules": ["okta/network-zone-lookup"],
+      "rootform_concepts": [
+        "okta.rule.network-zone"
+      ],
+      "rules": [
+        "okta.rule.network-zone-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_oauth_authorization_server",
@@ -1190,12 +1408,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/oauth_authorization_server",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/authorization-server"],
-      "rules": ["okta/oauth-authorization-server-lookup"],
+      "rootform_concepts": [
+        "okta/authorization-server"
+      ],
+      "rules": [
+        "okta.rule.oauth-authorization-server-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_org_captcha",
@@ -1205,14 +1428,19 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/org_captcha",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authentication-configuration"],
-      "rules": ["okta/org-captcha-lookup"],
+      "rootform_concepts": [
+        "okta/authentication-configuration"
+      ],
+      "rules": [
+        "okta.rule.org-captcha-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_org_metadata",
@@ -1224,12 +1452,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/org_metadata",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/identity-tenant"],
-      "rules": ["okta/org-metadata-lookup"],
+      "rootform_concepts": [
+        "okta/identity-tenant"
+      ],
+      "rules": [
+        "okta.rule.org-metadata-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_policy",
@@ -1244,9 +1477,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_policy_rule_password",
@@ -1261,9 +1496,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_post_auth_session_policy",
@@ -1278,9 +1515,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_principal_entitlements",
@@ -1295,9 +1534,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_principal_rate_limits",
@@ -1312,9 +1553,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_push_group",
@@ -1329,9 +1572,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_push_groups",
@@ -1346,9 +1591,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_push_provider",
@@ -1363,9 +1610,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_rate_limit_admin_notification_settings",
@@ -1380,9 +1629,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_rate_limit_warning_threshold_percentage",
@@ -1397,9 +1648,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_realm",
@@ -1411,29 +1664,41 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/realm",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/identity-realm"],
-      "rules": ["okta/realm-lookup"],
+      "rootform_concepts": [
+        "okta/identity-realm"
+      ],
+      "rules": [
+        "okta.rule.realm-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_realm_assignment",
       "construct_kind": "data_source",
       "contexts": [],
-      "contributions": ["identity-realm"],
+      "contributions": [
+        "identity-realm"
+      ],
       "family": "tenancy",
       "product": "orgs-realms",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/realm_assignment",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authentication-configuration"],
-      "rules": ["okta/realm-assignment-lookup"],
+      "rootform_concepts": [
+        "okta/authentication-configuration"
+      ],
+      "rules": [
+        "okta.rule.realm-assignment-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_request_condition",
@@ -1448,9 +1713,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_request_sequence",
@@ -1465,9 +1732,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_request_setting_organization",
@@ -1482,9 +1751,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_request_setting_resource",
@@ -1499,9 +1770,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_request_v2",
@@ -1516,9 +1789,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_resource_label",
@@ -1533,9 +1808,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_resource_owner",
@@ -1550,9 +1827,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_resource_owners_catalog_resource",
@@ -1567,9 +1846,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_review",
@@ -1584,9 +1865,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_role_subscription",
@@ -1601,9 +1884,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_security_events_provider",
@@ -1615,12 +1900,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/security_events_provider",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/security-events-provider"],
-      "rules": ["okta/security-events-provider-lookup"],
+      "rootform_concepts": [
+        "okta.rule.security-events-provider"
+      ],
+      "rules": [
+        "okta.rule.security-events-provider-lookup"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_session_violation_policy",
@@ -1635,9 +1925,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_theme",
@@ -1652,9 +1944,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_themes",
@@ -1669,9 +1963,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_threat_insight_settings",
@@ -1681,14 +1977,19 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/threat_insight_settings",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authentication-configuration"],
-      "rules": ["okta/threat-insight-settings-lookup"],
+      "rootform_concepts": [
+        "okta/authentication-configuration"
+      ],
+      "rules": [
+        "okta.rule.threat-insight-settings-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_trusted_origin",
@@ -1698,14 +1999,19 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/data-sources/trusted_origin",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authentication-configuration"],
-      "rules": ["okta/trusted-origin-lookup"],
+      "rootform_concepts": [
+        "okta/authentication-configuration"
+      ],
+      "rules": [
+        "okta.rule.trusted-origin-lookup"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_trusted_origins",
@@ -1720,9 +2026,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_ui_schema",
@@ -1737,9 +2045,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_user",
@@ -1754,9 +2064,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_user_profile_mapping_source",
@@ -1771,9 +2083,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_user_risk",
@@ -1788,9 +2102,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_user_security_questions",
@@ -1805,9 +2121,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_user_subscription",
@@ -1822,9 +2140,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_user_type",
@@ -1839,9 +2159,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_users",
@@ -1856,9 +2178,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_admin_role_custom",
@@ -1873,9 +2197,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_admin_role_custom_assignments",
@@ -1890,9 +2216,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_admin_role_targets",
@@ -1907,9 +2235,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_agent_pool_update",
@@ -1919,14 +2249,16 @@
       "family": "provisioning",
       "product": "provisioning",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/agent_pool_update",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Okta configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Okta configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_api_service_integration",
@@ -1938,12 +2270,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/api_service_integration",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/identity-application"],
-      "rules": ["okta/api-service-integration"],
+      "rootform_concepts": [
+        "okta.concept.identity-application"
+      ],
+      "rules": [
+        "okta.rule.api-service-integration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_api_token",
@@ -1958,26 +2295,35 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_app_access_policy_assignment",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["core.identity-application"],
+      "contributions": [
+        "okta.concept.identity-application"
+      ],
       "family": "applications",
       "product": "applications",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_access_policy_assignment",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/application-configuration"],
-      "rules": ["okta/app-access-policy-assignment"],
+      "rootform_concepts": [
+        "okta/application-configuration"
+      ],
+      "rules": [
+        "okta.rule.app-access-policy-assignment"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_auto_login",
@@ -1989,12 +2335,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_auto_login",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/identity-application"],
-      "rules": ["okta/app-auto-login"],
+      "rootform_concepts": [
+        "okta.concept.identity-application"
+      ],
+      "rules": [
+        "okta.rule.app-auto-login"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_basic_auth",
@@ -2006,12 +2357,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_basic_auth",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/identity-application"],
-      "rules": ["okta/app-basic-auth"],
+      "rootform_concepts": [
+        "okta.concept.identity-application"
+      ],
+      "rules": [
+        "okta.rule.app-basic-auth"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_bookmark",
@@ -2023,12 +2379,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_bookmark",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/identity-application"],
-      "rules": ["okta/app-bookmark"],
+      "rootform_concepts": [
+        "okta.concept.identity-application"
+      ],
+      "rules": [
+        "okta.rule.app-bookmark"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_connection",
@@ -2040,46 +2401,65 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_connection",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/provisioning-connection"],
-      "rules": ["okta/app-connection"],
+      "rootform_concepts": [
+        "okta/provisioning-connection"
+      ],
+      "rules": [
+        "okta.rule.app-connection"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_features",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["core.identity-application"],
+      "contributions": [
+        "okta.concept.identity-application"
+      ],
       "family": "applications",
       "product": "applications",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_features",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/application-configuration"],
-      "rules": ["okta/app-features"],
+      "rootform_concepts": [
+        "okta/application-configuration"
+      ],
+      "rules": [
+        "okta.rule.app-features"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_federated_claim",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["core.identity-application"],
+      "contributions": [
+        "okta.concept.identity-application"
+      ],
       "family": "applications",
       "product": "applications",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_federated_claim",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/application-configuration"],
-      "rules": ["okta/app-federated-claim"],
+      "rootform_concepts": [
+        "okta/application-configuration"
+      ],
+      "rules": [
+        "okta.rule.app-federated-claim"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_group_assignment",
@@ -2094,9 +2474,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_app_group_assignments",
@@ -2111,9 +2493,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_app_oauth",
@@ -2125,63 +2509,89 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_oauth",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/identity-application"],
-      "rules": ["okta/app-oauth"],
+      "rootform_concepts": [
+        "okta.concept.identity-application"
+      ],
+      "rules": [
+        "okta.rule.app-oauth"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_oauth_api_scope",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["core.identity-application"],
+      "contributions": [
+        "okta.concept.identity-application"
+      ],
       "family": "applications",
       "product": "applications",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_oauth_api_scope",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/application-configuration"],
-      "rules": ["okta/app-oauth-api-scope"],
+      "rootform_concepts": [
+        "okta/application-configuration"
+      ],
+      "rules": [
+        "okta.rule.app-oauth-api-scope"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_oauth_post_logout_redirect_uri",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["core.identity-application"],
+      "contributions": [
+        "okta.concept.identity-application"
+      ],
       "family": "applications",
       "product": "applications",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_oauth_post_logout_redirect_uri",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/application-configuration"],
-      "rules": ["okta/app-oauth-post-logout-redirect-uri"],
+      "rootform_concepts": [
+        "okta/application-configuration"
+      ],
+      "rules": [
+        "okta.rule.app-oauth-post-logout-redirect-uri"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_oauth_redirect_uri",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["core.identity-application"],
+      "contributions": [
+        "okta.concept.identity-application"
+      ],
       "family": "applications",
       "product": "applications",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_oauth_redirect_uri",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/application-configuration"],
-      "rules": ["okta/app-oauth-redirect-uri"],
+      "rootform_concepts": [
+        "okta/application-configuration"
+      ],
+      "rules": [
+        "okta.rule.app-oauth-redirect-uri"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_oauth_role_assignment",
@@ -2191,14 +2601,16 @@
       "family": "applications",
       "product": "applications",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_oauth_role_assignment",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Okta configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Okta configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_app_saml",
@@ -2209,30 +2621,44 @@
       "product": "applications",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_saml",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
-      "relations": ["uses-inline-hook"],
-      "rootform_concepts": ["core/identity-application"],
-      "rules": ["okta/app-saml"],
+      "relations": [
+        "uses-inline-hook"
+      ],
+      "rootform_concepts": [
+        "okta.concept.identity-application"
+      ],
+      "rules": [
+        "okta.rule.app-saml"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_saml_app_settings",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["core.identity-application"],
+      "contributions": [
+        "okta.concept.identity-application"
+      ],
       "family": "applications",
       "product": "applications",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_saml_app_settings",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/application-configuration"],
-      "rules": ["okta/app-saml-app-settings"],
+      "rootform_concepts": [
+        "okta/application-configuration"
+      ],
+      "rules": [
+        "okta.rule.app-saml-app-settings"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_secure_password_store",
@@ -2244,12 +2670,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_secure_password_store",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/identity-application"],
-      "rules": ["okta/app-secure-password-store"],
+      "rootform_concepts": [
+        "okta.concept.identity-application"
+      ],
+      "rules": [
+        "okta.rule.app-secure-password-store"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_shared_credentials",
@@ -2261,12 +2692,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_shared_credentials",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/identity-application"],
-      "rules": ["okta/app-shared-credentials"],
+      "rootform_concepts": [
+        "okta.concept.identity-application"
+      ],
+      "rules": [
+        "okta.rule.app-shared-credentials"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_signon_policy",
@@ -2276,14 +2712,19 @@
       "family": "applications",
       "product": "applications",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_signon_policy",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/application-configuration"],
-      "rules": ["okta/app-signon-policy"],
+      "rootform_concepts": [
+        "okta/application-configuration"
+      ],
+      "rules": [
+        "okta.rule.app-signon-policy"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_signon_policy_rule",
@@ -2293,14 +2734,19 @@
       "family": "applications",
       "product": "applications",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_signon_policy_rule",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/application-configuration"],
-      "rules": ["okta/app-signon-policy-rule"],
+      "rootform_concepts": [
+        "okta/application-configuration"
+      ],
+      "rules": [
+        "okta.rule.app-signon-policy-rule"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_signon_policy_rules",
@@ -2310,14 +2756,16 @@
       "family": "applications",
       "product": "applications",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_signon_policy_rules",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Okta configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Okta configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_app_swa",
@@ -2329,12 +2777,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_swa",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/identity-application"],
-      "rules": ["okta/app-swa"],
+      "rootform_concepts": [
+        "okta.concept.identity-application"
+      ],
+      "rules": [
+        "okta.rule.app-swa"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_three_field",
@@ -2346,12 +2799,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/app_three_field",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["core/identity-application"],
-      "rules": ["okta/app-three-field"],
+      "rootform_concepts": [
+        "okta.concept.identity-application"
+      ],
+      "rules": [
+        "okta.rule.app-three-field"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_app_token",
@@ -2366,9 +2824,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_app_user",
@@ -2383,9 +2843,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_app_user_base_schema_property",
@@ -2400,9 +2862,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_app_user_schema_property",
@@ -2417,9 +2881,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_auth_server",
@@ -2431,46 +2897,65 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/auth_server",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/authorization-server"],
-      "rules": ["okta/auth-server"],
+      "rootform_concepts": [
+        "okta/authorization-server"
+      ],
+      "rules": [
+        "okta.rule.auth-server"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_auth_server_claim",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["authorization-server"],
+      "contributions": [
+        "authorization-server"
+      ],
       "family": "authorization",
       "product": "authorization-servers",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/auth_server_claim",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authorization-server-configuration"],
-      "rules": ["okta/auth-server-claim"],
+      "rootform_concepts": [
+        "okta/authorization-server-configuration"
+      ],
+      "rules": [
+        "okta.rule.auth-server-claim"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_auth_server_claim_default",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["authorization-server"],
+      "contributions": [
+        "authorization-server"
+      ],
       "family": "authorization",
       "product": "authorization-servers",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/auth_server_claim_default",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authorization-server-configuration"],
-      "rules": ["okta/auth-server-claim-default"],
+      "rootform_concepts": [
+        "okta/authorization-server-configuration"
+      ],
+      "rules": [
+        "okta.rule.auth-server-claim-default"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_auth_server_default",
@@ -2482,63 +2967,89 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/auth_server_default",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/authorization-server"],
-      "rules": ["okta/auth-server-default"],
+      "rootform_concepts": [
+        "okta/authorization-server"
+      ],
+      "rules": [
+        "okta.rule.auth-server-default"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_auth_server_policy",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["authorization-server"],
+      "contributions": [
+        "authorization-server"
+      ],
       "family": "authorization",
       "product": "authorization-servers",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/auth_server_policy",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authorization-server-configuration"],
-      "rules": ["okta/auth-server-policy"],
+      "rootform_concepts": [
+        "okta/authorization-server-configuration"
+      ],
+      "rules": [
+        "okta.rule.auth-server-policy"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_auth_server_policy_rule",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["authorization-server"],
+      "contributions": [
+        "authorization-server"
+      ],
       "family": "authorization",
       "product": "authorization-servers",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/auth_server_policy_rule",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authorization-server-configuration"],
-      "rules": ["okta/auth-server-policy-rule"],
+      "rootform_concepts": [
+        "okta/authorization-server-configuration"
+      ],
+      "rules": [
+        "okta.rule.auth-server-policy-rule"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_auth_server_scope",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["authorization-server"],
+      "contributions": [
+        "authorization-server"
+      ],
       "family": "authorization",
       "product": "authorization-servers",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/auth_server_scope",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authorization-server-configuration"],
-      "rules": ["okta/auth-server-scope"],
+      "rootform_concepts": [
+        "okta/authorization-server-configuration"
+      ],
+      "rules": [
+        "okta.rule.auth-server-scope"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_authenticator",
@@ -2548,14 +3059,19 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/authenticator",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authentication-configuration"],
-      "rules": ["okta/authenticator"],
+      "rootform_concepts": [
+        "okta/authentication-configuration"
+      ],
+      "rules": [
+        "okta.rule.authenticator"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_authenticator_method_webauthn",
@@ -2565,14 +3081,19 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/authenticator_method_webauthn",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authentication-configuration"],
-      "rules": ["okta/authenticator-method-webauthn"],
+      "rootform_concepts": [
+        "okta/authentication-configuration"
+      ],
+      "rules": [
+        "okta.rule.authenticator-method-webauthn"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_authenticator_webauthn_custom_aaguid",
@@ -2582,14 +3103,19 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/authenticator_webauthn_custom_aaguid",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authentication-configuration"],
-      "rules": ["okta/authenticator-webauthn-custom-aaguid"],
+      "rootform_concepts": [
+        "okta/authentication-configuration"
+      ],
+      "rules": [
+        "okta.rule.authenticator-webauthn-custom-aaguid"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_behavior",
@@ -2599,14 +3125,19 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/behavior",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authentication-configuration"],
-      "rules": ["okta/behavior"],
+      "rootform_concepts": [
+        "okta/authentication-configuration"
+      ],
+      "rules": [
+        "okta.rule.behavior"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_brand",
@@ -2621,9 +3152,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_campaign",
@@ -2638,9 +3171,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_captcha",
@@ -2650,14 +3185,19 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/captcha",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authentication-configuration"],
-      "rules": ["okta/captcha"],
+      "rootform_concepts": [
+        "okta/authentication-configuration"
+      ],
+      "rules": [
+        "okta.rule.captcha"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_captcha_org_wide_settings",
@@ -2667,14 +3207,16 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/captcha_org_wide_settings",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Okta configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Okta configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_customized_signin_page",
@@ -2689,9 +3231,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_device",
@@ -2701,14 +3245,16 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/device",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Okta configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Okta configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_domain",
@@ -2720,46 +3266,65 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/domain",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/identity-domain"],
-      "rules": ["okta/domain"],
+      "rootform_concepts": [
+        "okta/identity-domain"
+      ],
+      "rules": [
+        "okta.rule.domain"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_domain_certificate",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["identity-domain"],
+      "contributions": [
+        "identity-domain"
+      ],
       "family": "domains",
       "product": "custom-domains",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/domain_certificate",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/domain-configuration"],
-      "rules": ["okta/domain-certificate"],
+      "rootform_concepts": [
+        "okta/domain-configuration"
+      ],
+      "rules": [
+        "okta.rule.domain-certificate"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_domain_verification",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["identity-domain"],
+      "contributions": [
+        "identity-domain"
+      ],
       "family": "domains",
       "product": "custom-domains",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/domain_verification",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/domain-configuration"],
-      "rules": ["okta/domain-verification"],
+      "rootform_concepts": [
+        "okta/domain-configuration"
+      ],
+      "rules": [
+        "okta.rule.domain-verification"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_email_customization",
@@ -2774,9 +3339,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_email_domain",
@@ -2791,9 +3358,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_email_domain_verification",
@@ -2808,9 +3377,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_email_sender",
@@ -2825,9 +3396,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_email_sender_verification",
@@ -2842,9 +3415,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_email_smtp_server",
@@ -2859,9 +3434,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_email_template_settings",
@@ -2876,9 +3453,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_end_user_my_requests",
@@ -2893,9 +3472,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_entitlement",
@@ -2910,9 +3491,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_entitlement_bundle",
@@ -2927,9 +3510,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_entity_risk_policy_rule",
@@ -2939,14 +3524,16 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/entity_risk_policy_rule",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Okta configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Okta configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_event_hook",
@@ -2958,29 +3545,41 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/event_hook",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/identity-event-extension"],
-      "rules": ["okta/event-hook"],
+      "rootform_concepts": [
+        "okta/identity-event-extension"
+      ],
+      "rules": [
+        "okta.rule.event-hook"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_event_hook_verification",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["identity-event-extension"],
+      "contributions": [
+        "identity-event-extension"
+      ],
       "family": "extensibility",
       "product": "hooks",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/event_hook_verification",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/hook-configuration"],
-      "rules": ["okta/event-hook-verification"],
+      "rootform_concepts": [
+        "okta/hook-configuration"
+      ],
+      "rules": [
+        "okta.rule.event-hook-verification"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_factor",
@@ -2990,14 +3589,16 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/factor",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Okta configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Okta configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_factor_totp",
@@ -3007,14 +3608,16 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/factor_totp",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Okta configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Okta configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_feature",
@@ -3024,14 +3627,16 @@
       "family": "platform-configuration",
       "product": "platform-administration",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/feature",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Okta configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Okta configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_group",
@@ -3046,9 +3651,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_group_memberships",
@@ -3063,9 +3670,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_group_owner",
@@ -3080,9 +3689,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_group_owners",
@@ -3097,9 +3708,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_group_role",
@@ -3114,9 +3727,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_group_rule",
@@ -3131,9 +3746,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_group_schema_property",
@@ -3148,9 +3765,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_hook_key",
@@ -3160,14 +3779,19 @@
       "family": "extensibility",
       "product": "hooks",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/hook_key",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/hook-configuration"],
-      "rules": ["okta/hook-key"],
+      "rootform_concepts": [
+        "okta/hook-configuration"
+      ],
+      "rules": [
+        "okta.rule.hook-key"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_identity_source_group",
@@ -3182,9 +3806,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_identity_source_group_membership",
@@ -3199,9 +3825,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_identity_source_import",
@@ -3211,14 +3839,16 @@
       "family": "provisioning",
       "product": "provisioning",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/identity_source_import",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Okta configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Okta configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_identity_source_user",
@@ -3233,9 +3863,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_idp_oidc",
@@ -3247,12 +3879,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/idp_oidc",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/external-identity-provider"],
-      "rules": ["okta/idp-oidc"],
+      "rootform_concepts": [
+        "okta/external-identity-provider"
+      ],
+      "rules": [
+        "okta.rule.idp-oidc"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_idp_saml",
@@ -3264,12 +3901,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/idp_saml",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/external-identity-provider"],
-      "rules": ["okta/idp-saml"],
+      "rootform_concepts": [
+        "okta/external-identity-provider"
+      ],
+      "rules": [
+        "okta.rule.idp-saml"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_idp_saml_key",
@@ -3279,14 +3921,16 @@
       "family": "federation",
       "product": "identity-providers",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/idp_saml_key",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Okta configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Okta configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_idp_social",
@@ -3298,12 +3942,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/idp_social",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/external-identity-provider"],
-      "rules": ["okta/idp-social"],
+      "rootform_concepts": [
+        "okta/external-identity-provider"
+      ],
+      "rules": [
+        "okta.rule.idp-social"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_inline_hook",
@@ -3315,12 +3964,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/inline_hook",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/identity-event-extension"],
-      "rules": ["okta/inline-hook"],
+      "rootform_concepts": [
+        "okta/identity-event-extension"
+      ],
+      "rules": [
+        "okta.rule.inline-hook"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_label",
@@ -3330,14 +3984,16 @@
       "family": "platform-configuration",
       "product": "platform-administration",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/label",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Okta configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Okta configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_link_definition",
@@ -3352,9 +4008,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_link_value",
@@ -3369,9 +4027,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_log_stream",
@@ -3383,12 +4043,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/log_stream",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/identity-log-stream"],
-      "rules": ["okta/log-stream"],
+      "rootform_concepts": [
+        "okta/identity-log-stream"
+      ],
+      "rules": [
+        "okta.rule.log-stream"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_network_zone",
@@ -3400,12 +4065,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/network_zone",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/network-zone"],
-      "rules": ["okta/network-zone"],
+      "rootform_concepts": [
+        "okta.rule.network-zone"
+      ],
+      "rules": [
+        "okta.rule.network-zone"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_oauth2_v1_clients_role_access_certifications_admin",
@@ -3420,9 +4090,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_oauth2_v1_clients_role_access_requests_admin",
@@ -3437,9 +4109,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_oauth2_v1_clients_role_api_access_management_admin",
@@ -3454,9 +4128,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_oauth2_v1_clients_role_app_admin",
@@ -3471,9 +4147,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_oauth2_v1_clients_role_custom",
@@ -3488,9 +4166,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_oauth2_v1_clients_role_group_membership_admin",
@@ -3505,9 +4185,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_oauth2_v1_clients_role_help_desk_admin",
@@ -3522,9 +4204,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_oauth2_v1_clients_role_org_admin",
@@ -3539,9 +4223,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_oauth2_v1_clients_role_read_only_admin",
@@ -3556,9 +4242,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_oauth2_v1_clients_role_report_admin",
@@ -3573,9 +4261,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_oauth2_v1_clients_role_super_admin",
@@ -3590,9 +4280,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_oauth2_v1_clients_role_user_admin",
@@ -3607,9 +4299,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_oauth2_v1_clients_role_workflows_admin",
@@ -3624,9 +4318,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_org_captcha",
@@ -3636,14 +4332,19 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/org_captcha",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authentication-configuration"],
-      "rules": ["okta/org-captcha"],
+      "rootform_concepts": [
+        "okta/authentication-configuration"
+      ],
+      "rules": [
+        "okta.rule.org-captcha"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_org_configuration",
@@ -3655,12 +4356,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/org_configuration",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/identity-tenant"],
-      "rules": ["okta/org-configuration"],
+      "rootform_concepts": [
+        "okta/identity-tenant"
+      ],
+      "rules": [
+        "okta.rule.org-configuration"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_org_support",
@@ -3670,14 +4376,16 @@
       "family": "platform-configuration",
       "product": "platform-administration",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/org_support",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Okta configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Okta configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_policy_device_assurance_android",
@@ -3692,9 +4400,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_policy_device_assurance_chromeos",
@@ -3709,9 +4419,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_policy_device_assurance_ios",
@@ -3726,9 +4438,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_policy_device_assurance_macos",
@@ -3743,9 +4457,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_policy_device_assurance_windows",
@@ -3760,9 +4476,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_policy_mfa",
@@ -3777,9 +4495,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_policy_mfa_default",
@@ -3794,9 +4514,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_policy_password",
@@ -3811,9 +4533,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_policy_password_default",
@@ -3828,9 +4552,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_policy_profile_enrollment",
@@ -3845,9 +4571,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_policy_profile_enrollment_apps",
@@ -3862,9 +4590,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_policy_rule_idp_discovery",
@@ -3874,14 +4604,15 @@
       "family": "federation",
       "product": "identity-providers",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/policy_rule_idp_discovery",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "no-rule",
       "relations": [],
-      "rootform_concepts": ["okta/federation-configuration"],
-      "rules": ["okta/policy-rule-idp-discovery"],
+      "rootform_concepts": [
+        "okta/federation-configuration"
+      ],
+      "rules": [],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "no-rule",
+      "tests": []
     },
     {
       "construct": "okta_policy_rule_mfa",
@@ -3896,9 +4627,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_policy_rule_password",
@@ -3913,9 +4646,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_policy_rule_profile_enrollment",
@@ -3930,9 +4665,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_policy_rule_signon",
@@ -3947,9 +4684,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_policy_signon",
@@ -3964,9 +4703,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_post_auth_session_policy_rule",
@@ -3976,14 +4717,16 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/post_auth_session_policy_rule",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Okta configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Okta configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_preview_signin_page",
@@ -3998,9 +4741,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_principal_rate_limits",
@@ -4010,14 +4755,16 @@
       "family": "platform-configuration",
       "product": "platform-administration",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/principal_rate_limits",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Okta configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Okta configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_profile_mapping",
@@ -4032,9 +4779,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_push_group",
@@ -4044,14 +4793,16 @@
       "family": "provisioning",
       "product": "provisioning",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/push_group",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Okta configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Okta configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_push_provider",
@@ -4061,14 +4812,16 @@
       "family": "provisioning",
       "product": "provisioning",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/push_provider",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Okta configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Okta configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_rate_limit_admin_notification_settings",
@@ -4078,14 +4831,16 @@
       "family": "platform-configuration",
       "product": "platform-administration",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/rate_limit_admin_notification_settings",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Okta configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Okta configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_rate_limit_warning_threshold_percentage",
@@ -4095,14 +4850,16 @@
       "family": "platform-configuration",
       "product": "platform-administration",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/rate_limit_warning_threshold_percentage",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Okta configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Okta configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_rate_limiting",
@@ -4112,14 +4869,16 @@
       "family": "platform-configuration",
       "product": "platform-administration",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/rate_limiting",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Okta configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Okta configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_realm",
@@ -4131,29 +4890,41 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/realm",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/identity-realm"],
-      "rules": ["okta/realm"],
+      "rootform_concepts": [
+        "okta/identity-realm"
+      ],
+      "rules": [
+        "okta.rule.realm"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "scope"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_realm_assignment",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["identity-realm"],
+      "contributions": [
+        "identity-realm"
+      ],
       "family": "tenancy",
       "product": "orgs-realms",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/realm_assignment",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authentication-configuration"],
-      "rules": ["okta/realm-assignment"],
+      "rootform_concepts": [
+        "okta/authentication-configuration"
+      ],
+      "rules": [
+        "okta.rule.realm-assignment"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_request_condition",
@@ -4168,9 +4939,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_request_sequence",
@@ -4185,9 +4958,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_request_setting_organization",
@@ -4202,9 +4977,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_request_setting_resource",
@@ -4219,9 +4996,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_request_v2",
@@ -4236,9 +5015,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_resource_owner",
@@ -4253,9 +5034,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_resource_set",
@@ -4270,9 +5053,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_review",
@@ -4287,9 +5072,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_role_subscription",
@@ -4304,9 +5091,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_security_events_provider",
@@ -4318,12 +5107,17 @@
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/security_events_provider",
       "reason": "architecture-role: durable provider-backed service, boundary, integration, pipeline, destination, or runtime",
       "relations": [],
-      "rootform_concepts": ["okta/security-events-provider"],
-      "rules": ["okta/security-events-provider"],
+      "rootform_concepts": [
+        "okta.rule.security-events-provider"
+      ],
+      "rules": [
+        "okta.rule.security-events-provider"
+      ],
       "semantic_research": "deep",
-      "status": "supported",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "entity"
+      "status": "rule-present",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_security_notification_emails",
@@ -4333,14 +5127,16 @@
       "family": "platform-configuration",
       "product": "platform-administration",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/security_notification_emails",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Okta configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Okta configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_session_violation_policy_rule",
@@ -4350,14 +5146,16 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/session_violation_policy_rule",
-      "reason": "intentionally-unrepresented: administrative or fine-grained Okta configuration owns no independent architecture",
+      "reason": "no-rule: administrative or fine-grained Okta configuration owns no independent architecture",
       "relations": [],
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_template_sms",
@@ -4372,9 +5170,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_theme",
@@ -4389,9 +5189,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_threat_insight_settings",
@@ -4401,14 +5203,19 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/threat_insight_settings",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authentication-configuration"],
-      "rules": ["okta/threat-insight-settings"],
+      "rootform_concepts": [
+        "okta/authentication-configuration"
+      ],
+      "rules": [
+        "okta.rule.threat-insight-settings"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_trusted_origin",
@@ -4418,31 +5225,43 @@
       "family": "security",
       "product": "authentication-security",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/trusted_origin",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authentication-configuration"],
-      "rules": ["okta/trusted-origin"],
+      "rootform_concepts": [
+        "okta/authentication-configuration"
+      ],
+      "rules": [
+        "okta.rule.trusted-origin"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_trusted_server",
       "construct_kind": "managed_resource",
       "contexts": [],
-      "contributions": ["authorization-server"],
+      "contributions": [
+        "authorization-server"
+      ],
       "family": "authorization",
       "product": "authorization-servers",
       "proof_url": "https://registry.terraform.io/providers/okta/okta/7.0.0/docs/resources/trusted_server",
-      "reason": "supporting-detail: configuration remains explicit without independent topology",
+      "reason": "member-configuration: configuration remains explicit without independent topology",
       "relations": [],
-      "rootform_concepts": ["okta/authorization-server-configuration"],
-      "rules": ["okta/trusted-server"],
+      "rootform_concepts": [
+        "okta/authorization-server-configuration"
+      ],
+      "rules": [
+        "okta.rule.trusted-server"
+      ],
       "semantic_research": "concise",
-      "status": "partial",
-      "tests": ["okta-compiler-scenarios"],
-      "treatment": "detail"
+      "status": "partial-rule",
+      "tests": [
+        "okta-compiler-scenarios"
+      ]
     },
     {
       "construct": "okta_ui_schema",
@@ -4457,9 +5276,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_user",
@@ -4474,9 +5295,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_user_admin_roles",
@@ -4491,9 +5314,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_user_base_schema_property",
@@ -4508,9 +5333,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_user_factor_question",
@@ -4525,9 +5352,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_user_group_memberships",
@@ -4542,9 +5371,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_user_risk",
@@ -4559,9 +5390,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_user_schema_property",
@@ -4576,9 +5409,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_user_subscription",
@@ -4593,9 +5428,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     },
     {
       "construct": "okta_user_type",
@@ -4610,9 +5447,11 @@
       "rootform_concepts": [],
       "rules": [],
       "semantic_research": "concise",
-      "status": "intentionally-unrepresented",
-      "tests": ["okta-coverage-validator"],
-      "treatment": "intentionally-unrepresented"
+      "status": "no-rule",
+      "tests": [
+        "okta-coverage-validator"
+      ],
+      "treatment": "no-rule"
     }
   ]
 }

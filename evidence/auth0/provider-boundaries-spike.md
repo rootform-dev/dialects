@@ -17,7 +17,7 @@ details; users, roles, presentation configuration, credentials, code, JSON,
 and aggregates have no independent topology.
 
 Vault OIDC clients, Okta app integrations, and Auth0 clients share one minimal
-registered relying-party role, so `core.identity-application` is stable.
+registered relying-party role, so `auth0.concept.identity-application` is stable.
 Tenant, Connection, authorization-server, and extension execution semantics do
 not share one honest ownership contract and remain local.
 

@@ -3,10 +3,10 @@ rule "pubsub-topic" {
     type = "google_pubsub_topic"
   }
 
-  as = concept.core.message-topic
+  as = concept.message-topic
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.google-cloud-project
     via = source.project
   }
@@ -17,10 +17,10 @@ rule "pubsub-subscription" {
     type = "google_pubsub_subscription"
   }
 
-  as = concept.core.message-subscription
+  as = concept.message-subscription
 
   relation "subscribes-to" {
-    to  = concept.core.message-topic
+    to  = concept.message-topic
     via = source.topic
   }
 
@@ -30,12 +30,12 @@ rule "pubsub-subscription" {
   }
 
   relation "delivers-to" {
-    to  = concept.core.message-topic
+    to  = concept.message-topic
     via = source.dead_letter_policy[0].dead_letter_topic
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.google-cloud-project
     via = source.project
   }
@@ -46,7 +46,7 @@ rule "pubsub-lite-topic" {
     type = "google_pubsub_lite_topic"
   }
 
-  as = concept.core.message-topic
+  as = concept.message-topic
 }
 
 rule "pubsub-lite-subscription" {
@@ -54,5 +54,5 @@ rule "pubsub-lite-subscription" {
     type = "google_pubsub_lite_subscription"
   }
 
-  as = concept.core.message-subscription
+  as = concept.message-subscription
 }

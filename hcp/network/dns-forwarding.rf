@@ -1,5 +1,4 @@
 concept "dns-forwarding" {
-  kind        = entity
   description = "A private DNS forwarding boundary associated with an HVN connection."
 }
 
@@ -11,13 +10,13 @@ rule "dns-forwarding" {
   as = concept.dns-forwarding
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.hvn_id
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }
@@ -32,13 +31,13 @@ rule "dns-forwarding-lookup" {
   as = concept.dns-forwarding
 
   context {
-    as  = context.core.network
-    to  = concept.core.virtual-network
+    as  = rf.context.network
+    to  = rf.concept.virtual-network
     via = source.hvn_id
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.project
     via = source.project_id
   }

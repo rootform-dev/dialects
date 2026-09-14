@@ -1,5 +1,4 @@
 concept "device-posture-configuration" {
-  kind        = detail
   description = "Cloudflare One device profile, posture, managed-network, deployment, or subnet configuration."
 }
 

@@ -3,7 +3,7 @@ rule "application-load-balancer" {
     type = "google_compute_global_forwarding_rule"
   }
 
-  as = concept.core.load-balancer
+  as = concept.load-balancer
 
   composition {
     member "target-https-proxy" {

@@ -1,15 +1,9 @@
-concept "catalog-registration" {
-  kind        = entity
-  description = "A legacy combined Consul catalog node or service registration."
-}
 
 concept "consul-node" {
-  kind        = entity
   description = "A node registered in the Consul service catalog."
 }
 
 concept "consul-service" {
-  kind        = entity
   description = "A service registered or selected in the Consul catalog."
 }
 
@@ -21,13 +15,6 @@ rule "agent-service" {
   as = concept.consul-service
 }
 
-rule "catalog-entry" {
-  match {
-    type = "consul_catalog_entry"
-  }
-
-  as = concept.catalog-registration
-}
 
 rule "catalog-service-lookup" {
   match {
@@ -54,13 +41,13 @@ rule "service" {
   as = concept.consul-service
 
   context {
-    as  = context.core.runtime
+    as  = rf.context.runtime
     to  = concept.consul-node
     via = source.node
   }
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }

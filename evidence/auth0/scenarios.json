@@ -6,10 +6,14 @@
     {
       "id": "auth0-minimal",
       "fixture": "fixtures/auth0-v1/minimal",
-      "limitations": ["synthetic Terraform proves roots without contacting Auth0"],
+      "limitations": [
+        "synthetic Terraform proves roots without contacting Auth0"
+      ],
       "minimum": {
-        "entities": 3,
-        "scopes": 1
+        "representations": 4,
+        "relations": 0,
+        "contexts": 0,
+        "contributions": 0
       },
       "maximum_facts": {
         "contexts": 0,
@@ -17,16 +21,21 @@
         "relations": 0
       },
       "required_outcomes": {
-        "auth0_tenant.primary": "represented",
-        "auth0_client.portal": "represented"
+        "auth0_tenant.primary": "representation-present",
+        "auth0_client.portal": "representation-present"
       },
       "required_rules": [
-        "auth0/tenant",
-        "auth0/client",
-        "auth0/resource-server",
-        "auth0/connection"
+        "auth0.rule.tenant",
+        "auth0.rule.client",
+        "auth0.rule.resource-server",
+        "auth0.rule.connection"
       ],
-      "expected_html_labels": ["Auth0 tenant", "Auth0 Application", "Auth0 API", "Auth0 Connection"]
+      "expected_html_labels": [
+        "Auth0 tenant",
+        "Auth0 Application",
+        "Auth0 API",
+        "Auth0 Connection"
+      ]
     },
     {
       "id": "auth0-broad-identity",
@@ -35,12 +44,10 @@
         "association helpers preserve composition but cannot invent direct application-to-connection authentication flows"
       ],
       "minimum": {
-        "entities": 32,
-        "scopes": 6,
-        "details": 39,
+        "representations": 80,
+        "relations": 5,
         "contexts": 0,
-        "contributions": 27,
-        "relations": 5
+        "contributions": 27
       },
       "maximum_facts": {
         "contexts": 0,
@@ -48,136 +55,135 @@
         "relations": 5
       },
       "required_rules": [
-        "auth0/action",
-        "auth0/action-lookup",
-        "auth0/action-module",
-        "auth0/action-module-lookup",
-        "auth0/attack-protection",
-        "auth0/attack-protection-lookup",
-        "auth0/client",
-        "auth0/client-cimd",
-        "auth0/client-credentials",
-        "auth0/client-grant",
-        "auth0/client-lookup",
-        "auth0/connection",
-        "auth0/connection-client",
-        "auth0/connection-clients",
-        "auth0/connection-directory",
-        "auth0/connection-directory-lookup",
-        "auth0/connection-directory-synchronized-groups",
-        "auth0/connection-directory-synchronized-groups-lookup",
-        "auth0/connection-keys",
-        "auth0/connection-keys-lookup",
-        "auth0/connection-lookup",
-        "auth0/connection-profile",
-        "auth0/connection-profile-lookup",
-        "auth0/connection-scim-configuration",
-        "auth0/connection-scim-configuration-lookup",
-        "auth0/custom-domain",
-        "auth0/custom-domain-default",
-        "auth0/custom-domain-lookup",
-        "auth0/custom-domain-verification",
-        "auth0/email-provider",
-        "auth0/encryption-key-manager",
-        "auth0/event-stream",
-        "auth0/event-stream-lookup",
-        "auth0/flow",
-        "auth0/flow-lookup",
-        "auth0/flow-vault-connection",
-        "auth0/flow-vault-connection-lookup",
-        "auth0/form",
-        "auth0/form-lookup",
-        "auth0/guardian",
-        "auth0/hook",
-        "auth0/log-stream",
-        "auth0/network-acl",
-        "auth0/network-acl-lookup",
-        "auth0/organization",
-        "auth0/organization-client",
-        "auth0/organization-client-grant",
-        "auth0/organization-client-lookup",
-        "auth0/organization-clients",
-        "auth0/organization-connection",
-        "auth0/organization-connections",
-        "auth0/organization-discovery-domain",
-        "auth0/organization-discovery-domains",
-        "auth0/organization-lookup",
-        "auth0/phone-provider",
-        "auth0/phone-provider-lookup",
-        "auth0/rate-limit-policy",
-        "auth0/rate-limit-policy-lookup",
-        "auth0/resource-server",
-        "auth0/resource-server-lookup",
-        "auth0/resource-server-scope",
-        "auth0/resource-server-scopes",
-        "auth0/risk-assessments",
-        "auth0/risk-assessments-new-device",
-        "auth0/rule",
-        "auth0/self-service-profile",
-        "auth0/self-service-profile-lookup",
-        "auth0/supplemental-signals",
-        "auth0/tenant",
-        "auth0/tenant-lookup",
-        "auth0/token-exchange-profile",
-        "auth0/token-exchange-profile-lookup",
-        "auth0/trigger-action",
-        "auth0/trigger-actions",
-        "auth0/user-attribute-profile",
-        "auth0/user-attribute-profile-lookup"
+        "auth0.rule.action",
+        "auth0.rule.action-lookup",
+        "auth0.rule.action-module",
+        "auth0.rule.action-module-lookup",
+        "auth0.rule.attack-protection",
+        "auth0.rule.attack-protection-lookup",
+        "auth0.rule.client",
+        "auth0.rule.client-cimd",
+        "auth0.rule.client-credentials",
+        "auth0.rule.client-grant",
+        "auth0.rule.client-lookup",
+        "auth0.rule.connection",
+        "auth0.rule.connection-client",
+        "auth0.rule.connection-clients",
+        "auth0.rule.connection-directory",
+        "auth0.rule.connection-directory-lookup",
+        "auth0.rule.connection-directory-synchronized-groups",
+        "auth0.rule.connection-directory-synchronized-groups-lookup",
+        "auth0.rule.connection-keys",
+        "auth0.rule.connection-keys-lookup",
+        "auth0.rule.connection-lookup",
+        "auth0.rule.connection-profile",
+        "auth0.rule.connection-profile-lookup",
+        "auth0.rule.connection-scim-configuration",
+        "auth0.rule.connection-scim-configuration-lookup",
+        "auth0.rule.custom-domain",
+        "auth0.rule.custom-domain-default",
+        "auth0.rule.custom-domain-lookup",
+        "auth0.rule.custom-domain-verification",
+        "auth0.rule.email-provider",
+        "auth0.rule.encryption-key-manager",
+        "auth0.rule.event-stream",
+        "auth0.rule.event-stream-lookup",
+        "auth0.rule.flow",
+        "auth0.rule.flow-lookup",
+        "auth0.rule.flow-vault-connection",
+        "auth0.rule.flow-vault-connection-lookup",
+        "auth0.rule.form",
+        "auth0.rule.form-lookup",
+        "auth0.rule.guardian",
+        "auth0.rule.hook",
+        "auth0.rule.network-acl",
+        "auth0.rule.network-acl-lookup",
+        "auth0.rule.organization",
+        "auth0.rule.organization-client",
+        "auth0.rule.organization-client-grant",
+        "auth0.rule.organization-client-lookup",
+        "auth0.rule.organization-clients",
+        "auth0.rule.organization-connection",
+        "auth0.rule.organization-connections",
+        "auth0.rule.organization-discovery-domain",
+        "auth0.rule.organization-discovery-domains",
+        "auth0.rule.organization-lookup",
+        "auth0.rule.phone-provider",
+        "auth0.rule.phone-provider-lookup",
+        "auth0.rule.rate-limit-policy",
+        "auth0.rule.rate-limit-policy-lookup",
+        "auth0.rule.resource-server",
+        "auth0.rule.resource-server-lookup",
+        "auth0.rule.resource-server-scope",
+        "auth0.rule.resource-server-scopes",
+        "auth0.rule.risk-assessments",
+        "auth0.rule.risk-assessments-new-device",
+        "auth0.rule.rule",
+        "auth0.rule.self-service-profile",
+        "auth0.rule.self-service-profile-lookup",
+        "auth0.rule.supplemental-signals",
+        "auth0.rule.tenant",
+        "auth0.rule.tenant-lookup",
+        "auth0.rule.token-exchange-profile",
+        "auth0.rule.token-exchange-profile-lookup",
+        "auth0.rule.trigger-action",
+        "auth0.rule.trigger-actions",
+        "auth0.rule.user-attribute-profile",
+        "auth0.rule.user-attribute-profile-lookup"
       ],
       "required_facts": [
         {
           "collection": "relations",
-          "from": "entity:auth0_client.portal",
-          "to": "scope:auth0_organization.customer",
+          "from": "representation:1:root:resource:auth0_client.portal",
+          "to": "representation:1:root:resource:auth0_organization.customer",
           "type": "defaults-to-organization",
-          "rule": "auth0/client"
+          "rule": "auth0.rule.client"
         },
         {
           "collection": "relations",
-          "from": "entity:auth0_client.portal",
-          "to": "entity:auth0_resource_server.api",
+          "from": "representation:1:root:resource:auth0_client.portal",
+          "to": "representation:1:root:resource:auth0_resource_server.api",
           "type": "uses-api",
-          "rule": "auth0/client"
+          "rule": "auth0.rule.client"
         },
         {
           "collection": "relations",
-          "from": "entity:auth0_connection_directory.directory",
-          "to": "entity:auth0_connection.workforce",
+          "from": "representation:1:root:resource:auth0_connection_directory.directory",
+          "to": "representation:1:root:resource:auth0_connection.workforce",
           "type": "synchronizes-connection",
-          "rule": "auth0/connection-directory"
+          "rule": "auth0.rule.connection-directory"
         },
         {
           "collection": "relations",
-          "from": "entity:auth0_token_exchange_profile.partner",
-          "to": "entity:auth0_action.normalize",
+          "from": "representation:1:root:resource:auth0_token_exchange_profile.partner",
+          "to": "representation:1:root:resource:auth0_action.normalize",
           "type": "executes-action",
-          "rule": "auth0/token-exchange-profile"
+          "rule": "auth0.rule.token-exchange-profile"
         },
         {
           "collection": "relations",
-          "from": "entity:auth0_event_stream.lifecycle",
-          "to": "entity:auth0_action.normalize",
+          "from": "representation:1:root:resource:auth0_event_stream.lifecycle",
+          "to": "representation:1:root:resource:auth0_action.normalize",
           "type": "delivers-to-action",
-          "rule": "auth0/event-stream"
+          "rule": "auth0.rule.event-stream"
         },
         {
           "collection": "contributions",
-          "from": "detail:auth0_connection_client.portal",
-          "to": "entity:auth0_client.portal",
-          "rule": "auth0/connection-client"
+          "from": "representation:1:root:resource:auth0_connection_client.portal",
+          "to": "representation:1:root:resource:auth0_client.portal",
+          "rule": "auth0.rule.connection-client"
         },
         {
           "collection": "contributions",
-          "from": "detail:auth0_organization_connection.workforce",
-          "to": "scope:auth0_organization.customer",
-          "rule": "auth0/organization-connection"
+          "from": "representation:1:root:resource:auth0_organization_connection.workforce",
+          "to": "representation:1:root:resource:auth0_organization.customer",
+          "rule": "auth0.rule.organization-connection"
         }
       ],
       "required_outcomes": {
-        "auth0_user.must_not_create_topology": "unsupported",
-        "auth0_role.must_not_create_topology": "unsupported",
-        "auth0_branding.must_not_create_topology": "unsupported"
+        "auth0_user.must_not_create_topology": "no-rule",
+        "auth0_role.must_not_create_topology": "no-rule",
+        "auth0_branding.must_not_create_topology": "no-rule"
       },
       "expected_html_labels": [
         "Auth0 Application",
@@ -196,7 +202,7 @@
       "expected_build_failure": true,
       "expected_diagnostic_codes": [
         "DEPENDENCY_DANGLING",
-        "FACT_CONCEPT_MISMATCH",
+        "FACT_TARGET_MISMATCH",
         "TRAVERSAL_AMBIGUOUS",
         "TRAVERSAL_DANGLING",
         "TRAVERSAL_UNRESOLVED",

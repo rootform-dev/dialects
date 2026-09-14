@@ -1,15 +1,12 @@
 concept "data-transformation" {
-  kind        = entity
   description = "A durable Vault Transform data-protection transformation."
 }
 
 concept "encryption-configuration" {
-  kind        = detail
   description = "A key distribution, replication, transform, or cache setting supporting Vault encryption."
 }
 
 concept "key-management-integration" {
-  kind        = entity
   description = "A Vault Key Management integration distributing keys to an external key service."
 }
 
@@ -18,10 +15,10 @@ rule "gcpkms-secret-backend-key" {
     type = "vault_gcpkms_secret_backend_key"
   }
 
-  as = concept.core.encryption-key
+  as = concept.encryption-key
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
@@ -35,7 +32,7 @@ rule "keymgmt-aws-kms" {
   as = concept.key-management-integration
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
@@ -49,7 +46,7 @@ rule "keymgmt-azure-kms" {
   as = concept.key-management-integration
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
@@ -63,7 +60,7 @@ rule "keymgmt-distribute-key" {
   as = concept.encryption-configuration
 
   contribution {
-    to  = concept.core.encryption-key
+    to  = concept.encryption-key
     via = source.key_name
   }
 
@@ -81,7 +78,7 @@ rule "keymgmt-gcp-kms" {
   as = concept.key-management-integration
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
@@ -92,10 +89,10 @@ rule "keymgmt-key" {
     type = "vault_keymgmt_key"
   }
 
-  as = concept.core.encryption-key
+  as = concept.encryption-key
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
@@ -157,7 +154,7 @@ rule "transform-transformation" {
   as = concept.data-transformation
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }
@@ -168,10 +165,10 @@ rule "transit-secret-backend-key" {
     type = "vault_transit_secret_backend_key"
   }
 
-  as = concept.core.encryption-key
+  as = concept.encryption-key
 
   context {
-    as  = context.core.ownership
+    as  = context.ownership
     to  = concept.namespace
     via = source.namespace
   }

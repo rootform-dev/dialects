@@ -1,19 +1,11 @@
-concept "gke-fleet" {
-  kind        = scope
-  description = "A GKE fleet grouping clusters for multi-cluster management."
-}
 
-concept "gke-fleet-membership" {
-  kind        = detail
-  description = "A cluster membership registered in a GKE fleet."
-}
 
 rule "edge-container-cluster" {
   match {
     type = "google_edgecontainer_cluster"
   }
 
-  as = concept.core.kubernetes-cluster
+  as = rf.concept.kubernetes-cluster
 }
 
 rule "edge-container-node-pool" {
@@ -21,7 +13,7 @@ rule "edge-container-node-pool" {
     type = "google_edgecontainer_node_pool"
   }
 
-  as = concept.core.kubernetes-node-pool
+  as = concept.kubernetes-node-pool
 }
 
 rule "bare-metal-gdc-cluster" {
@@ -29,7 +21,7 @@ rule "bare-metal-gdc-cluster" {
     type = "google_gkeonprem_bare_metal_cluster"
   }
 
-  as = concept.core.kubernetes-cluster
+  as = rf.concept.kubernetes-cluster
 }
 
 rule "bare-metal-gdc-admin-cluster" {
@@ -37,7 +29,7 @@ rule "bare-metal-gdc-admin-cluster" {
     type = "google_gkeonprem_bare_metal_admin_cluster"
   }
 
-  as = concept.core.kubernetes-cluster
+  as = rf.concept.kubernetes-cluster
 }
 
 rule "bare-metal-gdc-node-pool" {
@@ -45,7 +37,7 @@ rule "bare-metal-gdc-node-pool" {
     type = "google_gkeonprem_bare_metal_node_pool"
   }
 
-  as = concept.core.kubernetes-node-pool
+  as = concept.kubernetes-node-pool
 }
 
 rule "vmware-gdc-cluster" {
@@ -53,7 +45,7 @@ rule "vmware-gdc-cluster" {
     type = "google_gkeonprem_vmware_cluster"
   }
 
-  as = concept.core.kubernetes-cluster
+  as = rf.concept.kubernetes-cluster
 }
 
 rule "vmware-gdc-admin-cluster" {
@@ -61,7 +53,7 @@ rule "vmware-gdc-admin-cluster" {
     type = "google_gkeonprem_vmware_admin_cluster"
   }
 
-  as = concept.core.kubernetes-cluster
+  as = rf.concept.kubernetes-cluster
 }
 
 rule "vmware-gdc-node-pool" {
@@ -69,21 +61,5 @@ rule "vmware-gdc-node-pool" {
     type = "google_gkeonprem_vmware_node_pool"
   }
 
-  as = concept.core.kubernetes-node-pool
-}
-
-rule "gke-fleet" {
-  match {
-    type = "google_gke_hub_fleet"
-  }
-
-  as = concept.gke-fleet
-}
-
-rule "gke-fleet-membership" {
-  match {
-    type = "google_gke_hub_membership"
-  }
-
-  as = concept.gke-fleet-membership
+  as = concept.kubernetes-node-pool
 }

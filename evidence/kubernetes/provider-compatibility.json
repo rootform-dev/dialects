@@ -6,24 +6,35 @@
   "result": "partial-showcase-validation",
   "entries": [
     {
-      "rule_id": "kubernetes/kubernetes-deployment",
+      "rule_id": "kubernetes.rule.kubernetes-deployment",
       "terraform_type": "kubernetes_deployment_v1",
-      "paths": ["metadata[0].namespace", "spec[0].template[0].spec[0].service_account_name"]
+      "paths": [
+        "metadata[0].namespace",
+        "spec[0].template[0].spec[0].service_account_name"
+      ]
     },
     {
-      "rule_id": "kubernetes/kubernetes-stateful-set",
+      "rule_id": "kubernetes.rule.kubernetes-stateful-set",
       "terraform_type": "kubernetes_stateful_set_v1",
-      "paths": ["metadata[0].namespace", "spec[0].template[0].spec[0].service_account_name"]
+      "paths": [
+        "metadata[0].namespace",
+        "spec[0].template[0].spec[0].service_account_name"
+      ]
     },
     {
-      "rule_id": "kubernetes/kubernetes-network-policy",
+      "rule_id": "kubernetes.rule.kubernetes-network-policy",
       "terraform_type": "kubernetes_network_policy_v1",
-      "paths": ["metadata[0].namespace", "provider.host"]
+      "paths": [
+        "metadata[0].namespace",
+        "provider.host"
+      ]
     },
     {
-      "rule_id": "kubernetes/kubernetes-namespace",
+      "rule_id": "kubernetes.rule.kubernetes-namespace",
       "terraform_type": "kubernetes_namespace_v1",
-      "paths": ["provider.host"]
+      "paths": [
+        "provider.host"
+      ]
     }
   ]
 }
